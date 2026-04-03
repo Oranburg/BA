@@ -3,8 +3,6 @@ import path from "node:path";
 
 const repoRoot = path.resolve(process.cwd());
 const srcDir = path.join(repoRoot, "src");
-const appFile = path.join(srcDir, "App.jsx");
-
 function fail(message) {
   console.error(`❌ ${message}`);
   process.exit(1);
@@ -27,22 +25,15 @@ function read(filePath) {
   return fs.readFileSync(filePath, "utf8");
 }
 
-function extractRouteMatchers() {
-  const appSource = read(appFile);
-  const pathRegex = /<Route\s+path="([^"]+)"/g;
-  const matchers = [];
-
-  let match = pathRegex.exec(appSource);
-  while (match) {
-    const rawPath = match[1];
-    const pattern = `^${rawPath
-      .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-      .replace(/\\:[^/]+/g, "[^/]+")}$`;
-    matchers.push(new RegExp(pattern));
-    match = pathRegex.exec(appSource);
-  }
-
-  return matchers;
+async function extractRouteMatchers() {
+  const { APP_ROUTES } = await import(path.join(repoRoot, "src", "routing", "routes.js"));
+  const staticRoutes = Object.values(APP_ROUTES);
+  const patterns = [
+    ...staticRoutes.map((route) => new RegExp(`^${route.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`)),
+    new RegExp(`^${APP_ROUTES.tomeHome.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/[^/]+$`),
+    new RegExp(`^${APP_ROUTES.tomeHome.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/[^/]+/[^/]+/[^/]+$`),
+  ];
+  return patterns;
 }
 
 function extractInternalPaths(content) {
@@ -95,7 +86,7 @@ function extractImageImports(content) {
 }
 
 const sourceFiles = walkFiles(srcDir);
-const routeMatchers = extractRouteMatchers();
+const routeMatchers = await extractRouteMatchers();
 const allIds = new Set();
 const internalTargets = [];
 const imageImports = [];

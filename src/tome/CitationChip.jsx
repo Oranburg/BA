@@ -21,7 +21,9 @@ export default function CitationChip({ citation, label }) {
       openTome({ docSlug: sectionResult.doc.slug, sectionNumber: sectionResult.section.number, query: citation });
       return;
     }
-    console.warn(`[tome] unresolved citation: ${citation}`);
+    if (!resolution.found) {
+      console.warn(`[tome] unresolved citation: ${citation}`);
+    }
     openTome({ query: citation });
   }
 

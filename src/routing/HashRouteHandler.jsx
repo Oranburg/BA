@@ -46,9 +46,7 @@ export default function HashRouteHandler() {
         return;
       }
 
-      if (location.pathname !== APP_ROUTES.home) {
-        navigate(APP_ROUTES.home, { replace: true });
-      }
+      console.warn(`[routing] hash target not found: #${hashTarget}`);
     };
 
     tryScroll();

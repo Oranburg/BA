@@ -186,8 +186,8 @@ export function getPrevNext(doc, section) {
 export function getBreadcrumbs(doc, section) {
   if (!doc || !section) return [];
   return [
-    { label: doc.shortName, to: `/tome/${doc.slug}` },
-    { label: section.article || "Section", to: `/tome/${doc.slug}` },
+    { label: doc.shortName, to: `${APP_ROUTES.tomeHome}/${doc.slug}` },
+    { label: section.article || "Section", to: `${APP_ROUTES.tomeHome}/${doc.slug}` },
     { label: `§ ${section.number}`, to: getTomePath(doc, section) },
   ];
 }

@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import TomeExperience from "./TomeExperience";
 import TomeIndexPage from "./TomeIndexPage";
 
@@ -6,11 +7,13 @@ export function TomeHomePage() {
 }
 
 export function TomeDocPage() {
-  return <TomeExperience />;
+  const { docSlug } = useParams();
+  return <TomeExperience key={`doc:${docSlug || "none"}`} />;
 }
 
 export function TomeSectionPage() {
-  return <TomeExperience />;
+  const { docSlug, articleSlug, sectionSlug } = useParams();
+  return <TomeExperience key={`section:${docSlug || "none"}:${articleSlug || "none"}:${sectionSlug || "none"}`} />;
 }
 
 export { TomeIndexPage };

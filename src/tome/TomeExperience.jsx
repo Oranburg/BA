@@ -362,7 +362,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
   const [jump, setJump] = useState("");
   const [focus, setFocus] = useState(false);
   const [compareOpen, setCompareOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(() => new URLSearchParams(window.location.search).get("panel") === "problems" ? "comparisons" : "browse");
+  const [activeTab, setActiveTab] = useState(embedded ? "comparisons" : (new URLSearchParams(window.location.search).get("panel") === "problems" ? "comparisons" : "browse"));
 
   const prevNext = getPrevNext(doc, section);
   const breadcrumbs = getBreadcrumbs(doc, section);
