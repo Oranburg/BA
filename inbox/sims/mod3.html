@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Edge | Module 3: The Fiduciary Pivot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #0A3255;
+            --deep-red: #B21F2C;
+            --bright-yellow: #FFD65C;
+            --light-teal: #B5E1E1;
+            --bright-blue: #2459A9;
+            --slate-gray: #1a202c;
+        }
+
+        body {
+            background-color: #020617;
+            color: #f1f5f9;
+            font-family: 'Crimson Text', serif;
+        }
+
+        h1, h2, h3, h4, .headline {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .ui-text {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .cyber-panel {
+            background: rgba(10, 50, 85, 0.3);
+            border: 1px solid rgba(36, 89, 169, 0.4);
+            backdrop-filter: blur(12px);
+            position: relative;
+        }
+
+        .cyber-panel::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, transparent 50%, var(--bright-yellow) 50%);
+        }
+
+        .neon-yellow {
+            color: var(--bright-yellow);
+            text-shadow: 0 0 10px rgba(255, 214, 92, 0.5);
+        }
+
+        .fiduciary-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 12px;
+            background: #1e293b;
+            border-radius: 6px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .fiduciary-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 32px;
+            height: 32px;
+            background: var(--bright-yellow);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--bright-yellow);
+            cursor: pointer;
+            border: 4px solid var(--deep-blue);
+        }
+
+        .artifact-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 4px solid var(--bright-blue);
+        }
+
+        .artifact-btn:hover {
+            background: rgba(181, 225, 225, 0.1);
+            border-left-color: var(--bright-yellow);
+            transform: translateX(5px);
+        }
+
+        .artifact-btn.active {
+            background: rgba(181, 225, 225, 0.15);
+            border-left-color: var(--bright-yellow);
+        }
+
+        .hidden-step { display: none; }
+
+        .glitch-text {
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 var(--deep-red), -2px 0 var(--bright-blue); }
+            5% { text-shadow: -2px 0 var(--deep-red), 2px 0 var(--bright-blue); }
+            10% { text-shadow: 2px 0 var(--deep-red), -2px 0 var(--bright-blue); }
+            100% { text-shadow: none; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Application Structure Plan: This simulation is an "Investigation Standoff." 
+    1. Introduction establishes Sammy's secret deal. 
+    2. The Investigation Desk allows users to find "Breach Markers" in encrypted files. 
+    3. The Fiduciary Pivot Slider uses a weighted logic system based on Guth v. Loft factors. 
+    4. Conclusion provides a judicial data-dump. 
+    Chosen for high engagement and tactile reinforcement of the 'Duty of Loyalty' threshold. -->
+
+    <!-- Visualization & Content Choices: 
+    1. Artifacts -> Goal: Organize -> Viz: Clickable Detail List -> Justification: Breaks evidence down into statutory triggers. 
+    2. Pivot Slider -> Goal: Compare/Relationship -> Viz: JS-Driven Range Slider -> Justification: Visually represents the 'balancing' nature of fiduciary scrutiny. 
+    3. Tome of Law -> Goal: Inform -> Viz: Sidebar -> Justification: Constant access to statutory text (RUPA 404). 
+    Confirming NO SVG/Mermaid. -->
+
+    <div class="max-w-6xl mx-auto space-y-10">
+        
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-end border-b-2 border-[#B21F2C] pb-6">
+            <div>
+                <h1 class="text-5xl font-bold neon-yellow headline">The Fiduciary Pivot</h1>
+                <p class="ui-text text-sm font-bold text-[#6DACDE] tracking-widest uppercase">Conflict: Zeeva vs. Sammy | Status: Loyalty Breach Imminent</p>
+            </div>
+            <div class="text-right mt-4 md:mt-0">
+                <span class="bg-[#B21F2C] text-white px-4 py-1 text-xs headline tracking-widest">Internal Affair</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Column: Tome of Law -->
+            <aside class="lg:col-span-3 space-y-6">
+                <div class="cyber-panel p-6 border-l-4 border-[#FFD65C]">
+                    <h4 class="headline text-[#FFD65C] mb-4 flex items-center gap-2">
+                        <span>&#x1F4DC;</span> Tome of Law
+                    </h4>
+                    <div class="ui-text space-y-4">
+                        <div>
+                            <p class="text-[10px] font-bold text-[#B5E1E1] uppercase tracking-widest">RUPA § 404(b)</p>
+                            <p class="text-xs text-gray-400">A partner's duty of loyalty includes: (1) accounting for any benefit derived from partnership business... and (3) refraining from competing with the partnership.</p>
+                        </div>
+                        <hr class="border-white/10">
+                        <div>
+                            <p class="text-[10px] font-bold text-[#FFD65C] uppercase tracking-widest">The Guth Test</p>
+                            <p class="text-xs text-gray-400 italic">"If there is presented a business opportunity... in the line of the corporation's business... the law will not permit a fiduciary to seize it for himself."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Intel -->
+                <div class="cyber-panel p-4 bg-white/5">
+                    <h4 class="headline text-[10px] text-gray-500 mb-3">Conflict Intel</h4>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded bg-[#0A3255] border border-[#2459A9] flex items-center justify-center text-xs">Z</div>
+                        <p class="ui-text text-[10px]">ZEEVA: Architect. Expects undivided loyalty.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-[#B21F2C] border border-[#E82F35] flex items-center justify-center text-xs">S</div>
+                        <p class="ui-text text-[10px]">SAMMY: Fixer. Claims "it was a side-hustle."</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Column: Investigation -->
+            <main class="lg:col-span-9 space-y-8">
+                
+                <section class="space-y-4">
+                    <h3 class="text-2xl headline text-[#B5E1E1]">I. Shadow Archives</h3>
+                    <p class="text-lg">Zeeva detected a credit leak. Someone used the "Street Pack" account to buy a Shard. Find the markers of **Self-Dealing** below.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button onclick="loadArtifact('ledger')" id="btn-ledger" class="artifact-btn p-5 bg-white/5 rounded text-left">
+                            <h5 class="headline text-xs text-[#FFD65C]">Encrypted Ledger</h5>
+                            <p class="ui-text text-[10px] text-gray-400">Financial flow analysis.</p>
+                        </button>
+                        <button onclick="loadArtifact('comms')" id="btn-comms" class="artifact-btn p-5 bg-white/5 rounded text-left">
+                            <h5 class="headline text-xs text-[#FFD65C]">Shadow Comms</h5>
+                            <p class="ui-text text-[10px] text-gray-400">Sammy's chat with a rival.</p>
+                        </button>
+                        <button onclick="loadArtifact('specs')" id="btn-specs" class="artifact-btn p-5 bg-white/5 rounded text-left">
+                            <h5 class="headline text-xs text-[#FFD65C]">Hardware Specs</h5>
+                            <p class="ui-text text-[10px] text-gray-400">Is the Shard "Line of Business"?</p>
+                        </button>
+                    </div>
+
+                    <div id="artifact-viewer" class="cyber-panel p-8 rounded-lg min-h-[150px] border-t-2 border-t-[#B5E1E1]">
+                        <h4 id="v-title" class="headline text-xl text-[#B5E1E1] mb-2">Select an artifact...</h4>
+                        <div id="v-content" class="text-xl font-serif italic text-gray-300 mb-6">Explore the data to identify the pivot points of fiduciary duty.</div>
+                        <button id="flag-btn" onclick="flagBreach()" class="hidden bg-[#B21F2C] text-white px-6 py-2 headline text-xs font-bold hover:brightness-125">Flag as Breach Marker</button>
+                    </div>
+                </section>
+
+                <!-- Fiduciary Slider Phase -->
+                <section id="pivot-phase" class="hidden-step space-y-6">
+                    <div class="flex items-center gap-4">
+                        <h3 class="text-2xl headline text-[#FFD65C]">II. The Fiduciary Pivot</h3>
+                        <div class="flex-grow h-px bg-white/10"></div>
+                    </div>
+
+                    <div class="cyber-panel p-8 rounded-lg bg-gradient-to-br from-[#0A3255]/40 to-transparent">
+                        <div class="flex justify-between ui-text text-[10px] font-bold uppercase tracking-widest mb-4">
+                            <span class="text-[#B5E1E1]">Loyal Partner</span>
+                            <span class="text-[#B21F2C]">Disloyal Usurper</span>
+                        </div>
+                        
+                        <input type="range" id="fid-slider" min="0" max="100" value="0" class="fiduciary-slider mb-10" disabled>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-white/5 rounded border border-white/5">
+                                <h5 class="headline text-xs mb-3 text-[#B5E1E1]">Guth Factors Detected</h5>
+                                <div id="factor-list" class="space-y-2 ui-text text-xs">
+                                    <!-- Dynamic factors go here -->
+                                </div>
+                            </div>
+                            <div class="p-6 bg-black/40 flex flex-col justify-center items-center text-center">
+                                <h5 class="headline text-xs text-[#6DACDE] mb-2">Current Scrutiny</h5>
+                                <div id="status-label" class="text-2xl headline glow-text">Safe Harbor</div>
+                                <p id="status-desc" class="text-[10px] text-gray-500 mt-2">No actionable breach detected yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final Holding -->
+                <section id="verdict-phase" class="hidden-step space-y-6">
+                    <h3 class="text-2xl headline text-white">III. Judicial Data-Dump</h3>
+                    <div class="cyber-panel p-8 rounded border-b-4 border-b-[#B21F2C]">
+                        <div class="bg-black/60 p-8 rounded font-serif text-2xl italic leading-relaxed text-gray-400">
+                            "Because the Structural Shard was in the firm’s 
+                            <select id="v1" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="leisure">Leisure Stream</option>
+                                <option value="business">Line of Business</option>
+                            </select>, 
+                            and Sammy used 
+                            <select id="v2" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="personal">Personal Gear</option>
+                                <option value="partnership">Partnership Credits</option>
+                            </select> 
+                            to acquire it without 
+                            <select id="v3" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="disclosure">Disclosure</option>
+                                <option value="logic">Logic</option>
+                            </select>, 
+                            he has 
+                            <select id="v4" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="usurped">Usurped the Opportunity</option>
+                                <option value="won">Won the Deal</option>
+                            </select>. 
+                            The remedy is 
+                            <select id="v5" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="apology">An Apology</option>
+                                <option value="disgorgement">Disgorgement of Profits</option>
+                            </select>."
+                        </div>
+                        <button onclick="checkVerdict()" class="w-full mt-8 bg-[#B21F2C] text-white py-4 headline font-bold tracking-widest hover:brightness-125 transition-all">UPLOAD VERDICT</button>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Message Box -->
+    <div id="msg-overlay" class="hidden fixed inset-0 flex items-center justify-center bg-black/90 z-50 p-4 backdrop-blur-md">
+        <div class="cyber-panel p-12 max-w-xl text-center border-t-8 border-t-[#FFD65C]">
+            <h2 id="msg-title" class="headline text-4xl mb-6 neon-yellow italic">Analysis</h2>
+            <p id="msg-body" class="ui-text text-lg text-gray-300 mb-10 leading-relaxed"></p>
+            <button onclick="closeMsg()" class="px-12 py-3 bg-[#0A3255] border-2 border-[#FFD65C] text-[#FFD65C] headline text-lg rounded hover:bg-[#FFD65C] hover:text-[#0A3255] transition-all font-bold">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <script>
+        const artifacts = {
+            ledger: {
+                title: "ENCRYPTED LEDGER: LOG 88-ALPHA",
+                content: "\"Transaction diverted: 10,000 Credits from 'Street Pack Alpha' joint vault. Payee: Void-Syndicate. Purchase: Unlisted Processor Shard. Authorized: S-FIXER.\"",
+                factor: "Used Partnership Resources",
+                weight: 35
+            },
+            comms: {
+                title: "SHADOW COMMS: SAMMY vs. SYNDICATE",
+                content: "\"Sammy: 'I've got the Shard. Zeeva has no idea. If you give me 5,000 extra, I'll keep it off the firm's server and sell to you directly.'\"",
+                factor: "Failure to Disclose (Bad Faith)",
+                weight: 40
+            },
+            specs: {
+                title: "HARDWARE SPECS: STRUCTURAL SHARD",
+                content: "\"Item: Structural Processor. Primary Function: Enhances AI Architecture rendering. Essential for Zeeva’s blueprints. High interest/expectancy identified.\"",
+                factor: "Within Line of Business",
+                weight: 25
+            }
+        };
+
+        let currentArtifact = null;
+        let flaggedFactors = new Set();
+
+        function loadArtifact(id) {
+            currentArtifact = id;
+            const data = artifacts[id];
+            document.getElementById('v-title').innerText = data.title;
+            document.getElementById('v-content').innerText = data.content;
+            document.getElementById('flag-btn').classList.remove('hidden');
+            
+            document.querySelectorAll('.artifact-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + id).classList.add('active');
+        }
+
+        function flagBreach() {
+            if (!currentArtifact) return;
+            const data = artifacts[currentArtifact];
+            
+            if (flaggedFactors.has(data.factor)) {
+                showMsg("Duplicate Signal", "This data-stream has already been flagged for the Council.");
+                return;
+            }
+
+            flaggedFactors.add(data.factor);
+            updateSlider(data.weight, data.factor);
+            
+            document.getElementById('pivot-phase').classList.remove('hidden-step');
+            document.getElementById('pivot-phase').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateSlider(weight, label) {
+            const slider = document.getElementById('fid-slider');
+            const factorList = document.getElementById('factor-list');
+            const statusLabel = document.getElementById('status-label');
+            const statusDesc = document.getElementById('status-desc');
+
+            // Add factor to UI
+            const item = document.createElement('div');
+            item.className = "flex items-center gap-2 text-[#FFD65C]";
+            item.innerHTML = `<span>&#x25B6;</span> ${label}`;
+            factorList.appendChild(item);
+
+            // Update Slider
+            let newVal = parseInt(slider.value) + weight;
+            slider.value = newVal;
+
+            // Update Status
+            if (newVal >= 30 && newVal < 65) {
+                statusLabel.innerText = "Conflict Identified";
+                statusLabel.style.color = "var(--bright-yellow)";
+                statusDesc.innerText = "The Council detects interest misalignment.";
+            } else if (newVal >= 65 && newVal < 100) {
+                statusLabel.innerText = "Usurpation Likely";
+                statusLabel.style.color = "#fb923c"; // Orange
+                statusDesc.innerText = "Meinhard standard likely breached.";
+            } else if (newVal >= 100) {
+                statusLabel.innerText = "TOTAL BREACH";
+                statusLabel.classList.add('glitch-text');
+                statusLabel.style.color = "var(--deep-red)";
+                statusDesc.innerText = "Sammy has violated the finest loyalty.";
+                document.getElementById('verdict-phase').classList.remove('hidden-step');
+                setTimeout(() => document.getElementById('verdict-phase').scrollIntoView({ behavior: 'smooth' }), 500);
+            }
+        }
+
+        function checkVerdict() {
+            const v1 = document.getElementById('v1').value;
+            const v2 = document.getElementById('v2').value;
+            const v3 = document.getElementById('v3').value;
+            const v4 = document.getElementById('v4').value;
+            const v5 = document.getElementById('v5').value;
+
+            if (v1 === 'business' && v2 === 'partnership' && v3 === 'disclosure' && v4 === 'usurped' && v5 === 'disgorgement') {
+                showMsg("Verdict Accepted", "Correct. Under the Guth v. Loft test, Sammy’s side-deal was in the partnership's line of business and used its credits. As a fiduciary, he had a duty of 'punctilio of an honor the most sensitive.' He must now disgorge his secret profits to the firm.");
+            } else {
+                showMsg("Analytic Error", "The Council’s algorithms reject this holding. Re-examine the 'Line of Business' and 'Disclosure' requirements of RUPA 404.");
+            }
+        }
+
+        function showMsg(t, b) {
+            document.getElementById('msg-title').innerText = t;
+            document.getElementById('msg-body').innerText = b;
+            document.getElementById('msg-overlay').classList.remove('hidden');
+        }
+
+        function closeMsg() {
+            document.getElementById('msg-overlay').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
