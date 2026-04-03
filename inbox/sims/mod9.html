@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Edge | Module 9: The Fiduciary Shield</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #0A3255;
+            --deep-red: #B21F2C;
+            --bright-yellow: #FFD65C;
+            --light-teal: #B5E1E1;
+            --bright-blue: #2459A9;
+            --accent-light: #6DACDE;
+        }
+
+        body {
+            background-color: #020617;
+            color: #f1f5f9;
+            font-family: 'Crimson Text', serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .headline {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .ui-text {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .cyber-panel {
+            background: rgba(10, 50, 85, 0.3);
+            border: 1px solid rgba(36, 89, 169, 0.4);
+            backdrop-filter: blur(8px);
+            position: relative;
+        }
+
+        .shield-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .shield-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .check-box-custom {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .check-box-custom:hover {
+            border-color: var(--bright-yellow);
+        }
+
+        .shield-active {
+            box-shadow: 0 0 40px var(--bright-yellow);
+            border-color: var(--bright-yellow) !important;
+        }
+
+        .shield-broken {
+            box-shadow: 0 0 40px var(--deep-red);
+            border-color: var(--deep-red) !important;
+        }
+
+        .hidden-step { display: none; }
+
+        .scanline {
+            width: 100%; height: 100px; z-index: 10;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255, 214, 92, 0.05) 50%, rgba(0,0,0,0) 100%);
+            position: fixed; top: 0; animation: scan 10s linear infinite; pointer-events: none;
+        }
+        @keyframes scan { from { transform: translateY(-100px); } to { transform: translateY(100vh); } }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="scanline"></div>
+
+    <header class="mb-10 border-b-2 border-[#B21F2C] pb-6 flex justify-between items-end">
+        <div>
+            <h1 class="text-5xl font-bold headline text-[#FFD65C]">The Fiduciary Shield</h1>
+            <p class="text-[#6DACDE] ui-text font-bold text-sm tracking-widest uppercase">Chapter 9: Governance & The Business Judgment Rule</p>
+        </div>
+        <div class="text-right">
+            <span class="bg-[#B5E1E1] text-[#0A3255] px-4 py-1 text-xs headline tracking-widest font-bold">Standard of Scrutiny: BJR</span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- SIDEBAR: Tome of Law -->
+        <aside class="lg:col-span-3 space-y-6">
+            <div class="cyber-panel p-6 border-l-4 border-[#FFD65C]">
+                <h4 class="headline text-[#FFD65C] mb-6 flex items-center gap-2">
+                    <span>&#x1F4DC;</span> Board HUD
+                </h4>
+                <div class="ui-text space-y-6">
+                    <div>
+                        <p class="text-[10px] font-bold text-[#B5E1E1] uppercase tracking-widest">Business Judgment Rule</p>
+                        <p class="text-xs text-gray-400">A presumption that directors acted on an **informed basis**, in **good faith**, and in the **honest belief** that the action was in the best interests of the company.</p>
+                    </div>
+                    <hr class="border-white/10">
+                    <div>
+                        <p class="text-[10px] font-bold text-[#FFD65C] uppercase tracking-widest">DGCL § 144 (Cleansing)</p>
+                        <p class="text-xs text-gray-400 italic">No contract is voidable solely because of a director's interest IF: (1) Disclosed and Approved by disinterested directors, OR (2) Disclosed and Approved by shareholders, OR (3) Fair to the corporation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-[#2459A9]/10 border border-[#2459A9]/30 rounded">
+                <p class="text-xs font-bold text-[#6DACDE] uppercase mb-2 italic">The Scenario</p>
+                <p class="ui-text text-[11px] text-gray-300 leading-relaxed">
+                    Sammy wants SP Corp to lease a "Cloud-Mine" from a provider owned by his cousin. Zeeva must decide if the board will approve this 1,000,000 credit deal. Shareholders are watching.
+                </p>
+            </div>
+        </aside>
+
+        <!-- MAIN DESK -->
+        <main class="lg:col-span-9 space-y-10">
+            
+            <!-- Stage 1: Investigation -->
+            <section id="board-minutes" class="space-y-6">
+                <h3 class="text-2xl headline text-[#B5E1E1]">I. Board Deliberations</h3>
+                <p class="text-lg">Review the transaction data. To retain the <strong>Fiduciary Shield</strong>, the board must satisfy the requirements of Care, Loyalty, and Good Faith.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ui-text">
+                    <div class="p-5 cyber-panel rounded-lg space-y-4">
+                        <h5 class="headline text-xs text-[#FFD65C]">Duty of Care (Process)</h5>
+                        <label class="flex items-center gap-4 p-3 bg-black/40 rounded border border-white/5 cursor-pointer hover:border-[#B5E1E1]">
+                            <input type="checkbox" id="check-informed" onchange="updateShield()" class="w-5 h-5 text-[#B5E1E1]">
+                            <span class="text-sm">Hire external auditors to review market pricing? (Informed Basis)</span>
+                        </label>
+                        <label class="flex items-center gap-4 p-3 bg-black/40 rounded border border-white/5 cursor-pointer hover:border-[#B5E1E1]">
+                            <input type="checkbox" id="check-time" onchange="updateShield()" class="w-5 h-5 text-[#B5E1E1]">
+                            <span class="text-sm">Hold multiple meetings to discuss the deal? (Non-Hasty)</span>
+                        </label>
+                    </div>
+
+                    <div class="p-5 cyber-panel rounded-lg space-y-4">
+                        <h5 class="headline text-xs text-[#B21F2C]">Duty of Loyalty (Conflict)</h5>
+                        <label class="flex items-center gap-4 p-3 bg-black/40 rounded border border-white/5 cursor-pointer hover:border-[#FFD65C]">
+                            <input type="checkbox" id="check-disclose" onchange="updateShield()" class="w-5 h-5 text-[#FFD65C]">
+                            <span class="text-sm">Full disclosure of Sammy's family tie? (Loyalty Cleansing)</span>
+                        </label>
+                        <label class="flex items-center gap-4 p-3 bg-black/40 rounded border border-white/5 cursor-pointer hover:border-[#FFD65C]">
+                            <input type="checkbox" id="check-disinterest" onchange="updateShield()" class="w-5 h-5 text-[#FFD65C]">
+                            <span class="text-sm">Vote limited to disinterested directors? (Governance Control)</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visualization: The Scrutiny Gauge -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white/5 p-8 rounded-xl border border-white/5">
+                <div class="shield-container flex flex-col items-center">
+                    <div id="shield-visual" class="w-48 h-64 border-4 border-dashed border-gray-600 rounded-t-full flex flex-col items-center justify-center transition-all duration-500">
+                        <span id="shield-icon" class="text-6xl mb-4 opacity-20">&#x1F6E1;</span>
+                        <div id="scrutiny-status" class="headline text-xs font-bold text-gray-500">No Presumption</div>
+                    </div>
+                    <p class="ui-text text-[10px] uppercase text-gray-500 mt-6 tracking-widest">Judicial Scrutiny Meter</p>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="headline text-xl text-[#FFD65C]">Governance Analysis</h4>
+                    <div class="space-y-4 ui-text">
+                        <div class="p-4 bg-black/40 border border-white/5 rounded">
+                            <p id="analysis-text" class="text-sm text-gray-400">Awaiting board action. Without a diligent process, the Business Judgment Rule presumption will not attach.</p>
+                        </div>
+                        <div id="burden-tag" class="p-3 bg-[#0A3255] border border-[#2459A9] rounded text-center">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-[#6DACDE]">Burden of Proof: PLAINTIFF</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Holding -->
+            <section id="judgment-phase" class="hidden-step space-y-6">
+                <div class="cyber-panel p-10 rounded-lg border-b-8 border-b-[#B5E1E1]">
+                    <h3 class="text-3xl headline text-white mb-8">Board Resolution v9.1</h3>
+                    <div class="bg-black/60 p-10 rounded font-serif text-2xl italic leading-[2] text-gray-300">
+                        "Because the directors acted on an 
+                        <select id="v1" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                            <option value="">...</option>
+                            <option value="uninformed">Uninformed</option>
+                            <option value="informed">Informed</option>
+                        </select> 
+                        basis and ensured the conflict was 
+                        <select id="v2" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                            <option value="">...</option>
+                            <option value="hidden">Hidden</option>
+                            <option value="disclosed">Disclosed and Approved</option>
+                        </select>, 
+                        the board retains the 
+                        <select id="v3" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                            <option value="">...</option>
+                            <option value="bjr">Business Judgment Rule Shield</option>
+                            <option value="liability">Liability Stream</option>
+                        </select>. 
+                        The court will not substitute its own judgment for the board's unless the plaintiff can prove 
+                        <select id="v4" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                            <option value="">...</option>
+                            <option value="efficiency">Efficiency</option>
+                            <option value="waste">Waste or Fraud</option>
+                        </select>."
+                    </div>
+                    <button onclick="checkFinal()" class="w-full mt-8 bg-[#B5E1E1] text-[#0A3255] py-5 rounded headline text-xl font-bold hover:brightness-110 transition-all uppercase shadow-lg">Upload Minutes to Ledger</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/95 z-50 p-4 backdrop-blur-md">
+        <div class="cyber-panel p-12 max-w-xl text-center border-t-8 border-t-[#FFD65C]">
+            <h2 id="modal-title" class="headline text-4xl mb-6 text-[#FFD65C]"></h2>
+            <p id="modal-body" class="ui-text text-lg text-gray-300 mb-10 leading-relaxed"></p>
+            <button onclick="closeModal()" class="px-12 py-4 bg-[#0A3255] border-2 border-[#FFD65C] text-[#FFD65C] headline text-xl rounded hover:bg-[#FFD65C] hover:text-[#0A3255] transition-all font-bold uppercase tracking-widest">Acknowledge</button>
+        </div>
+    </div>
+
+    <script>
+        function updateShield() {
+            const inf = document.getElementById('check-informed').checked;
+            const time = document.getElementById('check-time').checked;
+            const dis = document.getElementById('check-disclose').checked;
+            const dint = document.getElementById('check-disinterest').checked;
+            
+            const shield = document.getElementById('shield-visual');
+            const icon = document.getElementById('shield-icon');
+            const status = document.getElementById('scrutiny-status');
+            const analysis = document.getElementById('analysis-text');
+            const burden = document.getElementById('burden-tag');
+            
+            let score = (inf ? 1 : 0) + (time ? 1 : 0) + (dis ? 1 : 0) + (dint ? 1 : 0);
+
+            if (score >= 4) {
+                shield.className = "w-48 h-64 border-4 border-solid rounded-t-full flex flex-col items-center justify-center transition-all duration-500 shield-active";
+                icon.style.opacity = "1";
+                icon.style.color = "var(--bright-yellow)";
+                status.innerText = "BJR SHIELD ACTIVE";
+                status.style.color = "var(--bright-yellow)";
+                analysis.innerHTML = "The board has cleansed the conflict through disclosure and diligent process. The <strong>Business Judgment Rule</strong> applies, shielding the decision from judicial second-guessing.";
+                burden.innerHTML = "<span class='text-[10px] font-bold uppercase tracking-widest text-[#B5E1E1]'>Burden of Proof: PLAINTIFF (Overcome Presumption)</span>";
+                burden.style.backgroundColor = "rgba(181, 225, 225, 0.1)";
+                document.getElementById('judgment-phase').classList.remove('hidden-step');
+            } else if (score > 0 && (dis === false || dint === false)) {
+                shield.className = "w-48 h-64 border-4 border-solid rounded-t-full flex flex-col items-center justify-center transition-all duration-500 shield-broken";
+                icon.style.opacity = "1";
+                icon.style.color = "var(--deep-red)";
+                status.innerText = "ENTIRE FAIRNESS";
+                status.style.color = "var(--deep-red)";
+                analysis.innerHTML = "A self-dealing conflict was detected without proper cleansing. The shield is shattered. The board must now prove the <strong>Entire Fairness</strong> (Fair Price & Fair Process) of the deal.";
+                burden.innerHTML = "<span class='text-[10px] font-bold uppercase tracking-widest text-[#E96955]'>Burden of Proof: DEFENDANT (Prove Fairness)</span>";
+                burden.style.backgroundColor = "rgba(178, 31, 44, 0.1)";
+                document.getElementById('judgment-phase').classList.remove('hidden-step');
+            } else {
+                shield.className = "w-48 h-64 border-4 border-dashed border-gray-600 rounded-t-full flex flex-col items-center justify-center transition-all duration-500";
+                icon.style.opacity = "0.2";
+                status.innerText = "NO PRESUMPTION";
+                status.style.color = "gray";
+                analysis.innerText = "Awaiting board action. Fiduciary duties are the price of corporate power.";
+            }
+        }
+
+        function checkFinal() {
+            const v1 = document.getElementById('v1').value;
+            const v2 = document.getElementById('v2').value;
+            const v3 = document.getElementById('v3').value;
+            const v4 = document.getElementById('v4').value;
+            const inf = document.getElementById('check-informed').checked;
+            const dis = document.getElementById('check-disclose').checked;
+
+            if (v1 === 'informed' && v2 === 'disclosed' && v3 === 'bjr' && v4 === 'waste') {
+                if (inf && dis) {
+                    showModal("Presumption Confirmed", "Correct. By acting on an informed basis and cleansing the self-dealing conflict via disclosure, the directors have activated the Business Judgment Rule. In the absence of waste or fraud, the court will not interfere with this business decision. SP Corp's governance is secure.");
+                } else {
+                    showModal("Board Censure", "Your theoretical holding is correct, but your actual board actions failed to meet the threshold. You must actually hire auditors and disclose the conflict to achieve this result.");
+                }
+            } else {
+                showModal("Analytic Error", "The Council detects a flaw in your governance logic. Re-read the Tome of Law regarding BJR presumptions and DGCL § 144 cleansing requirements.");
+            }
+        }
+
+        function showModal(t, b) {
+            document.getElementById('modal-title').innerText = t;
+            document.getElementById('modal-body').innerText = b;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
