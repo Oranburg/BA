@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CitationChip from "../../tome/CitationChip";
+import { useTome } from "../../tome/useTome";
 
 // ---------------------------------------------------------------------------
 // Agency Activity: "The Neural-Link Handshake — Who Controls the Bot?"
@@ -172,6 +174,7 @@ during what Sammy described as a 'quick system check' mid-negotiation.`,
 
 export default function Ch02Agency() {
   const [phase, setPhase] = useState(0);
+  const { openTome } = useTome();
 
   // Phase 1: Control Test
   const [controlAnswers, setControlAnswers] = useState({});
@@ -218,9 +221,18 @@ export default function Ch02Agency() {
         The Neural-Link Handshake
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Who Controls the Fixer?</p>
-      <p className="font-ui text-xs text-gray-500 dark:text-gray-400 mb-8">
-        RSA § 1.01, § 2.01, § 7.07 · A. Gay Jenson Farms v. Cargill, 309 N.W.2d 285 (Minn. 1981)
-      </p>
+      <div className="mb-8 flex flex-wrap items-center gap-2">
+        <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
+          RSA § 1.01, § 2.01, § 7.07 · A. Gay Jenson Farms v. Cargill, 309 N.W.2d 285 (Minn. 1981)
+        </p>
+        <CitationChip citation="RSA § 2.01" />
+        <button
+          onClick={() => openTome({ query: "RSA § 2.01" })}
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+        >
+          Open in Tome
+        </button>
+      </div>
 
       {/* Phase 0: Intro */}
       {phase === 0 && (

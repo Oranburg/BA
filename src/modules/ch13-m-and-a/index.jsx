@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CitationChip from "../../tome/CitationChip";
+import { useTome } from "../../tome/useTome";
 
 // ---------------------------------------------------------------------------
 // M&A Activity: "The Deal Room — Enhanced Scrutiny in The Sprawl"
@@ -195,6 +197,7 @@ const HOLDING_TEMPLATE = {
 
 export default function Ch13MA() {
   const [phase, setPhase] = useState(0); // 0=intro, 1=unocal-p1, 2=unocal-p2, 3=revlon, 4=holding, 5=verdict
+  const { openTome } = useTome();
   const [p1Answers, setP1Answers] = useState({});
   const [p1Checked, setP1Checked] = useState(false);
   const [p2Answer, setP2Answer] = useState(null);
@@ -225,9 +228,18 @@ export default function Ch13MA() {
         The Deal Room
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Enhanced Scrutiny in The Sprawl</p>
-      <p className="font-ui text-xs text-gray-500 dark:text-gray-400 mb-8">
-        Unocal Corp. v. Mesa Petroleum Co., 493 A.2d 946 (Del. 1985) · Revlon, Inc. v. MacAndrews &amp; Forbes, 506 A.2d 173 (Del. 1986) · DGCL § 141(a)
-      </p>
+      <div className="mb-8 flex flex-wrap items-center gap-2">
+        <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
+          Unocal Corp. v. Mesa Petroleum Co., 493 A.2d 946 (Del. 1985) · Revlon, Inc. v. MacAndrews &amp; Forbes, 506 A.2d 173 (Del. 1986) · DGCL § 141(a)
+        </p>
+        <CitationChip citation="DGCL § 141(a)" />
+        <button
+          onClick={() => openTome({ query: "DGCL § 141(a)" })}
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+        >
+          Open in Tome
+        </button>
+      </div>
 
       {/* Phase 0: Intro */}
       {phase === 0 && (
