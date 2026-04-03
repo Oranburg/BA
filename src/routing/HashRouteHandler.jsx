@@ -42,7 +42,7 @@ export default function HashRouteHandler() {
       if (scrollToHashTarget(hashTarget)) return;
 
       if (attempts < MAX_SCROLL_ATTEMPTS) {
-        window.setTimeout(tryScroll, RETRY_MS);
+        setTimeout(tryScroll, RETRY_MS);
         return;
       }
 
