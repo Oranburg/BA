@@ -1,5 +1,7 @@
 export const BUILT_MODULES = [
+  "ch01-why-law",
   "ch02-agency",
+  "ch03-partnership",
   "ch08-entity-selection",
   "ch09-fiduciary-duties",
   "ch12-shareholder-franchise",
@@ -8,15 +10,35 @@ export const BUILT_MODULES = [
 ];
 
 export const MODULE_FLOW = {
+  "ch01-why-law": {
+    title: "Why Law",
+    route: "/ch01-why-law",
+    next: "ch02-agency",
+    bridge:
+      "With the Four Problems framework in hand, the next step is understanding how human agents bind the firm — the Attribution problem in action.",
+    dominantProblems: ["Attribution", "Governance", "Risk allocation", "Asset partitioning"],
+    secondaryProblems: [],
+    shiftFromPrior: "Entry point: all four problems introduced together as the course framework.",
+  },
   "ch02-agency": {
     title: "Agency",
     route: "/ch02-agency",
-    next: "ch08-entity-selection",
+    next: "ch03-partnership",
     bridge:
-      "Once authority is established, counsel must decide which entity should hold contracts and absorb liability.",
+      "Once authority is established, the next question is what happens when two agents become co-owners — partnership formation and its consequences.",
     dominantProblems: ["Attribution"],
     secondaryProblems: ["Risk allocation", "Governance"],
-    shiftFromPrior: "Entry point: attribution is primary because the firm is still just people acting through agents.",
+    shiftFromPrior: "Shift from framework overview to attribution focus: the firm is still just people acting through agents.",
+  },
+  "ch03-partnership": {
+    title: "Partnership",
+    route: "/ch03-partnership",
+    next: "ch08-entity-selection",
+    bridge:
+      "Partnership exposes unlimited personal liability. The next step is choosing an entity form that allocates risk, partitions assets, and structures governance.",
+    dominantProblems: ["Risk allocation"],
+    secondaryProblems: ["Attribution", "Governance"],
+    shiftFromPrior: "Shift from attribution to risk: co-ownership triggers joint and several liability, making risk allocation the dominant concern.",
   },
   "ch08-entity-selection": {
     title: "Entity Selection",

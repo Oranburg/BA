@@ -1,6 +1,8 @@
 export const APP_ROUTES = Object.freeze({
   home: "/",
+  ch01WhyLaw: "/ch01-why-law",
   ch02Agency: "/ch02-agency",
+  ch03Partnership: "/ch03-partnership",
   ch08EntitySelection: "/ch08-entity-selection",
   ch09FiduciaryDuties: "/ch09-fiduciary-duties",
   ch12ShareholderFranchise: "/ch12-shareholder-franchise",

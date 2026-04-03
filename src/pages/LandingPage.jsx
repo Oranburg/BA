@@ -10,9 +10,9 @@ import { getCourseProgress, getLastVisitedModule, getModuleCompletion } from "..
 import { BUILT_MODULES, getRecommendedNextModule } from "../course/lifecycle";
 
 const CHAPTERS = [
-  { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: null, status: "partial" },
+  { id: "ch01", moduleId: "ch01-why-law", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: APP_ROUTES.ch01WhyLaw },
   { id: "ch02", moduleId: "ch02-agency", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: APP_ROUTES.ch02Agency },
-  { id: "ch03", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: null, status: "planned" },
+  { id: "ch03", moduleId: "ch03-partnership", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: APP_ROUTES.ch03Partnership },
   { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding", route: null, status: "planned" },
   { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: null, status: "planned" },
   { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint", route: null, status: "planned" },

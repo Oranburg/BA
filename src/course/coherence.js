@@ -1,8 +1,22 @@
 export function summarizeModuleHeadline(moduleId, state = {}) {
+  if (moduleId === "ch01-why-law") {
+    return {
+      headline: `Four Problems diagnostic: ${state.correctCount ?? "-"} / ${state.totalCount ?? "-"} classified correctly`,
+      note: state.synthesisNote || "No synthesis drafted.",
+    };
+  }
+
   if (moduleId === "ch02-agency") {
     return {
       headline: `Agency analysis: control ${state.controlScore ?? "-"}, authority ${state.authScore ?? "-"}`,
       note: state.counselNotes || "No counsel notes captured.",
+    };
+  }
+
+  if (moduleId === "ch03-partnership") {
+    return {
+      headline: `Partnership formation: verdict ${state.verdictCorrect ? "confirmed" : "pending"}, ${state.triggersFound ?? 0} triggers found`,
+      note: state.counselNote || "No counsel note drafted.",
     };
   }
 

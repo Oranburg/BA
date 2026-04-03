@@ -18,6 +18,15 @@ const EMPTY_FILE = {
 function mergeSummary(summary = {}, moduleId, patch = {}) {
   const next = { ...summary, ...patch };
 
+  if (moduleId === "ch01-why-law") {
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Four Problems framework established";
+  }
+
+  if (moduleId === "ch03-partnership") {
+    next.entityForm = patch.entityForm || summary.entityForm || "Accidental general partnership";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Equal partner authority under RUPA";
+  }
+
   if (moduleId === "ch02-agency") {
     next.controlPosture = patch.controlPosture || summary.controlPosture || "Agency authority actively tested";
   }
