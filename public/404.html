@@ -8,19 +8,20 @@
       const base = "/BA/";
       if (!l.pathname.startsWith(base)) {
         l.replace(base);
+      } else {
+        const path = l.pathname.slice(base.length);
+        const redirect =
+          l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          base +
+          "?/" +
+          path.replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash;
+        l.replace(redirect);
       }
-      const path = l.pathname.startsWith(base) ? l.pathname.slice(base.length) : "";
-      const redirect =
-        l.protocol +
-        "//" +
-        l.hostname +
-        (l.port ? ":" + l.port : "") +
-        base +
-        "?/" +
-        path.replace(/&/g, "~and~") +
-        (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-        l.hash;
-      l.replace(redirect);
     </script>
   </head>
   <body></body>

@@ -4,7 +4,7 @@ import path from "node:path";
 const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const fallbackPath = path.join(distDir, "404.html");
-const SOURCE_ENTRYPOINT_PATTERN = /\/src\/main\.(jsx?|tsx?)/;
+const SOURCE_ENTRYPOINT_PATTERN = /\/src\/[^"' >]+\.(jsx?|tsx?)/;
 
 function fail(message) {
   console.error(`❌ ${message}`);
@@ -19,7 +19,7 @@ const indexHtml = fs.readFileSync(indexPath, "utf8");
 const fallbackHtml = fs.readFileSync(fallbackPath, "utf8");
 
 if (SOURCE_ENTRYPOINT_PATTERN.test(indexHtml) || SOURCE_ENTRYPOINT_PATTERN.test(fallbackHtml)) {
-  fail("Found source entrypoint reference (/src/main.*) in built artifact.");
+  fail("Found source script reference under /src/ in built artifact.");
 }
 
 if (!/src="\/BA\/assets\/[^"]+\.js"/.test(indexHtml)) {
