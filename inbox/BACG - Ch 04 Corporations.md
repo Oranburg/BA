@@ -1,0 +1,815 @@
+# Chapter IV: Corporations
+
+**Learning Objectives**
+
+In this chapter, students will learn to:
+
+- Explain the legal nature of the corporation as an artificial entity and identify the key features that distinguish it from other business forms.
+
+- Analyze the doctrine of limited liability and evaluate when courts may pierce the corporate veil to impose personal liability on shareholders or affiliated entities.
+
+- Compare doctrinal tests for veil-piercing across jurisdictions and distinguish between "alter ego," "enterprise," and "equitable owner" theories.
+
+- Assess promoter liability and understand the rules governing pre-incorporation contracts, including doctrines of adoption, novation, and estoppel.
+
+- Evaluate the consequences of defective incorporation and apply statutory rules governing de jure, de facto, and corporation-by-estoppel doctrines.
+
+- Evaluate the scope and limits of corporate powers under the ultra vires doctrine and understand its modern applications, especially in nonprofit and benefit corporations.
+
+\_\_\_\_\_\_\_\_\_\_
+
+The corporation is not a natural person, nor a spontaneous feature of markets. It is a legal innovation---arguably the most powerful legal technology ever devised for organizing economic activity at scale. Like other legal forms, it exists to solve problems. Chief among those are transaction costs and collective action problems that arise when many people seek to collaborate on a shared enterprise.
+
+Any effort to coordinate across large numbers of individuals---whether for profit, infrastructure, or innovation---quickly encounters the frictions of bilateral bargaining. Without a standardized form, each potential investor or contributor would need to negotiate the terms of participation, liability, and control. These individualized arrangements are not only costly, but often infeasible. The corporate form mitigates these problems by providing a ready-made institutional structure that allows strangers to join a common enterprise under a set of background rules.
+
+First, incorporation allows a business to aggregate capital from many people while applying a uniform set of terms. Shareholders are not required to negotiate bespoke agreements or monitor the conduct of every other investor. Instead, the articles of incorporation and bylaws define their rights, and state corporate law supplies default rules that govern the relationship among participants. This standardization reduces the cost of entry for investors and lowers the cost of raising funds for entrepreneurs.
+
+Second, the corporation is a separate legal person. It can sue, be sued, own property, enter into contracts, and persist through time independent of its owners or organizers. This legal separateness not only creates continuity, but also enables the crucial feature of limited liability. By confining business risk to the assets of the corporation itself, the law allows individuals to invest without exposing their personal assets to the firm's creditors. This, too, reduces transaction costs---investors do not need to investigate the personal financial situation or legal exposure of their fellow shareholders before committing funds.
+
+Yet these same features that reduce transaction costs also create moral hazard. The limited liability shield shifts risk onto creditors and third parties, while the corporate separateness that enables efficient scaling can also obscure accountability. As courts and scholars have long recognized, the benefits of the corporate form must be balanced against the risk that it becomes a vehicle for externalizing harm.
+
+In this chapter, we examine what the corporation is---not how it is governed, but what it means to create a legally distinct entity that can engage in economic life. We begin with the concept of the corporation as an artificial legal person. From there, we explore the implications of limited liability and the circumstances in which courts may disregard the corporate form to prevent injustice. The goal is to understand how the corporate form reduces the costs of organizing human effort, while also identifying the legal doctrines that cabin its misuse.
+
+## Introducing the Corporation
+
+The corporation is the most powerful legal technology ever devised for organizing economic life. But what is it, exactly?
+
+A corporation is an artificial entity. Unlike a human being, who exists regardless of law, a corporation exists by virtue of a state-law business statute. As stated by the U.S. Supreme Court in the early case of ***Trustees of Dartmouth College v. Woodward*, 17 U.S. 518 (1819)**:
+
+> A corporation is an artificial being, invisible, intangible, and existing only in contemplation of law.
+
+A corporation has no corporeal arms to act nor body to imprison. Yet when properly formed and operating, a corporation can own property, enter contracts, files lawsuits---and shield its owners from liability---so long as it complies with the requirements of its governing statute and its foundational documents.
+
+As stated in ***Hale v Henkel*, 201 U.S. 43, 74-75 (1906)**:
+
+> \[T\]he corporation is a creature of the State. It is presumed to be incorporated for the benefit of the public. It receives certain special privileges and franchises, and holds them subject to the laws of the State and the limitations of its charter. Its powers are limited by law. It can make no contract not authorized by its charter. Its rights to act as a corporation are only preserved to it so long as it obeys the laws of its creation.
+
+Why do people create such artifices? The main reasons are to limit liability, centralize control, facilitate investment, and enable continuity beyond individual lives. The corporate form allows people to pool capital and engage in enterprise without exposing their personal assets to the risks of business failure. It also creates a durable structure for governance, permitting owners to delegate management while retaining ownership. Shares in a corporation can be sold or inherited without disrupting the business itself. These features make the corporation a uniquely flexible and resilient vehicle for organizing economic life.
+
+Of these features, the law typically regards limited liability as the most essential. One can understand the scope of a thing by delineating its boundaries. This chapter explores the nature of a corporation by analyzing the limits of its most essential feature, asking, why does limited liability exist, and where does it end? The U.S. Supreme Court relatively recently said in ***Cedric Kushner Promotions, Ltd. v. King*, 533 U.S. 158 (2001)**, that
+
+> The corporate owner/employee, a natural person, is distinct from the corporation itself, a legally different entity with different rights and responsibilities due to its different legal status. . . After all, incorporation\'s basic purpose is to create a distinct legal entity, with legal rights, obligations, powers, and privileges different from those of the natural individuals who created it, who own it, or whom it employs.
+
+This legal separateness between the corporation and its owners is the foundation of modern corporate law. The corporation bequeaths upon its owners the fruits of its profits while shielding them from liability for its losses. This limited-liability shield persists even when a corporation has a single owner and operator---so long as that owner/operator respects corporate law.
+
+As you will see, mutual respect for corporate separateness carries powerful consequences---from the limited liability of shareholders to the complex governance duties of boards of directors.
+
+This chapter explores how and why the corporate form works. But first, let's begin with a puzzle---one that exposes the stakes of the legal fiction.
+
+### Corporate Limited Liability
+
+Corporate limited liability reflects a social bargain. By shielding corporate owners from liability, the law deprives corporate creditors of recourse when the corporation lacks sufficient funds. In economic terms, this creates *positive internalities* (benefits to corporate insiders) and *negative externalities* (costs imposed on outsiders).
+
+Society tolerates this tradeoff because corporations are also believed to generate *positive externalities*, such as jobs, goods, innovation, and tax revenue. In this way, corporate law reflects not just a legal structure but a political economy.
+
+The corporate bargain, however, is not unlimited. When the legal separateness of the corporate form is honored in form but abused in substance, courts must ask: When, if ever, should we disregard the corporation's existence and hold its owners directly accountable?
+
+The plaintiff was struck by a taxi operated by one of ten two-cab corporations, each carrying minimum required insurance and sharing the same controlling principals. As you read, consider: what specific facts does the Court of Appeals say must be alleged---and are not alleged here---to state a viable veil-piercing claim? Does the court suggest that deliberate, strategic undercapitalization alone is sufficient to justify disregarding the corporate form?
+
+Walkovszky v. Carlton\
+223 N.E.2d 6 (N.Y 1966)
+
+Fuld, J.
+
+1.  This case involves what appears to be a rather common practice in the taxicab industry of vesting the ownership of a taxi fleet in many corporations, each owning only one or two cabs.
+
+2.  The complaint alleges that the plaintiff was severely injured four years ago in New York City when he was run down by a taxicab owned by the defendant Seon Cab Corporation and negligently operated at the time by the defendant Marchese. The individual defendant, Carlton, is claimed to be a stockholder of 10 corporations, including Seon, each of which has but two cabs registered in its name, and it is implied that only the minimum automobile liability insurance required by law (in the amount of \$10,000) is carried on any one cab. Although seemingly independent of one another, these corporations are alleged to be "operated. . . as a single entity, unit and enterprise" with regard to financing, supplies, repairs, employees and garaging. . . The plaintiff asserts that he is also entitled to hold their stockholders personally liable for the damages sought because the multiple corporate structure constitutes an unlawful attempt "to defraud members of the general public" who might be injured by the cabs. . .
+
+3.  The law permits the incorporation of a business for the very purpose of enabling its proprietors to escape personal liability but, manifestly, the privilege is not without its limits. Broadly speaking, the courts will disregard the corporate form, or, to use accepted terminology, "pierce the corporate veil", whenever necessary "to prevent fraud or to achieve equity."
+
+4.  In determining whether liability should be extended to reach assets beyond those belonging to the corporation, we are guided, as Judge Cardozo noted, by "general rules of agency". . . Such liability, moreover, extends not only to the corporation's commercial dealings but to its negligent acts as well. . .
+
+5.  It is one thing to assert that a corporation is a fragment of a larger corporate combine which actually conducts the business. It is quite another to claim that the corporation is a "dummy" for its individual stockholders who are in reality carrying on the business in their personal capacities for purely personal rather than corporate ends. Either circumstance would justify treating the corporation as an agent and piercing the corporate veil to reach the principal but a different result would follow in each case. In the first, only a larger corporate entity would be held financially responsible while, in the other, the stockholder would be personally liable. . .
+
+6.  The individual defendant is charged with having "organized, managed, dominated and controlled" a fragmented corporate entity but there are no allegations that he was conducting business in his individual capacity. . . The corporate form may not be disregarded merely because the assets of the corporation, together with the mandatory insurance coverage of the vehicle which struck the plaintiff, are insufficient to assure him the recovery sought. . .
+
+7.  The remedy lies not with the courts but with the Legislature. . . It may very well be sound policy to require that certain corporations must take out liability insurance which will afford adequate compensation to their potential tort victims. However, the responsibility for imposing conditions on the privilege of incorporation has been committed by the Constitution to the Legislature. . .
+
+8.  In sum, then, the complaint falls short of adequately stating a cause of action against the defendant Carlton in his individual capacity.
+
+    **Keating, J., dissenting.**
+
+<!-- -->
+
+1.  I dissent and vote to affirm the order of the Appellate Division.
+
+<!-- -->
+
+9.  The complaint in this case alleges that defendant Carlton has organized and operated a fleet of taxicabs as a single enterprise, while distributing the fleet among many corporations so that each corporation owns only one or two cabs and maintains insurance coverage at the minimum level required by law. Carlton allegedly owns and completely dominates these corporations and has financed, supplied, repaired and otherwise dealt with the cabs as a single unit. In short, it is alleged that the fleet was one company in fact, but many in law, and that this arrangement was adopted for the sole purpose of insulating the real operator from liability to persons injured through the negligence of the fleet's drivers.
+
+10. If these allegations be true, I believe the complaint states a valid cause of action against Carlton individually. . .
+
+11. The increasing tendency of our economy to concentrate wealth and property in the corporate form and the growing use of multiple corporate shells to insulate assets from tort liability raise serious questions of social policy. These questions become particularly grave when injury to a human being is concerned. There is a pressing need to prevent the misuse of the corporate form to perpetrate injustice and circumvent public policy. . .
+
+12. We should not allow the fiction of corporate identity to prevent recovery from those individuals who misuse it. Where, as alleged here, a single individual is the dominant force behind a group of affiliated corporations which in reality operate as a single enterprise, and where that structure is employed to defraud the public or evade legitimate responsibilities, the law should not hesitate to pierce the corporate veil and impose liability upon the responsible individual.
+
+13. To hold otherwise is to permit the public to be victimized by irresponsible operators who organize their business so as to make themselves judgment-proof behind a screen of separate corporations, each owning a single taxicab. . .
+
+14. Accordingly, I dissent and vote to affirm the order below.
+
+***Walkovszky* [Notes & Questions]{.smallcaps}**
+
+1.  **Formalism and the Legal Fiction.** In ¶ 3, the court acknowledges that the corporate form exists in part to allow owners to avoid personal liability. Why, then, is the court unwilling to pierce the veil in this case? What legal and policy concerns seem to be driving its decision?
+
+2.  **Agency and Veil-Piercing Doctrines.** In ¶ 4 and ¶ 5, the court distinguishes between a corporation used as an agent of an individual owner versus a corporation that is part of a larger corporate "enterprise." Why does this distinction matter? Which of the two theories was the plaintiff trying to pursue? Which one does the court require?
+
+3.  **Failure to Allege Personal Misuse.** In ¶ 6, the court emphasizes that Carlton is not alleged to be conducting business "in his individual capacity." What kinds of facts might a plaintiff allege to satisfy that standard? What conduct might suggest such personal use?
+
+4.  **Judicial Role vs. Legislative Role.** In ¶ 7, the court states that "the remedy lies not with the courts but with the Legislature." Do you agree? Should courts be willing to craft equitable exceptions when corporate structure appears to frustrate justice?
+
+5.  **Who Should Bear the Risk?** Carlton allegedly structured his business to limit liability per incident. If true, is that simply smart legal planning---or is it morally troubling? Who should bear the cost of catastrophic injury when the law allows firms to operate at minimum insurance levels?
+
+6.  **Efficiency vs. Fairness.** Does the decision in *Walkovszky* promote economic efficiency? Does it undermine fairness? What are the broader implications for tort victims, especially those injured by businesses operating in thinly capitalized industries?
+
+7.  **A New Taxi Model.** Suppose a tech startup develops an app-based platform to dispatch individually incorporated vehicles. If each car is its own LLC and carries only statutory minimum insurance, does this change your view of the holding in *Walkovszky*? Should the law adapt to such models?
+
+8.  **Looking Ahead.** *Walkovszky* introduces the doctrine of veil-piercing but applies it narrowly. Later in this chapter, we will study other veil-piercing cases that apply different standards---some more flexible, some more formalistic. Keep this question in mind: When, if ever, should a court override the corporate form to do justice?
+
+### Piercing the Corporate Veil
+
+Limited liability is not absolute. The same legal fiction that shields shareholders from liability in most cases can, in rare circumstances, be disregarded. Courts sometimes "pierce the corporate veil" to prevent abuse of the corporate form.
+
+The phrase is metaphorical---but the doctrine is real. Veil-piercing allows courts to impose personal liability on shareholders, officers, or affiliated entities when they have misused the corporate structure to commit a wrong. It is an extraordinary remedy, invoked only when formal separateness would promote fraud, injustice, or evasion of the law.
+
+But courts disagree---often profoundly---about what misuse warrants piercing. Some emphasize undercapitalization, commingling of assets, or failure to follow corporate formalities. Others focus less on technical defects and more on equitable outcomes. Still others insist on specific intent to defraud.
+
+Even the test itself varies. Some courts treat veil-piercing as a two-part inquiry: first, whether there is such "unity of interest and ownership" that the corporation has no separate identity; and second, whether respecting that separateness would promote injustice. Others collapse the inquiry into a broader search for fairness or bad faith. Many jurisdictions apply different standards depending on whether the claim arises in tort or contract.
+
+All courts, however, begin from a shared principle: the corporate form is presumptively valid. The burden to overcome that presumption is steep. As one court put it, "the prospect of an unsatisfied judgment looms in every veil-piercing action"---and that alone is not enough.
+
+The following cases examine when courts pierce---and when they refuse. They reveal the variety of doctrinal approaches, the complexity of factual settings, and the underlying tension between protecting creditors and preserving limited liability.
+
+We begin with a leading case that illustrates the doctrinal structure---and the ambiguity---of the modern veil-piercing standard.
+
+Gerald Marchese operated at least five corporations interchangeably, with no separate books, bank accounts, or corporate formalities maintained among them. As you read, consider: the Van Dorn two-part test requires both unity of interest and ownership and proof that respecting the corporate form would sanction a fraud or promote injustice. Which prong does the court find clearly satisfied on these facts---and why does it remand rather than resolve the second prong outright?
+
+Sea-Land Services, Inc. v. Pepper Source\
+941 F.2d 519 (7th Cir. 1991)
+
+BAUER, Chief Judge.
+
+1.  This spicy case finds its origin in several shipments of Jamaican sweet peppers. Appellee Sea-Land Services, Inc. ("Sea-Land"), an ocean carrier, shipped the peppers on behalf of The Pepper Source ("PS"), one of the appellants here. PS then stiffed Sea-Land on the freight bill, which was rather substantial. . . With the well empty, Sea-Land could not recover its judgment against PS. Hence the instant lawsuit.
+
+<!-- -->
+
+15. In June 1988, Sea-Land brought this action against Gerald J. Marchese and five business entities he owns. . . Sea-Land sought by this suit to pierce PS's corporate veil and render Marchese personally liable for the judgment owed to Sea-Land, and then "reverse pierce" Marchese's other corporations so that they, too, would be on the hook. . .
+
+16. In an order dated June 22, 1990, the court granted Sea-Land's motion. . . Analyzing Illinois law, we held in *Van Dorn* that:
+
+17. "A corporate entity will be disregarded and the veil of limited liability pierced when two requirements are met: First, there must be such unity of interest and ownership that the separate personalities of the corporation and the individual \[or other corporation\] no longer exist; and second, circumstances must be such that adherence to the fiction of separate corporate existence would sanction a fraud or promote injustice."
+
+18. As for determining whether a corporation is so controlled by another to justify disregarding their separate identities, the Illinois cases. . . focus on four factors: "(1) the failure to maintain adequate corporate records or to comply with corporate formalities, (2) the commingling of funds or assets, (3) undercapitalization, and (4) one corporation treating the assets of another corporation as its own."
+
+19. The first and most striking feature that emerges from our examination of the record is that these corporate defendants are, indeed, little but Marchese's playthings. . . Marchese runs all of these corporations out of the same, single office, with the same phone line, the same expense accounts. . . Marchese has used the bank accounts of these corporations to pay all kinds of personal expenses, including alimony and child support payments. . . Marchese did not even have a personal bank account! (With "corporate" accounts like these, who needs one?). . .
+
+20. In sum, we agree with the district court that there can be no doubt that the "shared control/unity of interest and ownership" part of the Van Dorn test is met. . . corporate records and formalities have not been maintained; funds and assets have been commingled with abandon. . .
+
+21. The second part of the Van Dorn test is more problematic, however. "Unity of interest and ownership" is not enough; Sea-Land also must show that honoring the separate corporate existences of the defendants "would sanction a fraud or promote injustice". . . But what, exactly, does "promote injustice" mean, and how does one establish it on summary judgment?
+
+22. Sea-Land. . . has chosen not to attempt to prove that PS and Marchese intended to defraud it. . . Instead, Sea-Land has argued that honoring the defendants' separate identities would "promote injustice."
+
+23. But that cannot be what is meant by "promote injustice." The prospect of an unsatisfied judgment looms in every veil-piercing action; why else would a plaintiff bring such an action? Thus, if an unsatisfied judgment is enough. . . Van Dorn collapses into a one-step "unity of interest and ownership" test. . .
+
+24. Generalizing from these cases, we see that the courts that properly have pierced corporate veils to avoid "promoting injustice" have found that, unless it did so, some "wrong" beyond a creditor's inability to collect would result:. . . a party would be unjustly enriched; a parent corporation that caused a sub's liabilities and its inability to pay for them would escape those liabilities; or an intentional scheme to squirrel assets into a liability-free corporation while heaping liabilities upon an asset-free corporation would be successful.
+
+25. Sea-Land. . . has yet to come forward with evidence akin to the "wrongs" found in these cases. . . That belief was in error, and the entry of summary judgment premature.
+
+26. We, therefore, reverse the judgment and remand the case to the district court. . . Sea-Land is not required fully to prove intent to defraud. . . But it is required to show the kind of injustice to merit the evocation of the court's essentially equitable power to prevent "injustice."
+
+27. REVERSED and REMANDED with instructions.
+
+\_\_\_\_\_\_\_\_\_\_
+
+On remand, the district court found alter ego liability. As you read, consider: how does this second opinion clarify what it means for observance of the corporate form to \'promote injustice\'---does the court require proof of something approaching fraud, or is simple inequity sufficient? Compare the result here with Walkovszky and consider whether these cases can be reconciled.
+
+Sea-Land Services, Inc. v. Pepper Source\
+993 F.2d 1309 (7th Cir. 1993) (on remand)
+
+TIMBERS, Senior Circuit Judge. . .
+
+1.  On July 9, 1992, the court entered judgment for Sea-Land, awarding it \$118,132.61 in damages. The court concluded that Sea-Land satisfied the second prong of *Van Dorn* by establishing wrongs beyond its inability to collect on its judgment. . .
+
+<!-- -->
+
+28. . . . At trial, Sea-Land demonstrated that Marchese and his corporations were unjustly enriched. . . Marchese used PS funds to pay his personal expenses as well as expenses incurred by his other corporations. As a result, PS was left without sufficient funds to satisfy Sea-Land or PS's other creditors. Since Marchese was enriched unjustly by his intentional manipulation and diversion of funds from his corporate entities, to allow him to use these same entities to avoid liability "would be to sanction an injustice."
+
+<!-- -->
+
+2.  Sea-Land also satisfied the second prong of *Van Dorn* by demonstrating at trial that Marchese used his corporate entities as "playthings" to avoid his responsibilities to creditors. . . Marchese also frequently took "shareholder loans" from the corporations to pay personal expenses, leaving the corporations with insufficient funds to satisfy liabilities as they became due. . .
+
+3.  Marchese's practice of avoiding liability to Sea-Land and other creditors by insuring that his corporations had insufficient funds. . . is ground for piercing the corporate veil. . . On the basis of the facts adduced at trial, the court properly concluded that Sea-Land satisfied the second-prong of *Van Dorn* and therefore was entitled to pierce the corporate veil. . .
+
+4.  AFFIRMED.
+
+***Sea-Land Services* [Notes & Questions]{.smallcaps}**
+
+1.  **The Two-Prong Test.** In ¶3 of the 1991 opinion, the Seventh Circuit articulates the *Van Dorn* test: (1) Unity of interest and ownership; and (2) Circumstances such that respecting the corporate form would "promote injustice." What does "unity of interest and ownership" mean in practice? Why does the court insist on a second, separate prong?
+
+<!-- -->
+
+9.  **Facts Showing "Unity of Interest."** In ¶5--¶6, what facts persuaded the court that Marchese treated the corporations as mere instruments of his personal affairs? What kinds of behaviors trigger this kind of judicial scrutiny?
+
+10. **What Counts as "Injustice"?** ¶7--¶10 show the court wrestling with what "promoting injustice" actually means. Why isn't the inability to collect a debt sufficient on its own? What kinds of "wrongs" must be present, according to the court?
+
+11. **What Changed in 1993?** On remand, the court affirms veil-piercing in ¶1--¶4 of the 1993 decision. What additional evidence did Sea-Land introduce? How did Marchese's conduct cross the threshold from misuse to actionable injustice?
+
+12. **Unjust Enrichment and Manipulation.** In ¶2--¶3 of the 1993 opinion, the court emphasizes unjust enrichment and use of "playthings." How do these facts relate to the broader policy goals of corporate law? Does this resemble the concerns raised by Justice Keating in *Walkovszky*?
+
+13. **Legal Formalism vs. Equitable Intervention.** *Walkovszky* required a showing that the individual was acting "in his personal capacity" (see ¶6 of that case). Sea-Land focused on whether recognizing the corporate form would "promote injustice." Are these standards truly different, or just differently framed?
+
+14. **Tort Victim vs. Contract Creditor.** In *Walkovszky*, the plaintiff was a tort victim struck by a cab. In Sea-Land, the plaintiff was a commercial shipping company with a contract claim. Should courts be more willing to pierce the corporate veil in tort cases than in contract disputes? Why or why not?
+
+15. **When Should Courts Intervene?** Imagine a sole proprietor incorporates her business, undercapitalizes it, and takes out minimal insurance---but complies with all formal legal requirements. She then uses the corporation to shield herself from a large negligence judgment. Should a court pierce the veil? How would the analysis differ under *Walkovszky* and *Sea-Land*?
+
+16. **Enterprise Liability vs. Alter Ego.** *Walkovszky* distinguishes between viewing the corporation as part of a larger "enterprise" versus a "dummy" for a single individual. Sea-Land focuses on individual misuse of corporate forms. Is there a meaningful difference between these theories? Should courts prefer one?
+
+17. **The Risk of Over-Piercing.** Critics argue that aggressive veil-piercing chills investment and undermines predictability in business law. Do you think the courts in *Sea-Land* struck the right balance? What costs and benefits come with allowing plaintiffs to reach individual or affiliated assets?
+
+    \_\_\_\_\_\_\_\_\_
+
+In ***Elpers Bros. Constr. & Supply, Inc. v. Smith*, 230 N.E.3d 920 (Ind. Ct. App. 2024) (Ch. II.D.4)**, the court also considered a veil-piercing argument:
+
+> . . . The Smiths also added a count for declaratory judgment, where it sought to pierce the HOA's corporate veil that would "impose all of the legal duties and obligations" of the HOA on the Developers because the HOA was merely operating as the Builders' "alter ego."
+>
+> \[Moving for summary judgment, t\]he HOA asserted that "alter ego liability is the only allegation or claim against \[it in the amended complaint\]." Thus, because the HOA was not mentioned in any of the other counts in the amended complaint . . . the HOA asserted that it was entitled to summary judgment because "there is nothing for the \[Builders\] to be liable for on behalf of the HOA. . ." The HOA further maintained that it has always operated as a separate legal entity from the Builders.
+>
+> The trial court issued the following minute entry on December 20, 2022:
+>
+> > . . . The Court denies \[HOA's\] request for summary judgment concerning the HOA being an "alter ego" and grants all other requests for summary judgment made by \[the HOA\]. . .
+>
+> **II. The HOA**
+>
+> The HOA argues that the trial court erred in granting only partial summary judgment in its favor. Specifically, the HOA contends that it should have been "entirely dismissed" from the action because there are no longer any viable claims of wrongdoing . . . against it in light of the trial court's order. Hence, the HOA contends that because "piercing the corporate veil" is only a remedy rather than a cause of action, the trial ** **court should have granted its motion for summary judgment in all respects.
+>
+> . . . A court** **"pierces the corporate veil" to furnish a means for a complainant to reach a second corporation or individual upon a claim that otherwise would have existed only against the first corporation. Courts will not provide the protection of limited liability to an entity "that is a mere instrumentality of another and engages in misconduct in the function or use of the corporate form." Courts invoke the equitable doctrine of piercing the corporate veil to "protect innocent third parties from fraud or injustice."
+>
+> Although our courts have not had occasion to specifically address whether piercing the corporate veil under an alter ego theory constitutes an independent claim for substantive relief, the jurisdictions that have addressed this issue have determined that piercing the veil is not a theory of liability. Rather, such is a remedy and a means of imposing liability on an underlying cause of action like a tort or breach of contract. We adhere to that determination and conclude that piercing the corporate veil is an equitable remedy rather than an independent cause of action.
+>
+> Here, the trial court partially granted the HOA's motion for summary judgment but for** **it "being an alter ego" of the Builders. In other words, the trial court granted summary judgment in the HOA's favor on all independent causes of action. In light of the trial court's order, we can only conclude that any independent underlying causes of action that the Smiths asserted against the HOA . . . were dismissed. Inasmuch as the alter ego theory is not an independent cause of action, the remedy of piercing the corporate veil would be futile, and the HOA must necessarily be dismissed as a named party. We therefore conclude that the trial court erred in only partially granting the HOA's motion for summary judgment. . .
+
+#### Piercing in Tort Contexts
+
+The plaintiff suffered catastrophic injuries caused by an employee of Telecom\'s wholly-owned subsidiary. That subsidiary carried \$11 million in liability insurance purchased from a sister corporation under common ownership---but was otherwise thinly capitalized. As you read, consider: does the existence of substantial insurance coverage---even coverage purchased from an affiliated entity---distinguish this case from Sea-Land and Walkovszky on the undercapitalization issue? Should the law treat insured-but-insolvent subsidiaries differently from wholly uninsured ones?
+
+Radaszewski v. Telecom Corp.\
+981 F.2d 305 (8th Cir. 1992)
+
+RICHARD S. ARNOLD, Chief Judge.
+
+1.  This is an action for personal injuries filed on behalf of Konrad Radaszewski, who was seriously injured in an automobile accident. . . Radaszewski, who was on a motorcycle, was struck by a truck driven by an employee of Contrux, Inc. The question presented on this appeal is whether the District Court had jurisdiction over the person of Telecom Corporation, which is the corporate parent of Contrux. This question depends, in turn, on whether, under Missouri law, Radaszewski can "pierce the corporate veil," and hold Telecom liable for the conduct of its subsidiary, Contrux, and Contrux's driver. . .
+
+<!-- -->
+
+29. Under Missouri law, a plaintiff in this position needs to show three things. . .
+
+> \[T\]o "pierce the corporate veil," one must show:
+>
+> > \(1\) Control, not mere majority or complete stock control, but complete domination. . . so that the corporate entity. . . had no separate mind, will or existence of its own;
+>
+> > \(2\) Such control must have been used by the defendant to commit fraud or wrong. . .; and
+>
+> > \(3\) The aforesaid control and breach of duty must proximately cause the injury or unjust loss complained of. . .
+
+30. The District Court has. . . reconsidered the motion to dismiss, and has again granted it. As to the second element of the Collet test (improper or unjust use of the subsidiary), the District Court held that plaintiff had made a sufficient showing to survive a motion to dismiss. But as to the third element, proximate cause, the District Court ruled for the defendant. . . This ruling. . . was certified for interlocutory appeal. . . and the case is again before us. . .
+
+31. Plaintiff cites no direct evidence of improper motivation or violation of law on Telecom's part. He argues, instead, that Contrux was undercapitalized. . .
+
+32. . . . "Missouri courts will disregard the existence of a corporate entity that is operated while undercapitalized." The reason, we think, is not because undercapitalization, in and of itself, is unlawful. . . but rather because the creation of an undercapitalized subsidiary justifies an inference that the parent is either deliberately or recklessly creating a business that will not be able to pay its bills or satisfy judgments against it. . .
+
+33. Here. . . most of the money contributed to \[Contrux's\] operation by Telecom was in the form of loans, not equity. . . This is a classic instance of watered stock, of putting a corporation into business without sufficient equity investment. Telecom in effect concedes that Contrux's balance sheet was anemic. . . but argues that Contrux had \$11,000,000 worth of liability insurance available to pay judgments like the one that Radaszewski hopes to obtain. . .
+
+34. In fact, Contrux did have \$1,000,000 in basic liability coverage, plus \$10,000,000 in excess coverage. . . \[T\]his insurance. . . was sufficient to satisfy federal financial-responsibility requirements. . .
+
+35. The District Court rejected this argument. . . This distinction escapes us. The whole purpose of asking whether a subsidiary is "properly capitalized" is precisely to determine its "financial responsibility." If the subsidiary is financially responsible, whether by means of insurance or otherwise, the policy behind the second part of the Collet test is met. Insurance meets this policy just as well, perhaps even better, than a healthy balance sheet. . .
+
+36. We hold that plaintiff has made no showing of any genuine issue of material fact with respect to . . . dishonesty or improper-conduct. . . Plaintiff has had a fair chance to show this. . . , and he has not succeeded. . . We therefore affirm the judgment of the District Court dismissing the complaint for want of jurisdiction, but modify that judgment to provide that it is with prejudice. . .
+
+**HEANEY, Senior Circuit Judge, dissenting.**
+
+1.  I respectfully dissent. In my view, the district court had personal jurisdiction over Telecom. I would reverse the district court's order dismissing Radaszewski's claims and remand for further proceedings.
+
+2.  The complaint and supporting affidavits allege that Telecom exercised complete control and domination over Contrux. . . It provided all the capital for Contrux, made all the corporate decisions, and owned all of the stock. Radaszewski also produced evidence that Contrux was undercapitalized and unable to pay for its own insurance. Instead, Telecom obtained insurance for Contrux and paid its premiums.
+
+3.  More importantly, Radaszewski alleged and produced evidence that Telecom used Contrux to perpetrate a fraud or injustice. . . Telecom did not merely create a thinly capitalized subsidiary. It created one to operate dangerous trucks on the nation's highways without sufficient equity to pay for any resulting injury.
+
+4.  Contrary to the majority's view, I believe Radaszewski raised a genuine issue of material fact as to whether Contrux's lack of equity financing and Telecom's absolute control over its operations and finances constituted improper use of the corporate form.
+
+5.  Finally, I do not believe that the existence of liability insurance necessarily defeats a veil-piercing claim. If Telecom structured its insurance arrangement in a way that made it difficult for victims to recover, or retained control over whether insurance funds would be paid, then veil-piercing might still be appropriate. . . At the very least, these questions should be resolved at trial, not on summary judgment.
+
+***Radaszewski* Notes and Questions**
+
+1.  **Veil-Piercing Elements under Missouri Law.** In ¶3, the court sets out Missouri's three-part veil-piercing test, including the need for complete control, misuse of that control, and proximate cause. How does this standard compare to the *Van Dorn* test from *Sea-Land*? Which element did the court find lacking here, and why?
+
+2.  **Is Undercapitalization Enough?** In ¶5 and ¶6, the court acknowledges that Contrux was thinly capitalized and funded largely through loans rather than equity. Why does the court still reject veil-piercing? Should corporate parents be allowed to use debt instead of equity to fund high-risk subsidiaries?
+
+3.  **The Role of Insurance.** In ¶7, the majority concludes that insurance can serve the same function as capitalization. Does this rationale make sense in light of tort policy? Should the availability of insurance end the veil-piercing inquiry?
+
+4.  **What Is "Injustice" in the Tort Context?** Judge Heaney argues in Dissent ¶3--¶4 that Telecom created a business that operated dangerous vehicles with no assets of its own. Is this different from the cab structure in *Walkovszky*? Why might a court view undercapitalization differently in the context of trucking vs. taxis?
+
+5.  **Who Bears the Risk of Injury?** Should tort victims rely on the solvency of an operating entity---or on its parent? If Telecom had simply paid the premium for its subsidiary's insurance, does that excuse its failure to capitalize Contrux? What if Contrux had run out of insurance mid-year?
+
+6.  **Contract vs. Tort.** In earlier cases (*e.g.*, *Sea-Land*), courts focused on commercial arrangements between sophisticated parties. Here, the plaintiff is a tort victim. Should the veil-piercing standard be lower in tort cases than in contract cases? Is *Radaszewski* too formalistic---or is it properly cautious?
+
+7.  **Revisiting Walkovszky.** Both *Walkovszky* and *Radaszewski* involve injured tort plaintiffs facing undercapitalized corporations protected by the law. Which opinion---the *Walkovszky* majority, *Sea-Land* on remand, or Judge Heaney's *Radaszewski* dissent---offers the best balance between fairness and legal certainty?
+
+8.  **Doctrinal Drift or Stable Structure?** After *Sea-Land* and *Radaszewski*, do you think veil-piercing doctrine is clear and predictable? Or is it fact-sensitive and discretionary? Would you advise a business client to rely on the corporate veil? Under what circumstances?
+
+#### Enterprise Liability in Contract Context
+
+The veil-piercing doctrine is often framed in the language of abuse: domination, undercapitalization, fraud, and injustice. But courts do not apply that doctrine identically across all contexts. Tort plaintiffs, like Mr. Radaszewski, typically do not choose to deal with the corporations that harm them. They suffer injury by chance. That moral asymmetry---between involuntary plaintiffs and shielded defendants---makes tort-based veil-piercing especially fraught.
+
+Contract plaintiffs are different. They negotiate with counterparties, allocate risks, and have opportunities to demand guarantees, insurance, or due diligence before extending credit. Courts are therefore more reluctant to pierce the veil when the plaintiff could have protected itself ex ante. But not always.
+
+Sometimes a plaintiff contracts with one corporation only to discover, post-breach, that the true business operations were conducted by another. The corporate counterparty may be a shell, and the real money, management, and decision-making lie elsewhere. When that happens, courts may invoke a distinct but related doctrine: enterprise liability.
+
+Enterprise liability is not about domination by a single individual. It is about related entities operating as a single business---intentionally or otherwise. It arises most often when a group of affiliated corporations operate from the same address, use the same resources, and appear interchangeable to outsiders. If one member of the group fails, the others may be drawn in.
+
+The following case presents a classic example. A commercial landlord leased space to what appeared to be a legitimate corporate tenant. When the tenant defaulted, the landlord sought to hold an affiliated entity responsible. The question is whether the court should treat the separate corporations as a single enterprise.
+
+As you read this short but instructive opinion, identify the specific facts that satisfied the New Jersey court\'s piercing standard, and compare that standard\'s structure and burden to the Illinois Van Dorn test applied in Sea-Land. Does New Jersey require proof of fraud or specific inequity as a second element, or does a sufficient showing of alter ego status alone justify piercing?
+
+OTR Associates v. IBC Services, Inc.\
+801 A.2d 407 (N.J. Super. Ct. App. Div. 2002)
+
+PRESSLER, P.J.A.D.
+
+1.  The single dispositive issue raised by this appeal is whether the trial court. . . was justified, as a matter of law, in piercing the corporate veil and thus holding a parent corporation liable for the debt incurred by its wholly owned subsidiary. We are satisfied that the facts. . . present a textbook illustration of circumstances mandating corporate-veil piercing.
+
+2.  Plaintiff OTR Associates. . . leased space in 1985 for use by a Blimpie franchisee. . . Blimpie was the sole owner of a subsidiary named IBC Services, Inc. (IBC), created for the single purpose of holding the lease. . . Accordingly, it was IBC that entered into the lease. . . and subleased the space to the franchisee. . .
+
+3.  The tenancy was marked by substantial rent arrearages, and it was terminated. . . In 1998 OTR commenced this action for unpaid rent. . . against Blimpie under both its present and former names. It also joined. . . IBC, as well as Garden State Blimpie, Inc., another wholly-owned leaseholding subsidiary. . . Judgment was entered in favor of OTR. . . Blimpie appeals, and we affirm. . .
+
+4.  Domination and control by Blimpie of IBC is patent and was not, nor could have been, reasonably disputed. The question then is whether Blimpie abused the privilege of incorporation by using IBC to commit a fraud or injustice or other improper purpose. We agree. . . that the evidence overwhelmingly requires an affirmative answer.
+
+5.  The leitmotif of the testimony. . . was that \[plaintiff\] believed that they were dealing with Blimpie, the national and financially responsible franchising company, and never discovered the fact of separate corporate entities until after the eviction. While it is true that IBC never expressly claimed to be Blimpie, it. . . affirmatively, intentionally, and calculatedly led OTR to believe it was Blimpie.
+
+6.  Illustratively, when OTR was pre-leasing space in the mall, the first approach. . . was the appearance. . . of two men in Blimpie uniforms who announced that they wanted to open a Blimpie sandwich shop. One of the men was the franchisee. . . the other. . . was someone with a connection to Blimpie. It is also true that the named tenant. . . was IBC Services, Inc., but. . . identified as "IBC Services, Inc. having an address at c/o International Blimpie Corporation." It hardly required a cryptographer to draw the. . . inference that IBC stood for International Blimpie Corporation. . .
+
+7.  The separate corporate shell. . . may have been mechanistically impeccable. . . But in every functional and operational sense, the subsidiary had no separate identity. It was. . . not intended to shield the parent from responsibility for its subsidiary's obligations but rather to shield the parent from its own obligations. And that is an evasion and an improper purpose, fraudulently conceived and executed.
+
+8.  We note that the creation of a judgment-proof wholly-owned subsidiary as the leaseholding entity for a solvent retail chain is not a novel device. Nor is it a successful one. . . \[W\]e are satisfied. . . that there clearly was such an implicit representation in Blimpie's conduct, which reasonably induced plaintiff to believe it and IBC were the same.
+
+9.  The judgment appealed from is affirmed.
+
+#### *OTR* Notes and Questions
+
+1.  **Control vs. Abuse.** In ¶4, the court acknowledges that Blimpie exercised total control over IBC. But that, standing alone, is not enough. What additional facts convinced the court that this control was used improperly? How does this compare to the control exercised in *Sea-Land* and *Freeman*, *infra*?
+
+2.  **Implied Representation.** In ¶5--¶6, the court emphasizes that the landlord believed it was dealing with Blimpie, not a separate subsidiary. What specific conduct led to that belief? Did Blimpie ever explicitly misrepresent itself? Does it matter?
+
+3.  **When Does Separate Incorporation Become Misleading?** ¶6--¶7 suggest that even legally distinct entities can act in ways that blur the line. Should companies be required to disclose corporate separateness more clearly? If the landlord had noticed "IBC Services, Inc." in the lease, should that have been enough to raise questions?
+
+4.  **Tort vs. Contract.** OTR arose in a commercial lease context---an arms-length business deal. In *Radaszewski* and *Walkovszky*, the plaintiffs were tort victims. Why was veil-piercing successful in this contract case but denied in the tort cases? Should the law be more or less protective of plaintiffs in these different contexts?
+
+5.  **Economic Efficiency vs. Opportunism.** Is there a legitimate business purpose in using a shell subsidiary to sign leases, so long as the parent remains solvent and reputable? Or is this simply opportunistic risk shifting?
+
+6.  **How Would You Advise Blimpie?** Suppose you're Blimpie's lawyer. You've just lost this case. What corporate practices would you recommend changing? Could better disclosure or lease drafting have avoided liability?
+
+7.  **Was Veil-Piercing Necessary?** Could the landlord have sued for fraud or misrepresentation instead of veil-piercing? Does this suggest that veil-piercing is being used as a backdoor substitute for more precise claims?
+
+### The Equitable Owner Doctrine
+
+Veil-piercing doctrine typically focuses on shareholders. The assumption is that the person or entity controlling a corporation does so through stock ownership---and that this formal ownership entitles them to limited liability unless misused.
+
+But what about those who exercise control without holding stock?
+
+In some cases, courts have allowed veil-piercing against individuals or entities that are not shareholders, but who function as such in substance. These cases turn not on corporate ownership, but on corporate control. The key question becomes whether someone who dominates the business---who makes decisions, moves money, and blurs personal and corporate identities---should be treated as if they were the owner for purposes of liability.
+
+This is the theory of equitable ownership: the idea that the law may treat someone as an owner because they act like one, even if their name appears nowhere on the corporate records. It is a doctrine grounded in equity, not formalism---and it carries major implications for how courts draw the line between legitimate business structure and personal evasion of responsibility.
+
+The next case, *Freeman v. Complex Computing Co.*, considers this question in the context of an unpaid employee, a failing business, and a would-be corporate defendant who claims, "I don't even own the company."
+
+Doron Doron claimed to act as agent for a disclosed corporate principal but in fact held no valid authority and secretly controlled the corporation for his own benefit. As you read, consider: the Second Circuit uses both traditional veil-piercing and an \'equitable owner\' theory to impose liability on Doron. Which theory is more analytically sound on these facts? Does the equitable owner doctrine create any risk of misapplication against legitimate silent investors or minority shareholders?
+
+Freeman v. Complex Computing Co.\
+119 F.3d 1044 (2d Cir. 1997)
+
+MINER, Circuit Judge:
+
+1.  Defendant Jason Glazier appeals from a judgment. . . which pierced the corporate veil in order to impose personal liability upon him. The court found that, although Glazier was neither an employee, officer, director, nor shareholder of C3, his control and dominion over C3 warranted veil-piercing.
+
+2.  C3 was incorporated in 1992, with an acquaintance of Glazier's as the sole shareholder and Seth Akabas as president. Columbia University, which had licensed valuable software to C3, refused to do so if Glazier were an officer or shareholder. To circumvent this, Glazier operated C3 through a consulting agreement between C3 and Glazier, Inc.---a corporation wholly owned by Glazier.
+
+3.  Glazier was the sole signatory on C3's bank account, performed or supervised all of C3's business functions, and had an option to purchase all of C3's stock for \$2,000. The court noted that "to regard Glazier as anything but the sole stockholder and controlling person of C3 would be to exalt form over substance."
+
+4.  Freeman entered into a contract with C3 in 1993 to license software, market it, and receive commissions over a ten-year period. After helping arrange a major deal between C3 and Thomson, C3 terminated Freeman's contract. The termination letter, signed by Glazier, admitted that the termination was meant to renegotiate what the company called an "overly generous" commission agreement.
+
+5.  Shortly thereafter, Thomson acquired C3's assets. Thomson paid Glazier \$450,000 as a signing bonus and employed him directly. C3 was paid \$300,000 for its assets. It paid Glazier an additional \$210,000, leaving only \$10,000 in its accounts. Thomson assumed most of C3's obligations---but notably, not Freeman's contract.
+
+6.  Freeman sued to compel Glazier to arbitrate under the contract's arbitration clause, arguing that Glazier was effectively C3. The district court agreed and ordered Glazier to arbitrate.
+
+7.  The Second Circuit affirmed the district court's finding of control, holding that Glazier was the "equitable owner" of C3 for veil-piercing purposes. But the court reversed the judgment compelling arbitration, explaining that control alone is not enough. Under New York law, veil-piercing also requires a showing that the control was used to commit a fraud or other wrong that caused unjust loss.
+
+8.  "While complete domination of the corporation is the key to piercing the corporate veil," the court wrote, "such domination, standing alone, is not enough; some showing of a wrongful or unjust act toward plaintiff is required."
+
+9.  Reversed and remanded.
+
+***Freeman* [Notes & Questions]{.smallcaps}**
+
+1.  **What Made Glazier the "Equitable Owner"?** In ¶2--¶3, the court details Glazier's relationship with C3. What specific facts support the conclusion that Glazier controlled the corporation? How did the arrangement with Glazier, Inc. enable him to exert control without formal ownership?
+
+2.  **Form vs. Substance.** The district court found that to treat Glazier as anything other than the owner would "exalt form over substance" (¶3). What does this phrase mean in the context of corporate law? Should corporate formalities be respected even when they appear to serve as legal fictions?
+
+3.  **Why Was Veil-Piercing Denied?** In ¶7--¶8, the Second Circuit affirms that control alone is not enough. What additional showing must a plaintiff make under New York law? Did Freeman suffer harm because of Glazier's control? Why might the court have found this insufficient?
+
+4.  **What Counts as "Unjust" Conduct?** Glazier terminated Freeman's contract and arranged for Thomson to buy C3's assets---excluding Freeman's commission. Was this a sharp business move or an abuse of the corporate form? How does this compare to the asset-shifting in *Sea-Land*?
+
+5.  **Can You Pierce Against a Non-Shareholder?** Glazier was not technically a shareholder, officer, or director. Should the veil-piercing doctrine apply to someone in his position? What are the risks of expanding the doctrine to non-owners?
+
+6.  **Comparative Standards.** Compare the two-prong tests used in *Freeman* and *Sea-Land*. Do they differ in substance or only in terminology? Which standard offers more clarity for courts and litigants?
+
+7.  **Contract vs. Tort, Again.** Freeman entered into a contract with C3. Should courts be more reluctant to pierce the veil in contract disputes than in tort cases? If Freeman had been a tort victim (say, injured during a demo), would the outcome have changed?
+
+    \_\_\_\_\_\_\_\_\_\_
+
+Plaintiffs argue that National Distillers and its affiliated group of subsidiaries should be treated as a single enterprise because they share common ownership, management, financing, and operations. As you read, consider: what does the court identify as the fundamental analytical distinction between enterprise liability and traditional veil-piercing? If enterprise liability has been rejected by most courts, why does the Fifth Circuit analyze it so extensively---and does the rejection reflect a principled doctrinal choice or excessive deference to corporate form?
+
+Krivo Industrial Supply Co. v. National Distillers and Chemical Corp.\
+483 F.2d 1098 (5th Cir. 1973)
+
+37. RONEY, Circuit Judge:
+
+    Plaintiffs, ten creditors of a now reorganized corporation, individually sued National Distillers and Chemical Corp., the major creditor of that corporation, on their debts. . . After hearing plaintiffs' evidence, the District Court granted a directed verdict in favor of National Distillers. We affirm. . .
+
+**I. The Law**. . .
+
+***THE "INSTRUMENTALITY" DOCTRINE***
+
+38. We note at the outset that the case before us involves only the question of National Distillers' liability under the "instrumentality" theory. . .
+
+39. Basic to the theory of corporation law is the concept that a corporation is a separate entity, a legal being having an existence separate and distinct from that of its owners. This attribute of the separate corporate personality enables the corporation's stockholders to limit their personal liability to the extent of their investment. But the corporate device cannot in all cases insulate the owners from personal liability. Hence, courts do not hesitate to ignore the corporate form in those cases where the corporate device has been misused by its owners. The corporate form, however, is not lightly disregarded, since limited liability is one of the principal purposes for which the law has created the corporation.
+
+40. One of the most difficult applications of the rule permitting the corporate form to be disregarded arises when one corporation is sought to be held liable for the debts of another corporation. A corporation may become liable for the debts of another corporation in two ways. First, expressly or impliedly, it may assume responsibility for those debts by indicating to the creditors of the other corporation that it stands behind those debts as a guarantor. . . Second, a corporation may be held liable for the debts of another corporation when it misuses that corporation by treating it, and by using it, as a mere business conduit for the purposes of the dominant corporation. . .
+
+41. In formulating a basis for predicating liability of a dominant corporation for the acts or omissions of another corporation, courts have developed various legal theories and descriptive terms to explain and to describe the relationship between a dominant and a subservient corporation. For example, under the "identity" theory the separate corporate identities are disregarded and both corporations are treated as one corporation. Alternatively, a subservient corporation may be labeled the instrument, agent, adjunct, branch, dummy, department, or tool of the dominant corporation. "Instrumentality" is perhaps the term most frequently employed to describe the relationship between a dominant corporation and its subservient corporation, and Alabama law follows this characterization. \[T\]he Alabama Supreme Court stated:
+
+> The notion of separate corporate existence will not be recognized where a corporation is so organized and controlled and its business conducted in such a manner as to make it merely an instrumentality of another, and in such circumstances the fiction may not be prosecuted to permit the corporation to evade its just responsibilities. . .
+
+42. Although the Alabama courts have yet to delineate a more precise test, the parties in the case at bar agree, and we agree, that two elements are essential for liability under the "instrumentality" doctrine. First, the dominant corporation must have controlled the subservient corporation, and second, the dominant corporation must have proximately caused plaintiff harm through misuse of this control. . .
+
+43. \[T\]he control required for liability under the "instrumentality" rule amounts to total domination of the subservient corporation, to the extent that the subservient corporation manifests no separate corporate interests of its own and functions solely to achieve the purposes of the dominant corporation. . .
+
+44. No lesser standard is applied in "instrumentality" cases involving a creditor-debtor relationship. . . "It is to be noted that it is not 'controlling influence' that is essential. It is actual control of the action of the subordinate corporation."
+
+45. In addition to actual and total control of the subservient corporation, the "instrumentality" rule also requires that fraud or injustice proximately result from a misuse of this control by the dominant corporation. Alabama emphatically rejects actual fraud as a necessary predicate for disregarding the corporate form. . .
+
+46. This is the better rule, for the theory of liability under the "instrumentality" doctrine does not rest upon intent to defraud. It is an equitable doctrine that places the burden of the loss upon the party who should be responsible. The basic theory of the "instrumentality" doctrine is that the debts of the subservient corporation are in reality the obligations of the dominant corporation.
+
+**II. The Factual Background**
+
+47. Because the facts are critical in cases under the "instrumentality" rule, we detail the events and transactions tending to illuminate the relationship between the defendant National Distillers and Brad's Machine Products, Inc., for whose debts the plaintiff creditors seek to hold National Distillers responsible.
+
+48. Brad's Machine Products, Inc., was a California corporation that began its existence as a machine shop in Stanton, California. Employing approximately 25 persons, Brad's was owned by John C. Bradford and his wife Nola. In addition to the machine business, Bradford's investments included a championship quarter horse, racing boats, airplanes, an Arizona bar, an Alabama motel, Florida orange groves, and oil wells. In addition, Bradford, a country and western singer, formed a motion picture company, Brad's Productions, Inc., through which he produced a film that featured him as a singer. All of these investment activities were funded by his income from the machine shop.
+
+49. The record shows that Bradford was an able and inventive machinist and that the California operation had been profitable. In 1966, Bradford saw potential profit in the munitions industry, so he employed Arnold Seitman to guide his entry into the Government contracting system. Seitman had previously supervised government contracting for a company in Gadsden, Alabama, and he soon obtained for Brad's a 2.7 million dollar contract for the production of M-125 fuses, the principal component of which was brass. . .
+
+50. For a brief time, Brad's appeared to prosper. Bradford's wide-ranging investments, however, soon became a severe financial drain on the Brad's operation. . . By the end of 1968, Brad's was headed for financial distress.
+
+51. The M-125 booster fuse assembly was the major product manufactured by Brad's, accounted for ninety percent of its gross sales, and required substantial quantities of brass rods. In the beginning Brad's had purchased its brass requirements from three sources: Revere Brass Company, Mueller Brass Company, and Bridgeport Brass Company. Brad's principal source of supply was Bridgeport, and Brad's was one of Bridgeport's larger customers. Bridgeport is a division of the defendant, National Distillers and Chemical Corporation.
+
+52. In early 1969, Bridgeport was shipping approximately \$400,000-\$500,000 worth of brass rod to Brad's every month. In March, 1969, Brad's owed Bridgeport approximately \$1,000,000 and Bridgeport, at the request of Brad's, agreed to convert this arrearage to a promissory note. On March 28, 1969, Bridgeport accepted Brad's note, secured by (1) the personal guaranties of John C. Bradford, Chairman of the Board and sole stockholder of Brad's, and his wife and (2) a mortgage on real property owned by J-N Industries, Inc., a subsidiary of Brad's located in Tucson, Arizona. The note was payable at the rate of \$40,000 per month, plus interest on the unpaid balance, and it contained a "balloon agreement" under which the final payment in March of 1970 would equal the unpaid balance. Another provision stated that the note was to be extended to March 1, 1971, if, prior to April 1, 1970, Brad's entered into another contract with the Government for the manufacture and sale of fuse bodies, with the same cash flow and the same economic benefits to Brad's as under the then-current contract.
+
+53. In connection with the agreement for deferred payment, Brad's and Bridgeport entered into a "financing and loan agreement." Under this agreement, Bridgeport agreed to continue to supply Brad's with brass rod, so long as Brad's paid for current brass shipments within fifteen or sixteen days (with a ten day grace period). Despite this condition, by the end of July, 1969, Bridgeport permitted Brad's to build up an additional \$630,000 in brass rod accounts payable.
+
+54. On August 1, 1969, Bradford, Brad's President E. J. Huntsman, and Brad's Comptroller Roy Compton, went to New York to confer with representatives of National Distillers, including Assistant General Counsel and Secretary John F. Salisbury. The representatives of Brad's stated that its current financial situation precluded continued operation unless it received additional assistance, including working capital. They blamed the unsuccessful attempts to diversify Brad's as the reason for the company's financial straits. Moreover, they needed immediate assistance because the Government had threatened to cancel the current fuse contract if the financial condition of Brad's continued to worsen. Bradford offered to put up all the assets he and the company had in exchange for the additional funds and for National Distillers' intervention with the Government on behalf of Brad's.
+
+55. At the close of the August 1, 1969, meeting, National Distillers and Brad's reached an oral agreement in line with Bradford's requests. National Distillers was to (1) provide internal financial management assistance to help Brad's eliminate costly waste, (2) lend Brad's another \$600,000 in cash, (3) defer payment on the \$630,000 accounts receivable, (4) help Brad's and Bradford liquidate unprofitable holdings to provide more capital for Brad's, and (5) intervene with the Government to prevent cancellation of the current fuse body contract. Brad's and Bradford personally were to assign to National Distillers as collateral the various interests accumulated during the attempted diversification.
+
+56. Salisbury immediately telephoned a Government official in Birmingham, Alabama, whose job included monitoring for the Defense Contract Administration Service the financial ability of Brad's to perform its Government contracts, and assured him of National Distillers' intent to aid Brad's. On August 4, 1969, Brad's executed notes for the \$600,000 in cash and for the \$630,000 in unpaid accounts receivable, with National Distillers taking a real estate mortgage on the Gadsden plant and premises and a security agreement covering the plant's furniture and fixtures. Brad's and Bradford also assigned to National Distillers certain shares of capital stock of other corporations, several oil and gas leases, and all of the capital stock of Brad's Productions, Inc. These assets were to be sold and the proceeds were to be returned to the operating capital of Brad's. To help the financial management at Brad's, Leon Rudd, one of National Distillers' "Internal Auditors" was sent to Gadsden to oversee its finances and to establish control procedures for managing cash and investments. Finally, Salisbury assigned one of his assistants to help him and Brad's dispose of the assets assigned to National Distillers and other assets not so assigned. Under the terms of several agreements, both formal and informal, National Distillers agreed that any income or proceeds from these unassigned assets would be used for certain designated purposes in aid of Brad's other creditors and then either would revert to Brad's or to Bradford or would belong to National Distillers outright.
+
+57. Rudd remained with Brad's for fifteen months, during which National Distillers loaned Brad's an additional \$169,000 in cash and deferred another \$667,131.28 in accounts payable by Brad's to Bridgeport. Despite these transfusions, Brad's ceased its operations in December, 1970. These suits resulted from debts left unpaid by Brad's.
+
+**III. The Decision**. . .
+
+58. In cases involving the "instrumentality" rule, we must take a broad approach to the question of control, examining all of the plaintiffs' evidence to ascertain if the allegedly subservient corporation in fact had no separate corporate purposes or existence. . .
+
+59. **1.** Although stock ownership is not *per se* determinative of the issue of control, it is a factor to be considered in assessing the relationship between two companies sought to be linked under the "instrumentality" rule. 
+
+60. Plaintiffs attempted to prove that the stock ownership of Brad's had been transferred from John C. Bradford to National Distillers. Plaintiffs introduced (1) letters indicating that National Distillers intended to enter into an agreement with Bradford to assign the stock to National Distillers, (2) a memorandum dated August 13, 1969, and written by National Distillers' credit manager, Zimmerman, indicating that the stock transfer was "in process," and (3) a guaranty executed by National Distillers promising to repay a loan made to Brad's, that referred to National Distillers as "a mortgage holder" of the Brad's stock. Significantly, no one testified that the Brad's stock was ever actually assigned. On the other hand, National Distillers' Salisbury testified that, despite his earlier intent to take the stock, the transfer was never consummated because he feared endangering National Distillers' mortgage interest. Salisbury also testified that the reference to National Distillers as "a mortgage holder" of the Brad's stock was made at a time when National Distillers still intended to effect the transfer. Moreover, Seitman, who returned to Brad's in September of 1969, who became its president and a director in February, 1970, and who certainly would have known whether the stock was transferred, testified unequivocably that no transfer ever was effected. Hence, plaintiffs failed to create an issue of fact on this point.
+
+61. **2.** According to plaintiffs, the evidence shows that National Distillers believed that it had the power to control Bradford and his corporation and acted accordingly. A careful examination of this evidence, however, makes clear that National Distillers considered control of Brad's to be, at most, only partly shared between National Distillers and Brad's.
+
+62. First, a letter from National Distillers' Salisbury to the general manager of the movie company, Brad's Productions, Inc., stated: "As I am sure you are aware, National Distillers and Chemical Corporation has taken an active role in the management and control of Brad's Machine Products, Inc., and various other undertakings of John C. Bradford." This letter, however, is not inconsistent with National Distillers' argument, which we conclude is correct, that the evidence shows that Brad's voluntarily *shared* control with National Distillers. The letter does not say that National Distillers had taken control of Brad's; rather, it states only that National Distillers had "taken an active role in the management and control of Brad's."
+
+63. Second, according to Compton's testimony, National Distillers' credit manager, Zimmerman, told him that National Distillers "had the power, authority to fire Bradford and run him off." But the evidential importance of this statement is clarified by Compton's preceding testimony: "he (Zimmerman) said that Mr. Bradford should be fired and control taken away from him, and the plant be run properly." This language indicates that, although an employee of National Distillers may have felt that they should have taken control of Brad's away from John Bradford, they had not done so. Moreover, Compton testified that he did not believe that National Distillers would fire Bradford.
+
+64. Third, plaintiffs quote Seitman's testimony that states that Salisbury at one time threatened to "fire" both Seitman and Bradford and run the Brad's operation itself. A complete reading of Seitman's testimony indicates that he believed that National Distillers' so-called power or authority to "fire" lay in its "control of the purse strings." Seitman testified that National Distillers could not "have told Brad's who its officers were to be," and he then stated that he understood Salisbury to mean that National Distillers would cease extending credit to Brad's if certain contracts were not fulfilled. Thus, it is plain that National Distillers could have "fired" Brad's personnel only by cutting off credit or loans, thereby putting Brad's out of business. The record contains no evidence showing that National Distillers conceived that it could have directed or implemented the replacement and selection of management personnel, absent credit control.
+
+65. **3.** As to the scope of National Distillers' alleged control, the evidence shows only that National Distillers' activities were narrowly restricted to safeguarding its interests as a major creditor of Brad's, that National Distillers participated in the corporate decisionmaking at Brad's only to a limited degree, and that at no time did National Distillers assume actual, participatory, total control of Brad's.
+
+66. The thrust of plaintiffs' contention here is that Leon Rudd, who was sent to the Gadsden plant by National Distillers in August, 1969, and who remained until late November, 1970, actively dominated the Brad's decisionmaking apparatus during his stay.
+
+67. A reading of the testimony, especially that of the Brad's comptroller Compton, compels a conclusion that Rudd's activities were much more circumscribed than appellants argue. Rudd, an internal auditor employed by National Distillers, was transferred to Brad's in response to John Bradford's request for assistance in establishing a system of internal controls. Rudd was not thrust upon Brad's unwanted or unneeded.
+
+68. Because many of the financial problems at Brad's had been precipitated by improvident investments and uncontrolled spending, Rudd immediately moved to put himself in the position of monitoring Brad's cash outlays. According to Compton's testimony, Rudd suggested, and they all "readily agreed," that no purchase orders be sent out without his prior approval. Also, Rudd's signature was made mandatory on all checks from the Brad's accounts. From these "controls," plaintiffs would extrapolate the theory that National Distillers, through Rudd, was in charge of Brad's. Such a conclusion is untenable.
+
+69. First, the evidence showed that, in fact, Rudd's prior approval of purchase requisitions was not always necessary for purchases. At the trial, several of plaintiffs' purchase orders, put in evidence for other purposes, were shown to have been made up and sent out without Rudd's approval.
+
+70. Second, assuming that Rudd in fact enjoyed such an all-powerful veto over purchases, this power was never exercised where Brad's proper business purposes were involved. Rather, Rudd voiced his displeasure only when expenditures were contemplated that were unrelated to the Brad's machine shop operation.
+
+71. Third, Rudd's powers were essentially negative in character. The testimony showed that his function was to monitor the finances and to help Compton fend off aggressive, unhappy creditors. Although plaintiffs contend that Rudd "participated in the management" of Brad's, the evidence shows that he did so only in a limited sense. Only those decisions having an immediate effect on Brad's financial position were subject to Rudd's primary attention. He attended management meetings solely in that capacity. The record contains no evidence that he was ever substantially involved in personnel or production decisions. Rudd left the delicate task of renegotiating Government contracts to Compton. (After a Government contract had been completed, Government officials often reviewed the profits of the contracting firm, seeking the return of "excess profits.")
+
+72. Fourth, Rudd's position as a required signatory on all checks drawn against the Brad's general account provides little support for plaintiffs' theory. Besides Rudd's signature, the checks also required one other signer from Brad's. Hence, Rudd again had but a veto power.
+
+73. Plaintiffs argue that Rudd, using his power as a required signatory, expanded his powers into management (1) by negotiating and consummating settlements of disputed claims and (2) by designating the order in which creditors were to be paid. Once again, Compton's uncontradicted testimony illuminates the extent of Rudd's "control." Because Brad's had always been short of working capital, the practice had developed of writing checks to creditors as soon as a particular bill came due and then retaining the checks until there was money in the Brad's account to pay the checks. As could be expected, irate creditors often called upon Compton to pay up. When Rudd arrived, he and Compton worked together handling creditors. Compton testified that theirs was a cooperative effort but that, since Rudd was more skilled in dealing with creditors, he had the final decision as to which creditors were paid. The factors they considered included (1) the amount of money in the account, (2) the importance of the creditor to the continued operation of the plant, (3) the age of the bill, and (4) the urgency or fervor of a particular creditor's demand. In addition, Rudd often spoke with these creditors, attempting to forestall or to settle their demands.
+
+74. Rudd's activities while at Brad's simply do not amount to active domination of the corporation. His job was to provide internal financial management assistance and all that he did was in keeping with this mission. Although he kept a fairly tight rein on disbursements, the evidence shows that his role was that of providing a centralized control over purchases and disbursements. His job was two-fold: (1) to eliminate costly duplication, e. g., multiple orders of the same supply, and (2) to eliminate all disbursements not directly and immediately related to the machine shop business. These controls were strong, and Rudd was not afraid to exercise his power, but we cannot conclude from the evidence before us that his activities could justify a jury verdict that found control. Rudd limited the scope of his position to overseeing the finances of Brad's. Neither he nor anyone else from National Distillers or from Bridgeport Brass had much, if any, influence, let alone control, over other key areas of managerial decision-making at Brad's.
+
+75. In addition to Rudd's activities, plaintiffs argue that other National Distillers personnel exercised control over Brad's outside investments and production.
+
+76. First, they contend that Salisbury and an assistant made the final decisions as to which assets of the "mini-conglomerate" to retain and which to liquidate. Compton testified that these efforts stemmed from Bradford's earlier request for management assistance from National Distillers and that all the proceeds were returned to Brad's to provide working capital. Although National Distillers' personnel apparently did make the final decision on the disposition of these assets, in many cases this power may be traced to the transaction in which they were assigned to National Distillers for precisely such a disposition.
+
+77. Second, Compton also testified that a vice president of Bridgeport, Al Jones, visited Brad's on a weekly basis for five or six months, offering his advice and assistance wherever the production personnel at Brad's might need it. Nowhere in the record is it indicated that Jones ever exercised any control over the production process. To the contrary, his function was that of a consultant, checking data and offering his analysis. Compton specifically testified that neither Rudd nor Jones was concerned with production quantity.
+
+78. These activities of both Rudd and the other are not sufficient to establish the degree of control requisite to "instrumentality" rule liability. The evidence shows that, at most, National Distillers shared managerial responsibility for some but not all aspects of the Brad's operation. That is not enough. . .
+
+79. After considering the plaintiffs' evidence in the most favorable light, it is plain that Brad's never became an "instrumentality" of National Distillers. Although National Distillers' position as a major creditor undoubtedly vested it with the capacity to exert great pressure and influence, we agree with the District Court that such a power is inherent in any creditor-debtor relationship and that the existence and exercise of such a power, alone, does not constitute control for the purposes of the "instrumentality" rule. Plaintiffs had to show the exercise of that control in the actual operation of the debtor corporation. Accordingly, because plaintiffs failed to produce substantial evidence of such actual operative total control, we affirm the directed verdict granted by the District Court.
+
+80. Because we hold that plaintiffs failed to establish the requisite degree of control, we do not reach the question of whether the case should have been tried before a judge or before a jury. . .
+
+***Krivo* [Notes & Questions]{.smallcaps}**
+
+1.  **Extent of Control.** Which indicators of "total domination" did the Fifth Circuit treat as essential to liability under the instrumentality doctrine? How are those qualitatively different from the ordinary influence a major creditor wields?
+
+2.  **Policy vs. Equity.** How does the court's reasoning balance the policy of preserving limited liability with the equitable need to prevent injustice?
+
+3.  **Operational Control vs. Financial Factors.** How does the court distinguish between the power to influence decisions through "control of the purse strings" and actual operational control?
+
+## Defective Formation
+
+Most corporate documents---legal opinions, contracts, loan agreements---contain a line like this:
+
+> "Acme, Inc., a corporation duly organized, validly existing, and in good standing under the laws of Delaware. . ."
+
+The phrase seems like harmless boilerplate, but each clause makes a legal claim. A corporation is "duly organized" only if it has completed all statutory requirements for formation. It is "validly existing" only if it has not been dissolved or suspended. And it is "in good standing" only if it has complied with filing, tax, and fee obligations.
+
+These formalities are not empty. Limited liability depends on the existence of a corporation---one that actually exists in law, not just in name or intention. If a business fails to file its articles or acts before formation is complete, it may not be a legal person at all. The law may treat it as a non-entity, and its promoters or participants may face personal liability.
+
+At the margins, courts have recognized doctrines to soften this result: the de facto corporation doctrine for good-faith but defective attempts to incorporate, and corporation by estoppel for parties who treat a business as a corporation and cannot later deny it.
+
+The following case introduces this question in practice: What happens when someone thinks they've formed a corporation---but hasn't?
+
+### *De Facto* Corporation Doctrine
+
+Under modern corporate law, the default rule is clear: no certificate, no corporation. In jurisdictions that follow the Model Business Corporation Act (MBCA)---including the District of Columbia---a business does not become a legal entity until the state formally issues a certificate of incorporation. There is no such thing as a corporation by implication. Until that certificate is issued, anyone acting on behalf of the "corporation" is personally liable.
+
+The MBCA eliminates traditional equitable doctrines like *de facto corporation* and *corporation by estoppel*, favoring a clean, formalist rule. Courts in these jurisdictions refuse to excuse errors in the incorporation process, even if everyone involved believed the business was properly formed. That belief may be sincere, but it's not legally effective.
+
+Other jurisdictions, including Delaware, take a more flexible approach. Delaware courts sometimes recognize a *de facto corporation* where a party has made a good-faith effort to incorporate and then operated as a corporation. They may also apply *corporation by estoppel* to prevent a third party from denying corporate existence when it previously treated the business as a valid entity.
+
+The next case, decided under the D.C. version of the MBCA, adopts the strict approach. It holds that formal incorporation is the only path to limited liability---and that failure to complete the process leaves the promoter fully exposed.
+
+McKinley Penn agreed to organize a corporation, signed a contract on its behalf before the certificate of incorporation had issued, and the contract was honored until it was repudiated. The D.C. Business Corporation Act, tracking the MBCA, abolished the de facto corporation doctrine. As you read, consider: does the statute\'s categorical rule---no certificate, no corporate existence---produce a fair result on these facts? Does the certainty the rule provides to creditors justify the hardship it imposes on good-faith incorporators?
+
+Robertson v. Levy\
+197 A.2d 443 (D.C. 1964)
+
+HOOD, Chief Judge.
+
+1.  On December 22, 1961, Martin G. Robertson and Eugene M. Levy entered into an agreement whereby Levy was to form a corporation, Penn Ave. Record Shack, Inc., which was to purchase Robertson\'s business. Levy submitted articles of incorporation to the Superintendent of Corporations on December 27, 1961, but no certificate of incorporation was issued at this time. Pursuant to the contract an assignment of lease was entered into on December 31, 1961, between Robertson and Levy, the latter acting as president of Penn Ave. Record Shack, Inc. On January 2, 1962, the articles of incorporation were rejected by the Superintendent of Corporations but on the same day Levy began to operate the business under the name Penn Ave. Record Shack, Inc. Robertson executed a bill of sale to Penn Ave. Record Shack, Inc. on January 8, 1962, disposing of the assets of his business to that \"corporation\" and receiving in return a note providing for installment payments signed \"Penn Ave. Record Shack, Inc. by Eugene M. Levy, President.\" The certificate of incorporation was issued on January 17, 1962. One payment was made on the note. The exact date when the payment was made cannot be clearly determined from the record, but presumably it was made after the certificate of incorporation was issued. Penn Ave. Record Shack, Inc. ceased doing business in June 1962 and is presently without assets. Robertson sued Levy for the balance due on the note as well as for additional expenses incurred in settling the lease arrangement with the original lessor. In holding for the defendant the trial court found that Code 1961, 29-950, relied upon by Robertson, did not apply and further that Robertson was estopped to deny the existence of the corporation.
+
+<!-- -->
+
+81. The case presents the following issues on appeal: Whether the president of an "association" which filed its articles of incorporation, which were first rejected but later accepted, can be held personally liable on an obligation entered into by the "association" before the certificate of incorporation has been issued, or whether the creditor is \"estopped\" from denying the existence of the \"corporation\" because, after the certificate of incorporation was issued, he accepted the first installment payment on the note.
+
+82. The Business Corporation Act of the District of Columbia, Code 1961, Title 29, is patterned after the Model Business Corporation Act which is largely based on the Illinois Business Corporation Act of 1933. On this appeal, we are concerned with an interpretation of sections 29-921c and 29-950 of our act. Several states have substantially enacted the Model Act, but only a few have enacted both sections similar to those under consideration. A search of the case law in each of these jurisdictions, as well as in our own jurisdiction, convinces us that these particular sections of the corporation acts have never been the subject of a reported decision.
+
+83. For a full understanding of the problems raised, some historical grounding is not only illuminative but necessary. In early common law times private corporations were looked upon with distrust and disfavor. This distrust of the corporate form for private enterprise was eventually overcome by the enactment of statutes which set forth certain prerequisites before the status was achieved, and by court decisions which eliminated other stumbling blocks. 3. Problems soon arose, however, where there was substantial compliance with the prerequisites of the statute, but not complete formal compliance. Thus the concepts of de jure corporations, de facto corporations, and of "corporations by estoppel" came into being.
+
+84. Taking each of these in turn, a de jure corporation results when there has been conformity with the mandatory conditions precedent (as opposed to merely directive conditions) established by the statute. A de jure corporation is not subject to direct or collateral attack either by the state in a quo warranto proceeding or by any other person.
+
+85. A *de facto* corporation is one which has been defectively incorporated and thus is not *de jure*. The Supreme Court has stated that the requisites for a corporation *de facto* are:
+
+- A valid law under which such a corporation can be lawfully organized;
+
+- An attempt to organize thereunder;
+
+- Actual user of the corporate franchise; and
+
+- Good faith in claiming to be and in doing business as a corporation is often added as a further condition.
+
+86. A de facto corporation is recognized for all purposes except where there is a direct attack by the state in a *quo warranto* proceeding. The concept of de facto corporation has been roundly criticized.
+
+87. Cases continued to arise, however, where the corporation was not *de jure*, where it was not *de facto* because of failure to comply with one of the four requirements above, but where the courts, lacking some clear standard or guideline, were willing to decide on the equities of the case. Thus another concept arose, the so-called "corporation by estoppel."
+
+88. This term was a complete misnomer. There was no corporation, the acts of the associates having failed even to colorably fulfill the statutory requirements; there was no estoppel in the pure sense of the word because generally there was no holding out followed by reliance on the part of the other party.
+
+89. Apparently estoppel can arise whether or not a *de facto* corporation has come into existence. Estoppel problems arose where the certificate of incorporation had been issued as well as where it had not been issued, and under the following general conditions:
+
+- where the "association" sues a third party and the third party is estopped from denying that the plaintiff is a corporation;
+
+- where a third party sues the \"association\" as a corporation and the \"association\" is precluded from denying that it was a corporation;
+
+- where a third party sues the \"association\" and the members of that association cannot deny its existence as a corporation where they participated in holding it out as a corporation;
+
+- where a third party sues the individuals behind the \"association\" but is estopped from denying the existence of the "corporation";
+
+- where either a third party, or the \"association\" is estopped from denying the corporate existence because of prior pleadings.
+
+90. One of the reasons for enacting modern corporation statutes was to eliminate problems inherent in the *de jure*, *de facto* and estoppel concepts. Thus sections 29-921c and 950 were enacted as follows:
+
+> **§ 29-921c. Effect of issuance of incorporation.** Upon the issuance of the certificate of incorporation, the corporate existence shall begin, and such certificate of incorporation shall be conclusive evidence that all conditions precedent required to be performed by the incorporators have been complied with and that the corporation has been incorporated under this chapter, except as against the District of Columbia in a proceeding to cancel or revoke the certificate of incorporation.
+>
+> **§ 29-950. Unauthorized assumption of corporate powers.** All persons who assume to act as a corporation without authority so to do shall be jointly and severally liable for all debts and liabilities incurred or arising as a result thereof.
+
+91. The first portion of section 29-921c sets forth a *sine qua non* regarding compliance. No longer must the courts inquire into the equities of a case to determine whether there has been "colorable compliance" with the statute.
+
+92. The corporation comes into existence only when the certificate has been issued. Before the certificate issues, there is no corporation *de jure*, *de facto* or by estoppel. After the certificate is issued under section 921c, the *de jure* corporate existence commences. Only after such existence has begun can the corporation commence business through compliance with section 29-921d, by paying into the corporation the minimum capital, and with section 921a(f), which requires that the capitalization be no less than \$ 1,000.
+
+93. These latter two sections are given further force and effect by section 29-918(a)(2) which declares that directors of a corporation are jointly and severally liable for any assets distributed or any dividends paid to shareholders which renders the corporation insolvent or reduces its net assets below its stated capital.
+
+94. The authorities which have considered the problem are unanimous in their belief that section 29-921c (similar to Ill.Corp.Act § 157.49 and Model Business Corporation Act § 50) and section 29-950 (similar to Ill.Corp.Act § 157.150 and Model Business Corporation Act § 139), have put to rest *de facto* corporations and corporations by estoppel. Thus the Comment to section 50 of the Model Act, after noting that *de jure* incorporation is complete when the certificate is issued, states that:
+
+> Since it is unlikely that any steps short of securing a certificate of incorporation would be held to constitute apparent compliance, the possibility that a de facto corporation could exist under such a provision is remote.
+
+95. Similarly, Professor Hornstein in his work on Corporate Law and Practice (1959) observes at § 29 that:
+
+> Statutes in almost half the jurisdictions have virtually eliminated the distinction between de jure and de facto corporations \[citing § 139 of the Model Act\].
+
+96. The discussion of the Illinois Act which was prepared by the draftsmen of that Act appeared in 1 Illinois Business Corporation Act Annotated 462-465 (1947 ed.), and noted:
+
+> While there are no decisions on the point, it is probable that no steps short of securing a certificate of incorporation would be heard to constitute such apparent compliance. And, as already stated, under the present act, upon issuance of the certificate, *de jure* incorporation is complete.
+
+97. The portion of § 29-921c which states that the certificate of incorporation will be "conclusive evidence" that all conditions precedent have been performed eliminates the problems of estoppel and *de facto* corporations once the certificate has been issued. The existence of the corporation is conclusive evidence against all who deal with it. Under § 29-950, if an individual or group of individuals assumes to act as a corporation before the certificate of incorporation has been issued, joint and several liability attaches.
+
+98. We hold, therefore, that the impact of these sections, when considered together, is to eliminate the concepts of estoppel and *de facto* corporateness under the Business Corporation Act of the District of Columbia. It is immaterial whether the third person believed he was dealing with a corporation or whether he intended to deal with a corporation. The certificate of incorporation provides the cut off point; before it is issued, the individuals, and not the corporation, are liable.
+
+99. Turning to the facts of this case, Penn Ave. Record Shack, Inc. was not a corporation when the original agreement was entered into, when the lease was assigned, when Levy took over Robertson\'s business, when operations began under the Penn Ave. Record Shack, Inc. name, or when the bill of sale was executed. Only on January 17 did Penn Ave. Record Shack, Inc. become a corporation. Levy is subject to personal liability because, before this date, he assumed to act as a corporation without any authority so to do. Nor is Robertson estopped from denying the existence of the corporation because after the certificate was issued he accepted one payment on the note. An individual who incurs statutory liability on an obligation under section 29-950 because he has acted without authority, is not relieved of that liability where, at a later time, the corporation does come into existence by complying with section 29-921c. Subsequent partial payment by the corporation does not remove this liability. The judgment appealed from is reversed with instructions to enter judgment against the appellee on the note and for damages proved to have been incurred by appellant for breach of the lease.
+
+100. Reversed with instructions.
+
+**Robinson [Notes & Questions]{.smallcaps}**
+
+1.  **The Statutory Bright Line.** The D.C. court treats the certificate of incorporation as a strict legal threshold: until it is issued, there is no corporation---only individuals acting without authority. Why might modern statutes like the MBCA favor this bright-line rule? Does it promote clarity, or risk harsh outcomes?
+
+2.  **Good Faith, Bad Luck.** Levy believed he had formed a corporation. He had filed articles, paid fees, and signed documents as "President." Why doesn't that matter under the statute? Should a good-faith error play a role in assigning liability?
+
+3.  **Liability Without Misrepresentation.** Robertson knew he was dealing with "Penn Ave. Record Shack, Inc." and not personally with Levy. Why does the court still hold Levy liable? Is that fair?
+
+4.  **Corporation by Estoppel (Rejected).** In ¶¶8--9, the court rejects earlier doctrines that allowed parties to "hold out" a corporation into existence. Does the court give persuasive reasons for discarding estoppel? Is this more about legal formalism or economic policy?
+
+5.  **Compare to Delaware or Maryland.** Would this case come out differently under Delaware law---or in Maryland, as applied in *Cranson*? What features of the jurisdiction's statute or judicial attitude might lead to a different outcome?
+
+### Corporation By Estoppel
+
+Even where no corporation exists---*de jure* or *de facto*---courts may still limit personal liability based on how the parties behaved. The doctrine of corporation by estoppel prevents someone from denying the existence of a corporation when they previously treated it as real. The rationale is not statutory, but equitable: if you dealt with the business as a corporation, you shouldn't be allowed to reverse course when it suits you.
+
+Some jurisdictions, like the District of Columbia, have rejected this doctrine entirely in favor of bright-line statutory rules. Others, including Maryland and Delaware, continue to apply estoppel principles to protect good-faith actors and avoid unjust outcomes.
+
+The next case illustrates this more flexible approach. The court does not excuse a filing failure, but it does shield an officer from liability because the creditor treated the business as a corporation all along.
+
+Cranson was informed---incorrectly---that a valid corporation had been formed. He invested in it, became an officer, and signed contracts on its behalf in good faith. The Maryland court applies corporation-by-estoppel and reaches the opposite result from Robertson. As you read, consider: on what basis can IBM plausibly be estopped from denying the corporation\'s existence, given that IBM contracted with what it understood to be a corporation? Is the estoppel running against IBM, against Cranson, or against both?
+
+Cranson v. International Business Machines Corp.\
+200 A.2d 33 (Md. 1964)
+
+HORNEY, Judge.
+
+1.  On the theory that the Real Estate Service Bureau was neither a de jure nor a de facto corporation and that Albion C. Cranson, Jr., was a partner in the business conducted by the Bureau and as such was personally liable for its debts, the International Business Machines Corporation brought this action against Cranson for the balance due on electric typewriters purchased by the Bureau.
+
+2.  The agreed statement of facts shows that in April 1961, Cranson was asked to invest in a new business corporation which was about to be created. . . Thereafter, upon being advised by the attorney that the corporation had been formed under the laws of Maryland, he paid for and received a stock certificate. . . and was shown the corporate seal and minute book. The business . . . was conducted as if it were a corporation, through corporate bank accounts . . . and under a lease entered into by the corporation for the office from which it operated. . . At no time did he assume any personal obligation or pledge his individual credit to I.B.M.
+
+3.  Due to an oversight on the part of the attorney . . . the certificate of incorporation . . . was not filed until November 24, 1961. Between May 17 and November 8, the Bureau purchased eight typewriters from I.B.M., on account of which partial payments were made, leaving a balance due of \$4,333.40, for which this suit was brought.
+
+4.  The fundamental question presented. . . is whether an officer of a defectively incorporated association may be subjected to personal liability under the circumstances of this case. We think not.
+
+5.  Traditionally, two doctrines have been used by the courts to clothe an officer of a defectively incorporated association with the corporate attribute of limited liability. The first. . . the doctrine of de facto corporations. . . The second, the doctrine of estoppel to deny the corporate existence. . . is generally employed where the person seeking to hold the officer personally liable has. . . admitted \[the corporation's\] existence as a corporate body. . .
+
+6.  From these cases it appears that where the parties have assumed corporate existence and dealt with each other on that basis, the Court will apply the estoppel doctrine on the theory that the parties by recognizing the organization as a corporation were thereafter prevented from raising a question as to its corporate existence. . .
+
+7.  We think that I.B.M., having dealt with the Bureau as if it were a corporation and relied on its credit rather than that of Cranson, is estopped to assert that the Bureau was not incorporated at the time the typewriters were purchased. . .
+
+8.  Since I.B.M. is estopped to deny the corporate existence of the Bureau, we hold that Cranson was not liable for the balance due on account of the typewriters.
+
+***Cranson* [Notes & Questions]{.smallcaps}**
+
+1.  **Estoppel vs. Incorporation.** The court distinguishes between a *de facto corporation* (which may require statutory compliance) and *corporation by estoppel*, which rests on fairness to the parties. What is the court trying to protect by applying estoppel here? Whose reliance matters most?
+
+2.  **Reliance and Representations.** IBM dealt with the Bureau as if it were a corporation. It sent bills, received payments, and never questioned corporate status. Why does that behavior bar IBM from later denying the Bureau's existence? Is this about protecting Cranson, or policing IBM's conduct?
+
+3.  **Blame and Responsibility.** Cranson relied on the attorney's assurance that incorporation had occurred. Should business actors be responsible for verifying legal filings? How far should that duty extend?
+
+4.  **Judicial Flexibility vs. Legislative Clarity.** The *Cranson* court overrules earlier Maryland cases that treated statutory formalities as controlling. It explicitly reaffirms that estoppel may apply even when there is no de facto corporation. Is that a judicial override of the statute, or a necessary equitable safety valve?
+
+5.  **Would Robertson Come Out Differently in Maryland?** Suppose the same facts from *Robertson* occurred in Maryland instead of D.C. Would the result be different under the reasoning in *Cranson*? What facts or doctrinal distinctions might tip the analysis?
+
+### Promoters and Pre-Incorporation Contracts
+
+Even when a corporation is ultimately formed, its legal existence begins only upon filing. But business does not always wait. Founders often line up leases, suppliers, investors, or employees before the certificate arrives. When these agreements are signed in the name of a not-yet-existent corporation, the law must decide who is liable---and under what conditions that liability shifts.
+
+At common law, the default rule is clear: a corporation cannot be bound by or enforce a contract that predates its existence. It is not a party and it lacks capacity. Yet courts have developed mechanisms to allocate responsibility fairly: the promoter who signs such a contract may be personally liable, and the corporation may later "adopt" the contract, even though it cannot technically ratify something it never had the capacity to enter.
+
+A related doctrine is novation---a mutual agreement among all parties to substitute the corporation for the promoter as the responsible party. Without a clear novation, liability may persist.
+
+The next case explores what happens when a promoter signs a contract on behalf of a company that does not yet exist---and then seeks to avoid personal responsibility after formation is complete.
+
+Ohio recognizes both the de facto corporation doctrine and the doctrine of corporation by estoppel. As you read, compare Ohio\'s approach to Robertson (strict MBCA rule; no de facto doctrine) and Cranson (estoppel only). Does maintaining two parallel doctrines give courts useful flexibility to reach equitable results in diverse fact patterns---or does it introduce the sort of unpredictability that the MBCA\'s categorical rule was designed to eliminate?
+
+Illinois Controls, Inc. v. Langham\
+639 N.E.2d 771 (Ohio 1994)
+
+A. WILLIAM SWEENEY, Justice.
+
+1.  In late February 1985, appellant and appellees commenced negotiations to form a new corporation to manufacture and market a CSM \[a Cross Slope Monitor is a construction-grade sensor device used to measure and maintain the angle (or slope) of a road or surface during grading and paving\] for use on CAT equipment \[e.g., typically means bulldozers, graders, loaders, and other construction vehicles made by Caterpillar\]. . . Appellees told appellant that the debt incurred to purchase Lamb's and Sellett's interests would be assumed by the new entity. Langham Engineering thus became a sole proprietorship before its assets were acquired by the new entity.
+
+2.  On October 4, 1985, the parties executed a pre-incorporation agreement ("PIA") to create the new corporation. The PIA was signed by Clark Balderson individually and in his representative capacity as president of BI. The PIA provided in relevant part:
+
+> "WHEREAS, the parties hereto desire to organize and operate a corporation to be established under the laws of the State of Ohio which shall manufacture and sell cross slope monitors (and other products) throughout the world. NOW, THEREFORE, pursuant to the mutual covenants herein contained, the parties hereto agree as follows: ARTICLE I. Formation of New Company. Promptly after the date of this agreement, \[BI, Clark Balderson\] and \[Michael\] Langham shall cause. . . a new company. . . to be incorporated. . . ARTICLE II. Newco Objectives. The object of Newco is to combine the resources. . . of Langham. . . BI. . . and Balderson. . . to establish operating efficiencies in the production and marketing of cross slope monitors. . ."
+
+101. Appellant was required to contribute \$12,500 in cash and the assets of Langham Engineering. . . In exchange, Illinois Controls was to assume the liabilities of appellant and Langham Engineering in the approximate amount of \$651,000. . . On October 8, 1985, the CSM patent was granted to appellant.
+
+102. However, instead of the \$250,000 promised by Balderson for CSM production . . . only \$20,000 was committed. Moreover, instead of the \$225,000 envisioned in the marketing plan for promoting the CSM in the first two years, only \$60,000 to \$80,000 was actually committed to this goal. . .
+
+103. On or about October 1, 1987, Illinois Controls ceased operations. Appellant had received. . . only ten percent of the royalties owed. . . and none of the more than \$600,000 in debt incurred by appellant personally. . . was assumed or discharged.
+
+104. Appellees filed suit for declaratory judgment. . . Appellants counterclaimed for breach of the PIA. . . The jury awarded damages to the Langhams (\$752,000 against Illinois Controls) and to the Flahertys (\$110,000 against Illinois Controls). . .
+
+105. The legal relationship between a promoter and the corporate enterprise he seeks to advance is analogous to that between an agent and his principal. Thus, legal principles governing the relationship are derived from the law of agency. . .
+
+106. A corporation . . . may adopt \[a pre-incorporation agreement\] after its incorporation. Adoption may be manifested by the corporation's receipt of the contract's benefits with knowledge of its terms.
+
+107. The record discloses substantial evidence of the benefits conferred upon Illinois Controls. . . including exclusive use of the CSM patent, manufacturing capabilities. . . vehicle titles, and engineering expertise. . . It is therefore beyond dispute that the corporation knowingly derived benefits from the agreement. . .
+
+108. There was also sufficient evidence that Illinois Controls breached the PIA. . . Despite transfer of certain assets . . . the corporation never assumed the debt as promised, leaving Langham responsible for approximately \$784,000 in personal debt. . .
+
+109. It is axiomatic that the promoters of a corporation are at least initially liable on any contracts they execute. . . The promoters are released from liability only where (1) the contract provides that performance is to be the obligation of the corporation; (2) the corporation is ultimately formed; and (3) the corporation formally adopts the contract.
+
+110. Moreover, mere adoption of the contract by the corporation will not relieve promoters from liability in the absence of a subsequent novation. . . A party to a contract cannot relieve himself from its obligations by the substitution of another person, without the consent of the other party. . .
+
+111. Applying these principles . . . the promoters remain personally liable on the PIA. The corporation is liable because it accepted benefits. . . The promoters are liable because the corporation never formally adopted the PIA, and the PIA does not make the corporation solely responsible. . .
+
+***Illinois Controls* [Notes & Questions]{.smallcaps}**
+
+1.  **Promoters Are Personally Liable---By Default.** The court emphasizes that promoters are "at least initially liable" for pre-incorporation contracts, even when they sign in a representative capacity. Why does the law impose personal liability by default? Is that fair to business founders?
+
+2.  **Adoption Is Not Enough.** The court distinguishes between adoption (where the corporation accepts the benefits of a contract) and novation (where the parties formally agree to substitute the corporation in place of the promoter). Why doesn't adoption alone release the promoter? How could Langham have protected himself?
+
+3.  **Joint and Several Liability.** Because the corporation benefited from the agreement and the promoters signed it, both are held jointly and severally liable. If you were advising a third party like Langham, would you view this rule as a protection or a trap?
+
+4.  **Course of Dealing and Formal Requirements.** The corporation used Langham's patent, hired his engineers, and manufactured the product. Yet it never formally assumed the debt. Should courts allow conduct alone to transfer liability? Or should formal novation always be required?
+
+5.  **Comparison with Cranson.** In *Cranson v. IBM*, the court used estoppel to protect a promoter from personal liability. Here, the court enforces promoter liability despite corporate benefit and reliance. How do these cases fit together? Is the key difference the identity of the plaintiff---or the formality of the contract?
+
+## Ultra Vires Actions
+
+Under modern corporate statutes, a corporation has broad power to engage in any lawful business. **Model Business Corporation Act § 3.01** provides:
+
+> Unless its articles of incorporation provide otherwise, every corporation has the same powers as an individual to do all things necessary or convenient to carry out its business and affairs.
+
+This expansive language effectively eliminates the traditional doctrine of *ultra vires*---Latin for "beyond the powers"---for most business corporations. Historically, a corporation could not act beyond the specific purposes stated in its charter. Acts outside that scope were void or voidable, even if all participants consented. Today, most business corporations adopt generic purpose clauses (e.g., "to engage in any lawful activity"), and most states, including Delaware, follow the MBCA's approach of treating the statutory grant of powers as default authority.
+
+Although rarely successful in modern corporate litigation, the *ultra vires* doctrine still appears in several important contexts:
+
+- **Shareholder Suits (MBCA § 3.04(a)).** Shareholders may seek to enjoin *ultra vires* actions before they occur---especially if the action directly violates a specific charter provision or statutory restriction.
+
+- **Internal Enforcement (MBCA § 3.04(b)).** The corporation itself may bring a claim against directors or officers who authorize or carry out *ultra vires* acts, particularly where those acts violate explicit limits in the articles of incorporation.
+
+- **Attorney General Actions (MBCA § 3.04(c)).** A state attorney general may seek judicial dissolution or other remedies if a corporation abuses its powers or persistently acts outside its legal authority.
+
+- **Nonprofit Corporations.** For nonprofits---especially those with IRS 501(c)(3) status---stated purpose matters. A nonprofit that engages in activities outside its tax-exempt purpose (e.g., political campaigning) may face loss of exempt status, revocation of grants, or director liability. Courts have occasionally used *ultra vires* principles to enforce purpose compliance in this context.
+
+- **Benefit Corporations and ESG Commitments.** In jurisdictions that authorize benefit corporations, *ultra vires* may resurface in modified form. Because these entities commit to pursuing specific public benefits, courts may consider whether an action that disregards those purposes violates the statutory or charter-based commitment. While enforcement is still evolving, *ultra vires* could supply a doctrinal hook for enforcing stated missions.
+
+- **Charter-Defined Constraints.** Occasionally, a corporation will adopt self-imposed limitations in its articles---such as restricting lines of business, limiting political contributions, or barring certain types of acquisitions. Although rare, such constraints may still be invoked in ultra vires challenges if violated.
+
+While *ultra vires* is no longer a frequent basis for voiding contracts or nullifying corporate action, it still shapes the legal architecture of corporate purpose. It may also serve as a conceptual bridge between formation, fiduciary duty, and purpose-driven governance. As hybrid entities like benefit corporations expand, and as nonprofit law continues to rely on purpose-based accountability, *ultra vires* remains a doctrine worth understanding---even if rarely invoked.
+
+**Ultra Vires [Notes & Questions]{.smallcaps}**
+
+1.  **A Doctrine in Decline---but Not Dead.** Why has modern corporate law largely abandoned *ultra vires* as a tool for invalidating corporate acts? What practical problems did the old doctrine create for third parties?
+
+2.  **Nonprofits and Mission Drift.** Unlike for-profit corporations, nonprofits often must stick to a defined purpose to maintain tax-exempt status. If a 501(c)(3) nonprofit uses its funds for political campaigning, could that be challenged as *ultra vires*? Should courts intervene?
+
+3.  **Purpose Clauses in Benefit Corporations.** Some statutes require benefit corporations to pursue "general public benefit" or identify specific social goals. If the board shifts entirely toward profit maximization, could a stakeholder claim that decision was *ultra vires*? Who would have standing to raise such a claim?
+
+4.  **Enforcement Within the Corporation.** MBCA § 3.04(b) permits a corporation to bring a claim against its own directors or officers for exceeding corporate powers. Should this remain on the books? What purpose does it serve if the acts in question are already subject to fiduciary duty review?
+
+5.  **Modern Relevance or Doctrinal Fossil?** Is the *ultra vi*res doctrine a useful check in modern corporate law---or simply a historical relic? Can you think of any scenarios where a court should be able to declare a corporate act void for being "beyond the powers"?
+
+## Notable Miscellaneous Provisions
+
+A corporation's legal existence depends not only on formation but also on continued compliance with basic administrative obligations. These statutory provisions rarely appear in case law, but they form the infrastructure of corporate identity.
+
+Every corporation must maintain a registered office and designate a registered agent for service of process in its state of incorporation. These requirements, found in statutes like MBCA §§ 5.01-04 and DGCL § 132, ensure that legal notices and lawsuits reach the corporation through a formal channel. Failure to maintain a registered agent may lead to administrative dissolution or restrict the corporation's ability to appear in court.
+
+Corporations must also file annual reports and pay periodic franchise taxes or fees to remain in good standing. Under MBCA § 16.22 and DGCL §§ 502-10, these obligations are generally minimal for small businesses but can be significant for large or high-value corporations. Noncompliance can lead to monetary penalties, suspension of rights, or even forfeiture of the corporate charter.
+
+Most states also provide for administrative dissolution---the involuntary termination of corporate status by the secretary of state---for failure to meet filing or tax obligations. The MBCA permits reinstatement in many cases, sometimes retroactively, and validates corporate acts undertaken during the period of dissolution. *See* MBCA §§ 14.20-22.
+
+Historically, corporations were required to use a corporate seal to formalize legal acts. Today, this requirement has been abolished in most jurisdictions. Both the MBCA and DGCL permit the use of a seal but state explicitly that its absence does not affect legal validity. *See* MBCA § 3.02(18); DGCL § 102(l).
+
+Finally, modern statutes allow for emergency bylaws---rules that take effect when a catastrophic event, such as war or natural disaster, makes normal governance impossible. These provisions allow boards to act despite missing quorum requirements or standard notice protocols. Emergency bylaws remain rare but are available under MBCA § 2.07(d) and DGCL § 110.
+
+These structural rules receive little doctrinal attention, but they are essential to the maintenance of corporate personhood. A corporation is not just a legal fiction at formation---it is an administrative creature that must remain visible and accountable to the state.
+
+## Conclusion: The Reality of Legal Fiction
+
+The corporation is not a building or a machine. It has no walls, no engines, no flesh. It is an idea given legal form---a state-created structure capable of owning property, entering contracts, and bearing rights and obligations distinct from any natural person. This chapter has explored how that structure comes into being and why it matters.
+
+To create a corporation is to invoke a legal artifice. But that artifice carries real consequences. It limits liability, facilitates investment, centralizes control, and permits continuity beyond the lives of its owners. It is a tool of extraordinary power. But like any tool, it can be used well or poorly---or bent toward ends the law never intended.
+
+We have seen how that power is bounded. Courts may pierce the corporate veil to prevent fraud or injustice. Promoters may bear personal liability for acting before a corporation exists. Officers may exceed their powers, triggering ultra vires concerns. And corporations themselves may falter---not for lack of ambition, but for failure to maintain the formalities that keep their legal existence alive.
+
+Behind every boilerplate phrase---"duly organized," "validly existing," "in good standing"---lies a network of statutory requirements and legal assumptions. To practice corporate law is to understand how that network functions and when its protections hold.
+
+In the chapters ahead, we will examine how this legal person---the corporation---governs itself. We will trace the authority of boards, the rights of shareholders, the obligations of fiduciaries, and the boundaries between power and duty. But all that rests on what you've learned here: the corporation is a legal structure. The law that creates the corporation also shapes the limits of its identity.
