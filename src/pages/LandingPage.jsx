@@ -98,14 +98,10 @@ export default function LandingPage() {
   const builtIds = useMemo(() => CHAPTERS.filter((c) => !!c.route).map((c) => c.moduleId || c.id), []);
   const progress = getCourseProgress(builtIds);
   const lastVisited = getLastVisitedModule();
-  const completionMap = useMemo(
-    () =>
-      BUILT_MODULES.reduce((acc, id) => {
-        acc[id] = getModuleCompletion(id);
-        return acc;
-      }, {}),
-    []
-  );
+  const completionMap = BUILT_MODULES.reduce((acc, id) => {
+    acc[id] = getModuleCompletion(id);
+    return acc;
+  }, {});
   const recommendedNext = getRecommendedNextModule(lastVisited, completionMap);
 
   return (
