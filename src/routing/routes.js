@@ -17,18 +17,6 @@ export const HASH_TARGETS = Object.freeze({
   simulationLab: "simulation-lab",
 });
 
-export const CANONICAL_TOME_PANELS = Object.freeze({
-  problems: "problems",
-});
-
 export function getHomeHashLink(hash) {
   return `${APP_ROUTES.home}#${hash}`;
 }
-
-export function getCanonicalProblemsRoute() {
-  return `${APP_ROUTES.tomeHome}?panel=${CANONICAL_TOME_PANELS.problems}`;
-}
-
-export const LEGACY_HASH_ROUTE_FALLBACKS = Object.freeze({
-  [HASH_TARGETS.problems]: getCanonicalProblemsRoute(),
-});

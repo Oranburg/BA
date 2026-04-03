@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { APP_ROUTES, LEGACY_HASH_ROUTE_FALLBACKS } from "./routes";
+import { useLocation } from "react-router-dom";
 
 const MAX_SCROLL_ATTEMPTS = 10;
 const RETRY_MS = 100;
@@ -20,17 +19,10 @@ function scrollToHashTarget(hashTarget) {
 
 export default function HashRouteHandler() {
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const hashTarget = normalizeHash(location.hash);
     if (!hashTarget) return;
-
-    const legacyFallbackRoute = LEGACY_HASH_ROUTE_FALLBACKS[hashTarget];
-    if (legacyFallbackRoute) {
-      navigate(legacyFallbackRoute, { replace: true });
-      return;
-    }
 
     let cancelled = false;
     let attempts = 0;
@@ -54,7 +46,7 @@ export default function HashRouteHandler() {
     return () => {
       cancelled = true;
     };
-  }, [location.hash, location.pathname, navigate]);
+  }, [location.hash, location.pathname]);
 
   return null;
 }

@@ -13,6 +13,7 @@ import {
   LifecycleHandoff,
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
+import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
 
 // ---------------------------------------------------------------------------
 // Agency Activity: "The Neural-Link Handshake — Who Controls the Bot?"
@@ -253,6 +254,7 @@ export default function Ch02Agency() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
+      <ModuleBreadcrumb chapterNum="02" title="Agency Law" />
       {/* Header */}
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-2">
         Chapter 2 · Agency Law

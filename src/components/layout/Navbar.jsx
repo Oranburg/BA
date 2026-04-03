@@ -1,20 +1,39 @@
 import { useState } from "react";
 import { useTheme } from "./useTheme";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTome } from "../../tome/useTome";
-import { APP_ROUTES, getCanonicalProblemsRoute } from "../../routing/routes";
+import { APP_ROUTES, HASH_TARGETS, getHomeHashLink } from "../../routing/routes";
 
 export default function Navbar() {
   const { isDark, setIsDark } = useTheme();
   const { openTome } = useTome();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
+  function close() {
+    setMobileOpen(false);
+  }
+
+  const linkClass = (active) =>
+    `font-headline uppercase tracking-wider text-sm transition-colors ${
+      active ? "text-sprawl-yellow" : "text-white/70 hover:text-sprawl-yellow"
+    }`;
+
+  const isHome = location.pathname === "/" || location.pathname === "";
   const navLinks = (
     <>
-      <Link to={APP_ROUTES.home} onClick={() => setMobileOpen(false)} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Reader</Link>
-      <Link to={getCanonicalProblemsRoute()} onClick={() => setMobileOpen(false)} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Simulation Lab</Link>
-      <button onClick={() => { openTome(); setMobileOpen(false); }} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors text-left">Tome Panel</button>
-      <Link to={APP_ROUTES.tomeHome} onClick={() => setMobileOpen(false)} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Tome Full</Link>
+      <Link to={APP_ROUTES.home} onClick={close} className={linkClass(isHome && !location.hash)}>
+        Home
+      </Link>
+      <Link to={getHomeHashLink(HASH_TARGETS.courseMap)} onClick={close} className={linkClass(isHome && location.hash === `#${HASH_TARGETS.courseMap}`)}>
+        Chapters
+      </Link>
+      <Link to={getHomeHashLink(HASH_TARGETS.simulationLab)} onClick={close} className={linkClass(isHome && location.hash === `#${HASH_TARGETS.simulationLab}`)}>
+        Toolkit
+      </Link>
+      <button onClick={() => { openTome(); close(); }} className={`${linkClass(false)} text-left`}>
+        Reference Lookup
+      </button>
     </>
   );
 

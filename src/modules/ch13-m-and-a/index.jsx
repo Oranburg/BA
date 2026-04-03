@@ -11,6 +11,7 @@ import {
   LifecycleHandoff,
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
+import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
 
 // ---------------------------------------------------------------------------
 // M&A Activity: "The Deal Room — Enhanced Scrutiny in The Sprawl"
@@ -262,6 +263,7 @@ export default function Ch13MA() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
+      <ModuleBreadcrumb chapterNum="13" title="M&A" />
       {/* Header */}
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-2">
         Chapter 13 · Mergers &amp; Acquisitions

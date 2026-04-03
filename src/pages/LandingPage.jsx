@@ -1,10 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import AppImage from "../components/ui/AppImage";
-import { APP_ROUTES, HASH_TARGETS, getCanonicalProblemsRoute } from "../routing/routes";
+import { APP_ROUTES, HASH_TARGETS } from "../routing/routes";
 import FiduciarySlider from "../components/toolkit/FiduciarySlider";
 import CitationChip from "../tome/CitationChip";
-import { useTome } from "../tome/useTome";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
 import newBoston2077 from "../assets/images/new-boston-2077.png";
 import { getCourseProgress, getLastVisitedModule, getModuleCompletion } from "../learning/progress";
@@ -96,7 +95,6 @@ const VISUAL_SLOTS = {
 
 export default function LandingPage() {
   const [activeChapter, setActiveChapter] = useState(null);
-  const { openTome } = useTome();
   const builtIds = useMemo(() => CHAPTERS.filter((c) => !!c.route).map((c) => c.moduleId || c.id), []);
   const progress = getCourseProgress(builtIds);
   const lastVisited = getLastVisitedModule();
@@ -165,18 +163,18 @@ export default function LandingPage() {
           </div>
 
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link
-              to={getCanonicalProblemsRoute()}
+            <a
+              href={`#${HASH_TARGETS.courseMap}`}
               className="px-8 py-3 bg-sprawl-yellow text-sprawl-deep-blue font-headline font-bold uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
             >
               Enter Course Map
-            </Link>
-            <button
-              onClick={() => openTome()}
+            </a>
+            <a
+              href={`#${HASH_TARGETS.simulationLab}`}
               className="px-8 py-3 border border-sprawl-yellow/50 text-sprawl-yellow font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/10 transition-all"
             >
-              Open Tome of Law
-            </button>
+              Simulation Lab
+            </a>
           </div>
         </div>
 
@@ -188,7 +186,7 @@ export default function LandingPage() {
       </section>
 
       {/* FOUR PROBLEMS HUB */}
-      <section id={HASH_TARGETS.problems} className="py-20 px-6 bg-gray-50 dark:bg-sprawl-deep-blue/80">
+      <section id={HASH_TARGETS.problems} className="py-20 px-6 bg-gray-50 dark:bg-sprawl-deep-blue/80 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">
@@ -260,7 +258,7 @@ export default function LandingPage() {
       </section>
 
       {/* LAB PREVIEW */}
-      <section className="py-20 px-6 bg-white dark:bg-sprawl-deep-blue">
+      <section id={HASH_TARGETS.simulationLab} className="py-20 px-6 bg-white dark:bg-sprawl-deep-blue scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">
@@ -280,18 +278,18 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center">
-            <button
-              onClick={() => openTome()}
-              className="px-8 py-3 bg-sprawl-bright-blue text-white font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-bright-blue/80 transition-all"
+            <a
+              href={`#${HASH_TARGETS.courseMap}`}
+              className="px-8 py-3 bg-sprawl-bright-blue text-white font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-bright-blue/80 transition-all inline-block"
             >
-              ⚖ Open Tome of Law
-            </button>
+              See Full Chapter Map
+            </a>
           </div>
         </div>
       </section>
 
       {/* CURRICULUM ROADMAP */}
-      <section className="py-20 px-6 bg-gray-50 dark:bg-sprawl-deep-blue/70">
+      <section id={HASH_TARGETS.courseMap} className="py-20 px-6 bg-gray-50 dark:bg-sprawl-deep-blue/70 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">

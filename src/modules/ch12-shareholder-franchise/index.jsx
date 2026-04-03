@@ -10,6 +10,7 @@ import {
   LifecycleHandoff,
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
+import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
 
 const PROXY_FACTS = [
   {
@@ -120,6 +121,7 @@ export default function Ch12ShareholderFranchise() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
+      <ModuleBreadcrumb chapterNum="12" title="Shareholder Franchise" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">Chapter 12 · Shareholder Franchise</p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">Proxy Contest Control Room</h1>
       <p className="font-body text-gray-700 dark:text-gray-300">
