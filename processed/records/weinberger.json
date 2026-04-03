@@ -1,0 +1,24 @@
+{
+  "file_id": "weinberger",
+  "original_path": "inbox/Weinberger.md",
+  "original_name": "Weinberger.md",
+  "extension": ".md",
+  "size_bytes": 46948,
+  "content_hash": "51b69a6c0c565bebb2de8e2d45b0c0a2249ebb0066d3e82eaa814225b42d3b6e",
+  "source_family": "case",
+  "last_processed": "2026-04-03T17:14:05.177545+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 4,
+  "segment_ids": [
+    "weinberger:0000:weinberger-v-uop-inc",
+    "weinberger:0001:i",
+    "weinberger:0002:ii",
+    "weinberger:0003:iii"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

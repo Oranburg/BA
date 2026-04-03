@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "file_type_preferences": {
+    ".md": {
+      "extractor": "extract_markdown",
+      "confidence": "high",
+      "notes": "Best format; heading-based segmentation works well"
+    },
+    ".pdf": {
+      "extractor": "extract_pdf",
+      "confidence": "medium",
+      "notes": "pdfminer.six page-level extraction; quality varies by PDF"
+    },
+    ".docx": {
+      "extractor": "extract_docx",
+      "confidence": "high",
+      "notes": "python-docx heading-style segmentation"
+    },
+    ".xml": {
+      "extractor": "extract_xml",
+      "confidence": "medium",
+      "notes": "USLM legislative XML; section-level walk"
+    }
+  },
+  "source_family_rules": {
+    "case": "Segment by heading (Introduction, Facts, Analysis, Holding, etc.)",
+    "casebook": "Segment by chapter heading (H1) then by subheading (H2/H3)",
+    "statute": "Segment by section/article heading",
+    "unknown": "Conservative chunk; flag for review"
+  },
+  "chunking": {
+    "prefer_heading_boundaries": true,
+    "min_segment_chars": 50,
+    "max_segment_chars": 8000,
+    "notes": "Prefer smallest authoritative unit; preserve legal meaning"
+  },
+  "fallback_order": [
+    "heading-based",
+    "page-based",
+    "full-document"
+  ],
+  "last_updated": "2026-04-03T17:14:05.797067+00:00"
+}

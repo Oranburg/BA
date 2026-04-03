@@ -280,6 +280,26 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* CORPUS ANCHOR — visible statutory citation */}
+      <section id="corpus-anchor" className="py-12 px-6 bg-sprawl-deep-blue border-t border-sprawl-yellow/20">
+        <div className="max-w-3xl mx-auto">
+          <p className="font-ui text-sprawl-yellow/50 uppercase tracking-[0.25em] text-xs mb-4">
+            Source Law · Corpus Citation
+          </p>
+          <blockquote className="border-l-2 border-sprawl-yellow/60 pl-5">
+            <p className="font-ui text-gray-200 text-sm leading-relaxed">
+              "The business and affairs of every corporation organized under this chapter shall be
+              managed by or under the direction of a board of directors, except as may be otherwise
+              provided in this chapter or in its certificate of incorporation."
+            </p>
+            <cite className="block mt-3 font-ui text-sprawl-yellow/70 text-xs not-italic">
+              Delaware General Corporation Law (DGCL) § 141(a) — source:{" "}
+              <span className="text-sprawl-yellow/50">processed/segments/dgcl.jsonl</span>
+            </cite>
+          </blockquote>
+        </div>
+      </section>
+
       <TomeOfLaw isOpen={tomeOpen} onClose={() => setTomeOpen(false)} />
     </div>
   );

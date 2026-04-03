@@ -1,0 +1,21 @@
+{
+  "file_id": "restat-3d-of-agency",
+  "original_path": "inbox/Restat 3d of Agency.md",
+  "original_name": "Restat 3d of Agency.md",
+  "extension": ".md",
+  "size_bytes": 2785538,
+  "content_hash": "288f390f74ac5f47fcb081bda1464ea0deb35f3c58b546dcb9926e47a5013450",
+  "source_family": "statute",
+  "last_processed": "2026-04-03T17:14:02.070485+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 1,
+  "segment_ids": [
+    "restat-3d-of-agency:0000:restat-3d-of-agency-https-plus-lexis-com"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

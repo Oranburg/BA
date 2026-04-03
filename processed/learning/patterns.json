@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "citation_patterns": [
+    "\\d+\\s+[A-Z]\\.\\d[a-z]*\\s+\\d+",
+    "\\d+\\s+U\\.S\\.\\s+\\d+",
+    "§\\s*\\d+[\\w.]*",
+    "DGCL\\s+§\\s*\\d+",
+    "Del\\.\\s+\\d{4}"
+  ],
+  "file_naming_conventions": {
+    "BACG - Ch ##": "Business Associations casebook chapter",
+    "LotF": "Law of the Firm main text",
+    "DGCL": "Delaware General Corporation Law",
+    "MBCA": "Model Business Corporation Act",
+    "UPA": "Uniform Partnership Act",
+    "ULLCA": "Uniform LLC Act",
+    "PLAW": "Public Law (US Congress)",
+    "Restat": "Restatement (Third) of Agency"
+  },
+  "known_source_families": {
+    "Air Products": "Delaware Court of Chancery, 2011, poison pill case",
+    "Revlon": "Delaware Supreme Court, 1986, M&A duties case",
+    "Unocal": "Delaware Supreme Court, 1985, enhanced scrutiny",
+    "Weinberger": "Delaware Supreme Court, 1983, entire fairness",
+    "Corwin": "Delaware Supreme Court, 2015, stockholder ratification",
+    "Lyondell": "Delaware Supreme Court, 2009, Revlon duties",
+    "Magnetar": "Delaware Supreme Court, appraisal",
+    "Match Group": "Delaware Supreme Court, 2024, MFW"
+  },
+  "last_updated": "2026-04-03T17:14:05.797169+00:00"
+}

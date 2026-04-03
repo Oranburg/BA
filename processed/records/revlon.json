@@ -1,0 +1,26 @@
+{
+  "file_id": "revlon",
+  "original_path": "inbox/Revlon.md",
+  "original_name": "Revlon.md",
+  "extension": ".md",
+  "size_bytes": 33481,
+  "content_hash": "6fdddad1adedab1a5301cd08be31681ec45f1ca9b7c3b0c47a045b1e6f1d892f",
+  "source_family": "case",
+  "last_processed": "2026-04-03T17:14:02.110782+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 6,
+  "segment_ids": [
+    "revlon:0000:revlon-inc-v-macandrews-forbes-holdings-",
+    "revlon:0001:i",
+    "revlon:0002:ii",
+    "revlon:0003:iii",
+    "revlon:0004:iv",
+    "revlon:0005:v"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

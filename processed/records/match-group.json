@@ -1,0 +1,21 @@
+{
+  "file_id": "match-group",
+  "original_path": "inbox/Match Group.md",
+  "original_name": "Match Group.md",
+  "extension": ".md",
+  "size_bytes": 9148,
+  "content_hash": "adf4720c6d56f270c090e752aa50a49e4e5595059bad8c8c397771c041d354ca",
+  "source_family": "case",
+  "last_processed": "2026-04-03T17:13:57.535926+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 1,
+  "segment_ids": [
+    "match-group:0000:in-re-match-group-inc-derivative-litigat"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

@@ -1,0 +1,23 @@
+{
+  "file_id": "corwin",
+  "original_path": "inbox/Corwin.md",
+  "original_name": "Corwin.md",
+  "extension": ".md",
+  "size_bytes": 24353,
+  "content_hash": "98f5157cebb7d04c2a2034dee8f0b5f5ebfa2d19ed0e178c474b16dd019c48c2",
+  "source_family": "case",
+  "last_processed": "2026-04-03T17:13:36.530109+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 3,
+  "segment_ids": [
+    "corwin:0000:corwin-v-kkr-financial-holdings-llc",
+    "corwin:0001:i-the-court-of-chancery-properly-held-th",
+    "corwin:0002:ii-the-court-of-chancery-correctly-held-"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}
