@@ -1,4 +1,6 @@
 import { CHAPTER_ROUTES, DOCUMENTS, DOCUMENT_BY_SLUG, getTomePath } from "./corpus";
+import { APP_ROUTES } from "../routing/routes";
+import { resolveCitation } from "./citationRegistry";
 
 function normalize(text = "") {
   return text.toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
@@ -38,48 +40,6 @@ export const SECTION_INDEX = (() => {
   });
   return rows;
 })();
-
-const SPECIAL_CITATION_PATTERNS = [
-  {
-    matches: (text) => text.includes("del. code") && text.includes("tit. 8"),
-    docShortName: "DGCL",
-  },
-  {
-    matches: (text) => text.includes(normalize("26 U.S.C")) && text.includes("501(c)(3)"),
-    docShortName: "IRC 501(c)(3)",
-    sectionNumber: "501(c)(3)",
-  },
-];
-
-function parseCitation(input) {
-  const text = normalize(input);
-  const docMatch = DOCUMENTS.find((doc) => {
-    const keys = [doc.shortName, doc.title, ...(doc.aliases || [])].map(normalize);
-    return keys.some((k) => text.includes(k));
-  });
-
-  const secMatch = text.match(/(?:§|section|sec\.?|tit\.)\s*([0-9][0-9a-z.()-]*)/i) || text.match(/\b([0-9]+(?:\.[0-9]+)?(?:\([a-z0-9]+\))*)\b/i);
-  const sectionNumber = secMatch?.[1] ? secMatch[1].replace(/\s+/g, "") : "";
-
-  if (docMatch && sectionNumber) {
-    return { doc: docMatch, sectionNumber, confidence: "high" };
-  }
-
-  const special = SPECIAL_CITATION_PATTERNS.find((p) => p.matches(text));
-  if (special && (sectionNumber || special.sectionNumber)) {
-    return {
-      doc: DOCUMENTS.find((d) => d.shortName === special.docShortName),
-      sectionNumber: special.sectionNumber || sectionNumber,
-      confidence: "high",
-    };
-  }
-
-  if (docMatch) {
-    return { doc: docMatch, sectionNumber: "", confidence: "medium" };
-  }
-
-  return null;
-}
 
 export function getDocBySlug(slug) {
   return DOCUMENT_BY_SLUG[slug] || null;
@@ -136,16 +96,13 @@ export function resolveQuery(input) {
     }
   }
 
-  const citation = parseCitation(query);
-  if (citation?.doc && citation.sectionNumber) {
-    const section = (citation.doc.sections || []).find((s) => normalize(s.number) === normalize(citation.sectionNumber));
-    if (section) {
-      return {
-        type: "section",
-        feedback: `Citation resolved to ${citation.doc.shortName} § ${section.number}.`,
-        result: { doc: citation.doc, section },
-      };
-    }
+  const citation = resolveCitation(query);
+  if (citation.found && citation.kind === "section") {
+    return {
+      type: "section",
+      feedback: `Citation resolved to ${citation.document.shortName} § ${citation.section.number}.`,
+      result: { doc: citation.document, section: citation.section },
+    };
   }
 
   const documents = DOCUMENTS.filter((doc) => {
@@ -236,7 +193,7 @@ export function getBreadcrumbs(doc, section) {
 }
 
 export function buildChapterLink(ch) {
-  return CHAPTER_ROUTES[ch] || "/";
+  return CHAPTER_ROUTES[ch] || APP_ROUTES.home;
 }
 
 export function getReverseCitations(targetShort, targetSection) {

@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { resolveQuery } from "./resolver";
 import { getTomePath, toSlugToken } from "./corpus";
 import { useTome } from "./useTome";
+import { APP_ROUTES } from "../routing/routes";
+import { resolveCitation } from "./citationRegistry";
 
 export default function CitationChip({ citation, label }) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { openTome } = useTome();
-  const resolution = resolveQuery(citation);
+  const resolution = resolveCitation(citation);
 
-  const sectionResult = resolution.type === "section" ? resolution.result : null;
+  const sectionResult = resolution.found && resolution.kind === "section"
+    ? { doc: resolution.document, section: resolution.section }
+    : null;
   const previewId = `cite-preview-${toSlugToken(citation)}`;
 
   function openSectionInPanel() {
@@ -18,6 +21,7 @@ export default function CitationChip({ citation, label }) {
       openTome({ docSlug: sectionResult.doc.slug, sectionNumber: sectionResult.section.number, query: citation });
       return;
     }
+    console.warn(`[tome] unresolved citation: ${citation}`);
     openTome({ query: citation });
   }
 
@@ -26,7 +30,7 @@ export default function CitationChip({ citation, label }) {
       navigate(getTomePath(sectionResult.doc, sectionResult.section));
       return;
     }
-    navigate("/tome");
+    navigate(APP_ROUTES.tomeHome);
   }
 
   return (

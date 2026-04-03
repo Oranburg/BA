@@ -1,6 +1,7 @@
 import { useTheme } from "./ThemeContext";
 import { Link } from "react-router-dom";
 import { useTome } from "../../tome/useTome";
+import { APP_ROUTES, getCanonicalProblemsRoute } from "../../routing/routes";
 
 export default function Navbar() {
   const { isDark, setIsDark } = useTheme();
@@ -24,10 +25,10 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-6">
-          <Link to="/" className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Reader</Link>
-          <Link to="/" className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Simulation Lab</Link>
+          <Link to={APP_ROUTES.home} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Reader</Link>
+          <Link to={getCanonicalProblemsRoute()} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Simulation Lab</Link>
           <button onClick={() => openTome()} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Tome Panel</button>
-          <Link to="/tome" className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Tome Full</Link>
+          <Link to={APP_ROUTES.tomeHome} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Tome Full</Link>
         </div>
 
         <button

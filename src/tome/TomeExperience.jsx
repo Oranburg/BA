@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { CASE_LAW_INDEX, DOCUMENTS, PREBUILT_COMPARISONS, getTomePath } from "./corpus";
+import { APP_ROUTES, HASH_TARGETS } from "../routing/routes";
 import {
   buildChapterLink,
   coverageAnswer,
@@ -361,7 +362,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
   const [jump, setJump] = useState("");
   const [focus, setFocus] = useState(false);
   const [compareOpen, setCompareOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("browse");
+  const [activeTab, setActiveTab] = useState(() => new URLSearchParams(window.location.search).get("panel") === "problems" ? "comparisons" : "browse");
 
   const prevNext = getPrevNext(doc, section);
   const breadcrumbs = getBreadcrumbs(doc, section);
@@ -401,7 +402,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
           <h1 className="font-headline text-lg uppercase tracking-wider text-sprawl-yellow">Tome of Law</h1>
           <div className="ml-auto flex items-center gap-2">
             {!embedded && (
-              <Link to="/tome/index" className="rounded border border-sprawl-yellow/30 px-2 py-1 font-ui text-xs text-sprawl-yellow">
+              <Link to={APP_ROUTES.tomeIndex} className="rounded border border-sprawl-yellow/30 px-2 py-1 font-ui text-xs text-sprawl-yellow">
                 Corpus Index
               </Link>
             )}
@@ -436,7 +437,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
                   else if (nextDoc) {
                     setDoc(nextDoc);
                     setSection(null);
-                    navigate(`/tome/${nextDoc.slug}`);
+                    navigate(`${APP_ROUTES.tomeHome}/${nextDoc.slug}`);
                   }
                 }}
                 className="mt-1 w-full rounded border border-sprawl-yellow/30 bg-sprawl-deep-blue px-2 py-1 font-ui text-sm text-white"
