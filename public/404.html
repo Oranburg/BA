@@ -11,6 +11,7 @@
       } else {
         const path = l.pathname.slice(base.length);
         if (path || l.search || l.hash) {
+          // Browsers percent-encode reserved path characters like '&' before this point.
           const redirect =
             l.protocol +
             "//" +
