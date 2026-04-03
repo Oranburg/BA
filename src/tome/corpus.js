@@ -486,17 +486,11 @@ export const CASE_LAW_INDEX = [
 
 export const CHAPTER_ROUTES = {
   2: APP_ROUTES.ch02Agency,
-  3: APP_ROUTES.home,
-  5: APP_ROUTES.home,
-  6: APP_ROUTES.home,
-  7: APP_ROUTES.home,
-  8: APP_ROUTES.home,
-  9: APP_ROUTES.home,
-  10: APP_ROUTES.home,
-  11: APP_ROUTES.home,
-  12: APP_ROUTES.home,
+  8: APP_ROUTES.ch08EntitySelection,
+  9: APP_ROUTES.ch09FiduciaryDuties,
+  12: APP_ROUTES.ch12ShareholderFranchise,
   13: APP_ROUTES.ch13MA,
-  15: APP_ROUTES.home,
+  15: APP_ROUTES.ch15CapitalStructure,
 };
 
 export const DOCUMENT_BY_ID = Object.fromEntries(DOCUMENTS.map((d) => [d.id, d]));

@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+const CRACK_LINES = Array.from({ length: 5 }, (_, i) => ({
+  top: `${20 + i * 15}%`,
+  left: `${(i * 7 + 3) % 10}%`,
+  width: `${80 + ((i * 13 + 5) % 20)}%`,
+  opacity: 0.5 + ((i * 17 + 3) % 50) / 100,
+}));
+
 const RISK_TAGS = [
   { id: "commingling", label: "Asset Commingling", severity: "high" },
   { id: "undercap", label: "Undercapitalization", severity: "high" },
@@ -36,12 +43,20 @@ export default function VeilPiercingWall() {
         Drag risk factors onto the entity boundary to test veil integrity
       </p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-4" role="list" aria-label="Available risk factors">
         {RISK_TAGS.filter((t) => !appliedTags.find((a) => a.id === t.id)).map((tag) => (
-          <div
+          <button
             key={tag.id}
+            type="button"
             draggable
             onDragStart={() => setDragging(tag)}
+            onClick={() => {
+              if (!appliedTags.find((t) => t.id === tag.id)) {
+                setAppliedTags([...appliedTags, tag]);
+              }
+            }}
+            role="listitem"
+            aria-label={`Apply risk factor: ${tag.label} (${tag.severity} severity)`}
             className={`px-3 py-1.5 rounded font-ui text-xs cursor-grab active:cursor-grabbing border ${
               tag.severity === "critical"
                 ? "border-sprawl-bright-red text-sprawl-bright-red bg-sprawl-bright-red/10"
@@ -51,13 +66,15 @@ export default function VeilPiercingWall() {
             }`}
           >
             ⚡ {tag.label}
-          </div>
+          </button>
         ))}
       </div>
 
       <div
         onDragOver={(e) => e.preventDefault()}
         onDrop={handleDrop}
+        aria-live="polite"
+        aria-label={isBroken ? "Corporate veil pierced" : isGlitching ? "Corporate veil stressed" : "Corporate veil intact"}
         className={`relative rounded-lg border-2 p-6 min-h-[120px] transition-all ${
           isBroken
             ? "border-sprawl-bright-red bg-sprawl-bright-red/10 animate-pulse"
@@ -80,16 +97,17 @@ export default function VeilPiercingWall() {
           </span>
         </div>
 
-        <div className="flex flex-wrap gap-2 justify-center">
+        <div className="flex flex-wrap gap-2 justify-center" role="list" aria-label="Applied risk factors">
           {appliedTags.map((tag) => (
-            <div
+            <button
               key={tag.id}
+              type="button"
               onClick={() => removeTag(tag.id)}
+              aria-label={`Remove risk factor: ${tag.label}`}
               className="px-3 py-1.5 rounded font-ui text-xs cursor-pointer bg-sprawl-bright-red/20 border border-sprawl-bright-red text-sprawl-bright-red hover:bg-sprawl-bright-red/40 transition-all"
-              title="Click to remove"
             >
               ✕ {tag.label}
-            </div>
+            </button>
           ))}
           {appliedTags.length === 0 && (
             <p className="font-ui text-xs text-gray-400 italic">Drop risk factors here</p>
@@ -98,16 +116,11 @@ export default function VeilPiercingWall() {
 
         {isBroken && (
           <div className="absolute inset-0 rounded-lg pointer-events-none overflow-hidden">
-            {[...Array(5)].map((_, i) => (
+            {CRACK_LINES.map((line, i) => (
               <div
                 key={i}
                 className="absolute bg-sprawl-bright-red/20 h-0.5"
-                style={{
-                  top: `${20 + i * 15}%`,
-                  left: `${Math.random() * 10}%`,
-                  width: `${80 + Math.random() * 20}%`,
-                  opacity: 0.5 + Math.random() * 0.5,
-                }}
+                style={line}
               />
             ))}
           </div>

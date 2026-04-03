@@ -178,6 +178,8 @@ export default function Ch12ShareholderFranchise() {
                         next.splice(n - 1, 0, fact.id);
                         patch({ rankedRisks: next.slice(0, 4) });
                       }}
+                      aria-label={`Rank this fact position ${n}`}
+                      aria-pressed={position === n - 1}
                       className={`px-2 py-1 text-xs rounded border ${
                         position === n - 1 ? "border-sprawl-yellow bg-sprawl-yellow/10" : "border-gray-300 dark:border-gray-600"
                       }`}
@@ -218,7 +220,9 @@ export default function Ch12ShareholderFranchise() {
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Missing fact finder</h2>
         <p className="font-ui text-xs text-gray-500 mb-2">Identify one missing fact that could flip your recommendation.</p>
+        <label htmlFor="missing-fact" className="sr-only">Missing fact</label>
         <input
+          id="missing-fact"
           value={state.missingFact || ""}
           onChange={(e) => patch({ missingFact: e.target.value })}
           placeholder="e.g., whether controller-linked funds coordinated with either slate"
@@ -228,7 +232,9 @@ export default function Ch12ShareholderFranchise() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Counsel recommendation notes</h2>
+        <label htmlFor="counsel-notes-ch12" className="sr-only">Counsel recommendation notes</label>
         <textarea
+          id="counsel-notes-ch12"
           value={state.notes || ""}
           onChange={(e) => patch({ notes: e.target.value })}
           placeholder="Draft recommendation: voting-process protections, disclosure repairs, and litigation posture."

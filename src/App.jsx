@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./components/layout/ThemeContext";
 import MainLayout from "./components/layout/MainLayout";
+import ErrorBoundary from "./components/ui/ErrorBoundary";
 import LandingPage from "./pages/LandingPage";
 import SpaRedirectHandler from "./pages/SpaRedirectHandler";
 import Ch02Agency from "./modules/ch02-agency/index";
@@ -14,6 +15,10 @@ import { TomeDocPage, TomeHomePage, TomeIndexPage, TomeSectionPage } from "./tom
 import { APP_ROUTES } from "./routing/routes";
 import HashRouteHandler from "./routing/HashRouteHandler";
 
+function Guarded({ label, children }) {
+  return <ErrorBoundary label={label}>{children}</ErrorBoundary>;
+}
+
 export default function App() {
   return (
     <BrowserRouter basename="/BA/">
@@ -22,19 +27,21 @@ export default function App() {
       <ThemeProvider>
         <TomeProvider>
           <MainLayout>
-            <Routes>
-              <Route path={APP_ROUTES.home} element={<LandingPage />} />
-              <Route path={APP_ROUTES.ch02Agency} element={<Ch02Agency />} />
-              <Route path={APP_ROUTES.ch08EntitySelection} element={<Ch08EntitySelection />} />
-              <Route path={APP_ROUTES.ch09FiduciaryDuties} element={<Ch09FiduciaryDuties />} />
-              <Route path={APP_ROUTES.ch12ShareholderFranchise} element={<Ch12ShareholderFranchise />} />
-              <Route path={APP_ROUTES.ch13MA} element={<Ch13MA />} />
-              <Route path={APP_ROUTES.ch15CapitalStructure} element={<Ch15CapitalStructure />} />
-              <Route path={APP_ROUTES.tomeHome} element={<TomeHomePage />} />
-              <Route path={APP_ROUTES.tomeIndex} element={<TomeIndexPage />} />
-              <Route path={`${APP_ROUTES.tomeHome}/:docSlug`} element={<TomeDocPage />} />
-              <Route path={`${APP_ROUTES.tomeHome}/:docSlug/:articleSlug/:sectionSlug`} element={<TomeSectionPage />} />
-            </Routes>
+            <ErrorBoundary label="Application">
+              <Routes>
+                <Route path={APP_ROUTES.home} element={<Guarded label="Landing Page"><LandingPage /></Guarded>} />
+                <Route path={APP_ROUTES.ch02Agency} element={<Guarded label="Ch02 Agency"><Ch02Agency /></Guarded>} />
+                <Route path={APP_ROUTES.ch08EntitySelection} element={<Guarded label="Ch08 Entity Selection"><Ch08EntitySelection /></Guarded>} />
+                <Route path={APP_ROUTES.ch09FiduciaryDuties} element={<Guarded label="Ch09 Fiduciary Duties"><Ch09FiduciaryDuties /></Guarded>} />
+                <Route path={APP_ROUTES.ch12ShareholderFranchise} element={<Guarded label="Ch12 Shareholder Franchise"><Ch12ShareholderFranchise /></Guarded>} />
+                <Route path={APP_ROUTES.ch13MA} element={<Guarded label="Ch13 M&amp;A"><Ch13MA /></Guarded>} />
+                <Route path={APP_ROUTES.ch15CapitalStructure} element={<Guarded label="Ch15 Capital Structure"><Ch15CapitalStructure /></Guarded>} />
+                <Route path={APP_ROUTES.tomeHome} element={<Guarded label="Tome"><TomeHomePage /></Guarded>} />
+                <Route path={APP_ROUTES.tomeIndex} element={<Guarded label="Tome Index"><TomeIndexPage /></Guarded>} />
+                <Route path={`${APP_ROUTES.tomeHome}/:docSlug`} element={<Guarded label="Tome Document"><TomeDocPage /></Guarded>} />
+                <Route path={`${APP_ROUTES.tomeHome}/:docSlug/:articleSlug/:sectionSlug`} element={<Guarded label="Tome Section"><TomeSectionPage /></Guarded>} />
+              </Routes>
+            </ErrorBoundary>
           </MainLayout>
         </TomeProvider>
       </ThemeProvider>

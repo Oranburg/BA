@@ -37,24 +37,30 @@ export default function AuthorityMatrix() {
             <p className="flex-1 font-body text-sm text-gray-700 dark:text-gray-300 pt-1">
               {action.label}
             </p>
-            <div className="flex gap-1 flex-wrap">
-              {CATEGORIES.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => assign(action.id, cat)}
-                  className={`px-2 py-1 rounded font-ui text-xs transition-all border ${
-                    assignments[action.id] === cat
-                      ? checked
-                        ? assignments[action.id] === action.correct
-                          ? "bg-sprawl-teal border-sprawl-teal text-sprawl-deep-blue"
-                          : "bg-sprawl-bright-red border-sprawl-bright-red text-white"
-                        : "bg-sprawl-yellow border-sprawl-yellow text-sprawl-deep-blue"
-                      : "border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:border-sprawl-yellow"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+            <div className="flex gap-1 flex-wrap" role="radiogroup" aria-label={`Authority type for: ${action.label}`}>
+              {CATEGORIES.map((cat) => {
+                const isSelected = assignments[action.id] === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => assign(action.id, cat)}
+                    role="radio"
+                    aria-checked={isSelected}
+                    aria-label={`${cat} authority`}
+                    className={`px-2 py-1 rounded font-ui text-xs transition-all border ${
+                      isSelected
+                        ? checked
+                          ? assignments[action.id] === action.correct
+                            ? "bg-sprawl-teal border-sprawl-teal text-sprawl-deep-blue"
+                            : "bg-sprawl-bright-red border-sprawl-bright-red text-white"
+                          : "bg-sprawl-yellow border-sprawl-yellow text-sprawl-deep-blue"
+                        : "border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:border-sprawl-yellow"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}

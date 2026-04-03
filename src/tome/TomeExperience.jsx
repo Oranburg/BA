@@ -311,7 +311,9 @@ function AnnotationPanel({ keyId, sectionText, sectionLabel }) {
   return (
     <div className="rounded border border-sprawl-yellow/20 p-3">
       <p className="font-headline text-xs uppercase tracking-wider text-sprawl-yellow">Annotations</p>
+      <label htmlFor={`${storageKey}-sel`} className="sr-only">Paste passage to highlight</label>
       <textarea
+        id={`${storageKey}-sel`}
         value={selection}
         onChange={(e) => setSelection(e.target.value)}
         placeholder="Paste passage to highlight"
@@ -335,7 +337,9 @@ function AnnotationPanel({ keyId, sectionText, sectionLabel }) {
           </li>
         ))}
       </ul>
+      <label htmlFor={`${storageKey}-note`} className="sr-only">Margin note</label>
       <textarea
+        id={`${storageKey}-note`}
         value={note}
         onChange={(e) => saveNote(e.target.value)}
         placeholder="Margin note"
@@ -515,7 +519,9 @@ export default function TomeExperience({ embedded = false, onClose }) {
                 </div>
 
                 <form onSubmit={onJumpSubmit} className="mt-2 relative">
+                  <label htmlFor="tome-jump" className="sr-only">Jump to section</label>
                   <input
+                    id="tome-jump"
                     value={jump}
                     onChange={(e) => setJump(e.target.value)}
                     placeholder="Jump to section (e.g., § 301, 8.30, 501(c)(3))"

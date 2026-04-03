@@ -16,15 +16,16 @@ export default function TomeOfLaw({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center">
-      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="tome-of-law-title">
+      <button type="button" className="absolute inset-0 bg-black/60" onClick={onClose} aria-label="Close dialog" />
       <div className="relative z-10 w-full max-w-lg bg-sprawl-deep-blue border border-sprawl-yellow/40 rounded-t-2xl sm:rounded-2xl p-6 shadow-2xl">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-headline text-xl uppercase tracking-wider text-sprawl-yellow">
+          <h2 id="tome-of-law-title" className="font-headline text-xl uppercase tracking-wider text-sprawl-yellow">
             ⚖ Tome of Law
           </h2>
           <button
             onClick={onClose}
+            aria-label="Close Tome of Law"
             className="text-gray-400 hover:text-white font-ui text-sm"
           >
             ✕ Close
@@ -42,6 +43,7 @@ export default function TomeOfLaw({ isOpen, onClose }) {
               setSelectedSection("");
               setResult(null);
             }}
+            aria-label="Select statute"
             className="flex-1 bg-sprawl-bright-blue/20 border border-sprawl-yellow/30 rounded px-3 py-2 font-ui text-sm text-white focus:outline-none focus:border-sprawl-yellow"
           >
             {Object.keys(STATUTE_MAP).map((k) => (
@@ -56,6 +58,7 @@ export default function TomeOfLaw({ isOpen, onClose }) {
               setSelectedSection(e.target.value);
               setResult(null);
             }}
+            aria-label="Select section"
             className="flex-1 bg-sprawl-bright-blue/20 border border-sprawl-yellow/30 rounded px-3 py-2 font-ui text-sm text-white focus:outline-none focus:border-sprawl-yellow"
           >
             <option value="" className="bg-sprawl-deep-blue">Select §</option>

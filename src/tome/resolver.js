@@ -1,5 +1,5 @@
 import { CHAPTER_ROUTES, DOCUMENTS, DOCUMENT_BY_SLUG, getTomePath } from "./corpus";
-import { APP_ROUTES } from "../routing/routes";
+import { APP_ROUTES, HASH_TARGETS } from "../routing/routes";
 import { resolveCitation } from "./citationRegistry";
 
 function normalize(text = "") {
@@ -193,7 +193,7 @@ export function getBreadcrumbs(doc, section) {
 }
 
 export function buildChapterLink(ch) {
-  return CHAPTER_ROUTES[ch] || APP_ROUTES.home;
+  return CHAPTER_ROUTES[ch] || `${APP_ROUTES.home}#${HASH_TARGETS.problems}`;
 }
 
 export function getReverseCitations(targetShort, targetSection) {
