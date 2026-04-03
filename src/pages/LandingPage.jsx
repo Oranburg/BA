@@ -114,7 +114,7 @@ export default function LandingPage() {
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,214,92,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,214,92,0.3) 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
+            backgroundSize: "60px 60px",
           }}
         />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sprawl-bright-blue/15 rounded-full blur-3xl pointer-events-none" />
@@ -299,7 +299,7 @@ export default function LandingPage() {
               </div>
               {lastVisited && (
                 <p className="font-ui text-xs text-gray-500 mt-2">
-                  Resume recommended: {CHAPTERS.find((c) => c.id === lastVisited)?.title || "Most recent module"}
+                  Resume recommended: {CHAPTERS.find((c) => c.id === lastVisited)?.title || "Unknown module"}
                 </p>
               )}
             </div>

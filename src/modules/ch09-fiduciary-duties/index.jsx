@@ -77,6 +77,34 @@ const CONFLICT_FACTS = [
   },
 ];
 
+
+function buildFiduciaryExportText({ packetChecks, conflictClassifications, selectedProcess, counselMemo }) {
+  const lines = [
+    "BOARD PROCESS MEMO — CONSTRUCTEDGE",
+    "",
+    "Module: Chapter 09 Fiduciary Duties",
+    "",
+    "Board packet completeness:",
+    BOARD_PACKET_ITEMS.map((item) => `- ${item.label}: ${packetChecks?.[item.id] ? "Included" : "Missing"}`).join("\n"),
+    "",
+    "Conflict map:",
+    CONFLICT_FACTS.map((fact) => `- ${fact.label}: ${conflictClassifications?.[fact.id] || "Unclassified"}`).join("\n"),
+    "",
+    "Selected process path:",
+    selectedProcess?.title || "Not selected",
+    `Review-standard risk: ${selectedProcess?.reviewRisk || "N/A"}`,
+    "",
+    "Counsel recommendation:",
+    counselMemo || "No memo drafted.",
+    "",
+    "What opposing counsel will argue:",
+    "- Missing packet items show uninformed process (care exposure).",
+    "- Unmanaged conflicts taint decision-making (loyalty exposure).",
+    "- Process shortcuts imply outcome-driven governance, not board-level deliberation.",
+  ];
+  return lines.join("\n");
+}
+
 const INITIAL_STATE = {
   packetChecks: {},
   conflictClassifications: {},
@@ -106,8 +134,12 @@ export default function Ch09FiduciaryDuties() {
 
   const selectedProcess = PROCESS_OPTIONS.find((p) => p.id === state.processChoice);
 
-  const output = `BOARD PROCESS MEMO — CONSTRUCTEDGE\n\nModule: Chapter 09 Fiduciary Duties\n\nBoard packet completeness:\n${BOARD_PACKET_ITEMS.map((item) => `- ${item.label}: ${state.packetChecks?.[item.id] ? "Included" : "Missing"}`).join("\n")}\n\nConflict map:\n${CONFLICT_FACTS.map((fact) => `- ${fact.label}: ${state.conflictClassifications?.[fact.id] || "Unclassified"}`).join("\n")}\n\nSelected process path:\n${selectedProcess?.title || "Not selected"}\nReview-standard risk: ${selectedProcess?.reviewRisk || "N/A"}\n\nCounsel recommendation:\n${state.counselMemo || "No memo drafted."}\n\nWhat opposing counsel will argue:\n- Missing packet items show uninformed process (care exposure).\n- Unmanaged conflicts taint decision-making (loyalty exposure).\n- Process shortcuts imply outcome-driven governance, not board-level deliberation.
-`;
+  const output = buildFiduciaryExportText({
+    packetChecks: state.packetChecks,
+    conflictClassifications: state.conflictClassifications,
+    selectedProcess,
+    counselMemo: state.counselMemo,
+  });
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">

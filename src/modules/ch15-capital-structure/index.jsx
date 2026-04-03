@@ -70,6 +70,33 @@ function actionRisk(action, solvencyState) {
   return action.insolventRisk;
 }
 
+function buildDistressExportText({ selectedSolvency, selectedRiskProfile, standingNotes, boardRecommendation }) {
+  const lines = [
+    "DISTRESS ANALYSIS SHEET — CONSTRUCTEDGE",
+    "",
+    "Module: Chapter 15 Capital Structure",
+    "",
+    `Selected solvency state: ${selectedSolvency?.title || "Not selected"}`,
+    `Residual claimant posture: ${selectedSolvency?.residualClaimant || "N/A"}`,
+    `Board focus: ${selectedSolvency?.boardFocus || "N/A"}`,
+    "",
+    "Selected board actions and risk:",
+    selectedRiskProfile.length
+      ? selectedRiskProfile.map((r) => `- ${r.text} => ${r.risk}`).join("\n")
+      : "No actions selected.",
+    "",
+    "Standing and leverage notes:",
+    standingNotes || "Not drafted",
+    "",
+    "Board recommendation:",
+    boardRecommendation || "Not drafted",
+    "",
+    "Why this is hard:",
+    "Capital structure can shift practical control before formal governance rights move. Process and solvency framing determine litigation posture.",
+  ];
+  return lines.join("\n");
+}
+
 export default function Ch15CapitalStructure() {
   const { openTome } = useTome();
   const { state, patch, markCompleted } = useModuleProgress("ch15-capital-structure", INITIAL_STATE);
@@ -86,8 +113,12 @@ export default function Ch15CapitalStructure() {
     [state.selectedActions, state.solvencyState]
   );
 
-  const exportText = `DISTRESS ANALYSIS SHEET — CONSTRUCTEDGE\n\nModule: Chapter 15 Capital Structure\n\nSelected solvency state: ${selectedSolvency?.title || "Not selected"}\nResidual claimant posture: ${selectedSolvency?.residualClaimant || "N/A"}\nBoard focus: ${selectedSolvency?.boardFocus || "N/A"}\n\nSelected board actions and risk:\n${selectedRiskProfile.map((r) => `- ${r.text} => ${r.risk}`).join("\n") || "No actions selected."}\n\nStanding and leverage notes:\n${state.standingNotes || "Not drafted"}\n\nBoard recommendation:\n${state.boardRecommendation || "Not drafted"}\n\nWhy this is hard:\nCapital structure can shift practical control before formal governance rights move. Process and solvency framing determine litigation posture.
-`;
+  const exportText = buildDistressExportText({
+    selectedSolvency,
+    selectedRiskProfile,
+    standingNotes: state.standingNotes,
+    boardRecommendation: state.boardRecommendation,
+  });
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">

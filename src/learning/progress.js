@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const STORAGE_KEY = "ba-learning-progress-v1";
 
@@ -63,13 +63,29 @@ function mergeModuleState(moduleId, statePatch) {
 
 export function useModuleProgress(moduleId, initialState = {}) {
   const initialRef = useRef(initialState);
+  const debounceRef = useRef(null);
+  const lastPersistedRef = useRef("");
   const [state, setState] = useState(() => {
     const moduleState = readLearningStore().modules[moduleId] || {};
     return { ...initialState, ...moduleState };
   });
 
   useEffect(() => {
-    mergeModuleState(moduleId, state);
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current);
+    }
+    debounceRef.current = setTimeout(() => {
+      const serialized = JSON.stringify(state);
+      if (serialized === lastPersistedRef.current) return;
+      mergeModuleState(moduleId, state);
+      lastPersistedRef.current = serialized;
+    }, 200);
+
+    return () => {
+      if (debounceRef.current) {
+        clearTimeout(debounceRef.current);
+      }
+    };
   }, [moduleId, state]);
 
   useEffect(() => {
@@ -79,19 +95,26 @@ export function useModuleProgress(moduleId, initialState = {}) {
     }
   }, [moduleId]);
 
-  const helpers = useMemo(
-    () => ({
-      patch: (patch) => setState((prev) => ({ ...prev, ...patch })),
-      reset: () => setState({ ...initialRef.current }),
-      markCompleted: () =>
-        setState((prev) => ({
-          ...prev,
-          completed: true,
-          completedAt: new Date().toISOString(),
-        })),
-    }),
-    []
-  );
+  const patch = useCallback((nextPatch) => {
+    setState((prev) => {
+      const next = { ...prev, ...nextPatch };
+      return JSON.stringify(next) === JSON.stringify(prev) ? prev : next;
+    });
+  }, []);
+
+  const reset = useCallback(() => {
+    setState({ ...initialRef.current });
+  }, []);
+
+  const markCompleted = useCallback(() => {
+    setState((prev) => ({
+      ...prev,
+      completed: true,
+      completedAt: new Date().toISOString(),
+    }));
+  }, []);
+
+  const helpers = useMemo(() => ({ patch, reset, markCompleted }), [patch, reset, markCompleted]);
 
   return { state, setState, ...helpers };
 }

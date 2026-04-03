@@ -72,6 +72,37 @@ const FACT_BRANCHES = [
   },
 ];
 
+
+function buildEntitySelectionExportText({ selected, recommendedEntityLabel, score, branchChoices, counselRecommendation }) {
+  const lines = [
+    "ENTITY SELECTION COUNSEL SHEET",
+    "",
+    "Client: ConstructEdge (Zeeva + Sammy)",
+    "Module: Chapter 08 Entity Selection",
+    "",
+    `Chosen baseline entity: ${selected?.label || "Not selected"}`,
+    `Branch-adjusted recommendation: ${recommendedEntityLabel || "Not determined"}`,
+    "",
+    "Four Problems profile:",
+    `Attribution: ${score?.attribution ?? "-"}`,
+    `Governance: ${score?.governance ?? "-"}`,
+    `Risk allocation: ${score?.risk ?? "-"}`,
+    `Asset partitioning: ${score?.partitioning ?? "-"}`,
+    "",
+    "Facts that change the answer:",
+    FACT_BRANCHES.map((b) => `- ${b.label}: ${(branchChoices || {})[b.id] ? "Selected" : "Not selected"}`).join("\n"),
+    "",
+    "Counsel recommendation:",
+    counselRecommendation || "No recommendation drafted.",
+    "",
+    "What opposing counsel will argue:",
+    "- Form cannot cure sloppy governance process or conflicted approvals.",
+    "- Asset shielding fails when funds and decision rights are commingled.",
+    "- Investor disclosures and authority design must match reality, not labels.",
+  ];
+  return lines.join("\n");
+}
+
 const INITIAL_STATE = {
   phase: 0,
   selectedEntity: "",
@@ -117,7 +148,13 @@ export default function Ch08EntitySelection() {
     return Object.entries(tally).sort((a, b) => b[1] - a[1])[0]?.[0] || state.selectedEntity;
   }, [state.branchChoices, state.selectedEntity]);
 
-  const memoText = `ENTITY SELECTION COUNSEL SHEET\n\nClient: ConstructEdge (Zeeva + Sammy)\nModule: Chapter 08 Entity Selection\n\nChosen baseline entity: ${selected?.label || "Not selected"}\nBranch-adjusted recommendation: ${ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Not determined"}\n\nFour Problems profile:\nAttribution: ${score?.attribution ?? "-"}\nGovernance: ${score?.governance ?? "-"}\nRisk allocation: ${score?.risk ?? "-"}\nAsset partitioning: ${score?.partitioning ?? "-"}\n\nFacts that change the answer:\n${FACT_BRANCHES.map((b) => `- ${b.label}: ${(state.branchChoices || {})[b.id] ? "Selected" : "Not selected"}`).join("\n")}\n\nCounsel recommendation:\n${state.counselRecommendation || "No recommendation drafted."}\n\nWhat opposing counsel will argue:\n- Form cannot cure sloppy governance process or conflicted approvals.\n- Asset shielding fails when funds and decision rights are commingled.\n- Investor disclosures and authority design must match reality, not labels.\n`;
+  const memoText = buildEntitySelectionExportText({
+    selected,
+    recommendedEntityLabel: ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label,
+    score,
+    branchChoices: state.branchChoices,
+    counselRecommendation: state.counselRecommendation,
+  });
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">

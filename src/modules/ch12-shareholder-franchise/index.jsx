@@ -52,6 +52,33 @@ const PROCESS_CHOICES = [
   },
 ];
 
+
+function buildShareholderExportText({ ranking, selectedProcess, missingFact, notes }) {
+  const lines = [
+    "SHAREHOLDER FRANCHISE DECISION RECORD",
+    "",
+    "Module: Chapter 12 Shareholder Franchise",
+    "",
+    "Risk ranking (strongest to weakest):",
+    ranking.map((id, idx) => `${idx + 1}. ${PROXY_FACTS.find((f) => f.id === id)?.text || id}`).join("\n") || "No ranking submitted.",
+    "",
+    "Process choice:",
+    selectedProcess?.label || "Not selected",
+    "",
+    "Missing fact that would change result:",
+    missingFact || "Not provided",
+    "",
+    "Counsel notes:",
+    notes || "No notes drafted.",
+    "",
+    "Best plaintiff argument:",
+    "Board manipulated franchise mechanics and impaired stockholder voting rights.",
+    "Best defense argument:",
+    "Board acted to preserve informed voting and neutral process integrity under real disclosure threats.",
+  ];
+  return lines.join("\n");
+}
+
 const INITIAL_STATE = {
   rankedRisks: [],
   processChoice: "",
@@ -74,8 +101,12 @@ export default function Ch12ShareholderFranchise() {
   const rankingQuality = rankScore(ranking);
   const selectedProcess = PROCESS_CHOICES.find((p) => p.id === state.processChoice);
 
-  const exportText = `SHAREHOLDER FRANCHISE DECISION RECORD\n\nModule: Chapter 12 Shareholder Franchise\n\nRisk ranking (strongest to weakest):\n${ranking.map((id, idx) => `${idx + 1}. ${PROXY_FACTS.find((f) => f.id === id)?.text || id}`).join("\n") || "No ranking submitted."}\n\nProcess choice:\n${selectedProcess?.label || "Not selected"}\n\nMissing fact that would change result:\n${state.missingFact || "Not provided"}\n\nCounsel notes:\n${state.notes || "No notes drafted."}\n\nBest plaintiff argument:\nBoard manipulated franchise mechanics and impaired stockholder voting rights.\nBest defense argument:\nBoard acted to preserve informed voting and neutral process integrity under real disclosure threats.
-`;
+  const exportText = buildShareholderExportText({
+    ranking,
+    selectedProcess,
+    missingFact: state.missingFact,
+    notes: state.notes,
+  });
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
