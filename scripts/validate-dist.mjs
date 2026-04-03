@@ -4,6 +4,7 @@ import path from "node:path";
 const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const fallbackPath = path.join(distDir, "404.html");
+const SOURCE_ENTRYPOINT_PATTERN = /\/src\/main\.(jsx?|tsx?)/;
 
 function fail(message) {
   console.error(`❌ ${message}`);
@@ -17,7 +18,7 @@ if (!fs.existsSync(fallbackPath)) fail("dist/404.html is missing (SPA fallback r
 const indexHtml = fs.readFileSync(indexPath, "utf8");
 const fallbackHtml = fs.readFileSync(fallbackPath, "utf8");
 
-if (/\/src\/main\.(jsx?|tsx?)/.test(indexHtml) || /\/src\/main\.(jsx?|tsx?)/.test(fallbackHtml)) {
+if (SOURCE_ENTRYPOINT_PATTERN.test(indexHtml) || SOURCE_ENTRYPOINT_PATTERN.test(fallbackHtml)) {
   fail("Found source entrypoint reference (/src/main.*) in built artifact.");
 }
 

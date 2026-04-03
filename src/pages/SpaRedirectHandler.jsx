@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export default function SpaRedirectHandler() {
   useEffect(() => {
     const query = window.location.search;
-    if (!query.startsWith("?/")) return;
+    if (!query.startsWith("?/") || query.length <= 2) return;
 
     const decoded = query
       .slice(2)

@@ -6,6 +6,9 @@
     <script>
       const l = window.location;
       const base = "/BA/";
+      if (!l.pathname.startsWith(base)) {
+        l.replace(base);
+      }
       const path = l.pathname.startsWith(base) ? l.pathname.slice(base.length) : "";
       const redirect =
         l.protocol +
