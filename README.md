@@ -67,7 +67,7 @@ Then verify:
 
 ## Troubleshooting / Failure Signatures
 
-### 1) `GET ... /src/main.jsx 404` + blank page
+### 1) GET request to /src/main.jsx returns 404 with blank page
 
 Likely cause: source `index.html` was served instead of built artifact.  
 Action:

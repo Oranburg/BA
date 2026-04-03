@@ -5,6 +5,7 @@ const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const fallbackPath = path.join(distDir, "404.html");
 const SOURCE_ENTRYPOINT_PATTERN = /\/src\/[^"' >]+\.(jsx?|tsx?)/;
+const DEPLOY_BASE_PATH = process.env.DEPLOY_BASE_PATH || "/BA/";
 
 function fail(message) {
   console.error(`❌ ${message}`);
@@ -22,12 +23,16 @@ if (SOURCE_ENTRYPOINT_PATTERN.test(indexHtml) || SOURCE_ENTRYPOINT_PATTERN.test(
   fail("Found source script reference under /src/ in built artifact.");
 }
 
-if (!/src="\/BA\/assets\/[^"]+\.js"/.test(indexHtml)) {
-  fail("dist/index.html does not reference JS asset under /BA/assets/.");
+const escapedBase = DEPLOY_BASE_PATH.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const builtJsPattern = new RegExp(`src="${escapedBase}assets\\/[^"]+\\.js"`);
+const builtCssPattern = new RegExp(`href="${escapedBase}assets\\/[^"]+\\.css"`);
+
+if (!builtJsPattern.test(indexHtml)) {
+  fail(`dist/index.html does not reference JS asset under ${DEPLOY_BASE_PATH}assets/.`);
 }
 
-if (!/href="\/BA\/assets\/[^"]+\.css"/.test(indexHtml)) {
-  fail("dist/index.html does not reference CSS asset under /BA/assets/.");
+if (!builtCssPattern.test(indexHtml)) {
+  fail(`dist/index.html does not reference CSS asset under ${DEPLOY_BASE_PATH}assets/.`);
 }
 
 const assetsDir = path.join(distDir, "assets");

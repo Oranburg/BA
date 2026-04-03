@@ -5,13 +5,11 @@ export default function SpaRedirectHandler() {
     const query = window.location.search;
     if (!query.startsWith("?/") || query.length <= 2) return;
 
-    const decoded = query
-      .slice(2)
-      .split("&")
-      .map((segment) => segment.replace(/~and~/g, "&"))
-      .join("?");
-    const targetPath = decoded ? `/${decoded}` : "/";
-    const target = `${targetPath}${window.location.hash || ""}`;
+    const decoded = query.slice(2).replace(/~and~/g, "&");
+    const [pathPart, ...searchParts] = decoded.split("&");
+    const targetPath = pathPart ? `/${pathPart}` : "/";
+    const targetSearch = searchParts.length ? `?${searchParts.join("&")}` : "";
+    const target = `${targetPath}${targetSearch}${window.location.hash || ""}`;
     window.history.replaceState(null, "", target);
   }, []);
 
