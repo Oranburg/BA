@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Edge | Module 2: The Partnership Forge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #0A3255;
+            --deep-red: #B21F2C;
+            --bright-yellow: #FFD65C;
+            --light-teal: #B5E1E1;
+            --bright-blue: #2459A9;
+            --light-blue: #6DACDE;
+        }
+
+        body {
+            background-color: #050505;
+            color: #f0f0f0;
+            font-family: 'Crimson Text', serif;
+            background-image: linear-gradient(rgba(10, 50, 85, 0.9), rgba(0, 0, 0, 1)), url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+        }
+
+        h1, h2, h3, h4, .headline {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .ui-text {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .cyber-card {
+            background: rgba(13, 33, 53, 0.8);
+            border: 1px solid var(--bright-blue);
+            box-shadow: 0 0 15px rgba(36, 89, 169, 0.3);
+            position: relative;
+        }
+
+        .cyber-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--deep-red);
+        }
+
+        .neon-yellow {
+            color: var(--bright-yellow);
+            text-shadow: 0 0 8px rgba(255, 214, 92, 0.6);
+        }
+
+        .redline-word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .redline-word:hover {
+            background: rgba(255, 214, 92, 0.2);
+        }
+
+        .redline-selected {
+            background: var(--bright-yellow) !important;
+            color: var(--deep-blue) !important;
+            font-weight: bold;
+            box-shadow: 0 0 12px var(--bright-yellow);
+        }
+
+        .tome-sidebar {
+            background: var(--deep-blue);
+            border-left: 2px solid var(--bright-yellow);
+        }
+
+        .hidden-step {
+            display: none;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 100;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(181, 225, 225, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0.1;
+            position: fixed;
+            bottom: 100%;
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline {
+            0% { bottom: 100%; }
+            100% { bottom: -100px; }
+        }
+
+        .glow-button {
+            background: var(--deep-red);
+            transition: all 0.3s ease;
+        }
+
+        .glow-button:hover {
+            box-shadow: 0 0 20px var(--deep-red);
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="scanline"></div>
+
+    <!-- Navigation -->
+    <nav class="border-b border-white/10 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <span class="headline text-2xl neon-yellow italic">Neon Edge</span>
+                <span class="h-6 w-px bg-white/20"></span>
+                <span class="ui-text text-xs font-bold text-gray-400">Archive Log: Module 2</span>
+            </div>
+            <div class="flex items-center gap-6 ui-text text-xs font-bold uppercase tracking-widest">
+                <button class="text-white hover:text-bright-yellow transition-colors">Digital Reader</button>
+                <button class="text-bright-yellow underline decoration-2 underline-offset-4">Simulation Lab</button>
+                <div class="flex items-center gap-2 bg-white/5 p-1 rounded-full border border-white/10">
+                    <div class="w-6 h-6 rounded-full bg-yellow-500 flex items-center justify-center text-black shadow-[0_0_10px_#f59e0b]">
+                        <i class="fas fa-moon text-[10px]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Main Simulation Area -->
+        <main class="lg:col-span-8 space-y-10">
+            
+            <!-- Context Header -->
+            <section class="space-y-4">
+                <h2 class="text-5xl font-bold headline text-white leading-none">The Partnership <span class="text-[#B21F2C]">Forge</span></h2>
+                <p class="text-xl italic text-gray-300 max-w-2xl">
+                    Zeeva's technical vision is hitting a logistics wall. She meets Sammy in a smoke-filled Sector 4 basement to negotiate a permanent alliance. But in the Sprawl, your words carry weight you might not intend.
+                </p>
+            </section>
+
+            <!-- Investigation Desk -->
+            <section id="investigation-desk" class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded bg-[#B21F2C] flex items-center justify-center text-white">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3 class="headline text-2xl text-[#B5E1E1]">Investigation Desk</h3>
+                </div>
+
+                <div class="cyber-card p-8 rounded-lg overflow-hidden">
+                    <div class="mb-6 flex justify-between items-center border-b border-white/10 pb-4">
+                        <span class="ui-text text-xs font-bold text-gray-400 uppercase tracking-widest">Artifact #02-A: The Napkin Shard</span>
+                        <span class="ui-text text-[10px] bg-[#2459A9] text-white px-2 py-1 rounded">DECRYPTED</span>
+                    </div>
+
+                    <div id="napkin-text" class="text-3xl font-serif italic text-[#B5E1E1] leading-relaxed select-none">
+                        "Look, Zeeva. I'm in. Let's <span class="redline-word" data-trigger="true">carry on as co-owners</span> of this street-architect operation. We’ll combine our resources—your blueprints, my fixers. No more freelance one-offs. Every credit we make from Sector 7, we <span class="redline-word" data-trigger="true">split the net profits</span> exactly 50/50. It’s a <span class="redline-word" data-trigger="false">good deal</span> for both of us, <span class="redline-word" data-trigger="false">as friends</span>."
+                    </div>
+
+                    <div class="mt-8 flex justify-between items-center">
+                        <p class="ui-text text-xs text-[#6DACDE] font-bold uppercase">Task: Click the phrases that establish a "Partnership" under RUPA § 202.</p>
+                        <div id="progress-meter" class="ui-text text-xs font-bold text-white">
+                            Triggers Found: <span id="found-count" class="text-[#FFD65C]">0</span> / 2
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Holding -->
+            <section id="judgment-phase" class="hidden-step space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded bg-[#FFD65C] flex items-center justify-center text-black">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="headline text-2xl text-white">Consolidate Verdict</h3>
+                </div>
+
+                <div class="cyber-card p-10 rounded-lg border-t-4 border-t-[#B5E1E1]">
+                    <div class="space-y-8">
+                        <p class="text-xl text-gray-300">
+                            The Council of Sprawl's public ledger detects an accidental formation. Finalize the legal conclusion:
+                        </p>
+                        
+                        <div class="bg-black/60 p-8 rounded border border-white/5 font-serif text-2xl leading-loose italic text-gray-400">
+                            "Even though Zeeva and Sammy intended to be 
+                            <select id="hold-1" class="bg-transparent border-b border-[#FFD65C] outline-none px-2 text-white not-italic text-sm headline">
+                                <option value="">...</option>
+                                <option value="friends">Friends</option>
+                                <option value="freelancers">Solo Freelancers</option>
+                            </select>, 
+                            their agreement to share 
+                            <select id="hold-2" class="bg-transparent border-b border-[#FFD65C] outline-none px-2 text-white not-italic text-sm headline">
+                                <option value="">...</option>
+                                <option value="drinks">Synthetic Drinks</option>
+                                <option value="profits">Net Profits</option>
+                            </select> 
+                            and operate as 
+                            <select id="hold-3" class="bg-transparent border-b border-[#FFD65C] outline-none px-2 text-white not-italic text-sm headline">
+                                <option value="">...</option>
+                                <option value="coworkers">Coworkers</option>
+                                <option value="co-owners">Co-owners of a business</option>
+                            </select> 
+                            forms a 
+                            <select id="hold-4" class="bg-transparent border-b border-[#FFD65C] outline-none px-2 text-white not-italic text-sm headline">
+                                <option value="">...</option>
+                                <option value="partnership">General Partnership</option>
+                                <option value="corporation">Corporation</option>
+                            </select> 
+                            by default. Intent is 
+                            <select id="hold-5" class="bg-transparent border-b border-[#FFD65C] outline-none px-2 text-white not-italic text-sm headline">
+                                <option value="">...</option>
+                                <option value="irrelevant">Irrelevant</option>
+                                <option value="mandatory">Mandatory</option>
+                            </select> 
+                            under RUPA § 202."
+                        </div>
+
+                        <button onclick="checkVerdict()" class="w-full glow-button py-4 rounded headline text-lg font-bold tracking-widest text-white">
+                            UPLOAD VERDICT TO LEDGER
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar: Tome of Law -->
+        <aside class="lg:col-span-4 space-y-6">
+            <div class="tome-sidebar p-6 rounded-lg sticky top-24 shadow-2xl">
+                <div class="flex items-center gap-3 mb-6 border-b border-white/20 pb-4">
+                    <i class="fas fa-book text-[#FFD65C]"></i>
+                    <h4 class="headline text-xl text-[#FFD65C]">Tome of Law</h4>
+                </div>
+
+                <div class="space-y-8 ui-text">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold text-[#B5E1E1] uppercase tracking-[0.2em]">Source Authority: RUPA</span>
+                        <h5 class="text-white font-bold text-lg">§ 202. Formation of Partnership.</h5>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            (a) ...the association of two or more persons to carry on as **co-owners** a business for profit forms a partnership, **whether or not the persons intend to form a partnership.**
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold text-[#B5E1E1] uppercase tracking-[0.2em]">Key Presumption</span>
+                        <h5 class="text-white font-bold text-lg">§ 202(c)(3) The Profit Trigger</h5>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            A person who receives a **share of the profits** of a business is presumed to be a partner in the business...
+                        </p>
+                    </div>
+
+                    <div class="p-4 bg-black/40 border border-white/10 rounded">
+                        <p class="text-[11px] italic text-[#6DACDE]">
+                            "The law treats partnerships as the 'default' setting for human cooperation for profit. If you act like owners and share the wins, you are partners—with all the joint and several liability that entails."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Biometrics -->
+            <div class="cyber-card p-6 rounded-lg border-l-0 border-r-4 border-r-[#B5E1E1]">
+                <h4 class="headline text-xs text-gray-500 mb-4">Subject Biometrics</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-900/50 border border-blue-400 rounded flex items-center justify-center overflow-hidden">
+                            <i class="fas fa-user text-blue-200"></i>
+                        </div>
+                        <div>
+                            <p class="headline text-sm">Zeeva</p>
+                            <p class="ui-text text-[9px] text-[#6DACDE] font-bold uppercase">Structural Architect | Hair: Dirty Blonde</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-900/50 border border-red-400 rounded flex items-center justify-center overflow-hidden">
+                            <i class="fas fa-user-ninja text-red-200"></i>
+                        </div>
+                        <div>
+                            <p class="headline text-sm">Sammy</p>
+                            <p class="ui-text text-[9px] text-[#E96955] font-bold uppercase">Strategic Fixer | Hair: Chestnut</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Feedback Message Overlay -->
+    <div id="feedback-overlay" class="hidden fixed inset-0 flex items-center justify-center bg-black/90 z-[100] p-4 backdrop-blur-sm">
+        <div class="cyber-card p-12 max-w-xl text-center border-t-8 border-t-[#FFD65C]">
+            <h2 id="msg-title" class="headline text-4xl mb-6 neon-yellow"></h2>
+            <p id="msg-body" class="ui-text text-lg text-gray-300 mb-10 leading-relaxed"></p>
+            <button onclick="closeFeedback()" class="px-12 py-4 bg-[#0A3255] border-2 border-[#FFD65C] text-[#FFD65C] headline text-xl rounded hover:bg-[#FFD65C] hover:text-[#0A3255] transition-all uppercase font-bold">Acknowledge</button>
+        </div>
+    </div>
+
+    <script>
+        <!-- State Management -->
+        const state = {
+            foundTriggers: new Set(),
+            totalTriggers: 2
+        };
+
+        <!-- Chosen Palette: Neon Edge Sprawl -->
+        <!-- Application Structure Plan: Narrative-driven Investigation. Section 1 (Top) sets the thematic scene. Section 2 (Main) is the "Investigation Desk" where the user interacts with the "Napkin Shard" to find legal triggers. Section 3 (Bottom, Hidden) is the final legal synthesis. This structure was chosen to emphasize "Learning by Discovery" before "Conclusion by Analysis." -->
+        <!-- Visualization & Content Choices: Napkin Shard -> Goal: Organize/Identify -> Viz: Redline Spotter -> Interaction: Click to highlight -> Justification: Forces students to map statutory language to factual evidence. Tom of Law -> Goal: Inform -> Viz: Sidebar -> Justification: Provides constant reference for the student's IRAC process. -->
+        <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+        function initRedline() {
+            const words = document.querySelectorAll('.redline-word');
+            words.forEach(word => {
+                word.addEventListener('click', () => {
+                    const isTrigger = word.getAttribute('data-trigger') === 'true';
+                    
+                    if (isTrigger) {
+                        word.classList.add('redline-selected');
+                        state.foundTriggers.add(word.innerText);
+                        updateProgress();
+                    } else {
+                        showFeedback("Analytic Glitch", "This phrase describes the relationship (friendship) or the quality of the deal, but it is not a legal requirement for partnership formation under RUPA § 202.");
+                    }
+                });
+            });
+        }
+
+        function updateProgress() {
+            const countEl = document.getElementById('found-count');
+            countEl.innerText = state.foundTriggers.size;
+
+            if (state.foundTriggers.size === state.totalTriggers) {
+                showFeedback("Legal Trigger Detected", "By agreeing to carry on as co-owners and sharing the net profits, Zeeva and Sammy have activated the default rules of Partnership law. The 'Accidental Partnership' is now live.");
+                document.getElementById('judgment-phase').classList.remove('hidden-step');
+                document.getElementById('judgment-phase').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function checkVerdict() {
+            const h1 = document.getElementById('hold-1').value;
+            const h2 = document.getElementById('hold-2').value;
+            const h3 = document.getElementById('hold-3').value;
+            const h4 = document.getElementById('hold-4').value;
+            const h5 = document.getElementById('hold-5').value;
+
+            if (h1 === 'freelancers' && h2 === 'profits' && h3 === 'co-owners' && h4 === 'partnership' && h5 === 'irrelevant') {
+                showFeedback("Simulation Success", "Correct. The Sprawl's public ledger confirms the status: Street Pack Alpha. Under RUPA § 202, the objective facts of co-ownership and profit-sharing override any subjective intent to remain solo freelancers. Zeeva and Sammy are now partners, and their personal assets are fully exposed to business liabilities.");
+            } else {
+                showFeedback("Verdict Rejected", "The Council's algorithms detect a flaw in your reasoning. Re-read the Tome of Law. What are the two core elements of a partnership association?");
+            }
+        }
+
+        function showFeedback(title, body) {
+            document.getElementById('msg-title').innerText = title;
+            document.getElementById('msg-body').innerText = body;
+            document.getElementById('feedback-overlay').classList.remove('hidden');
+        }
+
+        function closeFeedback() {
+            document.getElementById('feedback-overlay').classList.add('hidden');
+        }
+
+        window.onload = () => {
+            initRedline();
+        };
+    </script>
+</body>
+</html>
