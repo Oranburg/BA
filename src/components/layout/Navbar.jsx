@@ -1,7 +1,10 @@
 import { useTheme } from "./ThemeContext";
+import { Link } from "react-router-dom";
+import { useTome } from "../../tome/useTome";
 
 export default function Navbar() {
   const { isDark, setIsDark } = useTheme();
+  const { openTome } = useTome();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-sprawl-deep-blue/95 backdrop-blur border-b border-sprawl-yellow/20 px-4 py-3">
@@ -21,15 +24,10 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-6">
-          {["Reader", "Simulation Lab", "Toolkit", "Statutes"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors"
-            >
-              {item}
-            </a>
-          ))}
+          <Link to="/" className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Reader</Link>
+          <Link to="/" className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Simulation Lab</Link>
+          <button onClick={() => openTome()} className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Tome Panel</button>
+          <Link to="/tome" className="font-headline text-white/70 hover:text-sprawl-yellow uppercase tracking-wider text-sm transition-colors">Tome Full</Link>
         </div>
 
         <button

@@ -45,7 +45,7 @@ function parseCitation(input) {
     return keys.some((k) => text.includes(k));
   });
 
-  const secMatch = text.match(/(?:§|section|sec\.?|tit\.)\s*([0-9][0-9a-z.()\-]*)/i) || text.match(/\b([0-9]+(?:\.[0-9]+)?(?:\([a-z0-9]+\))*)\b/i);
+  const secMatch = text.match(/(?:§|section|sec\.?|tit\.)\s*([0-9][0-9a-z.()-]*)/i) || text.match(/\b([0-9]+(?:\.[0-9]+)?(?:\([a-z0-9]+\))*)\b/i);
   const sectionNumber = secMatch?.[1] ? secMatch[1].replace(/\s+/g, "") : "";
 
   if (docMatch && sectionNumber) {

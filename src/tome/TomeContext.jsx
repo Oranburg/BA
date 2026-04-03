@@ -50,8 +50,6 @@ export function TomeProvider({ children }) {
   return <TomeContext.Provider value={value}>{children}</TomeContext.Provider>;
 }
 
-export function useTome() {
-  const ctx = useContext(TomeContext);
-  if (!ctx) throw new Error("useTome must be used inside TomeProvider");
-  return ctx;
+export function useTomeContextInternal() {
+  return useContext(TomeContext);
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { resolveQuery } from "./resolver";
 import { getTomePath } from "./corpus";
-import { useTome } from "./TomeContext";
+import { useTome } from "./useTome";
 
 export default function CitationChip({ citation, label }) {
   const [open, setOpen] = useState(false);

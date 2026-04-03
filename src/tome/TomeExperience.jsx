@@ -1,10 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { CASE_LAW_INDEX, CHAPTER_ROUTES, DOCUMENTS, PREBUILT_COMPARISONS, getTomePath } from "./corpus";
+import { CASE_LAW_INDEX, DOCUMENTS, PREBUILT_COMPARISONS, getTomePath } from "./corpus";
 import {
   buildChapterLink,
   coverageAnswer,
-  findSection,
   getBreadcrumbs,
   getDocBySlug,
   getPrevNext,
@@ -12,21 +11,6 @@ import {
   getSectionBySlug,
   resolveQuery,
 } from "./resolver";
-
-function SectionCard({ doc, section, onOpen }) {
-  return (
-    <button
-      onClick={() => onOpen(doc, section)}
-      className="w-full rounded border border-sprawl-yellow/20 bg-sprawl-bright-blue/10 p-3 text-left hover:border-sprawl-yellow/60"
-    >
-      <p className="font-headline text-xs uppercase tracking-wider text-sprawl-yellow">
-        {doc.shortName} § {section.number}
-      </p>
-      <p className="font-ui text-sm text-gray-100">{section.title}</p>
-      <p className="mt-1 font-body text-sm text-gray-300">{section.text.split(" ").slice(0, 24).join(" ")}...</p>
-    </button>
-  );
-}
 
 function SearchPanel({ onOpenSection }) {
   const [query, setQuery] = useState("");

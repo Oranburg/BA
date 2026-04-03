@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import FiduciarySlider from "../components/toolkit/FiduciarySlider";
-import TomeOfLaw from "../components/toolkit/TomeOfLaw";
+import CitationChip from "../tome/CitationChip";
+import { useTome } from "../tome/useTome";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
 
 const CHAPTERS = [
@@ -75,8 +76,8 @@ const PROBLEM_COLORS = {
 };
 
 export default function LandingPage() {
-  const [tomeOpen, setTomeOpen] = useState(false);
   const [activeChapter, setActiveChapter] = useState(null);
+  const { openTome } = useTome();
 
   return (
     <div>
@@ -135,7 +136,7 @@ export default function LandingPage() {
               Enter the Neon Edge
             </a>
             <button
-              onClick={() => setTomeOpen(true)}
+              onClick={() => openTome()}
               className="px-8 py-3 border border-sprawl-yellow/50 text-sprawl-yellow font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/10 transition-all"
             >
               Open Tome of Law
@@ -212,7 +213,7 @@ export default function LandingPage() {
 
           <div className="text-center">
             <button
-              onClick={() => setTomeOpen(true)}
+              onClick={() => openTome()}
               className="px-8 py-3 bg-sprawl-bright-blue text-white font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-bright-blue/80 transition-all"
             >
               ⚖ Open Tome of Law
@@ -315,14 +316,13 @@ export default function LandingPage() {
               provided in this chapter or in its certificate of incorporation."
             </p>
             <cite className="block mt-3 font-ui text-sprawl-yellow/70 text-xs not-italic">
-              Delaware General Corporation Law (DGCL) § 141(a) — source:{" "}
+              <CitationChip citation="DGCL § 141(a)" /> — source:{" "}
               <span className="text-sprawl-yellow/50">processed/segments/dgcl.jsonl</span>
             </cite>
           </blockquote>
         </div>
       </section>
 
-      <TomeOfLaw isOpen={tomeOpen} onClose={() => setTomeOpen(false)} />
     </div>
   );
 }
