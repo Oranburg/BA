@@ -77,6 +77,7 @@ const PROBLEM_COLORS = {
 };
 
 const VISUAL_SLOTS = {
+  // Shared anchor image for now; slots support future per-module asset swaps without layout changes.
   hero: {
     src: newBoston2077,
     alt: "New Boston skyline in a near-future commercial district",
