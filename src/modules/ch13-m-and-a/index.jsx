@@ -2,6 +2,15 @@ import { useEffect, useState } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
 import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { MODULE_FLOW } from "../../course/lifecycle";
+import { updateMatterFile } from "../../course/matterFile";
+import { summarizeModuleHeadline } from "../../course/coherence";
+import {
+  ConstructEdgeDossier,
+  FourProblemsMarker,
+  LifecycleHandoff,
+  MatterFileCarryover,
+} from "../../components/course/ContinuityPanels";
 
 // ---------------------------------------------------------------------------
 // M&A Activity: "The Deal Room — Enhanced Scrutiny in The Sprawl"
@@ -213,6 +222,7 @@ export default function Ch13MA() {
 
   const [phase, setPhase] = useState(saved.phase ?? 0); // 0=intro, 1=unocal-p1, 2=unocal-p2, 3=revlon, 4=holding, 5=verdict
   const { openTome } = useTome();
+  const flow = MODULE_FLOW["ch13-m-and-a"];
   const [p1Answers, setP1Answers] = useState(saved.p1Answers || {});
   const [p1Checked, setP1Checked] = useState(saved.p1Checked || false);
   const [p2Answer, setP2Answer] = useState(saved.p2Answer || null);
@@ -260,6 +270,9 @@ export default function Ch13MA() {
         The Deal Room
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Enhanced Scrutiny in The Sprawl</p>
+      <p className="font-ui text-xs text-gray-500 mb-2">
+        Why this chapter matters now: shareholder-control conflict matures into sale-process pressure, where process quality and control transfer define outcomes.
+      </p>
       <div className="mb-8 flex flex-wrap items-center gap-2">
         <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
           Unocal Corp. v. Mesa Petroleum Co., 493 A.2d 946 (Del. 1985) · Revlon, Inc. v. MacAndrews &amp; Forbes, 506 A.2d 173 (Del. 1986) · DGCL § 141(a)
@@ -272,6 +285,23 @@ export default function Ch13MA() {
           Open in Tome
         </button>
       </div>
+
+      <FourProblemsMarker
+        dominant={flow.dominantProblems}
+        secondary={flow.secondaryProblems}
+        shift={flow.shiftFromPrior}
+      />
+      <ConstructEdgeDossier
+        moduleId="ch13-m-and-a"
+        factsOverride={{
+          transactionContext: "Hostile pressure and defensive process create enhanced-scrutiny exposure",
+          strategicPressure: "Control contest now framed as deal-process and value-maximization conflict",
+        }}
+      />
+      <MatterFileCarryover
+        title="Matter File Carryover (Franchise + Fiduciary context)"
+        references={["ch12-shareholder-franchise", "ch09-fiduciary-duties"]}
+      />
 
       {/* Phase 0: Intro */}
       {phase === 0 && (
@@ -658,6 +688,18 @@ export default function Ch13MA() {
               <button
                 onClick={() => {
                   markCompleted();
+                  updateMatterFile(
+                    "ch13-m-and-a",
+                    summarizeModuleHeadline("ch13-m-and-a", {
+                      p1Score: `${p1Score}/${p1Total}`,
+                      revlonScore: `${revlonScore}/${REVLON_TRIGGERS.length}`,
+                      counselRecommendation,
+                    }),
+                    {
+                      transactionContext: "M&A process and control-transfer exposure documented",
+                      strategicPressure: "Strategic alternatives now constrained by downside financing risk",
+                    }
+                  );
                   const report = `M&A BOARD RECOMMENDATION
 
 Unocal Prong 1: ${p1Score}/${p1Total}
@@ -704,6 +746,9 @@ Process checklist:
             >
               Restart Simulation
             </button>
+            <div className="mt-4 text-center">
+              <p className="font-ui text-xs text-gray-500 mb-2">{flow.bridge}</p>
+            </div>
           </div>
         </div>
       )}
@@ -725,6 +770,7 @@ Process checklist:
           ))}
         </div>
       )}
+      {phase === 0 && <LifecycleHandoff moduleId="ch13-m-and-a" bridge={flow.bridge} />}
     </div>
   );
 }

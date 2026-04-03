@@ -2,6 +2,15 @@ import { useMemo } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
 import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { MODULE_FLOW } from "../../course/lifecycle";
+import { updateMatterFile } from "../../course/matterFile";
+import { summarizeModuleHeadline } from "../../course/coherence";
+import {
+  ConstructEdgeDossier,
+  FourProblemsMarker,
+  LifecycleHandoff,
+  MatterFileCarryover,
+} from "../../components/course/ContinuityPanels";
 
 const BOARD_PACKET_ITEMS = [
   {
@@ -116,6 +125,7 @@ const INITIAL_STATE = {
 export default function Ch09FiduciaryDuties() {
   const { openTome } = useTome();
   const { state, patch, markCompleted } = useModuleProgress("ch09-fiduciary-duties", INITIAL_STATE);
+  const flow = MODULE_FLOW["ch09-fiduciary-duties"];
 
   const packetScore = useMemo(
     () =>
@@ -149,6 +159,9 @@ export default function Ch09FiduciaryDuties() {
         ConstructEdge faces a conflicted recap proposal while runway tightens. Build a board process
         record that can survive judicial review.
       </p>
+      <p className="font-ui text-xs text-gray-500">
+        Facts changed since last chapter: entity form is now set, so fiduciary process quality and conflict handling—not formation choices—drive litigation posture.
+      </p>
 
       <div className="flex flex-wrap gap-2 items-center">
         <CitationChip citation="DGCL § 141(a)" />
@@ -161,6 +174,23 @@ export default function Ch09FiduciaryDuties() {
           Open in Tome
         </button>
       </div>
+
+      <FourProblemsMarker
+        dominant={flow.dominantProblems}
+        secondary={flow.secondaryProblems}
+        shift={flow.shiftFromPrior}
+      />
+      <ConstructEdgeDossier
+        moduleId="ch09-fiduciary-duties"
+        factsOverride={{
+          boardDynamics: "Board committee design and conflict surfacing now determine process defensibility",
+          strategicPressure: "Investor pressure is intensifying board-level tradeoffs",
+        }}
+      />
+      <MatterFileCarryover
+        title="Matter File Carryover (Entity Form → Board Process)"
+        references={["ch08-entity-selection", "ch02-agency"]}
+      />
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">What information must the board have?</h2>
@@ -268,6 +298,19 @@ export default function Ch09FiduciaryDuties() {
           <button
             onClick={() => {
               markCompleted();
+              const selectedProcessLabel =
+                PROCESS_OPTIONS.find((option) => option.id === state.processChoice)?.title || "No process selected";
+              updateMatterFile(
+                "ch09-fiduciary-duties",
+                summarizeModuleHeadline("ch09-fiduciary-duties", {
+                  processChoiceLabel: selectedProcessLabel,
+                  counselMemo: state.counselMemo,
+                }),
+                {
+                  boardDynamics: selectedProcessLabel,
+                  strategicPressure: "Control contest risk now tied to board process record",
+                }
+              );
               downloadTextFile("constructedge-board-process-memo.txt", output);
             }}
             className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
@@ -276,6 +319,8 @@ export default function Ch09FiduciaryDuties() {
           </button>
         </div>
       </section>
+
+      <LifecycleHandoff moduleId="ch09-fiduciary-duties" bridge={flow.bridge} />
     </div>
   );
 }

@@ -2,6 +2,15 @@ import { useMemo } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
 import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { MODULE_FLOW } from "../../course/lifecycle";
+import { updateMatterFile } from "../../course/matterFile";
+import { summarizeModuleHeadline } from "../../course/coherence";
+import {
+  ConstructEdgeDossier,
+  FourProblemsMarker,
+  LifecycleHandoff,
+  MatterFileCarryover,
+} from "../../components/course/ContinuityPanels";
 
 const SOLVENCY_STATES = [
   {
@@ -100,6 +109,7 @@ function buildDistressExportText({ selectedSolvency, selectedRiskProfile, standi
 export default function Ch15CapitalStructure() {
   const { openTome } = useTome();
   const { state, patch, markCompleted } = useModuleProgress("ch15-capital-structure", INITIAL_STATE);
+  const flow = MODULE_FLOW["ch15-capital-structure"];
 
   const selectedSolvency = SOLVENCY_STATES.find((s) => s.id === state.solvencyState);
 
@@ -128,6 +138,9 @@ export default function Ch15CapitalStructure() {
         ConstructEdge has covenant pressure, shrinking runway, and investor conflict. Diagnose how
         solvency posture changes legal leverage and board obligations.
       </p>
+      <p className="font-ui text-xs text-gray-500">
+        What changed since M&A: transaction choices now compress into balance-sheet reality, so residual-claimant shifts and creditor leverage drive governance choices.
+      </p>
 
       <div className="flex flex-wrap gap-2">
         <CitationChip citation="DGCL § 102(b)(7)" />
@@ -140,6 +153,23 @@ export default function Ch15CapitalStructure() {
           Open in Tome
         </button>
       </div>
+
+      <FourProblemsMarker
+        dominant={flow.dominantProblems}
+        secondary={flow.secondaryProblems}
+        shift={flow.shiftFromPrior}
+      />
+      <ConstructEdgeDossier
+        moduleId="ch15-capital-structure"
+        factsOverride={{
+          financingPosture: "Runway and covenant headroom define practical control",
+          residualClaimantPosture: selectedSolvency?.residualClaimant || "Not yet assessed",
+        }}
+      />
+      <MatterFileCarryover
+        title="Matter File Carryover (M&A + Franchise + Board Process)"
+        references={["ch13-m-and-a", "ch12-shareholder-franchise", "ch09-fiduciary-duties"]}
+      />
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Choose solvency posture</h2>
@@ -229,6 +259,17 @@ export default function Ch15CapitalStructure() {
           <button
             onClick={() => {
               markCompleted();
+              updateMatterFile(
+                "ch15-capital-structure",
+                summarizeModuleHeadline("ch15-capital-structure", {
+                  solvencyStateLabel: selectedSolvency?.title || "Not selected",
+                  boardRecommendation: state.boardRecommendation,
+                }),
+                {
+                  financingPosture: selectedSolvency?.title || "Unclear solvency posture",
+                  residualClaimantPosture: selectedSolvency?.residualClaimant || "Residual claimant contested",
+                }
+              );
               downloadTextFile("constructedge-distress-analysis-sheet.txt", exportText);
             }}
             className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
@@ -237,6 +278,8 @@ export default function Ch15CapitalStructure() {
           </button>
         </div>
       </section>
+
+      <LifecycleHandoff moduleId="ch15-capital-structure" bridge={flow.bridge} />
     </div>
   );
 }

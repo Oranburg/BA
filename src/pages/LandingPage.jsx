@@ -6,23 +6,24 @@ import { useTome } from "../tome/useTome";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
 import newBoston2077 from "../assets/images/new-boston-2077.png";
 import { getCourseProgress, getLastVisitedModule, getModuleCompletion } from "../learning/progress";
+import { BUILT_MODULES, getRecommendedNextModule } from "../course/lifecycle";
 
 const CHAPTERS = [
   { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: null, status: "partial" },
-  { id: "ch02", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: "/ch02-agency" },
+  { id: "ch02", moduleId: "ch02-agency", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: "/ch02-agency" },
   { id: "ch03", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: null, status: "planned" },
   { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding", route: null, status: "planned" },
   { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: null, status: "planned" },
   { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint", route: null, status: "planned" },
   { id: "ch07", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law", route: null, status: "planned" },
-  { id: "ch08", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems", route: "/ch08-entity-selection" },
-  { id: "ch09", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care", route: "/ch09-fiduciary-duties" },
+  { id: "ch08", moduleId: "ch08-entity-selection", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems", route: "/ch08-entity-selection" },
+  { id: "ch09", moduleId: "ch09-fiduciary-duties", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care", route: "/ch09-fiduciary-duties" },
   { id: "ch10", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences", route: null, status: "partial" },
   { id: "ch11", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure", route: null, status: "partial" },
-  { id: "ch12", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting", route: "/ch12-shareholder-franchise" },
-  { id: "ch13", num: "13", title: "M&A", problem: "Governance", focus: "Takeovers / Enhanced Scrutiny", route: "/ch13-m-and-a" },
+  { id: "ch12", moduleId: "ch12-shareholder-franchise", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting", route: "/ch12-shareholder-franchise" },
+  { id: "ch13", moduleId: "ch13-m-and-a", num: "13", title: "M&A", problem: "Governance", focus: "Takeovers / Enhanced Scrutiny", route: "/ch13-m-and-a" },
   { id: "ch14", num: "14", title: "Piercing the Veil", problem: "Partitioning", focus: "Alter Ego", route: null, status: "partial" },
-  { id: "ch15", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors", route: "/ch15-capital-structure" },
+  { id: "ch15", moduleId: "ch15-capital-structure", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors", route: "/ch15-capital-structure" },
   { id: "ch16", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis", route: null, status: "planned" },
 ];
 
@@ -94,9 +95,18 @@ const VISUAL_SLOTS = {
 export default function LandingPage() {
   const [activeChapter, setActiveChapter] = useState(null);
   const { openTome } = useTome();
-  const builtIds = useMemo(() => CHAPTERS.filter((c) => !!c.route).map((c) => c.id), []);
+  const builtIds = useMemo(() => CHAPTERS.filter((c) => !!c.route).map((c) => c.moduleId || c.id), []);
   const progress = getCourseProgress(builtIds);
   const lastVisited = getLastVisitedModule();
+  const completionMap = useMemo(
+    () =>
+      BUILT_MODULES.reduce((acc, id) => {
+        acc[id] = getModuleCompletion(id);
+        return acc;
+      }, {}),
+    []
+  );
+  const recommendedNext = getRecommendedNextModule(lastVisited, completionMap);
 
   return (
     <div>
@@ -299,7 +309,12 @@ export default function LandingPage() {
               </div>
               {lastVisited && (
                 <p className="font-ui text-xs text-gray-500 mt-2">
-                  Resume recommended: {CHAPTERS.find((c) => c.id === lastVisited)?.title || "Unknown module"}
+                  Resume recommended: {CHAPTERS.find((c) => (c.moduleId || c.id) === lastVisited)?.title || "Unknown module"}
+                </p>
+              )}
+              {recommendedNext && (
+                <p className="font-ui text-xs text-sprawl-teal mt-1">
+                  Suggested next step: {recommendedNext.title}
                 </p>
               )}
             </div>
@@ -308,7 +323,7 @@ export default function LandingPage() {
           <div className="space-y-2">
             {CHAPTERS.map((ch) => {
               const hasActivity = !!ch.route;
-              const completion = getModuleCompletion(ch.id);
+               const completion = getModuleCompletion(ch.moduleId || ch.id);
               const statusLabel = hasActivity ? (completion ? "Completed" : "Built") : (ch.status === "partial" ? "Partial" : "Planned");
               const cardContent = (
                 <>

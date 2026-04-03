@@ -2,6 +2,15 @@ import { useMemo } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
 import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { MODULE_FLOW } from "../../course/lifecycle";
+import { updateMatterFile } from "../../course/matterFile";
+import { summarizeModuleHeadline } from "../../course/coherence";
+import {
+  ConstructEdgeDossier,
+  FourProblemsMarker,
+  LifecycleHandoff,
+  MatterFileCarryover,
+} from "../../components/course/ContinuityPanels";
 
 const ENTITY_OPTIONS = [
   {
@@ -128,6 +137,7 @@ function scoreEntity(entity, issueChecks) {
 export default function Ch08EntitySelection() {
   const { openTome } = useTome();
   const { state, patch, markCompleted } = useModuleProgress("ch08-entity-selection", INITIAL_STATE);
+  const flow = MODULE_FLOW["ch08-entity-selection"];
 
   const selected = ENTITY_OPTIONS.find((e) => e.id === state.selectedEntity);
   const score = useMemo(
@@ -164,6 +174,9 @@ export default function Ch08EntitySelection() {
         Counsel Zeeva and Sammy on selecting an entity that survives founder conflict, investor pressure,
         and downside risk while preserving mission.
       </p>
+      <p className="font-ui text-xs text-gray-500">
+        Why this chapter matters now: authority and contracting exposure from agency become durable only once legal form allocates control and downside.
+      </p>
 
       <div className="flex flex-wrap gap-2 items-center">
         <CitationChip citation="RUPA § 202" />
@@ -176,6 +189,24 @@ export default function Ch08EntitySelection() {
           Open source law
         </button>
       </div>
+
+      <FourProblemsMarker
+        dominant={flow.dominantProblems}
+        secondary={flow.secondaryProblems}
+        shift={flow.shiftFromPrior}
+      />
+      <ConstructEdgeDossier
+        moduleId="ch08-entity-selection"
+        factsOverride={{
+          entityForm: selected?.label || "Entity not yet selected",
+          controlPosture: "Founder-driven formation with incoming investor term-sheet pressure",
+          boardDynamics: "Board architecture not yet fixed; governance rights being designed",
+        }}
+      />
+      <MatterFileCarryover
+        title="Matter File Carryover (Agency → Entity)"
+        references={["ch02-agency"]}
+      />
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Four Problems First</h2>
@@ -297,6 +328,19 @@ export default function Ch08EntitySelection() {
           <button
             onClick={() => {
               markCompleted();
+              const entityLabel = ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Undetermined";
+              updateMatterFile(
+                "ch08-entity-selection",
+                summarizeModuleHeadline("ch08-entity-selection", {
+                  recommendedEntityLabel: entityLabel,
+                  counselRecommendation: state.counselRecommendation,
+                }),
+                {
+                  entityForm: entityLabel,
+                  controlPosture: "Control rights now mapped to chosen entity structure",
+                  financingPosture: "Preparing for financing with structure-dependent governance terms",
+                }
+              );
               downloadTextFile("constructedge-entity-selection-counsel-sheet.txt", memoText);
             }}
             className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
@@ -305,6 +349,8 @@ export default function Ch08EntitySelection() {
           </button>
         </div>
       </section>
+
+      <LifecycleHandoff moduleId="ch08-entity-selection" bridge={flow.bridge} />
     </div>
   );
 }
