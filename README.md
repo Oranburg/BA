@@ -31,7 +31,81 @@ npm install
 npm run dev       # development server
 npm run build     # production build
 npm run preview   # preview production build
+npm run validate:dist  # verify production artifact safety
 ```
+
+## Production Deployment (GitHub Pages via Actions Artifacts)
+
+- Hosting target: `https://oranburg.law/BA/`
+- Vite base path is `/BA/` (`vite.config.js`) so all built assets resolve under that subpath.
+- Pages deploy source must be **GitHub Actions**, not branch publish.
+- Deployment workflow: `.github/workflows/deploy.yml`
+  1. `npm ci`
+  2. `npm run build`
+  3. `npm run validate:dist`
+  4. upload `dist/` using `actions/upload-pages-artifact`
+  5. deploy using `actions/deploy-pages`
+
+This ensures production serves built `dist/index.html` (hashed assets), not source `index.html`.
+
+## Local Production Validation
+
+Run:
+
+```bash
+npm ci
+npm run build
+npm run validate:dist
+npm run preview
+```
+
+Then verify:
+- app loads at `http://localhost:4173/BA/`
+- no request to `/src/main.jsx`
+- a deep link like `http://localhost:4173/BA/ch02-agency` loads and refreshes successfully
+- no fatal console errors on initial load
+
+## Troubleshooting / Failure Signatures
+
+### 1) `GET ... /src/main.jsx 404` + blank page
+
+Likely cause: source `index.html` was served instead of built artifact.  
+Action:
+- confirm Pages source is **GitHub Actions**
+- run/inspect latest deploy workflow
+- verify artifact upload path is `dist`
+- run `npm run build && npm run validate:dist` locally
+
+### 2) Blank page with HTML loading successfully
+
+Likely causes:
+- incorrect base path for subpath hosting
+- broken asset URLs
+- runtime exception during initial render
+
+Action:
+- check `vite.config.js` has `base: '/BA/'`
+- inspect network tab for missing `/BA/assets/...` files
+- inspect browser console for runtime errors
+
+### 3) Deep-link refresh 404 under `/BA/`
+
+Likely cause: static host fallback missing for SPA routes.  
+Action:
+- ensure `public/404.html` exists and is included in `dist/404.html`
+- ensure redirect handler runs at app bootstrap (`SpaRedirectHandler`)
+
+## Recovery / Rollback
+
+If a deployment misbehaves:
+1. Open GitHub Actions and identify the last known-good successful Pages deployment.
+2. Re-run that workflow commit (or revert problematic commit on `main`).
+3. Confirm Pages deploy job completes and environment URL is updated.
+4. Verify:
+   - `/BA/` loads
+   - no `/src/main.jsx` requests
+   - deep-link refresh works
+5. If urgent, temporarily lock deploys to trusted commits only until root cause is corrected.
 
 ## Project Structure
 
