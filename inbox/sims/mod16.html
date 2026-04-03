@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Edge | Module 16: Lifecycle Synthesis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #0A3255;
+            --deep-red: #B21F2C;
+            --bright-yellow: #FFD65C;
+            --light-teal: #B5E1E1;
+            --bright-blue: #2459A9;
+            --accent-light: #6DACDE;
+        }
+
+        body {
+            background-color: #020617;
+            color: #f1f5f9;
+            font-family: 'Crimson Text', serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .headline {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .ui-text {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .cyber-panel {
+            background: rgba(10, 50, 85, 0.3);
+            border: 1px solid rgba(36, 89, 169, 0.4);
+            backdrop-filter: blur(8px);
+            position: relative;
+        }
+
+        .review-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(181, 225, 225, 0.1);
+            background: rgba(10, 50, 85, 0.2);
+        }
+
+        .review-card:hover {
+            border-color: var(--bright-blue);
+            background: rgba(36, 89, 169, 0.1);
+            transform: scale(1.02);
+        }
+
+        .review-card.active {
+            border-color: var(--bright-yellow);
+            background: rgba(255, 214, 92, 0.05);
+            box-shadow: 0 0 20px rgba(255, 214, 92, 0.1);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            height: 400px;
+        }
+
+        .hidden-step { display: none; }
+
+        .scanline {
+            width: 100%; height: 100px; z-index: 10;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(181, 225, 225, 0.02) 50%, rgba(0,0,0,0) 100%);
+            position: fixed; top: 0; animation: scan 20s linear infinite; pointer-events: none;
+        }
+        @keyframes scan { from { transform: translateY(-100px); } to { transform: translateY(100vh); } }
+
+        .glitch-text {
+            animation: glitch 3s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 var(--deep-red), -2px 0 var(--bright-blue); }
+            5% { text-shadow: -2px 0 var(--deep-red), 2px 0 var(--bright-blue); }
+            10% { text-shadow: none; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="scanline"></div>
+
+    <!-- Chosen Palette: Neon Edge Dark -->
+    <!-- Application Structure Plan: 
+    1. Retrospective Hero: Zeeva and Sammy stand atop the Sky-Tower, reviewing the firm's lifecycle.
+    2. The Problem Synthesis HUD: Interactive cards for each of the "Four Problems." Students select the most effective "Solution" discovered during the course for each problem.
+    3. The Performance Radar: A Chart.js Radar Chart that visualizes the final "Health" of the firm based on these synthesis choices.
+    4. The Final Declaration: A complex Mad-Libs synthesis to conclude the course.
+    This structure ensures the student sees the law as a cumulative technology used to build a firm from scratch. -->
+    <!-- Visualization & Content Choices: 
+    1. Synthesis HUD -> Goal: Organize/Synthesis -> Viz: Multi-step selection cards.
+    2. Performance Radar -> Goal: Compare/Relationship -> Viz: Chart.js Radar Chart -> Justification: Perfectly illustrates the multidimensional trade-offs of the firm's lifecycle.
+    Confirming NO SVG/Mermaid. -->
+
+    <div class="max-w-6xl mx-auto space-y-8">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-end border-b-2 border-[#B21F2C] pb-6">
+            <div>
+                <h1 class="text-5xl font-bold headline text-[#FFD65C]">Lifecycle Synthesis</h1>
+                <p class="text-[#6DACDE] ui-text font-bold text-sm tracking-widest uppercase">Chapter 16: The Final Ledger of the Firm</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-[#B5E1E1] text-[#0A3255] px-4 py-1 text-xs headline tracking-widest font-bold">ARCHIVE STATUS: COMPLETE</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Sidebar: Tome of Law -->
+            <aside class="lg:col-span-3 space-y-6">
+                <div class="cyber-panel p-6 border-l-4 border-[#FFD65C]">
+                    <h4 class="headline text-[#FFD65C] mb-6 flex items-center gap-2">
+                        <span>&#x1F4DC;</span> Synthesis HUD
+                    </h4>
+                    <div class="ui-text space-y-6">
+                        <div>
+                            <p class="text-[10px] font-bold text-[#B5E1E1] uppercase tracking-widest">Law as Technology</p>
+                            <p class="text-xs text-gray-400">The Firm is not a natural object, but an artificial person built from code (Statutes) and intent (Contracts).</p>
+                        </div>
+                        <hr class="border-white/10">
+                        <div>
+                            <p class="text-[10px] font-bold text-[#FFD65C] uppercase tracking-widest">The Final Balance</p>
+                            <p class="text-xs text-gray-400 italic">Successful architects balance the Four Problems to ensure the entity survives external shocks and internal conflicts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-[#2459A9]/10 border border-[#2459A9]/30 rounded">
+                    <p class="text-xs font-bold text-[#6DACDE] uppercase mb-2 italic">The Reflection</p>
+                    <p class="ui-text text-[11px] text-gray-300 leading-relaxed">
+                        Zeeva looks down from Sector 7. The partnership handshake, the LLC hybrid, and the IPO registration—it was all part of the same architectural blueprint.
+                    </p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-9 space-y-10">
+                
+                <section class="space-y-6">
+                    <h3 class="text-2xl headline text-[#B5E1E1]">I. Reviewing the Four Problems</h3>
+                    <p class="text-lg">Synthesize the legal solutions you've deployed throughout Zeeva's journey. Select the <strong>Optimal Technology</strong> for each problem area.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ui-text">
+                        <!-- Problem 1: Attribution -->
+                        <div class="space-y-3">
+                            <h5 class="headline text-xs text-gray-500">The Problem of Attribution</h5>
+                            <div onclick="selectSolution('attr', 'control')" id="attr-control" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">The Control Test</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Solving Respondeat Superior via Agency status.</p>
+                            </div>
+                            <div onclick="selectSolution('attr', 'wrapper')" id="attr-wrapper" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">The Legal Wrapper</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Using statutory status to attribute acts to the entity.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 2: Governance -->
+                        <div class="space-y-3">
+                            <h5 class="headline text-xs text-gray-500">The Problem of Governance</h5>
+                            <div onclick="selectSolution('gov', 'fiduciary')" id="gov-fiduciary" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">The Fiduciary Shield</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Cleansing conflicts via BJR and DGCL 144.</p>
+                            </div>
+                            <div onclick="selectSolution('gov', 'franchise')" id="gov-franchise" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">The Shareholder Franchise</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Managing control via proxy and voting power.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 3: Risk -->
+                        <div class="space-y-3">
+                            <h5 class="headline text-xs text-gray-500">The Problem of Risk</h5>
+                            <div onclick="selectSolution('risk', 'll')" id="risk-ll" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">Limited Liability</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Shifting enterprise failure to creditors.</p>
+                            </div>
+                            <div onclick="selectSolution('risk', 'pref')" id="risk-pref" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">Liquidation Preference</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Shifting downside risk via preferred stock stacks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 4: Partitioning -->
+                        <div class="space-y-3">
+                            <h5 class="headline text-xs text-gray-500">The Problem of Partitioning</h5>
+                            <div onclick="selectSolution('part', 'shield')" id="part-shield" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">Entity Shielding</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Protecting firm assets from owner creditors.</p>
+                            </div>
+                            <div onclick="selectSolution('part', 'ipo')" id="part-ipo" class="review-card p-4 rounded-lg">
+                                <h6 class="font-bold text-sm">Public Disclosure (IPO)</h6>
+                                <p class="text-[10px] text-gray-400 mt-1">Scaling the partition via securities laws.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Visualization: Performance Radar -->
+                <section class="bg-white/5 p-8 rounded-xl border border-white/5 space-y-8">
+                    <div class="flex justify-between items-center">
+                        <h4 class="headline text-xl text-[#FFD65C]">Firm Performance HUD</h4>
+                        <div class="ui-text text-[10px] text-gray-500 uppercase tracking-widest">Synthesis Score: <span id="synthesis-score" class="text-white">INITIATING</span></div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+
+                    <div class="p-6 bg-black/40 rounded border border-white/5 text-center">
+                        <p id="analysis-text" class="ui-text text-sm text-gray-400">Select solutions above to visualize the legal integrity of the Sky-Tower Firm.</p>
+                    </div>
+                </section>
+
+                <!-- Final Declaration -->
+                <section id="conclusion-step" class="hidden-step space-y-6">
+                    <div class="cyber-panel p-10 rounded-lg border-b-8 border-b-[#B5E1E1]">
+                        <h3 class="text-3xl headline text-white mb-8 glitch-text">The Final Ledger</h3>
+                        <div class="bg-black/60 p-10 rounded font-serif text-2xl italic leading-[2] text-gray-300">
+                            "Looking back at the journey from the garage to the High Towers, I realize that a business association is simply 
+                            <select id="v1" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="chaos">A series of accidents</option>
+                                <option value="technology">A legal technology</option>
+                            </select> 
+                            built to coordinate human action. Whether using a 
+                            <select id="v2" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="handshake">Partnership Handshake</option>
+                                <option value="blockchain">Pure Code</option>
+                            </select> 
+                            or a 
+                            <select id="v3" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="monolith">Corporate Monolith</option>
+                                <option value="void">Statutory Void</option>
+                            </select>, 
+                            the goal remains the same: to solve the problems of 
+                            <select id="v4" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="marketing">Marketing and HR</option>
+                                <option value="problems">The Four Problems of the Firm</option>
+                            </select>. 
+                            The architecture holds because the law provides the foundation."
+                        </div>
+                        <button onclick="checkFinal()" class="w-full mt-8 bg-[#B5E1E1] text-[#0A3255] py-5 rounded headline text-xl font-bold hover:brightness-110 transition-all uppercase shadow-lg">Upload Final Synthesis to Archive</button>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/95 z-50 p-4 backdrop-blur-md">
+        <div class="cyber-panel p-12 max-w-xl text-center border-t-8 border-t-[#FFD65C]">
+            <h2 id="modal-title" class="headline text-4xl mb-6 text-[#FFD65C]"></h2>
+            <p id="modal-body" class="ui-text text-lg text-gray-300 mb-10 leading-relaxed"></p>
+            <button onclick="closeModal()" class="px-12 py-4 bg-[#0A3255] border-2 border-[#FFD65C] text-[#FFD65C] headline text-xl rounded hover:bg-[#FFD65C] hover:text-[#0A3255] transition-all font-bold uppercase tracking-widest">Acknowledge</button>
+        </div>
+    </div>
+
+    <script>
+        let chart;
+        const state = {
+            attr: null,
+            gov: null,
+            risk: null,
+            part: null
+        };
+
+        function initChart() {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Attribution', 'Governance', 'Risk', 'Partitioning'],
+                    datasets: [{
+                        label: 'Firm Integrity',
+                        data: [20, 20, 20, 20],
+                        backgroundColor: 'rgba(181, 225, 225, 0.2)',
+                        borderColor: '#B5E1E1',
+                        pointBackgroundColor: '#FFD65C',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255,255,255,0.1)' },
+                            grid: { color: 'rgba(255,255,255,0.1)' },
+                            pointLabels: { color: '#6DACDE', font: { family: 'Oswald', size: 14 } },
+                            ticks: { display: false, min: 0, max: 100 }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        function selectSolution(category, value) {
+            state[category] = value;
+            
+            // UI Update
+            document.querySelectorAll(`[id^="${category}-"]`).forEach(el => el.classList.remove('active'));
+            document.getElementById(`${category}-${value}`).classList.add('active');
+
+            updatePerformance();
+        }
+
+        function updatePerformance() {
+            const data = [20, 20, 20, 20];
+            if (state.attr) data[0] = state.attr === 'wrapper' ? 95 : 60;
+            if (state.gov) data[1] = state.gov === 'fiduciary' ? 80 : 90;
+            if (state.risk) data[2] = state.risk === 'll' ? 95 : 70;
+            if (state.part) data[3] = state.part === 'ipo' ? 95 : 65;
+
+            chart.data.datasets[0].data = data;
+            chart.update();
+
+            const analysis = document.getElementById('analysis-text');
+            const score = document.getElementById('synthesis-score');
+            
+            let total = data.reduce((a, b) => a + b, 0);
+            score.innerText = Math.round(total / 4) + "%";
+
+            if (state.attr && state.gov && state.risk && state.part) {
+                analysis.innerHTML = "Synthesis analysis complete. The firm has successfully matured through all four lifecycle bottlenecks. The legal architecture is stabilized.";
+                document.getElementById('conclusion-step').classList.remove('hidden-step');
+                setTimeout(() => document.getElementById('conclusion-step').scrollIntoView({ behavior: 'smooth' }), 500);
+            }
+        }
+
+        function checkFinal() {
+            const v1 = document.getElementById('v1').value;
+            const v2 = document.getElementById('v2').value;
+            const v3 = document.getElementById('v3').value;
+            const v4 = document.getElementById('v4').value;
+
+            if (v1 === 'technology' && (v2 === 'handshake' || v2 === 'blockchain') && v3 === 'monolith' && v4 === 'problems') {
+                showModal("LIFECYCLE COMPLETE", "Zeeva and Sammy have reached the pinnacle of the firm. You have successfully navigated 16 chapters of Business Associations, applying the law as a coordinative technology from the garage to the boardroom. The architectural blueprints are secured. Final Course Archive: Verified.");
+            } else {
+                showModal("ANALYSIS ERROR", "The Council's archive identifies a logic loop in your final synthesis. Business law is the technology of coordination. Re-read the declaration.");
+            }
+        }
+
+        function showModal(t, b) {
+            document.getElementById('modal-title').innerText = t;
+            document.getElementById('modal-body').innerText = b;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        window.onload = initChart;
+    </script>
+</body>
+</html>
