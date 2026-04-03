@@ -1,7 +1,7 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { resolveQuery } from "./resolver";
 
-const TomeContext = createContext(null);
+import TomeContext from "./context";
 
 export function TomeProvider({ children }) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -50,6 +50,3 @@ export function TomeProvider({ children }) {
   return <TomeContext.Provider value={value}>{children}</TomeContext.Provider>;
 }
 
-export function useTomeContextInternal() {
-  return useContext(TomeContext);
-}

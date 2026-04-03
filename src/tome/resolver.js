@@ -32,11 +32,24 @@ export const SECTION_INDEX = (() => {
         idx,
         key: `${doc.shortName} § ${section.number}`,
         sectionNorm: normalize(section.number),
+        conceptsNorm: (section.concepts || []).map((c) => normalize(c)),
       });
     });
   });
   return rows;
 })();
+
+const SPECIAL_CITATION_PATTERNS = [
+  {
+    matches: (text) => text.includes("del. code") && text.includes("tit. 8"),
+    docShortName: "DGCL",
+  },
+  {
+    matches: (text) => text.includes(normalize("26 U.S.C")) && text.includes("501(c)(3)"),
+    docShortName: "IRC 501(c)(3)",
+    sectionNumber: "501(c)(3)",
+  },
+];
 
 function parseCitation(input) {
   const text = normalize(input);
@@ -52,12 +65,13 @@ function parseCitation(input) {
     return { doc: docMatch, sectionNumber, confidence: "high" };
   }
 
-  if (text.includes("del. code") && text.includes("tit. 8") && sectionNumber) {
-    return { doc: DOCUMENTS.find((d) => d.shortName === "DGCL"), sectionNumber, confidence: "high" };
-  }
-
-  if (text.includes("26 u.s.c") && text.includes("501(c)(3)")) {
-    return { doc: DOCUMENTS.find((d) => d.shortName === "IRC 501(c)(3)"), sectionNumber: "501(c)(3)", confidence: "high" };
+  const special = SPECIAL_CITATION_PATTERNS.find((p) => p.matches(text));
+  if (special && (sectionNumber || special.sectionNumber)) {
+    return {
+      doc: DOCUMENTS.find((d) => d.shortName === special.docShortName),
+      sectionNumber: special.sectionNumber || sectionNumber,
+      confidence: "high",
+    };
   }
 
   if (docMatch) {
@@ -157,7 +171,7 @@ export function resolveQuery(input) {
       emphasized: i === 0,
     }));
 
-  const concepts = SECTION_INDEX.filter(({ section }) => (section.concepts || []).some((c) => normalize(c).includes(qNorm) || qNorm.includes(normalize(c))))
+  const concepts = SECTION_INDEX.filter(({ conceptsNorm }) => conceptsNorm.some((c) => c.includes(qNorm) || qNorm.includes(c)))
     .slice(0, 7)
     .map((row) => ({ ...row, relevance: "Related concept" }));
 

@@ -29,7 +29,7 @@ export default function TomeIndexPage() {
                   <p className="font-body text-gray-200">{doc.title}</p>
                   <p className="font-ui text-xs text-gray-400">Version in use: {doc.versionInUse}</p>
                 </td>
-                <td className="px-3 py-2 font-ui text-gray-300">{doc.aliases.join(", ")}</td>
+                <td className="px-3 py-2 font-ui text-gray-300">{(doc.aliases || []).join(", ")}</td>
                 <td className="px-3 py-2 font-ui text-gray-300">{doc.version}</td>
                 <td className="px-3 py-2">
                   <span className="rounded bg-sprawl-yellow/10 px-2 py-0.5 font-ui text-xs text-sprawl-yellow">{doc.coverage}</span>

@@ -225,9 +225,9 @@ export default function Ch02Agency() {
         <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
           RSA § 1.01, § 2.01, § 7.07 · A. Gay Jenson Farms v. Cargill, 309 N.W.2d 285 (Minn. 1981)
         </p>
-        <CitationChip citation="RSA § 2.03" />
+        <CitationChip citation="RSA § 2.01" />
         <button
-          onClick={() => openTome({ query: "RSA § 2.03" })}
+          onClick={() => openTome({ query: "RSA § 2.01" })}
           className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open in Tome

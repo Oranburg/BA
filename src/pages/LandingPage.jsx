@@ -238,7 +238,7 @@ export default function LandingPage() {
           </div>
 
           <div className="space-y-2">
-            {CHAPTERS.map((ch, idx) => {
+            {CHAPTERS.map((ch) => {
               const hasActivity = !!ch.route;
               const cardContent = (
                 <>

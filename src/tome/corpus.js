@@ -500,14 +500,18 @@ export const CHAPTER_ROUTES = {
 export const DOCUMENT_BY_ID = Object.fromEntries(DOCUMENTS.map((d) => [d.id, d]));
 export const DOCUMENT_BY_SLUG = Object.fromEntries(DOCUMENTS.map((d) => [d.slug, d]));
 
+export function toSlugToken(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 export function getSectionSlug(sectionNumber) {
-  return `section-${sectionNumber.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+  return `section-${toSlugToken(sectionNumber)}`;
 }
 
 export function getTomePath(doc, section) {
   if (!doc) return "/tome";
   if (!section) return `/tome/${doc.slug}`;
   const article = section.article || "title";
-  const articleSlug = article.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const articleSlug = toSlugToken(article);
   return `/tome/${doc.slug}/${articleSlug}/${getSectionSlug(section.number)}`;
 }

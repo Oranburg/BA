@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { resolveQuery } from "./resolver";
-import { getTomePath } from "./corpus";
+import { getTomePath, toSlugToken } from "./corpus";
 import { useTome } from "./useTome";
 
 export default function CitationChip({ citation, label }) {
@@ -11,6 +11,7 @@ export default function CitationChip({ citation, label }) {
   const resolution = resolveQuery(citation);
 
   const sectionResult = resolution.type === "section" ? resolution.result : null;
+  const previewId = `cite-preview-${toSlugToken(citation)}`;
 
   function openSectionInPanel() {
     if (sectionResult) {
@@ -37,6 +38,7 @@ export default function CitationChip({ citation, label }) {
         onBlur={() => setOpen(false)}
         onClick={openSectionInPanel}
         aria-label={`Open citation ${citation} in Tome`}
+        aria-describedby={sectionResult ? previewId : undefined}
         className="inline-flex items-center gap-1 rounded-full border border-sprawl-yellow/60 bg-sprawl-yellow/10 px-2 py-0.5 text-xs font-ui text-sprawl-yellow hover:bg-sprawl-yellow/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sprawl-yellow"
       >
         <span aria-hidden>📜</span>
@@ -47,6 +49,8 @@ export default function CitationChip({ citation, label }) {
         <div
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
+          id={previewId}
+          role="tooltip"
           className="absolute z-40 mt-2 w-80 rounded-lg border border-sprawl-yellow/30 bg-sprawl-deep-blue p-3 shadow-2xl"
         >
           <p className="font-headline text-xs uppercase tracking-wider text-sprawl-yellow">

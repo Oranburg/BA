@@ -329,7 +329,7 @@ function AnnotationPanel({ keyId, sectionText, sectionLabel }) {
       </div>
       <ul className="mt-2 space-y-1">
         {highlights.map((h, i) => (
-          <li key={`${h.text}-${i}`} className="font-body text-xs text-gray-300">
+          <li key={i} className="font-body text-xs text-gray-300">
             [{h.color}] {h.text}
           </li>
         ))}
@@ -388,7 +388,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
     }
   }
 
-  const jumpMatches = (doc.sections || []).filter((s) => s.number.toLowerCase().includes(jump.toLowerCase().replace(/^§\s*/, ""))).slice(0, 6);
+  const jumpMatches = useMemo(() => (doc.sections || []).filter((s) => s.number.toLowerCase().includes(jump.toLowerCase().replace(/^§\s*/, ""))).slice(0, 6), [doc, jump]);
 
   const rootClass = embedded
     ? "h-full bg-sprawl-deep-blue text-gray-100"
@@ -550,7 +550,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
               </header>
 
               <div className="mt-4 rounded border border-sprawl-yellow/20 bg-black/20 p-4">
-                <h3 className="text-base font-semibold">Statutory text</h3>
+                <h3 className="text-base font-semibold">Statutory Text</h3>
                 <p className="mt-2 text-[18px] leading-8 font-body text-gray-100">{section.text}</p>
               </div>
 
