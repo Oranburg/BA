@@ -352,16 +352,20 @@ function AnnotationPanel({ keyId, sectionText, sectionLabel }) {
   );
 }
 
-export default function TomeExperience({ embedded = false, onClose }) {
+export default function TomeExperience({ embedded = false, onClose, initialDocSlug, initialSectionNumber }) {
   const params = useParams();
   const navigate = useNavigate();
 
   const defaultDoc = DOCUMENTS.find((d) => d.shortName === "R3A") || DOCUMENTS[0];
-  const routeDoc = getDocBySlug(params.docSlug);
+  const propDoc = initialDocSlug ? DOCUMENTS.find((d) => d.slug === initialDocSlug) : null;
+  const routeDoc = propDoc || getDocBySlug(params.docSlug);
   const [doc, setDoc] = useState(routeDoc || defaultDoc);
 
+  const propSection = propDoc && initialSectionNumber
+    ? (propDoc.sections || []).find((s) => s.number === String(initialSectionNumber))
+    : null;
   const routeSection = routeDoc && params.sectionSlug ? getSectionBySlug(routeDoc, params.sectionSlug) : null;
-  const [section, setSection] = useState(routeSection || (doc.sections || [])[0] || null);
+  const [section, setSection] = useState(propSection || routeSection || (doc.sections || [])[0] || null);
 
   const [jump, setJump] = useState("");
   const [focus, setFocus] = useState(false);
@@ -378,7 +382,7 @@ export default function TomeExperience({ embedded = false, onClose }) {
     if (!nextDoc || !nextSection) return;
     setDoc(nextDoc);
     setSection(nextSection);
-    navigate(getTomePath(nextDoc, nextSection));
+    if (!embedded) navigate(getTomePath(nextDoc, nextSection));
   }
 
   function onJumpSubmit(e) {
