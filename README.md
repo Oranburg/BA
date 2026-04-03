@@ -32,6 +32,8 @@ npm run dev       # development server
 npm run build     # production build
 npm run preview   # preview production build
 npm run validate:dist  # verify production artifact safety
+npm run validate:integrity  # verify internal links, anchors, and image references
+npm run check:app # dist + integrity checks together
 ```
 
 ## Production Deployment (GitHub Pages via Actions Artifacts)
@@ -55,7 +57,7 @@ Run:
 ```bash
 npm ci
 npm run build
-npm run validate:dist
+npm run check:app
 npm run preview
 ```
 
@@ -63,7 +65,17 @@ Then verify:
 - app loads at `http://localhost:4173/BA/`
 - no request to `/src/main.jsx`
 - a deep link like `http://localhost:4173/BA/ch02-agency` loads and refreshes successfully
+- legacy `http://localhost:4173/BA/#problems` redirects to canonical Tome route (`/BA/tome?panel=problems`)
 - no fatal console errors on initial load
+
+## Link/Citation/Hash Conventions
+
+- **Canonical internal routes** are centralized in `src/routing/routes.js`.
+- Legacy hash entrypoint `#problems` is backward-compatible and now canonicalized to `/tome?panel=problems`.
+- Hash navigation uses `HashRouteHandler` with mount-aware retry for anchors and safe missing-target behavior.
+- Citation matching is centralized in `src/tome/citationRegistry.js` via `resolveCitation`.
+- Citation aliases are normalized to one canonical source (including `GENIUS Act`/`PLAW-119(-27)` variants).
+- Unresolved citations degrade gracefully (opens Tome search and logs a warning).
 
 ## Troubleshooting / Failure Signatures
 
@@ -94,6 +106,19 @@ Likely cause: static host fallback missing for SPA routes.
 Action:
 - ensure `public/404.html` exists and is included in `dist/404.html`
 - ensure redirect handler runs at app bootstrap (`SpaRedirectHandler`)
+
+### 4) Broken internal links, anchors, or image references
+
+Run:
+
+```bash
+npm run validate:integrity
+```
+
+This checks:
+- app-internal route targets used in navigation and CTAs
+- hash anchor existence for hash links used by app code
+- referenced local image asset existence
 
 ## Recovery / Rollback
 

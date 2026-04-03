@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { APP_ROUTES } from "../../routing/routes";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
 import { downloadTextFile, useModuleProgress } from "../../learning/progress";
@@ -678,7 +679,7 @@ Key unresolved facts:
             <div className="mt-4 text-center">
               <p className="font-ui text-xs text-gray-500 mb-2">{flow.bridge}</p>
               <Link
-                to="/ch08-entity-selection"
+                to={APP_ROUTES.ch08EntitySelection}
                 className="inline-flex items-center gap-2 px-3 py-2 rounded border border-sprawl-light-blue text-sprawl-light-blue font-ui text-xs uppercase tracking-wider hover:bg-sprawl-light-blue/10"
               >
                 Continue to Entity Selection →

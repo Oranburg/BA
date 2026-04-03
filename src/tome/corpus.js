@@ -1,3 +1,5 @@
+import { APP_ROUTES } from "../routing/routes";
+
 export const COVERAGE_BADGES = {
   FULL_TEXT: "Full text",
   EXCERPTED: "Excerpted",
@@ -483,18 +485,18 @@ export const CASE_LAW_INDEX = [
 ];
 
 export const CHAPTER_ROUTES = {
-  2: "/ch02-agency",
-  3: "/",
-  5: "/",
-  6: "/",
-  7: "/",
-  8: "/",
-  9: "/",
-  10: "/",
-  11: "/",
-  12: "/",
-  13: "/ch13-m-and-a",
-  15: "/",
+  2: APP_ROUTES.ch02Agency,
+  3: APP_ROUTES.home,
+  5: APP_ROUTES.home,
+  6: APP_ROUTES.home,
+  7: APP_ROUTES.home,
+  8: APP_ROUTES.home,
+  9: APP_ROUTES.home,
+  10: APP_ROUTES.home,
+  11: APP_ROUTES.home,
+  12: APP_ROUTES.home,
+  13: APP_ROUTES.ch13MA,
+  15: APP_ROUTES.home,
 };
 
 export const DOCUMENT_BY_ID = Object.fromEntries(DOCUMENTS.map((d) => [d.id, d]));
@@ -509,9 +511,9 @@ export function getSectionSlug(sectionNumber) {
 }
 
 export function getTomePath(doc, section) {
-  if (!doc) return "/tome";
-  if (!section) return `/tome/${doc.slug}`;
+  if (!doc) return APP_ROUTES.tomeHome;
+  if (!section) return `${APP_ROUTES.tomeHome}/${doc.slug}`;
   const article = section.article || "title";
   const articleSlug = toSlugToken(article);
-  return `/tome/${doc.slug}/${articleSlug}/${getSectionSlug(section.number)}`;
+  return `${APP_ROUTES.tomeHome}/${doc.slug}/${articleSlug}/${getSectionSlug(section.number)}`;
 }
