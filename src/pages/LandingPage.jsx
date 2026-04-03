@@ -1,28 +1,29 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import FiduciarySlider from "../components/toolkit/FiduciarySlider";
 import CitationChip from "../tome/CitationChip";
 import { useTome } from "../tome/useTome";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
 import newBoston2077 from "../assets/images/new-boston-2077.png";
+import { getCourseProgress, getLastVisitedModule, getModuleCompletion } from "../learning/progress";
 
 const CHAPTERS = [
-  { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: null },
+  { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: null, status: "partial" },
   { id: "ch02", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: "/ch02-agency" },
-  { id: "ch03", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: null },
-  { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding", route: null },
-  { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: null },
-  { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint", route: null },
-  { id: "ch07", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law", route: null },
-  { id: "ch08", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems", route: null },
-  { id: "ch09", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care", route: null },
-  { id: "ch10", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences", route: null },
-  { id: "ch11", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure", route: null },
-  { id: "ch12", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting", route: null },
+  { id: "ch03", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: null, status: "planned" },
+  { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding", route: null, status: "planned" },
+  { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: null, status: "planned" },
+  { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint", route: null, status: "planned" },
+  { id: "ch07", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law", route: null, status: "planned" },
+  { id: "ch08", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems", route: "/ch08-entity-selection" },
+  { id: "ch09", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care", route: "/ch09-fiduciary-duties" },
+  { id: "ch10", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences", route: null, status: "partial" },
+  { id: "ch11", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure", route: null, status: "partial" },
+  { id: "ch12", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting", route: "/ch12-shareholder-franchise" },
   { id: "ch13", num: "13", title: "M&A", problem: "Governance", focus: "Takeovers / Enhanced Scrutiny", route: "/ch13-m-and-a" },
-  { id: "ch14", num: "14", title: "Piercing the Veil", problem: "Partitioning", focus: "Alter Ego", route: null },
-  { id: "ch15", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors", route: null },
-  { id: "ch16", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis", route: null },
+  { id: "ch14", num: "14", title: "Piercing the Veil", problem: "Partitioning", focus: "Alter Ego", route: null, status: "partial" },
+  { id: "ch15", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors", route: "/ch15-capital-structure" },
+  { id: "ch16", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis", route: null, status: "planned" },
 ];
 
 const FOUR_PROBLEMS = [
@@ -93,6 +94,9 @@ const VISUAL_SLOTS = {
 export default function LandingPage() {
   const [activeChapter, setActiveChapter] = useState(null);
   const { openTome } = useTome();
+  const builtIds = useMemo(() => CHAPTERS.filter((c) => !!c.route).map((c) => c.id), []);
+  const progress = getCourseProgress(builtIds);
+  const lastVisited = getLastVisitedModule();
 
   return (
     <div>
@@ -285,11 +289,27 @@ export default function LandingPage() {
             <p className="font-body text-gray-500 dark:text-gray-400 max-w-xl mx-auto mt-4">
               16 modules mapping the evolution of business association law.
             </p>
+            <div className="mt-4 max-w-md mx-auto">
+              <div className="flex justify-between font-ui text-xs text-gray-500 mb-1">
+                <span>Built module completion</span>
+                <span>{progress.completedCount}/{progress.totalCount} ({progress.percent}%)</span>
+              </div>
+              <div className="h-2 rounded bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                <div className="h-full bg-sprawl-teal" style={{ width: `${progress.percent}%` }} />
+              </div>
+              {lastVisited && (
+                <p className="font-ui text-xs text-gray-500 mt-2">
+                  Resume recommended: {CHAPTERS.find((c) => c.id === lastVisited)?.title || "Most recent module"}
+                </p>
+              )}
+            </div>
           </div>
 
           <div className="space-y-2">
             {CHAPTERS.map((ch) => {
               const hasActivity = !!ch.route;
+              const completion = getModuleCompletion(ch.id);
+              const statusLabel = hasActivity ? (completion ? "Completed" : "Built") : (ch.status === "partial" ? "Partial" : "Planned");
               const cardContent = (
                 <>
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-headline font-bold text-sm flex-shrink-0 transition-all ${
@@ -315,9 +335,9 @@ export default function LandingPage() {
                   </div>
 
                   <div className="flex-shrink-0 flex items-center gap-2">
-                    <div className={`w-2 h-2 rounded-full ${hasActivity ? "bg-sprawl-teal" : "bg-gray-300 dark:bg-gray-600"}`} />
+                    <div className={`w-2 h-2 rounded-full ${completion ? "bg-sprawl-yellow" : hasActivity ? "bg-sprawl-teal" : ch.status === "partial" ? "bg-sprawl-light-blue" : "bg-gray-300 dark:bg-gray-600"}`} />
                     <span className="font-ui text-xs text-gray-400 hidden sm:block">
-                      {hasActivity ? "▶ Play" : "Coming Soon"}
+                      {statusLabel}
                     </span>
                   </div>
                 </>
@@ -328,6 +348,8 @@ export default function LandingPage() {
                   ? "border-sprawl-yellow/60 bg-sprawl-yellow/5"
                   : hasActivity
                   ? "border-sprawl-teal/30 hover:border-sprawl-yellow/60 hover:bg-gray-100/50 dark:hover:bg-sprawl-bright-blue/10 cursor-pointer"
+                  : ch.status === "partial"
+                  ? "border-sprawl-light-blue/30 hover:border-sprawl-light-blue/60"
                   : "border-gray-200 dark:border-gray-700/50 opacity-70"
               }`;
 

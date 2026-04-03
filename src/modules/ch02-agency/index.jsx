@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
+import { downloadTextFile, useModuleProgress } from "../../learning/progress";
 
 // ---------------------------------------------------------------------------
 // Agency Activity: "The Neural-Link Handshake — Who Controls the Bot?"
@@ -173,20 +174,47 @@ during what Sammy described as a 'quick system check' mid-negotiation.`,
 // ---------------------------------------------------------------------------
 
 export default function Ch02Agency() {
-  const [phase, setPhase] = useState(0);
+  const { state: saved, patch, markCompleted } = useModuleProgress("ch02-agency", {
+    phase: 0,
+    controlAnswers: {},
+    controlChecked: false,
+    authAnswers: {},
+    authChecked: false,
+    respAnswer: null,
+    respChecked: false,
+    counselNotes: "",
+    completed: false,
+  });
+
+  const [phase, setPhase] = useState(saved.phase ?? 0);
   const { openTome } = useTome();
 
   // Phase 1: Control Test
-  const [controlAnswers, setControlAnswers] = useState({});
-  const [controlChecked, setControlChecked] = useState(false);
+  const [controlAnswers, setControlAnswers] = useState(saved.controlAnswers || {});
+  const [controlChecked, setControlChecked] = useState(saved.controlChecked || false);
 
   // Phase 2: Authority
-  const [authAnswers, setAuthAnswers] = useState({});
-  const [authChecked, setAuthChecked] = useState(false);
+  const [authAnswers, setAuthAnswers] = useState(saved.authAnswers || {});
+  const [authChecked, setAuthChecked] = useState(saved.authChecked || false);
 
   // Phase 3: Respondeat
-  const [respAnswer, setRespAnswer] = useState(null);
-  const [respChecked, setRespChecked] = useState(false);
+  const [respAnswer, setRespAnswer] = useState(saved.respAnswer || null);
+  const [respChecked, setRespChecked] = useState(saved.respChecked || false);
+  const [counselNotes, setCounselNotes] = useState(saved.counselNotes || "");
+
+
+  useEffect(() => {
+    patch({
+      phase,
+      controlAnswers,
+      controlChecked,
+      authAnswers,
+      authChecked,
+      respAnswer,
+      respChecked,
+      counselNotes,
+    });
+  }, [phase, controlAnswers, controlChecked, authAnswers, authChecked, respAnswer, respChecked, counselNotes, patch]);
 
   // Scoring
   const controlScore = Object.entries(controlAnswers).filter(
@@ -551,6 +579,40 @@ export default function Ch02Agency() {
               liability under <strong>RSA § 7.07</strong>. The agency relationship was formed by
               conduct — no formal agreement required.
             </p>
+            <div className="mt-4 max-w-xl mx-auto text-left border border-sprawl-yellow/30 rounded p-3 bg-sprawl-yellow/5">
+              <p className="font-ui text-xs text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation notes</p>
+              <textarea
+                value={counselNotes}
+                onChange={(e) => setCounselNotes(e.target.value)}
+                placeholder="Capture final agency counseling takeaways and facts to verify in diligence."
+                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-xs text-gray-800 dark:text-gray-200"
+              />
+            </div>
+            <div className="mt-4 flex justify-center">
+              <button
+                onClick={() => {
+                  markCompleted();
+                  const report = `AGENCY ANALYSIS SHEET
+
+Control score: ${controlScore}/${CONTROL_FACTORS.length}
+Authority score: ${authScore}/${AUTHORITY_QUESTIONS.length}
+Respondeat: ${RESPONDEAT_SCENARIO.choices.find((c) => c.id === respAnswer)?.correct ? "Likely liability" : "Needs review"}
+
+Counsel notes:
+${counselNotes || "None"}
+
+Key unresolved facts:
+- Scope limits communicated to third parties
+- Control over negotiation scripts and tools
+- Whether deviations were detour or frolic
+`;
+                  downloadTextFile("constructedge-agency-analysis-sheet.txt", report);
+                }}
+                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+              >
+                Complete Module + Export Agency Analysis Sheet
+              </button>
+            </div>
             <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-xs text-gray-400 max-w-xl mx-auto">
               <p className="text-sprawl-teal font-bold mb-1">CASEBOOK REFERENCE</p>
               <p><em>A. Gay Jenson Farms Co. v. Cargill, Inc.</em>, 309 N.W.2d 285 (Minn. 1981) — Control test, course of dealing</p>
@@ -560,6 +622,7 @@ export default function Ch02Agency() {
             </div>
             <button
               onClick={() => {
+                markCompleted();
                 setPhase(0);
                 setControlAnswers({});
                 setControlChecked(false);
