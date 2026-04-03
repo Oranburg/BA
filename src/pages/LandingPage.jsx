@@ -1,25 +1,26 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import FiduciarySlider from "../components/toolkit/FiduciarySlider";
 import TomeOfLaw from "../components/toolkit/TomeOfLaw";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
 
 const CHAPTERS = [
-  { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm" },
-  { id: "ch02", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test" },
-  { id: "ch03", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability" },
-  { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding" },
-  { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom" },
-  { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint" },
-  { id: "ch07", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law" },
-  { id: "ch08", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems" },
-  { id: "ch09", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care" },
-  { id: "ch10", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences" },
-  { id: "ch11", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure" },
-  { id: "ch12", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting" },
-  { id: "ch13", num: "13", title: "M&A", problem: "Governance", focus: "Takeovers / Enhanced Scrutiny" },
-  { id: "ch14", num: "14", title: "Piercing the Veil", problem: "Partitioning", focus: "Alter Ego" },
-  { id: "ch15", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors" },
-  { id: "ch16", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis" },
+  { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: null },
+  { id: "ch02", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: "/ch02-agency" },
+  { id: "ch03", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: null },
+  { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding", route: null },
+  { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: null },
+  { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint", route: null },
+  { id: "ch07", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law", route: null },
+  { id: "ch08", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems", route: null },
+  { id: "ch09", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care", route: null },
+  { id: "ch10", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences", route: null },
+  { id: "ch11", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure", route: null },
+  { id: "ch12", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting", route: null },
+  { id: "ch13", num: "13", title: "M&A", problem: "Governance", focus: "Takeovers / Enhanced Scrutiny", route: "/ch13-m-and-a" },
+  { id: "ch14", num: "14", title: "Piercing the Veil", problem: "Partitioning", focus: "Alter Ego", route: null },
+  { id: "ch15", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors", route: null },
+  { id: "ch16", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis", route: null },
 ];
 
 const FOUR_PROBLEMS = [
@@ -236,46 +237,67 @@ export default function LandingPage() {
           </div>
 
           <div className="space-y-2">
-            {CHAPTERS.map((ch, idx) => (
-              <div
-                key={ch.id}
-                onClick={() => setActiveChapter(activeChapter === ch.id ? null : ch.id)}
-                className={`group flex items-center gap-4 p-3 rounded-lg border cursor-pointer transition-all ${
-                  activeChapter === ch.id
-                    ? "border-sprawl-yellow/60 bg-sprawl-yellow/5"
-                    : "border-gray-200 dark:border-gray-700/50 hover:border-sprawl-yellow/30 hover:bg-gray-100/50 dark:hover:bg-sprawl-bright-blue/10"
-                }`}
-              >
-                <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-headline font-bold text-sm flex-shrink-0 transition-all ${
-                  activeChapter === ch.id
-                    ? "bg-sprawl-yellow text-sprawl-deep-blue"
-                    : "bg-gray-100 dark:bg-sprawl-bright-blue/20 text-gray-500 dark:text-gray-400 group-hover:bg-sprawl-yellow/20 group-hover:text-sprawl-yellow"
-                }`}>
-                  {ch.num}
-                </div>
+            {CHAPTERS.map((ch, idx) => {
+              const hasActivity = !!ch.route;
+              const cardContent = (
+                <>
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-headline font-bold text-sm flex-shrink-0 transition-all ${
+                    activeChapter === ch.id
+                      ? "bg-sprawl-yellow text-sprawl-deep-blue"
+                      : "bg-gray-100 dark:bg-sprawl-bright-blue/20 text-gray-500 dark:text-gray-400 group-hover:bg-sprawl-yellow/20 group-hover:text-sprawl-yellow"
+                  }`}>
+                    {ch.num}
+                  </div>
 
-                <div className="hidden sm:block w-8 h-0.5 bg-gray-200 dark:bg-gray-700 flex-shrink-0 group-hover:bg-sprawl-yellow/30 transition-colors" />
+                  <div className="hidden sm:block w-8 h-0.5 bg-gray-200 dark:bg-gray-700 flex-shrink-0 group-hover:bg-sprawl-yellow/30 transition-colors" />
 
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <h4 className="font-headline uppercase tracking-wider text-sm text-gray-800 dark:text-gray-200">
-                      {ch.title}
-                    </h4>
-                    <span className={`font-ui text-xs ${PROBLEM_COLORS[ch.problem] || "text-gray-400"}`}>
-                      [{ch.problem}]
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h4 className="font-headline uppercase tracking-wider text-sm text-gray-800 dark:text-gray-200">
+                        {ch.title}
+                      </h4>
+                      <span className={`font-ui text-xs ${PROBLEM_COLORS[ch.problem] || "text-gray-400"}`}>
+                        [{ch.problem}]
+                      </span>
+                    </div>
+                    <p className="font-ui text-xs text-gray-500 dark:text-gray-500 truncate">{ch.focus}</p>
+                  </div>
+
+                  <div className="flex-shrink-0 flex items-center gap-2">
+                    <div className={`w-2 h-2 rounded-full ${hasActivity ? "bg-sprawl-teal" : "bg-gray-300 dark:bg-gray-600"}`} />
+                    <span className="font-ui text-xs text-gray-400 hidden sm:block">
+                      {hasActivity ? "▶ Play" : "Coming Soon"}
                     </span>
                   </div>
-                  <p className="font-ui text-xs text-gray-500 dark:text-gray-500 truncate">{ch.focus}</p>
-                </div>
+                </>
+              );
 
-                <div className="flex-shrink-0 flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${idx < 2 ? "bg-sprawl-teal" : "bg-gray-300 dark:bg-gray-600"}`} />
-                  <span className="font-ui text-xs text-gray-400 hidden sm:block">
-                    {idx < 2 ? "Available" : "Locked"}
-                  </span>
+              const cardClass = `group flex items-center gap-4 p-3 rounded-lg border transition-all ${
+                activeChapter === ch.id
+                  ? "border-sprawl-yellow/60 bg-sprawl-yellow/5"
+                  : hasActivity
+                  ? "border-sprawl-teal/30 hover:border-sprawl-yellow/60 hover:bg-gray-100/50 dark:hover:bg-sprawl-bright-blue/10 cursor-pointer"
+                  : "border-gray-200 dark:border-gray-700/50 opacity-70"
+              }`;
+
+              return hasActivity ? (
+                <Link
+                  key={ch.id}
+                  to={ch.route}
+                  className={cardClass}
+                >
+                  {cardContent}
+                </Link>
+              ) : (
+                <div
+                  key={ch.id}
+                  onClick={() => setActiveChapter(activeChapter === ch.id ? null : ch.id)}
+                  className={cardClass}
+                >
+                  {cardContent}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
