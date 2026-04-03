@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Edge | Module 10: The Preference Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #0A3255;
+            --deep-red: #B21F2C;
+            --bright-yellow: #FFD65C;
+            --light-teal: #B5E1E1;
+            --bright-blue: #2459A9;
+            --accent-light: #6DACDE;
+        }
+
+        body {
+            background-color: #020617;
+            color: #f1f5f9;
+            font-family: 'Crimson Text', serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .headline {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .ui-text {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .cyber-panel {
+            background: rgba(10, 50, 85, 0.3);
+            border: 1px solid rgba(36, 89, 169, 0.4);
+            backdrop-filter: blur(8px);
+            position: relative;
+        }
+
+        .term-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(181, 225, 225, 0.1);
+        }
+
+        .term-card:hover {
+            border-color: var(--bright-blue);
+            background: rgba(36, 89, 169, 0.1);
+        }
+
+        .term-card.selected {
+            border-color: var(--bright-yellow);
+            background: rgba(255, 214, 92, 0.05);
+            box-shadow: 0 0 15px rgba(255, 214, 92, 0.2);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            height: 350px;
+        }
+
+        .hidden-step { display: none; }
+
+        .scanline {
+            width: 100%; height: 100px; z-index: 10;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(181, 225, 225, 0.03) 50%, rgba(0,0,0,0) 100%);
+            position: fixed; top: 0; animation: scan 12s linear infinite; pointer-events: none;
+        }
+        @keyframes scan { from { transform: translateY(-100px); } to { transform: translateY(100vh); } }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="scanline"></div>
+
+    <!-- Chosen Palette: Neon Edge Dark -->
+    <!-- Application Structure Plan: 
+    1. The Capital Crisis: Zeeva needs 5,000,000 credits to scale the Sky-Tower.
+    2. The Term Sheet HUD: Students select between two VC offers with different Preference Stacks.
+    3. The Exit Waterfall: A Chart.js visualization showing how the payout changes across different exit values (Low, Mid, High).
+    4. Synthesis: A final legal holding on Preferred Stock rights and the 'Risk' of the down-round.
+    This structure emphasizes the 'Contractual' nature of private equity in Chapter 10. -->
+    <!-- Visualization & Content Choices: 
+    1. Term Sheets -> Goal: Compare -> Viz: Choice Cards.
+    2. Waterfall -> Goal: Relationship/Change -> Viz: Chart.js Stacked Bar -> Justification: Clearly visualizes who gets paid first.
+    Confirming NO SVG/Mermaid. -->
+
+    <div class="max-w-6xl mx-auto space-y-8">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-end border-b-2 border-[#B21F2C] pb-6">
+            <div>
+                <h1 class="text-5xl font-bold headline text-[#FFD65C]">The Preference Stack</h1>
+                <p class="text-[#6DACDE] ui-text font-bold text-sm tracking-widest uppercase">Chapter 10: Staying Private & Venture Capital</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-[#FFD65C] text-[#0A3255] px-4 py-1 text-xs headline tracking-widest font-bold">Series A: Preference HUD</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Sidebar: Tome of Law -->
+            <aside class="lg:col-span-3 space-y-6">
+                <div class="cyber-panel p-6 border-l-4 border-[#FFD65C]">
+                    <h4 class="headline text-[#FFD65C] mb-6 flex items-center gap-2">
+                        <span>&#x1F4DC;</span> Capital HUD
+                    </h4>
+                    <div class="ui-text space-y-6">
+                        <div>
+                            <p class="text-[10px] font-bold text-[#B5E1E1] uppercase tracking-widest">Liquidation Preference</p>
+                            <p class="text-xs text-gray-400">The right of preferred shareholders to be paid a fixed amount (usually 1x original investment) before any payment is made to common shareholders.</p>
+                        </div>
+                        <hr class="border-white/10">
+                        <div>
+                            <p class="text-[10px] font-bold text-[#FFD65C] uppercase tracking-widest">Participation Rights</p>
+                            <p class="text-xs text-gray-400 italic">"Double Dipping." The right to receive the liquidation preference AND then share pro-rata in the remaining proceeds with common stock.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-[#0A3255] border border-[#2459A9] rounded">
+                    <p class="text-xs font-bold text-[#6DACDE] uppercase mb-2 italic">The Situation</p>
+                    <p class="ui-text text-[11px] text-gray-300 leading-relaxed">
+                        SP Corp needs 5M credits. The "High Tower Vultures" are offering two different "Preference Stacks." Zeeva's common stock ownership is at stake.
+                    </p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-9 space-y-10">
+                
+                <section class="space-y-6">
+                    <h3 class="text-2xl headline text-[#B5E1E1]">I. Negotiation: Select Term Sheet</h3>
+                    <p class="text-lg">Review the two competing offers. Your choice will define how the <strong>Problem of Risk</strong> is distributed during an exit event.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div id="term-a" onclick="setTerm('a')" class="term-card p-6 rounded-lg cyber-panel selected">
+                            <h5 class="headline text-[#FFD65C] text-sm mb-4">Offer Alpha: "The Clean Tech"</h5>
+                            <ul class="ui-text text-xs space-y-2 text-gray-300">
+                                <li class="flex justify-between"><span>Investment:</span> <span class="text-white">5,000,000 CR</span></li>
+                                <li class="flex justify-between"><span>Valuation:</span> <span class="text-white">15,000,000 CR</span></li>
+                                <li class="flex justify-between"><span>Preference:</span> <span class="text-white">1x Non-Participating</span></li>
+                                <li class="flex justify-between"><span>Founders' Stake:</span> <span class="text-[#B5E1E1]">66%</span></li>
+                            </ul>
+                        </div>
+                        <div id="term-b" onclick="setTerm('b')" class="term-card p-6 rounded-lg cyber-panel">
+                            <h5 class="headline text-[#B21F2C] text-sm mb-4">Offer Beta: "The Vulture Claw"</h5>
+                            <ul class="ui-text text-xs space-y-2 text-gray-300">
+                                <li class="flex justify-between"><span>Investment:</span> <span class="text-white">5,000,000 CR</span></li>
+                                <li class="flex justify-between"><span>Valuation:</span> <span class="text-white">25,000,000 CR</span></li>
+                                <li class="flex justify-between"><span>Preference:</span> <span class="text-white">2x Participating</span></li>
+                                <li class="flex justify-between"><span>Founders' Stake:</span> <span class="text-[#B5E1E1]">80%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Visualization: The Exit Waterfall -->
+                <section class="bg-white/5 p-8 rounded-xl border border-white/5 space-y-8">
+                    <div class="flex justify-between items-center">
+                        <h4 class="headline text-xl text-[#FFD65C]">Exit Proceeds Waterfall</h4>
+                        <div class="ui-text text-[10px] text-gray-500 uppercase tracking-widest">Simulation: Exit at <span id="exit-val-label">15M</span> CR</div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="md:col-span-2 chart-container">
+                            <canvas id="waterfallChart"></canvas>
+                        </div>
+                        <div class="space-y-6 flex flex-col justify-center">
+                            <div class="ui-text space-y-4">
+                                <h5 class="headline text-xs text-gray-400">Exit Value Scenarios</h5>
+                                <button onclick="updateExit(7)" class="w-full py-2 bg-black/40 border border-white/10 rounded text-xs hover:border-[#B21F2C]">Low Exit (7M)</button>
+                                <button onclick="updateExit(15)" class="w-full py-2 bg-black/40 border border-white/10 rounded text-xs hover:border-[#FFD65C]">Mid Exit (15M)</button>
+                                <button onclick="updateExit(50)" class="w-full py-2 bg-black/40 border border-white/10 rounded text-xs hover:border-[#B5E1E1]">High Exit (50M)</button>
+                            </div>
+                            <div class="p-4 bg-black/60 rounded border border-white/5 text-center">
+                                <p class="text-[10px] text-gray-500 uppercase mb-1">Zeeva's Payout</p>
+                                <p id="founder-payout" class="text-2xl headline text-[#B5E1E1]">6.6M CR</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final Synthesis -->
+                <section id="conclusion-step" class="space-y-6">
+                    <div class="cyber-panel p-10 rounded-lg border-b-8 border-b-[#B5E1E1]">
+                        <h3 class="text-3xl headline text-white mb-8">Series A Data-Dump</h3>
+                        <div class="bg-black/60 p-10 rounded font-serif text-2xl italic leading-[2] text-gray-300">
+                            "In the 'Staying Private' phase, a high 
+                            <select id="v1" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="valuation">Valuation</option>
+                                <option value="preference">Preference</option>
+                            </select> 
+                            can be a trap for founders. If a startup accepts 
+                            <select id="v2" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="participation">Participating Preferred</option>
+                                <option value="common">Common Stock</option>
+                            </select> 
+                            terms, the investors effectively 'double-dip' during an exit. This shifts the 
+                            <select id="v3" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="governance">Governance</option>
+                                <option value="risk">Downside Risk</option>
+                            </select> 
+                            onto the common shareholders, potentially leaving Zeeva with 
+                            <select id="v4" class="bg-transparent border-b border-[#FFD65C] outline-none px-1 text-white headline text-sm not-italic">
+                                <option value="">...</option>
+                                <option value="zero">Zero proceeds</option>
+                                <option value="millions">Unlimited millions</option>
+                            </select> 
+                            in a low-exit scenario."
+                        </div>
+                        <button onclick="checkFinal()" class="w-full mt-8 bg-[#2459A9] text-white py-5 rounded headline text-xl font-bold hover:brightness-110 transition-all uppercase shadow-lg">Finalize Series A Ledger</button>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/95 z-50 p-4 backdrop-blur-md">
+        <div class="cyber-panel p-12 max-w-xl text-center border-t-8 border-t-[#FFD65C]">
+            <h2 id="modal-title" class="headline text-4xl mb-6 text-[#FFD65C]"></h2>
+            <p id="modal-body" class="ui-text text-lg text-gray-300 mb-10 leading-relaxed"></p>
+            <button onclick="closeModal()" class="px-12 py-4 bg-[#0A3255] border-2 border-[#FFD65C] text-[#FFD65C] headline text-xl rounded hover:bg-[#FFD65C] hover:text-[#0A3255] transition-all font-bold uppercase tracking-widest">Acknowledge</button>
+        </div>
+    </div>
+
+    <script>
+        let currentTerm = 'a';
+        let currentExit = 15;
+        let chart;
+
+        function initChart() {
+            const ctx = document.getElementById('waterfallChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Exit Proceeds Allocation'],
+                    datasets: [
+                        { label: 'Investor Payout', data: [5], backgroundColor: '#B21F2C', borderRadius: 4 },
+                        { label: 'Founder Payout (Common)', data: [10], backgroundColor: '#B5E1E1', borderRadius: 4 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { position: 'bottom', labels: { color: '#6DACDE', font: { family: 'Roboto' } } },
+                        tooltip: { backgroundColor: '#0A3255', titleFont: { family: 'Oswald' } }
+                    },
+                    scales: {
+                        x: { stacked: true, grid: { display: false }, ticks: { display: false } },
+                        y: { stacked: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#6DACDE', callback: v => v + 'M' } }
+                    }
+                }
+            });
+        }
+
+        function setTerm(id) {
+            currentTerm = id;
+            document.querySelectorAll('.term-card').forEach(c => c.classList.remove('selected'));
+            document.getElementById('term-' + id).classList.add('selected');
+            updateWaterfall();
+        }
+
+        function updateExit(val) {
+            currentExit = val;
+            document.getElementById('exit-val-label').innerText = val + 'M';
+            updateWaterfall();
+        }
+
+        function updateWaterfall() {
+            let investorPayout = 0;
+            let founderPayout = 0;
+            const investment = 5;
+
+            if (currentTerm === 'a') {
+                // 1x Non-participating: Investor gets greater of 1x or pro-rata (33%)
+                const proRata = currentExit * (1/3);
+                investorPayout = Math.max(investment, proRata);
+                if (investorPayout > currentExit) investorPayout = currentExit;
+                founderPayout = Math.max(0, currentExit - investorPayout);
+            } else {
+                // 2x Participating: Investor gets 2x preference (10M) PLUS pro-rata (20%) of remainder
+                const preference = 10;
+                investorPayout = Math.min(currentExit, preference);
+                const remainder = Math.max(0, currentExit - investorPayout);
+                const participation = remainder * 0.2;
+                investorPayout += participation;
+                founderPayout = Math.max(0, currentExit - investorPayout);
+            }
+
+            chart.data.datasets[0].data = [investorPayout];
+            chart.data.datasets[1].data = [founderPayout];
+            chart.update();
+
+            document.getElementById('founder-payout').innerText = founderPayout.toFixed(1) + 'M CR';
+        }
+
+        function checkFinal() {
+            const v1 = document.getElementById('v1').value;
+            const v2 = document.getElementById('v2').value;
+            const v3 = document.getElementById('v3').value;
+            const v4 = document.getElementById('v4').value;
+
+            if (v1 === 'valuation' && v2 === 'participation' && v3 === 'risk' && v4 === 'zero') {
+                showModal("Ledger Updated", "Correct. Chapter 10 highlights that 'Valuation' is often a vanity metric. If the Preference Stack (Liquidation Preference and Participation) is too high, the founders bear all the 'Risk' of a mediocre exit. Zeeva has learned that clean terms are often better than a high valuation.");
+            } else {
+                showModal("Analytic Glitch", "The Council detects a mismatch in your financing theory. Re-examine how Participating Preferred stock interacts with the common stock payout.");
+            }
+        }
+
+        function showModal(t, b) {
+            document.getElementById('modal-title').innerText = t;
+            document.getElementById('modal-body').innerText = b;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        window.onload = function() {
+            initChart();
+            updateWaterfall();
+        };
+    </script>
+</body>
+</html>
