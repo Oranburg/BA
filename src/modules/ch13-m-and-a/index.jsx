@@ -748,12 +748,11 @@ Process checklist:
             >
               Restart Simulation
             </button>
-            <div className="mt-4 text-center">
-              <p className="font-ui text-xs text-gray-500 mb-2">{flow.bridge}</p>
-            </div>
           </div>
         </div>
       )}
+
+      {phase === 5 && <LifecycleHandoff moduleId="ch13-m-and-a" bridge={flow.bridge} />}
 
       {/* Progress Indicator */}
       {phase > 0 && phase < 5 && (

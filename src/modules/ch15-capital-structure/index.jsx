@@ -259,6 +259,7 @@ export default function Ch15CapitalStructure() {
         />
         <div className="mt-4">
           <button
+            disabled={!state.solvencyState}
             onClick={() => {
               markCompleted();
               updateMatterFile(
@@ -274,7 +275,7 @@ export default function Ch15CapitalStructure() {
               );
               downloadTextFile("constructedge-distress-analysis-sheet.txt", exportText);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
           >
             Complete Module + Export Distress Sheet
           </button>

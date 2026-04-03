@@ -328,6 +328,7 @@ export default function Ch08EntitySelection() {
 
         <div className="mt-4 flex flex-wrap gap-3">
           <button
+            disabled={!state.selectedEntity}
             onClick={() => {
               markCompleted();
               const entityLabel = ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Undetermined";
@@ -345,7 +346,7 @@ export default function Ch08EntitySelection() {
               );
               downloadTextFile("constructedge-entity-selection-counsel-sheet.txt", memoText);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
           >
             Complete Module + Export Counsel Sheet
           </button>

@@ -130,10 +130,7 @@ export default function Ch09FiduciaryDuties() {
 
   const packetScore = useMemo(
     () =>
-      BOARD_PACKET_ITEMS.filter((item) => {
-        const checked = !!state.packetChecks?.[item.id];
-        return item.required ? checked : true;
-      }).length,
+      BOARD_PACKET_ITEMS.filter((item) => !!state.packetChecks?.[item.id]).length,
     [state.packetChecks]
   );
 
