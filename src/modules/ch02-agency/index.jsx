@@ -1,6 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
+import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { MODULE_FLOW } from "../../course/lifecycle";
+import { updateMatterFile } from "../../course/matterFile";
+import { summarizeModuleHeadline } from "../../course/coherence";
+import {
+  ConstructEdgeDossier,
+  FourProblemsMarker,
+  LifecycleHandoff,
+  MatterFileCarryover,
+} from "../../components/course/ContinuityPanels";
 
 // ---------------------------------------------------------------------------
 // Agency Activity: "The Neural-Link Handshake — Who Controls the Bot?"
@@ -173,20 +184,48 @@ during what Sammy described as a 'quick system check' mid-negotiation.`,
 // ---------------------------------------------------------------------------
 
 export default function Ch02Agency() {
-  const [phase, setPhase] = useState(0);
+  const { state: saved, patch, markCompleted } = useModuleProgress("ch02-agency", {
+    phase: 0,
+    controlAnswers: {},
+    controlChecked: false,
+    authAnswers: {},
+    authChecked: false,
+    respAnswer: null,
+    respChecked: false,
+    counselNotes: "",
+    completed: false,
+  });
+
+  const [phase, setPhase] = useState(saved.phase ?? 0);
   const { openTome } = useTome();
+  const flow = MODULE_FLOW["ch02-agency"];
 
   // Phase 1: Control Test
-  const [controlAnswers, setControlAnswers] = useState({});
-  const [controlChecked, setControlChecked] = useState(false);
+  const [controlAnswers, setControlAnswers] = useState(saved.controlAnswers || {});
+  const [controlChecked, setControlChecked] = useState(saved.controlChecked || false);
 
   // Phase 2: Authority
-  const [authAnswers, setAuthAnswers] = useState({});
-  const [authChecked, setAuthChecked] = useState(false);
+  const [authAnswers, setAuthAnswers] = useState(saved.authAnswers || {});
+  const [authChecked, setAuthChecked] = useState(saved.authChecked || false);
 
   // Phase 3: Respondeat
-  const [respAnswer, setRespAnswer] = useState(null);
-  const [respChecked, setRespChecked] = useState(false);
+  const [respAnswer, setRespAnswer] = useState(saved.respAnswer || null);
+  const [respChecked, setRespChecked] = useState(saved.respChecked || false);
+  const [counselNotes, setCounselNotes] = useState(saved.counselNotes || "");
+
+
+  useEffect(() => {
+    patch({
+      phase,
+      controlAnswers,
+      controlChecked,
+      authAnswers,
+      authChecked,
+      respAnswer,
+      respChecked,
+      counselNotes,
+    });
+  }, [phase, controlAnswers, controlChecked, authAnswers, authChecked, respAnswer, respChecked, counselNotes, patch]);
 
   // Scoring
   const controlScore = Object.entries(controlAnswers).filter(
@@ -221,6 +260,9 @@ export default function Ch02Agency() {
         The Neural-Link Handshake
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Who Controls the Fixer?</p>
+      <p className="font-ui text-xs text-gray-500 mb-2">
+        Lifecycle fit: this is the first legal gate—before structure or board design, counsel must determine who can bind ConstructEdge.
+      </p>
       <div className="mb-8 flex flex-wrap items-center gap-2">
         <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
           RSA § 1.01, § 2.01, § 7.07 · A. Gay Jenson Farms v. Cargill, 309 N.W.2d 285 (Minn. 1981)
@@ -233,6 +275,20 @@ export default function Ch02Agency() {
           Open in Tome
         </button>
       </div>
+
+      <FourProblemsMarker
+        dominant={flow.dominantProblems}
+        secondary={flow.secondaryProblems}
+        shift={flow.shiftFromPrior}
+      />
+      <ConstructEdgeDossier
+        moduleId="ch02-agency"
+        factsOverride={{
+          controlPosture: "Founder-agent authority is disputed across vendor negotiations",
+          strategicPressure: "Early contracting pressure with unclear authority boundaries",
+        }}
+      />
+      <MatterFileCarryover title="Matter File Start" references={[]} />
 
       {/* Phase 0: Intro */}
       {phase === 0 && (
@@ -551,6 +607,52 @@ export default function Ch02Agency() {
               liability under <strong>RSA § 7.07</strong>. The agency relationship was formed by
               conduct — no formal agreement required.
             </p>
+            <div className="mt-4 max-w-xl mx-auto text-left border border-sprawl-yellow/30 rounded p-3 bg-sprawl-yellow/5">
+              <p className="font-ui text-xs text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation notes</p>
+              <textarea
+                value={counselNotes}
+                onChange={(e) => setCounselNotes(e.target.value)}
+                placeholder="Capture final agency counseling takeaways and facts to verify in diligence."
+                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-xs text-gray-800 dark:text-gray-200"
+              />
+            </div>
+            <div className="mt-4 flex justify-center">
+              <button
+                onClick={() => {
+                  markCompleted();
+                  updateMatterFile(
+                    "ch02-agency",
+                    summarizeModuleHeadline("ch02-agency", {
+                      controlScore: `${controlScore}/${CONTROL_FACTORS.length}`,
+                      authScore: `${authScore}/${AUTHORITY_QUESTIONS.length}`,
+                      counselNotes,
+                    }),
+                    {
+                      controlPosture: "Authority architecture documented through agency analysis",
+                      strategicPressure: "Counterparty reliance risk identified for future entity design",
+                    }
+                  );
+                  const report = `AGENCY ANALYSIS SHEET
+
+Control score: ${controlScore}/${CONTROL_FACTORS.length}
+Authority score: ${authScore}/${AUTHORITY_QUESTIONS.length}
+Respondeat: ${RESPONDEAT_SCENARIO.choices.find((c) => c.id === respAnswer)?.correct ? "Likely liability" : "Needs review"}
+
+Counsel notes:
+${counselNotes || "None"}
+
+Key unresolved facts:
+- Scope limits communicated to third parties
+- Control over negotiation scripts and tools
+- Whether deviations were detour or frolic
+`;
+                  downloadTextFile("constructedge-agency-analysis-sheet.txt", report);
+                }}
+                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+              >
+                Complete Module + Export Agency Analysis Sheet
+              </button>
+            </div>
             <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-xs text-gray-400 max-w-xl mx-auto">
               <p className="text-sprawl-teal font-bold mb-1">CASEBOOK REFERENCE</p>
               <p><em>A. Gay Jenson Farms Co. v. Cargill, Inc.</em>, 309 N.W.2d 285 (Minn. 1981) — Control test, course of dealing</p>
@@ -559,8 +661,9 @@ export default function Ch02Agency() {
               <p className="mt-1">RSA § 7.07 — Employee Acting Within Scope of Employment</p>
             </div>
             <button
-              onClick={() => {
-                setPhase(0);
+                onClick={() => {
+                  markCompleted();
+                  setPhase(0);
                 setControlAnswers({});
                 setControlChecked(false);
                 setAuthAnswers({});
@@ -572,6 +675,15 @@ export default function Ch02Agency() {
             >
               Restart Investigation
             </button>
+            <div className="mt-4 text-center">
+              <p className="font-ui text-xs text-gray-500 mb-2">{flow.bridge}</p>
+              <Link
+                to="/ch08-entity-selection"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded border border-sprawl-light-blue text-sprawl-light-blue font-ui text-xs uppercase tracking-wider hover:bg-sprawl-light-blue/10"
+              >
+                Continue to Entity Selection →
+              </Link>
+            </div>
           </div>
         </div>
       )}
@@ -589,6 +701,7 @@ export default function Ch02Agency() {
           ))}
         </div>
       )}
+      {phase === 0 && <LifecycleHandoff moduleId="ch02-agency" bridge={flow.bridge} />}
     </div>
   );
 }

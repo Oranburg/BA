@@ -1,6 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
+import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { MODULE_FLOW } from "../../course/lifecycle";
+import { updateMatterFile } from "../../course/matterFile";
+import { summarizeModuleHeadline } from "../../course/coherence";
+import {
+  ConstructEdgeDossier,
+  FourProblemsMarker,
+  LifecycleHandoff,
+  MatterFileCarryover,
+} from "../../components/course/ContinuityPanels";
 
 // ---------------------------------------------------------------------------
 // M&A Activity: "The Deal Room — Enhanced Scrutiny in The Sprawl"
@@ -196,16 +206,48 @@ const HOLDING_TEMPLATE = {
 // ---------------------------------------------------------------------------
 
 export default function Ch13MA() {
-  const [phase, setPhase] = useState(0); // 0=intro, 1=unocal-p1, 2=unocal-p2, 3=revlon, 4=holding, 5=verdict
+  const { state: saved, patch, markCompleted } = useModuleProgress("ch13-m-and-a", {
+    phase: 0,
+    p1Answers: {},
+    p1Checked: false,
+    p2Answer: null,
+    p2Checked: false,
+    revlonAnswers: {},
+    revlonChecked: false,
+    holdingSelects: {},
+    holdingChecked: false,
+    counselRecommendation: "",
+    completed: false,
+  });
+
+  const [phase, setPhase] = useState(saved.phase ?? 0); // 0=intro, 1=unocal-p1, 2=unocal-p2, 3=revlon, 4=holding, 5=verdict
   const { openTome } = useTome();
-  const [p1Answers, setP1Answers] = useState({});
-  const [p1Checked, setP1Checked] = useState(false);
-  const [p2Answer, setP2Answer] = useState(null);
-  const [p2Checked, setP2Checked] = useState(false);
-  const [revlonAnswers, setRevlonAnswers] = useState({});
-  const [revlonChecked, setRevlonChecked] = useState(false);
-  const [holdingSelects, setHoldingSelects] = useState({});
-  const [holdingChecked, setHoldingChecked] = useState(false);
+  const flow = MODULE_FLOW["ch13-m-and-a"];
+  const [p1Answers, setP1Answers] = useState(saved.p1Answers || {});
+  const [p1Checked, setP1Checked] = useState(saved.p1Checked || false);
+  const [p2Answer, setP2Answer] = useState(saved.p2Answer || null);
+  const [p2Checked, setP2Checked] = useState(saved.p2Checked || false);
+  const [revlonAnswers, setRevlonAnswers] = useState(saved.revlonAnswers || {});
+  const [revlonChecked, setRevlonChecked] = useState(saved.revlonChecked || false);
+  const [holdingSelects, setHoldingSelects] = useState(saved.holdingSelects || {});
+  const [holdingChecked, setHoldingChecked] = useState(saved.holdingChecked || false);
+  const [counselRecommendation, setCounselRecommendation] = useState(saved.counselRecommendation || "");
+
+
+  useEffect(() => {
+    patch({
+      phase,
+      p1Answers,
+      p1Checked,
+      p2Answer,
+      p2Checked,
+      revlonAnswers,
+      revlonChecked,
+      holdingSelects,
+      holdingChecked,
+      counselRecommendation,
+    });
+  }, [phase, p1Answers, p1Checked, p2Answer, p2Checked, revlonAnswers, revlonChecked, holdingSelects, holdingChecked, counselRecommendation, patch]);
 
   // Scoring
   const p1Score = Object.entries(UNOCAL_PRONG1.correctAnswers).filter(
@@ -228,6 +270,9 @@ export default function Ch13MA() {
         The Deal Room
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Enhanced Scrutiny in The Sprawl</p>
+      <p className="font-ui text-xs text-gray-500 mb-2">
+        Why this chapter matters now: shareholder-control conflict matures into sale-process pressure, where process quality and control transfer define outcomes.
+      </p>
       <div className="mb-8 flex flex-wrap items-center gap-2">
         <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
           Unocal Corp. v. Mesa Petroleum Co., 493 A.2d 946 (Del. 1985) · Revlon, Inc. v. MacAndrews &amp; Forbes, 506 A.2d 173 (Del. 1986) · DGCL § 141(a)
@@ -240,6 +285,23 @@ export default function Ch13MA() {
           Open in Tome
         </button>
       </div>
+
+      <FourProblemsMarker
+        dominant={flow.dominantProblems}
+        secondary={flow.secondaryProblems}
+        shift={flow.shiftFromPrior}
+      />
+      <ConstructEdgeDossier
+        moduleId="ch13-m-and-a"
+        factsOverride={{
+          transactionContext: "Hostile pressure and defensive process create enhanced-scrutiny exposure",
+          strategicPressure: "Control contest now framed as deal-process and value-maximization conflict",
+        }}
+      />
+      <MatterFileCarryover
+        title="Matter File Carryover (Franchise + Fiduciary context)"
+        references={["ch12-shareholder-franchise", "ch09-fiduciary-duties"]}
+      />
 
       {/* Phase 0: Intro */}
       {phase === 0 && (
@@ -613,6 +675,53 @@ export default function Ch13MA() {
               holding under <strong>DGCL § 141(a)</strong>. The board of ZCS-Theta acted in good
               faith — its defense was upheld, and the company remained independent.
             </p>
+            <div className="mt-4 max-w-xl mx-auto text-left border border-sprawl-yellow/30 rounded p-3 bg-sprawl-yellow/5">
+              <p className="font-ui text-xs text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation</p>
+              <textarea
+                value={counselRecommendation}
+                onChange={(e) => setCounselRecommendation(e.target.value)}
+                placeholder="Draft board recommendation: process, alternatives, and litigation posture."
+                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-xs text-gray-800 dark:text-gray-200"
+              />
+            </div>
+            <div className="mt-4 flex justify-center">
+              <button
+                onClick={() => {
+                  markCompleted();
+                  updateMatterFile(
+                    "ch13-m-and-a",
+                    summarizeModuleHeadline("ch13-m-and-a", {
+                      p1Score: `${p1Score}/${p1Total}`,
+                      revlonScore: `${revlonScore}/${REVLON_TRIGGERS.length}`,
+                      counselRecommendation,
+                    }),
+                    {
+                      transactionContext: "M&A process and control-transfer exposure documented",
+                      strategicPressure: "Strategic alternatives now constrained by downside financing risk",
+                    }
+                  );
+                  const report = `M&A BOARD RECOMMENDATION
+
+Unocal Prong 1: ${p1Score}/${p1Total}
+Unocal Prong 2: ${p2Answer === "c1" ? "Satisfied" : "Needs work"}
+Revlon scenarios: ${revlonScore}/${REVLON_TRIGGERS.length}
+Holding accuracy: ${holdingScore}/${holdingParts.length}
+
+Counsel recommendation:
+${counselRecommendation || "None"}
+
+Process checklist:
+- Document alternatives and valuation assumptions
+- Surface conflicts and committee role
+- Match defensive proportionality to identified threat
+`;
+                  downloadTextFile("constructedge-ma-board-recommendation.txt", report);
+                }}
+                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+              >
+                Complete Module + Export M&A Board Recommendation
+              </button>
+            </div>
             <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-xs text-gray-400 max-w-xl mx-auto">
               <p className="text-sprawl-teal font-bold mb-1">CASEBOOK REFERENCE</p>
               <p><em>Unocal Corp. v. Mesa Petroleum Co.</em>, 493 A.2d 946 (Del. 1985) — Enhanced scrutiny, two-prong test</p>
@@ -622,6 +731,7 @@ export default function Ch13MA() {
             </div>
             <button
               onClick={() => {
+                markCompleted();
                 setPhase(0);
                 setP1Answers({});
                 setP1Checked(false);
@@ -636,6 +746,9 @@ export default function Ch13MA() {
             >
               Restart Simulation
             </button>
+            <div className="mt-4 text-center">
+              <p className="font-ui text-xs text-gray-500 mb-2">{flow.bridge}</p>
+            </div>
           </div>
         </div>
       )}
@@ -657,6 +770,7 @@ export default function Ch13MA() {
           ))}
         </div>
       )}
+      {phase === 0 && <LifecycleHandoff moduleId="ch13-m-and-a" bridge={flow.bridge} />}
     </div>
   );
 }

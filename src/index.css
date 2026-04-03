@@ -9,21 +9,21 @@
 }
 
 @layer utilities {
-  .glitch-text {
+  .subtle-glitch {
     position: relative;
-    animation: glitch 3s infinite;
+    animation: glitch 10s infinite;
   }
 
   @keyframes glitch {
     0%, 90%, 100% { text-shadow: none; }
-    92% { text-shadow: -2px 0 #E82F35, 2px 0 #6DACDE; }
-    94% { text-shadow: 2px 0 #E82F35, -2px 0 #6DACDE; }
+    92% { text-shadow: -1px 0 #E82F35AA, 1px 0 #6DACDEAA; }
+    94% { text-shadow: 1px 0 #E82F35AA, -1px 0 #6DACDEAA; }
     96% { text-shadow: none; }
-    98% { text-shadow: -2px 0 #FFD65C; }
+    98% { text-shadow: -1px 0 #FFD65CAA; }
   }
 
   .neon-glow {
-    text-shadow: 0 0 10px #FFD65C, 0 0 20px #FFD65C, 0 0 40px #FFD65C88;
+    text-shadow: 0 0 6px #FFD65CAA, 0 0 14px #FFD65C88;
   }
 
   .scanlines {
