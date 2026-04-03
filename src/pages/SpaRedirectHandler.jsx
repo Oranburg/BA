@@ -5,6 +5,7 @@ export default function SpaRedirectHandler() {
     const query = window.location.search;
     if (!query.startsWith("?/") || query.length <= 2) return;
 
+    // 404 fallback encodes literal '&' as '~and~' so route/query separators remain parseable.
     const decoded = query.slice(2).replace(/~and~/g, "&");
     const [pathPart, ...searchParts] = decoded.split("&");
     const targetPath = pathPart ? `/${pathPart}` : "/";

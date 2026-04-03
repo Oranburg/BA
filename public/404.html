@@ -8,8 +8,6 @@
       const base = "/BA/";
       if (!l.pathname.startsWith(base)) {
         l.replace(base);
-      } else if (l.search.startsWith("?/")) {
-        l.replace(base);
       } else {
         const path = l.pathname.slice(base.length);
         if (path || l.search || l.hash) {

@@ -24,8 +24,8 @@ if (SOURCE_ENTRYPOINT_PATTERN.test(indexHtml) || SOURCE_ENTRYPOINT_PATTERN.test(
 }
 
 const escapedBase = DEPLOY_BASE_PATH.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const builtJsPattern = new RegExp(`src="${escapedBase}assets\\/[^"]+\\.js"`);
-const builtCssPattern = new RegExp(`href="${escapedBase}assets\\/[^"]+\\.css"`);
+const builtJsPattern = new RegExp(`src=['"]?${escapedBase}assets\\/[^"' >]+\\.js['"]?`);
+const builtCssPattern = new RegExp(`href=['"]?${escapedBase}assets\\/[^"' >]+\\.css['"]?`);
 
 if (!builtJsPattern.test(indexHtml)) {
   fail(`dist/index.html does not reference JS asset under ${DEPLOY_BASE_PATH}assets/.`);
