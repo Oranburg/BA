@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "corpus_name": "Business Associations: Law of the Firm — Source Corpus",
+  "description": "Retrieval-optimized legal corpus built from inbox/ files. See schema.md for retrieval instructions.",
+  "entrypoint": "processed/manifest.json",
+  "last_run": "2026-04-03T17:13:36.509241+00:00",
+  "run_end": "2026-04-03T17:14:05.797255+00:00",
+  "inbox_file_count": 28,
+  "total_segments": 1801,
+  "files": {
+    "dgcl": {
+      "name": "DGCL.pdf",
+      "family": "statute",
+      "status": "success",
+      "segment_count": 127,
+      "segments_file": "processed/segments/dgcl.jsonl"
+    },
+    "match-group": {
+      "name": "Match Group.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 1,
+      "segments_file": "processed/segments/match-group.jsonl"
+    },
+    "bacg-ch-01-introduction-to-the-firm": {
+      "name": "BACG - Ch 01 Introduction to the Firm.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 106,
+      "segments_file": "processed/segments/bacg-ch-01-introduction-to-the-firm.jsonl"
+    },
+    "bacg-ch-14-corporate-numeracy": {
+      "name": "BACG - Ch 14 Corporate Numeracy.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 11,
+      "segments_file": "processed/segments/bacg-ch-14-corporate-numeracy.jsonl"
+    },
+    "lotf-law-of-the-firm": {
+      "name": "LotF - Law of the Firm.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 611,
+      "segments_file": "processed/segments/lotf-law-of-the-firm.jsonl"
+    },
+    "bacg-ch-03-partnerships": {
+      "name": "BACG - Ch 03 Partnerships.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 21,
+      "segments_file": "processed/segments/bacg-ch-03-partnerships.jsonl"
+    },
+    "plaw-119publ27-uslm": {
+      "name": "PLAW-119publ27_uslm.xml",
+      "family": "statute",
+      "status": "success",
+      "segment_count": 20,
+      "segments_file": "processed/segments/plaw-119publ27-uslm.jsonl"
+    },
+    "bacg-ch-06-decentralized-autonomous-organizations": {
+      "name": "BACG - Ch 06 Decentralized Autonomous Organizations.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 64,
+      "segments_file": "processed/segments/bacg-ch-06-decentralized-autonomous-organizations.jsonl"
+    },
+    "m-a-cases-reference-list": {
+      "name": "M&A - Cases Reference List.md",
+      "family": "unknown",
+      "status": "success",
+      "segment_count": 1,
+      "segments_file": "processed/segments/m-a-cases-reference-list.jsonl"
+    },
+    "exchangeact1934": {
+      "name": "ExchangeAct1934.pdf",
+      "family": "unknown",
+      "status": "success",
+      "segment_count": 368,
+      "segments_file": "processed/segments/exchangeact1934.jsonl"
+    },
+    "securitiesact1933": {
+      "name": "SecuritiesAct1933.pdf",
+      "family": "unknown",
+      "status": "success",
+      "segment_count": 73,
+      "segments_file": "processed/segments/securitiesact1933.jsonl"
+    },
+    "weinberger": {
+      "name": "Weinberger.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 4,
+      "segments_file": "processed/segments/weinberger.jsonl"
+    },
+    "mbca-202504-black-letter": {
+      "name": "mbca-202504-black-letter.docx",
+      "family": "statute",
+      "status": "success",
+      "segment_count": 1,
+      "segments_file": "processed/segments/mbca-202504-black-letter.jsonl"
+    },
+    "air-products": {
+      "name": "Air Products.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 20,
+      "segments_file": "processed/segments/air-products.jsonl"
+    },
+    "ullca-final-nc-2014-2015aug19": {
+      "name": "ULLCA_Final_NC_2014_2015aug19.docx",
+      "family": "statute",
+      "status": "success",
+      "segment_count": 107,
+      "segments_file": "processed/segments/ullca-final-nc-2014-2015aug19.jsonl"
+    },
+    "upa-final-nc-2014-2015aug19": {
+      "name": "UPA _Final_NC_2014_2015aug19.docx",
+      "family": "statute",
+      "status": "success",
+      "segment_count": 117,
+      "segments_file": "processed/segments/upa-final-nc-2014-2015aug19.jsonl"
+    },
+    "restat-3d-of-agency": {
+      "name": "Restat 3d of Agency.md",
+      "family": "statute",
+      "status": "success",
+      "segment_count": 1,
+      "segments_file": "processed/segments/restat-3d-of-agency.jsonl"
+    },
+    "magnetar": {
+      "name": "Magnetar.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 1,
+      "segments_file": "processed/segments/magnetar.jsonl"
+    },
+    "bacg-ch-11-mergers-and-acquisitions": {
+      "name": "BACG - Ch 11 Mergers and Acquisitions.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 10,
+      "segments_file": "processed/segments/bacg-ch-11-mergers-and-acquisitions.jsonl"
+    },
+    "bacg-ch-04-corporations": {
+      "name": "BACG - Ch 04 Corporations.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 15,
+      "segments_file": "processed/segments/bacg-ch-04-corporations.jsonl"
+    },
+    "lyondell": {
+      "name": "Lyondell.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 4,
+      "segments_file": "processed/segments/lyondell.jsonl"
+    },
+    "revlon": {
+      "name": "Revlon.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 6,
+      "segments_file": "processed/segments/revlon.jsonl"
+    },
+    "lotf-2026-02-01": {
+      "name": "LotF_2026-02-01.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 1,
+      "segments_file": "processed/segments/lotf-2026-02-01.jsonl"
+    },
+    "corwin": {
+      "name": "Corwin.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 3,
+      "segments_file": "processed/segments/corwin.jsonl"
+    },
+    "unocal": {
+      "name": "Unocal.md",
+      "family": "case",
+      "status": "success",
+      "segment_count": 7,
+      "segments_file": "processed/segments/unocal.jsonl"
+    },
+    "oranburg2020-securities-regulation-social-media": {
+      "name": "Oranburg2020_Securities-Regulation-Social-Media.pdf",
+      "family": "unknown",
+      "status": "success",
+      "segment_count": 53,
+      "segments_file": "processed/segments/oranburg2020-securities-regulation-social-media.jsonl"
+    },
+    "bacg-ch-02-agency-law-revised": {
+      "name": "BACG - Ch 02 Agency Law (Revised).md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 19,
+      "segments_file": "processed/segments/bacg-ch-02-agency-law-revised.jsonl"
+    },
+    "bacg-ch-05-limited-liability-companies": {
+      "name": "BACG - Ch 05 Limited Liability Companies.md",
+      "family": "casebook",
+      "status": "success",
+      "segment_count": 29,
+      "segments_file": "processed/segments/bacg-ch-05-limited-liability-companies.jsonl"
+    }
+  },
+  "retrieval_guide": {
+    "find_segment": "Read processed/segments/{file_id}.jsonl — each line is a JSON segment",
+    "find_record": "Read processed/records/{file_id}.json for file metadata",
+    "list_all_files": "Read processed/manifest.json — 'files' key maps file_id to summary",
+    "schema": "Read processed/schema.md for field definitions",
+    "learning": "Read processed/learning/ for heuristics, patterns, and run history"
+  },
+  "source_families": {
+    "case": "Delaware court opinions (segmented by case part)",
+    "casebook": "Business Associations textbook chapters",
+    "statute": "Statutory texts (DGCL, MBCA, UPA, ULLCA, Restatement)",
+    "unknown": "Unclassified; review manually"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "file_id": "mbca-202504-black-letter",
+  "original_path": "inbox/mbca-202504-black-letter.docx",
+  "original_name": "mbca-202504-black-letter.docx",
+  "extension": ".docx",
+  "size_bytes": 235091,
+  "content_hash": "fb48d3010526f7cd5e74e9bf487da25f9561ce4ecb74f26292d3a165b442c0cb",
+  "source_family": "statute",
+  "last_processed": "2026-04-03T17:14:05.178756+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_docx",
+  "segmentation_strategy": "style-based",
+  "segment_count": 1,
+  "segment_ids": [
+    "mbca-202504-black-letter:0000"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

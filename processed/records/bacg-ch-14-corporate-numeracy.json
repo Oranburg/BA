@@ -1,0 +1,31 @@
+{
+  "file_id": "bacg-ch-14-corporate-numeracy",
+  "original_path": "inbox/BACG - Ch 14 Corporate Numeracy.md",
+  "original_name": "BACG - Ch 14 Corporate Numeracy.md",
+  "extension": ".md",
+  "size_bytes": 54431,
+  "content_hash": "30cd1f560b04eb9b5e35140774250fe130f56e25ffdda4899a919f48b8fec9eb",
+  "source_family": "casebook",
+  "last_processed": "2026-04-03T17:13:36.528945+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 11,
+  "segment_ids": [
+    "bacg-ch-14-corporate-numeracy:0000:corporate-numeracy",
+    "bacg-ch-14-corporate-numeracy:0001:introduction-the-shadow-of-bankruptcy",
+    "bacg-ch-14-corporate-numeracy:0002:the-balance-sheet-and-the-three-tests-of",
+    "bacg-ch-14-corporate-numeracy:0003:the-accounting-equation",
+    "bacg-ch-14-corporate-numeracy:0004:the-zone-of-insolvency-duties-in-transit",
+    "bacg-ch-14-corporate-numeracy:0005:fraudulent-transfers-and-reasonably-equi",
+    "bacg-ch-14-corporate-numeracy:0006:the-law-of-bad-deals",
+    "bacg-ch-14-corporate-numeracy:0007:leveraged-buyouts-and-the-weight-of-debt",
+    "bacg-ch-14-corporate-numeracy:0008:priority-equitable-subordination-and-the",
+    "bacg-ch-14-corporate-numeracy:0009:the-absolute-priority-rule-and-the-credi",
+    "bacg-ch-14-corporate-numeracy:0010:conclusion-the-market-for-legal-numeracy"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

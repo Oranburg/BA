@@ -1,0 +1,30 @@
+{
+  "file_id": "bacg-ch-11-mergers-and-acquisitions",
+  "original_path": "inbox/BACG - Ch 11 Mergers and Acquisitions.md",
+  "original_name": "BACG - Ch 11 Mergers and Acquisitions.md",
+  "extension": ".md",
+  "size_bytes": 101703,
+  "content_hash": "482b4d5e27d0b71469274c4a04c4c6160e2d1b190b19ffba532abae704cfee6c",
+  "source_family": "casebook",
+  "last_processed": "2026-04-03T17:13:36.527265+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 10,
+  "segment_ids": [
+    "bacg-ch-11-mergers-and-acquisitions:0000:mergers-and-acquisitions-m-a",
+    "bacg-ch-11-mergers-and-acquisitions:0001:introduction-end-game-problems",
+    "bacg-ch-11-mergers-and-acquisitions:0002:the-valuation-baseline",
+    "bacg-ch-11-mergers-and-acquisitions:0003:defending-the-corporate-bastion",
+    "bacg-ch-11-mergers-and-acquisitions:0004:the-duty-to-sell",
+    "bacg-ch-11-mergers-and-acquisitions:0005:the-limits-of-revlon",
+    "bacg-ch-11-mergers-and-acquisitions:0006:judicial-solutions-to-excessive-litigati",
+    "bacg-ch-11-mergers-and-acquisitions:0007:cleansing-by-vote",
+    "bacg-ch-11-mergers-and-acquisitions:0008:cleansing-by-market-price",
+    "bacg-ch-11-mergers-and-acquisitions:0009:conclusion-the-market-for-corporate-law"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

@@ -1,0 +1,21 @@
+{
+  "file_id": "m-a-cases-reference-list",
+  "original_path": "inbox/M&A - Cases Reference List.md",
+  "original_name": "M&A - Cases Reference List.md",
+  "extension": ".md",
+  "size_bytes": 4974,
+  "content_hash": "2b73955792ea05e56dbb8fdb7c5b5a87ed5bb6f8d7f39e5888272bff37e7600a",
+  "source_family": "unknown",
+  "last_processed": "2026-04-03T17:13:57.534856+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 1,
+  "segment_ids": [
+    "m-a-cases-reference-list:0000"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}
