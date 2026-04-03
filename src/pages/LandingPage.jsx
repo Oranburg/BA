@@ -4,6 +4,7 @@ import FiduciarySlider from "../components/toolkit/FiduciarySlider";
 import CitationChip from "../tome/CitationChip";
 import { useTome } from "../tome/useTome";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
+import newBoston2077 from "../assets/images/new-boston-2077.png";
 
 const CHAPTERS = [
   { id: "ch01", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: null },
@@ -75,6 +76,19 @@ const PROBLEM_COLORS = {
   Synthesis: "text-purple-400",
 };
 
+const VISUAL_SLOTS = {
+  hero: {
+    src: newBoston2077,
+    alt: "New Boston skyline in a near-future commercial district",
+    label: "Chapter Atmosphere Asset",
+  },
+  scenarioIntro: {
+    src: newBoston2077,
+    alt: "Corporate transit corridor and high-density urban business towers",
+    label: "Scenario Intro Asset",
+  },
+};
+
 export default function LandingPage() {
   const [activeChapter, setActiveChapter] = useState(null);
   const { openTome } = useTome();
@@ -83,32 +97,38 @@ export default function LandingPage() {
     <div>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sprawl-deep-blue">
-        <div className="absolute inset-0 scanlines opacity-30 pointer-events-none" />
+        <img
+          src={VISUAL_SLOTS.hero.src}
+          alt={VISUAL_SLOTS.hero.alt}
+          className="absolute inset-0 w-full h-full object-cover opacity-35 pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-sprawl-deep-blue/70 via-sprawl-deep-blue/85 to-sprawl-deep-blue pointer-events-none" />
+        <div className="absolute inset-0 scanlines opacity-20 pointer-events-none" />
         <div
-          className="absolute inset-0 opacity-10 pointer-events-none"
+          className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,214,92,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,214,92,0.3) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
+              backgroundSize: "60px 60px",
           }}
         />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sprawl-bright-blue/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sprawl-deep-red/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sprawl-bright-blue/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sprawl-deep-red/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-6">
-            The Neon Edge · Law of the Firm · Oranburg Universe
+            BA · Law of the Firm · New Boston 2077
           </p>
-          <h1 className="font-headline font-bold text-6xl sm:text-8xl uppercase tracking-tight text-white mb-4 glitch-text">
+          <h1 className="font-headline font-bold text-6xl sm:text-8xl uppercase tracking-tight text-white mb-4 subtle-glitch">
             <span className="neon-glow text-sprawl-yellow">BA</span>
             <br />
             <span className="text-white/90 text-4xl sm:text-5xl">Law of the Firm</span>
           </h1>
           <p className="font-body text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            A high-fidelity simulation of corporate law — where{" "}
-            <span className="text-sprawl-yellow font-semibold">Zeeva</span> architects the entity
-            structure and <span className="text-sprawl-teal font-semibold">Sammy</span> executes
-            the street-level strategy. The law is the technology.
+            A near-future business-law course tracking{" "}
+            <span className="text-sprawl-yellow font-semibold">Zeeva</span>,{" "}
+            <span className="text-sprawl-teal font-semibold">Sammy</span>, and ConstructEdge
+            through formation, financing, governance conflict, and crisis.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-10">
@@ -133,7 +153,7 @@ export default function LandingPage() {
               href="#problems"
               className="px-8 py-3 bg-sprawl-yellow text-sprawl-deep-blue font-headline font-bold uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
             >
-              Enter the Neon Edge
+              Enter Course Map
             </a>
             <button
               onClick={() => openTome()}
@@ -156,7 +176,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">
-              Core Architecture
+              Core Doctrine Architecture
             </p>
             <h2 className="font-headline font-bold text-4xl sm:text-5xl uppercase tracking-tight text-gray-900 dark:text-white">
               The Four Problems
@@ -164,8 +184,8 @@ export default function LandingPage() {
               <span className="text-sprawl-yellow">of the Firm</span>
             </h2>
             <p className="font-body text-gray-500 dark:text-gray-400 max-w-xl mx-auto mt-4">
-              Every business entity is a technological solution to these four coordination problems.
-              Master the framework; master the law.
+              Every entity is a legal technology for attribution, governance, risk allocation, and
+              asset partitioning. The setting sharpens the doctrine; it does not replace it.
             </p>
           </div>
 
@@ -187,6 +207,35 @@ export default function LandingPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SCENARIO ATMOSPHERE */}
+      <section className="py-20 px-6 bg-white dark:bg-sprawl-deep-blue">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl overflow-hidden border border-sprawl-yellow/30 bg-sprawl-deep-blue relative">
+            <img
+              src={VISUAL_SLOTS.scenarioIntro.src}
+              alt={VISUAL_SLOTS.scenarioIntro.alt}
+              className="w-full h-72 md:h-80 object-cover opacity-55"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-sprawl-deep-blue/90 via-sprawl-deep-blue/60 to-transparent" />
+            <div className="absolute inset-0 p-6 md:p-10 flex items-end md:items-center">
+              <div className="max-w-2xl">
+                <p className="font-ui text-sprawl-yellow/70 uppercase tracking-[0.2em] text-xs mb-3">
+                  {VISUAL_SLOTS.scenarioIntro.label}
+                </p>
+                <h3 className="font-headline text-3xl md:text-4xl text-white uppercase tracking-wider mb-3">
+                  One Commercial World, Full Firm Lifecycle
+                </h3>
+                <p className="font-body text-gray-200 text-base leading-relaxed">
+                  Chapter scenarios move from startup formation to IPO pressure, shareholder
+                  conflict, M&A strategy, veil-piercing exposure, and creditor distress in a
+                  coherent 2077 business environment.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
