@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:verify": "npm run build && npm run validate:dist",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:dist": "node scripts/validate-dist.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

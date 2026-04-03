@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BA redirect</title>
+    <script>
+      const l = window.location;
+      const base = "/BA/";
+      if (!l.pathname.startsWith(base)) {
+        l.replace(base);
+      } else {
+        const path = l.pathname.slice(base.length);
+        if (path || l.search || l.hash) {
+          // Browsers percent-encode reserved path characters like '&' before this point.
+          const redirect =
+            l.protocol +
+            "//" +
+            l.hostname +
+            (l.port ? ":" + l.port : "") +
+            base +
+            "?/" +
+            path.replace(/&/g, "~and~") +
+            (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+            l.hash;
+          l.replace(redirect);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
