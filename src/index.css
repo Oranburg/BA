@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-white dark:bg-sprawl-deep-blue text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glitch-text {
+    position: relative;
+    animation: glitch 3s infinite;
+  }
+
+  @keyframes glitch {
+    0%, 90%, 100% { text-shadow: none; }
+    92% { text-shadow: -2px 0 #E82F35, 2px 0 #6DACDE; }
+    94% { text-shadow: 2px 0 #E82F35, -2px 0 #6DACDE; }
+    96% { text-shadow: none; }
+    98% { text-shadow: -2px 0 #FFD65C; }
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 10px #FFD65C, 0 0 20px #FFD65C, 0 0 40px #FFD65C88;
+  }
+
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.08) 2px,
+      rgba(0,0,0,0.08) 4px
+    );
+  }
+
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(255, 214, 92, 0.3);
+  }
+}
