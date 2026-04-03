@@ -1,0 +1,665 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-04-03T21:33:00Z",
+  "description": "Chapter manifest for BA: Law of the Firm / The Neon Edge",
+  "total_chapters": 16,
+  "built_chapters": 6,
+  "stub_chapters": 10,
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_slug": "ch01-why-law",
+      "chapter_title": "Why Law",
+      "short_summary": "Introduces the Four Problems — Attribution, Governance, Risk, and Partitioning — that shape every business entity. Zeeva arrives in New Boston 2077 and encounters the foundational questions that recur across the lifecycle of the firm.",
+      "learning_objectives": [
+        "Identify the Four Problems that every business entity must resolve",
+        "Explain why law structures firms and allocates economic risk",
+        "Distinguish between principal, agent, and entity as legal concepts",
+        "Map the lifecycle stages of a business entity from formation to dissolution"
+      ],
+      "doctrinal_themes": [
+        "four-problems-framework",
+        "firm-lifecycle",
+        "principal-agent-theory",
+        "entity-theory"
+      ],
+      "four_problems_tags": ["attribution", "governance", "risk", "partitioning", "synthesis"],
+      "lifecycle_stage": "formation",
+      "hero_image_id": "img-ch01-hero",
+      "primary_authority_ids": ["rupa", "rsa", "ullca", "mbca", "dgcl"],
+      "secondary_authority_ids": ["uvta", "securities-act-1933", "exchange-act-1934"],
+      "key_section_links": [],
+      "related_concept_ids": [
+        "firm",
+        "principal",
+        "agent",
+        "liability",
+        "governance",
+        "entity"
+      ],
+      "related_chapter_ids": ["ch02-agency", "ch08-entity-selection", "ch16-conclusion"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva arrives in New Boston and discovers the Four Problems that shape every business entity.",
+      "sort_order": 1,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 2,
+      "chapter_slug": "ch02-agency",
+      "chapter_title": "Agency Law",
+      "short_summary": "Explores the law of agency — who acts on behalf of whom and who bears responsibility. Covers the control test, authority types, and respondeat superior through an interactive scenario involving Zeeva's first hire.",
+      "learning_objectives": [
+        "Apply the control test to distinguish employees from independent contractors",
+        "Differentiate actual authority from apparent authority under RSA §2.01 and §2.03",
+        "Explain respondeat superior liability under RSA §7.07",
+        "Identify when a principal is bound by an agent's actions under RUPA §301"
+      ],
+      "doctrinal_themes": [
+        "control-test",
+        "authority-types",
+        "vicarious-liability",
+        "agent-principal-relationship"
+      ],
+      "four_problems_tags": ["attribution"],
+      "lifecycle_stage": "agency",
+      "hero_image_id": "img-ch02-hero",
+      "primary_authority_ids": ["rsa"],
+      "secondary_authority_ids": ["rupa"],
+      "key_section_links": [
+        { "authority": "RSA", "section": "1.01", "relevance": "Agency relationship defined" },
+        { "authority": "RSA", "section": "2.01", "relevance": "Actual authority" },
+        { "authority": "RSA", "section": "2.03", "relevance": "Apparent authority" },
+        { "authority": "RSA", "section": "7.07", "relevance": "Respondeat superior" },
+        { "authority": "RUPA", "section": "301", "relevance": "Partner as agent" }
+      ],
+      "related_concept_ids": [
+        "control-test",
+        "respondeat-superior",
+        "actual-authority",
+        "apparent-authority",
+        "independent-contractor",
+        "employee"
+      ],
+      "related_chapter_ids": ["ch01-why-law", "ch03-partnership", "ch07-daos"],
+      "route": "/ch02-agency",
+      "module_status": "built",
+      "narrative_hook": "Zeeva hires Sammy as a street fixer and learns who controls the bot — and who pays when it goes wrong.",
+      "sort_order": 2,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 3,
+      "chapter_slug": "ch03-partnership",
+      "chapter_title": "Partnership",
+      "short_summary": "Examines how partnerships form by operation of law and the default rules governing partner relationships. Covers joint liability, fiduciary duties among partners, and the mechanics of dissolution under RUPA.",
+      "learning_objectives": [
+        "Identify when a partnership forms by operation of law under RUPA §202",
+        "Explain joint and several liability of partners under RUPA §306",
+        "Describe fiduciary duties partners owe each other under RUPA §404",
+        "Analyze the causes and consequences of partnership dissolution under RUPA §801"
+      ],
+      "doctrinal_themes": [
+        "formation-by-operation-of-law",
+        "unlimited-liability",
+        "partner-fiduciary-duties",
+        "dissolution-mechanics"
+      ],
+      "four_problems_tags": ["risk"],
+      "lifecycle_stage": "partnership",
+      "hero_image_id": "img-ch03-hero",
+      "primary_authority_ids": ["rupa"],
+      "secondary_authority_ids": [],
+      "key_section_links": [
+        { "authority": "RUPA", "section": "202", "relevance": "Formation of partnership" },
+        { "authority": "RUPA", "section": "301", "relevance": "Partner as agent of partnership" },
+        { "authority": "RUPA", "section": "306", "relevance": "Joint and several liability" },
+        { "authority": "RUPA", "section": "401", "relevance": "Partner rights and duties" },
+        { "authority": "RUPA", "section": "404", "relevance": "Fiduciary duties of partners" },
+        { "authority": "RUPA", "section": "801", "relevance": "Events causing dissolution" }
+      ],
+      "related_concept_ids": [
+        "partnership-formation",
+        "joint-liability",
+        "fiduciary-duty",
+        "dissolution",
+        "partner-as-agent"
+      ],
+      "related_chapter_ids": ["ch02-agency", "ch05-llcs", "ch08-entity-selection"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva's first handshake deal becomes a partnership by operation of law, bringing unlimited liability.",
+      "sort_order": 3,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 4,
+      "chapter_slug": "ch04-corporations-tech",
+      "chapter_title": "Corporations & Technology",
+      "short_summary": "Introduces the corporate form and its core innovation: entity shielding that partitions firm assets from personal creditors. Covers formation, board authority, and the foundational role of limited liability in enabling capital aggregation.",
+      "learning_objectives": [
+        "Explain how incorporation creates an entity shield under DGCL §102",
+        "Describe the role of the board of directors under DGCL §141",
+        "Distinguish between authorized, issued, and outstanding shares under DGCL §151",
+        "Analyze how limited liability enables capital aggregation and risk allocation"
+      ],
+      "doctrinal_themes": [
+        "entity-shielding",
+        "limited-liability",
+        "board-centrism",
+        "capital-aggregation"
+      ],
+      "four_problems_tags": ["partitioning"],
+      "lifecycle_stage": "incorporation",
+      "hero_image_id": "img-ch04-hero",
+      "primary_authority_ids": ["dgcl"],
+      "secondary_authority_ids": ["mbca"],
+      "key_section_links": [
+        { "authority": "DGCL", "section": "102", "relevance": "Contents of certificate of incorporation" },
+        { "authority": "DGCL", "section": "141", "relevance": "Board of directors; powers" },
+        { "authority": "DGCL", "section": "151", "relevance": "Classes and series of stock" }
+      ],
+      "related_concept_ids": [
+        "entity-shielding",
+        "limited-liability",
+        "corporate-personhood",
+        "articles-of-incorporation",
+        "board-authority"
+      ],
+      "related_chapter_ids": ["ch03-partnership", "ch05-llcs", "ch09-fiduciary-duties", "ch14-piercing-the-veil"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva incorporates to create an entity shield separating firm assets from personal creditors.",
+      "sort_order": 4,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 5,
+      "chapter_slug": "ch05-llcs",
+      "chapter_title": "LLCs",
+      "short_summary": "Explores the LLC as a flexible hybrid entity that combines limited liability with contractual freedom. Examines how operating agreements shape governance and the tension between member-managed and manager-managed structures.",
+      "learning_objectives": [
+        "Define the LLC and its core characteristics under ULLCA §102",
+        "Explain the scope of the operating agreement's contractual freedom under ULLCA §110",
+        "Compare member-managed and manager-managed governance under ULLCA §301",
+        "Analyze fiduciary duties in the LLC context under ULLCA §409"
+      ],
+      "doctrinal_themes": [
+        "contractual-freedom",
+        "hybrid-entity",
+        "operating-agreement-primacy",
+        "governance-flexibility"
+      ],
+      "four_problems_tags": ["governance"],
+      "lifecycle_stage": "llc-flexibility",
+      "hero_image_id": "img-ch05-hero",
+      "primary_authority_ids": ["ullca"],
+      "secondary_authority_ids": [],
+      "key_section_links": [
+        { "authority": "ULLCA", "section": "102", "relevance": "Definitions" },
+        { "authority": "ULLCA", "section": "110", "relevance": "Operating agreement scope and limits" },
+        { "authority": "ULLCA", "section": "301", "relevance": "Agency authority of members/managers" },
+        { "authority": "ULLCA", "section": "409", "relevance": "Fiduciary duties" }
+      ],
+      "related_concept_ids": [
+        "operating-agreement",
+        "member-managed",
+        "manager-managed",
+        "contractual-freedom",
+        "charging-order"
+      ],
+      "related_chapter_ids": ["ch03-partnership", "ch04-corporations-tech", "ch08-entity-selection"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva discovers the LLC's radical contractual freedom — and its governance trade-offs.",
+      "sort_order": 5,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 6,
+      "chapter_slug": "ch06-nonprofits",
+      "chapter_title": "Nonprofits",
+      "short_summary": "Examines the nonprofit form and the nondistribution constraint that distinguishes it from for-profit entities. Explores how governance must serve mission when profit distribution is prohibited.",
+      "learning_objectives": [
+        "Explain the nondistribution constraint and its effect on organizational governance",
+        "Describe the role of the board in nonprofit governance and mission enforcement",
+        "Identify the requirements for tax-exempt status under federal and state law",
+        "Compare nonprofit governance challenges to for-profit corporate governance"
+      ],
+      "doctrinal_themes": [
+        "nondistribution-constraint",
+        "mission-driven-governance",
+        "charitable-purpose",
+        "board-accountability"
+      ],
+      "four_problems_tags": ["governance"],
+      "lifecycle_stage": "nonprofit-alternative",
+      "hero_image_id": "img-ch06-hero",
+      "primary_authority_ids": ["mbca"],
+      "secondary_authority_ids": [],
+      "key_section_links": [],
+      "related_concept_ids": [
+        "nondistribution-constraint",
+        "charitable-purpose",
+        "board-governance",
+        "tax-exemption"
+      ],
+      "related_chapter_ids": ["ch04-corporations-tech", "ch07-daos", "ch08-entity-selection"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva encounters organizations that cannot distribute profits, forcing governance to serve mission.",
+      "sort_order": 6,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 7,
+      "chapter_slug": "ch07-daos",
+      "chapter_title": "DAOs",
+      "short_summary": "Investigates Decentralized Autonomous Organizations and the legal challenges of code-as-law. Addresses attribution problems when governance is distributed through smart contracts and token voting.",
+      "learning_objectives": [
+        "Define a DAO and explain how smart contracts automate governance",
+        "Analyze the attribution problem when no single agent controls the entity",
+        "Evaluate emerging DAO legislation including the Wyoming DAO Act",
+        "Assess the role of wrapper entities in providing legal certainty for DAOs"
+      ],
+      "doctrinal_themes": [
+        "code-as-law",
+        "decentralized-governance",
+        "token-voting",
+        "legal-wrapper-problem"
+      ],
+      "four_problems_tags": ["attribution"],
+      "lifecycle_stage": "dao-decentralized",
+      "hero_image_id": "img-ch07-hero",
+      "primary_authority_ids": [],
+      "secondary_authority_ids": [],
+      "key_section_links": [],
+      "related_concept_ids": [
+        "smart-contract",
+        "code-as-law",
+        "token-governance",
+        "decentralized-governance",
+        "wrapper-entity"
+      ],
+      "related_chapter_ids": ["ch02-agency", "ch05-llcs", "ch06-nonprofits"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva confronts code-as-law: when a DAO acts, who is the principal and who is the agent?",
+      "sort_order": 7,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 8,
+      "chapter_slug": "ch08-entity-selection",
+      "chapter_title": "Entity Selection",
+      "short_summary": "Synthesizes prior chapters into a comparative entity-selection framework. Zeeva must weigh attribution, governance, risk, and partitioning trade-offs to choose the optimal form for her venture.",
+      "learning_objectives": [
+        "Compare entity forms across all Four Problems dimensions",
+        "Evaluate the trade-offs between liability shielding, tax treatment, and governance flexibility",
+        "Apply a structured entity-selection framework to a realistic business scenario",
+        "Justify an entity choice by reference to specific statutory provisions"
+      ],
+      "doctrinal_themes": [
+        "comparative-entity-analysis",
+        "formation-trade-offs",
+        "tax-entity-classification",
+        "governance-spectrum"
+      ],
+      "four_problems_tags": ["attribution", "governance", "risk", "partitioning", "synthesis"],
+      "lifecycle_stage": "entity-selection",
+      "hero_image_id": "img-ch08-hero",
+      "primary_authority_ids": ["rupa", "ullca", "dgcl", "mbca"],
+      "secondary_authority_ids": [],
+      "key_section_links": [
+        { "authority": "RUPA", "section": "202", "relevance": "Partnership formation baseline" },
+        { "authority": "ULLCA", "section": "110", "relevance": "LLC operating agreement flexibility" },
+        { "authority": "DGCL", "section": "102", "relevance": "Corporate formation requirements" },
+        { "authority": "MBCA", "section": "2.01", "relevance": "Incorporation under MBCA" }
+      ],
+      "related_concept_ids": [
+        "entity-comparison",
+        "liability-shield",
+        "tax-treatment",
+        "governance-structure",
+        "formation-costs"
+      ],
+      "related_chapter_ids": ["ch01-why-law", "ch03-partnership", "ch04-corporations-tech", "ch05-llcs", "ch06-nonprofits", "ch07-daos"],
+      "route": "/ch08-entity-selection",
+      "module_status": "built",
+      "narrative_hook": "Zeeva must choose the right entity form, balancing all Four Problems at once.",
+      "sort_order": 8,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 9,
+      "chapter_slug": "ch09-fiduciary-duties",
+      "chapter_title": "Fiduciary Duties",
+      "short_summary": "Examines the loyalty and care duties owed by corporate directors and officers. Covers the business judgment rule, entire fairness review, and the role of good faith in mediating fiduciary obligations.",
+      "learning_objectives": [
+        "Articulate the duties of loyalty and care under DGCL §141 and §144",
+        "Apply the business judgment rule and identify when it is rebutted",
+        "Explain entire fairness review and its burden-shifting mechanics",
+        "Analyze how the duty of good faith operates as a fiduciary constraint"
+      ],
+      "doctrinal_themes": [
+        "loyalty-care-matrix",
+        "business-judgment-rule",
+        "entire-fairness",
+        "good-faith-doctrine"
+      ],
+      "four_problems_tags": ["governance"],
+      "lifecycle_stage": "fiduciary-conflict",
+      "hero_image_id": "img-ch09-hero",
+      "primary_authority_ids": ["dgcl", "mbca"],
+      "secondary_authority_ids": ["rupa", "ullca"],
+      "key_section_links": [
+        { "authority": "DGCL", "section": "141", "relevance": "Board powers and duties" },
+        { "authority": "DGCL", "section": "144", "relevance": "Interested director transactions" },
+        { "authority": "RUPA", "section": "404", "relevance": "Partner fiduciary duties" },
+        { "authority": "ULLCA", "section": "409", "relevance": "LLC member/manager fiduciary duties" }
+      ],
+      "related_concept_ids": [
+        "fiduciary-duty",
+        "duty-of-loyalty",
+        "duty-of-care",
+        "business-judgment-rule",
+        "entire-fairness",
+        "good-faith"
+      ],
+      "related_chapter_ids": ["ch04-corporations-tech", "ch12-shareholder-franchise", "ch13-m-and-a"],
+      "route": "/ch09-fiduciary-duties",
+      "module_status": "built",
+      "narrative_hook": "Zeeva faces the loyalty/care matrix when board decisions create conflicts of interest.",
+      "sort_order": 9,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 10,
+      "chapter_slug": "ch10-staying-private",
+      "chapter_title": "Staying Private",
+      "short_summary": "Covers the regulatory framework for private capital raising, including Regulation D and Regulation A exemptions. Explores venture capital term sheets, preferred stock mechanics, and investor protections.",
+      "learning_objectives": [
+        "Identify the key exemptions from securities registration under Regulation D and Regulation A",
+        "Define accredited investor status and its role in private placements",
+        "Analyze standard venture capital terms including anti-dilution and liquidation preferences",
+        "Evaluate the trade-offs of staying private versus going public"
+      ],
+      "doctrinal_themes": [
+        "registration-exemptions",
+        "accredited-investor-framework",
+        "venture-capital-terms",
+        "private-market-structure"
+      ],
+      "four_problems_tags": ["risk"],
+      "lifecycle_stage": "staying-private",
+      "hero_image_id": "img-ch10-hero",
+      "primary_authority_ids": ["securities-act-1933", "exchange-act-1934"],
+      "secondary_authority_ids": ["dgcl"],
+      "key_section_links": [
+        { "authority": "Securities Act 1933", "section": "Reg D", "relevance": "Private placement exemptions" },
+        { "authority": "Securities Act 1933", "section": "Reg A", "relevance": "Mini-registration exemption" }
+      ],
+      "related_concept_ids": [
+        "private-placement",
+        "accredited-investor",
+        "venture-capital",
+        "preferred-stock",
+        "anti-dilution",
+        "liquidation-preference"
+      ],
+      "related_chapter_ids": ["ch04-corporations-tech", "ch11-going-public", "ch15-capital-structure"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva raises capital while staying private, navigating venture terms and investor protections.",
+      "sort_order": 10,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 11,
+      "chapter_slug": "ch11-going-public",
+      "chapter_title": "Going Public",
+      "short_summary": "Traces the IPO process from registration statement to public trading. Examines how the transition to public company status transforms disclosure obligations, governance requirements, and the partitioning of ownership and control.",
+      "learning_objectives": [
+        "Describe the registration and disclosure requirements for an IPO under the Securities Act of 1933",
+        "Explain the role of underwriters and market makers in the public offering process",
+        "Analyze how going public changes governance obligations under the Exchange Act of 1934",
+        "Evaluate the partitioning effects of dispersed public ownership"
+      ],
+      "doctrinal_themes": [
+        "ipo-process",
+        "mandatory-disclosure",
+        "public-company-governance",
+        "ownership-control-separation"
+      ],
+      "four_problems_tags": ["partitioning"],
+      "lifecycle_stage": "going-public",
+      "hero_image_id": "img-ch11-hero",
+      "primary_authority_ids": ["securities-act-1933", "exchange-act-1934"],
+      "secondary_authority_ids": ["dgcl"],
+      "key_section_links": [
+        { "authority": "Securities Act 1933", "section": "5", "relevance": "Registration requirement" },
+        { "authority": "Exchange Act 1934", "section": "12", "relevance": "Registration of securities" },
+        { "authority": "Exchange Act 1934", "section": "13", "relevance": "Periodic reporting requirements" }
+      ],
+      "related_concept_ids": [
+        "ipo",
+        "registration-statement",
+        "prospectus",
+        "disclosure",
+        "underwriter",
+        "market-maker",
+        "public-company"
+      ],
+      "related_chapter_ids": ["ch10-staying-private", "ch12-shareholder-franchise", "ch15-capital-structure"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva takes the firm public, crossing the threshold from private flexibility to public accountability.",
+      "sort_order": 11,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 12,
+      "chapter_slug": "ch12-shareholder-franchise",
+      "chapter_title": "Shareholder Franchise",
+      "short_summary": "Examines the shareholder vote as the fundamental governance mechanism of the public corporation. Covers voting mechanics, proxy rules, cumulative voting, and the contested terrain of shareholder proposals.",
+      "learning_objectives": [
+        "Explain voting rights and procedures under DGCL §211, §212, and §216",
+        "Describe the proxy system and its role in dispersed-ownership governance",
+        "Analyze cumulative voting and its impact on minority shareholder representation",
+        "Evaluate the legal framework for shareholder proposals and board elections"
+      ],
+      "doctrinal_themes": [
+        "shareholder-democracy",
+        "proxy-mechanics",
+        "voting-power-allocation",
+        "minority-shareholder-protection"
+      ],
+      "four_problems_tags": ["governance"],
+      "lifecycle_stage": "shareholder-conflict",
+      "hero_image_id": "img-ch12-hero",
+      "primary_authority_ids": ["dgcl"],
+      "secondary_authority_ids": ["mbca"],
+      "key_section_links": [
+        { "authority": "DGCL", "section": "211", "relevance": "Meetings of stockholders" },
+        { "authority": "DGCL", "section": "212", "relevance": "Voting rights of stockholders" },
+        { "authority": "DGCL", "section": "216", "relevance": "Quorum and required vote" },
+        { "authority": "DGCL", "section": "228", "relevance": "Consent of stockholders in lieu of meeting" }
+      ],
+      "related_concept_ids": [
+        "voting-rights",
+        "proxy",
+        "cumulative-voting",
+        "shareholder-proposal",
+        "board-election",
+        "say-on-pay"
+      ],
+      "related_chapter_ids": ["ch09-fiduciary-duties", "ch11-going-public", "ch13-m-and-a"],
+      "route": "/ch12-shareholder-franchise",
+      "module_status": "built",
+      "narrative_hook": "Zeeva navigates the shareholder vote — the fundamental governance mechanism of the public corporation.",
+      "sort_order": 12,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 13,
+      "chapter_slug": "ch13-m-and-a",
+      "chapter_title": "Mergers & Acquisitions",
+      "short_summary": "Covers the law governing corporate combinations and hostile takeovers. Examines enhanced judicial scrutiny under Unocal and Revlon, the mechanics of mergers and tender offers, and the cleansing effect of Corwin.",
+      "learning_objectives": [
+        "Describe the statutory framework for mergers under DGCL §251 and asset sales under §271",
+        "Apply the Unocal enhanced scrutiny test to defensive measures",
+        "Explain Revlon duties and when they are triggered",
+        "Analyze the Corwin cleansing doctrine and appraisal rights as shareholder remedies"
+      ],
+      "doctrinal_themes": [
+        "enhanced-scrutiny",
+        "hostile-takeover-defense",
+        "change-of-control",
+        "shareholder-remedies"
+      ],
+      "four_problems_tags": ["governance"],
+      "lifecycle_stage": "mergers-acquisitions",
+      "hero_image_id": "img-ch13-hero",
+      "primary_authority_ids": ["dgcl"],
+      "secondary_authority_ids": [],
+      "key_section_links": [
+        { "authority": "DGCL", "section": "251", "relevance": "Merger or consolidation" },
+        { "authority": "DGCL", "section": "271", "relevance": "Sale of substantially all assets" }
+      ],
+      "related_concept_ids": [
+        "merger",
+        "acquisition",
+        "tender-offer",
+        "enhanced-scrutiny",
+        "unocal-test",
+        "revlon-duties",
+        "appraisal-rights",
+        "corwin-cleansing"
+      ],
+      "related_chapter_ids": ["ch09-fiduciary-duties", "ch12-shareholder-franchise", "ch14-piercing-the-veil"],
+      "route": "/ch13-m-and-a",
+      "module_status": "built",
+      "narrative_hook": "Zeeva faces a hostile takeover bid — triggering enhanced judicial scrutiny of board loyalty.",
+      "sort_order": 13,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 14,
+      "chapter_slug": "ch14-piercing-the-veil",
+      "chapter_title": "Piercing the Veil",
+      "short_summary": "Examines when courts disregard the corporate entity to hold shareholders personally liable. Covers alter ego doctrine, undercapitalization, commingling, and the boundaries of entity shielding.",
+      "learning_objectives": [
+        "Identify the factors courts consider when deciding to pierce the corporate veil",
+        "Apply the alter ego and instrumentality doctrines to fact patterns",
+        "Explain how undercapitalization and commingling undermine entity shielding",
+        "Analyze the tension between limited liability and creditor protection"
+      ],
+      "doctrinal_themes": [
+        "alter-ego-doctrine",
+        "entity-disregard",
+        "creditor-protection",
+        "liability-boundaries"
+      ],
+      "four_problems_tags": ["partitioning"],
+      "lifecycle_stage": "veil-piercing",
+      "hero_image_id": "img-ch14-hero",
+      "primary_authority_ids": ["dgcl", "mbca"],
+      "secondary_authority_ids": [],
+      "key_section_links": [],
+      "related_concept_ids": [
+        "veil-piercing",
+        "alter-ego",
+        "undercapitalization",
+        "commingling",
+        "fraud",
+        "instrumentality",
+        "enterprise-liability"
+      ],
+      "related_chapter_ids": ["ch04-corporations-tech", "ch13-m-and-a", "ch15-capital-structure"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva watches the corporate veil dissolve when entity boundaries are abused.",
+      "sort_order": 14,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 15,
+      "chapter_slug": "ch15-capital-structure",
+      "chapter_title": "Capital Structure",
+      "short_summary": "Explores the legal rules governing a firm's capital structure, including the debt-equity distinction, dividend restrictions, and fraudulent transfer law. Addresses when capital structure decisions create risk for creditors.",
+      "learning_objectives": [
+        "Distinguish debt from equity and explain the legal implications of each under DGCL §151",
+        "Analyze dividend restrictions and capital maintenance rules under DGCL §160 and §170",
+        "Apply fraudulent transfer principles under the UVTA to assess solvency",
+        "Evaluate how capital structure decisions allocate risk between equity holders and creditors"
+      ],
+      "doctrinal_themes": [
+        "debt-equity-distinction",
+        "capital-maintenance",
+        "fraudulent-transfer",
+        "creditor-equity-tension"
+      ],
+      "four_problems_tags": ["risk"],
+      "lifecycle_stage": "capital-structure",
+      "hero_image_id": "img-ch15-hero",
+      "primary_authority_ids": ["dgcl", "uvta"],
+      "secondary_authority_ids": [],
+      "key_section_links": [
+        { "authority": "DGCL", "section": "151", "relevance": "Classes and series of stock" },
+        { "authority": "DGCL", "section": "160", "relevance": "Corporation's power to purchase shares" },
+        { "authority": "DGCL", "section": "170", "relevance": "Dividends; payment; wasting asset corporations" },
+        { "authority": "UVTA", "section": "4", "relevance": "Transfers fraudulent as to present and future creditors" }
+      ],
+      "related_concept_ids": [
+        "debt-vs-equity",
+        "solvency",
+        "fraudulent-transfer",
+        "dividend-restrictions",
+        "creditor-rights",
+        "subordination"
+      ],
+      "related_chapter_ids": ["ch10-staying-private", "ch11-going-public", "ch14-piercing-the-veil"],
+      "route": "/ch15-capital-structure",
+      "module_status": "built",
+      "narrative_hook": "Zeeva confronts the creditor's dilemma: when the firm's capital structure threatens solvency.",
+      "sort_order": 15,
+      "updated_at": "2026-04-03"
+    },
+    {
+      "chapter_number": 16,
+      "chapter_slug": "ch16-conclusion",
+      "chapter_title": "Conclusion",
+      "short_summary": "Synthesizes the entire course by revisiting the Four Problems across every entity form and lifecycle stage. Zeeva completes her journey with a unified theory of the firm and its professional responsibilities.",
+      "learning_objectives": [
+        "Synthesize the Four Problems framework across all entity forms and lifecycle stages",
+        "Evaluate how attribution, governance, risk, and partitioning interact in complex transactions",
+        "Articulate a unified theory of the firm grounded in doctrinal analysis",
+        "Identify professional responsibility obligations arising from entity representation"
+      ],
+      "doctrinal_themes": [
+        "four-problems-synthesis",
+        "lifecycle-integration",
+        "unified-firm-theory",
+        "professional-responsibility"
+      ],
+      "four_problems_tags": ["attribution", "governance", "risk", "partitioning", "synthesis"],
+      "lifecycle_stage": "capstone",
+      "hero_image_id": "img-ch16-hero",
+      "primary_authority_ids": ["rupa", "rsa", "ullca", "mbca", "dgcl", "uvta", "securities-act-1933", "exchange-act-1934"],
+      "secondary_authority_ids": ["genius-act"],
+      "key_section_links": [],
+      "related_concept_ids": [
+        "lifecycle-synthesis",
+        "four-problems-review",
+        "entity-lifecycle",
+        "professional-responsibility"
+      ],
+      "related_chapter_ids": ["ch01-why-law", "ch08-entity-selection", "ch09-fiduciary-duties"],
+      "route": null,
+      "module_status": "stub",
+      "narrative_hook": "Zeeva completes the lifecycle, synthesizing all Four Problems into a unified theory of the firm.",
+      "sort_order": 16,
+      "updated_at": "2026-04-03"
+    }
+  ]
+}
