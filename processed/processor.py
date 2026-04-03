@@ -117,9 +117,83 @@ def _infer_segment_type(heading: str, text: str, parent_family: str) -> str:
     return SEG_SECTION
 
 
+# ---------------------------------------------------------------------------
+# Citation extraction
+# ---------------------------------------------------------------------------
+
+CITATION_PATTERNS: list[re.Pattern[str]] = [
+    # Case citations: 457 A.2d 701 / 493 A.3d 946 / 506 A.2d 173
+    re.compile(r"\d+\s+[A-Z]\.\d[a-z]*\s+\d+"),
+    # US Supreme Court: 123 U.S. 456
+    re.compile(r"\d+\s+U\.S\.\s+\d+"),
+    # Federal reporters: 123 F.2d 456 / 123 F.3d 456 / 123 F.Supp. 456
+    re.compile(r"\d+\s+F\.\d?[A-Za-z]*\.?\s+\d+"),
+    # Statutory section refs: § 8.30 / § 202 / § 141(a)
+    re.compile(r"§\s*\d+[\w.()\-]*"),
+    # Named statute with section: DGCL § 141 / MBCA § 8.30 / RUPA § 202
+    re.compile(r"(?:DGCL|MBCA|RUPA|RULLCA|UVTA|RSA)\s+§\s*[\d\w.()\-]+"),
+    # Restatement refs: RSA § 1.01 / Restatement (Third) of Agency § 2.01
+    re.compile(r"Restatement\s+\(\w+\)\s+of\s+\w+\s+§\s*[\d\w.()\-]+"),
+    # Public Law: Pub. L. No. 119-27
+    re.compile(r"Pub\.\s*L\.\s*No\.\s*\d+-\d+"),
+    # Year-only Delaware case pattern: Del. 1985
+    re.compile(r"Del\.\s+\d{4}"),
+    # N.W.2d, N.E.2d etc.
+    re.compile(r"\d+\s+[A-Z]\.[A-Z]\.?\d*[a-z]*\s+\d+"),
+]
+
+
+def extract_citations(text: str) -> list[str]:
+    """Extract unique legal citations from text using known patterns."""
+    seen: set[str] = set()
+    results: list[str] = []
+    for pattern in CITATION_PATTERNS:
+        for m in pattern.finditer(text):
+            citation = m.group(0).strip()
+            norm = re.sub(r"\s+", " ", citation)
+            if norm not in seen:
+                seen.add(norm)
+                results.append(norm)
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Body-text section numbering detection
+# ---------------------------------------------------------------------------
+
+# Patterns that indicate structural section breaks within body text
+BODY_SECTION_RE = re.compile(
+    r"^"
+    r"("
+    r"\d{1,3}\.\s"                  # "1. " "12. "
+    r"|[A-Z]\.\s"                    # "A. " "B. "
+    r"|\([a-z]\)\s"                  # "(a) " "(b) "
+    r"|\([0-9]{1,2}\)\s"             # "(1) " "(12) "
+    r"|[IVXivx]+\.\s"                # "I. " "II. " "iv. "
+    r"|§\s*\d"                       # "§ 1" "§ 202"
+    r")"
+    r".{10,}",                       # must have substantial text after marker
+    re.MULTILINE,
+)
+
+
+def detect_body_sections(text: str) -> list[tuple[str, str]]:
+    """
+    Detect numbered / lettered section breaks in body text.
+    Returns list of (marker, full_line) tuples.
+    """
+    results: list[tuple[str, str]] = []
+    for line in text.splitlines():
+        m = BODY_SECTION_RE.match(line.strip())
+        if m:
+            results.append((m.group(1).strip(), line.strip()))
+    return results
+
+
 def extract_markdown(path: Path, file_id: str, source_family: str) -> tuple[list[dict], list[str]]:
     """
-    Segment a Markdown file by heading levels (H1, H2, H3).
+    Segment a Markdown file by heading levels (H1–H6).
+    Also extracts citations and detects body-text section numbering.
     Returns (segments, diagnostics).
     """
     diagnostics: list[str] = []
@@ -144,7 +218,9 @@ def extract_markdown(path: Path, file_id: str, source_family: str) -> tuple[list
         stype = _infer_segment_type(heading, text, source_family)
         if level == 1 or (level == 0 and h1_count == 0):
             stype = SEG_CHAPTER if source_family == "casebook" else stype
-        seg = {
+        citations = extract_citations(text)
+        body_sections = detect_body_sections(text)
+        seg: dict = {
             "id": stable_id(file_id, seg_index, heading),
             "parent_file_id": file_id,
             "segment_type": stype,
@@ -155,6 +231,11 @@ def extract_markdown(path: Path, file_id: str, source_family: str) -> tuple[list
             "segmentation_confidence": "high",
             "content_hash": content_hash(text),
         }
+        if citations:
+            seg["citations"] = citations
+        if body_sections:
+            seg["body_section_markers"] = [m for m, _ in body_sections]
+            seg["body_section_count"] = len(body_sections)
         segments.append(seg)
         seg_index += 1
 
@@ -166,7 +247,6 @@ def extract_markdown(path: Path, file_id: str, source_family: str) -> tuple[list
             heading_text = m.group(2).strip().strip("*").strip()
             if level == 1:
                 h1_count += 1
-            # flush previous segment if meaningful
             flush(current_heading, current_level, current_lines)
             current_heading = heading_text
             current_level = level
@@ -176,42 +256,125 @@ def extract_markdown(path: Path, file_id: str, source_family: str) -> tuple[list
 
     flush(current_heading, current_level, current_lines)
 
+    # Fallback: if no heading-based segments, split on body section numbering with deduplication
     if not segments:
-        diagnostics.append("No headings found; file returned as single chunk")
+        diagnostics.append("No headings found; attempting body-section-number fallback")
         text = raw.strip()
-        segments.append({
-            "id": stable_id(file_id, 0, ""),
-            "parent_file_id": file_id,
-            "segment_type": SEG_CHUNK,
-            "title": path.stem,
-            "text": text,
-            "source_locator": "full-document",
-            "extraction_confidence": "medium",
-            "segmentation_confidence": "low",
-            "content_hash": content_hash(text),
-        })
+        fallback_segs = _fallback_regex_split(text, file_id, source_family)
+        if fallback_segs:
+            seen_hashes: set[str] = set()
+            for seg in fallback_segs:
+                ch = seg["content_hash"]
+                if ch not in seen_hashes:
+                    seen_hashes.add(ch)
+                    segments.append(seg)
+            diagnostics.append(
+                f"Fallback split produced {len(segments)} unique segments "
+                f"(deduped from {len(fallback_segs)})"
+            )
+        else:
+            diagnostics.append("Fallback found no section markers; file returned as single chunk")
+            citations = extract_citations(text)
+            seg: dict = {
+                "id": stable_id(file_id, 0, ""),
+                "parent_file_id": file_id,
+                "segment_type": SEG_CHUNK,
+                "title": path.stem,
+                "text": text,
+                "source_locator": "full-document",
+                "extraction_confidence": "medium",
+                "segmentation_confidence": "low",
+                "content_hash": content_hash(text),
+            }
+            if citations:
+                seg["citations"] = citations
+            segments.append(seg)
 
     return segments, diagnostics
+
+
+def _fallback_regex_split(text: str, file_id: str, source_family: str) -> list[dict]:
+    """
+    Split text on body-section numbering patterns when no markdown headings exist.
+    Returns segments (caller is responsible for deduplication).
+    """
+    SPLIT_RE = re.compile(
+        r"(?m)^(?:\d{1,3}\.\s|[A-Z]\.\s|\([a-z0-9]{1,2}\)\s"
+        r"|[IVXivx]+\.\s|§\s*\d).{10,}$"
+    )
+    matches = list(SPLIT_RE.finditer(text))
+    if not matches:
+        return []
+
+    segments: list[dict] = []
+    boundaries = [m.start() for m in matches] + [len(text)]
+    for i, start in enumerate(boundaries[:-1]):
+        end = boundaries[i + 1]
+        chunk = text[start:end].strip()
+        if len(chunk) < 20:
+            continue
+        heading = matches[i].group(0)[:80].strip()
+        seg: dict = {
+            "id": stable_id(file_id, i, heading),
+            "parent_file_id": file_id,
+            "segment_type": _infer_segment_type(heading, chunk, source_family),
+            "title": heading,
+            "text": chunk,
+            "source_locator": f"body-section:{i}",
+            "extraction_confidence": "medium",
+            "segmentation_confidence": "medium",
+            "content_hash": content_hash(chunk),
+        }
+        citations = extract_citations(chunk)
+        if citations:
+            seg["citations"] = citations
+        segments.append(seg)
+    return segments
 
 
 # ---------------------------------------------------------------------------
 # PDF extractor
 # ---------------------------------------------------------------------------
 
+# Heuristic: lines shorter than this that look like headings are treated as section titles in PDFs
+_PDF_HEADING_MAX_CHARS = 120
+_PDF_SECTION_HEADING_RE = re.compile(
+    r"^(?:"
+    r"(?:PART|CHAPTER|SECTION|ARTICLE|SUBCHAPTER)\s+[IVXLCDM\d]"  # PART I / CHAPTER 1
+    r"|§\s*\d[\w.()\-]*\s"                                          # § 141(a)
+    r"|\d{1,3}\.\d{0,3}\s+[A-Z]"                                   # 8.30 Director Standards
+    r"|[A-Z][A-Z\s]{3,}$"                                           # ALL-CAPS HEADING
+    r")",
+    re.IGNORECASE,
+)
+
+
+def _is_pdf_section_heading(line: str) -> bool:
+    """Heuristic: short lines that match known heading patterns in legal PDFs."""
+    stripped = line.strip()
+    if not stripped or len(stripped) > _PDF_HEADING_MAX_CHARS:
+        return False
+    return bool(_PDF_SECTION_HEADING_RE.match(stripped))
+
+
 def extract_pdf(path: Path, file_id: str, source_family: str) -> tuple[list[dict], list[str]]:
     """
-    Extract text from PDF by page using pdfminer.six.
+    Extract text from PDF using pdfminer.six.
+    Attempts section-heading detection within pages; falls back to page-level segments.
+    Also extracts citations from each segment.
     Returns (segments, diagnostics).
     """
     diagnostics: list[str] = []
     segments: list[dict] = []
     try:
         from pdfminer.high_level import extract_pages
-        from pdfminer.layout import LTTextContainer, LTPage
+        from pdfminer.layout import LTTextContainer, LTChar, LTAnon
     except ImportError:
         return [], ["pdfminer.six not installed; PDF skipped"]
 
     try:
+        # Collect all page text with page-number metadata
+        pages: list[tuple[int, str]] = []
         page_num = 0
         for page_layout in extract_pages(str(path)):
             page_num += 1
@@ -220,30 +383,92 @@ def extract_pdf(path: Path, file_id: str, source_family: str) -> tuple[list[dict
                 if isinstance(element, LTTextContainer):
                     page_text_parts.append(element.get_text())
             page_text = "".join(page_text_parts).strip()
-            if not page_text:
-                continue
-            seg = {
-                "id": stable_id(file_id, page_num - 1, f"page-{page_num}"),
-                "parent_file_id": file_id,
-                "segment_type": SEG_SECTION,
-                "title": f"Page {page_num}",
-                "text": page_text,
-                "page_number": page_num,
-                "source_locator": f"page:{page_num}",
-                "extraction_confidence": "medium",
-                "segmentation_confidence": "medium",
-                "content_hash": content_hash(page_text),
-            }
-            segments.append(seg)
+            if page_text:
+                pages.append((page_num, page_text))
 
-        if not segments:
+        if not pages:
             diagnostics.append("No extractable text found in PDF (possibly scanned/image-only)")
+            return segments, diagnostics
+
+        # Try to merge all pages and split by detected section headings
+        full_text = "\n\n".join(text for _, text in pages)
+        section_segs = _pdf_split_by_sections(full_text, file_id, source_family)
+
+        if len(section_segs) >= 2:
+            # Section detection worked — use section-level segments
+            segments = section_segs
+            diagnostics.append(f"PDF section detection: {len(segments)} sections found")
+        else:
+            # Fall back to page-level segments
+            for pn, ptext in pages:
+                citations = extract_citations(ptext)
+                seg: dict = {
+                    "id": stable_id(file_id, pn - 1, f"page-{pn}"),
+                    "parent_file_id": file_id,
+                    "segment_type": SEG_SECTION,
+                    "title": f"Page {pn}",
+                    "text": ptext,
+                    "page_number": pn,
+                    "source_locator": f"page:{pn}",
+                    "extraction_confidence": "medium",
+                    "segmentation_confidence": "medium",
+                    "content_hash": content_hash(ptext),
+                }
+                if citations:
+                    seg["citations"] = citations
+                segments.append(seg)
+
     except Exception as e:
         diagnostics.append(f"PDF extraction error: {e}")
         tb = traceback.format_exc()
         diagnostics.append(tb[:500])
 
     return segments, diagnostics
+
+
+def _pdf_split_by_sections(text: str, file_id: str, source_family: str) -> list[dict]:
+    """
+    Split merged PDF text into sections based on heading heuristics.
+    """
+    lines = text.splitlines()
+    segments: list[dict] = []
+    seg_index = 0
+    current_heading = ""
+    current_lines: list[str] = []
+
+    def flush_pdf(heading: str, body_lines: list[str]) -> None:
+        nonlocal seg_index
+        body = "\n".join(body_lines).strip()
+        if not body and not heading:
+            return
+        stype = _infer_segment_type(heading, body, source_family)
+        citations = extract_citations(body)
+        seg: dict = {
+            "id": stable_id(file_id, seg_index, heading),
+            "parent_file_id": file_id,
+            "segment_type": stype,
+            "title": heading,
+            "text": body,
+            "source_locator": f"pdf-section:{seg_index}",
+            "extraction_confidence": "medium",
+            "segmentation_confidence": "medium",
+            "content_hash": content_hash(body),
+        }
+        if citations:
+            seg["citations"] = citations
+        segments.append(seg)
+        seg_index += 1
+
+    for line in lines:
+        if _is_pdf_section_heading(line):
+            flush_pdf(current_heading, current_lines)
+            current_heading = line.strip()
+            current_lines = []
+        else:
+            current_lines.append(line)
+
+    flush_pdf(current_heading, current_lines)
+    return segments
 
 
 # ---------------------------------------------------------------------------

@@ -3,8 +3,8 @@
   "corpus_name": "Business Associations: Law of the Firm — Source Corpus",
   "description": "Retrieval-optimized legal corpus built from inbox/ files. See schema.md for retrieval instructions.",
   "entrypoint": "processed/manifest.json",
-  "last_run": "2026-04-03T17:13:36.509241+00:00",
-  "run_end": "2026-04-03T17:14:05.797255+00:00",
+  "last_run": "2026-04-03T18:02:01.644648+00:00",
+  "run_end": "2026-04-03T18:02:01.664028+00:00",
   "inbox_file_count": 28,
   "total_segments": 1801,
   "files": {

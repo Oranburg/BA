@@ -12,7 +12,19 @@
       "lessons": [
         "Clean run: all files processed or skipped as unchanged"
       ]
+    },
+    {
+      "run_start": "2026-04-03T18:02:01.644648+00:00",
+      "run_end": "2026-04-03T18:02:01.663632+00:00",
+      "files_processed": 0,
+      "files_skipped": 28,
+      "files_failed": 0,
+      "files_unsupported": 0,
+      "total_segments": 1801,
+      "lessons": [
+        "Clean run: all files processed or skipped as unchanged"
+      ]
     }
   ],
-  "last_updated": "2026-04-03T17:14:05.796992+00:00"
+  "last_updated": "2026-04-03T18:02:01.663639+00:00"
 }
