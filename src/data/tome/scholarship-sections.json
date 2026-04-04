@@ -1,0 +1,250 @@
+[
+  {
+    "number": "1.01",
+    "title": "Why Firms Exist: Transaction Costs and the Coase Insight",
+    "article": "Chapter 1",
+    "text": "Firms evolved as a response to the limitations of markets in reducing transaction costs to zero. Ronald Coase argued that firms exist because they can perform certain transactions more efficiently than markets. Within firms, hierarchical structures replace the need for constant market transactions, reducing the costs associated with negotiating and enforcing numerous contracts. Firms allow for long-term relationships and coordinated efforts among individuals, which can lead to increased efficiency in production and distribution. Instead of a company contracting with various suppliers and workers individually through the market, it can internalize these transactions by employing workers and owning resources, thus minimizing the costs associated with frequent market exchanges. While markets are instrumental in reducing transaction costs, firms offer an alternative by internalizing transactions that would otherwise be too costly to manage through the market alone.",
+    "concepts": ["transaction costs", "theory of the firm", "Coase theorem", "market efficiency", "internalization"],
+    "chapterUse": [1, 3, 4, 5]
+  },
+  {
+    "number": "1.02",
+    "title": "Agency Costs Within Firms",
+    "article": "Chapter 1",
+    "text": "All individuals within a firm are rational and self-interested. The firm wants high productivity from employees while paying as little as possible. Employees want high pay while working as little as possible. While that conflict would seem to favor the firm, as the side with money and power, the information imbalance actually favors employees. Employees know exactly what they are getting paid, so they can hold the firm accountable, but the firm does not have an easy way to judge how hard employees are working. The ability of the firm's agents to seek their own interests by shirking imposes what are known as agency costs on the firm. Agency costs can be the actual loss of productivity from shirking, or the extra monitoring costs that firms incur to oversee employees. Management, because they control the levers of power, can exercise their self-interest in much more destructive ways, including outright mismanagement for personal gain.",
+    "concepts": ["agency costs", "moral hazard", "shirking", "monitoring costs", "principal-agent problem"],
+    "chapterUse": [1, 2, 9, 11]
+  },
+  {
+    "number": "1.03",
+    "title": "Default Rules as Transaction Cost Reducers",
+    "article": "Chapter 1",
+    "text": "Default laws are designed to provide a ready-made governance structure that businesses can adopt without the need for extensive custom agreements. To function well, the default rules should reflect the choices that most individuals would choose if they had time to fully negotiate the rules. This legal infrastructure reduces the time, effort, and expense associated with negotiating and drafting detailed governance documents from scratch. It also reduces the likelihood that the parties will have to renegotiate the rules at a later date. By standardizing key aspects of business operations, default laws enhance predictability, reduce conflicts, and promote smoother functioning of the organization. By allowing parties to contract around the default rules, to a greater or lesser extent, we facilitate specialization where doing so will increase efficiency.",
+    "concepts": ["default rules", "freedom of contract", "private ordering", "governance costs", "standardization"],
+    "chapterUse": [1, 3, 4, 5, 8]
+  },
+  {
+    "number": "1.04",
+    "title": "Public Choice Economics and Business Law",
+    "article": "Chapter 1",
+    "text": "Public choice economics extends the principles of economics to the political process, highlighting how self-interest, incentives, and constraints influence the behavior of political actors. Just as businesspeople respond to profits and losses, public choice theorists argue that politicians, regulators, and voters respond to their own incentives---seeking reelection, political power, or personal gain. This perspective helps explain why government action often falls short of the ideal and why laws don't always serve the public interest. Business law often exists to structure relationships and reduce conflicts that public choice theory would otherwise predict. Legal rules don't just reflect economic logic; they also respond to political realities. Regulatory capture, where firms influence regulators to create favorable conditions for themselves, can lead to laws that reduce transaction costs for established firms while raising barriers for new entrants.",
+    "concepts": ["public choice", "regulatory capture", "self-interest", "political incentives", "rent-seeking"],
+    "chapterUse": [1, 4, 11]
+  },
+  {
+    "number": "2.01",
+    "title": "Agency Formation: Consent, Conduct, and Control",
+    "article": "Chapter 2",
+    "text": "The Restatement (Third) of Agency defines agency as the fiduciary relationship that results from the manifestation of consent by one person to another that the other shall act on the person's behalf and subject to the person's control, and the other's consent to act. Three elements are critical: consent by the principal, consent by the agent to act on the principal's behalf, and the principal's right to control the agent's conduct. No formal agreement is required. No consideration is required. The relationship arises from conduct. The control element is the one that most often generates litigation. Principals frequently deny that a control relationship existed when doing so would shift liability. Courts look past contractual disclaimers to the actual pattern of conduct. A creditor who assumes de facto control of a debtor's business may become liable as principal for the acts of the debtor in connection with the business.",
+    "concepts": ["agency formation", "control test", "consent", "fiduciary relationship", "de facto control"],
+    "chapterUse": [2, 3, 5]
+  },
+  {
+    "number": "2.02",
+    "title": "Three Forms of Authority: Actual, Implied, and Apparent",
+    "article": "Chapter 2",
+    "text": "Authority is the legal basis on which a principal becomes bound by an agent's act. Three forms matter for most purposes. Actual authority arises from the principal's express or implied communication to the agent. Apparent authority arises from the principal's communication to a third party that leads the third party reasonably to believe the agent is authorized. The distinction matters because the two forms protect different parties: actual authority protects the agent; apparent authority protects third parties who deal in good faith. Implied authority fills gaps in express authorizations: an agent authorized to manage a business has implied authority to do what managers of such businesses customarily do, even without specific instruction. In examining whether implied authority exists, it is important to focus on the agent's understanding of his authority and whether the agent reasonably believes, because of present or past conduct of the principal, that the principal wishes him to act in a certain way.",
+    "concepts": ["actual authority", "apparent authority", "implied authority", "third-party reliance", "scope of authority"],
+    "chapterUse": [2, 3]
+  },
+  {
+    "number": "2.03",
+    "title": "The Disgorgement Remedy and the Duty of Loyalty",
+    "article": "Chapter 2",
+    "text": "The duty of loyalty requires the agent to act solely in the principal's interest in matters within the scope of the agency, and to subordinate any conflicting personal interest without the principal's informed consent. The disgorgement remedy is the duty of loyalty's primary enforcement mechanism. An agent who profits from a breach of loyalty must turn over those profits to the principal, regardless of whether the principal suffered any direct loss. The rule is strict because it is designed to deter, not merely to compensate. If a servant takes advantage of his service and violates his duty of honesty and good faith to make a profit for himself---where the assets, facilities, or position he occupies are the real cause of his obtaining the money---then he is accountable for it to his master. It matters not that the master has not lost any profit nor suffered any damage, nor does it matter that the master could not have done the act himself.",
+    "concepts": ["duty of loyalty", "disgorgement", "fiduciary duty", "deterrence", "secret profits"],
+    "chapterUse": [2, 3, 5, 9]
+  },
+  {
+    "number": "2.04",
+    "title": "Respondeat Superior and the Foreseeability Test",
+    "article": "Chapter 2",
+    "text": "The doctrine of respondeat superior holds an employer vicariously liable for torts committed by an employee acting within the scope of employment. The employer need not have been negligent. The liability is imposed because the employer sets the conditions under which the employee works, profits from the employee's services, and is better positioned than the injured third party to purchase insurance and to control employee behavior through selection, training, and supervision. Among motivating considerations are the escalation of employee-produced injury, concern that the average innocent victim will face a defendant too impecunious to meet the claim, and that modern economic devices such as cost accounting and insurance coverage permit most employers to spread the impact of such costs. The foreseeability test asks whether the employer could reasonably have anticipated that an employee in the relevant position might commit the type of harm that occurred. General rather than specific foreseeability has carried the day.",
+    "concepts": ["respondeat superior", "vicarious liability", "scope of employment", "foreseeability", "risk allocation"],
+    "chapterUse": [2]
+  },
+  {
+    "number": "3.01",
+    "title": "Why Partnership Formation Does Not Require Intent",
+    "article": "Chapter 3",
+    "text": "A partnership exists any time two or more people mutually agree to co-ownership of a business for profit, whether or not they recognize that they are creating a partnership. The intent that matters is an intent to do those things which constitute a partnership---not an intent to create the legal label. If such intent exists, the parties will be partners notwithstanding that they proposed to avoid the liability attaching to partners or even expressly stipulated in their agreement that they were not to become partners. It is the substance, and not the name of the arrangement, which determines their legal relation. Allowing partnerships to form informally reduces transaction costs, making it easier for individuals to begin and conduct business together. The accidental partnership doctrine emphasizes substance over form, protecting parties who rely on implied promises of co-ownership and deterring individuals from reaping partnership benefits while avoiding corresponding liabilities.",
+    "concepts": ["partnership formation", "co-ownership", "substance over form", "accidental partnership", "mutual assent"],
+    "chapterUse": [3, 8]
+  },
+  {
+    "number": "3.02",
+    "title": "Default Rules and Bargaining in the Shadow of the Law",
+    "article": "Chapter 3",
+    "text": "Partnership default rules reduce transaction costs by supplying off-the-shelf answers to common problems: how to allocate profits and losses, how to make decisions, how to resolve disputes, and how to handle exit or dissolution. In order to be effective, the default rules need to be ones that most people would choose if they engaged in intentional bargaining. For example, the default rule for control is equal control rights for every partner. If one partner feels strongly that he or she should have a greater voice, they will likely insist on that being part of the agreement. The rules assume that partners will generally want both profits and losses to be equally apportioned, as a matter of fairness. Setting the default rule where it tracks with basic notions of fairness means that it will satisfy most aspiring partners. By requiring a partner to assert a preference that goes beyond fairness, it puts other partners on notice of exactly where complications are likely to arise.",
+    "concepts": ["default rules", "bargaining", "equal sharing", "profit allocation", "freedom of contract"],
+    "chapterUse": [3, 5, 8]
+  },
+  {
+    "number": "3.03",
+    "title": "Fiduciary Duties as Internal Enforcement Mechanisms",
+    "article": "Chapter 3",
+    "text": "Partnership law mitigates problems of incentive misalignment that naturally arise in shared enterprises. Partners may engage in internal rent-seeking, attempting to gain additional benefits from the partnership at the expense of the other co-owners. Without institutions that better align incentives and reduce internal rent-seeking, partners would need to engage in significant oversight of each other, raising the cost of everything that the partnership does. Fiduciary duties---especially the duty of loyalty---act as internal enforcement mechanisms, increasing the cost of internal rent-seeking and consequently reducing its frequency. Fiduciary duties also replace costly and uncertain bargaining with enforceable legal norms. RUPA Section 404 provides that each partner owes duties of loyalty and care to the partnership and the other partners, including the duty to account for partnership property and profits, to refrain from dealing adversely, and to refrain from competing before dissolution.",
+    "concepts": ["fiduciary duties", "duty of loyalty", "duty of care", "rent-seeking", "incentive alignment"],
+    "chapterUse": [3, 5, 9]
+  },
+  {
+    "number": "3.04",
+    "title": "The Meinhard Standard: Punctilio of Honor the Most Sensitive",
+    "article": "Chapter 3",
+    "text": "Joint adventurers, like copartners, owe to one another the duty of the finest loyalty. Many forms of conduct permissible in a workaday world for those acting at arm's length are forbidden to those bound by fiduciary ties. A trustee is held to something stricter than the morals of the marketplace. Not honesty alone, but the punctilio of an honor the most sensitive, is then the standard of behavior. Uncompromising rigidity has been the attitude of courts of equity when petitioned to undermine the rule of undivided loyalty. Only thus has the level of conduct for fiduciaries been kept at a level higher than that trodden by the crowd. When one partner holds a position of control, the pre-emptive opportunity that is an incident of the enterprise may not be appropriated in secrecy and silence. The duty of disclosure is heightened when only through disclosure could opportunity be equalized among partners.",
+    "concepts": ["Meinhard v. Salmon", "undivided loyalty", "fiduciary standard", "corporate opportunity", "disclosure duty"],
+    "chapterUse": [3, 9]
+  },
+  {
+    "number": "4.01",
+    "title": "The Corporation as Legal Technology",
+    "article": "Chapter 4",
+    "text": "The corporation is a legal innovation---arguably the most powerful legal technology ever devised for organizing economic activity at scale. Incorporation allows a business to aggregate capital from many people while applying a uniform set of terms. Shareholders are not required to negotiate bespoke agreements or monitor the conduct of every other investor. Instead, the articles of incorporation and bylaws define their rights, and state corporate law supplies default rules that govern the relationship among participants. This standardization reduces the cost of entry for investors and lowers the cost of raising funds for entrepreneurs. The corporation is a separate legal person that can sue, be sued, own property, enter into contracts, and persist through time independent of its owners. Limited liability confines business risk to the assets of the corporation itself, so investors do not need to investigate the personal financial situation of their fellow shareholders before committing funds.",
+    "concepts": ["corporate form", "limited liability", "legal entity", "capital aggregation", "standardization"],
+    "chapterUse": [4, 8, 15]
+  },
+  {
+    "number": "4.02",
+    "title": "What Problem Does Limited Liability Solve?",
+    "article": "Chapter 4",
+    "text": "Corporate limited liability reflects a social bargain. By shielding corporate owners from liability, the law deprives corporate creditors of recourse when the corporation lacks sufficient funds. In economic terms, this creates positive internalities (benefits to corporate insiders) and negative externalities (costs imposed on outsiders). Society tolerates this tradeoff because corporations are also believed to generate positive externalities, such as jobs, goods, innovation, and tax revenue. Yet limited liability creates moral hazard. The shield shifts risk onto creditors and third parties, while the corporate separateness that enables efficient scaling can also obscure accountability. The corporate bargain is not unlimited. When the legal separateness of the corporate form is honored in form but abused in substance, courts must ask: when should we disregard the corporation's existence and hold its owners directly accountable?",
+    "concepts": ["limited liability", "moral hazard", "social bargain", "externalities", "veil piercing"],
+    "chapterUse": [4, 5, 8, 15]
+  },
+  {
+    "number": "4.03",
+    "title": "Veil Piercing: The Two-Prong Test",
+    "article": "Chapter 4",
+    "text": "Courts will disregard the corporate entity when two requirements are met: first, there must be such unity of interest and ownership that the separate personalities of the corporation and the individual no longer exist; and second, circumstances must be such that adherence to the fiction of separate corporate existence would sanction a fraud or promote injustice. Unity of interest is shown by failure to maintain corporate records or comply with corporate formalities, commingling of funds or assets, undercapitalization, and one corporation treating the assets of another as its own. But the prospect of an unsatisfied judgment looms in every veil-piercing action; that alone is not enough. The courts that properly have pierced corporate veils to avoid promoting injustice have found some additional wrong: unjust enrichment, a parent corporation escaping liabilities it caused, or an intentional scheme to squirrel assets into a liability-free entity while heaping liabilities upon an asset-free one.",
+    "concepts": ["veil piercing", "alter ego", "unity of interest", "fraud or injustice", "corporate formalities"],
+    "chapterUse": [4, 5]
+  },
+  {
+    "number": "5.01",
+    "title": "The LLC Operating Agreement as Constitution",
+    "article": "Chapter 5",
+    "text": "Delaware's LLC Act is built around the principle of freedom of contract. The operating agreement, not the statute, is the primary source of governance rules. It allocates management authority between members and any designated manager, defines each member's economic rights, establishes voting thresholds for major decisions, specifies how disputes will be resolved, and in Delaware may modify or restrict the fiduciary duties members owe one another. This contractual flexibility is the LLC's distinctive feature, but it is also the source of most LLC litigation. The Act gives maximum effect to the principle of freedom of contract and to the enforceability of limited liability company agreements. The members are the real parties in interest; the LLC is simply their joint business vehicle. Parties may contract to avoid the applicability of even statutory grants of jurisdiction, such as the Court of Chancery's power over derivative claims.",
+    "concepts": ["operating agreement", "freedom of contract", "private ordering", "LLC governance", "contractual flexibility"],
+    "chapterUse": [5, 8]
+  },
+  {
+    "number": "5.02",
+    "title": "Contractual Modification of Fiduciary Duties in LLCs",
+    "article": "Chapter 5",
+    "text": "Delaware's LLC Act permits the operating agreement to restrict or eliminate fiduciary duties. The critical question is how far that permission extends. An operating agreement requiring that affiliated transactions be on terms no less favorable to the company than arms-length third-party terms is the contractual equivalent of the entire fairness standard, even without using the words 'entire fairness' or 'fiduciary duty.' To impose fiduciary standards of conduct as a contractual matter, there is no requirement that an LLC agreement use magic words. But the operating agreement can also permit members to compete directly with the LLC and take its core business opportunity, if the language is sufficiently clear. The implied covenant of good faith and fair dealing cannot be eliminated, even when fiduciary duties are waived, serving as the irreducible minimum of fair conduct in LLC relationships.",
+    "concepts": ["fiduciary modification", "entire fairness", "implied covenant", "good faith", "self-dealing"],
+    "chapterUse": [5, 9]
+  },
+  {
+    "number": "5.03",
+    "title": "The Written Consent Trap: Duty of Loyalty in LLC Governance",
+    "article": "Chapter 5",
+    "text": "The LLC Act permits managers to act by written consent without a meeting, without prior notice, and without a vote---but this mechanism can be abused. When two of three managers use the written consent mechanism in secret to merge the LLC into a corporation that strips the majority investor of control, they breach their duty of loyalty by acting clandestinely in circumstances where they know advance notice would have allowed the majority to protect its interest. The purpose of permitting action by written consent without notice is to enable LLC managers to take quick, efficient action in situations where a minority could not block the course set by the majority even if they were notified. It was never intended to enable managers to deprive, clandestinely and surreptitiously, a third manager representing the majority interest of an opportunity to protect that interest. Action without notice is appropriate for a constant or fixed majority, but not an illusory, will-of-the-wisp majority which would implode should notice be given.",
+    "concepts": ["written consent", "duty of loyalty", "good faith", "clandestine action", "majority protection"],
+    "chapterUse": [5, 9]
+  },
+  {
+    "number": "6.01",
+    "title": "DAOs and the Default Partnership Problem",
+    "article": "Chapter 6",
+    "text": "When a DAO lacks formal registration, courts may classify it using familiar defaults from entity law. They may treat the DAO as a general partnership, imposing personal liability on participants who co-own the venture or share in its control. California law provides that the association of two or more persons to carry on as co-owners a business for profit forms a partnership, whether or not the persons intend to form a partnership. Courts have found that tokenholders who possess governance rights over a DAO---the ability to propose and vote on spending treasury funds, changing policies, and distributing assets---plausibly constitute general partners. Courts do not countenance partnerships which attempt to afford all the advantages of commercial intercourse without corresponding liabilities. Nothing prevents a DAO from creating a legal wrapper to shield individual members from liability, and failure to do so exposes participants to joint and several liability.",
+    "concepts": ["DAO liability", "general partnership default", "tokenholder liability", "legal wrapper", "Sarcuni v. bZx"],
+    "chapterUse": [6, 3]
+  },
+  {
+    "number": "6.02",
+    "title": "Smart Contracts and the Absence of Legal Intervention Points",
+    "article": "Chapter 6",
+    "text": "A key role of contract law is to fill the gaps humans leave in their consensual dealings. In the blockchain, there is no step two. Step one occurs as it always has---gaps arise because it is humans who code the contracts. But the gap-filling function that courts traditionally perform is eliminated because blockchain code executes automatically and irrevocably. The DAO organizers made clear that their code contained the entire agreement between participants, including all means of enforcement. Once code is released, its programmers can no longer unilaterally alter it. For entities organized purely on the blockchain, there are no legal intervention points for default rules to fill. Law has no purchase on the blockchain. The only possible legal intervention point is identifiable humans that promote blockchain enterprises and can be held liable for their workings. The lack of a legal intervention point is a double-edged sword: it grants blockchain entities power to avoid partnership dangers without resorting to organizational law, but all contracts are incomplete.",
+    "concepts": ["smart contracts", "gap-filling", "legal intervention points", "code as law", "incomplete contracts"],
+    "chapterUse": [6]
+  },
+  {
+    "number": "6.03",
+    "title": "DAO Governance: Voting Mechanisms and Legitimacy",
+    "article": "Chapter 6",
+    "text": "Most DAOs use token-based voting to make internal decisions. This one-token-one-vote model mirrors corporate control structures but with important differences. Tokens may be acquired on open markets, distributed via airdrops, or earned through participation. Tokenholders are often pseudonymous and may vote strictly in their own interest. Some DAOs have recorded voter participation as low as three percent, raising serious questions about legitimacy. Alternative models have emerged: conviction voting rewards users who express consistent preferences over time, while quadratic voting allows users to signal not just what they prefer but how strongly they feel, at escalating cost. DAOs have the potential to enable decentralized organizations whose rules are laid out clearly and cannot be broken. Yet at first glance, DAOs may not have been successful in removing the power of elites---whether hidden or flaunted.",
+    "concepts": ["token voting", "governance legitimacy", "conviction voting", "quadratic voting", "voter apathy"],
+    "chapterUse": [6]
+  },
+  {
+    "number": "6.04",
+    "title": "Fiduciary Duty Waivers in DAO Statutes",
+    "article": "Chapter 6",
+    "text": "Wyoming, Utah, and Tennessee allow DAOs to eliminate most fiduciary duties for members or managers, preserving only the implied contractual covenant of good faith and fair dealing as a backstop against bad-faith conduct. Wyoming permits algorithmically managed DAOs where smart contracts exclusively manage the entity and no member has fiduciary duties except as provided in the articles or operating agreement. Utah goes further by mandating transparency through a publicly available human-readable interface explaining governance and operations, a requirement that no other DAO statute imposes. Vermont offers the most conservative model, permitting blockchain governance within a standard LLC without eliminating fiduciary duties---smart contracts serve as supplements, not substitutes, for traditional governance. These divergent approaches raise the question of whether the states are converging on a common model or running a competition to attract DAO registrations by progressively reducing legal obligations.",
+    "concepts": ["fiduciary waiver", "algorithmic management", "DAO statutes", "good faith covenant", "regulatory competition"],
+    "chapterUse": [6, 5]
+  },
+  {
+    "number": "11.01",
+    "title": "The Final Period Problem in Mergers and Acquisitions",
+    "article": "Chapter 11",
+    "text": "In the ordinary course of business, the relationship between directors and shareholders is governed by the business judgment rule because the market provides a natural check on managerial behavior. A merger changes this dynamic because it represents the final period of the game. When a company is sold for cash, the shareholders are cashed out and lose their ability to vote on future corporate conduct. The directors and managers face the termination of their tenure and may be motivated by self-interest, such as securing severance payments or future board seats, rather than maximizing the value of the firm for the shareholders. This divergence of interests creates what economists call the agency cost of the final period. Delaware courts must balance the competing interests of three powerful groups: managers who decide where to incorporate and seek discretion, institutional shareholders who seek value maximization, and the federal government whose threat of preemption acts as a ceiling on how much deference Delaware can show to managers.",
+    "concepts": ["final period problem", "agency costs", "business judgment rule", "change of control", "Delaware equilibrium"],
+    "chapterUse": [11, 9]
+  },
+  {
+    "number": "11.02",
+    "title": "Entire Fairness: Fair Dealing and Fair Price",
+    "article": "Chapter 11",
+    "text": "The concept of fairness has two basic aspects: fair dealing and fair price. Fair dealing embraces questions of when the transaction was timed, how it was initiated, structured, negotiated, disclosed to the directors, and how the approvals of directors and stockholders were obtained. Fair price relates to the economic and financial considerations of the proposed merger. However, the test for fairness is not a bifurcated one---all aspects must be examined as a whole since the question is one of entire fairness. When directors of a Delaware corporation are on both sides of a transaction, they are required to demonstrate their utmost good faith and the most scrupulous inherent fairness of the bargain. There is no safe harbor for divided loyalties. One possessing superior knowledge may not mislead any stockholder by use of corporate information to which the latter is not privy. The Weinberger court also abandoned the Delaware Block Method of valuation in favor of any techniques generally accepted in the financial community.",
+    "concepts": ["entire fairness", "fair dealing", "fair price", "conflict of interest", "Weinberger"],
+    "chapterUse": [11, 13]
+  },
+  {
+    "number": "11.03",
+    "title": "Enhanced Scrutiny: Why Unocal Exists",
+    "article": "Chapter 11",
+    "text": "Because of the omnipresent specter that a board may be acting primarily in its own interests rather than those of the corporation and its shareholders, there is an enhanced duty which calls for judicial examination at the threshold before the protections of the business judgment rule may be conferred. If a defensive measure is to come within the ambit of the business judgment rule, it must be reasonable in relation to the threat posed. This entails an analysis of the nature of the takeover bid and its effect on the corporate enterprise. A corporation does not have unbridled discretion to defeat any perceived threat by any Draconian means available. The board's power to act derives from its fundamental duty to protect the corporate enterprise from harm reasonably perceived, irrespective of its source. Enhanced scrutiny acknowledges that managers are an interest group with a strong incentive to entrench themselves, and shifts the burden of proof to directors to show a legitimate threat and a proportionate response.",
+    "concepts": ["enhanced scrutiny", "Unocal", "proportionality", "entrenchment", "defensive measures"],
+    "chapterUse": [11, 13]
+  },
+  {
+    "number": "11.04",
+    "title": "Revlon Duties: When the Board Becomes an Auctioneer",
+    "article": "Chapter 11",
+    "text": "When the breakup of a company becomes inevitable or a sale of control is initiated, the board's role changes from defenders of the corporate bastion to auctioneers charged with getting the best price for the stockholders at a sale of the company. The duty to maximize immediate value is triggered only when there is a sale of control or a cash-out transaction that represents the final period for the shareholders. If a company agrees to a stock-for-stock merger with another widely held public company, Revlon duties generally do not apply because the shareholders are not being cashed out. Lock-ups that draw bidders into a battle benefit shareholders, but similar measures which end an active auction and foreclose further bidding operate to shareholders' detriment. Once an auction is active, the board may not prefer one bidder over another for reasons unrelated to shareholder value. Revlon is a standard of review, not a code of conduct---there is no single blueprint for selling a company.",
+    "concepts": ["Revlon duties", "sale of control", "auction duty", "lock-ups", "shareholder value maximization"],
+    "chapterUse": [11, 13]
+  },
+  {
+    "number": "11.05",
+    "title": "Substantive Coercion and the Just Say No Defense",
+    "article": "Chapter 11",
+    "text": "Substantive coercion is the risk that stockholders will disbelieve the board's views on value and tender into an inadequate offer. This doctrine allows the board to act as a paternalistic guardian, maintaining a poison pill to block a premium, all-cash, fully financed tender offer that the board believes is inadequate. A board acting in good faith may maintain a poison pill indefinitely, provided the bidder has a theoretical path to win a proxy fight. Directors are not obliged to abandon a deliberately conceived corporate plan for a short-term shareholder profit unless there is clearly no basis to sustain the corporate strategy. The selection of a time frame for achievement of corporate goals is part of the fiduciary duty to manage the corporate enterprise. This ruling tilts the political equilibrium heavily in favor of incumbent managers. By forcing a hostile bidder to win consecutive elections to control a classified board, the law imposes a significant tax on hostile takeovers, reducing the disciplinary power of the market for corporate control.",
+    "concepts": ["substantive coercion", "poison pill", "just say no", "classified board", "shareholder choice"],
+    "chapterUse": [11, 13]
+  },
+  {
+    "number": "14.01",
+    "title": "The Three Solvency Tests and Why They Matter",
+    "article": "Chapter 14",
+    "text": "The balance sheet test asks whether total assets, measured at fair value, exceed total liabilities. A company that fails this test is technically insolvent even if it is currently paying its bills. The cash flow test asks whether the company is able to pay its debts as they come due---whether it has the liquidity to service its obligations without defaulting. A company can be balance-sheet solvent but cash-flow insolvent if it has valuable long-term assets that cannot readily be converted into cash. The capital adequacy test asks whether the company retains enough of a capital buffer, after a given transaction, to survive the foreseeable risks of its business. A company that strips itself of capital may pass the balance sheet test at the moment of transfer while still failing the capital adequacy test because the margin of safety that would have allowed it to absorb unexpected loss has been eliminated. The three tests are independent: a finding of any one is sufficient to support avoidance of a constructive fraudulent transfer.",
+    "concepts": ["balance sheet test", "cash flow test", "capital adequacy", "solvency", "fraudulent transfer"],
+    "chapterUse": [14, 15]
+  },
+  {
+    "number": "14.02",
+    "title": "The Zone of Insolvency and Creditor Standing",
+    "article": "Chapter 14",
+    "text": "When a corporation is solvent, directors' duties may be enforced by shareholders, who are the ultimate beneficiaries of the corporation's growth and increased value. When a corporation is insolvent, its creditors take the place of the shareholders as the residual beneficiaries of any increase in value. Creditors of a Delaware corporation that is either insolvent or in the zone of insolvency have no right to assert direct claims for breach of fiduciary duty against the corporation's directors. Creditor interests during insolvency may be vindicated derivatively, but not through direct claims. Recognizing direct claims would expose directors to additional litigation risk that could cause them to make overly risk-averse decisions, sacrificing long-term enterprise value for short-term preservation of capital. The inevitable result would be to the detriment of creditors themselves, who might otherwise have benefited from corporate risk-taking that increased enterprise value.",
+    "concepts": ["zone of insolvency", "creditor standing", "derivative claims", "Gheewalla", "fiduciary duties"],
+    "chapterUse": [14, 15]
+  },
+  {
+    "number": "14.03",
+    "title": "Reasonably Equivalent Value in Fraudulent Transfer Law",
+    "article": "Chapter 14",
+    "text": "Constructive fraud requires the plaintiff to establish that the debtor received less than reasonably equivalent value in exchange for the transfer, and that the debtor was insolvent at the time or became insolvent as a result. Reasonably equivalent value is not fair market value. The statute does not require dollar-for-dollar equivalence. What it requires is that the transferor receive something that a hypothetical reasonable person would regard as adequate consideration. The doctrine becomes most contested when the consideration is not money but some form of intangible benefit: the opportunity to avoid bankruptcy, continuation of upstream corporate services, or stabilization of an enterprise. Courts scrutinize such claims carefully. In TOUSA, even assuming that all entities would have spiraled into bankruptcy without the transaction, the transaction was still the more harmful option. If bankruptcy was inevitable either way, the transaction could not have conferred value by giving the subsidiaries an opportunity to avoid it.",
+    "concepts": ["reasonably equivalent value", "constructive fraud", "TOUSA", "intercompany guarantees", "fraudulent conveyance"],
+    "chapterUse": [14, 15]
+  },
+  {
+    "number": "14.04",
+    "title": "Equitable Subordination and the Mobile Steel Test",
+    "article": "Chapter 14",
+    "text": "The standard for equitable subordination has three elements: the claimant must have engaged in some type of inequitable conduct; the misconduct must have resulted in injury to creditors or conferred an unfair advantage on the claimant; and equitable subordination must not be inconsistent with the Bankruptcy Act. Inequitable conduct falls into three categories: fraud, illegality, or breach of fiduciary duties; undercapitalization; and use of the debtor as a mere instrumentality or alter ego. A dominant or controlling stockholder is a fiduciary whose dealings with the corporation are subjected to rigorous scrutiny. When any of their contracts or engagements with the corporation is challenged, the burden is on the director or stockholder not only to prove the good faith of the transaction but also to show its inherent fairness from the viewpoint of the corporation and those interested therein. Equitable subordination is distinct from recharacterization: subordinated debt still participates above equity, while recharacterized equity participates last.",
+    "concepts": ["equitable subordination", "Mobile Steel test", "insider claims", "undercapitalization", "recharacterization"],
+    "chapterUse": [14, 15]
+  }
+]

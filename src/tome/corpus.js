@@ -14,6 +14,7 @@ export const DOCUMENT_CATEGORIES = {
   FEDERAL: "Federal",
   RESTATEMENTS: "Restatements",
   CASES: "Cases",
+  SCHOLARSHIP: "Scholarship",
 };
 
 export const DOCUMENTS = [
@@ -325,6 +326,27 @@ export const DOCUMENTS = [
     sectionsFile: null,
     sections: [],
   },
+  {
+    id: "bacg-textbook",
+    shortName: "BACG",
+    slug: "bacg-textbook",
+    title: "Business Associations: A Casebook on the Law of the Firm",
+    aliases: [
+      "BACG",
+      "Business Associations casebook",
+      "BA textbook",
+      "Law of the Firm",
+    ],
+    version: "Current edition",
+    versionInUse: "Doctrinal extracts",
+    lastVerified: "2026-04-03",
+    coverage: COVERAGE_BADGES.KEY_SECTIONS,
+    chapters: [1, 2, 3, 4, 5, 6, 11, 14],
+    hierarchyType: "scholarship",
+    category: DOCUMENT_CATEGORIES.SCHOLARSHIP,
+    sectionsFile: "scholarship-sections.json",
+    sections: [],
+  },
 ];
 
 /* ---------- Lazy-loading infrastructure ---------- */
@@ -343,6 +365,7 @@ const SECTION_LOADERS = {
   "exchange-act-sections.json": () => import("../data/tome/exchange-act-sections.json"),
   "genius-act-sections.json": () => import("../data/tome/genius-act-sections.json"),
   "irc-sections.json": () => import("../data/tome/irc-sections.json"),
+  "scholarship-sections.json": () => import("../data/tome/scholarship-sections.json"),
 };
 
 /**
