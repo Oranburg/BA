@@ -86,7 +86,7 @@ function SearchBar() {
       />
 
       {query.length > 1 && (
-        <div className="absolute left-0 right-0 top-full z-20 mt-1 max-h-80 overflow-auto rounded-lg border border-sprawl-yellow/20 bg-sprawl-deep-blue shadow-2xl">
+        <div className="absolute left-0 right-0 top-full z-20 mt-1 max-h-96 overflow-auto rounded-lg border border-sprawl-yellow/20 bg-sprawl-deep-blue shadow-2xl">
           {result?.type === "not-in-corpus" && (
             <p className="p-3 font-ui text-sm text-gray-400">{result.message}</p>
           )}

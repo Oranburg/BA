@@ -137,29 +137,75 @@ export function resolveQuery(input) {
   const documents = DOCUMENTS.filter((doc) => {
     const hay = [doc.shortName, doc.title, ...(doc.aliases || [])].join(" ");
     return normalize(hay).includes(qNorm);
-  }).slice(0, 7);
+  }).slice(0, 10);
 
-  const sections = SECTION_INDEX.filter(({ doc, section }) => {
-    const hay = `${doc.shortName} ${doc.title} ${section.number} ${section.title} ${(section.concepts || []).join(" ")} ${section.text}`;
-    return normalize(hay).includes(qNorm);
-  })
-    .slice(0, 7)
-    .map((row, i) => ({
-      ...row,
-      relevance:
-        normalize(row.section.number) === qNorm
-          ? "Exact section match"
-          : normalize(row.section.title).includes(qNorm)
-          ? "Section title match"
-          : normalize(row.section.text).includes(qNorm)
-          ? "Phrase found in text"
-          : "Related concept",
-      emphasized: i === 0,
-    }));
+  // Split query into individual terms for multi-word matching
+  const queryTerms = qNorm.split(/\s+/).filter((t) => t.length > 1);
 
-  const concepts = SECTION_INDEX.filter(({ conceptsNorm }) => conceptsNorm.some((c) => c.includes(qNorm) || qNorm.includes(c)))
-    .slice(0, 7)
-    .map((row) => ({ ...row, relevance: "Related concept" }));
+  // Score and rank all matching sections
+  const scored = SECTION_INDEX.map(({ doc, section, idx, key, sectionNorm, conceptsNorm }) => {
+    let score = 0;
+    let relevance = "";
+    const titleNorm = normalize(section.title);
+    const textNorm = normalize(section.text);
+
+    // Exact section number match (highest priority)
+    if (sectionNorm === qNorm) {
+      score += 100;
+      relevance = "Exact section match";
+    }
+
+    // Section title contains full query
+    if (titleNorm.includes(qNorm)) {
+      score += 50;
+      relevance = relevance || "Title match";
+    }
+
+    // Concept tag match (strong signal — these are curated)
+    const conceptHits = conceptsNorm.filter((c) => c.includes(qNorm) || qNorm.includes(c)).length;
+    if (conceptHits > 0) {
+      score += 30 * conceptHits;
+      relevance = relevance || "Concept match";
+    }
+
+    // Individual term matching for multi-word queries
+    if (queryTerms.length > 1) {
+      const titleTermHits = queryTerms.filter((t) => titleNorm.includes(t)).length;
+      const conceptTermHits = queryTerms.filter((t) => conceptsNorm.some((c) => c.includes(t))).length;
+      const textTermHits = queryTerms.filter((t) => textNorm.includes(t)).length;
+      score += titleTermHits * 15;
+      score += conceptTermHits * 12;
+      score += textTermHits * 3;
+      if (score > 0 && !relevance) {
+        relevance = titleTermHits > 0 ? "Title match" : conceptTermHits > 0 ? "Concept match" : "Text match";
+      }
+    }
+
+    // Full-text contains full query phrase
+    if (score === 0 && textNorm.includes(qNorm)) {
+      score += 10;
+      relevance = "Phrase found in text";
+    }
+
+    // Single-term text match (weakest)
+    if (score === 0 && queryTerms.length === 1 && textNorm.includes(qNorm)) {
+      score += 5;
+      relevance = "Text match";
+    }
+
+    return score > 0 ? { doc, section, idx, key, score, relevance, emphasized: false } : null;
+  }).filter(Boolean);
+
+  // Sort by score descending, take top 15
+  scored.sort((a, b) => b.score - a.score);
+  const sections = scored.slice(0, 15);
+  if (sections.length > 0) sections[0].emphasized = true;
+
+  // Separate concept matches (deduplicated from sections)
+  const sectionKeys = new Set(sections.map((s) => s.key));
+  const concepts = scored
+    .filter((s) => !sectionKeys.has(s.key) && s.relevance === "Concept match")
+    .slice(0, 10);
 
   if (documents.length === 0 && sections.length === 0 && concepts.length === 0) {
     return {
