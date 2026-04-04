@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-04-04T02:55:29.441883+00:00",
+  "schema_version": "2.0",
+  "source_file_count": 66,
+  "eligible_source_count": 46,
+  "processed_now_count": 0,
+  "previously_completed_valid_count": 46,
+  "repaired_now_count": 0,
+  "remaining_unconverted_eligible": [],
+  "remaining_unconverted_eligible_count": 0,
+  "duplicates": {
+    "source_content_hash_duplicates": [
+      {
+        "checksum": "1556626794aae962b182510036a6160ddb368633ac1e9008aa6e44c4c490e6fb",
+        "paths": [
+          "inbox/New Boston 2077.png",
+          "inbox/images/New Boston 2077.png"
+        ]
+      }
+    ],
+    "output_id_duplicates": [],
+    "segment_id_duplicates": []
+  },
+  "validation": {
+    "record_parse_errors": [],
+    "segment_parse_errors": [],
+    "canonical_validation_errors": [],
+    "truncation_or_corruption_signals": []
+  },
+  "is_complete_for_eligible_sources": true
+}

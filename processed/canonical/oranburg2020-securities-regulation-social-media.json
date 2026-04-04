@@ -1,0 +1,38 @@
+{
+  "id": "adad293b43b5f53d954d2a206ad91712",
+  "source": {
+    "path": "inbox/Oranburg2020_Securities-Regulation-Social-Media.pdf",
+    "type": "pdf",
+    "checksum": "e349f2e2bb24cdc1ea0f6660d2d9f4501b9a5d2caf3509cd06456d38e27e35e1",
+    "file_id": "oranburg2020-securities-regulation-social-media"
+  },
+  "metadata": {
+    "title": "Oranburg2020_Securities-Regulation-Social-Media",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 808889
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_pdf",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.514715+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

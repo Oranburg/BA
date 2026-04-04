@@ -1,0 +1,48 @@
+{
+  "id": "b7f6b877204531640a72afd3612aef5a",
+  "source": {
+    "path": "inbox/sims/mod5.html",
+    "type": "html",
+    "checksum": "71da9f5c7e38eb393851ba3e6a60bea8dddd2b9d63dda5be800f83f2260a8ff8",
+    "file_id": "mod5"
+  },
+  "metadata": {
+    "title": "mod5",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 20007
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 5: The Governance Hybrid Goal: Organize/Organize -> Viz: Interactive Selection Cards -> Interaction: Click to toggle state. 2. Governance Matrix -> Goal: Relationship/Compare -> Viz: Chart.js Donut Chart -> Interaction: Dynamic updates based on state. 3. Tome of Law -> Goal: Inform -> Viz: Sidebar. Confirming NO SVG/Mermaid. --> The Governance Hybrid Chapter 5: Limited Liability Companies RULLCA Protocol ⚖ Statutory HUD RULLCA § 407 LLCs are member-managed by default unless the operating agreement specifically provides for a manager-managed structure. RULLCA § 105 The Operating Agreement governs the relations among the members and the company. It is the core of the LLC's contractual freedom. The Mission Zeeva wants to focus on architectural code. Sammy wants to run the street-ops. They need an LLC structure that defines who has the final say without the \"Board\" overhead of a corporation. I. The OA Terminal Configure the Operating Agreement . Your choices will shift the balance of power between Zeeva (Member) and Sammy (Fixer). Management Structure Member-Managed Partnership Style (Default) Manager-Managed Corporate Style Fiduciary Standards Strict Duties Full Loyalty/Care Modified Duties Contractual Waivers Economic Allocation Equal Share 50/50 Split Pro Rata By Contribution Governance Matrix Zeeva (Member Control) 50% Sammy (Agency Authority) 50% Contractual Flexibility 20% II. Finalize Agreement \"By selecting a Member-managed structure and Strict fiduciary standards, Zeeva and Sammy have leveraged the ... Rigidity Contractual Freedom of the LLC. Under RULLCA, this ... Operating Agreement Charter serves as the primary source of ... Debt Governance , proving that the LLC is a true ... Hybrid Monolith between partnership flexibility and corporate shielding.\" SIGN & DEPLOY OA Acknowledge",
+    "blocks": [
+      {
+        "id": "mod5:0000:neon-edge-module-5-the-governance-hybrid",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 5: The Governance Hybrid",
+        "text": "Neon Edge | Module 5: The Governance Hybrid Goal: Organize/Organize -> Viz: Interactive Selection Cards -> Interaction: Click to toggle state. 2. Governance Matrix -> Goal: Relationship/Compare -> Viz: Chart.js Donut Chart -> Interaction: Dynamic updates based on state. 3. Tome of Law -> Goal: Inform -> Viz: Sidebar. Confirming NO SVG/Mermaid. --> The Governance Hybrid Chapter 5: Limited Liability Companies RULLCA Protocol ⚖ Statutory HUD RULLCA § 407 LLCs are member-managed by default unless the operating agreement specifically provides for a manager-managed structure. RULLCA § 105 The Operating Agreement governs the relations among the members and the company. It is the core of the LLC's contractual freedom. The Mission Zeeva wants to focus on architectural code. Sammy wants to run the street-ops. They need an LLC structure that defines who has the final say without the \"Board\" overhead of a corporation. I. The OA Terminal Configure the Operating Agreement . Your choices will shift the balance of power between Zeeva (Member) and Sammy (Fixer). Management Structure Member-Managed Partnership Style (Default) Manager-Managed Corporate Style Fiduciary Standards Strict Duties Full Loyalty/Care Modified Duties Contractual Waivers Economic Allocation Equal Share 50/50 Split Pro Rata By Contribution Governance Matrix Zeeva (Member Control) 50% Sammy (Agency Authority) 50% Contractual Flexibility 20% II. Finalize Agreement \"By selecting a Member-managed structure and Strict fiduciary standards, Zeeva and Sammy have leveraged the ... Rigidity Contractual Freedom of the LLC. Under RULLCA, this ... Operating Agreement Charter serves as the primary source of ... Debt Governance , proving that the LLC is a true ... Hybrid Monolith between partnership flexibility and corporate shielding.\" SIGN & DEPLOY OA Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "31feb7d2f7882447"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.535477+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

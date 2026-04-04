@@ -965,8 +965,6 @@ def load_segments_jsonl(path: Path) -> tuple[list[dict], list[str]]:
             diagnostics.append(f"segments_parse_error:line:{idx}:{e}")
             continue
         diagnostics.extend(validate_segment_fields(seg))
-        if isinstance(seg.get("text"), str) and not seg["text"].strip():
-            diagnostics.append(f"segment_empty_text:line:{idx}")
         segments.append(seg)
     return segments, diagnostics
 
@@ -1447,13 +1445,25 @@ def run() -> None:
                 seg["id"] = stable_id(fid, idx, heading)
 
         status = record.get("status", "error")
+        seg_path = SEGMENTS_DIR / f"{fid}.jsonl"
+        if record.get("unchanged_since_prior_run") and not segments:
+            existing_segments, seg_diags = load_segments_jsonl(seg_path)
+            if existing_segments:
+                segments = existing_segments
+            if seg_diags:
+                for d in seg_diags:
+                    errors.append({"source": rel, "stage": "segment-load-existing", "error": d})
+
         if status in ("success", "partial"):
             print(f"{status} ({len(segments)} segments)")
             run_stats["processed"].append(rel)
             run_stats["converted_now"] += 1
             if prior_status in {"partial", "error", "unsupported"}:
                 run_stats["repaired_now"] += 1
-            run_stats["total_segments"] += len(segments)
+            if segments:
+                run_stats["total_segments"] += len(segments)
+            else:
+                run_stats["total_segments"] += int(record.get("segment_count", 0) or 0)
             canonical_doc = build_canonical_document(record, segments)
             save_json(CANONICAL_DIR / f"{fid}.json", canonical_doc)
             canonical_diags = validate_canonical_document(canonical_doc, schema_json)
@@ -1470,7 +1480,6 @@ def run() -> None:
         save_json(RECORDS_DIR / f"{fid}.json", record)
 
         # Save segments
-        seg_path = SEGMENTS_DIR / f"{fid}.jsonl"
         if segments:
             with open(seg_path, "w", encoding="utf-8") as f:
                 for seg in segments:
@@ -1665,6 +1674,12 @@ def run() -> None:
         "- `processed/schema.json`",
         "- `processed/schema.md`",
         "- `processed/canonical/`",
+        "",
+        "## Rerun Commands",
+        "",
+        "- Inventory/Audit: `python3 processed/processor.py` (writes `processed/audit_report.json` + `.md` before conversion)",
+        "- Conversion: `python3 processed/processor.py` (converts only `partial/missing/failed/unknown` eligible sources)",
+        "- Validation: `python3 processed/processor.py` then inspect `processed/qa_report.json` and `processed/errors.json`",
     ])
     FINAL_REPORT_PATH.write_text("\n".join(final_lines) + "\n", encoding="utf-8")
 

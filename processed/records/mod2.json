@@ -1,0 +1,21 @@
+{
+  "file_id": "mod2",
+  "original_path": "inbox/sims/mod2.html",
+  "original_name": "mod2.html",
+  "extension": ".html",
+  "size_bytes": 19786,
+  "content_hash": "9f9e23b16b35d48f7be2d4848f31e2bc044cac2b905343046b43d4871aa5db1f",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.532493+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod2:0000:neon-edge-module-2-the-partnership-forge"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

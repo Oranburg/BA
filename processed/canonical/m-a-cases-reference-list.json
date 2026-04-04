@@ -1,0 +1,38 @@
+{
+  "id": "ac73acb6fd86a826d8be427aeb6bd309",
+  "source": {
+    "path": "inbox/M&A - Cases Reference List.md",
+    "type": "md",
+    "checksum": "2b73955792ea05e56dbb8fdb7c5b5a87ed5bb6f8d7f39e5888272bff37e7600a",
+    "file_id": "m-a-cases-reference-list"
+  },
+  "metadata": {
+    "title": "M&A - Cases Reference List",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 4974
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.512522+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

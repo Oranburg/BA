@@ -1,0 +1,38 @@
+{
+  "id": "04ecb2443daf2b084a26802373fe7acf",
+  "source": {
+    "path": "inbox/Unocal.md",
+    "type": "md",
+    "checksum": "bb29098a7bf21f255a9bd365cc1f11049eb6043f56012846088228a5acdbd0c6",
+    "file_id": "unocal"
+  },
+  "metadata": {
+    "title": "Unocal",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "case",
+    "size_bytes": 32271
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.521409+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

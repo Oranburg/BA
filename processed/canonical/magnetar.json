@@ -1,0 +1,38 @@
+{
+  "id": "3f598caf519caa556069202f46bd92d0",
+  "source": {
+    "path": "inbox/Magnetar.md",
+    "type": "md",
+    "checksum": "5c8d7233a01215fb96751f9ff16c0a389ccc4ac972780b0ab3637203446e9e77",
+    "file_id": "magnetar"
+  },
+  "metadata": {
+    "title": "Magnetar",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "case",
+    "size_bytes": 12205
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.513062+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

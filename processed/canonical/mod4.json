@@ -1,0 +1,48 @@
+{
+  "id": "55434c8b375ba3e39b757d92ac9d82c4",
+  "source": {
+    "path": "inbox/sims/mod4.html",
+    "type": "html",
+    "checksum": "ea067a0dd6e8c4c52cc448adf5de5b7a7e4c5ee912dc3245419264f748894853",
+    "file_id": "mod4"
+  },
+  "metadata": {
+    "title": "mod4",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 15224
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 4: The Technology of Scaling The Technology of Scaling Chapter 4: The Problem of Partitioning Entity Formation ⚙ Statutory Tech Affirmative Partitioning Also known as Entity Shielding . It protects the firm's assets from the personal creditors of the owners. Defensive Partitioning Also known as Limited Liability . It protects the owners' personal assets from the firm's creditors. The Scaling Hurdle To build the Sector 7 Sky-Tower, Zeeva needs external capital. Investors won't provide credits if they risk their entire net worth on a single structural failure. I. Configuring the Partition In a Partnership, assets are \"commingled\" by default liability. Zeeva and Sammy are upgrading to SP Corp . Drag the creditor types to the correct side of the partition to test the new legal technology. Sammy's Personal Creditor (Landlord) SP Corp Business Creditor (Steel Supplier) Personal Domain (Zeeva & Sammy) Sammy's Personal Credits Zeeva's Hardware Goal: Block Business Creditors here (Limited Liability). The Entity (SP Corp) Sky-Tower Blueprints Entity Capital Goal: Block Personal Creditors here (Entity Shielding). Partitioning Status: SECURE III. The Technology of the Firm \"The essential innovation of the corporation is not just management, but ... Marketing Asset Partitioning . By creating a separate legal person, the law provides ... Entity Shielding Transactional Speed to protect the firm's assets from the owners' personal debts, and ... Limited Liability Voting Rights to protect the owners from the firm's failures. This technology allows ... Scaling Social Networking to occur without infinite risk.\" UPLOAD CHARTER TO LEDGER Acknowledge",
+    "blocks": [
+      {
+        "id": "mod4:0000:neon-edge-module-4-the-technology-of-sca",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 4: The Technology of Scaling",
+        "text": "Neon Edge | Module 4: The Technology of Scaling The Technology of Scaling Chapter 4: The Problem of Partitioning Entity Formation ⚙ Statutory Tech Affirmative Partitioning Also known as Entity Shielding . It protects the firm's assets from the personal creditors of the owners. Defensive Partitioning Also known as Limited Liability . It protects the owners' personal assets from the firm's creditors. The Scaling Hurdle To build the Sector 7 Sky-Tower, Zeeva needs external capital. Investors won't provide credits if they risk their entire net worth on a single structural failure. I. Configuring the Partition In a Partnership, assets are \"commingled\" by default liability. Zeeva and Sammy are upgrading to SP Corp . Drag the creditor types to the correct side of the partition to test the new legal technology. Sammy's Personal Creditor (Landlord) SP Corp Business Creditor (Steel Supplier) Personal Domain (Zeeva & Sammy) Sammy's Personal Credits Zeeva's Hardware Goal: Block Business Creditors here (Limited Liability). The Entity (SP Corp) Sky-Tower Blueprints Entity Capital Goal: Block Personal Creditors here (Entity Shielding). Partitioning Status: SECURE III. The Technology of the Firm \"The essential innovation of the corporation is not just management, but ... Marketing Asset Partitioning . By creating a separate legal person, the law provides ... Entity Shielding Transactional Speed to protect the firm's assets from the owners' personal debts, and ... Limited Liability Voting Rights to protect the owners from the firm's failures. This technology allows ... Scaling Social Networking to occur without infinite risk.\" UPLOAD CHARTER TO LEDGER Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "e8bd7241c2c2acf2"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.534579+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "876670eacd5b0937cbc0d5b53063ad2a",
+  "source": {
+    "path": "inbox/Revlon.md",
+    "type": "md",
+    "checksum": "6fdddad1adedab1a5301cd08be31681ec45f1ca9b7c3b0c47a045b1e6f1d892f",
+    "file_id": "revlon"
+  },
+  "metadata": {
+    "title": "Revlon",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "case",
+    "size_bytes": 33481
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.518721+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

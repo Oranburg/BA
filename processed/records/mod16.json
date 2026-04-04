@@ -1,0 +1,21 @@
+{
+  "file_id": "mod16",
+  "original_path": "inbox/sims/mod16.html",
+  "original_name": "mod16.html",
+  "extension": ".html",
+  "size_bytes": 20093,
+  "content_hash": "bbe990509879af8eb2f4ed437107851d0b970055b3a582d8fe9c0daa0c4a0a75",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.531422+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod16:0000:neon-edge-module-16-lifecycle-synthesis"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

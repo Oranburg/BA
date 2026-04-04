@@ -1,0 +1,38 @@
+{
+  "id": "b37cff50d1077c42b63934821a6f8ae9",
+  "source": {
+    "path": "inbox/Weinberger.md",
+    "type": "md",
+    "checksum": "51b69a6c0c565bebb2de8e2d45b0c0a2249ebb0066d3e82eaa814225b42d3b6e",
+    "file_id": "weinberger"
+  },
+  "metadata": {
+    "title": "Weinberger",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "case",
+    "size_bytes": 46948
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.522049+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

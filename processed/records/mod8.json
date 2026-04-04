@@ -1,0 +1,21 @@
+{
+  "file_id": "mod8",
+  "original_path": "inbox/sims/mod8.html",
+  "original_name": "mod8.html",
+  "extension": ".html",
+  "size_bytes": 22861,
+  "content_hash": "99fa497a53f0dcf813530c0e544a427f006f754d076c3ef4749db65ad096861d",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.538483+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod8:0000:neon-edge-module-8-entity-selection"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "c817783304c71aceea000e5978086956",
+  "source": {
+    "path": "inbox/BACG - Ch 11 Mergers and Acquisitions.md",
+    "type": "md",
+    "checksum": "482b4d5e27d0b71469274c4a04c4c6160e2d1b190b19ffba532abae704cfee6c",
+    "file_id": "bacg-ch-11-mergers-and-acquisitions"
+  },
+  "metadata": {
+    "title": "BACG - Ch 11 Mergers and Acquisitions",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "casebook",
+    "size_bytes": 101703
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.346941+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

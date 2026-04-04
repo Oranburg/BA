@@ -1,0 +1,21 @@
+{
+  "file_id": "mod14",
+  "original_path": "inbox/sims/mod14.html",
+  "original_name": "mod14.html",
+  "extension": ".html",
+  "size_bytes": 19635,
+  "content_hash": "17289ee45a7ac066673ec6d1c0766081964b24b393090b02a2454d1278b34c18",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.529490+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod14:0000:neon-edge-module-14-piercing-the-veil"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

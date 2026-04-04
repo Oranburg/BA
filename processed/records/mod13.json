@@ -1,0 +1,21 @@
+{
+  "file_id": "mod13",
+  "original_path": "inbox/sims/mod13.html",
+  "original_name": "mod13.html",
+  "extension": ".html",
+  "size_bytes": 17406,
+  "content_hash": "3f3a8a8744f4afc6a2a6e50a303507b7678a53f4674a9978ad224d5d93ae025c",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.528503+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod13:0000:neon-edge-module-13-the-m-a-gambit"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

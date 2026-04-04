@@ -1,0 +1,22 @@
+{
+  "file_id": "lotf-references-4-1-6",
+  "original_path": "inbox/LotF References 4-1-6.md",
+  "original_name": "LotF References 4-1-6.md",
+  "extension": ".md",
+  "size_bytes": 785013,
+  "content_hash": "791a21de4ef3d2757b3d4441e84788cc15cbf4b0fb9950787e4d9656fddd9ca3",
+  "source_family": "casebook",
+  "last_processed": "2026-04-04T02:54:46.418712+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_markdown",
+  "segmentation_strategy": "heading-based",
+  "segment_count": 2,
+  "segment_ids": [
+    "lotf-references-4-1-6:0000",
+    "lotf-references-4-1-6:0001:references"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

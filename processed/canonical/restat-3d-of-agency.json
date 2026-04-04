@@ -1,0 +1,38 @@
+{
+  "id": "1564f8d8b116a5e129eb7c3aa9be3a64",
+  "source": {
+    "path": "inbox/Restat 3d of Agency.md",
+    "type": "md",
+    "checksum": "288f390f74ac5f47fcb081bda1464ea0deb35f3c58b546dcb9926e47a5013450",
+    "file_id": "restat-3d-of-agency"
+  },
+  "metadata": {
+    "title": "Restat 3d of Agency",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "statute",
+    "size_bytes": 2785538
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.518201+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

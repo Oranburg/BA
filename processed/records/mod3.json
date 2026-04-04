@@ -1,0 +1,21 @@
+{
+  "file_id": "mod3",
+  "original_path": "inbox/sims/mod3.html",
+  "original_name": "mod3.html",
+  "extension": ".html",
+  "size_bytes": 20905,
+  "content_hash": "21f5410a3a42fd61997d5324028d86b39322e62647d8507f7ff1d7ba311077c6",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.533545+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod3:0000:neon-edge-module-3-the-fiduciary-pivot"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

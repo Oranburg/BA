@@ -1,0 +1,48 @@
+{
+  "id": "b442558ae78981eef109a30e9256f7ce",
+  "source": {
+    "path": "inbox/sims/mod9.html",
+    "type": "html",
+    "checksum": "2a54e0408b5b00969e6d460c1b786adb78d94d61dc09ff414f58644126ec76ce",
+    "file_id": "mod9"
+  },
+  "metadata": {
+    "title": "mod9",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 17972
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 9: The Fiduciary Shield The Fiduciary Shield Chapter 9: Governance & The Business Judgment Rule Standard of Scrutiny: BJR 📜 Board HUD Business Judgment Rule A presumption that directors acted on an **informed basis**, in **good faith**, and in the **honest belief** that the action was in the best interests of the company. DGCL § 144 (Cleansing) No contract is voidable solely because of a director's interest IF: (1) Disclosed and Approved by disinterested directors, OR (2) Disclosed and Approved by shareholders, OR (3) Fair to the corporation. The Scenario Sammy wants SP Corp to lease a \"Cloud-Mine\" from a provider owned by his cousin. Zeeva must decide if the board will approve this 1,000,000 credit deal. Shareholders are watching. I. Board Deliberations Review the transaction data. To retain the Fiduciary Shield , the board must satisfy the requirements of Care, Loyalty, and Good Faith. Duty of Care (Process) Hire external auditors to review market pricing? (Informed Basis) Hold multiple meetings to discuss the deal? (Non-Hasty) Duty of Loyalty (Conflict) Full disclosure of Sammy's family tie? (Loyalty Cleansing) Vote limited to disinterested directors? (Governance Control) 🛡 No Presumption Judicial Scrutiny Meter Governance Analysis Awaiting board action. Without a diligent process, the Business Judgment Rule presumption will not attach. Burden of Proof: PLAINTIFF Board Resolution v9.1 \"Because the directors acted on an ... Uninformed Informed basis and ensured the conflict was ... Hidden Disclosed and Approved , the board retains the ... Business Judgment Rule Shield Liability Stream . The court will not substitute its own judgment for the board's unless the plaintiff can prove ... Efficiency Waste or Fraud .\" Upload Minutes to Ledger Acknowledge",
+    "blocks": [
+      {
+        "id": "mod9:0000:neon-edge-module-9-the-fiduciary-shield",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 9: The Fiduciary Shield",
+        "text": "Neon Edge | Module 9: The Fiduciary Shield The Fiduciary Shield Chapter 9: Governance & The Business Judgment Rule Standard of Scrutiny: BJR 📜 Board HUD Business Judgment Rule A presumption that directors acted on an **informed basis**, in **good faith**, and in the **honest belief** that the action was in the best interests of the company. DGCL § 144 (Cleansing) No contract is voidable solely because of a director's interest IF: (1) Disclosed and Approved by disinterested directors, OR (2) Disclosed and Approved by shareholders, OR (3) Fair to the corporation. The Scenario Sammy wants SP Corp to lease a \"Cloud-Mine\" from a provider owned by his cousin. Zeeva must decide if the board will approve this 1,000,000 credit deal. Shareholders are watching. I. Board Deliberations Review the transaction data. To retain the Fiduciary Shield , the board must satisfy the requirements of Care, Loyalty, and Good Faith. Duty of Care (Process) Hire external auditors to review market pricing? (Informed Basis) Hold multiple meetings to discuss the deal? (Non-Hasty) Duty of Loyalty (Conflict) Full disclosure of Sammy's family tie? (Loyalty Cleansing) Vote limited to disinterested directors? (Governance Control) 🛡 No Presumption Judicial Scrutiny Meter Governance Analysis Awaiting board action. Without a diligent process, the Business Judgment Rule presumption will not attach. Burden of Proof: PLAINTIFF Board Resolution v9.1 \"Because the directors acted on an ... Uninformed Informed basis and ensured the conflict was ... Hidden Disclosed and Approved , the board retains the ... Business Judgment Rule Shield Liability Stream . The court will not substitute its own judgment for the board's unless the plaintiff can prove ... Efficiency Waste or Fraud .\" Upload Minutes to Ledger Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "3e6f6d63e3407c5e"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.539517+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

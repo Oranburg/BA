@@ -24,7 +24,43 @@
       "lessons": [
         "Clean run: all files processed or skipped as unchanged"
       ]
+    },
+    {
+      "run_start": "2026-04-04T02:54:46.142121+00:00",
+      "run_end": "2026-04-04T02:54:46.540464+00:00",
+      "files_processed": 46,
+      "files_skipped": 0,
+      "files_failed": 0,
+      "files_not_eligible": 20,
+      "total_segments": 19,
+      "lessons": [
+        "Clean conversion pass for eligible files targeted by audit"
+      ]
+    },
+    {
+      "run_start": "2026-04-04T02:55:07.165395+00:00",
+      "run_end": "2026-04-04T02:55:07.475526+00:00",
+      "files_processed": 8,
+      "files_skipped": 38,
+      "files_failed": 0,
+      "files_not_eligible": 20,
+      "total_segments": 1820,
+      "lessons": [
+        "Clean conversion pass for eligible files targeted by audit"
+      ]
+    },
+    {
+      "run_start": "2026-04-04T02:55:28.875492+00:00",
+      "run_end": "2026-04-04T02:55:29.111982+00:00",
+      "files_processed": 0,
+      "files_skipped": 46,
+      "files_failed": 0,
+      "files_not_eligible": 20,
+      "total_segments": 1820,
+      "lessons": [
+        "Clean conversion pass for eligible files targeted by audit"
+      ]
     }
   ],
-  "last_updated": "2026-04-03T18:02:01.663639+00:00"
+  "last_updated": "2026-04-04T02:55:29.111991+00:00"
 }

@@ -1,0 +1,50 @@
+{
+  "schema_version": "2.0",
+  "record_type": "canonical-source-document",
+  "required_top_level_fields": [
+    "id",
+    "source",
+    "metadata",
+    "content",
+    "relations",
+    "provenance",
+    "fidelity"
+  ],
+  "source_required_fields": [
+    "path",
+    "type",
+    "checksum",
+    "file_id"
+  ],
+  "metadata_required_fields": [
+    "title",
+    "source_family"
+  ],
+  "content_required_fields": [
+    "raw_text",
+    "blocks",
+    "segment_count"
+  ],
+  "block_required_fields": [
+    "id",
+    "type",
+    "text",
+    "source_locator",
+    "content_hash"
+  ],
+  "provenance_required_fields": [
+    "parser_name",
+    "parser_version",
+    "parsed_at",
+    "warnings"
+  ],
+  "fidelity_required_fields": [
+    "level",
+    "extraction_confidence"
+  ],
+  "notes": [
+    "IDs must be deterministic from source path + checksum.",
+    "Timestamps should be ISO-8601 where available.",
+    "All extracted fields should preserve source locators for traceability."
+  ]
+}

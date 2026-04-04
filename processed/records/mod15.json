@@ -1,0 +1,21 @@
+{
+  "file_id": "mod15",
+  "original_path": "inbox/sims/mod15.html",
+  "original_name": "mod15.html",
+  "extension": ".html",
+  "size_bytes": 18750,
+  "content_hash": "00923d4d051ba27e9c784cbdf904d1b388632a13839cc11ca14e41e6b100141b",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.530467+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod15:0000:neon-edge-module-15-the-solvency-breach"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

@@ -1,0 +1,21 @@
+{
+  "file_id": "mod6",
+  "original_path": "inbox/sims/mod6.html",
+  "original_name": "mod6.html",
+  "extension": ".html",
+  "size_bytes": 19962,
+  "content_hash": "d90b1a35cd595a11245d189aff9f22c571cc5162ad2e47307ac955349ccb481f",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.536456+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod6:0000:neon-edge-module-6-the-nondistribution-c"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

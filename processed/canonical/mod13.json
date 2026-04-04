@@ -1,0 +1,48 @@
+{
+  "id": "fda4246371aa62265c2d65b8ff07b36a",
+  "source": {
+    "path": "inbox/sims/mod13.html",
+    "type": "html",
+    "checksum": "3f3a8a8744f4afc6a2a6e50a303507b7678a53f4674a9978ad224d5d93ae025c",
+    "file_id": "mod13"
+  },
+  "metadata": {
+    "title": "mod13",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 17406
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 13: The M&A Gambit Unocal -> Revlon). 4. Synthesis: Final judicial holding on whether the board breached its fiduciary duties in the face of a takeover. Chosen to illustrate the 'Enhanced Scrutiny' required when board control is threatened. --> The M&A Gambit Chapter 13: Mergers, Acquisitions & Takeovers THREAT LEVEL: OMNI-GOLIATH 📜 Scrutiny HUD Unocal Standard If the board adopts defensive measures, it must prove: (1) a threat to corporate policy, and (2) the defense was **proportionate**. Revlon Duties When a sale or break-up is inevitable, the board's duty shifts from preserving the entity to **maximizing shareholder value** (price). The Crisis Goliath Systems has offered 80M credits to bypass the board and buy shares directly. Zeeva believes Goliath will dismantle her architecture. Should she fight or sell? I. Board Strategy: Defensive HUD As the board of SP Corp, select your reaction to the hostile bid. Your choice will determine the Standard of Scrutiny applied by the Council of Sprawl. Activate Poison Pill Dilute Goliath's holding by allowing other shareholders to buy cheap shares. (Unocal Trigger) Seek White Knight Negotiate a friendly merger with a rival megacorp. (Revlon Trigger) Asset Lock-up Sell the 'Sector 7 Hub' blueprints to a third party to make the firm unattractive to Goliath. Neutral Stance Do nothing and allow shareholders to decide. (BJR Preserved) Judicial Scrutiny Meter Active Standard: BJR The board is currently in a passive state. Courts will generally defer to business judgment unless a conflict or defense is triggered. Takeover Resolution v13.0 \"By adopting defensive measures against Goliath, the board has triggered ... Standard BJR Enhanced Scrutiny . If the board enters into a merger that results in a change of control, their duties shift to ... Revlon (Auctioneer) Unocal (Defender) . At this point, the primary objective is no longer the firm's longevity, but obtaining the ... Lowest Liability Highest Price for Shareholders . Failure to act as a neutral auctioneer results in a breach of the ... Duty of Loyalty Duty of Care under the 'Enhanced Scrutiny' framework.\" Submit M&A Record Acknowledge",
+    "blocks": [
+      {
+        "id": "mod13:0000:neon-edge-module-13-the-m-a-gambit",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 13: The M&A Gambit",
+        "text": "Neon Edge | Module 13: The M&A Gambit Unocal -> Revlon). 4. Synthesis: Final judicial holding on whether the board breached its fiduciary duties in the face of a takeover. Chosen to illustrate the 'Enhanced Scrutiny' required when board control is threatened. --> The M&A Gambit Chapter 13: Mergers, Acquisitions & Takeovers THREAT LEVEL: OMNI-GOLIATH 📜 Scrutiny HUD Unocal Standard If the board adopts defensive measures, it must prove: (1) a threat to corporate policy, and (2) the defense was **proportionate**. Revlon Duties When a sale or break-up is inevitable, the board's duty shifts from preserving the entity to **maximizing shareholder value** (price). The Crisis Goliath Systems has offered 80M credits to bypass the board and buy shares directly. Zeeva believes Goliath will dismantle her architecture. Should she fight or sell? I. Board Strategy: Defensive HUD As the board of SP Corp, select your reaction to the hostile bid. Your choice will determine the Standard of Scrutiny applied by the Council of Sprawl. Activate Poison Pill Dilute Goliath's holding by allowing other shareholders to buy cheap shares. (Unocal Trigger) Seek White Knight Negotiate a friendly merger with a rival megacorp. (Revlon Trigger) Asset Lock-up Sell the 'Sector 7 Hub' blueprints to a third party to make the firm unattractive to Goliath. Neutral Stance Do nothing and allow shareholders to decide. (BJR Preserved) Judicial Scrutiny Meter Active Standard: BJR The board is currently in a passive state. Courts will generally defer to business judgment unless a conflict or defense is triggered. Takeover Resolution v13.0 \"By adopting defensive measures against Goliath, the board has triggered ... Standard BJR Enhanced Scrutiny . If the board enters into a merger that results in a change of control, their duties shift to ... Revlon (Auctioneer) Unocal (Defender) . At this point, the primary objective is no longer the firm's longevity, but obtaining the ... Lowest Liability Highest Price for Shareholders . Failure to act as a neutral auctioneer results in a breach of the ... Duty of Loyalty Duty of Care under the 'Enhanced Scrutiny' framework.\" Submit M&A Record Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "4ca28daa85c06538"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.528503+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

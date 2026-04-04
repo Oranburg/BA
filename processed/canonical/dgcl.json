@@ -1,0 +1,38 @@
+{
+  "id": "0ae7d12b59d0e18f4fa7ba540a732bf0",
+  "source": {
+    "path": "inbox/DGCL.pdf",
+    "type": "pdf",
+    "checksum": "fec0a9f81e4256dcadefdba1d70c2402c2cc0988b1f074d64d372ab8362fa456",
+    "file_id": "dgcl"
+  },
+  "metadata": {
+    "title": "DGCL",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "statute",
+    "size_bytes": 1119162
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_pdf",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.414437+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "b7b2c8469e35ee6a411851b6b394dd9a",
+  "source": {
+    "path": "inbox/ExchangeAct1934.pdf",
+    "type": "pdf",
+    "checksum": "9e4620f92849ffa0e9c29061f2bc3e2d1aa1bac689175f029c622da8e5c5f1b7",
+    "file_id": "exchangeact1934"
+  },
+  "metadata": {
+    "title": "ExchangeAct1934",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 939588
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_pdf",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.415641+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

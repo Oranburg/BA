@@ -1,0 +1,38 @@
+{
+  "id": "a655d7c06adc38d91dca27e454d0f49d",
+  "source": {
+    "path": "inbox/SecuritiesAct1933.pdf",
+    "type": "pdf",
+    "checksum": "c67e553505b0329d7c00c49efc2503685cbb2b107883b025025320478522bfc8",
+    "file_id": "securitiesact1933"
+  },
+  "metadata": {
+    "title": "SecuritiesAct1933",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 319758
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_pdf",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.519464+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

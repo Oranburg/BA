@@ -1,0 +1,21 @@
+{
+  "file_id": "mod7",
+  "original_path": "inbox/sims/mod7.html",
+  "original_name": "mod7.html",
+  "extension": ".html",
+  "size_bytes": 17693,
+  "content_hash": "b000c24c4b5adb1f3af12e00fc3884cc26d7bbc4d2ff9426f3d84c9071500fc8",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.537415+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod7:0000:neon-edge-module-7-daos-attribution"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

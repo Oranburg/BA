@@ -1,0 +1,38 @@
+{
+  "id": "0f1eeffa004d988dddc4cd1740b5e64e",
+  "source": {
+    "path": "inbox/mbca-202504-black-letter.docx",
+    "type": "docx",
+    "checksum": "fb48d3010526f7cd5e74e9bf487da25f9561ce4ecb74f26292d3a165b442c0cb",
+    "file_id": "mbca-202504-black-letter"
+  },
+  "metadata": {
+    "title": "mbca-202504-black-letter",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "statute",
+    "size_bytes": 235091
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_docx",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.523514+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

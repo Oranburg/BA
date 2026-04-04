@@ -1,0 +1,188 @@
+{
+  "generated_at": "2026-04-04T02:55:29.442109+00:00",
+  "errors": [
+    {
+      "source": "inbox/BA-canvas-course-export_2025-12-02",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:no-extension"
+    },
+    {
+      "source": "inbox/New Boston 2077.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF-Image08.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image00.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image01.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image02.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image03.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image04.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image05.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image06.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image07.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image09.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image10.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image11.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image12.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image13.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image14.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image15.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image16.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/New Boston 2077.png",
+      "stage": "eligibility",
+      "error": "unsupported_source_type:png"
+    }
+  ],
+  "failed_files": [],
+  "skipped_not_eligible": [
+    {
+      "source": "inbox/BA-canvas-course-export_2025-12-02",
+      "reason": "unsupported_source_type:no-extension"
+    },
+    {
+      "source": "inbox/New Boston 2077.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF-Image08.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image00.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image01.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image02.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image03.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image04.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image05.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image06.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image07.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image09.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image10.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image11.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image12.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image13.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image14.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image15.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/BA-LotF_Image16.png",
+      "reason": "unsupported_source_type:png"
+    },
+    {
+      "source": "inbox/images/New Boston 2077.png",
+      "reason": "unsupported_source_type:png"
+    }
+  ]
+}

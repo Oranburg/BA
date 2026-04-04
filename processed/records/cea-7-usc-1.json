@@ -1,0 +1,21 @@
+{
+  "file_id": "cea-7-usc-1",
+  "original_path": "inbox/CEA 7 USC 1.txt",
+  "original_name": "CEA 7 USC 1.txt",
+  "extension": ".txt",
+  "size_bytes": 639545,
+  "content_hash": "00a49b56b4895fdd8e5a01d2c14a5af6d5732335705bb0312eb52c888ff5e817",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.348526+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_txt",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "cea-7-usc-1:0000:cea-7-usc-1"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

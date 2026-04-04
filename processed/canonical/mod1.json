@@ -1,0 +1,48 @@
+{
+  "id": "4ac36d6970fe2084ebfcfb06ef649f69",
+  "source": {
+    "path": "inbox/sims/mod1.html",
+    "type": "html",
+    "checksum": "3493f22abc8db02c1e942676d65df564cc8a8b7454b0d535c333385a427c1696",
+    "file_id": "mod1"
+  },
+  "metadata": {
+    "title": "mod1",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 20489
+  },
+  "content": {
+    "raw_text": "Business Associations: Law of the Firm - Interactive Explorer Goal: Inform/Organize -> Viz: Interactive Tabs -> Interaction: Click to reveal -> Justification: Breaks dense theory into digestible chunks. 2. Entity Evolution -> Goal: Compare -> Viz: Chart.js Radar Chart -> Interaction: Toggle entity types -> Justification: Radar charts perfectly illustrate trade-offs between liability, flexibility, and regulation. 3. Fiduciary Toolkit -> Goal: Change/Simulate -> Viz: HTML Range Slider -> Interaction: Checkboxes drive the slider -> Justification: Tangibly simulates the Guth v. Loft balancing test. NO SVG/Mermaid used. --> ⚖ Law of the Firm: Interactive Explorer A digital synthesis of Business Associations. Explore the theoretical architecture, entity structures, and fiduciary mechanics that govern the modern firm. I. The Four Problems of the Firm Every business association, from a handshake partnership to a multinational corporation, exists to solve coordination challenges. This section breaks down the foundational framework of the casebook. Click on each of the Four Problems below to understand how the law acts as a technology to resolve them. 🔗 Attribution ⚙ Governance ⚠ Risk 📦 Partitioning Attribution The problem of connecting human action to the artificial firm. A firm cannot act on its own; it requires human agents. Agency Law resolves this by establishing doctrines like Actual Authority and Apparent Authority, determining when a principal is bound by the actions of an agent. Primary Legal Domain: Restatement (Third) of Agency II. Entity Selection & Evolution Matrix As a business scales, the default rules of a Partnership are often insufficient to manage capital and risk. This section compares the three primary statutory entities across key operational metrics. The radar chart below visualizes the trade-offs between flexibility, liability protection, and regulatory burden. 🤝 General Partnership (RUPA) 💼 Limited Liability Co. (RULLCA) 🏢 Corporation (MBCA/DGCL) Partnership: The default entity. High flexibility, but unlimited personal liability for all partners. III. The Fiduciary Lab Governance relies on Fiduciary Duties (Care and Loyalty) to align the interests of directors with the firm. This interactive lab allows you to simulate the Business Judgment Rule (BJR) balancing test. Select the facts of a transaction to see if the director retains the protective shield of the BJR or breaches their duty of loyalty. Fact Pattern Inputs Director made an informed decision (Duty of Care) Director acted in subjective Good Faith Director has a personal financial conflict (Self-Dealing) Director usurped a Corporate Opportunity (Guth v. Loft) Judicial Scrutiny Meter BJR Shield Entire Fairness / Breach Shield Intact: Business Judgment Rule Applies",
+    "blocks": [
+      {
+        "id": "mod1:0000:business-associations-law-of-the-firm-in",
+        "type": "unknown-structured-chunk",
+        "title": "Business Associations: Law of the Firm - Interactive Explorer",
+        "text": "Business Associations: Law of the Firm - Interactive Explorer Goal: Inform/Organize -> Viz: Interactive Tabs -> Interaction: Click to reveal -> Justification: Breaks dense theory into digestible chunks. 2. Entity Evolution -> Goal: Compare -> Viz: Chart.js Radar Chart -> Interaction: Toggle entity types -> Justification: Radar charts perfectly illustrate trade-offs between liability, flexibility, and regulation. 3. Fiduciary Toolkit -> Goal: Change/Simulate -> Viz: HTML Range Slider -> Interaction: Checkboxes drive the slider -> Justification: Tangibly simulates the Guth v. Loft balancing test. NO SVG/Mermaid used. --> ⚖ Law of the Firm: Interactive Explorer A digital synthesis of Business Associations. Explore the theoretical architecture, entity structures, and fiduciary mechanics that govern the modern firm. I. The Four Problems of the Firm Every business association, from a handshake partnership to a multinational corporation, exists to solve coordination challenges. This section breaks down the foundational framework of the casebook. Click on each of the Four Problems below to understand how the law acts as a technology to resolve them. 🔗 Attribution ⚙ Governance ⚠ Risk 📦 Partitioning Attribution The problem of connecting human action to the artificial firm. A firm cannot act on its own; it requires human agents. Agency Law resolves this by establishing doctrines like Actual Authority and Apparent Authority, determining when a principal is bound by the actions of an agent. Primary Legal Domain: Restatement (Third) of Agency II. Entity Selection & Evolution Matrix As a business scales, the default rules of a Partnership are often insufficient to manage capital and risk. This section compares the three primary statutory entities across key operational metrics. The radar chart below visualizes the trade-offs between flexibility, liability protection, and regulatory burden. 🤝 General Partnership (RUPA) 💼 Limited Liability Co. (RULLCA) 🏢 Corporation (MBCA/DGCL) Partnership: The default entity. High flexibility, but unlimited personal liability for all partners. III. The Fiduciary Lab Governance relies on Fiduciary Duties (Care and Loyalty) to align the interests of directors with the firm. This interactive lab allows you to simulate the Business Judgment Rule (BJR) balancing test. Select the facts of a transaction to see if the director retains the protective shield of the BJR or breaches their duty of loyalty. Fact Pattern Inputs Director made an informed decision (Duty of Care) Director acted in subjective Good Faith Director has a personal financial conflict (Self-Dealing) Director usurped a Corporate Opportunity (Guth v. Loft) Judicial Scrutiny Meter BJR Shield Entire Fairness / Breach Shield Intact: Business Judgment Rule Applies",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "6f95b0b6629db81e"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.523999+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

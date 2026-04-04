@@ -1,0 +1,21 @@
+{
+  "file_id": "mod1",
+  "original_path": "inbox/sims/mod1.html",
+  "original_name": "mod1.html",
+  "extension": ".html",
+  "size_bytes": 20489,
+  "content_hash": "3493f22abc8db02c1e942676d65df564cc8a8b7454b0d535c333385a427c1696",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.523999+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod1:0000:business-associations-law-of-the-firm-in"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

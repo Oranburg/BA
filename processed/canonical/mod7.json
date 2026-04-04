@@ -1,0 +1,48 @@
+{
+  "id": "a0ae1e8dc7113eeebc40c7e476c7bb98",
+  "source": {
+    "path": "inbox/sims/mod7.html",
+    "type": "html",
+    "checksum": "b000c24c4b5adb1f3af12e00fc3884cc26d7bbc4d2ff9426f3d84c9071500fc8",
+    "file_id": "mod7"
+  },
+  "metadata": {
+    "title": "mod7",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 17693
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 7: DAOs (Attribution) Goal: Organize/Change -> Viz: Toggle Selectors. 2. Attribution Flow -> Goal: Relationship -> Viz: HTML Nodes & Flex Lines. 3. Tome of Law -> Goal: Inform -> Viz: Sidebar. Confirming NO SVG/Mermaid. --> DAOs: Code as Law Chapter 7: The Problem of Attribution Smart Contract v1.0.4 🔧 Attribution HUD The Attribution Problem Can a decentralized protocol be a \"legal person\"? Without formal registration, the law often treats DAOs as unincorporated associations . RUPA § 202 Default If two or more persons associate for profit without a formal charter, they are a General Partnership , regardless of the technology used. Incident Log Structure-Bot #402 mistakenly identified a resident's balcony as \"debris.\" The balcony was dismantled. The resident is suing for 20,000 credits. I. The Attribution Console Review the Structure-Bot DAO configuration. Your task is to determine if the bot's tort (damage) is attributed to an entity or the founders. Step 1: Inspect Smart Contract function executeRepair(targetId) {   if (target.integrity     deploy_dismantle_unit();   } } // WARNING: Biometric check missing. Step 2: Legal Wrapper Status Unincorporated (Raw Code) LLC Wrapper (Wyoming/Statutory) Liability Attribution Flow 🤖 Structure-Bot ☁ DAO Entity 👥 Founders (Z & S) Attribution: DIRECT PERSONAL LIABILITY. In the absence of a legal wrapper, the DAO is an unincorporated partnership. II. Final Conclusion \"The resident's claim for damages must be ... Dismissed Attributed beyond the code. Because the DAO lacked a ... Legal Wrapper (Entity Status) Faster CPU , the Council views the association as a ... Corporation General Partnership under RUPA. Consequently, the bot's actions are attributed ... Personally to the Founders Only to the Code under the doctrine of Respondeat Superior.\" Commit Final Verdict Acknowledge",
+    "blocks": [
+      {
+        "id": "mod7:0000:neon-edge-module-7-daos-attribution",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 7: DAOs (Attribution)",
+        "text": "Neon Edge | Module 7: DAOs (Attribution) Goal: Organize/Change -> Viz: Toggle Selectors. 2. Attribution Flow -> Goal: Relationship -> Viz: HTML Nodes & Flex Lines. 3. Tome of Law -> Goal: Inform -> Viz: Sidebar. Confirming NO SVG/Mermaid. --> DAOs: Code as Law Chapter 7: The Problem of Attribution Smart Contract v1.0.4 🔧 Attribution HUD The Attribution Problem Can a decentralized protocol be a \"legal person\"? Without formal registration, the law often treats DAOs as unincorporated associations . RUPA § 202 Default If two or more persons associate for profit without a formal charter, they are a General Partnership , regardless of the technology used. Incident Log Structure-Bot #402 mistakenly identified a resident's balcony as \"debris.\" The balcony was dismantled. The resident is suing for 20,000 credits. I. The Attribution Console Review the Structure-Bot DAO configuration. Your task is to determine if the bot's tort (damage) is attributed to an entity or the founders. Step 1: Inspect Smart Contract function executeRepair(targetId) {   if (target.integrity     deploy_dismantle_unit();   } } // WARNING: Biometric check missing. Step 2: Legal Wrapper Status Unincorporated (Raw Code) LLC Wrapper (Wyoming/Statutory) Liability Attribution Flow 🤖 Structure-Bot ☁ DAO Entity 👥 Founders (Z & S) Attribution: DIRECT PERSONAL LIABILITY. In the absence of a legal wrapper, the DAO is an unincorporated partnership. II. Final Conclusion \"The resident's claim for damages must be ... Dismissed Attributed beyond the code. Because the DAO lacked a ... Legal Wrapper (Entity Status) Faster CPU , the Council views the association as a ... Corporation General Partnership under RUPA. Consequently, the bot's actions are attributed ... Personally to the Founders Only to the Code under the doctrine of Respondeat Superior.\" Commit Final Verdict Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "d479be43c3ccd2e7"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.537415+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

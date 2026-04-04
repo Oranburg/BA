@@ -1,0 +1,21 @@
+{
+  "file_id": "mod11",
+  "original_path": "inbox/sims/mod11.html",
+  "original_name": "mod11.html",
+  "extension": ".html",
+  "size_bytes": 17740,
+  "content_hash": "66f80567fd1bfe0af83cc62ae12924be4d8ed63629ed38a952398a677663b23b",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.526536+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod11:0000:neon-edge-module-11-going-public"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

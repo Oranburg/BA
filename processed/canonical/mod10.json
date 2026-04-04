@@ -1,0 +1,48 @@
+{
+  "id": "3ea3a7eaa08eaa8e787cda52e80650fc",
+  "source": {
+    "path": "inbox/sims/mod10.html",
+    "type": "html",
+    "checksum": "7cd75e807fb5cb55b4c80b832f4326cb0b8899eb5b63dcd2205935bd51238bd1",
+    "file_id": "mod10"
+  },
+  "metadata": {
+    "title": "mod10",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 18500
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 10: The Preference Stack Goal: Compare -> Viz: Choice Cards. 2. Waterfall -> Goal: Relationship/Change -> Viz: Chart.js Stacked Bar -> Justification: Clearly visualizes who gets paid first. Confirming NO SVG/Mermaid. --> The Preference Stack Chapter 10: Staying Private & Venture Capital Series A: Preference HUD 📜 Capital HUD Liquidation Preference The right of preferred shareholders to be paid a fixed amount (usually 1x original investment) before any payment is made to common shareholders. Participation Rights \"Double Dipping.\" The right to receive the liquidation preference AND then share pro-rata in the remaining proceeds with common stock. The Situation SP Corp needs 5M credits. The \"High Tower Vultures\" are offering two different \"Preference Stacks.\" Zeeva's common stock ownership is at stake. I. Negotiation: Select Term Sheet Review the two competing offers. Your choice will define how the Problem of Risk is distributed during an exit event. Offer Alpha: \"The Clean Tech\" Investment: 5,000,000 CR Valuation: 15,000,000 CR Preference: 1x Non-Participating Founders' Stake: 66% Offer Beta: \"The Vulture Claw\" Investment: 5,000,000 CR Valuation: 25,000,000 CR Preference: 2x Participating Founders' Stake: 80% Exit Proceeds Waterfall Simulation: Exit at 15M CR Exit Value Scenarios Low Exit (7M) Mid Exit (15M) High Exit (50M) Zeeva's Payout 6.6M CR Series A Data-Dump \"In the 'Staying Private' phase, a high ... Valuation Preference can be a trap for founders. If a startup accepts ... Participating Preferred Common Stock terms, the investors effectively 'double-dip' during an exit. This shifts the ... Governance Downside Risk onto the common shareholders, potentially leaving Zeeva with ... Zero proceeds Unlimited millions in a low-exit scenario.\" Finalize Series A Ledger Acknowledge",
+    "blocks": [
+      {
+        "id": "mod10:0000:neon-edge-module-10-the-preference-stack",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 10: The Preference Stack",
+        "text": "Neon Edge | Module 10: The Preference Stack Goal: Compare -> Viz: Choice Cards. 2. Waterfall -> Goal: Relationship/Change -> Viz: Chart.js Stacked Bar -> Justification: Clearly visualizes who gets paid first. Confirming NO SVG/Mermaid. --> The Preference Stack Chapter 10: Staying Private & Venture Capital Series A: Preference HUD 📜 Capital HUD Liquidation Preference The right of preferred shareholders to be paid a fixed amount (usually 1x original investment) before any payment is made to common shareholders. Participation Rights \"Double Dipping.\" The right to receive the liquidation preference AND then share pro-rata in the remaining proceeds with common stock. The Situation SP Corp needs 5M credits. The \"High Tower Vultures\" are offering two different \"Preference Stacks.\" Zeeva's common stock ownership is at stake. I. Negotiation: Select Term Sheet Review the two competing offers. Your choice will define how the Problem of Risk is distributed during an exit event. Offer Alpha: \"The Clean Tech\" Investment: 5,000,000 CR Valuation: 15,000,000 CR Preference: 1x Non-Participating Founders' Stake: 66% Offer Beta: \"The Vulture Claw\" Investment: 5,000,000 CR Valuation: 25,000,000 CR Preference: 2x Participating Founders' Stake: 80% Exit Proceeds Waterfall Simulation: Exit at 15M CR Exit Value Scenarios Low Exit (7M) Mid Exit (15M) High Exit (50M) Zeeva's Payout 6.6M CR Series A Data-Dump \"In the 'Staying Private' phase, a high ... Valuation Preference can be a trap for founders. If a startup accepts ... Participating Preferred Common Stock terms, the investors effectively 'double-dip' during an exit. This shifts the ... Governance Downside Risk onto the common shareholders, potentially leaving Zeeva with ... Zero proceeds Unlimited millions in a low-exit scenario.\" Finalize Series A Ledger Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "38242fa275f04626"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.525502+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "5a9352bd5ff7755c06f3aa4ef6e503ee",
+  "source": {
+    "path": "inbox/BACG - Ch 06 Decentralized Autonomous Organizations.md",
+    "type": "md",
+    "checksum": "fda720385099e53eb0726b3ed202a2f186358ab660369f58d9a49563b87d7a86",
+    "file_id": "bacg-ch-06-decentralized-autonomous-organizations"
+  },
+  "metadata": {
+    "title": "BACG - Ch 06 Decentralized Autonomous Organizations",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "casebook",
+    "size_bytes": 135734
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.346127+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

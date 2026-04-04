@@ -1,0 +1,21 @@
+{
+  "file_id": "mod5",
+  "original_path": "inbox/sims/mod5.html",
+  "original_name": "mod5.html",
+  "extension": ".html",
+  "size_bytes": 20007,
+  "content_hash": "71da9f5c7e38eb393851ba3e6a60bea8dddd2b9d63dda5be800f83f2260a8ff8",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.535477+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod5:0000:neon-edge-module-5-the-governance-hybrid"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

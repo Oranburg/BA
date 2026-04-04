@@ -1,0 +1,38 @@
+{
+  "id": "ca3a67238fff9eaba123bec6f5e83686",
+  "source": {
+    "path": "inbox/LotF_2026-02-01.md",
+    "type": "md",
+    "checksum": "6b82d5c611fcfcc34397c371542c60f781ca452d789a90c00e942bb92bc944b8",
+    "file_id": "lotf-2026-02-01"
+  },
+  "metadata": {
+    "title": "LotF_2026-02-01",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "casebook",
+    "size_bytes": 1483415
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.511422+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

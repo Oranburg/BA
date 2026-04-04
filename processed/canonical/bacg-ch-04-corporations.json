@@ -1,0 +1,38 @@
+{
+  "id": "527445b2b43676400b46e870d3f7a4cf",
+  "source": {
+    "path": "inbox/BACG - Ch 04 Corporations.md",
+    "type": "md",
+    "checksum": "2c559a6bfc46c4f2d229fe4b7f446e182a13fbbcd8d572b6b334b6f4dc541946",
+    "file_id": "bacg-ch-04-corporations"
+  },
+  "metadata": {
+    "title": "BACG - Ch 04 Corporations",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "casebook",
+    "size_bytes": 122634
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.344697+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

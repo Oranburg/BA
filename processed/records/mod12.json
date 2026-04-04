@@ -1,0 +1,21 @@
+{
+  "file_id": "mod12",
+  "original_path": "inbox/sims/mod12.html",
+  "original_name": "mod12.html",
+  "extension": ".html",
+  "size_bytes": 19907,
+  "content_hash": "7070016ca0480a829285690a026dff7d4ce79f821917f74c1ff803a7047f3992",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.527508+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod12:0000:neon-edge-module-12-the-proxy-war"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

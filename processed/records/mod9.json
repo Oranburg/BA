@@ -1,0 +1,21 @@
+{
+  "file_id": "mod9",
+  "original_path": "inbox/sims/mod9.html",
+  "original_name": "mod9.html",
+  "extension": ".html",
+  "size_bytes": 17972,
+  "content_hash": "2a54e0408b5b00969e6d460c1b786adb78d94d61dc09ff414f58644126ec76ce",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.539517+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod9:0000:neon-edge-module-9-the-fiduciary-shield"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

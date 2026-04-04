@@ -1,0 +1,38 @@
+{
+  "id": "3e1d0c19df7cc68148cb3d997033ac3c",
+  "source": {
+    "path": "inbox/PLAW-119publ27_uslm.xml",
+    "type": "xml",
+    "checksum": "9c7bf33496c2f65085234dbf7f5cecaa72919520912c43f9f7769264e261d282",
+    "file_id": "plaw-119publ27-uslm"
+  },
+  "metadata": {
+    "title": "PLAW-119publ27_uslm",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "statute",
+    "size_bytes": 358508
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_xml",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.515660+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

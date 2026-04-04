@@ -1,0 +1,38 @@
+{
+  "id": "3eb970a758796c9c18643ec0180a84d4",
+  "source": {
+    "path": "inbox/Match Group.md",
+    "type": "md",
+    "checksum": "adf4720c6d56f270c090e752aa50a49e4e5595059bad8c8c397771c041d354ca",
+    "file_id": "match-group"
+  },
+  "metadata": {
+    "title": "Match Group",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "case",
+    "size_bytes": 9148
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.513564+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

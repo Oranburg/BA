@@ -1,0 +1,38 @@
+{
+  "id": "4c829b9db75afc9b2a276e9eab69c5b5",
+  "source": {
+    "path": "inbox/Corwin.md",
+    "type": "md",
+    "checksum": "98f5157cebb7d04c2a2034dee8f0b5f5ebfa2d19ed0e178c474b16dd019c48c2",
+    "file_id": "corwin"
+  },
+  "metadata": {
+    "title": "Corwin",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "case",
+    "size_bytes": 24353
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.412955+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

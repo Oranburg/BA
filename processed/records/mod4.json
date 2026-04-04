@@ -1,0 +1,21 @@
+{
+  "file_id": "mod4",
+  "original_path": "inbox/sims/mod4.html",
+  "original_name": "mod4.html",
+  "extension": ".html",
+  "size_bytes": 15224,
+  "content_hash": "ea067a0dd6e8c4c52cc448adf5de5b7a7e4c5ee912dc3245419264f748894853",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.534579+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod4:0000:neon-edge-module-4-the-technology-of-sca"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}

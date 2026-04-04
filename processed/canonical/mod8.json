@@ -1,0 +1,48 @@
+{
+  "id": "42c1ee6c6c627a6bf01eb904acd85003",
+  "source": {
+    "path": "inbox/sims/mod8.html",
+    "type": "html",
+    "checksum": "99fa497a53f0dcf813530c0e544a427f006f754d076c3ef4749db65ad096861d",
+    "file_id": "mod8"
+  },
+  "metadata": {
+    "title": "mod8",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "unknown",
+    "size_bytes": 22861
+  },
+  "content": {
+    "raw_text": "Neon Edge | Module 8: Entity Selection Entity Selection: Synthesis Chapter 8: Solving the Four Problems Strategic Optimization 🗒 The HUD Attribution Who represents the firm? (Actual/Apparent Authority) Governance Who decides? (Contractual vs. Statutory) Risk Who pays for failure? (Unlimited vs. Limited) Partitioning Are the firm's assets safe from the owner's debts? The Scenario Zeeva has the tech. Sammy has the street links. Investors have the credits. The Sky-Tower is high-risk and needs 10,000,000 credits. Which legal technology scales? I. Strategic Requirements Select the primary requirements for the Great Sky-Tower Project . Your choices will determine which entity survives the pressure test. Total Liability Shielding RISK Founders must not be personally liable for construction accidents. Public/VC Capital Scaling PARTITIONING Requires standardized shares and liquid transferability for outside investors. Low Administrative Burden GOVERNANCE Avoid board meetings and formal resolutions to maintain speed. Centralized Decision Authority ATTRIBUTION Investors must not be able to bind the firm to a contract accidentally. The Synthesis Matrix Entity Form Risk Profile Partitioning Governance Efficiency Score General Partnership Unlimited Weak Flexible LLC Limited Strong Contractual C-Corporation Limited Absolute Rigid/Fixed II. Choose Your Technology 🤝 Partnership The Handshake Default 💼 LLC The Hybrid Contract 🏢 Corporation The Scaling Monolith Final Deployment \"Given the requirement for ... , Zeeva and Sammy must synthesize the Four Problems. To achieve ... Limited Liability (Risk) Informal Trust while maintaining ... Entity Shielding (Partitioning) Social Freedom , the optimal legal vehicle for the Sky-Tower is the ... General Partnership LLC Corporation . This choice optimizes the ... Tax Efficiency Four Problems of the Firm for the startup's specific lifecycle stage.\" Archive Strategy Acknowledge",
+    "blocks": [
+      {
+        "id": "mod8:0000:neon-edge-module-8-entity-selection",
+        "type": "unknown-structured-chunk",
+        "title": "Neon Edge | Module 8: Entity Selection",
+        "text": "Neon Edge | Module 8: Entity Selection Entity Selection: Synthesis Chapter 8: Solving the Four Problems Strategic Optimization 🗒 The HUD Attribution Who represents the firm? (Actual/Apparent Authority) Governance Who decides? (Contractual vs. Statutory) Risk Who pays for failure? (Unlimited vs. Limited) Partitioning Are the firm's assets safe from the owner's debts? The Scenario Zeeva has the tech. Sammy has the street links. Investors have the credits. The Sky-Tower is high-risk and needs 10,000,000 credits. Which legal technology scales? I. Strategic Requirements Select the primary requirements for the Great Sky-Tower Project . Your choices will determine which entity survives the pressure test. Total Liability Shielding RISK Founders must not be personally liable for construction accidents. Public/VC Capital Scaling PARTITIONING Requires standardized shares and liquid transferability for outside investors. Low Administrative Burden GOVERNANCE Avoid board meetings and formal resolutions to maintain speed. Centralized Decision Authority ATTRIBUTION Investors must not be able to bind the firm to a contract accidentally. The Synthesis Matrix Entity Form Risk Profile Partitioning Governance Efficiency Score General Partnership Unlimited Weak Flexible LLC Limited Strong Contractual C-Corporation Limited Absolute Rigid/Fixed II. Choose Your Technology 🤝 Partnership The Handshake Default 💼 LLC The Hybrid Contract 🏢 Corporation The Scaling Monolith Final Deployment \"Given the requirement for ... , Zeeva and Sammy must synthesize the Four Problems. To achieve ... Limited Liability (Risk) Informal Trust while maintaining ... Entity Shielding (Partitioning) Social Freedom , the optimal legal vehicle for the Sky-Tower is the ... General Partnership LLC Corporation . This choice optimizes the ... Tax Efficiency Four Problems of the Firm for the startup's specific lifecycle stage.\" Archive Strategy Acknowledge",
+        "source_locator": "full-document",
+        "page_number": null,
+        "content_hash": "fc61601e20e8b625"
+      }
+    ],
+    "segment_count": 1
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_html",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.538483+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "medium",
+    "extraction_confidence": [
+      "medium"
+    ]
+  }
+}

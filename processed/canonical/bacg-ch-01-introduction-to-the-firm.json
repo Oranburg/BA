@@ -1,0 +1,38 @@
+{
+  "id": "908ac88890a55500035155f0e3227336",
+  "source": {
+    "path": "inbox/BACG - Ch 01 Introduction to the Firm.md",
+    "type": "md",
+    "checksum": "ffc035ab67909dfcae6b99e5af43b638950d0beffd02472e65679826589fea60",
+    "file_id": "bacg-ch-01-introduction-to-the-firm"
+  },
+  "metadata": {
+    "title": "BACG - Ch 01 Introduction to the Firm",
+    "created_at": null,
+    "participants_authors": [],
+    "language": "unknown",
+    "source_family": "casebook",
+    "size_bytes": 91199
+  },
+  "content": {
+    "raw_text": "",
+    "blocks": [],
+    "segment_count": 0
+  },
+  "relations": {
+    "thread_parent_id": null,
+    "references": []
+  },
+  "provenance": {
+    "parser_name": "extract_markdown",
+    "parser_version": "processor.py-schema-2.0",
+    "parsed_at": "2026-04-04T02:54:46.342885+00:00",
+    "warnings": []
+  },
+  "fidelity": {
+    "level": "low",
+    "extraction_confidence": [
+      "low"
+    ]
+  }
+}

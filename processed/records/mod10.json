@@ -1,0 +1,21 @@
+{
+  "file_id": "mod10",
+  "original_path": "inbox/sims/mod10.html",
+  "original_name": "mod10.html",
+  "extension": ".html",
+  "size_bytes": 18500,
+  "content_hash": "7cd75e807fb5cb55b4c80b832f4326cb0b8899eb5b63dcd2205935bd51238bd1",
+  "source_family": "unknown",
+  "last_processed": "2026-04-04T02:54:46.525502+00:00",
+  "unchanged_since_prior_run": false,
+  "status": "success",
+  "processing_status": "success",
+  "extraction_method": "extract_html",
+  "segmentation_strategy": "xml-section",
+  "segment_count": 1,
+  "segment_ids": [
+    "mod10:0000:neon-edge-module-10-the-preference-stack"
+  ],
+  "diagnostics": [],
+  "ocr_required": false
+}
