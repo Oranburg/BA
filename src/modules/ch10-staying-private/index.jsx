@@ -294,7 +294,7 @@ export default function Ch10StayingPrivate() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="10" title="Staying Private" />
-      <ChapterHero src={chapterImage} alt="VC term sheet comparison meeting with market charts on wall screens" />
+      <ChapterHero src={chapterImage} alt="VC term sheet comparison meeting with market charts on wall screens" focalPoint="center" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 10 · Staying Private
       </p>

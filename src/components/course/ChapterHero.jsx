@@ -1,6 +1,6 @@
 import AppImage from "../ui/AppImage";
 
-export default function ChapterHero({ src, alt }) {
+export default function ChapterHero({ src, alt, focalPoint = "top" }) {
   if (!src) return null;
 
   return (
@@ -9,7 +9,7 @@ export default function ChapterHero({ src, alt }) {
         src={src}
         alt={alt}
         mode="cover"
-        focalPoint="center"
+        focalPoint={focalPoint}
         className="w-full h-48 md:h-64"
         imgClassName="opacity-70"
       />
