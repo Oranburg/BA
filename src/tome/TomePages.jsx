@@ -1,19 +1,18 @@
-import { useParams } from "react-router-dom";
-import TomeExperience from "./TomeExperience";
-import TomeIndexPage from "./TomeIndexPage";
+import TomeCourseView from "./TomeCourseView";
+import TomeDocReader from "./TomeDocReader";
 
 export function TomeHomePage() {
-  return <TomeExperience />;
+  return <TomeCourseView />;
 }
 
 export function TomeDocPage() {
-  const { docSlug } = useParams();
-  return <TomeExperience key={`doc:${docSlug || "none"}`} />;
+  return <TomeDocReader />;
 }
 
 export function TomeSectionPage() {
-  const { docSlug, articleSlug, sectionSlug } = useParams();
-  return <TomeExperience key={`section:${docSlug || "none"}:${articleSlug || "none"}:${sectionSlug || "none"}`} />;
+  return <TomeDocReader />;
 }
 
-export { TomeIndexPage };
+export function TomeIndexPage() {
+  return <TomeCourseView />;
+}

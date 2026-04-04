@@ -1,5 +1,5 @@
 import { useTome } from "./useTome";
-import TomeExperience from "./TomeExperience";
+import TomeQuickRef from "./TomeQuickRef";
 
 export default function TomePanel() {
   const { isPanelOpen, closeTome, currentDocSlug, currentSectionNumber } = useTome();
@@ -15,12 +15,11 @@ export default function TomePanel() {
         aria-label="Close Tome panel backdrop"
       />
       <div className="absolute right-0 top-0 h-full w-full md:w-[40vw] min-w-[320px] bg-sprawl-deep-blue border-l border-sprawl-yellow/30 shadow-2xl overflow-auto">
-        <TomeExperience
+        <TomeQuickRef
           key={`${currentDocSlug}:${currentSectionNumber}`}
-          embedded
+          docSlug={currentDocSlug}
+          sectionNumber={currentSectionNumber}
           onClose={closeTome}
-          initialDocSlug={currentDocSlug}
-          initialSectionNumber={currentSectionNumber}
         />
       </div>
     </div>
