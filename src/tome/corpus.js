@@ -110,6 +110,15 @@ export const DOCUMENTS = [
     hierarchyType: "uniform",
     sections: [
       {
+        number: "110",
+        title: "Operating Agreement; Scope, Function, and Limitations",
+        article: "Article 1",
+        text:
+          "Except as otherwise provided, the operating agreement governs member relations, manager rights and duties, company activities, and amendment procedures.",
+        concepts: ["operating agreement", "llc governance"],
+        chapterUse: [5, 8],
+      },
+      {
         number: "301",
         title: "No Agency Power of Member",
         article: "Article 3",
@@ -236,6 +245,15 @@ export const DOCUMENTS = [
         concepts: ["exculpation", "fiduciary duty"],
       },
       {
+        number: "141",
+        title: "Board of Directors; Powers",
+        article: "Subchapter 4",
+        text:
+          "The business and affairs of every corporation organized under this chapter shall be managed by or under the direction of a board of directors, except as otherwise provided.",
+        concepts: ["board powers", "governance"],
+        chapterUse: [11, 13, 16],
+      },
+      {
         number: "141(a)",
         title: "Board of Directors; Powers",
         article: "Subchapter 4",
@@ -243,6 +261,33 @@ export const DOCUMENTS = [
           "The business and affairs of every corporation organized under this chapter shall be managed by or under the direction of a board of directors, except as otherwise provided.",
         concepts: ["board powers", "governance"],
         chapterUse: [11, 13],
+      },
+      {
+        number: "144",
+        title: "Interested Directors; Quorum",
+        article: "Subchapter 4",
+        text:
+          "A contract or transaction is not void or voidable solely because a director is interested if statutory safe-harbor conditions are met, including disclosure and approval or fairness.",
+        concepts: ["conflicts", "fiduciary duty", "safe harbor"],
+        chapterUse: [9],
+      },
+      {
+        number: "151",
+        title: "Classes and Series of Stock",
+        article: "Subchapter 5",
+        text:
+          "Every corporation may issue classes or series of stock with powers, designations, preferences, and rights as stated in the certificate of incorporation.",
+        concepts: ["capital structure", "stock classes"],
+        chapterUse: [10, 15],
+      },
+      {
+        number: "211",
+        title: "Meetings of Stockholders",
+        article: "Subchapter 7",
+        text:
+          "An annual meeting of stockholders must be held for election of directors on a date and at a time designated by or in the manner provided in the bylaws.",
+        concepts: ["shareholder franchise", "meetings", "elections"],
+        chapterUse: [12],
       },
     ],
   },
@@ -326,6 +371,78 @@ export const DOCUMENTS = [
         article: "Title 1",
         text: "Limits who may issue payment stablecoins and sets requirements for lawful offer/sale in the United States.",
         concepts: ["issuance", "compliance"],
+      },
+    ],
+  },
+  {
+    id: "securities-act-1933",
+    shortName: "Securities Act",
+    slug: "securities-act-1933",
+    title: "Securities Act of 1933",
+    aliases: ["1933 Act", "'33 Act", "SA 1933", "Federal Securities Act"],
+    version: "15 U.S.C. §§ 77a–77aa",
+    versionInUse: "Current statutory text",
+    lastVerified: "2026-04-03",
+    coverage: COVERAGE_BADGES.FULL_TEXT,
+    chapters: [10, 11],
+    hierarchyType: "federal",
+    sections: [
+      {
+        number: "11",
+        title: "Civil Liabilities on Account of False Registration Statement",
+        article: "15 U.S.C. § 77k",
+        text:
+          "Any person acquiring a registered security may sue specified participants in a registration statement if it contained an untrue statement of material fact or omitted a material fact required to make statements not misleading.",
+        concepts: ["registration liability", "material misstatement", "ipo"],
+        chapterUse: [11],
+      },
+    ],
+  },
+  {
+    id: "exchange-act-1934",
+    shortName: "Exchange Act",
+    slug: "exchange-act-1934",
+    title: "Securities Exchange Act of 1934",
+    aliases: ["1934 Act", "'34 Act", "SEA", "Securities Exchange Act"],
+    version: "15 U.S.C. §§ 78a–78qq",
+    versionInUse: "Current statutory text",
+    lastVerified: "2026-04-03",
+    coverage: COVERAGE_BADGES.FULL_TEXT,
+    chapters: [10, 11, 12],
+    hierarchyType: "federal",
+    sections: [
+      {
+        number: "10(b)",
+        title: "Manipulative and Deceptive Devices",
+        article: "15 U.S.C. § 78j(b)",
+        text:
+          "It is unlawful to use manipulative or deceptive devices in connection with the purchase or sale of securities in contravention of SEC rules, including Rule 10b-5.",
+        concepts: ["securities fraud", "10b-5", "disclosure"],
+        chapterUse: [11, 12],
+      },
+    ],
+  },
+  {
+    id: "gheewalla",
+    shortName: "Gheewalla",
+    slug: "gheewalla",
+    title: "North American Catholic Educational Programming Foundation v. Gheewalla",
+    aliases: ["North American Catholic v. Gheewalla", "NACEPF v. Gheewalla", "930 A.2d 92"],
+    version: "930 A.2d 92 (Del. 2007)",
+    versionInUse: "Delaware Supreme Court holding",
+    lastVerified: "2026-04-03",
+    coverage: COVERAGE_BADGES.EXCERPTED,
+    chapters: [15],
+    hierarchyType: "case",
+    sections: [
+      {
+        number: "holding",
+        title: "Creditor Claims and Insolvency",
+        article: "Holding",
+        text:
+          "When a corporation is insolvent, creditors gain standing to pursue derivative fiduciary-duty claims on behalf of the corporation, but creditors do not have direct fiduciary-duty claims against directors.",
+        concepts: ["insolvency", "creditor standing", "fiduciary duties"],
+        chapterUse: [15],
       },
     ],
   },
@@ -481,6 +598,12 @@ export const CASE_LAW_INDEX = [
     rule: "Individual partners generally may bind the partnership in ordinary course despite internal disagreement.",
     statutes: ["RUPA § 301"],
     chapters: [3],
+  },
+  {
+    caseName: "North American Catholic v. Gheewalla",
+    rule: "In insolvency, creditors may sue derivatively but cannot assert direct fiduciary-duty claims against directors.",
+    statutes: ["DGCL § 141(a)"],
+    chapters: [15],
   },
 ];
 
