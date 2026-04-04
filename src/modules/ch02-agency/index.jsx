@@ -259,7 +259,7 @@ export default function Ch02Agency() {
       <ModuleBreadcrumb chapterNum="02" title="Agency Law" />
       <ChapterHero src={chapterImage} alt="Agent authorization flow and vendor entity map in a corporate corridor" />
       {/* Header */}
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-2">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest mb-2">
         Chapter 2 · Agency Law
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white mb-1">
@@ -276,7 +276,7 @@ export default function Ch02Agency() {
         <CitationChip citation="RSA § 2.01" />
         <button
           onClick={() => openTome({ query: "RSA § 2.01" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open in Tome
         </button>
@@ -326,7 +326,7 @@ export default function Ch02Agency() {
       {phase === 1 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 1 of 3</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 1 of 3</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               The Scales of Control
             </h2>
@@ -347,7 +347,7 @@ export default function Ch02Agency() {
                   <p className="font-headline text-3xl text-sprawl-teal">{empScore}</p>
                 </div>
                 <div className="bg-sprawl-yellow/10 border border-sprawl-yellow/40 rounded p-3 text-center">
-                  <p className="font-ui text-xs text-sprawl-yellow uppercase mb-1">Independent Contractor Weight</p>
+                  <p className="font-ui text-sm text-sprawl-yellow uppercase mb-1">Independent Contractor Weight</p>
                   <p className="font-headline text-3xl text-sprawl-yellow">{icScore}</p>
                 </div>
               </div>
@@ -363,7 +363,7 @@ export default function Ch02Agency() {
                       {["employee", "independent"].map((val) => {
                         const isSelected = answer === val;
                         const isCorrect = factor.category === val;
-                        let cls = "px-3 py-1 rounded font-headline uppercase text-xs border transition-all ";
+                        let cls = "px-3 py-1 rounded font-headline uppercase text-sm border transition-all ";
                         if (controlChecked && isSelected) {
                           cls += isCorrect
                             ? "bg-sprawl-teal text-sprawl-deep-blue border-sprawl-teal"
@@ -401,7 +401,7 @@ export default function Ch02Agency() {
               <button
                 onClick={() => setControlChecked(true)}
                 disabled={Object.keys(controlAnswers).length < CONTROL_FACTORS.length}
-                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 Run Control Test Analysis
               </button>
@@ -415,7 +415,7 @@ export default function Ch02Agency() {
                 </div>
                 <button
                   onClick={() => setPhase(2)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   Next: Authority Analysis →
                 </button>
@@ -429,7 +429,7 @@ export default function Ch02Agency() {
       {phase === 2 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 2 of 3</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 2 of 3</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               Authority Matrix
             </h2>
@@ -452,7 +452,7 @@ export default function Ch02Agency() {
                     {q.options.map((opt) => {
                       const isSelected = authAnswers[q.id] === opt;
                       const isCorrect = q.correct === opt;
-                      let cls = "px-3 py-1 rounded font-ui text-xs border transition-all ";
+                      let cls = "px-3 py-1 rounded font-ui text-sm border transition-all ";
                       if (authChecked && isSelected) {
                         cls += isCorrect
                           ? "bg-sprawl-teal text-sprawl-deep-blue border-sprawl-teal"
@@ -488,7 +488,7 @@ export default function Ch02Agency() {
               <button
                 onClick={() => setAuthChecked(true)}
                 disabled={Object.keys(authAnswers).length < AUTHORITY_QUESTIONS.length}
-                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 Check Authority Classifications
               </button>
@@ -500,7 +500,7 @@ export default function Ch02Agency() {
                 </div>
                 <button
                   onClick={() => setPhase(3)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   Final Phase: Respondeat Superior →
                 </button>
@@ -514,7 +514,7 @@ export default function Ch02Agency() {
       {phase === 3 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 3 of 3</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 3 of 3</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               Respondeat Superior
             </h2>
@@ -558,7 +558,7 @@ export default function Ch02Agency() {
               <button
                 onClick={() => setRespChecked(true)}
                 disabled={!respAnswer}
-                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 Submit Answer
               </button>
@@ -575,7 +575,7 @@ export default function Ch02Agency() {
                 )}
                 <button
                   onClick={() => setPhase(4)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   See Final Verdict →
                 </button>
@@ -589,7 +589,7 @@ export default function Ch02Agency() {
       {phase === 4 && (
         <div className="space-y-6">
           <div className="bg-sprawl-deep-blue border border-sprawl-yellow/40 rounded-lg p-6 text-center">
-            <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-4">
+            <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest mb-4">
               Attribution Unit · Final Analysis
             </p>
             <h2 className="font-headline text-3xl uppercase text-sprawl-yellow mb-4">
@@ -655,7 +655,7 @@ Key unresolved facts:
 `;
                   downloadTextFile("constructedge-agency-analysis-sheet.txt", report);
                 }}
-                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
               >
                 Complete Module + Export Agency Analysis Sheet
               </button>
@@ -678,7 +678,7 @@ Key unresolved facts:
                 setRespAnswer(null);
                 setRespChecked(false);
               }}
-              className="mt-6 px-6 py-2 border border-sprawl-yellow text-sprawl-yellow font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/10 transition-all"
+              className="mt-6 px-6 py-2 border border-sprawl-yellow text-sprawl-yellow font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/10 transition-all"
             >
               Restart Investigation
             </button>
@@ -686,7 +686,7 @@ Key unresolved facts:
               <p className="font-ui text-sm text-gray-500 mb-2">{flow.bridge}</p>
               <Link
                 to={APP_ROUTES.ch08EntitySelection}
-                className="inline-flex items-center gap-2 px-3 py-2 rounded border border-sprawl-light-blue text-sprawl-light-blue font-ui text-xs uppercase tracking-wider hover:bg-sprawl-light-blue/10"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded border border-sprawl-light-blue text-sprawl-light-blue font-ui text-sm uppercase tracking-wider hover:bg-sprawl-light-blue/10"
               >
                 Continue to Entity Selection →
               </Link>

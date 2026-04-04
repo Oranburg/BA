@@ -295,7 +295,7 @@ export default function Ch10StayingPrivate() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="10" title="Staying Private" />
       <ChapterHero src={chapterImage} alt="VC term sheet comparison meeting with market charts on wall screens" focalPoint="center" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 10 · Staying Private
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -317,7 +317,7 @@ export default function Ch10StayingPrivate() {
         <CitationChip citation="DGCL § 151" />
         <button
           onClick={() => openTome({ query: "DGCL § 151" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -528,7 +528,7 @@ export default function Ch10StayingPrivate() {
               <button
                 key={s.value}
                 onClick={() => patch({ exitValue: s.value })}
-                className={`px-3 py-2 rounded border text-xs font-ui uppercase transition-all ${
+                className={`px-3 py-2 rounded border text-sm font-ui uppercase transition-all ${
                   exitValue === s.value
                     ? "border-sprawl-yellow bg-sprawl-yellow/10 text-sprawl-yellow"
                     : "border-gray-600 text-gray-400 hover:border-gray-400"
@@ -584,7 +584,7 @@ export default function Ch10StayingPrivate() {
 
               {/* Doctrinal annotation explaining WHY */}
               <div className="mt-4 border border-sprawl-yellow/20 rounded-lg p-4 bg-sprawl-deep-blue/60">
-                <p className="font-headline text-xs uppercase text-sprawl-yellow mb-2">
+                <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
                   Why These Numbers?
                 </p>
                 {selectedTerm === "alpha" ? (
@@ -654,7 +654,7 @@ export default function Ch10StayingPrivate() {
           {state.phase === 1 && (
             <button
               onClick={() => patch({ phase: 2 })}
-              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Proceed to synthesis
             </button>
@@ -761,7 +761,7 @@ export default function Ch10StayingPrivate() {
                         : "border-sprawl-bright-red/20 bg-sprawl-bright-red/5"
                     }`}
                   >
-                    <p className="font-ui text-xs uppercase mb-1">
+                    <p className="font-ui text-sm uppercase mb-1">
                       <span className={isCorrect ? "text-green-400" : "text-sprawl-bright-red"}>
                         {isCorrect ? "Correct" : `Incorrect — answer: ${blank.options.find((o) => o.value === blank.correct)?.label}`}
                       </span>
@@ -777,7 +777,7 @@ export default function Ch10StayingPrivate() {
             <button
               disabled={!allSynthesisFilled}
               onClick={submitSynthesis}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Finalize Series A Ledger
             </button>
@@ -786,7 +786,7 @@ export default function Ch10StayingPrivate() {
           {state.synthesisSubmitted && !state.synthesisCorrect && (
             <button
               onClick={() => patch({ synthesisSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and resubmit
             </button>
@@ -816,7 +816,7 @@ export default function Ch10StayingPrivate() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -827,7 +827,7 @@ export default function Ch10StayingPrivate() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Key legal authority
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -869,7 +869,7 @@ export default function Ch10StayingPrivate() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

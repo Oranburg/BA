@@ -334,7 +334,7 @@ export default function Ch04CorporationsTech() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="04" title="Corporations & Tech" />
       <ChapterHero src={chapterImage} alt="Corporate entity shield partition visualized across ConstructEdge asset pools" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 04 · Corporations &amp; Tech
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -358,7 +358,7 @@ export default function Ch04CorporationsTech() {
         <CitationChip citation="MBCA § 6.22" />
         <button
           onClick={() => openTome({ query: "DGCL § 102" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -434,7 +434,7 @@ export default function Ch04CorporationsTech() {
               </p>
               <div className="space-y-4">
                 <div className="border border-sprawl-light-blue/20 rounded p-3">
-                  <p className="font-ui text-xs uppercase tracking-widest text-sprawl-light-blue mb-1">
+                  <p className="font-ui text-sm uppercase tracking-widest text-sprawl-light-blue mb-1">
                     Defensive Partitioning (Limited Liability)
                   </p>
                   <p className="font-body text-sm text-gray-400 leading-relaxed">
@@ -444,7 +444,7 @@ export default function Ch04CorporationsTech() {
                   </p>
                 </div>
                 <div className="border border-sprawl-yellow/20 rounded p-3">
-                  <p className="font-ui text-xs uppercase tracking-widest text-sprawl-yellow mb-1">
+                  <p className="font-ui text-sm uppercase tracking-widest text-sprawl-yellow mb-1">
                     Affirmative Partitioning (Entity Shielding)
                   </p>
                   <p className="font-body text-sm text-gray-400 leading-relaxed">
@@ -472,7 +472,7 @@ export default function Ch04CorporationsTech() {
         {state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             Proceed to Creditor Classification
           </button>
@@ -504,7 +504,7 @@ export default function Ch04CorporationsTech() {
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             {/* Personal Domain */}
             <div className="border border-sprawl-light-blue/30 rounded-lg p-4 bg-sprawl-deep-blue/20">
-              <p className="font-headline text-xs uppercase text-center text-sprawl-light-blue mb-2">
+              <p className="font-headline text-sm uppercase text-center text-sprawl-light-blue mb-2">
                 Personal Domain (Zeeva &amp; Sammy)
               </p>
               <p className="font-ui text-[10px] text-center text-gray-500 mb-3">
@@ -524,7 +524,7 @@ export default function Ch04CorporationsTech() {
 
             {/* Entity Domain */}
             <div className="border border-sprawl-yellow/30 rounded-lg p-4 bg-sprawl-deep-blue/20">
-              <p className="font-headline text-xs uppercase text-center text-sprawl-yellow mb-2">
+              <p className="font-headline text-sm uppercase text-center text-sprawl-yellow mb-2">
                 Entity Domain (ConstructEdge Corp)
               </p>
               <p className="font-ui text-[10px] text-center text-gray-500 mb-3">
@@ -534,7 +534,7 @@ export default function Ch04CorporationsTech() {
                 {CREDITORS.filter((c) => creditorAnswers[c.id] === "business").map((c) => (
                   <span
                     key={c.id}
-                    className="px-2 py-1 rounded bg-sprawl-yellow/20 border border-sprawl-yellow/40 font-ui text-xs text-sprawl-yellow"
+                    className="px-2 py-1 rounded bg-sprawl-yellow/20 border border-sprawl-yellow/40 font-ui text-sm text-sprawl-yellow"
                   >
                     {c.label.split("(")[0].trim()}
                   </span>
@@ -565,7 +565,7 @@ export default function Ch04CorporationsTech() {
                       <button
                         onClick={() => handleCreditorChoice(c.id, "personal")}
                         disabled={state.creditorSubmitted}
-                        className={`px-3 py-1 rounded font-ui text-xs transition-all ${
+                        className={`px-3 py-1 rounded font-ui text-sm transition-all ${
                           chosen === "personal"
                             ? "bg-sprawl-light-blue text-sprawl-deep-blue font-bold"
                             : "border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-sprawl-light-blue"
@@ -576,7 +576,7 @@ export default function Ch04CorporationsTech() {
                       <button
                         onClick={() => handleCreditorChoice(c.id, "business")}
                         disabled={state.creditorSubmitted}
-                        className={`px-3 py-1 rounded font-ui text-xs transition-all ${
+                        className={`px-3 py-1 rounded font-ui text-sm transition-all ${
                           chosen === "business"
                             ? "bg-sprawl-yellow text-sprawl-deep-blue font-bold"
                             : "border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-sprawl-yellow"
@@ -619,7 +619,7 @@ export default function Ch04CorporationsTech() {
             <button
               disabled={!allCreditorsFilled}
               onClick={submitCreditors}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Submit Classification
             </button>
@@ -628,7 +628,7 @@ export default function Ch04CorporationsTech() {
           {state.creditorSubmitted && creditorScore < 4 && (
             <button
               onClick={() => patch({ creditorSubmitted: false, creditorAnswers: {} })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Reset and Try Again
             </button>
@@ -702,7 +702,7 @@ export default function Ch04CorporationsTech() {
                     <button
                       onClick={() => handleVeilChoice(f.id, true)}
                       disabled={state.veilSubmitted}
-                      className={`px-3 py-1 rounded font-ui text-xs transition-all ${
+                      className={`px-3 py-1 rounded font-ui text-sm transition-all ${
                         chosen === true
                           ? "bg-sprawl-bright-red text-white font-bold"
                           : "border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-sprawl-bright-red"
@@ -713,7 +713,7 @@ export default function Ch04CorporationsTech() {
                     <button
                       onClick={() => handleVeilChoice(f.id, false)}
                       disabled={state.veilSubmitted}
-                      className={`px-3 py-1 rounded font-ui text-xs transition-all ${
+                      className={`px-3 py-1 rounded font-ui text-sm transition-all ${
                         chosen === false
                           ? "bg-green-600 text-white font-bold"
                           : "border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-green-500"
@@ -755,7 +755,7 @@ export default function Ch04CorporationsTech() {
             <button
               disabled={!allVeilFilled}
               onClick={submitVeil}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Submit Veil Analysis
             </button>
@@ -764,7 +764,7 @@ export default function Ch04CorporationsTech() {
           {state.veilSubmitted && veilScore < 4 && (
             <button
               onClick={() => patch({ veilSubmitted: false, veilAnswers: {} })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Reset and Try Again
             </button>
@@ -873,7 +873,7 @@ export default function Ch04CorporationsTech() {
             <button
               disabled={!allVerdictFilled}
               onClick={submitVerdict}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Submit Verdict
             </button>
@@ -882,7 +882,7 @@ export default function Ch04CorporationsTech() {
           {state.verdictSubmitted && !state.verdictCorrect && (
             <button
               onClick={() => patch({ verdictSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and Resubmit
             </button>
@@ -913,7 +913,7 @@ export default function Ch04CorporationsTech() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -924,7 +924,7 @@ export default function Ch04CorporationsTech() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Key doctrinal points
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -975,7 +975,7 @@ export default function Ch04CorporationsTech() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

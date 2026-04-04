@@ -156,7 +156,7 @@ export default function Ch15CapitalStructure() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="15" title="Capital Structure" />
       <ChapterHero src={chapterImage} alt="Creditor maturity wall with covenant compliance charts showing distress signals" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">Chapter 15 · Capital Structure</p>
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">Chapter 15 · Capital Structure</p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">Distress Governance Lab</h1>
       <p className="font-body text-gray-700 dark:text-gray-300">
         ConstructEdge has covenant pressure, shrinking runway, and investor conflict. Diagnose how
@@ -172,7 +172,7 @@ export default function Ch15CapitalStructure() {
         <CitationChip citation="North American Catholic v. Gheewalla" />
         <button
           onClick={() => openTome({ query: "Gheewalla" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open in Tome
         </button>
@@ -296,7 +296,7 @@ export default function Ch15CapitalStructure() {
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Standing and leverage map</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-3">
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">What opposing counsel will argue</p>
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">What opposing counsel will argue</p>
             <ul className="font-body text-sm list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
               <li>Board favored insiders over enterprise value preservation</li>
               <li>Transfers during distress were not reasonably equivalent</li>
@@ -304,7 +304,7 @@ export default function Ch15CapitalStructure() {
             </ul>
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">Facts that change the answer</p>
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">Facts that change the answer</p>
             <ul className="font-body text-sm list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
               <li>Exact covenant default triggers and cure periods</li>
               <li>Whether new money is truly third-party and market tested</li>
@@ -352,7 +352,7 @@ export default function Ch15CapitalStructure() {
               );
               downloadTextFile("constructedge-distress-analysis-sheet.txt", exportText);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
           >
             Complete Module + Export Distress Sheet
           </button>

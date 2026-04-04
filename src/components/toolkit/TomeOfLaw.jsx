@@ -31,7 +31,7 @@ export default function TomeOfLaw({ isOpen, onClose }) {
             ✕ Close
           </button>
         </div>
-        <p className="font-ui text-xs text-gray-400 mb-4">
+        <p className="font-ui text-sm text-gray-400 mb-4">
           Retrieve verbatim statutory sections by ShortName ID
         </p>
 
@@ -71,7 +71,7 @@ export default function TomeOfLaw({ isOpen, onClose }) {
           <button
             onClick={handleSearch}
             disabled={!selectedSection}
-            className="px-4 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline font-bold uppercase tracking-wider text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+            className="px-4 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline font-bold uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
           >
             Load
           </button>

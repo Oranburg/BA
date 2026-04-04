@@ -39,7 +39,7 @@ export default function VeilPiercingWall() {
       <h3 className="font-headline text-lg uppercase tracking-wider text-sprawl-deep-blue dark:text-sprawl-yellow mb-1">
         Veil-Piercing Wall
       </h3>
-      <p className="font-ui text-xs text-gray-500 dark:text-gray-400 mb-4">
+      <p className="font-ui text-sm text-gray-500 dark:text-gray-400 mb-4">
         Drag risk factors onto the entity boundary to test veil integrity
       </p>
 
@@ -57,7 +57,7 @@ export default function VeilPiercingWall() {
             }}
             role="listitem"
             aria-label={`Apply risk factor: ${tag.label} (${tag.severity} severity)`}
-            className={`px-3 py-1.5 rounded font-ui text-xs cursor-grab active:cursor-grabbing border ${
+            className={`px-3 py-1.5 rounded font-ui text-sm cursor-grab active:cursor-grabbing border ${
               tag.severity === "critical"
                 ? "border-sprawl-bright-red text-sprawl-bright-red bg-sprawl-bright-red/10"
                 : tag.severity === "high"
@@ -104,13 +104,13 @@ export default function VeilPiercingWall() {
               type="button"
               onClick={() => removeTag(tag.id)}
               aria-label={`Remove risk factor: ${tag.label}`}
-              className="px-3 py-1.5 rounded font-ui text-xs cursor-pointer bg-sprawl-bright-red/20 border border-sprawl-bright-red text-sprawl-bright-red hover:bg-sprawl-bright-red/40 transition-all"
+              className="px-3 py-1.5 rounded font-ui text-sm cursor-pointer bg-sprawl-bright-red/20 border border-sprawl-bright-red text-sprawl-bright-red hover:bg-sprawl-bright-red/40 transition-all"
             >
               ✕ {tag.label}
             </button>
           ))}
           {appliedTags.length === 0 && (
-            <p className="font-ui text-xs text-gray-400 italic">Drop risk factors here</p>
+            <p className="font-ui text-sm text-gray-400 italic">Drop risk factors here</p>
           )}
         </div>
 

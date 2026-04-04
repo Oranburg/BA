@@ -20,7 +20,7 @@ export default function InvestigationDesk() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-3 font-headline uppercase tracking-wider text-xs whitespace-nowrap transition-colors ${
+            className={`px-4 py-3 font-headline uppercase tracking-wider text-sm whitespace-nowrap transition-colors ${
               activeTab === tab
                 ? "bg-sprawl-yellow/10 text-sprawl-yellow border-b-2 border-sprawl-yellow"
                 : "text-gray-500 dark:text-gray-400 hover:text-sprawl-deep-blue dark:hover:text-gray-200"

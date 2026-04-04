@@ -9,6 +9,26 @@ import newBoston2077 from "../assets/images/new-boston-2077.png";
 import { getLastVisitedModule, getModuleCompletion, getModuleStarted } from "../learning/progress";
 import { getRecommendedNextModule } from "../course/lifecycle";
 
+// Chapter hero images
+import ch01Img from "../assets/chapters/ch01.jpg";
+import ch02Img from "../assets/chapters/ch02.jpg";
+import ch03Img from "../assets/chapters/ch03.jpg";
+import ch04Img from "../assets/chapters/ch04.jpg";
+import ch05Img from "../assets/chapters/ch05.jpg";
+import ch06Img from "../assets/chapters/ch06.jpg";
+import ch07Img from "../assets/chapters/ch07.jpg";
+import ch08Img from "../assets/chapters/ch08.jpg";
+import ch09Img from "../assets/chapters/ch09.jpg";
+import ch10Img from "../assets/chapters/ch10.jpg";
+import ch11Img from "../assets/chapters/ch11.jpg";
+import ch12Img from "../assets/chapters/ch12.jpg";
+import ch13Img from "../assets/chapters/ch13.jpg";
+import ch14Img from "../assets/chapters/ch14.jpg";
+import ch15Img from "../assets/chapters/ch15.jpg";
+import ch16Img from "../assets/chapters/ch16.jpg";
+
+const CH_IMAGES = { ch01: ch01Img, ch02: ch02Img, ch03: ch03Img, ch04: ch04Img, ch05: ch05Img, ch06: ch06Img, ch07: ch07Img, ch08: ch08Img, ch09: ch09Img, ch10: ch10Img, ch11: ch11Img, ch12: ch12Img, ch13: ch13Img, ch14: ch14Img, ch15: ch15Img, ch16: ch16Img };
+
 const CHAPTERS = [
   { id: "ch01", moduleId: "ch01-why-law", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: APP_ROUTES.ch01WhyLaw },
   { id: "ch02", moduleId: "ch02-agency", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: APP_ROUTES.ch02Agency },
@@ -143,7 +163,7 @@ export default function LandingPage() {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sprawl-deep-red/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-6">
+          <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-sm mb-6">
             BA · Law of the Firm · New Boston 2077
           </p>
           <h1 className="font-headline font-bold text-6xl sm:text-8xl uppercase tracking-tight text-white mb-4 subtle-glitch">
@@ -202,7 +222,7 @@ export default function LandingPage() {
       <section id={HASH_TARGETS.problems} className="py-20 px-6 bg-gray-50 dark:bg-sprawl-deep-blue/80 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">
+            <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-sm mb-3">
               Core Doctrine Architecture
             </p>
             <h2 className="font-headline font-bold text-4xl sm:text-5xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -226,7 +246,7 @@ export default function LandingPage() {
                 <h3 className={`font-headline text-xl uppercase tracking-wider ${p.accent} mb-2`}>
                   {p.title}
                 </h3>
-                <p className="font-body text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                <p className="font-body text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                   {p.desc}
                 </p>
                 <p className="font-ui text-sm text-gray-400">
@@ -253,7 +273,7 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-sprawl-deep-blue/90 via-sprawl-deep-blue/60 to-transparent" />
             <div className="absolute inset-0 p-6 md:p-10 flex items-end md:items-center">
               <div className="max-w-2xl">
-                <p className="font-ui text-sprawl-yellow/70 uppercase tracking-[0.2em] text-xs mb-3">
+                <p className="font-ui text-sprawl-yellow/70 uppercase tracking-[0.2em] text-sm mb-3">
                   {VISUAL_SLOTS.scenarioIntro.label}
                 </p>
                 <h3 className="font-headline text-3xl md:text-4xl text-white uppercase tracking-wider mb-3">
@@ -274,7 +294,7 @@ export default function LandingPage() {
       <section id={HASH_TARGETS.simulationLab} className="py-20 px-6 bg-white dark:bg-sprawl-deep-blue scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">
+            <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-sm mb-3">
               Interactive Toolkit
             </p>
             <h2 className="font-headline font-bold text-4xl sm:text-5xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -305,7 +325,7 @@ export default function LandingPage() {
       <section id={HASH_TARGETS.courseMap} className="py-20 px-6 bg-gray-50 dark:bg-sprawl-deep-blue/70 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-xs mb-3">
+            <p className="font-ui text-sprawl-yellow/60 uppercase tracking-[0.3em] text-sm mb-3">
               Network Map
             </p>
             <h2 className="font-headline font-bold text-4xl sm:text-5xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -321,50 +341,49 @@ export default function LandingPage() {
             )}
           </div>
 
-          <div className="space-y-2">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {CHAPTERS.map((ch) => {
               const status = chapterStatus[ch.id] || "not-started";
-
-              const numBoxClass = status === "completed"
-                ? "bg-sprawl-yellow text-sprawl-deep-blue shadow-[0_0_8px_rgba(255,214,92,0.4)]"
-                : status === "started"
-                ? "bg-sprawl-teal/30 text-sprawl-teal border border-sprawl-teal/50"
-                : "bg-gray-100 dark:bg-sprawl-bright-blue/20 text-gray-500 dark:text-gray-400 group-hover:bg-sprawl-yellow/20 group-hover:text-sprawl-yellow";
+              const img = CH_IMAGES[ch.id];
 
               const borderClass = status === "completed"
-                ? "border-sprawl-yellow/40 bg-sprawl-yellow/5"
+                ? "border-sprawl-yellow/50 shadow-[0_0_12px_rgba(255,214,92,0.15)]"
                 : status === "started"
-                ? "border-sprawl-teal/40 bg-sprawl-teal/5"
-                : "border-gray-200 dark:border-gray-700/40 hover:border-sprawl-yellow/40 dark:hover:bg-sprawl-bright-blue/10";
+                ? "border-sprawl-teal/40"
+                : "border-gray-700/40 hover:border-sprawl-yellow/40";
 
-              const connectorClass = status === "completed"
-                ? "bg-sprawl-yellow/50"
+              const badgeClass = status === "completed"
+                ? "bg-sprawl-yellow text-sprawl-deep-blue"
                 : status === "started"
-                ? "bg-sprawl-teal/40"
-                : "bg-gray-200 dark:bg-gray-700 group-hover:bg-sprawl-yellow/30";
+                ? "bg-sprawl-teal/30 text-sprawl-teal border border-sprawl-teal/50"
+                : "bg-sprawl-bright-blue/20 text-gray-400";
 
               return (
                 <Link
                   key={ch.id}
                   to={ch.route}
-                  className={`group flex items-center gap-4 p-3 rounded-lg border transition-all cursor-pointer ${borderClass}`}
+                  className={`group relative rounded-xl border overflow-hidden transition-all hover:scale-[1.02] hover:shadow-lg cursor-pointer ${borderClass}`}
                 >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-headline font-bold text-sm flex-shrink-0 transition-all ${numBoxClass}`}>
-                    {ch.num}
-                  </div>
-
-                  <div className={`hidden sm:block w-8 h-0.5 flex-shrink-0 transition-colors ${connectorClass}`} />
-
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h4 className="font-headline uppercase tracking-wider text-sm text-gray-800 dark:text-gray-200">
-                        {ch.title}
-                      </h4>
-                      <span className={`font-ui text-sm ${PROBLEM_COLORS[ch.problem] || "text-gray-400"}`}>
-                        [{ch.problem}]
-                      </span>
+                  {img && (
+                    <div className="relative h-32 overflow-hidden">
+                      <img src={img} alt={ch.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-sprawl-deep-blue via-sprawl-deep-blue/60 to-transparent" />
+                      <div className={`absolute top-2 left-2 w-8 h-8 rounded-lg flex items-center justify-center font-headline font-bold text-sm ${badgeClass}`}>
+                        {ch.num}
+                      </div>
+                      {status === "completed" && (
+                        <div className="absolute top-2 right-2 text-sprawl-yellow text-lg">&#10003;</div>
+                      )}
                     </div>
-                    <p className="font-ui text-sm text-gray-500 dark:text-gray-500 truncate">{ch.focus}</p>
+                  )}
+                  <div className="p-3 bg-sprawl-deep-blue">
+                    <h4 className="font-headline uppercase tracking-wider text-base text-white mb-1">
+                      {ch.title}
+                    </h4>
+                    <p className={`font-ui text-sm ${PROBLEM_COLORS[ch.problem] || "text-gray-400"} mb-1`}>
+                      {ch.problem}
+                    </p>
+                    <p className="font-ui text-sm text-gray-400 leading-snug">{ch.focus}</p>
                   </div>
                 </Link>
               );
@@ -376,11 +395,11 @@ export default function LandingPage() {
       {/* CORPUS ANCHOR — visible statutory citation */}
       <section id="corpus-anchor" className="py-12 px-6 bg-sprawl-deep-blue border-t border-sprawl-yellow/20">
         <div className="max-w-3xl mx-auto">
-          <p className="font-ui text-sprawl-yellow/50 uppercase tracking-[0.25em] text-xs mb-4">
+          <p className="font-ui text-sprawl-yellow/50 uppercase tracking-[0.25em] text-sm mb-4">
             Source Law · Corpus Citation
           </p>
           <blockquote className="border-l-2 border-sprawl-yellow/60 pl-5">
-            <p className="font-ui text-gray-200 text-sm leading-relaxed">
+            <p className="font-ui text-gray-200 text-base leading-relaxed">
               "The business and affairs of every corporation organized under this chapter shall be
               managed by or under the direction of a board of directors, except as may be otherwise
               provided in this chapter or in its certificate of incorporation."

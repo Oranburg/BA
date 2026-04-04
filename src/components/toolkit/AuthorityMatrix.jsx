@@ -27,7 +27,7 @@ export default function AuthorityMatrix() {
       <h3 className="font-headline text-lg uppercase tracking-wider text-sprawl-deep-blue dark:text-sprawl-yellow mb-1">
         Authority Matrix
       </h3>
-      <p className="font-ui text-xs text-gray-500 dark:text-gray-400 mb-4">
+      <p className="font-ui text-sm text-gray-500 dark:text-gray-400 mb-4">
         Classify each agent action by authority type
       </p>
 
@@ -47,7 +47,7 @@ export default function AuthorityMatrix() {
                     role="radio"
                     aria-checked={isSelected}
                     aria-label={`${cat} authority`}
-                    className={`px-2 py-1 rounded font-ui text-xs transition-all border ${
+                    className={`px-2 py-1 rounded font-ui text-sm transition-all border ${
                       isSelected
                         ? checked
                           ? assignments[action.id] === action.correct
@@ -70,20 +70,20 @@ export default function AuthorityMatrix() {
         <button
           onClick={() => setChecked(true)}
           disabled={!allAssigned}
-          className="px-4 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase tracking-wider text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+          className="px-4 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
         >
           Check Answers
         </button>
         <button
           onClick={() => { setAssignments({}); setChecked(false); }}
-          className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 font-headline uppercase tracking-wider text-xs rounded hover:border-sprawl-yellow transition-all"
+          className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 font-headline uppercase tracking-wider text-sm rounded hover:border-sprawl-yellow transition-all"
         >
           Reset
         </button>
       </div>
 
       {checked && (
-        <div className={`mt-3 p-3 rounded border font-ui text-xs ${score === ACTIONS.length ? "bg-sprawl-teal/10 border-sprawl-teal text-sprawl-teal" : "bg-sprawl-yellow/10 border-sprawl-yellow text-sprawl-yellow"}`}>
+        <div className={`mt-3 p-3 rounded border font-ui text-sm ${score === ACTIONS.length ? "bg-sprawl-teal/10 border-sprawl-teal text-sprawl-teal" : "bg-sprawl-yellow/10 border-sprawl-yellow text-sprawl-yellow"}`}>
           Score: {score}/{ACTIONS.length} — {score === ACTIONS.length ? "Perfect! All authority types correctly identified." : "Review highlighted items."}
         </div>
       )}

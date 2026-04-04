@@ -250,7 +250,7 @@ export default function Ch01WhyLaw() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="01" title="Why Law" />
       <ChapterHero src={chapterImage} alt="Zeeva and Sammy reviewing formation documents at a holographic table in New Boston" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 01 · Introduction to the Firm
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -272,7 +272,7 @@ export default function Ch01WhyLaw() {
         <CitationChip citation="DGCL § 141(a)" />
         <button
           onClick={() => openTome({ query: "Four Problems of the Firm" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -340,7 +340,7 @@ export default function Ch01WhyLaw() {
 
               <div className="grid md:grid-cols-2 gap-3 mb-3">
                 <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-                  <p className="font-ui text-xs uppercase tracking-wider text-sprawl-teal mb-1">
+                  <p className="font-ui text-sm uppercase tracking-wider text-sprawl-teal mb-1">
                     Primary Legal Domain
                   </p>
                   <p className="font-body text-sm text-gray-700 dark:text-gray-300">
@@ -348,7 +348,7 @@ export default function Ch01WhyLaw() {
                   </p>
                 </div>
                 <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-                  <p className="font-ui text-xs uppercase tracking-wider text-sprawl-teal mb-1">
+                  <p className="font-ui text-sm uppercase tracking-wider text-sprawl-teal mb-1">
                     Key Doctrines
                   </p>
                   <p className="font-body text-sm text-gray-700 dark:text-gray-300">
@@ -358,7 +358,7 @@ export default function Ch01WhyLaw() {
               </div>
 
               <div className="border border-sprawl-yellow/30 rounded p-3 bg-sprawl-yellow/5">
-                <p className="font-ui text-xs uppercase tracking-wider text-sprawl-yellow mb-1">
+                <p className="font-ui text-sm uppercase tracking-wider text-sprawl-yellow mb-1">
                   ConstructEdge Application
                 </p>
                 <p className="font-body text-sm text-gray-700 dark:text-gray-300 italic">
@@ -372,7 +372,7 @@ export default function Ch01WhyLaw() {
         {state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             I understand the framework — begin classification
           </button>
@@ -407,7 +407,7 @@ export default function Ch01WhyLaw() {
                   key={scenario.id}
                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
                 >
-                  <p className="font-ui text-xs text-sprawl-yellow/60 uppercase mb-1">
+                  <p className="font-ui text-sm text-sprawl-yellow/60 uppercase mb-1">
                     Scenario {idx + 1}
                   </p>
                   <p className="font-body text-sm text-gray-800 dark:text-gray-200 mb-3">
@@ -419,7 +419,7 @@ export default function Ch01WhyLaw() {
                     {FOUR_PROBLEMS.map((p) => {
                       const isSelected = answer === p.id;
                       let btnClass =
-                        "border rounded px-3 py-1.5 font-ui text-xs uppercase transition-all ";
+                        "border rounded px-3 py-1.5 font-ui text-sm uppercase transition-all ";
 
                       if (revealed && isSelected && isCorrect) {
                         btnClass += "border-green-500 bg-green-500/20 text-green-300";
@@ -466,7 +466,7 @@ export default function Ch01WhyLaw() {
                           : "bg-sprawl-bright-red/10 border border-sprawl-bright-red/30"
                       }`}
                     >
-                      <p className="font-headline text-xs uppercase mb-1">
+                      <p className="font-headline text-sm uppercase mb-1">
                         {isCorrect ? "Correct" : "Not quite"}
                       </p>
                       <p className="font-body text-gray-700 dark:text-gray-300">
@@ -485,7 +485,7 @@ export default function Ch01WhyLaw() {
           {canAdvanceToSynthesize && state.phase === 1 && (
             <button
               onClick={() => patch({ phase: 2 })}
-              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Proceed to synthesis
             </button>
@@ -508,7 +508,7 @@ export default function Ch01WhyLaw() {
           </p>
 
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3 mb-4">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
               Counsel prompts
             </p>
             <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -525,7 +525,7 @@ export default function Ch01WhyLaw() {
                 className="border border-sprawl-teal/30 rounded p-3 text-center"
               >
                 <p className="text-lg mb-1">{p.icon}</p>
-                <p className="font-ui text-xs uppercase text-gray-500">{p.label}</p>
+                <p className="font-ui text-sm uppercase text-gray-500">{p.label}</p>
                 <p className="font-headline text-xl text-sprawl-teal">
                   {SCENARIOS.filter(
                     (s) => s.correctProblem === p.id && state.scenarioAnswers?.[s.id] === p.id
@@ -566,7 +566,7 @@ export default function Ch01WhyLaw() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Diagnostic
             </button>

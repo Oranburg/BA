@@ -5,6 +5,12 @@
 @layer base {
   body {
     @apply font-body bg-white dark:bg-sprawl-deep-blue text-gray-900 dark:text-gray-100 transition-colors duration-300;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  /* Global legibility: ensure no readable content below 14px */
+  p, li, td, th, label, blockquote, figcaption {
+    @apply text-base leading-relaxed;
   }
 }
 

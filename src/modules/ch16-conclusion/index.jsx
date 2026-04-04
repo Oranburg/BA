@@ -217,7 +217,7 @@ function FirmIntegrityDisplay({ selections }) {
         {scores.map((s) => (
           <div key={s.label}>
             <div className="flex justify-between mb-1">
-              <p className={`font-ui text-xs uppercase text-${s.color}`}>{s.label}</p>
+              <p className={`font-ui text-sm uppercase text-${s.color}`}>{s.label}</p>
               <p className="font-ui text-sm text-gray-400">{s.score}%</p>
             </div>
             <div className="h-4 rounded bg-gray-800 overflow-hidden border border-gray-700">
@@ -300,7 +300,7 @@ export default function Ch16Conclusion() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="16" title="Conclusion" />
       <ChapterHero src={chapterImage} alt="Zeeva overlooking New Boston skyline — Synthesis and the Mature Enterprise" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 16 · Conclusion
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -324,7 +324,7 @@ export default function Ch16Conclusion() {
         <CitationChip citation="Securities Act § 11" />
         <button
           onClick={() => openTome({ query: "DGCL § 141" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -382,7 +382,7 @@ export default function Ch16Conclusion() {
         <div className="grid md:grid-cols-2 gap-4 mb-6">
           {FOUR_PROBLEMS.map((problem) => (
             <div key={problem.id} className="space-y-2">
-              <h5 className={`font-headline text-xs uppercase text-${problem.color}`}>
+              <h5 className={`font-headline text-sm uppercase text-${problem.color}`}>
                 {problem.label}
               </h5>
               {problem.options.map((opt) => {
@@ -414,7 +414,7 @@ export default function Ch16Conclusion() {
         {allProblemsSelected && state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             All problems addressed — proceed to final declaration
           </button>
@@ -510,7 +510,7 @@ export default function Ch16Conclusion() {
             <button
               disabled={!allDeclarationFilled}
               onClick={submitDeclaration}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Upload Final Synthesis to Archive
             </button>
@@ -519,7 +519,7 @@ export default function Ch16Conclusion() {
           {state.declarationSubmitted && !state.declarationCorrect && (
             <button
               onClick={() => patch({ declarationSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and resubmit
             </button>
@@ -548,7 +548,7 @@ export default function Ch16Conclusion() {
           </p>
 
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3 mb-4">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
               The journey in review
             </p>
             <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -590,7 +590,7 @@ export default function Ch16Conclusion() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Course + Export Final Synthesis
             </button>

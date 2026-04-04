@@ -155,7 +155,7 @@ export default function Ch09FiduciaryDuties() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="09" title="Fiduciary Duties" />
       <ChapterHero src={chapterImage} alt="Zeeva confronting fiduciary tension in a late-night office meeting" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">Chapter 09 · Fiduciary Duties</p>
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">Chapter 09 · Fiduciary Duties</p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">Board Process Simulator</h1>
       <p className="font-body text-gray-700 dark:text-gray-300">
         ConstructEdge faces a conflicted recap proposal while runway tightens. Build a board process
@@ -171,7 +171,7 @@ export default function Ch09FiduciaryDuties() {
         <CitationChip citation="Lyondell" />
         <button
           onClick={() => openTome({ query: "DGCL § 144" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open in Tome
         </button>
@@ -234,7 +234,7 @@ export default function Ch09FiduciaryDuties() {
                         conflictClassifications: { ...(state.conflictClassifications || {}), [fact.id]: choice },
                       })
                     }
-                    className={`px-3 py-1 rounded border font-ui text-xs ${
+                    className={`px-3 py-1 rounded border font-ui text-sm ${
                       state.conflictClassifications?.[fact.id] === choice
                         ? "border-sprawl-yellow bg-sprawl-yellow/10"
                         : "border-gray-300 dark:border-gray-600"
@@ -275,7 +275,7 @@ export default function Ch09FiduciaryDuties() {
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Counsel recommendation (board memo)</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-3">
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">What a board should document</p>
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">What a board should document</p>
             <ul className="font-body text-sm list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
               <li>Alternatives considered and rejected</li>
               <li>Conflict disclosures and recusal decisions</li>
@@ -284,7 +284,7 @@ export default function Ch09FiduciaryDuties() {
             </ul>
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">Best plaintiff argument / best defense argument</p>
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">Best plaintiff argument / best defense argument</p>
             <p className="font-ui text-sm text-gray-600 dark:text-gray-300">Plaintiff: process engineered to protect insiders. Defense: independent process, informed deliberation, and documented alternatives.</p>
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function Ch09FiduciaryDuties() {
               );
               downloadTextFile("constructedge-board-process-memo.txt", output);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             Complete Module + Export Board Memo
           </button>

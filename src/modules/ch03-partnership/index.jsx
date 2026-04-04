@@ -283,7 +283,7 @@ export default function Ch03Partnership() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="03" title="Partnership" />
       <ChapterHero src={chapterImage} alt="Zeeva and Sammy reviewing growth options and capital structure maps" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 03 · Partnerships
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -307,7 +307,7 @@ export default function Ch03Partnership() {
         <CitationChip citation="RUPA § 306" />
         <button
           onClick={() => openTome({ query: "RUPA § 202" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -453,7 +453,7 @@ export default function Ch03Partnership() {
                   key={seg.id}
                   className="mt-2 border border-sprawl-bright-red/30 bg-sprawl-bright-red/10 rounded p-3"
                 >
-                  <p className="font-headline text-xs uppercase text-sprawl-bright-red mb-1">
+                  <p className="font-headline text-sm uppercase text-sprawl-bright-red mb-1">
                     Not a trigger: "{seg.text}"
                   </p>
                   <p className="font-body text-sm text-gray-700 dark:text-gray-300">
@@ -470,7 +470,7 @@ export default function Ch03Partnership() {
                   key={seg.id}
                   className="mt-2 border border-green-500/30 bg-green-500/10 rounded p-3"
                 >
-                  <p className="font-headline text-xs uppercase text-green-400 mb-1">
+                  <p className="font-headline text-sm uppercase text-green-400 mb-1">
                     Trigger identified: {seg.triggerLabel}
                   </p>
                   <p className="font-body text-sm text-gray-700 dark:text-gray-300">
@@ -531,7 +531,7 @@ export default function Ch03Partnership() {
         {allTriggersFound && state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="mt-2 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-2 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             Triggers locked — proceed to verdict
           </button>
@@ -660,7 +660,7 @@ export default function Ch03Partnership() {
                           : "bg-sprawl-bright-red/5 border border-sprawl-bright-red/20"
                       }`}
                     >
-                      <span className={`font-headline text-xs mt-0.5 ${isCorrect ? "text-green-400" : "text-sprawl-bright-red"}`}>
+                      <span className={`font-headline text-sm mt-0.5 ${isCorrect ? "text-green-400" : "text-sprawl-bright-red"}`}>
                         {isCorrect ? "OK" : "XX"}
                       </span>
                       <div>
@@ -684,7 +684,7 @@ export default function Ch03Partnership() {
             <button
               disabled={!allVerdictFilled}
               onClick={submitVerdict}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Upload verdict
             </button>
@@ -693,7 +693,7 @@ export default function Ch03Partnership() {
           {state.verdictSubmitted && !state.verdictCorrect && (
             <button
               onClick={() => patch({ verdictSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and resubmit
             </button>
@@ -772,7 +772,7 @@ export default function Ch03Partnership() {
           {state.phase === 2 && (
             <button
               onClick={() => patch({ phase: 3 })}
-              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Proceed to counsel note
             </button>
@@ -802,7 +802,7 @@ export default function Ch03Partnership() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -813,7 +813,7 @@ export default function Ch03Partnership() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 What opposing counsel will argue
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -856,7 +856,7 @@ export default function Ch03Partnership() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

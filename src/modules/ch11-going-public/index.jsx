@@ -295,7 +295,7 @@ export default function Ch11GoingPublic() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="11" title="Going Public" />
       <ChapterHero src={chapterImage} alt="IPO operations floor with market data screens and disclosure review" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 11 · Going Public
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -317,7 +317,7 @@ export default function Ch11GoingPublic() {
         <CitationChip citation="Securities Act § 11" />
         <button
           onClick={() => openTome({ query: "Securities Act § 11" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -449,7 +449,7 @@ export default function Ch11GoingPublic() {
                       : "border-gray-200 dark:border-gray-700 hover:border-sprawl-yellow/40"
                   }`}
                 >
-                  <p className={`font-ui text-xs font-bold uppercase mb-1 ${
+                  <p className={`font-ui text-sm font-bold uppercase mb-1 ${
                     card.type !== "safe" ? "text-sprawl-bright-red" : "text-sprawl-light-blue"
                   }`}>
                     Section: {card.section}
@@ -462,13 +462,13 @@ export default function Ch11GoingPublic() {
                     <div className="flex gap-2">
                       <button
                         onClick={() => handleCardAction(card, "flag")}
-                        className="px-3 py-1 border border-sprawl-bright-red/40 text-sprawl-bright-red font-ui text-xs uppercase rounded hover:bg-sprawl-bright-red/10"
+                        className="px-3 py-1 border border-sprawl-bright-red/40 text-sprawl-bright-red font-ui text-sm uppercase rounded hover:bg-sprawl-bright-red/10"
                       >
                         Flag Material Issue
                       </button>
                       <button
                         onClick={() => handleCardAction(card, "verify")}
-                        className="px-3 py-1 border border-sprawl-teal/40 text-sprawl-teal font-ui text-xs uppercase rounded hover:bg-sprawl-teal/10"
+                        className="px-3 py-1 border border-sprawl-teal/40 text-sprawl-teal font-ui text-sm uppercase rounded hover:bg-sprawl-teal/10"
                       >
                         Verify as Accurate
                       </button>
@@ -481,7 +481,7 @@ export default function Ch11GoingPublic() {
                         ? "border border-green-500/30 bg-green-500/10"
                         : "border border-sprawl-bright-red/30 bg-sprawl-bright-red/10"
                     }`}>
-                      <p className="font-headline text-xs uppercase mb-1">
+                      <p className="font-headline text-sm uppercase mb-1">
                         {(isFlagged && card.type !== "safe") || (isVerified && card.type === "safe")
                           ? "Correct"
                           : wrongFlag
@@ -538,7 +538,7 @@ export default function Ch11GoingPublic() {
         {/* Hint for struggling students */}
         {wrongFlagCount >= 3 && correctFlags < FLAGGABLE_COUNT && (
           <div className="border border-sprawl-yellow/40 rounded-lg p-4 mb-4 bg-sprawl-yellow/5">
-            <p className="font-headline text-xs uppercase text-sprawl-yellow mb-1">Hint</p>
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-1">Hint</p>
             <p className="font-body text-sm text-gray-700 dark:text-gray-300">
               Look for facts that a <strong>reasonable investor</strong> would consider important
               when making an investment decision. Ask yourself: does this disclosure accurately
@@ -554,7 +554,7 @@ export default function Ch11GoingPublic() {
         {correctFlags >= FLAGGABLE_COUNT && state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             All material issues flagged — proceed to synthesis
           </button>
@@ -662,7 +662,7 @@ export default function Ch11GoingPublic() {
                         : "border-sprawl-bright-red/20 bg-sprawl-bright-red/5"
                     }`}
                   >
-                    <p className="font-ui text-xs uppercase mb-1">
+                    <p className="font-ui text-sm uppercase mb-1">
                       <span className={isCorrect ? "text-green-400" : "text-sprawl-bright-red"}>
                         {isCorrect ? "Correct" : `Incorrect — answer: ${blank.options.find((o) => o.value === blank.correct)?.label}`}
                       </span>
@@ -678,7 +678,7 @@ export default function Ch11GoingPublic() {
             <button
               disabled={!allSynthesisFilled}
               onClick={submitSynthesis}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Finalize Public Offering
             </button>
@@ -687,7 +687,7 @@ export default function Ch11GoingPublic() {
           {state.synthesisSubmitted && !state.synthesisCorrect && (
             <button
               onClick={() => patch({ synthesisSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and resubmit
             </button>
@@ -717,7 +717,7 @@ export default function Ch11GoingPublic() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -728,7 +728,7 @@ export default function Ch11GoingPublic() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Key legal authority
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -770,7 +770,7 @@ export default function Ch11GoingPublic() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

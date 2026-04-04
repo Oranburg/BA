@@ -125,7 +125,7 @@ export default function Ch12ShareholderFranchise() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="12" title="Shareholder Franchise" />
       <ChapterHero src={chapterImage} alt="Contested franchise boardroom with proxy alliance flow and voting displays" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">Chapter 12 · Shareholder Franchise</p>
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">Chapter 12 · Shareholder Franchise</p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">Proxy Contest Control Room</h1>
       <p className="font-body text-gray-700 dark:text-gray-300">
         ConstructEdge enters public-company governance. Activist pressure, disclosure friction, and
@@ -141,7 +141,7 @@ export default function Ch12ShareholderFranchise() {
         <CitationChip citation="Blasius" />
         <button
           onClick={() => openTome({ query: "DGCL § 211" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open in Tome
         </button>
@@ -215,7 +215,7 @@ export default function Ch12ShareholderFranchise() {
                       }}
                       aria-label={`Rank this fact position ${n}`}
                       aria-pressed={position === n - 1}
-                      className={`px-2 py-1 text-xs rounded border ${
+                      className={`px-2 py-1 text-sm rounded border ${
                         position === n - 1 ? "border-sprawl-yellow bg-sprawl-yellow/10" : "border-gray-300 dark:border-gray-600"
                       }`}
                     >
@@ -328,7 +328,7 @@ export default function Ch12ShareholderFranchise() {
               );
               downloadTextFile("constructedge-shareholder-franchise-record.txt", exportText);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
           >
             Complete Module + Export Decision Record
           </button>

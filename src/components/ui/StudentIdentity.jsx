@@ -25,12 +25,12 @@ export default function StudentIdentity() {
   if (saved && !editing) {
     return (
       <div className="flex items-center gap-2">
-        <span className="font-ui text-xs text-gray-400 truncate max-w-[140px]" title={getStudentEmail()}>
+        <span className="font-ui text-sm text-gray-400 truncate max-w-[140px]" title={getStudentEmail()}>
           {getStudentEmail()}
         </span>
         <button
           onClick={() => setEditing(true)}
-          className="font-ui text-xs text-sprawl-yellow/60 hover:text-sprawl-yellow"
+          className="font-ui text-sm text-sprawl-yellow/60 hover:text-sprawl-yellow"
           aria-label="Change email"
         >
           edit
@@ -46,12 +46,12 @@ export default function StudentIdentity() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="your@email.edu"
-        className="w-36 rounded border border-sprawl-yellow/30 bg-transparent px-2 py-1 font-ui text-xs text-white placeholder-gray-600 focus-visible:outline focus-visible:outline-1 focus-visible:outline-sprawl-yellow"
+        className="w-36 rounded border border-sprawl-yellow/30 bg-transparent px-2 py-1 font-ui text-sm text-white placeholder-gray-600 focus-visible:outline focus-visible:outline-1 focus-visible:outline-sprawl-yellow"
         aria-label="Student email for progress tracking"
       />
       <button
         type="submit"
-        className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+        className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
       >
         Save
       </button>
@@ -59,7 +59,7 @@ export default function StudentIdentity() {
         <button
           type="button"
           onClick={handleClear}
-          className="font-ui text-xs text-gray-500 hover:text-gray-300"
+          className="font-ui text-sm text-gray-500 hover:text-gray-300"
         >
           clear
         </button>

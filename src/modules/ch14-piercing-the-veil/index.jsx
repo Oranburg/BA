@@ -309,7 +309,7 @@ export default function Ch14PiercingTheVeil() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="14" title="Piercing the Veil" />
       <ChapterHero src={chapterImage} alt="Corporate veil fracturing under forensic examination in the Sector 7 district" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 14 · Piercing the Corporate Veil
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -335,7 +335,7 @@ export default function Ch14PiercingTheVeil() {
         <CitationChip citation="MBCA § 6.22" />
         <button
           onClick={() => openTome({ query: "MBCA § 6.22" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -478,7 +478,7 @@ export default function Ch14PiercingTheVeil() {
 
         {/* Veil Status Display */}
         <div className={`border-2 ${status.bg} rounded-xl p-6 mb-6 text-center transition-all duration-500`}>
-          <p className="font-ui text-xs uppercase tracking-widest text-gray-500 mb-2">
+          <p className="font-ui text-sm uppercase tracking-widest text-gray-500 mb-2">
             Veil Integrity
           </p>
           <p className={`font-headline text-3xl uppercase tracking-wider ${status.color} mb-2`}>
@@ -536,14 +536,14 @@ export default function Ch14PiercingTheVeil() {
                   {!isApplied && (
                     <button
                       onClick={() => applyEvidence(frag.id)}
-                      className="px-3 py-1 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80"
+                      className="px-3 py-1 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80"
                     >
                       Apply to Veil
                     </button>
                   )}
                   {isApplied && (
                     <>
-                      <span className="px-3 py-1 border border-sprawl-bright-red/40 text-sprawl-bright-red font-ui text-xs rounded">
+                      <span className="px-3 py-1 border border-sprawl-bright-red/40 text-sprawl-bright-red font-ui text-sm rounded">
                         Applied
                       </span>
                       <button
@@ -552,7 +552,7 @@ export default function Ch14PiercingTheVeil() {
                             explanationOpen: showExplanation ? null : frag.id,
                           })
                         }
-                        className="px-3 py-1 border border-sprawl-yellow/40 text-sprawl-yellow font-ui text-xs rounded hover:bg-sprawl-yellow/10"
+                        className="px-3 py-1 border border-sprawl-yellow/40 text-sprawl-yellow font-ui text-sm rounded hover:bg-sprawl-yellow/10"
                       >
                         {showExplanation ? "Hide" : "Show"} Explanation
                       </button>
@@ -578,7 +578,7 @@ export default function Ch14PiercingTheVeil() {
         {appliedEvidence.length === EVIDENCE_FRAGMENTS.length && state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             Proceed to Prong Classification
           </button>
@@ -633,7 +633,7 @@ export default function Ch14PiercingTheVeil() {
                       value={classification}
                       onChange={(e) => classifyProng(frag.id, e.target.value)}
                       disabled={state.prongSubmitted}
-                      className="bg-transparent border border-gray-300 dark:border-gray-600 rounded px-2 py-1 font-ui text-xs text-gray-800 dark:text-gray-200 min-w-[180px]"
+                      className="bg-transparent border border-gray-300 dark:border-gray-600 rounded px-2 py-1 font-ui text-sm text-gray-800 dark:text-gray-200 min-w-[180px]"
                     >
                       {PRONG_OPTIONS.map((o) => (
                         <option key={o.value} value={o.value}>
@@ -675,7 +675,7 @@ export default function Ch14PiercingTheVeil() {
             <button
               disabled={!allProngsClassified}
               onClick={submitProngs}
-              className="px-5 py-2 bg-sprawl-teal text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-teal/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-teal text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-teal/80 disabled:opacity-40"
             >
               Submit Prong Classifications
             </button>
@@ -788,7 +788,7 @@ export default function Ch14PiercingTheVeil() {
             <button
               disabled={!allVerdictFilled}
               onClick={submitVerdict}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Finalize Court Record
             </button>
@@ -797,7 +797,7 @@ export default function Ch14PiercingTheVeil() {
           {state.verdictSubmitted && !state.verdictCorrect && (
             <button
               onClick={() => patch({ verdictSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and Resubmit
             </button>
@@ -828,7 +828,7 @@ export default function Ch14PiercingTheVeil() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -839,7 +839,7 @@ export default function Ch14PiercingTheVeil() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Key doctrinal points
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -890,7 +890,7 @@ export default function Ch14PiercingTheVeil() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

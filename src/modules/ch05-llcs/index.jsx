@@ -273,7 +273,7 @@ export default function Ch05LLCs() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="05" title="LLCs" />
       <ChapterHero src={chapterImage} alt="Operating agreement review with Class B voting pathways on holographic display" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 05 · Limited Liability Companies
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -298,7 +298,7 @@ export default function Ch05LLCs() {
         <CitationChip citation="ULLCA § 110" />
         <button
           onClick={() => openTome({ query: "ULLCA § 110" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -347,7 +347,7 @@ export default function Ch05LLCs() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {Object.entries(OA_CHOICES).map(([category, data]) => (
             <div key={category} className="space-y-3">
-              <h5 className="font-headline text-xs text-gray-500 text-center uppercase tracking-wider">
+              <h5 className="font-headline text-sm text-gray-500 text-center uppercase tracking-wider">
                 {data.label}
               </h5>
               {data.options.map((opt) => {
@@ -459,7 +459,7 @@ export default function Ch05LLCs() {
         {!state.oaLocked && (
           <button
             onClick={lockOA}
-            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             Lock OA Configuration — Proceed to Review
           </button>
@@ -581,7 +581,7 @@ export default function Ch05LLCs() {
           {state.phase === 1 && (
             <button
               onClick={() => patch({ phase: 2 })}
-              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Proceed to Verdict Builder
             </button>
@@ -698,7 +698,7 @@ export default function Ch05LLCs() {
             <button
               disabled={!allVerdictFilled}
               onClick={submitVerdict}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Sign and Deploy OA
             </button>
@@ -707,7 +707,7 @@ export default function Ch05LLCs() {
           {state.verdictSubmitted && !state.verdictCorrect && (
             <button
               onClick={() => patch({ verdictSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and resubmit
             </button>
@@ -737,7 +737,7 @@ export default function Ch05LLCs() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -748,7 +748,7 @@ export default function Ch05LLCs() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Key doctrinal points
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -790,7 +790,7 @@ export default function Ch05LLCs() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

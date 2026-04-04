@@ -268,7 +268,7 @@ export default function Ch13MA() {
       <ModuleBreadcrumb chapterNum="13" title="M&A" />
       <ChapterHero src={chapterImage} alt="Large board meeting in the deal room with tablets and strategy displays" />
       {/* Header */}
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-2">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest mb-2">
         Chapter 13 · Mergers &amp; Acquisitions
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white mb-1">
@@ -285,7 +285,7 @@ export default function Ch13MA() {
         <CitationChip citation="DGCL § 141(a)" />
         <button
           onClick={() => openTome({ query: "DGCL § 141(a)" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open in Tome
         </button>
@@ -338,7 +338,7 @@ export default function Ch13MA() {
       {phase === 1 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 1 of 4</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 1 of 4</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               Unocal Analysis — Prong 1
             </h2>
@@ -358,7 +358,7 @@ export default function Ch13MA() {
                     <p className="font-body text-sm text-gray-800 dark:text-gray-200">{ev.label}</p>
                     <div className="flex gap-1 mt-1 flex-wrap">
                       {ev.tags.map((t) => (
-                        <span key={t} className="px-1.5 py-0.5 bg-sprawl-light-blue/20 text-sprawl-light-blue font-ui text-xs rounded">
+                        <span key={t} className="px-1.5 py-0.5 bg-sprawl-light-blue/20 text-sprawl-light-blue font-ui text-sm rounded">
                           {t}
                         </span>
                       ))}
@@ -368,7 +368,7 @@ export default function Ch13MA() {
                     {[true, false].map((val) => {
                       const isSelected = p1Answers[ev.id] === val;
                       const isCorrect = UNOCAL_PRONG1.correctAnswers[ev.id] === val;
-                      let cls = "px-3 py-1 rounded font-ui text-xs border transition-all ";
+                      let cls = "px-3 py-1 rounded font-ui text-sm border transition-all ";
                       if (p1Checked && isSelected) {
                         cls += isCorrect
                           ? "bg-sprawl-teal text-sprawl-deep-blue border-sprawl-teal"
@@ -397,7 +397,7 @@ export default function Ch13MA() {
               <button
                 onClick={() => setP1Checked(true)}
                 disabled={Object.keys(p1Answers).length < p1Total}
-                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 Check Evidence Analysis
               </button>
@@ -429,7 +429,7 @@ export default function Ch13MA() {
                 </div>
                 <button
                   onClick={() => setPhase(2)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   Proceed to Prong 2 →
                 </button>
@@ -443,7 +443,7 @@ export default function Ch13MA() {
       {phase === 2 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 2 of 4</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 2 of 4</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               Unocal Analysis — Prong 2
             </h2>
@@ -481,7 +481,7 @@ export default function Ch13MA() {
               <button
                 onClick={() => setP2Checked(true)}
                 disabled={!p2Answer}
-                className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 Submit Answer
               </button>
@@ -498,7 +498,7 @@ export default function Ch13MA() {
                 )}
                 <button
                   onClick={() => setPhase(3)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   Next: Revlon Trigger Analysis →
                 </button>
@@ -512,7 +512,7 @@ export default function Ch13MA() {
       {phase === 3 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 3 of 4</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 3 of 4</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               Revlon Trigger Analysis
             </h2>
@@ -530,7 +530,7 @@ export default function Ch13MA() {
                     {["yes", "no"].map((val) => {
                       const isSelected = revlonAnswers[trigger.id] === val;
                       const isCorrect = trigger.answer === val;
-                      let cls = "px-4 py-1.5 rounded font-headline uppercase text-xs border transition-all ";
+                      let cls = "px-4 py-1.5 rounded font-headline uppercase text-sm border transition-all ";
                       if (revlonChecked && isSelected) {
                         cls += isCorrect
                           ? "bg-sprawl-teal text-sprawl-deep-blue border-sprawl-teal"
@@ -563,7 +563,7 @@ export default function Ch13MA() {
               <button
                 onClick={() => setRevlonChecked(true)}
                 disabled={Object.keys(revlonAnswers).length < REVLON_TRIGGERS.length}
-                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 Check All Scenarios
               </button>
@@ -574,7 +574,7 @@ export default function Ch13MA() {
                 </div>
                 <button
                   onClick={() => setPhase(4)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   Draft the Holding →
                 </button>
@@ -588,7 +588,7 @@ export default function Ch13MA() {
       {phase === 4 && (
         <div className="space-y-6">
           <div className="border border-sprawl-yellow/40 rounded-lg p-4">
-            <p className="font-ui text-xs text-sprawl-yellow uppercase tracking-wider mb-1">Phase 4 of 4</p>
+            <p className="font-ui text-sm text-sprawl-yellow uppercase tracking-wider mb-1">Phase 4 of 4</p>
             <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">
               Draft the Court's Holding
             </h2>
@@ -627,7 +627,7 @@ export default function Ch13MA() {
               <button
                 onClick={() => setHoldingChecked(true)}
                 disabled={holdingParts.some((p) => !holdingSelects[p.id])}
-                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
+                className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40 transition-all"
               >
                 File the Holding
               </button>
@@ -641,7 +641,7 @@ export default function Ch13MA() {
                 </div>
                 <button
                   onClick={() => setPhase(5)}
-                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                  className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
                 >
                   See Final Verdict →
                 </button>
@@ -655,7 +655,7 @@ export default function Ch13MA() {
       {phase === 5 && (
         <div className="space-y-6">
           <div className="bg-sprawl-deep-blue border border-sprawl-yellow/40 rounded-lg p-6 text-center">
-            <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-4">
+            <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest mb-4">
               Council of Sprawl · Final Judgment
             </p>
             <h2 className="font-headline text-3xl uppercase text-sprawl-yellow mb-4">
@@ -723,7 +723,7 @@ Process checklist:
 `;
                   downloadTextFile("constructedge-ma-board-recommendation.txt", report);
                 }}
-                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+                className="px-6 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
               >
                 Complete Module + Export M&A Board Recommendation
               </button>
@@ -748,7 +748,7 @@ Process checklist:
                 setHoldingSelects({});
                 setHoldingChecked(false);
               }}
-              className="mt-6 px-6 py-2 border border-sprawl-yellow text-sprawl-yellow font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/10 transition-all"
+              className="mt-6 px-6 py-2 border border-sprawl-yellow text-sprawl-yellow font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/10 transition-all"
             >
               Restart Simulation
             </button>

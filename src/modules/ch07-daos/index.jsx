@@ -267,7 +267,7 @@ export default function Ch07DAOs() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="07" title="DAOs" />
       <ChapterHero src={chapterImage} alt="Zeeva reviewing DAO mesh topology and token-holder liability mapping" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 07 · Decentralized Autonomous Organizations
       </p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">
@@ -292,7 +292,7 @@ export default function Ch07DAOs() {
         <CitationChip citation="Sarcuni v. bZx DAO" />
         <button
           onClick={() => openTome({ query: "RUPA § 202" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -340,7 +340,7 @@ export default function Ch07DAOs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Code Review */}
           <div className="border border-sprawl-bright-blue/40 rounded-lg p-4 bg-sprawl-deep-blue/30">
-            <p className="font-headline text-xs text-gray-400 uppercase mb-3">
+            <p className="font-headline text-sm text-gray-400 uppercase mb-3">
               Step 1: Inspect Smart Contract
             </p>
             <div className="bg-black/50 rounded p-4 border-l-3 border-sprawl-bright-blue font-mono text-sm text-green-400 leading-relaxed">
@@ -357,7 +357,7 @@ export default function Ch07DAOs() {
 
           {/* Legal Wrapper Toggle */}
           <div className="border border-sprawl-bright-blue/40 rounded-lg p-4 bg-sprawl-deep-blue/30">
-            <p className="font-headline text-xs text-gray-400 uppercase mb-3">
+            <p className="font-headline text-sm text-gray-400 uppercase mb-3">
               Step 2: Legal Wrapper Status
             </p>
             <div className="space-y-3">
@@ -517,7 +517,7 @@ export default function Ch07DAOs() {
         {state.phase === 0 && (
           <button
             onClick={() => patch({ phase: 1 })}
-            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
           >
             Proceed to Governance Classification
           </button>
@@ -570,7 +570,7 @@ export default function Ch07DAOs() {
                     <button
                       onClick={() => handleClassify(action.id, true)}
                       disabled={isSubmitted}
-                      className={`px-4 py-1.5 rounded font-ui text-xs uppercase transition-all ${
+                      className={`px-4 py-1.5 rounded font-ui text-sm uppercase transition-all ${
                         userChoice === true
                           ? "bg-sprawl-bright-red text-white"
                           : "border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-sprawl-bright-red"
@@ -581,7 +581,7 @@ export default function Ch07DAOs() {
                     <button
                       onClick={() => handleClassify(action.id, false)}
                       disabled={isSubmitted}
-                      className={`px-4 py-1.5 rounded font-ui text-xs uppercase transition-all ${
+                      className={`px-4 py-1.5 rounded font-ui text-sm uppercase transition-all ${
                         userChoice === false
                           ? "bg-sprawl-teal text-sprawl-deep-blue"
                           : "border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-sprawl-teal"
@@ -594,7 +594,7 @@ export default function Ch07DAOs() {
                   {isSubmitted && (
                     <div className="mt-2">
                       <p
-                        className={`font-headline text-xs uppercase mb-1 ${
+                        className={`font-headline text-sm uppercase mb-1 ${
                           isCorrect ? "text-green-400" : "text-sprawl-bright-red"
                         }`}
                       >
@@ -614,7 +614,7 @@ export default function Ch07DAOs() {
             <button
               disabled={!allClassified}
               onClick={submitClassifications}
-              className="mt-4 px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="mt-4 px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Submit Classifications
             </button>
@@ -644,7 +644,7 @@ export default function Ch07DAOs() {
               onClick={() =>
                 patch({ classificationSubmitted: false, classifications: {} })
               }
-              className="mt-2 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="mt-2 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Retry Classification
             </button>
@@ -756,7 +756,7 @@ export default function Ch07DAOs() {
             <button
               disabled={!allVerdictFilled}
               onClick={submitVerdict}
-              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-xs rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-bright-red text-white font-headline uppercase text-sm rounded hover:bg-sprawl-bright-red/80 disabled:opacity-40"
             >
               Commit Final Verdict
             </button>
@@ -765,7 +765,7 @@ export default function Ch07DAOs() {
           {state.verdictSubmitted && !state.verdictCorrect && (
             <button
               onClick={() => patch({ verdictSubmitted: false })}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80"
             >
               Revise and resubmit
             </button>
@@ -796,7 +796,7 @@ export default function Ch07DAOs() {
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Consider addressing
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -807,7 +807,7 @@ export default function Ch07DAOs() {
               </ul>
             </div>
             <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-              <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">
                 Key doctrinal anchors
               </p>
               <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
@@ -851,7 +851,7 @@ export default function Ch07DAOs() {
                   exportText
                 );
               }}
-              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+              className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
             >
               Complete Module + Export Counsel Sheet
             </button>

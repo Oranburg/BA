@@ -38,7 +38,7 @@ export default function MadLibsHolding() {
       <h3 className="font-headline text-lg uppercase tracking-wider text-sprawl-deep-blue dark:text-sprawl-yellow mb-1">
         Mad-Libs Holding
       </h3>
-      <p className="font-ui text-xs text-gray-500 dark:text-gray-400 mb-5">
+      <p className="font-ui text-sm text-gray-500 dark:text-gray-400 mb-5">
         Draft the court's final judgment using inline menus
       </p>
 
@@ -58,14 +58,14 @@ export default function MadLibsHolding() {
 
       <button
         onClick={() => setSubmitted(true)}
-        className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase tracking-wider text-xs rounded hover:bg-sprawl-yellow/80 transition-all"
+        className="mt-4 px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase tracking-wider text-sm rounded hover:bg-sprawl-yellow/80 transition-all"
       >
         Submit Holding
       </button>
 
       {submitted && (
         <div className="mt-3 p-3 bg-sprawl-teal/10 border border-sprawl-teal rounded">
-          <p className="font-ui text-xs text-sprawl-teal">
+          <p className="font-ui text-sm text-sprawl-teal">
             ✓ Holding recorded. Compare your analysis with the model answer.
           </p>
         </div>

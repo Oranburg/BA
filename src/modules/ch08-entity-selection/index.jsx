@@ -173,7 +173,7 @@ export default function Ch08EntitySelection() {
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="08" title="Entity Selection" />
       <ChapterHero src={chapterImage} alt="Strategic planning session comparing entity structures at a conference table" />
-      <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">Chapter 08 · Entity Selection</p>
+      <p className="font-ui text-sm text-sprawl-yellow/60 uppercase tracking-widest">Chapter 08 · Entity Selection</p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">ConstructEdge Formation Studio</h1>
       <p className="font-body text-gray-700 dark:text-gray-300">
         Counsel Zeeva and Sammy on selecting an entity that survives founder conflict, investor pressure,
@@ -189,7 +189,7 @@ export default function Ch08EntitySelection() {
         <CitationChip citation="DGCL § 141(a)" />
         <button
           onClick={() => openTome({ query: "DGCL § 141(a)" })}
-          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-xs text-sprawl-yellow hover:bg-sprawl-yellow/10"
+          className="rounded border border-sprawl-yellow/40 px-2 py-1 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
         >
           Open source law
         </button>
@@ -307,7 +307,7 @@ export default function Ch08EntitySelection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {Object.entries(score).map(([key, value]) => (
               <div key={key} className="border border-sprawl-teal/40 rounded p-3 text-center">
-                <p className="font-ui text-xs uppercase text-gray-500 dark:text-gray-300">{key}</p>
+                <p className="font-ui text-sm uppercase text-gray-500 dark:text-gray-300">{key}</p>
                 <p className="font-headline text-2xl text-sprawl-teal">{value}</p>
               </div>
             ))}
@@ -344,7 +344,7 @@ export default function Ch08EntitySelection() {
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Counsel Recommendation</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">What matters legally here?</p>
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">What matters legally here?</p>
             <ul className="list-disc list-inside font-body text-sm text-gray-700 dark:text-gray-300 space-y-1">
               {COUNSEL_PROMPTS.map((q) => (
                 <li key={q}>{q}</li>
@@ -352,7 +352,7 @@ export default function Ch08EntitySelection() {
             </ul>
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
-            <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">Current branch-adjusted recommendation</p>
+            <p className="font-ui text-sm uppercase tracking-wider text-gray-500 mb-2">Current branch-adjusted recommendation</p>
             <p className="font-headline text-lg text-sprawl-yellow uppercase">
               {ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Select facts to generate"}
             </p>
@@ -396,7 +396,7 @@ export default function Ch08EntitySelection() {
               );
               downloadTextFile("constructedge-entity-selection-counsel-sheet.txt", memoText);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-sm rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
           >
             Complete Module + Export Counsel Sheet
           </button>

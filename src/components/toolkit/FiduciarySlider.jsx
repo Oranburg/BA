@@ -12,7 +12,7 @@ export default function FiduciarySlider() {
       <h3 className="font-headline text-lg uppercase tracking-wider text-sprawl-deep-blue dark:text-sprawl-yellow mb-1">
         Fiduciary Shield Analyzer
       </h3>
-      <p className="font-ui text-xs text-gray-500 dark:text-gray-400 mb-4">
+      <p className="font-ui text-sm text-gray-500 dark:text-gray-400 mb-4">
         Business Judgment Rule Tipping Point Calculator
       </p>
 
@@ -62,7 +62,7 @@ export default function FiduciarySlider() {
         >
           {bjrActive ? "🛡 BJR Shield Active" : "⚡ BJR Shield Broken"}
         </p>
-        <p className="font-ui text-xs mt-1 text-gray-500 dark:text-gray-400">
+        <p className="font-ui text-sm mt-1 text-gray-500 dark:text-gray-400">
           {bjrActive
             ? "Director protected under Business Judgment Rule"
             : "Director faces entire fairness / enhanced scrutiny review"}
