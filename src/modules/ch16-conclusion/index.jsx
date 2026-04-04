@@ -12,6 +12,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch16.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  DATA: Four Problems — Solution Selection                           */
@@ -297,6 +299,7 @@ export default function Ch16Conclusion() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="16" title="Conclusion" />
+      <ChapterHero src={chapterImage} alt="Zeeva overlooking New Boston skyline — Synthesis and the Mature Enterprise" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 16 · Conclusion
       </p>

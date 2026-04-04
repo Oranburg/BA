@@ -12,6 +12,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch03.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  DATA: The Napkin Shard — Redline Spotter                           */
@@ -275,6 +277,7 @@ export default function Ch03Partnership() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="03" title="Partnership" />
+      <ChapterHero src={chapterImage} alt="Zeeva and Sammy reviewing growth options and capital structure maps" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 03 · Partnerships
       </p>

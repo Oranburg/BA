@@ -12,6 +12,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch08.jpg";
 
 const ENTITY_OPTIONS = [
   {
@@ -170,6 +172,7 @@ export default function Ch08EntitySelection() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="08" title="Entity Selection" />
+      <ChapterHero src={chapterImage} alt="Strategic planning session comparing entity structures at a conference table" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">Chapter 08 · Entity Selection</p>
       <h1 className="font-headline text-4xl uppercase tracking-tight text-gray-900 dark:text-white">ConstructEdge Formation Studio</h1>
       <p className="font-body text-gray-700 dark:text-gray-300">

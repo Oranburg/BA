@@ -14,6 +14,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch02.jpg";
 
 // ---------------------------------------------------------------------------
 // Agency Activity: "The Neural-Link Handshake — Who Controls the Bot?"
@@ -255,6 +257,7 @@ export default function Ch02Agency() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <ModuleBreadcrumb chapterNum="02" title="Agency Law" />
+      <ChapterHero src={chapterImage} alt="Agent authorization flow and vendor entity map in a corporate corridor" />
       {/* Header */}
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest mb-2">
         Chapter 2 · Agency Law

@@ -12,6 +12,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch11.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  DATA: Prospectus Disclosure Cards                                  */
@@ -263,6 +265,7 @@ export default function Ch11GoingPublic() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="11" title="Going Public" />
+      <ChapterHero src={chapterImage} alt="IPO operations floor with market data screens and disclosure review" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 11 · Going Public
       </p>

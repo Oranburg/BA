@@ -11,6 +11,8 @@ import {
   LifecycleHandoff,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch01.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  DATA: The Four Problems of the Firm                                */
@@ -247,6 +249,7 @@ export default function Ch01WhyLaw() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="01" title="Why Law" />
+      <ChapterHero src={chapterImage} alt="Zeeva and Sammy reviewing formation documents at a holographic table in New Boston" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 01 · Introduction to the Firm
       </p>

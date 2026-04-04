@@ -12,6 +12,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch07.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  DATA: Formation Decision Tree                                      */
@@ -264,6 +266,7 @@ export default function Ch07DAOs() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="07" title="DAOs" />
+      <ChapterHero src={chapterImage} alt="Zeeva reviewing DAO mesh topology and token-holder liability mapping" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 07 · Decentralized Autonomous Organizations
       </p>

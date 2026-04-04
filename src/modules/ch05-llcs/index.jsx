@@ -12,6 +12,8 @@ import {
   MatterFileCarryover,
 } from "../../components/course/ContinuityPanels";
 import ModuleBreadcrumb from "../../components/course/ModuleBreadcrumb";
+import ChapterHero from "../../components/course/ChapterHero";
+import chapterImage from "../../assets/chapters/ch05.jpg";
 
 /* ------------------------------------------------------------------ */
 /*  DATA: OA Configuration Options                                     */
@@ -270,6 +272,7 @@ export default function Ch05LLCs() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-6">
       <ModuleBreadcrumb chapterNum="05" title="LLCs" />
+      <ChapterHero src={chapterImage} alt="Operating agreement review with Class B voting pathways on holographic display" />
       <p className="font-ui text-xs text-sprawl-yellow/60 uppercase tracking-widest">
         Chapter 05 · Limited Liability Companies
       </p>
