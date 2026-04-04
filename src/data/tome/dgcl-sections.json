@@ -223,5 +223,68 @@
     "chapterUse": [
       15
     ]
+  },
+  {
+    "number": "109",
+    "title": "Bylaws",
+    "article": "Subchapter 1",
+    "text": "The original or other bylaws of a corporation may be adopted, amended or repealed by the incorporators, by the initial directors if they were named in the certificate of incorporation, or, before a corporation has received any payment for any of its stock, by its board of directors. After a corporation has received any payment for any of its stock, the power to adopt, amend or repeal bylaws shall be in the stockholders entitled to vote. Notwithstanding the foregoing, any corporation may, in its certificate of incorporation, confer the power to adopt, amend or repeal bylaws upon the directors.",
+    "concepts": ["bylaws", "governance", "amendment"],
+    "crossRefs": [],
+    "chapterUse": [4, 12]
+  },
+  {
+    "number": "141(e)",
+    "title": "Good Faith Reliance",
+    "article": "Subchapter 4",
+    "text": "A member of the board of directors, or a member of any committee designated by the board of directors, shall, in the performance of such member's duties, be fully protected in relying in good faith upon the records of the corporation and upon such information, opinions, reports or statements presented to the corporation by any of the corporation's officers or employees, or committees of the board of directors, or by any other person as to matters the member reasonably believes are within such other person's professional or expert competence.",
+    "concepts": ["good faith reliance", "directors", "duty of care"],
+    "crossRefs": [{"target": "MBCA § 8.30"}],
+    "chapterUse": [9]
+  },
+  {
+    "number": "157",
+    "title": "Rights and Options Respecting Stock",
+    "article": "Subchapter 5",
+    "text": "Subject to any provisions in the certificate of incorporation, every corporation may create and issue, whether or not in connection with the issue and sale of any shares of stock or other securities of the corporation, rights or options entitling the holders thereof to acquire from the corporation any shares of its capital stock of any class or classes, upon such terms and conditions as the board of directors may determine.",
+    "concepts": ["stock options", "rights plan", "poison pill", "warrants"],
+    "crossRefs": [],
+    "chapterUse": [12, 13]
+  },
+  {
+    "number": "170",
+    "title": "Dividends; Payment; Wasting Asset Corporations",
+    "article": "Subchapter 6",
+    "text": "The directors of every corporation may declare and pay dividends upon the shares of its capital stock either: (1) Out of its surplus; or (2) In case there shall be no such surplus, out of its net profits for the fiscal year in which the dividend is declared and/or the preceding fiscal year. If the capital of the corporation shall have been diminished by depreciation in the value of its property, or by losses, or otherwise, to an amount less than the aggregate amount of the capital represented by the issued and outstanding stock of all classes having a preference upon the distribution of assets, the directors of such corporation shall not declare and pay out of such net profits any dividends upon any shares of any classes of its capital stock until the deficiency shall have been repaired.",
+    "concepts": ["dividends", "surplus", "capital maintenance", "distributions"],
+    "crossRefs": [{"target": "DGCL § 174"}, {"target": "MBCA § 6.40"}],
+    "chapterUse": [15]
+  },
+  {
+    "number": "174",
+    "title": "Liability of Directors for Unlawful Payment of Dividend",
+    "article": "Subchapter 6",
+    "text": "In case of any wilful or negligent violation of § 160 or § 173 of this title, the directors under whose administration the same may happen shall be jointly and severally liable, at any time within 6 years after paying such unlawful dividend or after such unlawful stock purchase or redemption, to the corporation, and to its creditors in the event of its dissolution or insolvency, to the full amount of the dividend unlawfully paid, or to the full amount unlawfully paid for the purchase or redemption of the corporation's stock, with interest from the time such liability accrued.",
+    "concepts": ["director liability", "unlawful dividends", "creditor rights"],
+    "crossRefs": [{"target": "DGCL § 170"}, {"target": "DGCL § 102(b)(7)"}],
+    "chapterUse": [15]
+  },
+  {
+    "number": "203",
+    "title": "Business Combinations with Interested Stockholders",
+    "article": "Subchapter 6",
+    "text": "Notwithstanding any other provisions of this chapter, a corporation shall not engage in any business combination with any interested stockholder for a period of 3 years following the time that such stockholder became an interested stockholder, unless: (1) Prior to such time the board approved the business combination or the transaction which resulted in the stockholder becoming an interested stockholder; (2) Upon consummation of the transaction which resulted in the stockholder becoming an interested stockholder, the interested stockholder owned at least 85% of the voting stock outstanding; or (3) At or subsequent to such time the business combination is approved by the board and authorized at an annual or special meeting of stockholders by the affirmative vote of at least 66⅔% of the outstanding voting stock not owned by the interested stockholder.",
+    "concepts": ["anti-takeover", "business combinations", "interested stockholder", "freeze-out"],
+    "crossRefs": [],
+    "chapterUse": [12, 13]
+  },
+  {
+    "number": "228",
+    "title": "Consent of Stockholders in Lieu of Meeting",
+    "article": "Subchapter 7",
+    "text": "Unless otherwise provided in the certificate of incorporation, any action required or permitted to be taken at any annual or special meeting of stockholders may be taken without a meeting, without prior notice and without a vote, if a consent or consents in writing, setting forth the action so taken, shall be signed by the holders of outstanding stock having not less than the minimum number of votes that would be necessary to authorize or take such action at a meeting at which all shares entitled to vote thereon were present and voted.",
+    "concepts": ["written consent", "stockholder action", "proxy"],
+    "crossRefs": [{"target": "DGCL § 211"}],
+    "chapterUse": [12]
   }
 ]
