@@ -78,9 +78,10 @@ const VERDICT_BLANKS = [
     options: [
       { value: "", label: "..." },
       { value: "friends", label: "Friends" },
-      { value: "freelancers", label: "Solo Freelancers" },
+      { value: "collaborators", label: "Independent Collaborators" },
     ],
-    correct: "freelancers",
+    correct: "collaborators",
+    hint: "What did Zeeva and Sammy think their relationship was? Look at how they described themselves -- not what the law calls them.",
   },
   {
     id: "sharing",
@@ -91,6 +92,7 @@ const VERDICT_BLANKS = [
       { value: "profits", label: "Net Profits" },
     ],
     correct: "profits",
+    hint: "Re-read RUPA ss 202(c)(3). What specific financial arrangement creates the presumption of partnership?",
   },
   {
     id: "operating",
@@ -101,6 +103,7 @@ const VERDICT_BLANKS = [
       { value: "co-owners", label: "Co-owners of a business" },
     ],
     correct: "co-owners",
+    hint: "RUPA ss 202(a) requires 'carry on as _____ of a business for profit.' What word fills that blank?",
   },
   {
     id: "forms",
@@ -111,6 +114,7 @@ const VERDICT_BLANKS = [
       { value: "corporation", label: "Corporation" },
     ],
     correct: "partnership",
+    hint: "When co-ownership + profit-sharing exist with no filing, which entity forms by default under RUPA?",
   },
   {
     id: "intentrule",
@@ -121,6 +125,7 @@ const VERDICT_BLANKS = [
       { value: "mandatory", label: "Mandatory" },
     ],
     correct: "irrelevant",
+    hint: "RUPA ss 202(a) says a partnership forms 'whether or not the persons intend to form a partnership.' What does that make intent?",
   },
 ];
 
@@ -327,6 +332,40 @@ export default function Ch03Partnership() {
         title="Matter File Carryover (Agency -> Partnership)"
         references={["ch01-why-law", "ch02-agency"]}
       />
+
+      {/* ============================================================ */}
+      {/* DOCTRINE PRIMER                                              */}
+      {/* ============================================================ */}
+
+      <section className="border border-sprawl-light-blue/30 rounded-lg p-4 bg-sprawl-deep-blue/5 dark:bg-sprawl-deep-blue/30">
+        <h2 className="font-headline text-lg uppercase text-gray-900 dark:text-white mb-2">
+          What You Need to Know Before Reading
+        </h2>
+        <div className="space-y-3 font-body text-sm text-gray-700 dark:text-gray-300">
+          <p>
+            <strong className="text-gray-900 dark:text-white">RUPA ss 202(a) -- Formation rule:</strong>{" "}
+            A partnership forms when two or more persons <em>carry on as co-owners of a business
+            for profit</em>. This is an objective test based on conduct. Critically, it applies{" "}
+            <strong className="text-gray-900 dark:text-white">
+              whether or not the persons intend to form a partnership.
+            </strong>{" "}
+            Parties who believe they are merely collaborators, independent contractors, or friends
+            working together can still be legal partners if their conduct satisfies the statutory
+            elements.
+          </p>
+          <p>
+            <strong className="text-gray-900 dark:text-white">RUPA ss 202(c)(3) -- The profit-sharing presumption:</strong>{" "}
+            A person who receives a <em>share of the profits</em> of a business is{" "}
+            <strong className="text-gray-900 dark:text-white">presumed</strong> to be a partner. This
+            is the single strongest evidentiary trigger. Once profit-sharing is established, the
+            burden shifts to the party denying partnership status.
+          </p>
+          <p className="font-ui text-xs text-gray-500 italic">
+            Keep these two rules in mind as you read the napkin below. Your task is to identify
+            which phrases in the conversation satisfy these statutory elements.
+          </p>
+        </div>
+      </section>
 
       {/* ============================================================ */}
       {/* PHASE 0: Redline Spotter — The Napkin Shard                  */}
@@ -591,22 +630,53 @@ export default function Ch03Partnership() {
           </div>
 
           {/* Verdict result feedback */}
-          {state.verdictSubmitted && (
-            <div
-              className={`rounded-lg p-4 mb-4 border ${
-                state.verdictCorrect
-                  ? "border-green-500/30 bg-green-500/10"
-                  : "border-sprawl-bright-red/30 bg-sprawl-bright-red/10"
-              }`}
-            >
-              <p className="font-headline text-sm uppercase mb-1">
-                {state.verdictCorrect ? "Verdict Confirmed" : "Verdict Rejected"}
-              </p>
+          {state.verdictSubmitted && state.verdictCorrect && (
+            <div className="rounded-lg p-4 mb-4 border border-green-500/30 bg-green-500/10">
+              <p className="font-headline text-sm uppercase mb-1">Verdict Confirmed</p>
               <p className="font-body text-sm text-gray-700 dark:text-gray-300">
-                {state.verdictCorrect
-                  ? "Correct. Under RUPA ss 202, the objective facts of co-ownership and profit-sharing override any subjective intent to remain solo freelancers. Zeeva and Sammy are now partners, and their personal assets are fully exposed to business liabilities."
-                  : "Re-read the Tome of Law. The two core elements are (1) carrying on as co-owners of a business and (2) for profit. Intent to form a partnership is irrelevant — conduct controls. Try again."}
+                Correct. Under RUPA ss 202, the objective facts of co-ownership and profit-sharing
+                override any subjective intent to remain independent collaborators. Zeeva and Sammy
+                are now partners, and their personal assets are fully exposed to business liabilities.
               </p>
+            </div>
+          )}
+
+          {state.verdictSubmitted && !state.verdictCorrect && (
+            <div className="rounded-lg p-4 mb-4 border border-sprawl-bright-red/30 bg-sprawl-bright-red/10">
+              <p className="font-headline text-sm uppercase mb-1">Verdict Rejected</p>
+              <p className="font-body text-sm text-gray-700 dark:text-gray-300 mb-3">
+                Some blanks are incorrect. Review the hints below and try again.
+              </p>
+              <div className="space-y-2">
+                {VERDICT_BLANKS.map((blank) => {
+                  const answer = (state.verdictAnswers || {})[blank.id];
+                  const isCorrect = answer === blank.correct;
+                  return (
+                    <div
+                      key={blank.id}
+                      className={`flex items-start gap-2 rounded p-2 text-sm ${
+                        isCorrect
+                          ? "bg-green-500/10 border border-green-500/20"
+                          : "bg-sprawl-bright-red/5 border border-sprawl-bright-red/20"
+                      }`}
+                    >
+                      <span className={`font-headline text-xs mt-0.5 ${isCorrect ? "text-green-400" : "text-sprawl-bright-red"}`}>
+                        {isCorrect ? "OK" : "XX"}
+                      </span>
+                      <div>
+                        <p className="font-body text-gray-700 dark:text-gray-300">
+                          {blank.prompt}
+                        </p>
+                        {!isCorrect && blank.hint && (
+                          <p className="font-body text-xs text-sprawl-yellow mt-1 italic">
+                            Hint: {blank.hint}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
 

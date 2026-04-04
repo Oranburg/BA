@@ -165,6 +165,36 @@ export default function Ch12ShareholderFranchise() {
       />
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
+        <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Franchise Doctrine Primer</h2>
+        <div className="space-y-3 mb-4">
+          <div className="border-l-4 border-sprawl-yellow pl-3">
+            <p className="font-headline text-sm uppercase text-gray-900 dark:text-white">Blasius Standard</p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              Board action taken for the <em>primary purpose</em> of impeding stockholder voting power is
+              &ldquo;the most powerful&rdquo; form of inequitable conduct. A board that triggers Blasius must
+              demonstrate a <em>compelling justification</em> &mdash; a standard that is almost never satisfied.
+            </p>
+          </div>
+          <div className="border-l-4 border-sprawl-yellow pl-3">
+            <p className="font-headline text-sm uppercase text-gray-900 dark:text-white">Unocal Applied to Franchise</p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              Defensive measures that restrict voting rights are subject to <em>enhanced scrutiny</em> under
+              Unocal. The board must show a reasonable threat and that its response was proportionate &mdash;
+              preclusive or coercive measures are struck down.
+            </p>
+          </div>
+          <div className="border-l-4 border-sprawl-yellow pl-3">
+            <p className="font-headline text-sm uppercase text-gray-900 dark:text-white">Why These Facts Matter</p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              The proxy facts below involve manipulation of meeting mechanics, undisclosed conflicts, and
+              refusal to engage with challengers. Each implicates franchise integrity differently.
+              Your task is to rank them by litigation risk, keeping Blasius and Unocal in mind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Risk ranking exercise</h2>
         <p className="font-ui text-xs text-gray-500 mb-3">Rank from strongest litigation risk to weakest.</p>
         <div className="space-y-2">
@@ -199,6 +229,33 @@ export default function Ch12ShareholderFranchise() {
           })}
         </div>
         <p className="mt-3 font-ui text-xs text-sprawl-teal">Ranking precision: {rankingQuality}/4</p>
+        {ranking.length === 4 && (
+          <div className="mt-4 border-t border-gray-200 dark:border-gray-700 pt-3">
+            <p className="font-headline text-sm uppercase text-gray-900 dark:text-white mb-2">Model Ranking &amp; Rationale</p>
+            <ol className="list-decimal list-inside space-y-2 font-body text-sm text-gray-700 dark:text-gray-300">
+              <li>
+                <strong>Moving the meeting date (f1)</strong> &mdash; ranks highest because timing manipulation
+                directly impedes the stockholder franchise, triggering the core Blasius concern. Courts treat
+                mechanical interference with voting as near-conclusive evidence of inequitable purpose.
+              </li>
+              <li>
+                <strong>Undisclosed competitor financing (f3)</strong> &mdash; ranks second because hidden
+                commercial side agreements raise material disclosure failures that could mislead voters and
+                taint the activist slate&rsquo;s legitimacy under Unocal-style analysis.
+              </li>
+              <li>
+                <strong>Refusing to interview nominees (f4)</strong> &mdash; ranks third because blanket
+                refusal to engage signals bad faith and weakens the board&rsquo;s Unocal proportionality
+                defense, though it is less directly franchise-impairing than timing manipulation.
+              </li>
+              <li>
+                <strong>Supplemental disclosure correction (f2)</strong> &mdash; ranks lowest because
+                voluntary correction of a prior omission actually mitigates litigation risk and shows
+                process responsiveness, even though the original omission was problematic.
+              </li>
+            </ol>
+          </div>
+        )}
       </section>
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
@@ -245,8 +302,14 @@ export default function Ch12ShareholderFranchise() {
           placeholder="Draft recommendation: voting-process protections, disclosure repairs, and litigation posture."
           className="w-full min-h-32 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-3 font-body text-sm"
         />
+        {(state.notes || "").length < 20 && (
+          <p className="mt-2 font-ui text-xs text-sprawl-bright-red">
+            Counsel notes must be at least 20 characters before completing this module.
+          </p>
+        )}
         <div className="mt-4">
           <button
+            disabled={(state.notes || "").length < 20}
             onClick={() => {
               markCompleted();
               const selectedProcessLabel =
@@ -264,7 +327,7 @@ export default function Ch12ShareholderFranchise() {
               );
               downloadTextFile("constructedge-shareholder-franchise-record.txt", exportText);
             }}
-            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80"
+            className="px-5 py-2 bg-sprawl-yellow text-sprawl-deep-blue font-headline uppercase text-xs rounded hover:bg-sprawl-yellow/80 disabled:opacity-40"
           >
             Complete Module + Export Decision Record
           </button>

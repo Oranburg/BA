@@ -213,6 +213,41 @@ export default function Ch08EntitySelection() {
         references={["ch02-agency"]}
       />
 
+      <section className="border border-sprawl-light-blue/30 rounded-lg p-4 bg-sprawl-deep-blue/5 dark:bg-sprawl-deep-blue/30">
+        <h2 className="font-headline text-lg uppercase text-gray-900 dark:text-white mb-3">
+          The Four Problems of Business Law
+        </h2>
+        <p className="font-body text-sm text-gray-600 dark:text-gray-300 mb-3">
+          Every entity structure is evaluated against four recurring legal problems. Understand these before selecting a form.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-3">
+          <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
+            <p className="font-headline text-sm text-sprawl-yellow uppercase">Attribution</p>
+            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+              Who has authority to act on behalf of the enterprise, and when do those acts bind the entity and its owners?
+            </p>
+          </div>
+          <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
+            <p className="font-headline text-sm text-sprawl-yellow uppercase">Governance</p>
+            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+              How are decisions made, who holds voting or veto power, and what happens when decision-makers disagree?
+            </p>
+          </div>
+          <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
+            <p className="font-headline text-sm text-sprawl-yellow uppercase">Risk Allocation</p>
+            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+              Who bears the financial downside when things go wrong -- the entity, its owners personally, or both?
+            </p>
+          </div>
+          <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
+            <p className="font-headline text-sm text-sprawl-yellow uppercase">Asset Partitioning</p>
+            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+              Are business assets legally separated from personal assets, and will courts respect that boundary?
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Four Problems First</h2>
         <p className="font-ui text-sm text-gray-600 dark:text-gray-300 mb-4">
@@ -263,7 +298,12 @@ export default function Ch08EntitySelection() {
 
       {selected && score && (
         <section className="border border-sprawl-teal/40 rounded-lg p-4 bg-sprawl-teal/5">
-          <h2 className="font-headline text-lg uppercase text-sprawl-teal mb-3">Problem Fit Scorecard</h2>
+          <h2 className="font-headline text-lg uppercase text-sprawl-teal mb-2">Problem Fit Scorecard</h2>
+          <p className="font-body text-sm text-gray-600 dark:text-gray-300 mb-3">
+            Higher scores indicate better problem-fit for this entity type. Scores adjust dynamically
+            based on the issue checks you selected above. A score of 4-5 means the entity handles
+            that problem well; 1-2 signals a structural weakness worth addressing in your recommendation.
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {Object.entries(score).map(([key, value]) => (
               <div key={key} className="border border-sprawl-teal/40 rounded p-3 text-center">
@@ -330,8 +370,14 @@ export default function Ch08EntitySelection() {
         />
 
         <div className="mt-4 flex flex-wrap gap-3">
+          {state.selectedEntity && (state.counselRecommendation || "").trim().length < 20 && (
+            <p className="font-ui text-xs text-sprawl-bright-red mb-2">
+              Please draft a counsel recommendation of at least 20 characters before completing the module.
+            </p>
+          )}
+
           <button
-            disabled={!state.selectedEntity}
+            disabled={!state.selectedEntity || (state.counselRecommendation || "").trim().length < 20}
             onClick={() => {
               markCompleted();
               const entityLabel = ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Undetermined";

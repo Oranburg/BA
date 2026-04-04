@@ -62,10 +62,14 @@ const SYNTHESIS_BLANKS = [
     prompt: "a high ___",
     options: [
       { value: "", label: "..." },
-      { value: "valuation", label: "Valuation" },
-      { value: "preference", label: "Preference" },
+      { value: "valuation", label: "Pre-Money Valuation" },
+      { value: "preference", label: "Liquidation Preference" },
+      { value: "dilution", label: "Dilution Percentage" },
+      { value: "runway", label: "Cash Runway" },
     ],
     correct: "valuation",
+    explanation:
+      "A high pre-money valuation is the trap. It makes the founder's percentage look large, but when combined with aggressive preference terms, the economic reality at exit is very different from what the ownership percentage suggests.",
   },
   {
     id: "v2",
@@ -73,19 +77,27 @@ const SYNTHESIS_BLANKS = [
     options: [
       { value: "", label: "..." },
       { value: "participation", label: "Participating Preferred" },
-      { value: "common", label: "Common Stock" },
+      { value: "common", label: "Convertible Note" },
+      { value: "antidilution", label: "Anti-Dilution Ratchet" },
+      { value: "nonparticipating", label: "Non-Participating Preferred" },
     ],
     correct: "participation",
+    explanation:
+      "Participating preferred is the 'double dip' — the investor takes their liquidation preference first, then also shares pro-rata in the remaining proceeds alongside common stockholders. This is what makes a high valuation misleading.",
   },
   {
     id: "v3",
     prompt: "shifts the ___",
     options: [
       { value: "", label: "..." },
-      { value: "governance", label: "Governance" },
+      { value: "governance", label: "Board Governance" },
       { value: "risk", label: "Downside Risk" },
+      { value: "control", label: "Voting Control" },
+      { value: "dilution", label: "Equity Dilution" },
     ],
     correct: "risk",
+    explanation:
+      "The preference stack shifts downside risk onto common shareholders. Investors are protected by their preference (they get paid first), while founders absorb losses in mediocre exits. This is the core of the Problem of Risk in private financing.",
   },
   {
     id: "v4",
@@ -93,9 +105,13 @@ const SYNTHESIS_BLANKS = [
     options: [
       { value: "", label: "..." },
       { value: "zero", label: "Zero proceeds" },
-      { value: "millions", label: "Unlimited millions" },
+      { value: "millions", label: "Millions in proceeds" },
+      { value: "prorata", label: "Her pro-rata share" },
+      { value: "preferred", label: "A preferred return" },
     ],
     correct: "zero",
+    explanation:
+      "In a low exit, the entire sale price can be consumed by the liquidation preference, leaving common stockholders (founders) with nothing. With Beta's 2x participating preferred on a $5M investment, the preference alone takes $10M before any sharing begins.",
   },
 ];
 
@@ -328,6 +344,73 @@ export default function Ch10StayingPrivate() {
       />
 
       {/* ============================================================ */}
+      {/* DOCTRINE PRIMER: Preference Stack Fundamentals                */}
+      {/* ============================================================ */}
+
+      <section className="border border-sprawl-light-blue/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-8 h-8 rounded bg-sprawl-light-blue flex items-center justify-center text-sprawl-deep-blue font-headline text-xs">
+            00
+          </div>
+          <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white">
+            What You Need to Know: The Preference Stack
+          </h2>
+        </div>
+
+        <p className="font-body text-sm text-gray-600 dark:text-gray-300 mb-4">
+          Before comparing the two offers below, you need to understand three concepts that determine
+          who actually gets paid when a company is sold.
+        </p>
+
+        <div className="space-y-4">
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
+              1. Liquidation Preference
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              When a company is sold (a "liquidation event"), preferred stockholders have the right
+              to be paid a fixed amount before common stockholders receive anything. A <strong>1x preference</strong> means
+              the investor gets back their original investment first. A <strong>2x preference</strong> means the
+              investor gets back twice their investment before common stockholders see a dollar.
+              Under DGCL section 151, the board has broad authority to create these preference rights when
+              issuing stock.
+            </p>
+          </div>
+
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
+              2. Participating vs. Non-Participating Preferred
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300 mb-2">
+              <strong>Non-participating preferred:</strong> The investor chooses the greater of (a) their liquidation
+              preference or (b) converting to common stock and taking their pro-rata share. They pick one
+              or the other — not both.
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              <strong>Participating preferred ("double dip"):</strong> The investor takes their full liquidation preference
+              first, then also shares pro-rata in whatever remains — alongside the common stockholders.
+              This is dramatically more expensive for founders because the investor is paid twice: once
+              through the preference, and again through their ownership percentage of the remainder.
+            </p>
+          </div>
+
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
+              3. The Exit Waterfall
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              An "exit waterfall" shows how sale proceeds flow through the capital stack in order of priority.
+              Step 1: preferred stockholders take their liquidation preference off the top. Step 2: if the
+              preferred stock is participating, the investor also takes their pro-rata share of the remainder.
+              Step 3: whatever is left goes to common stockholders (typically founders and employees).
+              In a mediocre exit, the preference can consume most or all of the proceeds, leaving common
+              stockholders with nothing — even if they hold a large ownership percentage.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
       {/* PHASE 0-1: Term Sheet Selection                               */}
       {/* ============================================================ */}
 
@@ -483,20 +566,89 @@ export default function Ch10StayingPrivate() {
 
           {/* Current scenario detail */}
           {currentWaterfall && (
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="border border-sprawl-bright-red/30 rounded p-4 bg-black/30 text-center">
-                <p className="font-ui text-[10px] text-gray-500 uppercase mb-1">Investor Takes</p>
-                <p className="font-headline text-2xl text-sprawl-bright-red">
-                  {currentWaterfall.investorPayout}M CR
-                </p>
+            <>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="border border-sprawl-bright-red/30 rounded p-4 bg-black/30 text-center">
+                  <p className="font-ui text-[10px] text-gray-500 uppercase mb-1">Investor Takes</p>
+                  <p className="font-headline text-2xl text-sprawl-bright-red">
+                    {currentWaterfall.investorPayout}M CR
+                  </p>
+                </div>
+                <div className="border border-sprawl-teal/30 rounded p-4 bg-black/30 text-center">
+                  <p className="font-ui text-[10px] text-gray-500 uppercase mb-1">Zeeva{"'"}s Payout</p>
+                  <p className="font-headline text-2xl text-sprawl-teal">
+                    {currentWaterfall.founderPayout}M CR
+                  </p>
+                </div>
               </div>
-              <div className="border border-sprawl-teal/30 rounded p-4 bg-black/30 text-center">
-                <p className="font-ui text-[10px] text-gray-500 uppercase mb-1">Zeeva's Payout</p>
-                <p className="font-headline text-2xl text-sprawl-teal">
-                  {currentWaterfall.founderPayout}M CR
+
+              {/* Doctrinal annotation explaining WHY */}
+              <div className="mt-4 border border-sprawl-yellow/20 rounded-lg p-4 bg-sprawl-deep-blue/60">
+                <p className="font-headline text-xs uppercase text-sprawl-yellow mb-2">
+                  Why These Numbers?
                 </p>
+                {selectedTerm === "alpha" ? (
+                  <div className="font-body text-xs text-gray-400 space-y-2">
+                    <p>
+                      <strong className="text-gray-300">Step 1 — Preference or convert?</strong>{" "}
+                      Alpha has 1x non-participating preferred. The investor chooses the greater of
+                      their $5M preference or converting to 34% common stock. They do not get both.
+                    </p>
+                    {exitValue <= 14 && (
+                      <p>
+                        <strong className="text-gray-300">At {exitValue}M exit:</strong>{" "}
+                        The 1x preference ($5M) exceeds 34% of {exitValue}M (${(exitValue * 0.34).toFixed(1)}M),
+                        so the investor takes the preference. Zeeva keeps the remainder: ${currentWaterfall.founderPayout}M.
+                      </p>
+                    )}
+                    {exitValue >= 15 && (
+                      <p>
+                        <strong className="text-gray-300">At {exitValue}M exit:</strong>{" "}
+                        Converting to 34% common (${(exitValue * 0.34).toFixed(1)}M) exceeds the $5M preference,
+                        so the investor converts. Zeeva takes 66%: ${currentWaterfall.founderPayout}M.
+                        This is the clean structure — at high exits, interests align.
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <div className="font-body text-xs text-gray-400 space-y-2">
+                    <p>
+                      <strong className="text-gray-300">Step 1 — 2x preference off the top.</strong>{" "}
+                      {"Beta's"} 2x participating preferred means investors take $10M (2 x $5M investment)
+                      before any sharing begins. This is the "preference" layer of the waterfall.
+                    </p>
+                    <p>
+                      <strong className="text-gray-300">Step 2 — Pro-rata share of the remainder.</strong>{" "}
+                      After the $10M preference, the investor also takes 20% of whatever is left.
+                      This is the "participation" (double dip) — they are paid twice from the same pool.
+                    </p>
+                    {exitValue <= 10 && (
+                      <p>
+                        <strong className="text-sprawl-bright-red">At {exitValue}M exit:</strong>{" "}
+                        The entire sale price is consumed by the $10M preference. Zeeva gets ${currentWaterfall.founderPayout}M.
+                        Despite owning 80% of the company, she receives nothing. This is why valuation alone is a trap.
+                      </p>
+                    )}
+                    {exitValue > 10 && exitValue <= 25 && (
+                      <p>
+                        <strong className="text-gray-300">At {exitValue}M exit:</strong>{" "}
+                        After the $10M preference, ${(exitValue - 10).toFixed(1)}M remains. The investor takes
+                        20% of that (${((exitValue - 10) * 0.2).toFixed(1)}M) on top of the preference.
+                        Zeeva keeps only ${currentWaterfall.founderPayout}M — far less than her 80% ownership suggests.
+                      </p>
+                    )}
+                    {exitValue > 25 && (
+                      <p>
+                        <strong className="text-gray-300">At {exitValue}M exit:</strong>{" "}
+                        Even in a strong exit, the $10M preference plus 20% participation means the
+                        investor takes ${currentWaterfall.investorPayout}M. Zeeva keeps ${currentWaterfall.founderPayout}M — better
+                        in absolute terms, but the double dip still costs her millions compared to clean terms.
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
-            </div>
+            </>
           )}
 
           {state.phase === 1 && (
@@ -527,7 +679,7 @@ export default function Ch10StayingPrivate() {
 
           <div className="bg-gray-50 dark:bg-sprawl-deep-blue/60 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-4">
             <p className="font-body text-lg md:text-xl leading-loose text-gray-700 dark:text-gray-300 italic">
-              "In the 'Staying Private' phase, {" "}
+              "When raising a Series A, the most common founder mistake is focusing on{" "}
               <select
                 value={(state.synthesisAnswers || {}).v1 || ""}
                 onChange={(e) => handleSynthesisChange("v1", e.target.value)}
@@ -537,8 +689,8 @@ export default function Ch10StayingPrivate() {
                 {SYNTHESIS_BLANKS[0].options.map((o) => (
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
-              </select>{" "}
-              can be a trap for founders. If a startup accepts{" "}
+              </select>
+              . A term sheet that includes{" "}
               <select
                 value={(state.synthesisAnswers || {}).v2 || ""}
                 onChange={(e) => handleSynthesisChange("v2", e.target.value)}
@@ -549,7 +701,7 @@ export default function Ch10StayingPrivate() {
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>{" "}
-              terms, the investors effectively 'double-dip' during an exit. This shifts the{" "}
+              fundamentally changes the exit economics. The preference stack shifts{" "}
               <select
                 value={(state.synthesisAnswers || {}).v3 || ""}
                 onChange={(e) => handleSynthesisChange("v3", e.target.value)}
@@ -560,7 +712,7 @@ export default function Ch10StayingPrivate() {
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>{" "}
-              onto the common shareholders, potentially leaving Zeeva with{" "}
+              to common shareholders, and at certain exit values Zeeva would receive{" "}
               <select
                 value={(state.synthesisAnswers || {}).v4 || ""}
                 onChange={(e) => handleSynthesisChange("v4", e.target.value)}
@@ -570,8 +722,8 @@ export default function Ch10StayingPrivate() {
                 {SYNTHESIS_BLANKS[3].options.map((o) => (
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
-              </select>{" "}
-              in a low-exit scenario."
+              </select>
+              ."
             </p>
           </div>
 
@@ -591,6 +743,33 @@ export default function Ch10StayingPrivate() {
                   ? "Correct. Chapter 10 highlights that 'Valuation' is often a vanity metric. If the Preference Stack (Liquidation Preference and Participation) is too high, the founders bear all the 'Risk' of a mediocre exit. Zeeva has learned that clean terms are often better than a high valuation."
                   : "Re-examine how Participating Preferred stock interacts with the common stock payout. A high valuation paired with aggressive preferences can leave founders with nothing."}
               </p>
+            </div>
+          )}
+
+          {/* Per-blank explanations shown after submission */}
+          {state.synthesisSubmitted && (
+            <div className="space-y-2 mb-4">
+              {SYNTHESIS_BLANKS.map((blank) => {
+                const answer = (state.synthesisAnswers || {})[blank.id];
+                const isCorrect = answer === blank.correct;
+                return (
+                  <div
+                    key={blank.id}
+                    className={`rounded p-3 border text-sm ${
+                      isCorrect
+                        ? "border-green-500/20 bg-green-500/5"
+                        : "border-sprawl-bright-red/20 bg-sprawl-bright-red/5"
+                    }`}
+                  >
+                    <p className="font-ui text-xs uppercase mb-1">
+                      <span className={isCorrect ? "text-green-400" : "text-sprawl-bright-red"}>
+                        {isCorrect ? "Correct" : `Incorrect — answer: ${blank.options.find((o) => o.value === blank.correct)?.label}`}
+                      </span>
+                    </p>
+                    <p className="font-body text-xs text-gray-400">{blank.explanation}</p>
+                  </div>
+                );
+              })}
             </div>
           )}
 

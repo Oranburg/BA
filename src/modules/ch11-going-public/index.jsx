@@ -65,28 +65,40 @@ const SYNTHESIS_BLANKS = [
     id: "v1",
     options: [
       { value: "", label: "..." },
-      { value: "marketing", label: "Marketing Hype" },
+      { value: "marketing", label: "Competitive Intelligence" },
       { value: "materiality", label: "Material Misstatements" },
+      { value: "formatting", label: "Formatting Errors" },
+      { value: "projections", label: "Revenue Projections" },
     ],
     correct: "materiality",
+    explanation:
+      "Under Securities Act section 11, the registration statement must be free of untrue statements of material fact and material omissions. 'Material misstatements' is the legal term of art — it captures both affirmative lies and misleading omissions.",
   },
   {
     id: "v2",
     options: [
       { value: "", label: "..." },
       { value: "section11", label: "Section 11 Liability" },
-      { value: "bonus", label: "A Founder Bonus" },
+      { value: "section12", label: "Section 12(a)(1) Liability" },
+      { value: "breach", label: "Breach of Fiduciary Duty" },
+      { value: "fraud", label: "Common Law Fraud" },
     ],
     correct: "section11",
+    explanation:
+      "Section 11 imposes strict liability on the issuer for defective registration statements — no proof of intent or reliance is required. Section 12(a)(1) covers unregistered sales, and common law fraud requires scienter. Section 11 is the primary enforcement mechanism for registration statement accuracy.",
   },
   {
     id: "v3",
     options: [
       { value: "", label: "..." },
-      { value: "privacy", label: "Staying Private" },
-      { value: "partitioning", label: "Asset Partitioning (Scaling)" },
+      { value: "privacy", label: "Remaining a Private Company" },
+      { value: "partitioning", label: "Asset Partitioning at Scale" },
+      { value: "compliance", label: "Regulatory Compliance" },
+      { value: "valuation", label: "Accurate Valuation" },
     ],
     correct: "partitioning",
+    explanation:
+      "The IPO extends the asset partition to public capital markets. Disclosure enables this: investors can only price securities accurately when they have complete information. Without truthful disclosure, public markets cannot function, and the company cannot access the scaled asset partitioning that an IPO provides.",
   },
   {
     id: "v4",
@@ -94,8 +106,12 @@ const SYNTHESIS_BLANKS = [
       { value: "", label: "..." },
       { value: "fair", label: "Fair Value" },
       { value: "inflated", label: "Inflated Value" },
+      { value: "discounted", label: "Discounted Value" },
+      { value: "book", label: "Book Value" },
     ],
     correct: "fair",
+    explanation:
+      "Full disclosure enables the market to price the securities at fair value — reflecting both the company's strengths and its known risks (like the stress fracture). An inflated valuation built on concealed risks would collapse when the truth emerges, destroying shareholder value.",
   },
 ];
 
@@ -144,6 +160,7 @@ const INITIAL_STATE = {
   flaggedCards: {},
   verifiedCards: {},
   transparencyScore: 0,
+  wrongFlagCount: 0,
   synthesisAnswers: {},
   synthesisSubmitted: false,
   synthesisCorrect: false,
@@ -209,13 +226,20 @@ export default function Ch11GoingPublic() {
 
   const liabilityStatus = correctFlags >= FLAGGABLE_COUNT ? "MINIMIZED" : "HIGH";
 
+  const wrongFlagCount = state.wrongFlagCount || 0;
+
   const handleCardAction = useCallback(
     (card, action) => {
       if (flaggedCards[card.id] || verifiedCards[card.id]) return; // already reviewed
 
       if (action === "flag") {
         const next = { ...flaggedCards, [card.id]: true };
-        patch({ flaggedCards: next });
+        const updates = { flaggedCards: next };
+        // Track wrong flags (flagging a safe card, or verifying a problem card)
+        if (card.type === "safe") {
+          updates.wrongFlagCount = (state.wrongFlagCount || 0) + 1;
+        }
+        patch(updates);
         // If all flaggable items found, advance to synthesis
         const newCorrectFlags = DISCLOSURE_CARDS.filter(
           (c) => c.type !== "safe" && next[c.id]
@@ -224,10 +248,15 @@ export default function Ch11GoingPublic() {
           patch({ phase: Math.max(state.phase, 1) });
         }
       } else {
-        patch({ verifiedCards: { ...verifiedCards, [card.id]: true } });
+        const updates = { verifiedCards: { ...verifiedCards, [card.id]: true } };
+        // Track wrong verifications (verifying a card that has a problem)
+        if (card.type !== "safe") {
+          updates.wrongFlagCount = (state.wrongFlagCount || 0) + 1;
+        }
+        patch(updates);
       }
     },
-    [flaggedCards, verifiedCards, patch, state.phase]
+    [flaggedCards, verifiedCards, patch, state.phase, state.wrongFlagCount]
   );
 
   const handleSynthesisChange = useCallback(
@@ -314,6 +343,71 @@ export default function Ch11GoingPublic() {
         title="Matter File Carryover (Staying Private -> Going Public)"
         references={["ch09-fiduciary-duties", "ch10-staying-private"]}
       />
+
+      {/* ============================================================ */}
+      {/* DOCTRINE PRIMER: Securities Act ss 11 Framework               */}
+      {/* ============================================================ */}
+
+      <section className="border border-sprawl-light-blue/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-8 h-8 rounded bg-sprawl-light-blue flex items-center justify-center text-sprawl-deep-blue font-headline text-xs">
+            00
+          </div>
+          <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white">
+            What You Need to Know: Section 11 Liability
+          </h2>
+        </div>
+
+        <p className="font-body text-sm text-gray-600 dark:text-gray-300 mb-4">
+          Before reviewing the prospectus, understand the legal framework that governs what must
+          be disclosed and who bears liability when the disclosure fails.
+        </p>
+
+        <div className="space-y-4">
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
+              1. Who Is Liable?
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              Section 11 creates a wide net of liability. The <strong>issuer</strong> (the company itself)
+              faces strict liability — no intent or negligence need be shown. <strong>Directors</strong> who
+              signed the registration statement are liable unless they can prove a "due diligence" defense
+              (that they reasonably investigated and believed the statements were true).{" "}
+              <strong>Underwriters</strong> who participated in the offering face the same due diligence
+              standard. The issuer has no due diligence defense — if the statement is defective, the
+              issuer is liable, period.
+            </p>
+          </div>
+
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
+              2. What Triggers Liability?
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              Liability is triggered when a registration statement (including the prospectus) contains
+              an <strong>untrue statement of a material fact</strong> or <strong>omits a material fact
+              necessary to make the statements not misleading</strong>. This covers both lies and
+              silence — if you know something important and leave it out, that omission is just as
+              actionable as an affirmative misstatement.
+            </p>
+          </div>
+
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <p className="font-headline text-sm uppercase text-sprawl-yellow mb-2">
+              3. The Materiality Standard (TSC Industries v. Northway)
+            </p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              Not every error triggers liability — only <strong>material</strong> ones. The Supreme Court
+              defined materiality in TSC Industries: information is material if there is a{" "}
+              <strong>substantial likelihood that a reasonable investor would consider it important</strong>{" "}
+              in making an investment decision. The question is not whether the investor would have
+              changed their decision, but whether the fact would have been significant to their
+              deliberation. When scrubbing the prospectus below, apply this standard: would a
+              reasonable investor want to know this?
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ============================================================ */}
       {/* PHASE 0: The Disclosure Scrubber                              */}
@@ -441,6 +535,19 @@ export default function Ch11GoingPublic() {
           </div>
         </div>
 
+        {/* Hint for struggling students */}
+        {wrongFlagCount >= 3 && correctFlags < FLAGGABLE_COUNT && (
+          <div className="border border-sprawl-yellow/40 rounded-lg p-4 mb-4 bg-sprawl-yellow/5">
+            <p className="font-headline text-xs uppercase text-sprawl-yellow mb-1">Hint</p>
+            <p className="font-body text-sm text-gray-700 dark:text-gray-300">
+              Look for facts that a <strong>reasonable investor</strong> would consider important
+              when making an investment decision. Ask yourself: does this disclosure accurately
+              represent the risks? Is anything being hidden that could change an investor{"'"}s
+              assessment of the company{"'"}s value?
+            </p>
+          </div>
+        )}
+
         {/* Confidence tracker */}
         <ConfidenceTracker score={transparencyScore} liabilityStatus={liabilityStatus} />
 
@@ -471,7 +578,7 @@ export default function Ch11GoingPublic() {
 
           <div className="bg-gray-50 dark:bg-sprawl-deep-blue/60 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-4">
             <p className="font-body text-lg md:text-xl leading-loose text-gray-700 dark:text-gray-300 italic">
-              "By scrubbing the prospectus for{" "}
+              "By reviewing the prospectus to identify{" "}
               <select
                 value={(state.synthesisAnswers || {}).v1 || ""}
                 onChange={(e) => handleSynthesisChange("v1", e.target.value)}
@@ -482,8 +589,8 @@ export default function Ch11GoingPublic() {
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>
-              , Zeeva ensures the 'Truth in Securities' mandate is met. Failure to disclose the
-              stress fracture would have triggered{" "}
+              , Zeeva satisfies the registration statement requirements. Concealing the
+              stress fracture would have exposed ConstructEdge to{" "}
               <select
                 value={(state.synthesisAnswers || {}).v2 || ""}
                 onChange={(e) => handleSynthesisChange("v2", e.target.value)}
@@ -494,7 +601,8 @@ export default function Ch11GoingPublic() {
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>
-              , destroying the trust necessary for{" "}
+              . Proper disclosure enables public markets to function, which in turn allows the
+              company to achieve{" "}
               <select
                 value={(state.synthesisAnswers || {}).v3 || ""}
                 onChange={(e) => handleSynthesisChange("v3", e.target.value)}
@@ -504,8 +612,8 @@ export default function Ch11GoingPublic() {
                 {SYNTHESIS_BLANKS[2].options.map((o) => (
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
-              </select>
-              . The IPO will proceed at a valuation of{" "}
+              </select>{" "}
+              through the IPO. The offering will proceed at a valuation of{" "}
               <select
                 value={(state.synthesisAnswers || {}).v4 || ""}
                 onChange={(e) => handleSynthesisChange("v4", e.target.value)}
@@ -536,6 +644,33 @@ export default function Ch11GoingPublic() {
                   ? "Zeeva has crossed the public threshold. By disclosing the load-bearing stress fracture, she avoided Section 11 strict liability. The market now values ConstructEdge based on reality, not a lie. The Sector 7 expansion is funded through legitimate public capital."
                   : "The audit finds inconsistencies in your disclosure theory. Materiality is the key to Section 11 liability. Re-evaluate your final resolution."}
               </p>
+            </div>
+          )}
+
+          {/* Per-blank explanations shown after submission */}
+          {state.synthesisSubmitted && (
+            <div className="space-y-2 mb-4">
+              {SYNTHESIS_BLANKS.map((blank) => {
+                const answer = (state.synthesisAnswers || {})[blank.id];
+                const isCorrect = answer === blank.correct;
+                return (
+                  <div
+                    key={blank.id}
+                    className={`rounded p-3 border text-sm ${
+                      isCorrect
+                        ? "border-green-500/20 bg-green-500/5"
+                        : "border-sprawl-bright-red/20 bg-sprawl-bright-red/5"
+                    }`}
+                  >
+                    <p className="font-ui text-xs uppercase mb-1">
+                      <span className={isCorrect ? "text-green-400" : "text-sprawl-bright-red"}>
+                        {isCorrect ? "Correct" : `Incorrect — answer: ${blank.options.find((o) => o.value === blank.correct)?.label}`}
+                      </span>
+                    </p>
+                    <p className="font-body text-xs text-gray-400">{blank.explanation}</p>
+                  </div>
+                );
+              })}
             </div>
           )}
 

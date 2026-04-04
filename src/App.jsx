@@ -21,6 +21,7 @@ import { TomeProvider } from "./tome/TomeContext";
 import { TomeDocPage, TomeHomePage, TomeIndexPage, TomeSectionPage } from "./tome/TomePages";
 import { APP_ROUTES } from "./routing/routes";
 import HashRouteHandler from "./routing/HashRouteHandler";
+import ScrollToTop from "./routing/ScrollToTop";
 
 function Guarded({ label, children }) {
   return <ErrorBoundary label={label}>{children}</ErrorBoundary>;
@@ -30,6 +31,7 @@ export default function App() {
   return (
     <BrowserRouter basename="/BA/">
       <SpaRedirectHandler />
+      <ScrollToTop />
       <HashRouteHandler />
       <ThemeProvider>
         <TomeProvider>
