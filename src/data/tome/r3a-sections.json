@@ -4,222 +4,485 @@
     "title": "Agency Defined",
     "article": "Chapter 1",
     "text": "Agency is the fiduciary relationship that arises when one person (a 'principal') manifests assent to another person (an 'agent') that the agent shall act on the principal's behalf and subject to the principal's control, and the agent manifests assent or otherwise consents so to act.",
-    "concepts": [
-      "agency",
-      "control",
-      "fiduciary relationship"
-    ],
+    "concepts": ["agency", "fiduciary relationship", "control", "consent"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
   },
   {
     "number": "1.02",
     "title": "Parties' Labeling and Popular Usage Not Controlling",
     "article": "Chapter 1",
     "text": "An agency relationship arises only when the elements stated in \u00a7 1.01 are present. Whether a relationship is characterized as agency in an agreement between parties or in the context of industry or popular usage is not controlling.",
-    "concepts": [
-      "agency"
-    ],
+    "concepts": ["agency", "substance over form"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
   },
   {
     "number": "1.03",
     "title": "Manifestation",
     "article": "Chapter 1",
     "text": "A person manifests assent or intention through written or spoken words or other conduct.",
-    "concepts": [
-      "manifestation"
-    ],
+    "concepts": ["manifestation", "assent"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
   },
   {
     "number": "1.04",
     "title": "Terminology",
     "article": "Chapter 1",
     "text": "Terminology definitions for co-agents, dual agents, employees, employers, gratuitous agents, disclosed/undisclosed/unidentified principals, notice, person, power given as security, subagent, superior and subordinate co-agents, and trustee.",
-    "concepts": [
-      "definitions",
-      "agency"
-    ],
+    "concepts": ["definitions", "agency", "principal types", "agent types"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
   },
   {
     "number": "2.01",
     "title": "Actual Authority",
     "article": "Chapter 2",
     "text": "An agent acts with actual authority when, at the time of taking action that has legal consequences for the principal, the agent reasonably believes, in accordance with the principal's manifestations to the agent, that the principal wishes the agent so to act.",
-    "concepts": [
-      "actual authority"
-    ],
-    "crossRefs": [
-      {
-        "target": "RUPA \u00a7 301"
-      }
-    ],
-    "chapterUse": [
-      2
-    ]
+    "concepts": ["actual authority", "reasonable belief"],
+    "crossRefs": [{"target": "RUPA \u00a7 301"}],
+    "chapterUse": [2, 3]
   },
   {
     "number": "2.02",
     "title": "Scope of Actual Authority",
     "article": "Chapter 2",
     "text": "An agent has actual authority to take action designated or implied in the principal's manifestations to the agent and acts necessary or incidental to achieving the principal's objectives, as the agent reasonably understands the principal's manifestations and objectives when the agent determines how to act.",
-    "concepts": [
-      "actual authority",
-      "scope"
-    ],
+    "concepts": ["actual authority", "scope", "implied authority", "incidental authority"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2, 3]
   },
   {
     "number": "2.03",
     "title": "Apparent Authority",
     "article": "Chapter 2",
     "text": "Apparent authority is the power held by an agent or other actor to affect a principal's legal relations with third parties when a third party reasonably believes the actor has authority to act on behalf of the principal and that belief is traceable to the principal's manifestations.",
-    "concepts": [
-      "apparent authority"
-    ],
-    "crossRefs": [
-      {
-        "target": "RUPA \u00a7 301"
-      },
-      {
-        "target": "ULLCA \u00a7 301"
-      }
-    ],
-    "chapterUse": [
-      2
-    ]
+    "concepts": ["apparent authority", "third party reliance", "manifestation"],
+    "crossRefs": [{"target": "RUPA \u00a7 301"}, {"target": "ULLCA \u00a7 301"}],
+    "chapterUse": [2, 3]
   },
   {
     "number": "2.04",
     "title": "Respondeat Superior",
     "article": "Chapter 2",
     "text": "An employer is subject to liability for torts committed by employees while acting within the scope of their employment.",
-    "concepts": [
-      "vicarious liability",
-      "respondeat superior"
-    ],
+    "concepts": ["vicarious liability", "respondeat superior", "employer liability"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
+  },
+  {
+    "number": "2.05",
+    "title": "Estoppel to Deny Existence of Agency Relationship",
+    "article": "Chapter 2",
+    "text": "A person who has not made a manifestation that an actor has authority as an agent and who is not otherwise liable as a party to a transaction purportedly done by the actor on that person's account is subject to liability to a third party who justifiably is induced to make a detrimental change in position because the transaction is believed to be on the person's account, if (1) the person intentionally or carelessly caused such belief, or (2) having notice of such belief and that it might induce others to change their positions, the person did not take reasonable steps to notify them of the facts.",
+    "concepts": ["estoppel", "agency by estoppel", "detrimental reliance"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "2.06",
+    "title": "Liability of Undisclosed Principal",
+    "article": "Chapter 2",
+    "text": "(1) An undisclosed principal is subject to liability to a third party who is justifiably induced to make a detrimental change in position by an agent acting on the principal's behalf and without actual authority if the principal, having notice of the agent's conduct and that it might induce others to change their positions, did not take reasonable steps to notify them of the facts. (2) An undisclosed principal may not rely on instructions given an agent that qualify or reduce the agent's authority to less than the authority a third party would reasonably believe the agent to have under the same circumstances if the principal had been disclosed.",
+    "concepts": ["undisclosed principal", "inherent agency power"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "2.07",
+    "title": "Restitution of Benefit",
+    "article": "Chapter 2",
+    "text": "If a principal is unjustly enriched at the expense of another person by the action of an agent or a person who appears to be an agent, the principal is subject to a claim for restitution by that person.",
+    "concepts": ["restitution", "unjust enrichment"],
+    "crossRefs": [],
+    "chapterUse": [2]
   },
   {
     "number": "3.01",
     "title": "Creation of Actual Authority",
     "article": "Chapter 3",
-    "text": "Actual authority is created by a principal's manifestation to an agent that, as reasonably understood by the agent, expresses the principal's assent that the agent take action on the principal's behalf.",
-    "concepts": [
-      "actual authority",
-      "creation"
-    ],
+    "text": "Actual authority, as defined in \u00a7 2.01, is created by a principal's manifestation to an agent that, as reasonably understood by the agent, expresses the principal's assent that the agent take action on the principal's behalf.",
+    "concepts": ["actual authority", "creation"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2, 3]
+  },
+  {
+    "number": "3.02",
+    "title": "Formal Requirements",
+    "article": "Chapter 3",
+    "text": "If the law requires a writing or record signed by the principal to evidence an agent's authority to bind a principal to a contract or other transaction, the principal is not bound in the absence of such a writing or record. A principal may be estopped to assert the lack of such a writing or record when a third party has been induced to make a detrimental change in position by the reasonable belief that an agent has authority to bind the principal that is traceable to a manifestation made by the principal.",
+    "concepts": ["formal requirements", "statute of frauds", "equal dignities rule"],
+    "crossRefs": [],
+    "chapterUse": [2]
   },
   {
     "number": "3.03",
     "title": "Creation of Apparent Authority",
     "article": "Chapter 3",
-    "text": "Apparent authority is created by a person's manifestation that such person consents to have another act on the person's behalf, as reasonably perceived by a third party.",
-    "concepts": [
-      "apparent authority",
-      "creation"
-    ],
+    "text": "Apparent authority, as defined in \u00a7 2.03, is created by a person's manifestation that another has authority to act with legal consequences for the person who makes the manifestation, when a third party reasonably believes the actor to be authorized and the belief is traceable to the manifestation.",
+    "concepts": ["apparent authority", "creation", "third party belief"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2, 3]
+  },
+  {
+    "number": "3.04",
+    "title": "Capacity to Act as Principal",
+    "article": "Chapter 3",
+    "text": "(1) An individual has capacity to act as principal in a relationship of agency if, at the time the agent takes action, the individual would have capacity if acting in person. (2) The law applicable to a person that is not an individual governs whether the person has capacity to be a principal. (3) If performance of an act is not delegable, its performance by an agent does not constitute performance by the principal.",
+    "concepts": ["capacity", "principal"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "3.06",
+    "title": "Termination of Actual Authority--In General",
+    "article": "Chapter 3",
+    "text": "An agent's actual authority may be terminated by: (1) the agent's death, cessation of existence, or suspension of powers; (2) the principal's death, cessation of existence, or suspension of powers; (3) the principal's loss of capacity; (4) an agreement between agent and principal or the occurrence of circumstances on the basis of which the agent should reasonably conclude that the principal no longer would assent; (5) a manifestation of revocation by the principal or renunciation by the agent; or (6) the occurrence of circumstances specified by statute.",
+    "concepts": ["termination", "actual authority", "revocation"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "3.11",
+    "title": "Termination of Apparent Authority",
+    "article": "Chapter 3",
+    "text": "(1) The termination of actual authority does not by itself end any apparent authority held by an agent. (2) Apparent authority ends when it is no longer reasonable for the third party with whom an agent deals to believe that the agent continues to act with actual authority.",
+    "concepts": ["termination", "apparent authority", "lingering authority"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "3.14",
+    "title": "Agents with Multiple Principals",
+    "article": "Chapter 3",
+    "text": "An agent acting in the same transaction or matter on behalf of more than one principal may be one or both of the following: (a) a subagent, as stated in \u00a7 3.15; or (b) an agent for coprincipals, as stated in \u00a7 3.16.",
+    "concepts": ["multiple principals", "subagent", "coprincipals"],
+    "crossRefs": [],
+    "chapterUse": [2, 3]
+  },
+  {
+    "number": "3.15",
+    "title": "Subagency",
+    "article": "Chapter 3",
+    "text": "(1) A subagent is a person appointed by an agent to perform functions that the agent has consented to perform on behalf of the agent's principal and for whose conduct the appointing agent is responsible to the principal. The relationships between a subagent and the appointing agent and between the subagent and the appointing agent's principal are relationships of agency. (2) An agent may appoint a subagent only if the agent has actual or apparent authority to do so.",
+    "concepts": ["subagency", "delegation"],
+    "crossRefs": [],
+    "chapterUse": [2]
   },
   {
     "number": "4.01",
     "title": "Ratification Defined",
     "article": "Chapter 4",
-    "text": "Ratification is the affirmance of a prior act done by another, whereby the act is given effect as if done by an agent acting with actual authority.",
-    "concepts": [
-      "ratification"
-    ],
+    "text": "(1) Ratification is the affirmance of a prior act done by another, whereby the act is given effect as if done by an agent acting with actual authority. (2) A person ratifies an act by (a) manifesting assent that the act shall affect the person's legal relations, or (b) conduct that justifies a reasonable assumption that the person so consents.",
+    "concepts": ["ratification", "affirmance"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
+  },
+  {
+    "number": "4.02",
+    "title": "Effect of Ratification",
+    "article": "Chapter 4",
+    "text": "(1) Subject to the exceptions stated in subsection (2), ratification retroactively creates the effects of actual authority. (2) Ratification is not effective: (a) in favor of a person who causes it by misrepresentation or other conduct that would make a contract voidable; (b) if it would adversely and inequitably affect the rights of persons not party to the transaction.",
+    "concepts": ["ratification", "retroactive effect"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "4.03",
+    "title": "Acts That May Be Ratified",
+    "article": "Chapter 4",
+    "text": "A person may ratify an act if the actor acted or purported to act as an agent on the person's behalf.",
+    "concepts": ["ratification", "scope"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "4.05",
+    "title": "Timing of Ratification",
+    "article": "Chapter 4",
+    "text": "A ratification of a transaction is not effective unless it precedes the occurrence of circumstances that would cause the ratification to have adverse and inequitable effects on the rights of third parties. These circumstances include: (1) any manifestation of intention to withdraw from the transaction made by the third party; (2) any material change in circumstances that would make it inequitable to bind the third party; and (3) a specific time that determines whether the third party or another has acquired rights.",
+    "concepts": ["ratification", "timing", "third party rights"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "4.06",
+    "title": "Knowledge Requisite to Ratification",
+    "article": "Chapter 4",
+    "text": "A person is not bound by a ratification made without knowledge of material facts involved in the original act when the person was unaware of such lack of knowledge.",
+    "concepts": ["ratification", "knowledge", "material facts"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "4.07",
+    "title": "No Partial Ratification",
+    "article": "Chapter 4",
+    "text": "A ratification is not effective unless it encompasses the entirety of an act, contract, or other single transaction.",
+    "concepts": ["ratification", "all or nothing"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "4.08",
+    "title": "Estoppel to Deny Ratification",
+    "article": "Chapter 4",
+    "text": "If a person makes a manifestation that the person has ratified another's act and the manifestation, as reasonably understood by a third party, induces the third party to make a detrimental change in position, the person may be estopped to deny the ratification.",
+    "concepts": ["ratification", "estoppel", "detrimental reliance"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "5.01",
+    "title": "Notifications and Notice--In General",
+    "article": "Chapter 5",
+    "text": "(1) A notification is a manifestation that is made in the form required by agreement among parties or by applicable law, or in a reasonable manner, with the intention of affecting the legal rights and duties of the notifier. (2) A notification given to or by an agent is effective as notification to or by the principal as stated in \u00a7 5.02. (3) A person has notice of a fact if the person knows the fact, has reason to know the fact, has received an effective notification, or should know the fact to fulfill a duty owed to another.",
+    "concepts": ["notice", "notification", "knowledge"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "5.02",
+    "title": "Notification Given by or to an Agent",
+    "article": "Chapter 5",
+    "text": "(1) A notification given to an agent is effective as notice to the principal if the agent has actual or apparent authority to receive the notification, unless the person who gives the notification knows or has reason to know that the agent is acting adversely to the principal. (2) A notification given by an agent is effective as notification given by the principal if the agent has actual or apparent authority to give the notification.",
+    "concepts": ["notice", "imputation", "agent authority"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "5.03",
+    "title": "Imputation of Notice of Fact to Principal",
+    "article": "Chapter 5",
+    "text": "For purposes of determining a principal's legal relations with a third party, notice of a fact that an agent knows or has reason to know is imputed to the principal if knowledge of the fact is material to the agent's duties to the principal, unless the agent (a) acts adversely to the principal, or (b) is subject to a duty to another not to disclose the fact to the principal.",
+    "concepts": ["imputation", "notice", "knowledge"],
+    "crossRefs": [],
+    "chapterUse": [2, 3]
   },
   {
     "number": "6.01",
-    "title": "Agent's Duty to Principal",
+    "title": "Agent for Disclosed Principal",
     "article": "Chapter 6",
-    "text": "An agent has a fiduciary duty to act loyally for the principal's benefit in all matters connected with the agency relationship.",
-    "concepts": [
-      "fiduciary duty",
-      "loyalty"
-    ],
-    "crossRefs": [
-      {
-        "target": "RUPA \u00a7 409"
-      }
-    ],
-    "chapterUse": [
-      2,
-      9
-    ]
+    "text": "When an agent acting with actual or apparent authority makes a contract on behalf of a disclosed principal, (1) the principal and the third party are parties to the contract; and (2) the agent is not a party to the contract unless the agent and third party agree otherwise.",
+    "concepts": ["disclosed principal", "contract liability", "agent liability"],
+    "crossRefs": [{"target": "RUPA \u00a7 306"}],
+    "chapterUse": [2, 3]
+  },
+  {
+    "number": "6.02",
+    "title": "Agent for Unidentified Principal",
+    "article": "Chapter 6",
+    "text": "When an agent acting with actual or apparent authority makes a contract on behalf of an unidentified principal, (1) the principal and the third party are parties to the contract; and (2) the agent is a party to the contract unless the agent and the third party agree otherwise.",
+    "concepts": ["unidentified principal", "agent liability"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "6.03",
+    "title": "Agent for Undisclosed Principal",
+    "article": "Chapter 6",
+    "text": "When an agent acting with actual authority makes a contract on behalf of an undisclosed principal, (1) unless excluded by the contract, the principal is a party to the contract; (2) the agent and the third party are parties to the contract; and (3) the principal, if a party to the contract, and the third party have the same rights, liabilities, and defenses against each other as they would if the principal had made the contract personally, subject to the limitations on the principal's rights and defenses applicable to undisclosed principals.",
+    "concepts": ["undisclosed principal", "contract liability", "election"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "6.04",
+    "title": "Principal Does Not Exist or Lacks Capacity",
+    "article": "Chapter 6",
+    "text": "Unless the third party agrees otherwise, a person who makes a contract with a third party purportedly as an agent on behalf of a principal becomes a party to the contract if the purported agent knows or has reason to know that the purported principal does not exist or lacks capacity to be a party to a contract.",
+    "concepts": ["promoter liability", "nonexistent principal", "pre-incorporation contracts"],
+    "crossRefs": [{"target": "MBCA \u00a7 2.04"}],
+    "chapterUse": [2, 5]
+  },
+  {
+    "number": "6.10",
+    "title": "Agent's Implied Warranty of Authority",
+    "article": "Chapter 6",
+    "text": "A person who purports to make a contract, representation, or conveyance to or with a third party on behalf of another person, lacking power to bind that person, gives an implied warranty of authority to the third party and is subject to liability to the third party for damages for loss caused by breach of that warranty, including loss of the benefit expected from performance by the principal, unless (1) the principal ratifies the act; (2) the person gives notice that no warranty of authority is given; or (3) the third party knows that the person acts without actual authority.",
+    "concepts": ["warranty of authority", "agent liability", "breach"],
+    "crossRefs": [],
+    "chapterUse": [2, 3]
+  },
+  {
+    "number": "6.11",
+    "title": "Agent's Representations",
+    "article": "Chapter 6",
+    "text": "(1) When an agent for a disclosed or unidentified principal makes a false representation about the agent's authority to a third party, the principal is not subject to liability unless the agent acted with actual or apparent authority in making the representation and the third party does not have notice that the agent's representation is false. (2) A representation by an agent made incident to a contract or conveyance is attributed to a disclosed or unidentified principal as if the principal made the representation directly when the agent had actual or apparent authority to make the contract or conveyance unless the third party knew or had reason to know that the representation was untrue or that the agent acted without actual authority.",
+    "concepts": ["agent representations", "attribution", "misrepresentation"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "7.01",
+    "title": "Agent's Liability to Third Party",
+    "article": "Chapter 7",
+    "text": "An agent is subject to liability to a third party harmed by the agent's tortious conduct. Unless an applicable statute provides otherwise, an actor remains subject to liability although the actor acts as an agent or an employee, with actual or apparent authority, or within the scope of employment.",
+    "concepts": ["agent tort liability", "personal liability"],
+    "crossRefs": [],
+    "chapterUse": [2]
   },
   {
     "number": "7.03",
-    "title": "Principal's Liability \u2014 Unidentified and Undisclosed Principals",
+    "title": "Principal's Liability--In General",
     "article": "Chapter 7",
-    "text": "A disclosed or unidentified principal is subject to liability for an agent's act if the agent acted with actual or apparent authority. An undisclosed principal is subject to liability if the agent acted with actual authority.",
-    "concepts": [
-      "principal liability",
-      "undisclosed principal"
-    ],
+    "text": "(1) A principal is subject to direct liability to a third party harmed by an agent's conduct when (a) the agent acts with actual authority or the principal ratifies the agent's conduct and (i) the agent's conduct is tortious, or (ii) the agent's conduct, if that of the principal, would subject the principal to tort liability; or (b) as stated in \u00a7 7.05, the principal is negligent in selecting, supervising, or otherwise controlling the agent. (2) A principal is subject to vicarious liability to a third party harmed by an agent's conduct when the agent is an employee who commits a tort while acting within the scope of employment, or the agent commits a tort when acting with apparent authority in dealing with a third party on or purportedly on behalf of the principal.",
+    "concepts": ["principal liability", "direct liability", "vicarious liability"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2]
+  },
+  {
+    "number": "7.05",
+    "title": "Principal's Negligence in Conducting Activity Through Agent",
+    "article": "Chapter 7",
+    "text": "(1) A principal who conducts an activity through an agent is subject to liability for harm to a third party caused by the agent's conduct if the harm was caused by the principal's negligence in selecting, training, retaining, supervising, or otherwise controlling the agent. (2) When a principal has a special relationship with another person, the principal owes that person a duty of reasonable care with regard to risks arising out of the relationship, including the risk that agents of the principal will harm the person with whom the principal has such a special relationship.",
+    "concepts": ["negligent selection", "negligent supervision", "direct liability"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "7.06",
+    "title": "Failure in Performance of Principal's Duty of Protection",
+    "article": "Chapter 7",
+    "text": "A principal required by contract or otherwise by law to protect another cannot avoid liability by delegating performance of the duty, whether or not the delegate is an agent.",
+    "concepts": ["nondelegable duty", "duty of protection"],
+    "crossRefs": [],
+    "chapterUse": [2]
   },
   {
     "number": "7.07",
     "title": "Employee Acting Within Scope of Employment",
     "article": "Chapter 7",
-    "text": "An employer is subject to vicarious liability for a tort committed by its employee acting within the scope of employment. An employee acts within the scope of employment when performing work assigned by the employer or engaging in a course of conduct subject to the employer's control. An employee's act is not within the scope of employment when it occurs within an independent course of conduct not intended by the employee to serve any purpose of the employer.",
-    "concepts": [
-      "vicarious liability",
-      "respondeat superior",
-      "scope of employment"
-    ],
+    "text": "(1) An employer is subject to vicarious liability for a tort committed by its employee acting within the scope of employment. (2) An employee acts within the scope of employment when performing work assigned by the employer or engaging in a course of conduct subject to the employer's control. An employee's act is not within the scope of employment when it occurs within an independent course of conduct not intended by the employee to serve any purpose of the employer. (3) For purposes of this section, (a) an employee is an agent whose principal controls or has the right to control the manner and means of the agent's performance of work, and (b) the fact that work is performed gratuitously does not relieve a principal of liability.",
+    "concepts": ["vicarious liability", "respondeat superior", "scope of employment", "employee vs. independent contractor"],
     "crossRefs": [],
-    "chapterUse": [
-      2,
-      7
-    ]
+    "chapterUse": [2, 7]
+  },
+  {
+    "number": "7.08",
+    "title": "Agent Acts with Apparent Authority",
+    "article": "Chapter 7",
+    "text": "A principal is subject to vicarious liability for a tort committed by an agent in dealing or communicating with a third party on or purportedly on behalf of the principal when actions taken by the agent with apparent authority constitute the tort or enable the agent to conceal its commission.",
+    "concepts": ["apparent authority", "vicarious liability", "tort"],
+    "crossRefs": [],
+    "chapterUse": [2]
   },
   {
     "number": "8.01",
-    "title": "General Duty of Agent",
+    "title": "General Fiduciary Principle",
     "article": "Chapter 8",
-    "text": "An agent is subject to a duty to the principal to act within the scope of the agent's actual authority and in compliance with the agent's duties.",
-    "concepts": [
-      "agent duties"
-    ],
+    "text": "An agent has a fiduciary duty to act loyally for the principal's benefit in all matters connected with the agency relationship.",
+    "concepts": ["fiduciary duty", "loyalty", "agent duties"],
+    "crossRefs": [{"target": "RUPA \u00a7 404"}, {"target": "DGCL \u00a7 141(a)"}],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.02",
+    "title": "Material Benefit Arising Out of Position",
+    "article": "Chapter 8",
+    "text": "An agent has a duty not to acquire a material benefit from a third party in connection with transactions conducted or other actions taken on behalf of the principal or otherwise through the agent's use of the agent's position.",
+    "concepts": ["self-dealing", "material benefit", "agent duties"],
     "crossRefs": [],
-    "chapterUse": [
-      2
-    ]
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.03",
+    "title": "Acting as or on Behalf of an Adverse Party",
+    "article": "Chapter 8",
+    "text": "An agent has a duty not to deal with the principal as or on behalf of an adverse party in a transaction connected with the agency relationship.",
+    "concepts": ["conflict of interest", "adverse party", "self-dealing"],
+    "crossRefs": [],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.04",
+    "title": "Competition",
+    "article": "Chapter 8",
+    "text": "Throughout the duration of an agency relationship, an agent has a duty to refrain from competing with the principal and from taking action on behalf of or otherwise assisting the principal's competitors. During that time, an agent may take action, not otherwise wrongful, to prepare for competition following termination of the agency relationship.",
+    "concepts": ["competition", "noncompete", "corporate opportunity"],
+    "crossRefs": [],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.05",
+    "title": "Use of Principal's Property; Use of Confidential Information",
+    "article": "Chapter 8",
+    "text": "An agent has a duty (1) not to use property of the principal for the agent's own purposes or those of a third party; and (2) not to use or communicate confidential information of the principal for the agent's own purposes or those of a third party.",
+    "concepts": ["confidential information", "property", "misappropriation"],
+    "crossRefs": [],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.06",
+    "title": "Principal's Consent",
+    "article": "Chapter 8",
+    "text": "Conduct by an agent that would otherwise constitute a breach of duty as stated in \u00a7\u00a7 8.01-8.05 does not constitute a breach of duty if the principal consents to the conduct, provided that (a) in obtaining the principal's consent, the agent acts in good faith, makes full disclosure of all material facts, and otherwise deals fairly with the principal; and (b) the principal's consent concerns either a specific act or transaction, or acts or transactions of a specified type that could reasonably be expected to occur in the ordinary course of the agency relationship.",
+    "concepts": ["consent", "waiver", "disclosure", "safe harbor"],
+    "crossRefs": [{"target": "DGCL \u00a7 144"}],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.08",
+    "title": "Duties of Care, Competence, and Diligence",
+    "article": "Chapter 8",
+    "text": "Subject to any agreement with the principal, an agent has a duty to the principal to act with the care, competence, and diligence normally exercised by agents in similar circumstances. Special skills or knowledge possessed by an agent are circumstances to be taken into account in determining whether the agent acted with due care and diligence. If an agent claims to possess special skills or knowledge, the agent has a duty to the principal to act with the care, competence, and diligence normally exercised by agents with such skills or knowledge.",
+    "concepts": ["duty of care", "competence", "diligence", "standard of care"],
+    "crossRefs": [{"target": "MBCA \u00a7 8.30"}],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.09",
+    "title": "Duty to Act Only Within Scope of Actual Authority",
+    "article": "Chapter 8",
+    "text": "(1) An agent has a duty to take action only within the scope of the agent's actual authority. (2) An agent has a duty to comply with all lawful instructions received from the principal and persons designated by the principal concerning the agent's actions on behalf of the principal.",
+    "concepts": ["obedience", "scope of authority", "instructions"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "8.10",
+    "title": "Duty of Good Conduct",
+    "article": "Chapter 8",
+    "text": "An agent has a duty, within the scope of the agency relationship, to act reasonably and to refrain from conduct that is likely to damage the principal's enterprise.",
+    "concepts": ["good conduct", "reasonable behavior"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "8.11",
+    "title": "Duty to Provide Information",
+    "article": "Chapter 8",
+    "text": "An agent has a duty to use reasonable effort to provide the principal with facts that the agent knows, has reason to know, or should know when (1) subject to any manifestation by the principal, the agent knows or has reason to know that the principal would wish to have the facts or the facts are material to the agent's duties to the principal; and (2) the facts can be provided to the principal without violating a superior duty owed by the agent to another person.",
+    "concepts": ["duty to inform", "disclosure", "material facts"],
+    "crossRefs": [],
+    "chapterUse": [2, 9]
+  },
+  {
+    "number": "8.12",
+    "title": "Duties Regarding Principal's Property",
+    "article": "Chapter 8",
+    "text": "An agent has a duty, subject to any agreement with the principal, (1) not to deal with the principal's property so that it appears to be the agent's property; (2) not to mingle the principal's property with anyone else's; and (3) to keep and render accounts to the principal of money or other property received or paid out on the principal's account.",
+    "concepts": ["segregation", "commingling", "accounting", "property"],
+    "crossRefs": [],
+    "chapterUse": [2]
+  },
+  {
+    "number": "8.14",
+    "title": "Duty to Indemnify",
+    "article": "Chapter 8",
+    "text": "A principal has a duty to indemnify an agent (1) in accordance with the terms of any contract between them; and (2) unless otherwise agreed, when the agent makes a payment or incurs expense within the scope of the agent's actual authority or that is beneficial to the principal, unless the agent acts officiously in making the payment or incurring the expense.",
+    "concepts": ["indemnification", "principal duties", "reimbursement"],
+    "crossRefs": [{"target": "RUPA \u00a7 401(c)"}],
+    "chapterUse": [2]
+  },
+  {
+    "number": "8.15",
+    "title": "Principal's Duty to Deal Fairly and in Good Faith",
+    "article": "Chapter 8",
+    "text": "A principal has a duty to deal with the agent fairly and in good faith, including a duty to provide the agent with information about risks of physical harm or pecuniary loss that the principal knows, has reason to know, or should know are present in the agent's work but unknown to the agent.",
+    "concepts": ["good faith", "fair dealing", "principal duties", "risk disclosure"],
+    "crossRefs": [],
+    "chapterUse": [2]
   }
 ]

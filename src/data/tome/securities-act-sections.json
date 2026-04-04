@@ -2,13 +2,12 @@
   {
     "number": "2",
     "title": "Definitions",
-    "article": "15 U.S.C. \u00a7 77b",
-    "text": "When used in this title, unless the context otherwise requires: (1) The term 'security' means any note, stock, treasury stock, security future, security-based swap, bond, debenture, evidence of indebtedness, certificate of interest or participation in any profit-sharing agreement, collateral-trust certificate, preorganization certificate or subscription, transferable share, investment contract, voting-trust certificate, certificate of deposit for a security, fractional undivided interest in oil, gas, or other mineral rights, any put, call, straddle, option, or privilege on any security, or, in general, any interest or instrument commonly known as a 'security'.",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 2. (a) DEFINITIONS.\u2014When used in this title, unless the context otherwise requires\u2014 (1) The term \u2018\u2018security\u2019\u2019 means any note, stock, treasury stock, security future, security-based swap, bond, debenture, evidence of indebtedness, certificate of interest or participation in any profit-sharing agreement, collateral-trust certificate, preorganization certificate or subscription, transferable share, investment contract, voting-trust certificate, certificate of de- posit for a security, fractional undivided interest in oil, gas, or other mineral rights, any put, call, straddle, option, or privilege on any security, certificate of deposit, or group or index of secu- rities (including any interest therein or based on the value thereof), or any put, call, straddle, option, or privilege entered into on a national securities exchange relating to foreign cur- rency, or, in general, any interest or instrument commonly known as a \u2018\u2018security\u2019\u2019, or any certificate of interest or partici- pation in, temporary or interim certificate for, receipt for, guar- 1 August 11, 2025 As Amended Through P.L. 119-27, Enacted July 18, 2025 VerDate Nov 24 2008 16:19 Aug 11, 2025 Jkt 000000 PO 00000 Frm 00001 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES ACT OF 1933.XML Sec. 2 SECURITIES ACT OF 1933 2 antee of, or warrant or right to subscribe to or purchase, any of the foregoing. 1 (2) The term \u2018\u2018person\u2019\u2019 means an individual, a corporation, a partnership, an association, a joint-stock company, a trust, any unincorporated organization, or a government or political subdivision thereof. As used in this paragraph the term \u2018\u2018trust\u2019\u2019 shall include only a trust where the interest or interests of the beneficiary or beneficiaries are evidenced by a security. (3) The term \u2018\u2018sale\u2019\u2019 or \u2018\u2018sell\u2019\u2019 shall include every contract of sale or disposition of a security or interest in a security, for value. The term \u2018\u2018offer to sell\u2019\u2019, \u2018\u2018offer for sale\u2019\u2019, or \u2018\u2018offer\u2019\u2019 shall include every attempt or offer to dispose of, or solicitation of an offer to buy, a security or interest in a security, for value. The terms defined in this paragraph and the term \u2018\u2018offer to buy\u2019\u2019 as used in subsection (c) of section 5 shall not include pre- liminary negotiations or agreements between an issuer (or any person directly or indirectly controlling or controlled by an issuer, or under direct or indirect common control with an issuer) and any underwriter or among underwriters who are or are to be in pri...",
     "concepts": [
-      "definition of security",
-      "investment contract"
+      "definitions",
+      "securities"
     ],
-    "crossRefs": [],
     "chapterUse": [
       10,
       11
@@ -17,13 +16,12 @@
   {
     "number": "3",
     "title": "Exempted Securities",
-    "article": "15 U.S.C. \u00a7 77c",
-    "text": "Except as hereinafter expressly provided, the provisions of this title shall not apply to any of the following classes of securities: (a)(2) Any security issued or guaranteed by the United States or any political subdivision; (a)(4) Any security issued by a person organized and operated exclusively for religious, educational, benevolent, fraternal, charitable, or reformatory purposes; (a)(11) Any security which is a part of an issue offered and sold only to persons resident within a single State.",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 3. (a) Except as hereinafter expressly provided, the provisions of this title shall not apply to any of the following class- es of securities: (1) Reserved. (2) Any security issued or guaranteed by the United States or any Territory thereof, or by the District of Columbia, or by any State of the United States, or by any political subdivision of a State or Territory, or by any public instrumentality of one or more States or Territories, or by any person controlled or supervised by and acting as an instrumentality of the Govern- ment of the United States pursuant to authority granted by the Congress of the United States; or any certificate of deposit for any of the foregoing; or any security issued or guaranteed by any bank; or any security issued by or representing an in- terest in or a direct obligation of a Federal Reserve bank; or any interest or participation in any common trust fund or simi- lar fund that is excluded from the definition of the term \u2018\u2018in- vestment company\u2019\u2019 under section 3(c)(3) of the Investment Company Act of 1940; or any security which is an industrial development bond (as defined in section 103(c)(2) of the Inter- nal Revenue Code of 1954) 5 the interest on which is excludable from gross income under section 103(a)(1) of such Code if, by reason of the application of paragraph (4) or (6) of section 103(c) of such Code (determined as if paragraphs (4)(A), (5), and (7) 6 were not included in such section 103(c)), paragraph (1) of such section 103(c) does not apply to such security; or any interest or participation in a single trust fund, or in a col- lective trust fund maintained by a bank, or any security aris- ing out of a contract issued by an insurance company, which interest, participation, or security is issued in connection with (A) a stock bonus, pension, or profit-sharing plan which meets the requirements for qualification under section 401 of the In- ternal Revenue Code of 1954, 7 (B) an annuity plan which meets the requirements for the deduction of the employer\u2019s contributions under section 404(a)(2) of such Code, 8 (C) a gov- ernmental plan as defined in section 414(d) of such Code 9 which has been established by an employer for the exclusive benefit of its employees or their beneficiaries for the purpose of distributing to such employees or their beneficiaries the cor- 4 Additional exemptions contained at: 7 U.S.C. 1932(d)(6); 12 U.S.C. 1455, 1717, 1719, 1723c; 15 U.S.C. 77c, note; 20 U.S.C. 1087\u20132, 1087hh; 22 U.S.C. ...",
     "concepts": [
       "exemptions",
-      "intrastate offering"
+      "securities"
     ],
-    "crossRefs": [],
     "chapterUse": [
       10,
       11
@@ -32,82 +30,145 @@
   {
     "number": "4",
     "title": "Exempted Transactions",
-    "article": "15 U.S.C. \u00a7 77d",
-    "text": "The provisions of section 5 shall not apply to: (a)(1) transactions by any person other than an issuer, underwriter, or dealer; (a)(2) transactions by an issuer not involving any public offering (private placement exemption); (a)(5) transactions involving offers or sales by an issuer solely to accredited investors, where the aggregate offering price does not exceed the specified amount.",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 4. (a) The provisions of section 5 shall not apply to\u2014 (1) transactions by any person other than an issuer, under- writer, or dealer. (2) transactions by an issuer not involving any public offer- ing. (3) transactions by a dealer (including an underwriter no longer acting as an underwriter in respect of the security in- volved in such transaction), except\u2014 (A) transactions taking place prior to the expiration of forty days after the first date upon which the security was bona fide offered to the public by the issuer or by or through an underwriter, 14 The reference to the Small Company Capital Formation Act of 2011 in this paragraph prob- ably should be a reference to the Jumpstart Our Business Startups Act. 15 15 U.S.C. 661 et seq. 16 See additional exemption contained at 11 U.S.C. 1145. August 11, 2025 As Amended Through P.L. 119-27, Enacted July 18, 2025 VerDate Nov 24 2008 16:19 Aug 11, 2025 Jkt 000000 PO 00000 Frm 00012 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES ACT OF 1933.XML 13 SECURITIES ACT OF 1933 Sec. 4 (B) transactions in a security as to which a registra- tion statement has been filed taking place prior to the ex- piration of forty days after the effective date of such reg- istration statement or prior to the expiration of forty days after the first date upon which the security was bona fide offered to the public by the issuer or by or through an un- derwriter after such effective date, whichever is later (ex- cluding in the computation of such forty days any time during which a stop order issued under section 8 is in ef- fect as to the security), or such shorter period as the Com- mission may specify by rules and regulations or order, and (C) transactions as to securities constituting the whole or a part of an unsold allotment to or subscription by such dealer as a participant in the distribution of such securi- ties by the issuer or by or through an underwriter. With respect to transactions referred to in clause (B), if securi- ties of the issuer have not previously been sold pursuant to an earlier effective registration statement the applicable period, instead of forty days, shall be ninety days, or such shorter pe- riod as the Commission may specify by rules and regulations or order. (4) brokers\u2019 transactions executed upon customers\u2019 orders on any exchange or in the over-the-counter market but not the solicitation of such orders. (5) transactions involving offers or sales by an issuer solely to one or more ac...",
     "concepts": [
-      "exemptions",
       "private placement",
-      "accredited investors"
+      "exemptions"
     ],
-    "crossRefs": [],
+    "chapterUse": [
+      10
+    ]
+  },
+  {
+    "number": "5",
+    "title": "Registration Requirement",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 5. (a) Unless a registration statement is in effect as to a security, it shall be unlawful for any person, directly or in- directly\u2014 (1) to make use of any means or instruments of transpor- tation or communication in interstate commerce or of the mails to sell such security through the use or medium of any pro- spectus or otherwise; or (2) to carry or cause to be carried through the mails or in interstate commerce, by any means or instruments of transpor- tation, any such security for the purpose of sale or for delivery after sale. (b) It shall be unlawful for any person, directly or indirectly\u2014 (1) to make use of any means or instruments of transpor- tation or communication in interstate commerce or of the mails to carry or transmit any prospectus relating to any security with respect to which a registration statement has been filed under this title, unless such prospectus meets the require- ments of section 10; or (2) to carry or cause to be carried through the mails or in interstate commerce any such security for the purpose of sale or for delivery after sale, unless accompanied or preceded by a prospectus that meets the requirements of subsection (a) of section 10. (c) It shall be unlawful for any person, directly or indirectly, to make use of any means or instruments of transportation or com- munication in interstate commerce or of the mails to offer to sell or offer to buy through the use or medium of any prospectus or oth- erwise any security, unless a registration statement has been filed as to such security, or while the registration statement is the sub- ject of a refusal order or stop order or (prior to the effective date of the registration statement) any public proceeding or examination under section 8. (d) LIMITATION.\u2014Notwithstanding any other provision of this section, an emerging growth company or any person authorized to act on behalf of an emerging growth company may engage in oral or written communications with potential investors that are quali- fied institutional buyers or institutions that are accredited inves- tors, as such terms are respectively defined in section 230.144A and section 230.501(a) of title 17, Code of Federal Regulations, or any successor thereto, to determine whether such investors might have an interest in a contemplated securities offering, either prior to or following the date of filing of a registration statement with respect to such securities with the Commission, subject to the re- quirement of subsection ...",
+    "concepts": [
+      "registration",
+      "offering",
+      "prospectus"
+    ],
     "chapterUse": [
       10,
       11
     ]
   },
   {
-    "number": "5",
-    "title": "Prohibitions Relating to Interstate Commerce and the Mails",
-    "article": "15 U.S.C. \u00a7 77e",
-    "text": "Unless a registration statement is in effect as to a security, it shall be unlawful for any person, directly or indirectly, to make use of any means or instruments of transportation or communication in interstate commerce or of the mails to sell such security through the use of any prospectus or otherwise; or to carry through the mails or in interstate commerce any such security for the purpose of sale or delivery after sale.",
+    "number": "6",
+    "title": "Registration of Securities",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 6. (a) Any security may be registered with the Com- mission under the terms and conditions hereinafter provided, by fil- ing a registration statement in triplicate, at least one of which shall be signed by each issuer, its principal executive officer or offi- cers, its principal financial officer, its comptroller or principal ac- counting officer, and the majority of its board of directors or per- sons performing similar functions (or, if there is no board of direc- tors or persons performing similar functions, by the majority of the persons or board having the power of management of the issuer), and in case the issuer is a foreign or Territorial person by its duly authorized representative in the United States; except that when such registration statement relates to a security issued by a foreign government, or political subdivision thereof, it need be signed only by the underwriter of such security. Signatures of all such persons when written on the said registration statements shall be pre- sumed to have been so written by authority of the person whose signature is so affixed and the burden of proof, in the event such authority shall be denied, shall be upon the party denying the same. The affixing of any signature without the authority of the purported signer shall constitute a violation of this title. A registra- tion statement shall be deemed effective only as to the securities specified therein as proposed to be offered. (b) REGISTRATION FEE.\u2014 (1) FEE PAYMENT REQUIRED.\u2014At the time of filing a reg- istration statement, the applicant shall pay to the Commission a fee at a rate that shall be equal to $92 per $1,000,000 of the maximum aggregate price at which such securities are pro- posed to be offered, except that during fiscal year 2003 and any succeeding fiscal year such fee shall be adjusted pursuant to paragraph (2). (2) ANNUAL ADJUSTMENT.\u2014For each fiscal year, the Com- mission shall by order adjust the rate required by paragraph (1) for such fiscal year to a rate that, when applied to the base- line estimate of the aggregate maximum offering prices for such fiscal year, is reasonably likely to produce aggregate fee collections under this subsection that are equal to the target fee collection amount for such fiscal year. (3) PRO RATA APPLICATION.\u2014The rates per $1,000,000 re- quired by this subsection shall be applied pro rata to amounts and balances of less than $1,000,000. (4) REVIEW AND EFFECTIVE DATE.\u2014In exercising its author- ity under th...",
     "concepts": [
-      "registration requirement",
-      "section 5",
-      "prohibition"
+      "registration",
+      "SEC filing"
     ],
-    "crossRefs": [],
     "chapterUse": [
-      10,
+      11
+    ]
+  },
+  {
+    "number": "10",
+    "title": "Information Required in Prospectus",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 10. (a) Except to the extent otherwise permitted or required pursuant to this subsection or subsections (c), (d), or (e)\u2014 (1) a prospectus relating to a security other than a security issued by a foreign government or political subdivision thereof, shall contain the information contained in the registration statement, but it need not include the documents referred to in paragraphs (28) to (32), inclusive, of schedule A; (2) a prospectus relating to a security issued by a foreign government or political subdivision thereof shall contain the information contained in the registration statement, but it need not include the documents referred to in paragraphs (13) and (14) of schedule B; (3) notwithstanding the provisions of paragraphs (1) and (2) of this subsection (a) when a prospectus is used more than nine months after the effective date of the registration state- ment, the information contained therein shall be as of a date not more than sixteen months prior to such use, so far as such information is known to the user of such prospectus or can be furnished by such user without unreasonable effort or ex- pense; 23 (4) there may be omitted from any prospectus any of the information required under this subsection (a) which the Com- mission may by rules or regulations designate as not being necessary or appropriate in the public interest or for the pro- tection of investors. (b) In addition to the prospectus permitted or required in sub- section (a), the Commission shall by rules or regulations deemed necessary or appropriate in the public interest or for the protection of investors permit the use of a prospectus for the purposes of sub- section (b)(1) of section 5 which omits in part or summarizes infor- mation in the prospectus specified in subsection (a). A prospectus permitted under this subsection shall, except to the extent the Commission by rules or regulations deemed necessary or appro- priate in the public interest or for the protection of investors other- wise provides, be filed as part of the registration statement but shall not be deemed a part of such registration statement for the purposes of section 11. The Commission may at any time issue an order preventing or suspending the use of a prospectus permitted under this subsection (b), if it has reason to believe that such pro- spectus has not been filed (if required to be filed as part of the reg- istration statement) or includes any untrue statement of a material August 11, 2025 As Amended T...",
+    "concepts": [
+      "prospectus",
+      "disclosure"
+    ],
+    "chapterUse": [
       11
     ]
   },
   {
     "number": "11",
-    "title": "Civil Liabilities on Account of False Registration Statement",
-    "article": "15 U.S.C. \u00a7 77k",
-    "text": "In case any part of the registration statement, when such part became effective, contained an untrue statement of a material fact or omitted to state a material fact required to be stated therein or necessary to make the statements therein not misleading, any person acquiring such security may sue every person who signed the registration statement, every director or partner, every accountant or appraiser who prepared or certified the statement, and every underwriter.",
+    "title": "Civil Liabilities for False Registration Statement",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 11. (a) In case any part of the registration state- ment, when such part became effective, 24 contained an untrue statement of a material fact or omitted to state a material fact re- quired to be stated therein or necessary to make the statements therein not misleading, any person acquiring such security (unless it is proved that at the time of such acquisition he knew of such untruth or omission) may, either at law or in equity, in any court of competent jurisdiction, sue\u2014 (1) every person who signed the registration statement; (2) every person who was a director of (or person per- forming similar functions) or partner in, the issuer at the time of the filing of the part of the registration statement with re- spect to which his liability is asserted; (3) every person who, with his consent, is named in the registration statement as being or about to become a director, person performing similar functions or partner; August 11, 2025 As Amended Through P.L. 119-27, Enacted July 18, 2025 24 See also section 24(e) of the Investment Company Act of 1940, infra. VerDate Nov 24 2008 16:19 Aug 11, 2025 Jkt 000000 PO 00000 Frm 00034 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES ACT OF 1933.XML 35 SECURITIES ACT OF 1933 Sec. 11 (4) every accountant, engineer, or appraiser, or any person whose profession gives authority to a statement made by him, who has with his consent been named as having prepared or certified any part of the registration statement, or as having prepared or certified any report or valuation which is used in connection with the registration statement, with respect to the statement in such registration statement, report, or valuation, which purports to have been prepared or certified by him; (5) every underwriter with respect to such security. If such person acquired the security after the issuer has made gen- erally available to its security holders an earning statement cov- ering a period of at least twelve months beginning after the effec- tive date of the registration statement, then the right of recovery under this subsection shall be conditioned on proof that such per- son acquired the security relying upon such untrue statement in the registration statement or relying upon the registration state- ment and not knowing of such omission, but such reliance may be established without proof of the reading of the registration state- ment by such person. (b) Notwithstanding the provisions of subsection (a) no person, other t...",
     "concepts": [
-      "registration liability",
+      "strict liability",
       "material misstatement",
-      "section 11",
-      "ipo"
+      "due diligence"
     ],
-    "crossRefs": [],
     "chapterUse": [
       11
     ]
   },
   {
     "number": "12",
-    "title": "Civil Liabilities Arising in Connection with Prospectuses and Communications",
-    "article": "15 U.S.C. \u00a7 77l",
-    "text": "Any person who offers or sells a security in violation of section 5, or offers or sells a security by means of a prospectus or oral communication which includes an untrue statement of a material fact or omits to state a material fact, shall be liable to the person purchasing such security from the person.",
+    "title": "Civil Liabilities for Prospectuses",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 12. (a) IN GENERAL.\u2014Any person who\u2014 (1) offers or sells a security in violation of section 5, or (2) offers or sells a security (whether or not exempted by the provisions of section 3, other than paragraphs (2) and (14) of subsection (a) thereof), by the use of any means or instru- ments of transportation or communication in interstate com- merce or of the mails, by means of a prospectus or oral commu- nication, which includes an untrue statement of a material fact or omits to state a material fact necessary in order to make the statements, in the light of the circumstances under which they August 11, 2025 As Amended Through P.L. 119-27, Enacted July 18, 2025 VerDate Nov 24 2008 16:19 Aug 11, 2025 Jkt 000000 PO 00000 Frm 00037 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES ACT OF 1933.XML Sec. 13 SECURITIES ACT OF 1933 38 were made, not misleading (the purchaser not knowing of such untruth or omission), and who shall not sustain the burden of proof that he did not know, and in the exercise of reasonable care could not have known, of such untruth or omission, shall be liable, subject to subsection (b), to the person purchasing such security from him, who may sue either at law or in equity in any court of competent jurisdiction, to recover the consideration paid for such security with interest thereon, less the amount of any income received thereon, upon the tender of such security, or for damages if he no longer owns the security. (b) LOSS CAUSATION.\u2014In an action described in subsection (a)(2), if the person who offered or sold such security proves that any portion or all of the amount recoverable under subsection (a)(2) represents other than the depreciation in value of the subject secu- rity resulting from such part of the prospectus or oral communica- tion, with respect to which the liability of that person is asserted, not being true or omitting to state a material fact required to be stated therein or necessary to make the statement not misleading, then such portion or amount, as the case may be, shall not be re- coverable. LIMITATION OF ACTIONS",
     "concepts": [
       "prospectus liability",
-      "section 12"
+      "rescission"
     ],
-    "crossRefs": [],
     "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "13",
+    "title": "Limitation of Actions",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 13. No action shall be maintained to enforce any liability created under section 11 or section 12(a)(2) unless brought within one year after the discovery of the untrue statement or the omission, or after such discovery should have been made by the ex- ercise of reasonable diligence, or, if the action is to enforce a liabil- ity created under section 12(a)(1), unless brought within one year after the violation upon which it is based. In no event shall any such action be brought to enforce a liability created under section 11 or section 12(a)(1) more than three years after the security was bona fide offered to the public, or under section 12(a)(2) more than three years after the sale. 25 CONTRARY STIPULATIONS VOID",
+    "concepts": [
+      "statute of limitations"
+    ],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "15",
+    "title": "Controlling Persons",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 15. (a) CONTROLLING PERSONS.\u2014Every person who, by or through stock ownership, agency, or otherwise, or who, pur- suant to or in connection with an agreement or understanding with one or more other persons by or through stock ownership, agency, or otherwise, controls any person liable under section 11 or 12, shall also be liable jointly and severally with and to the same ex- tent as such controlled person to any person to whom such con- trolled person is liable, unless the controlling person had no knowl- edge of or reasonable ground to believe in the existence of the facts August 11, 2025 As Amended Through P.L. 119-27, Enacted July 18, 2025 25 See also section 24(e) of the Investment Company Act of 1940, infra. VerDate Nov 24 2008 16:19 Aug 11, 2025 Jkt 000000 PO 00000 Frm 00038 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES ACT OF 1933.XML 39 SECURITIES ACT OF 1933 Sec. 16 by reason of which the liability of the controlled person is alleged to exist. (b) PROSECUTION OF PERSONS WHO AID AND ABET VIOLA- TIONS.\u2014For purposes of any action brought by the Commission under subparagraph (b) or (d) of section 20, any person that know- ingly or recklessly provides substantial assistance to another per- son in violation of a provision of this Act, or of any rule or regula- tion issued under this Act, shall be deemed to be in violation of such provision to the same extent as the person to whom such as- sistance is provided.",
+    "concepts": [
+      "controlling person liability"
+    ],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "2",
+    "title": "Definitions",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 2. FINDINGS. The Congress finds that\u2014 (1) the Private Securities Litigation Reform Act of 1995 sought to prevent abuses in pri- vate securities fraud lawsuits; (2) since enactment of that legislation, considerable evidence has been presented to Con- gress that a number of securities class action lawsuits have shifted from Federal to State courts; (3) this shift has prevented that Act from fully achieving its objectives; (4) State securities regulation is of continuing importance, together with Federal regula- tion of securities, to protect investors and promote strong financial markets; and (5) in order to prevent certain State private securities class action lawsuits alleging fraud from being used to frustrate the objectives of the Private Securities Litigation Reform Act of 1995, it is appropriate to enact national standards for securities class action lawsuits in- volving nationally traded securities, while preserving the appropriate enforcement powers of State securities regulators and not changing the current treatment of individual lawsuits. Section 101(c) of that Act contained the following effective date provision for the amendment to section 16 of the Securities Act of 1933 and section 28(f) of the Securities Exchange Act of 1934: (c) APPLICABILITY.\u2014The amendments made by this section shall not affect or apply to any ac- tion commenced before and pending on the date of enactment of this Act. In addition, section 102 of the Securities Litigation Uniform Standards Act contained the fol- lowing provision with respect to reciprocal subpoena enforcement:",
+    "concepts": [
+      "definitions",
+      "securities"
+    ],
+    "chapterUse": [
+      10,
       11
     ]
   },
   {
     "number": "17",
     "title": "Fraudulent Interstate Transactions",
-    "article": "15 U.S.C. \u00a7 77q",
-    "text": "It shall be unlawful for any person in the offer or sale of any securities by the use of any means or instruments of transportation or communication in interstate commerce or by use of the mails, directly or indirectly: (1) to employ any device, scheme, or artifice to defraud, or (2) to obtain money or property by means of any untrue statement of a material fact or any omission to state a material fact, or (3) to engage in any transaction, practice, or course of business which operates as a fraud or deceit upon the purchaser.",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 17. (a) It shall be unlawful for any person in the offer or sale of any securities (including security-based swaps) or any security-based swap agreement (as defined in section 3(a)(78) of the Securities Exchange Act 27) by the use of any means or in- struments of transportation or communication in interstate com- merce or by use of the mails, directly or indirectly\u2014 (1) to employ any device, scheme, or artifice to defraud, or (2) to obtain money or property by means of any untrue statement of a material fact or any omission to state a material fact necessary in order to make the statements made, in light of the circumstances under which they were made, not mis- leading; or (3) to engage in any transaction, practice, or course of busi- ness which operates or would operate as a fraud or deceit upon the purchaser. (b) It shall be unlawful for any person, by the use of any means or instruments of transportation or communication in inter- state commerce or by the use of the mails, to publish, give publicity to, or circulate any notice, circular, advertisement, newspaper, arti- cle, letter, investment service, or communication which, though not purporting to offer a security for sale, describes such security for a consideration received or to be received, directly or indirectly, from an issuer, underwriter, or dealer, without fully disclosing the receipt, whether past or prospective, of such consideration and the amount thereof. (c) The exemptions provided in section 3 shall not apply to the provisions of this section. (d) The authority of the Commission under this section with re- spect to security-based swap agreements (as defined in section 3(a)(78) of the Securities Exchange Act of 1934) shall be subject to the restrictions and limitations of section 2A(b) of this title.",
     "concepts": [
-      "fraud",
-      "antifraud",
-      "section 17"
-    ],
-    "crossRefs": [
-      {
-        "target": "Exchange Act \u00a7 10(b)"
-      }
+      "securities fraud",
+      "antifraud"
     ],
     "chapterUse": [
-      10,
+      11
+    ]
+  },
+  {
+    "number": "18",
+    "title": "Exemption from State Regulation",
+    "article": "Securities Act of 1933",
+    "text": "SEC. 18. EXEMPTION FROM STATE REGULATION OF SECURITIES OFFERINGS. (a) SCOPE OF EXEMPTION.\u2014Except as otherwise provided in this section, no law, rule, regulation, or order, or other administra- tive action of any State or any political subdivision thereof\u2014 (1) requiring, or with respect to, registration or qualifica- tion of securities, or registration or qualification of securities 27 The reference in the matter preceding paragraph (1) to the \u2018\u2018Securities Exchange Act\u2019\u2019 prob- ably should read \u2018\u2018Securities Exchange Act of 1934\u2019\u2019. August 11, 2025 As Amended Through P.L. 119-27, Enacted July 18, 2025 VerDate Nov 24 2008 16:19 Aug 11, 2025 Jkt 000000 PO 00000 Frm 00042 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES ACT OF 1933.XML 43 SECURITIES ACT OF 1933 Sec. 18 transactions, shall directly or indirectly apply to a security that\u2014 (A) is a covered security; or (B) will be a covered security upon completion of the transaction; (2) shall directly or indirectly prohibit, limit, or impose any conditions upon the use of\u2014 (A) with respect to a covered security described in sub- section (b), any offering document that is prepared by or on behalf of the issuer; or (B) any proxy statement, report to shareholders, or other disclosure document relating to a covered security or the issuer thereof that is required to be and is filed with the Commission or any national securities organization registered under section 15A of the Securities Exchange Act of 1934, except that this subparagraph does not apply to the laws, rules, regulations, or orders, or other adminis- trative actions of the State of incorporation of the issuer; or (3) shall directly or indirectly prohibit, limit, or impose conditions, based on the merits of such offering or issuer, upon the offer or sale of any security described in paragraph (1). (b) COVERED SECURITIES.\u2014For purposes of this section, the fol- lowing are covered securities: (1) EXCLUSIVE FEDERAL REGISTRATION OF NATIONALLY TRADED SECURITIES.\u2014A security is a covered security if such security is\u2014 (A) a security designated as qualified for trading in the national market system pursuant to section 11A(a)(2) of the Securities Exchange Act of 1934 (15 U.S.C. 78k\u2013 1(a)(2)) that is listed, or authorized for listing, on a na- tional securities exchange (or tier or segment thereof); or (B) a security of the same issuer that is equal in se- niority or that is a senior security to a security described in subparagraph (A). (2) EXCLUSIVE...",
+    "concepts": [
+      "preemption",
+      "covered securities"
+    ],
+    "chapterUse": [
       11
     ]
   }

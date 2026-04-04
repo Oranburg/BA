@@ -1,19 +1,28 @@
 [
   {
-    "number": "10(b)",
+    "number": "3",
+    "title": "Definitions and Application of Title",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 3. (a) When used in this title, unless the context otherwise requires\u2014 (1) The term \u2018\u2018exchange\u2019\u2019 means any organization, associa- tion, or group of persons, whether incorporated or unincor- porated, which constitutes, maintains, or provides a market place or facilities for bringing together purchasers and sellers of securities or for otherwise performing with respect to securi- ties the functions commonly performed by a stock exchange as 1 So in law. Should be \u2018\u2018effected\u2019\u2019. Section 985(b)(1) of Public Law 111\u2013203 provides for an amendment to section 2 by striking \u2018\u2018affected\u2019\u2019 and inserting \u2018\u2018effected\u2019\u2019. Such amendment was not executed because the word \u2018\u2018af- fected\u2019\u2019 appears more than one time in section 2 and it did not specify to which occurrence of such word to strike. January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00002 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML 3 SECURITIES EXCHANGE ACT OF 1934 Sec. 3 that term is generally understood, and includes the market place and the market facilities maintained by such exchange. (2) The term \u2018\u2018facility\u2019\u2019 when used with respect to an ex- change includes its premises, tangible or intangible property whether on the premises or not, any right to the use of such premises or property or any service thereof for the purpose of effecting or reporting a transaction on an exchange (including, among other things, any system of communication to or from the exchange, by ticker or otherwise, maintained by or with the consent of the exchange), and any right of the exchange to the use of any property or service. (3)(A) The term \u2018\u2018member\u2019\u2019 when used with respect to a na- tional securities exchange means (i) any natural person per- mitted to effect transactions on the floor of the exchange with- out the services of another person acting as broker, (ii) any registered broker or dealer with which such a natural person is associated, (iii) any registered broker or dealer permitted to designate as a representative such a natural person, and (iv) any other registered broker or dealer which agrees to be regu- lated by such exchange and with respect to which the exchange undertakes to enforce compliance with the provisions of this title, the rules and regulations thereunder, and its own rules. For purposes of sections 6(b)(1), 6(b)(4), 6(b)(6), 6(b)(7), 6(d), 17(d), 19(d), 19(e), 19(g), 19(h),...",
+    "concepts": [
+      "definitions",
+      "exchange act"
+    ],
+    "chapterUse": [
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "number": "10",
     "title": "Manipulative and Deceptive Devices",
-    "article": "15 U.S.C. \u00a7 78j(b)",
-    "text": "It shall be unlawful for any person, directly or indirectly, by the use of any means or instrumentality of interstate commerce or of the mails, or of any facility of any national securities exchange, to use or employ, in connection with the purchase or sale of any security registered on a national securities exchange or any security not so registered, any manipulative or deceptive device or contrivance in contravention of such rules and regulations as the Commission may prescribe.",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 10. It shall be unlawful for any person, directly or indirectly, by the use of any means or instrumentality of interstate commerce or of the mails, or of any facility of any national securi- ties exchange\u2014 (a)(1) To effect a short sale, or to use or employ any stop- loss order in connection with the purchase or sale, of any secu- rity other than a government security, in contravention of such rules and regulations as the Commission may prescribe as nec- essary or appropriate in the public interest or for the protec- tion of investors. (2) 12 Paragraph (1) of this subsection shall not apply to secu- rity futures products. 11 Two subsection (j)s\u2019 so in law. See amendments made by sections 763(g) and 929X(b) of Pub- lic Law 111\u2013203. 12 Margin so in law. January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00088 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML 89 SECURITIES EXCHANGE ACT OF 1934 Sec. 10A (b) To use or employ, in connection with the purchase or sale of any security registered on a national securities ex- change or any security not so registered, or any securities- based swap agreement any manipulative or deceptive device or contrivance in contravention of such rules and regulations as the Commission may prescribe as necessary or appropriate in the public interest or for the protection of investors. Rules promulgated under subsection (b) that prohibit fraud, manip- ulation, or insider trading (but not rules imposing or specifying re- porting or recordkeeping requirements, procedures, or standards as prophylactic measures against fraud, manipulation, or insider trad- ing), and judicial precedents decided under subsection (b) and rules promulgated thereunder that prohibit fraud, manipulation, or in- sider trading, shall apply to security-based swap agreements to the same extent as they apply to securities. Judicial precedents decided under section 17(a) of the Securities Act of 1933 and sections 9, 15, 16, 20, and 21A of this title, and judicial precedents decided under applicable rules promulgated under such sections, shall apply to se- curity-based swap agreements to the same extent as they apply to securities. (c)(1) To effect, accept, or facilitate a transaction involving the loan or borrowing of securities in contravention of such rules and regulations as the Commission may prescribe as nec- essary or appropria...",
     "concepts": [
       "securities fraud",
       "10b-5",
-      "disclosure",
       "antifraud"
-    ],
-    "crossRefs": [
-      {
-        "target": "Securities Act \u00a7 17"
-      }
     ],
     "chapterUse": [
       11,
@@ -23,13 +32,12 @@
   {
     "number": "12",
     "title": "Registration Requirements for Securities",
-    "article": "15 U.S.C. \u00a7 78l",
-    "text": "It shall be unlawful for any member, broker, or dealer to effect any transaction in any security on a national securities exchange unless a registration is effective as to such security. An issuer must register a class of equity securities if assets exceed a specified amount and the class is held by a specified number of persons.",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 12. (a) It shall be unlawful for any member, broker, or dealer to effect any transaction in any security (other than an exempted security) on a national securities exchange unless a reg- istration is effective as to such security for such exchange in ac- cordance with the provisions of this title and the rules and regula- tions thereunder. The provisions of this subsection shall not apply in respect of a security futures product traded on a national securi- ties exchange. (b) A security may be registered on a national securities ex- change by the issuer filing an application with the exchange (and filing with the Commission such duplicate originals thereof as the Commission may require), which application shall contain\u2014 (1) Such information, in such detail, as to the issuer and any person directly or indirectly controlling or controlled by, or under direct or indirect common control with, the issuer, and any guarantor of the security as to principal or interest or both, as the Commission may by rules and regulations require, as necessary or appropriate in the public interest or for the protection of investors, in respect of the following: (A) the organization, financial structures, and nature of the business; January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00109 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML Sec. 12 SECURITIES EXCHANGE ACT OF 1934 110 (B) the terms, position, rights, and privileges of the different classes of securities outstanding; (C) the terms on which their securities are to be, and during the preceding three years have been, offered to the public or otherwise; (D) the directors, officers, and underwriters, and each security holder of record holding more than 10 per centum of any class of any equity security of the issuer (other than an exempted security), their remuneration and their inter- ests in the securities of, and their material contracts with, the issuer and any person directly or indirectly controlling or controlled by, or under direct or indirect common control with, the issuer; (E) remuneration to others than directors and officers exceeding $20,000 per annum; (F) bonus and profit-sharing arrangements; (G) management and service contracts; (H) options existing or to be created in respect of their securities; (I) material contracts, not made in the ordinary course of business, which ar...",
     "concepts": [
       "registration",
-      "reporting requirements"
+      "reporting company"
     ],
-    "crossRefs": [],
     "chapterUse": [
       11
     ]
@@ -37,15 +45,14 @@
   {
     "number": "13",
     "title": "Periodical and Other Reports",
-    "article": "15 U.S.C. \u00a7 78m",
-    "text": "Every issuer of a security registered under section 12 shall file with the Commission such annual, quarterly, and current reports and other documents as the Commission may require. Reports must be certified by independent public accountants.",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 13. (a) Every issuer of a security registered pursu- ant to section 12 of this title shall file with the Commission, in ac- cordance with such rules and regulations as the Commission may prescribe as necessary or appropriate for the proper protection of investors and to insure fair dealing in the security\u2014 (1) such information and documents (and such copies thereof) as the Commission shall require to keep reasonably current the information and documents required to be included in or filed with an application or registration statement filed pursuant to section 12, except that the Commission may not require the filing of any material contract wholly executed be- fore July 1, 1962. (2) such annual reports (and such copies thereof), certified if required by the rules and regulations of the Commission by independent public accountants, and such quarterly reports (and such copies thereof), as the Commission may prescribe. Every issuer of a security registered on a national securities ex- change shall also file a duplicate original of such information, docu- ments, and reports with the exchange. In any registration state- ment, periodic report, or other reports to be filed with the Commis- sion, an emerging growth company need not present selected finan- cial data in accordance with section 229.301 of title 17, Code of Federal Regulations, for any period prior to the earliest audited pe- riod presented in connection with its first registration statement that became effective under this Act or the Securities Act of 1933 and, with respect to any such statement or reports, an emerging growth company may not be required to comply with any new or revised financial accounting standard until such date that a com- pany that is not an issuer (as defined under section 2(a) of the Sar- banes-Oxley Act of 2002 (15 U.S.C. 7201(a))) is required to comply with such new or revised accounting standard, if such standard ap- plies to companies that are not issuers. (b)(1) The Commission may prescribe, in regard to reports made pursuant to this title, the form or forms in which the re- quired information shall be set forth, the items or details to be shown in the balance sheet and the earnings statement, and the methods to be followed in the preparation of reports, in the ap- praisal or valuation of assets and liabilities, in the determination of depreciation and depletion, in the differentiation of recurring and nonrecurring income, in the differentiation of investment and ope...",
     "concepts": [
-      "reporting",
+      "periodic reporting",
       "10-K",
       "10-Q",
-      "disclosure"
+      "8-K"
     ],
-    "crossRefs": [],
     "chapterUse": [
       11
     ]
@@ -53,42 +60,51 @@
   {
     "number": "14",
     "title": "Proxies",
-    "article": "15 U.S.C. \u00a7 78n",
-    "text": "It shall be unlawful for any person to solicit any proxy, consent, or authorization in respect of any security registered under section 12 in contravention of rules and regulations prescribed by the Commission. No proxy shall be solicited unless each person solicited is furnished with a written proxy statement.",
-    "concepts": [
-      "proxy",
-      "shareholder franchise",
-      "disclosure"
-    ],
-    "crossRefs": [],
-    "chapterUse": [
-      12
-    ]
-  },
-  {
-    "number": "14(a)",
-    "title": "Proxy Solicitation",
-    "article": "15 U.S.C. \u00a7 78n(a)",
-    "text": "It shall be unlawful for any person, by the use of the mails or by any means or instrumentality of interstate commerce or of any facility of a national securities exchange or otherwise, in contravention of such rules and regulations as the Commission may prescribe, to solicit or to permit the use of his name to solicit any proxy or consent or authorization in respect of any security.",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 14. (a)(1) It shall be unlawful for any person, by the use of the mails or by any means or instrumentality of inter- state commerce or of any facility of a national securities exchange or otherwise, in contravention of such rules and regulations as the Commission may prescribe as necessary or appropriate in the pub- lic interest or for the protection of investors, to solicit or to permit the use of his name to solicit any proxy or consent or authorization in respect of any security (other than an exempted security) reg- istered pursuant to section 12 of this title. (2) The rules and regulations prescribed by the Commission under paragraph (1) may include\u2014 (A) a requirement that a solicitation of proxy, consent, or authorization by (or on behalf of) an issuer include a nominee submitted by a shareholder to serve on the board of directors of the issuer; and (B) a requirement that an issuer follow a certain procedure in relation to a solicitation described in subparagraph (A). (b)(1) It shall be unlawful for any member of a national securi- ties exchange, or any broker or dealer registered under this title, or any bank, association, or other entity that exercises fiduciary powers, in contravention of such rules and regulations as the Com- mission may prescribe as necessary or appropriate in the public in- terest or for the protection of investors, to give, or to refrain from giving a proxy, consent, authorization, or information statement in respect of any security registered pursuant to section 12 of this title, or any security issued by an investment company registered under the Investment Company Act of 1940, and carried for the ac- count of a customer. (2) With respect to banks, the rules and regulations prescribed by the Commission under paragraph (1) shall not require the dis- closure of the names of beneficial owners of securities in an account held by the bank on the date of enactment of this paragraph unless the beneficial owner consents to the disclosure. The provisions of this paragraph shall not apply in the case of a bank which the Commission finds has not made a good faith effort to obtain such consent from such beneficial owners. (c) Unless proxies, consents, or authorizations in respect of a security registered pursuant to section 12 of this title, or a security issued by an investment company registered under the Investment Company Act of 1940, are solicited by or on behalf of the manage- ment of the issuer from the holders of record of ...",
     "concepts": [
       "proxy solicitation",
-      "shareholder franchise"
+      "proxy statement",
+      "14a-8"
     ],
-    "crossRefs": [],
     "chapterUse": [
       12
     ]
   },
   {
-    "number": "16(b)",
-    "title": "Short-Swing Profits",
-    "article": "15 U.S.C. \u00a7 78p(b)",
-    "text": "For the purpose of preventing the unfair use of information obtained by reason of insider status, any profit realized by a beneficial owner, director, or officer from any purchase and sale, or any sale and purchase, of any equity security within any period of less than six months shall inure to and be recoverable by the issuer.",
+    "number": "15",
+    "title": "Registration and Regulation of Brokers and Dealers",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 15. (a)(1) It shall be unlawful for any broker or dealer which is either a person other than a natural person or a natural person not associated with a broker or dealer which is a person other than a natural person (other than such a broker or dealer whose business is exclusively intrastate and who does not make use of any facility of a national securities exchange) to make use of the mails or any means or instrumentality of interstate com- merce to effect any transactions in, or to induce or attempt to in- duce the purchase or sale of, any security (other than an exempted security or commercial paper, bankers\u2019 acceptances, or commercial January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00157 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML Sec. 15 SECURITIES EXCHANGE ACT OF 1934 158 bills) unless such broker or dealer is registered in accordance with subsection (b) of this section. (2) The Commission, by rule or order, as it deems consistent with the public interest and the protection of investors, may condi- tionally or unconditionally exempt from paragraph (1) of this sub- section any broker or dealer or class of brokers or dealers specified in such rule or order. (b)(1) A broker or dealer may be registered by filing with the Commission an application for registration in such form and con- taining such information and documents concerning such broker or dealer and any persons associated with such broker or dealer as the Commission, by rule, may prescribe as necessary or appropriate in the public interest or for the protection of investors. Within forty-five days of the date of the filing of such application (or with- in such longer period as to which the applicant consents), the Com- mission shall\u2014 (A) by order grant registration, or (B) institute proceedings to determine whether registration should be denied. Such proceedings shall include notice of the grounds for denial under consideration and opportunity for hearing and shall be concluded within one hundred twenty days of the date of the filing of the application for registration. At the conclusion of such proceedings, the Commission, by order, shall grant or deny such registration. The Commission may extend the time for conclusion of such proceedings for up to ninety days if it finds good cause for such extension and publishes its reasons for so finding or for su...",
     "concepts": [
-      "insider trading",
-      "short-swing profits"
+      "broker-dealer",
+      "registration"
     ],
-    "crossRefs": [],
+    "chapterUse": []
+  },
+  {
+    "number": "16",
+    "title": "Directors, Officers, and Principal Stockholders",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 16. DIRECTORS, OFFICERS, AND PRINCIPAL STOCK- HOLDERS. (a) DISCLOSURES REQUIRED.\u2014 (1) DIRECTORS, OFFICERS, AND PRINCIPAL STOCKHOLDERS REQUIRED TO FILE.\u2014Every person who is directly or indirectly the beneficial owner of more than 10 percent of any class of any equity security (other than an exempted security) which is registered pursuant to section 12, or who is a director or an of- ficer of the issuer of such security (including, solely for the pur- poses of this subsection, every person who is a director or an officer of a foreign private issuer, as that term is defined in section 240.3by\u00a8 094 of title 17, Code of Federal Regulations, or any successor regulation), shall file the statements required by this subsection with the Commission. (2) TIME OF FILING.\u2014The statements required by this sub- section shall be filed\u2014 (A) at the time of the registration of such security on a national securities exchange or by the effective date of a registration statement filed pursuant to section 12(g); (B) within 10 days after he or she becomes such bene- ficial owner, director, or officer, or within such shorter time as the Commission may establish by rule; (C) if there has been a change in such ownership, or if such person shall have purchased or sold a security- based swap agreement involving such equity security, be- fore the end of the second business day following the day on which the subject transaction has been executed, or at such other time as the Commission shall establish, by rule, in any case in which the Commission determines that such 2-day period is not feasible; or (D) with respect to a foreign private issuer, the securi- ties of which are, as of the date of enactment of the Hold- January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00257 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML Sec. 16 SECURITIES EXCHANGE ACT OF 1934 258 ing Foreign Insiders Accountable Act, registered pursuant to subsection (b) or (g) of section 12, on the date that is 90 days after that date of enactment. (3) CONTENTS OF STATEMENTS.\u2014A statement filed\u2014 (A) under subparagraph (A) or (B) of paragraph (2) shall contain a statement of the amount of all equity secu- rities of such issuer of which the filing person is the bene- ficial owner; and (B) under subparagraph (C) of such paragraph shall indicate ownership by the filing person at the date of f...",
+    "concepts": [
+      "short-swing profits",
+      "insider reporting",
+      "Section 16(b)"
+    ],
+    "chapterUse": [
+      12
+    ]
+  },
+  {
+    "number": "20",
+    "title": "Liability of Controlling Persons and Persons Who Aid and Abet Violations",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 20. (a) Every person who, directly or indirectly, con- trols any person liable under any provision of this title or of any rule or regulation thereunder shall also be liable jointly and sever- January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00297 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML Sec. 20A SECURITIES EXCHANGE ACT OF 1934 298 ally with and to the same extent as such controlled person to any person to whom such controlled person is liable (including to the Commission in any action brought under paragraph (1) or (3) of section 21(d)), unless the controlling person acted in good faith and did not directly or indirectly induce the act or acts constituting the violation or cause of action. (b) It shall be unlawful for any person, directly or indirectly, to do any act or thing which it would be unlawful for such person to do under the provisions of this title or any rule or regulation thereunder through or by means of any other person. (c) It shall be unlawful for any director or officer of, or any owner of any securities issued by, any issuer required to file any document, report, or information under this title or any rule or reg- ulation thereunder without just cause to hinder, delay, or obstruct the making or filing of any such document, report, or information. (d) Wherever communicating, or purchasing or selling a secu- rity while in possession of, material nonpublic information would violate, or result in liability to any purchaser or seller of the secu- rity under any provisions of this title, or any rule or regulation thereunder, such conduct in connection with a purchase or sale of a put, call, straddle, option, privilege 44 or security-based swap agreement with respect to such security or with respect to a group or index of securities including such security, shall also violate and result in comparable liability to any purchaser or seller of that se- curity under such provision, rule, or regulation. (e) PROSECUTION OF PERSONS WHO AID AND ABET VIOLA- TIONS.\u2014For purposes of any action brought by the Commission under paragraph (1) or (3) of section 21(d), any person that know- ingly or recklessly provides substantial assistance to another per- son in violation of a provision of this title, or of any rule or regula- tion issued under this title, shall be deemed to be in violation of such provision to the s...",
+    "concepts": [
+      "controlling person",
+      "aiding and abetting"
+    ],
     "chapterUse": [
       11
     ]
@@ -96,15 +112,26 @@
   {
     "number": "21",
     "title": "Investigations and Actions",
-    "article": "15 U.S.C. \u00a7 78u",
-    "text": "The Commission may investigate violations of this title and the rules thereunder. The Commission may bring an action in federal district court to enjoin violations and seek civil penalties.",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 21. (a)(1) The Commission may, in its discretion, make such investigations as it deems necessary to determine whether any person has violated, is violating, or is about to violate any provision of this title, the rules or regulations thereunder, the rules of a national securities exchange or registered securities asso- ciation of which such person is a member or a person associated, or, as to any act or practice, or omission to act, while associated with a member, formerly associated with a member, the rules of a registered clearing agency in which such person is a participant, or, as to any act or practice, or omission to act, while a participant, was a participant, the rules of the Public Company Accounting January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00299 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML Sec. 21 SECURITIES EXCHANGE ACT OF 1934 300 Oversight Board, of which such person is a registered public ac- counting firm, a person associated with such a firm, or, as to any act, practice, or omission to act, while associated with such firm, a person formerly associated with such a firm, or the rules of the Municipal Securities Rulemaking Board, and may require or per- mit any person to file with it a statement in writing, under oath or otherwise as the Commission shall determine, as to all the facts and circumstances concerning the matter to be investigated. The Commission is authorized in its discretion, to publish information concerning any such violations, and to investigate any facts, condi- tions, practices, or matters which it may deem necessary or proper to aid in the enforcement of such provisions, in the prescribing of rules and regulations under this title, or in securing information to serve as a basis for recommending further legislation concerning the matters to which this title relates. (2) On request from a foreign securities authority, the Commis- sion may provide assistance in accordance with this paragraph if the requesting authority states that the requesting authority is conducting an investigation which it deems necessary to determine whether any person has violated, is violating, or is about to violate any laws or rules relating to securities matters that the requesting authority administers or enforces. The Commission may, in its dis- cretion, conduct such investigation as the Commission...",
     "concepts": [
-      "enforcement",
-      "SEC"
+      "SEC enforcement",
+      "investigations"
     ],
-    "crossRefs": [],
+    "chapterUse": []
+  },
+  {
+    "number": "21A",
+    "title": "Civil Penalties for Insider Trading",
+    "article": "Securities Exchange Act of 1934",
+    "text": "SEC. 21A. (a) AUTHORITY TO IMPOSE CIVIL PENALTIES.\u2014 (1) JUDICIAL ACTIONS BY COMMISSION AUTHORIZED.\u2014When- ever it shall appear to the Commission that any person has violated any provision of this title or the rules or regulations thereunder by purchasing or selling a security or security- based swap agreement while in possession of material, non- public information in, or has violated any such provision by communicating such information in connection with, a trans- action on or through the facilities of a national securities ex- change or from or through a broker or dealer, and which is not part of a public offering by an issuer of securities other than standardized options or security futures products, the Commis- sion\u2014 (A) may bring an action in a United States district court to seek, and the court shall have jurisdiction to im- pose, a civil penalty to be paid by the person who com- mitted such violation; and (B) may, subject to subsection (b)(1), bring an action in a United States district court to seek, and the court shall have jurisdiction to impose, a civil penalty to be paid by a person who, at the time of the violation, directly or indi- rectly controlled the person who committed such violation. (2) AMOUNT OF PENALTY FOR PERSON WHO COMMITTED VIO- LATION.\u2014The amount of the penalty which may be imposed on the person who committed such violation shall be determined by the court in light of the facts and circumstances, but shall not exceed three times the profit gained or loss avoided as a result of such unlawful purchase, sale, or communication. January 13, 2026 As Amended Through P.L. 119-60, Enacted December 18, 2025 VerDate Nov 24 2008 21:14 Jan 13, 2026 Jkt 000000 PO 00000 Frm 00308 Fmt 9001 Sfmt 9001 G:\\COMP\\SEC\\SEAO1.BEL HOLC G:\\COMP\\SEC\\SECURITIES EXCHANGE ACT OF 1934.XML 309 SECURITIES EXCHANGE ACT OF 1934 Sec. 21A (3) AMOUNT OF PENALTY FOR CONTROLLING PERSON.\u2014The amount of the penalty which may be imposed on any person who, at the time of the violation, directly or indirectly con- trolled the person who committed such violation, shall be de- termined by the court in light of the facts and circumstances, but shall not exceed the greater of $1,000,000, or three times the amount of the profit gained or loss avoided as a result of such controlled person\u2019s violation. If such controlled person\u2019s violation was a violation by communication, the profit gained or loss avoided as a result of the violation shall, for purposes of this paragraph only, be d...",
+    "concepts": [
+      "insider trading",
+      "penalties",
+      "ITSFEA"
+    ],
     "chapterUse": [
-      11
+      12
     ]
   }
 ]
