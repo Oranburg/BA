@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { CASE_LAW_INDEX, DOCUMENTS, PREBUILT_COMPARISONS, getTomePath } from "./corpus";
+import { CASE_LAW_INDEX, DOCUMENT_CATEGORIES, DOCUMENTS, PREBUILT_COMPARISONS, getTomePath, isSectionsLoaded } from "./corpus";
 import { APP_ROUTES, HASH_TARGETS } from "../routing/routes";
 import {
   buildChapterLink,
@@ -10,6 +10,8 @@ import {
   getPrevNext,
   getReverseCitations,
   getSectionBySlug,
+  loadDocSections,
+  loadAllAndRebuild,
   resolveQuery,
 } from "./resolver";
 
@@ -352,6 +354,25 @@ function AnnotationPanel({ keyId, sectionText, sectionLabel }) {
   );
 }
 
+const CATEGORY_ORDER = [
+  DOCUMENT_CATEGORIES.UNIFORM_ACTS,
+  DOCUMENT_CATEGORIES.STATE_CODES,
+  DOCUMENT_CATEGORIES.FEDERAL,
+  DOCUMENT_CATEGORIES.RESTATEMENTS,
+  DOCUMENT_CATEGORIES.CASES,
+];
+
+function groupDocsByCategory() {
+  const map = new Map();
+  CATEGORY_ORDER.forEach((cat) => map.set(cat, []));
+  DOCUMENTS.forEach((d) => {
+    const cat = d.category || "Other";
+    if (!map.has(cat)) map.set(cat, []);
+    map.get(cat).push(d);
+  });
+  return [...map.entries()].filter(([, docs]) => docs.length > 0);
+}
+
 export default function TomeExperience({ embedded = false, onClose, initialDocSlug, initialSectionNumber }) {
   const params = useParams();
   const navigate = useNavigate();
@@ -360,6 +381,9 @@ export default function TomeExperience({ embedded = false, onClose, initialDocSl
   const propDoc = initialDocSlug ? DOCUMENTS.find((d) => d.slug === initialDocSlug) : null;
   const routeDoc = propDoc || getDocBySlug(params.docSlug);
   const [doc, setDoc] = useState(routeDoc || defaultDoc);
+  const [_loadTick, setLoadTick] = useState(0);
+  // _loadTick drives re-renders after async section loads complete
+  const loading = !!(doc.sectionsFile && !isSectionsLoaded(doc));
 
   const propSection = propDoc && initialSectionNumber
     ? (propDoc.sections || []).find((s) => s.number === String(initialSectionNumber))
@@ -374,16 +398,53 @@ export default function TomeExperience({ embedded = false, onClose, initialDocSl
   const initialTab = embedded || initialPanel === "problems" ? "comparisons" : "browse";
   const [activeTab, setActiveTab] = useState(initialTab);
 
+  // Load sections on mount and when doc changes
+  useEffect(() => {
+    if (!isSectionsLoaded(doc) && doc.sectionsFile) {
+      let cancelled = false;
+      const load = async () => {
+        const loaded = await loadDocSections(doc);
+        if (cancelled) return;
+        // Bump tick to trigger re-render now that sections are loaded
+        setLoadTick((t) => t + 1);
+        if (loaded.sections?.length) {
+          setSection((prev) => prev || loaded.sections[0]);
+        }
+      };
+      load();
+      return () => { cancelled = true; };
+    }
+  }, [doc]);
+
+  // Preload all for search
+  useEffect(() => {
+    loadAllAndRebuild();
+  }, []);
+
   const prevNext = getPrevNext(doc, section);
   const breadcrumbs = getBreadcrumbs(doc, section);
   const reverse = section ? getReverseCitations(doc.shortName, section.number) : [];
 
-  function openSection(nextDoc, nextSection) {
-    if (!nextDoc || !nextSection) return;
+  const openSection = useCallback(async (nextDoc, nextSection) => {
+    if (!nextDoc) return;
+    // Ensure sections are loaded
+    if (!isSectionsLoaded(nextDoc) && nextDoc.sectionsFile) {
+      await loadDocSections(nextDoc);
+      setLoadTick((t) => t + 1);
+      // If nextSection wasn't provided, get first
+      if (!nextSection && nextDoc.sections?.length) {
+        nextSection = nextDoc.sections[0];
+      }
+    }
     setDoc(nextDoc);
-    setSection(nextSection);
-    if (!embedded) navigate(getTomePath(nextDoc, nextSection));
-  }
+    if (nextSection) {
+      setSection(nextSection);
+      if (!embedded) navigate(getTomePath(nextDoc, nextSection));
+    } else {
+      setSection(nextDoc.sections?.[0] || null);
+      if (!embedded) navigate(`${APP_ROUTES.tomeHome}/${nextDoc.slug}`);
+    }
+  }, [embedded, navigate]);
 
   function onJumpSubmit(e) {
     e.preventDefault();
@@ -400,6 +461,8 @@ export default function TomeExperience({ embedded = false, onClose, initialDocSl
   }
 
   const jumpMatches = useMemo(() => (doc.sections || []).filter((s) => s.number.toLowerCase().includes(jump.toLowerCase().replace(/^§\s*/, ""))).slice(0, 6), [doc, jump]);
+
+  const categorizedDocs = useMemo(() => groupDocsByCategory(), []);
 
   const rootClass = embedded
     ? "h-full bg-sprawl-deep-blue text-gray-100"
@@ -442,20 +505,18 @@ export default function TomeExperience({ embedded = false, onClose, initialDocSl
                 value={doc.id}
                 onChange={(e) => {
                   const nextDoc = DOCUMENTS.find((d) => d.id === e.target.value);
-                  const first = nextDoc?.sections?.[0] || null;
-                  if (nextDoc && first) openSection(nextDoc, first);
-                  else if (nextDoc) {
-                    setDoc(nextDoc);
-                    setSection(null);
-                    navigate(`${APP_ROUTES.tomeHome}/${nextDoc.slug}`);
-                  }
+                  if (nextDoc) openSection(nextDoc, null);
                 }}
                 className="mt-1 w-full rounded border border-sprawl-yellow/30 bg-sprawl-deep-blue px-2 py-1 font-ui text-sm text-white"
               >
-                {DOCUMENTS.map((d) => (
-                  <option key={d.id} value={d.id}>
-                    {d.shortName} — {d.versionInUse}
-                  </option>
+                {categorizedDocs.map(([category, docs]) => (
+                  <optgroup key={category} label={category}>
+                    {docs.map((d) => (
+                      <option key={d.id} value={d.id}>
+                        {d.shortName} — {d.versionInUse}
+                      </option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
               <details className="mt-2 rounded border border-sprawl-yellow/10 p-2">
@@ -463,7 +524,15 @@ export default function TomeExperience({ embedded = false, onClose, initialDocSl
                 <p className="mt-1 font-ui text-xs text-gray-300">{doc.aliases.join(", ")}</p>
               </details>
             </div>
-            {doc.sections?.length ? <TocTree doc={doc} section={section} onOpenSection={openSection} /> : <p className="font-ui text-xs text-gray-400">No section text loaded for this document.</p>}
+
+            {loading && (
+              <div className="flex items-center gap-2 rounded border border-sprawl-yellow/20 bg-sprawl-yellow/5 p-2 mb-3">
+                <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-sprawl-yellow border-t-transparent" />
+                <p className="font-ui text-xs text-sprawl-yellow">Loading sections...</p>
+              </div>
+            )}
+
+            {doc.sections?.length ? <TocTree doc={doc} section={section} onOpenSection={openSection} /> : !loading && <p className="font-ui text-xs text-gray-400">No section text loaded for this document.</p>}
             <div className="mt-4 space-y-2">
               <button
                 onClick={() => setActiveTab("browse")}
@@ -628,7 +697,14 @@ export default function TomeExperience({ embedded = false, onClose, initialDocSl
             </article>
           ) : (
             <div className="rounded border border-sprawl-yellow/20 bg-sprawl-bright-blue/10 p-4">
-              <p className="font-ui text-sm text-gray-200">This document is listed in the corpus but section text is not currently available.</p>
+              {loading ? (
+                <div className="flex items-center gap-2">
+                  <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-sprawl-yellow border-t-transparent" />
+                  <p className="font-ui text-sm text-gray-200">Loading section data...</p>
+                </div>
+              ) : (
+                <p className="font-ui text-sm text-gray-200">This document is listed in the corpus but section text is not currently available.</p>
+              )}
             </div>
           )}
 

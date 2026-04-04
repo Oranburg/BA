@@ -1,4 +1,4 @@
-import { DOCUMENTS } from "./corpus";
+import { DOCUMENTS, loadSections, isSectionsLoaded } from "./corpus";
 
 function normalize(value = "") {
   return value
@@ -68,6 +68,10 @@ function findDocument(input) {
   return null;
 }
 
+/**
+ * Synchronous citation resolution.
+ * Works with whatever sections are currently loaded.
+ */
 export function resolveCitation(input) {
   const query = String(input || "").trim();
   if (!query) {
@@ -99,7 +103,8 @@ export function resolveCitation(input) {
       document,
       canonicalId: document.id,
       canonicalLabel: document.shortName,
-      message: `Resolved '${query}' to ${document.shortName}, but section ${sectionNumber} is not available in corpus text.`,
+      needsLoad: !isSectionsLoaded(document),
+      message: `Resolved '${query}' to ${document.shortName}, but section ${sectionNumber} is not yet loaded.`,
     };
   }
 
@@ -123,6 +128,22 @@ export function resolveCitation(input) {
     canonicalId: document.id,
     canonicalLabel: document.shortName,
   };
+}
+
+/**
+ * Async citation resolution: loads sections on demand if needed,
+ * then resolves the citation.
+ */
+export async function resolveCitationAsync(input) {
+  const result = resolveCitation(input);
+
+  if (result.found && result.kind === "document" && result.needsLoad && result.document.sectionsFile) {
+    await loadSections(result.document);
+    // Re-resolve after loading
+    return resolveCitation(input);
+  }
+
+  return result;
 }
 
 export function getCitationAliasIndex() {

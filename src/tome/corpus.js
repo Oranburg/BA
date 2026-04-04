@@ -8,6 +8,14 @@ export const COVERAGE_BADGES = {
   NOT_AVAILABLE: "Not yet available",
 };
 
+export const DOCUMENT_CATEGORIES = {
+  UNIFORM_ACTS: "Uniform Acts",
+  STATE_CODES: "State Codes",
+  FEDERAL: "Federal",
+  RESTATEMENTS: "Restatements",
+  CASES: "Cases",
+};
+
 export const DOCUMENTS = [
   {
     id: "rupa",
@@ -26,61 +34,12 @@ export const DOCUMENTS = [
     version: "1997 (amended 2013)",
     versionInUse: "RUPA 1997/2013",
     lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.KEY_SECTIONS,
+    coverage: COVERAGE_BADGES.FULL_TEXT,
     chapters: [2, 3, 8, 9, 15],
     hierarchyType: "uniform",
-    sections: [
-      {
-        number: "202",
-        title: "Formation of Partnership",
-        article: "Article 2",
-        text:
-          "Except as otherwise provided in subsection (b), the association of two or more persons to carry on as co-owners a business for profit forms a partnership, whether or not the persons intend to form a partnership.",
-        concepts: ["formation", "partnership"],
-      },
-      {
-        number: "301",
-        title: "Partner as Agent",
-        article: "Article 3",
-        text:
-          "Each partner is an agent of the partnership for the purpose of its business. An act of a partner for apparently carrying on in the ordinary course binds the partnership unless the partner lacked authority and the third party had notice.",
-        concepts: ["agency", "authority", "partner"],
-        crossRefs: [{ target: "RUPA § 601" }, { target: "ULLCA § 301" }, { target: "R3A § 2.03" }],
-        chapterUse: [2, 3, 8],
-      },
-      {
-        number: "306",
-        title: "Partner's Liability",
-        article: "Article 3",
-        text:
-          "All partners are liable jointly and severally for all debts, obligations, and other liabilities of the partnership unless otherwise agreed by the claimant or provided by law.",
-        concepts: ["liability", "risk"],
-      },
-      {
-        number: "401",
-        title: "Partner's Rights and Duties",
-        article: "Article 4",
-        text:
-          "Each partner is deemed to have an account that is credited and charged in accordance with this section, and has equal rights in management and conduct of the partnership business.",
-        concepts: ["governance", "duties"],
-      },
-      {
-        number: "404",
-        title: "General Standards of Partner's Conduct",
-        article: "Article 4",
-        text:
-          "The only fiduciary duties a partner owes are the duty of loyalty and the duty of care as set forth in this section, plus the obligation of good faith and fair dealing.",
-        concepts: ["fiduciary duty", "loyalty", "care"],
-      },
-      {
-        number: "801",
-        title: "Events Causing Dissolution",
-        article: "Article 8",
-        text:
-          "A partnership is dissolved, and its business must be wound up, upon occurrence of specified triggering events, including certain partner actions and judicial dissolution.",
-        concepts: ["dissolution"],
-      },
-    ],
+    category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
+    sectionsFile: "rupa-sections.json",
+    sections: [],
   },
   {
     id: "upa",
@@ -94,6 +53,8 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.SUMMARY_ONLY,
     chapters: [3],
     hierarchyType: "uniform",
+    category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
+    sectionsFile: null,
     sections: [],
   },
   {
@@ -105,60 +66,12 @@ export const DOCUMENTS = [
     version: "2006 (amended 2013)",
     versionInUse: "ULLCA 2006/2013",
     lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.KEY_SECTIONS,
+    coverage: COVERAGE_BADGES.FULL_TEXT,
     chapters: [5, 8, 9, 15],
     hierarchyType: "uniform",
-    sections: [
-      {
-        number: "110",
-        title: "Operating Agreement; Scope, Function, and Limitations",
-        article: "Article 1",
-        text:
-          "Except as otherwise provided, the operating agreement governs member relations, manager rights and duties, company activities, and amendment procedures.",
-        concepts: ["operating agreement", "llc governance"],
-        chapterUse: [5, 8],
-      },
-      {
-        number: "301",
-        title: "No Agency Power of Member",
-        article: "Article 3",
-        text:
-          "A member is not an agent of a limited liability company solely by reason of being a member.",
-        concepts: ["agency", "llc"],
-        chapterUse: [5, 8],
-      },
-      {
-        number: "304",
-        title: "Liability of Members and Managers",
-        article: "Article 3",
-        text:
-          "A debt, obligation, or other liability of a limited liability company is solely that of the company, and members or managers are not personally liable solely by reason of status.",
-        concepts: ["liability", "risk"],
-      },
-      {
-        number: "401",
-        title: "Becoming Member",
-        article: "Article 4",
-        text: "A person becomes a member as provided in the operating agreement, by consent, or as otherwise provided in this act.",
-        concepts: ["membership", "formation"],
-      },
-      {
-        number: "409",
-        title: "Standards of Conduct",
-        article: "Article 4",
-        text:
-          "In a member-managed company, duties of loyalty and care apply, together with contractual good faith and fair dealing, subject to operating agreement constraints.",
-        concepts: ["fiduciary duty", "llc governance"],
-        chapterUse: [5, 9],
-      },
-      {
-        number: "701",
-        title: "Events Causing Dissolution",
-        article: "Article 7",
-        text: "A limited liability company is dissolved upon specified events including those in the operating agreement and judicially ordered dissolution.",
-        concepts: ["dissolution"],
-      },
-    ],
+    category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
+    sectionsFile: "ullca-sections.json",
+    sections: [],
   },
   {
     id: "mbca",
@@ -169,42 +82,12 @@ export const DOCUMENTS = [
     version: "2025 black-letter snapshot",
     versionInUse: "MBCA current model text",
     lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.KEY_SECTIONS,
+    coverage: COVERAGE_BADGES.FULL_TEXT,
     chapters: [4, 9, 11, 13, 15],
     hierarchyType: "uniform",
-    sections: [
-      {
-        number: "4.01",
-        title: "Corporate Name",
-        article: "Chapter 4",
-        text: "A corporate name must satisfy naming requirements and be distinguishable on records of the filing office.",
-        concepts: ["corporate name"],
-      },
-      {
-        number: "6.22",
-        title: "Liability of Shareholders",
-        article: "Chapter 6",
-        text: "Unless otherwise provided, a shareholder is not personally liable for acts or debts of the corporation.",
-        concepts: ["liability", "shareholders"],
-      },
-      {
-        number: "8.30",
-        title: "Standards of Conduct for Directors",
-        article: "Chapter 8",
-        text:
-          "Each director must act in good faith, in a manner reasonably believed to be in the best interests of the corporation, and with due care.",
-        concepts: ["director standards", "fiduciary duty"],
-        chapterUse: [9, 13],
-      },
-      {
-        number: "8.40",
-        title: "Standards of Conduct for Officers",
-        article: "Chapter 8",
-        text:
-          "An officer must act in good faith, with care a person in like position would exercise, and in a manner reasonably believed to be in the corporation's best interests.",
-        concepts: ["officers", "fiduciary duty"],
-      },
-    ],
+    category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
+    sectionsFile: "mbca-sections.json",
+    sections: [],
   },
   {
     id: "mnca",
@@ -218,10 +101,9 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.KEY_SECTIONS,
     chapters: [6],
     hierarchyType: "uniform",
-    sections: [
-      { number: "13.01", title: "Distributions Prohibited", article: "Chapter 13", text: "A nonprofit may not make distributions except as authorized by law.", concepts: ["nondistribution"] },
-      { number: "14.09", title: "Disposition of Assets", article: "Chapter 14", text: "On dissolution, assets are distributed according to governing law and charitable purpose constraints.", concepts: ["dissolution", "nonprofit"] },
-    ],
+    category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
+    sectionsFile: "mnca-sections.json",
+    sections: [],
   },
   {
     id: "dgcl",
@@ -235,61 +117,9 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.KEY_SECTIONS,
     chapters: [4, 11, 12, 13],
     hierarchyType: "state-code",
-    sections: [
-      {
-        number: "102(b)(7)",
-        title: "Exculpation Provision",
-        article: "Subchapter 1",
-        text:
-          "A certificate may include a provision eliminating or limiting director personal liability for monetary damages for breach of fiduciary duty, subject to statutory exceptions.",
-        concepts: ["exculpation", "fiduciary duty"],
-      },
-      {
-        number: "141",
-        title: "Board of Directors; Powers",
-        article: "Subchapter 4",
-        text:
-          "The business and affairs of every corporation organized under this chapter shall be managed by or under the direction of a board of directors, except as otherwise provided.",
-        concepts: ["board powers", "governance"],
-        chapterUse: [11, 13, 16],
-      },
-      {
-        number: "141(a)",
-        title: "Board of Directors; Powers",
-        article: "Subchapter 4",
-        text:
-          "The business and affairs of every corporation organized under this chapter shall be managed by or under the direction of a board of directors, except as otherwise provided.",
-        concepts: ["board powers", "governance"],
-        chapterUse: [11, 13],
-      },
-      {
-        number: "144",
-        title: "Interested Directors; Quorum",
-        article: "Subchapter 4",
-        text:
-          "A contract or transaction is not void or voidable solely because a director is interested if statutory safe-harbor conditions are met, including disclosure and approval or fairness.",
-        concepts: ["conflicts", "fiduciary duty", "safe harbor"],
-        chapterUse: [9],
-      },
-      {
-        number: "151",
-        title: "Classes and Series of Stock",
-        article: "Subchapter 5",
-        text:
-          "Every corporation may issue classes or series of stock with powers, designations, preferences, and rights as stated in the certificate of incorporation.",
-        concepts: ["capital structure", "stock classes"],
-        chapterUse: [10, 15],
-      },
-      {
-        number: "211",
-        title: "Meetings of Stockholders",
-        article: "Subchapter 7",
-        text:
-          "An annual meeting of stockholders must be held for election of directors on a date and at a time designated by or in the manner provided in the bylaws.",
-        concepts: ["shareholder franchise", "meetings", "elections"],
-        chapterUse: [12],
-      },
-    ],
+    category: DOCUMENT_CATEGORIES.STATE_CODES,
+    sectionsFile: "dgcl-sections.json",
+    sections: [],
   },
   {
     id: "dllca",
@@ -303,6 +133,8 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.SUMMARY_ONLY,
     chapters: [5],
     hierarchyType: "state-code",
+    category: DOCUMENT_CATEGORIES.STATE_CODES,
+    sectionsFile: null,
     sections: [],
   },
   {
@@ -317,12 +149,9 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.KEY_SECTIONS,
     chapters: [2, 7],
     hierarchyType: "restatement",
-    sections: [
-      { number: "1.01", title: "Agency Defined", article: "Chapter 1", text: "Agency is the fiduciary relationship arising when a principal manifests assent that an agent act on the principal's behalf and subject to control, and the agent consents.", concepts: ["agency", "control"], chapterUse: [2] },
-      { number: "2.01", title: "Actual Authority", article: "Chapter 2", text: "An agent acts with actual authority when the agent reasonably believes, based on the principal's manifestations, that the principal wishes the act.", concepts: ["actual authority"], chapterUse: [2] },
-      { number: "2.03", title: "Apparent Authority", article: "Chapter 2", text: "Apparent authority is power to affect a principal's legal relations when a third party reasonably believes authority exists and that belief is traceable to the principal's manifestations.", concepts: ["apparent authority"], chapterUse: [2] },
-      { number: "7.07", title: "Employee Acting Within Scope of Employment", article: "Chapter 7", text: "An employer is subject to vicarious liability for a tort committed by an employee acting within the scope of employment.", concepts: ["vicarious liability", "respondeat superior"], chapterUse: [2] },
-    ],
+    category: DOCUMENT_CATEGORIES.RESTATEMENTS,
+    sectionsFile: "r3a-sections.json",
+    sections: [],
   },
   {
     id: "r2t",
@@ -336,6 +165,8 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.NOT_AVAILABLE,
     chapters: [],
     hierarchyType: "restatement",
+    category: DOCUMENT_CATEGORIES.RESTATEMENTS,
+    sectionsFile: null,
     sections: [],
   },
   {
@@ -350,29 +181,9 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.FULL_TEXT,
     chapters: [7, 10],
     hierarchyType: "federal",
-    sections: [
-      {
-        number: "1",
-        title: "Short Title",
-        article: "Title 1",
-        text: "This Act may be cited as the Guiding and Establishing National Innovation for U.S. Stablecoins Act or the GENIUS Act.",
-        concepts: ["stablecoin", "federal statute"],
-      },
-      {
-        number: "2",
-        title: "Definitions",
-        article: "Title 1",
-        text: "Defines key terms including payment stablecoin, permitted payment stablecoin issuer, and related federal/state regulator terms.",
-        concepts: ["definitions", "stablecoin"],
-      },
-      {
-        number: "3",
-        title: "Issuance and Treatment of Payment Stablecoins",
-        article: "Title 1",
-        text: "Limits who may issue payment stablecoins and sets requirements for lawful offer/sale in the United States.",
-        concepts: ["issuance", "compliance"],
-      },
-    ],
+    category: DOCUMENT_CATEGORIES.FEDERAL,
+    sectionsFile: "genius-act-sections.json",
+    sections: [],
   },
   {
     id: "securities-act-1933",
@@ -380,23 +191,15 @@ export const DOCUMENTS = [
     slug: "securities-act-1933",
     title: "Securities Act of 1933",
     aliases: ["1933 Act", "'33 Act", "SA 1933", "Federal Securities Act"],
-    version: "15 U.S.C. §§ 77a–77aa",
+    version: "15 U.S.C. §§ 77a-77aa",
     versionInUse: "Current statutory text",
     lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.FULL_TEXT,
+    coverage: COVERAGE_BADGES.KEY_SECTIONS,
     chapters: [10, 11],
     hierarchyType: "federal",
-    sections: [
-      {
-        number: "11",
-        title: "Civil Liabilities on Account of False Registration Statement",
-        article: "15 U.S.C. § 77k",
-        text:
-          "Any person acquiring a registered security may sue specified participants in a registration statement if it contained an untrue statement of material fact or omitted a material fact required to make statements not misleading.",
-        concepts: ["registration liability", "material misstatement", "ipo"],
-        chapterUse: [11],
-      },
-    ],
+    category: DOCUMENT_CATEGORIES.FEDERAL,
+    sectionsFile: "securities-act-sections.json",
+    sections: [],
   },
   {
     id: "exchange-act-1934",
@@ -404,22 +207,48 @@ export const DOCUMENTS = [
     slug: "exchange-act-1934",
     title: "Securities Exchange Act of 1934",
     aliases: ["1934 Act", "'34 Act", "SEA", "Securities Exchange Act"],
-    version: "15 U.S.C. §§ 78a–78qq",
+    version: "15 U.S.C. §§ 78a-78qq",
     versionInUse: "Current statutory text",
     lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.FULL_TEXT,
+    coverage: COVERAGE_BADGES.KEY_SECTIONS,
     chapters: [10, 11, 12],
     hierarchyType: "federal",
+    category: DOCUMENT_CATEGORIES.FEDERAL,
+    sectionsFile: "exchange-act-sections.json",
+    sections: [],
+  },
+  {
+    id: "irc-501c3",
+    shortName: "IRC 501(c)(3)",
+    slug: "irc-501c3",
+    title: "Internal Revenue Code § 501(c)(3)",
+    aliases: ["501c3", "tax exemption", "nonprofit exemption", "charitable exemption", "26 U.S.C. § 501(c)(3)"],
+    version: "26 U.S.C.",
+    versionInUse: "Current subsection",
+    lastVerified: "2026-04-03",
+    coverage: COVERAGE_BADGES.KEY_SECTIONS,
+    chapters: [6],
+    hierarchyType: "federal",
+    category: DOCUMENT_CATEGORIES.FEDERAL,
+    sectionsFile: "irc-sections.json",
+    sections: [],
+  },
+  {
+    id: "treasury-reg",
+    shortName: "Treas. Reg.",
+    slug: "treasury-reg",
+    title: "Treasury Regulation § 1.501(c)(3)-1",
+    aliases: ["501c3 regs", "organizational test", "treasury nonprofit reg"],
+    version: "26 C.F.R.",
+    versionInUse: "§1.501(c)(3)-1",
+    lastVerified: "2026-04-03",
+    coverage: COVERAGE_BADGES.KEY_SECTIONS,
+    chapters: [6],
+    hierarchyType: "federal",
+    category: DOCUMENT_CATEGORIES.FEDERAL,
+    sectionsFile: null,
     sections: [
-      {
-        number: "10(b)",
-        title: "Manipulative and Deceptive Devices",
-        article: "15 U.S.C. § 78j(b)",
-        text:
-          "It is unlawful to use manipulative or deceptive devices in connection with the purchase or sale of securities in contravention of SEC rules, including Rule 10b-5.",
-        concepts: ["securities fraud", "10b-5", "disclosure"],
-        chapterUse: [11, 12],
-      },
+      { number: "1.501(c)(3)-1", title: "Organizational and Operational Tests", article: "Treasury Regulations", text: "Provides requirements for exemption including organizational and operational tests for charitable organizations.", concepts: ["organizational test", "operational test"] },
     ],
   },
   {
@@ -434,6 +263,8 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.EXCERPTED,
     chapters: [15],
     hierarchyType: "case",
+    category: DOCUMENT_CATEGORIES.CASES,
+    sectionsFile: null,
     sections: [
       {
         number: "holding",
@@ -444,39 +275,6 @@ export const DOCUMENTS = [
         concepts: ["insolvency", "creditor standing", "fiduciary duties"],
         chapterUse: [15],
       },
-    ],
-  },
-  {
-    id: "irc-501c3",
-    shortName: "IRC 501(c)(3)",
-    slug: "irc-501c3",
-    title: "Internal Revenue Code § 501(c)(3)",
-    aliases: ["501c3", "tax exemption", "nonprofit exemption", "charitable exemption", "26 U.S.C. § 501(c)(3)"],
-    version: "26 U.S.C.",
-    versionInUse: "Current subsection",
-    lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.KEY_SECTIONS,
-    chapters: [6],
-    hierarchyType: "federal",
-    sections: [
-      { number: "501(c)(3)", title: "Charitable and Related Exemption", article: "Title 26", text: "Organizations organized and operated exclusively for exempt purposes may qualify for federal income tax exemption under specified conditions.", concepts: ["nonprofit", "tax", "exemption"], chapterUse: [6] },
-      { number: "401", title: "Qualified Pension, Profit-Sharing, and Stock Bonus Plans", article: "Title 26", text: "Defines requirements for qualified retirement plans under the Internal Revenue Code.", concepts: ["retirement", "tax"], chapterUse: [] },
-    ],
-  },
-  {
-    id: "treasury-reg",
-    shortName: "Treas. Reg.",
-    slug: "treasury-reg",
-    title: "Treasury Regulation § 1.501(c)(3)-1",
-    aliases: ["501c3 regs", "organizational test", "treasury nonprofit reg"],
-    version: "26 C.F.R.",
-    versionInUse: "§1.501(c)(3)-1",
-    lastVerified: "2026-04-03",
-    coverage: COVERAGE_BADGES.KEY_SECTIONS,
-    chapters: [6],
-    hierarchyType: "federal",
-    sections: [
-      { number: "1.501(c)(3)-1", title: "Organizational and Operational Tests", article: "Treasury Regulations", text: "Provides requirements for exemption including organizational and operational tests for charitable organizations.", concepts: ["organizational test", "operational test"] },
     ],
   },
   {
@@ -491,6 +289,8 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.NOT_AVAILABLE,
     chapters: [],
     hierarchyType: "restatement",
+    category: DOCUMENT_CATEGORIES.RESTATEMENTS,
+    sectionsFile: null,
     sections: [],
   },
   {
@@ -505,6 +305,8 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.NOT_AVAILABLE,
     chapters: [6],
     hierarchyType: "federal",
+    category: DOCUMENT_CATEGORIES.FEDERAL,
+    sectionsFile: null,
     sections: [],
   },
   {
@@ -519,15 +321,84 @@ export const DOCUMENTS = [
     coverage: COVERAGE_BADGES.NOT_AVAILABLE,
     chapters: [],
     hierarchyType: "case",
+    category: DOCUMENT_CATEGORIES.CASES,
+    sectionsFile: null,
     sections: [],
   },
 ];
+
+/* ---------- Lazy-loading infrastructure ---------- */
+
+const _loadedDocs = new Set();
+const _loadingPromises = new Map();
+
+const SECTION_LOADERS = {
+  "rupa-sections.json": () => import("../data/tome/rupa-sections.json"),
+  "ullca-sections.json": () => import("../data/tome/ullca-sections.json"),
+  "dgcl-sections.json": () => import("../data/tome/dgcl-sections.json"),
+  "mbca-sections.json": () => import("../data/tome/mbca-sections.json"),
+  "r3a-sections.json": () => import("../data/tome/r3a-sections.json"),
+  "mnca-sections.json": () => import("../data/tome/mnca-sections.json"),
+  "securities-act-sections.json": () => import("../data/tome/securities-act-sections.json"),
+  "exchange-act-sections.json": () => import("../data/tome/exchange-act-sections.json"),
+  "genius-act-sections.json": () => import("../data/tome/genius-act-sections.json"),
+  "irc-sections.json": () => import("../data/tome/irc-sections.json"),
+};
+
+/**
+ * Lazily load section data for a single document.
+ * Returns the document (with .sections populated) or null.
+ * Safe to call repeatedly -- cached after first load.
+ */
+export async function loadSections(doc) {
+  if (!doc) return null;
+  if (_loadedDocs.has(doc.id)) return doc;
+  if (!doc.sectionsFile) {
+    _loadedDocs.add(doc.id);
+    return doc;
+  }
+
+  if (_loadingPromises.has(doc.id)) {
+    return _loadingPromises.get(doc.id);
+  }
+
+  const loader = SECTION_LOADERS[doc.sectionsFile];
+  if (!loader) {
+    _loadedDocs.add(doc.id);
+    return doc;
+  }
+
+  const promise = loader().then((mod) => {
+    const data = mod.default || mod;
+    doc.sections = Array.isArray(data) ? data : [];
+    _loadedDocs.add(doc.id);
+    _loadingPromises.delete(doc.id);
+    return doc;
+  });
+
+  _loadingPromises.set(doc.id, promise);
+  return promise;
+}
+
+/** Load ALL section JSON files at once (for full-text search). */
+export async function loadAllSections() {
+  const promises = DOCUMENTS.filter((d) => d.sectionsFile && !_loadedDocs.has(d.id)).map((d) => loadSections(d));
+  await Promise.all(promises);
+  return DOCUMENTS;
+}
+
+/** Check if a document's sections have already been loaded. */
+export function isSectionsLoaded(doc) {
+  return _loadedDocs.has(doc?.id);
+}
+
+/* ---------- Static look-ups and helpers ---------- */
 
 export const PREBUILT_COMPARISONS = [
   {
     id: "duties-rupa-ullca-dgcl",
     title: "Partner / Member / Director Duty Architecture",
-    sections: ["RUPA § 404", "ULLCA § 409", "DGCL § 102(b)(7)"],
+    sections: ["RUPA § 409", "ULLCA § 409", "DGCL § 102(b)(7)"],
     note:
       "RUPA and ULLCA articulate affirmative fiduciary standards, while DGCL §102(b)(7) focuses on limiting monetary exposure. Comparing these reveals how duty design differs from liability design.",
   },
@@ -590,6 +461,48 @@ export const CASE_LAW_INDEX = [
   {
     caseName: "Weinberger v. UOP",
     rule: "Entire fairness requires fair dealing and fair price in conflicted transactions.",
+    statutes: ["DGCL § 141(a)"],
+    chapters: [13],
+  },
+  {
+    caseName: "Revlon v. MacAndrews & Forbes",
+    rule: "When sale becomes inevitable, the board must maximize shareholder value.",
+    statutes: ["DGCL § 141", "DGCL § 102(b)(7)"],
+    chapters: [13],
+  },
+  {
+    caseName: "Unocal v. Mesa Petroleum",
+    rule: "Defensive measures must be reasonable in relation to the threat posed.",
+    statutes: ["DGCL § 141(a)"],
+    chapters: [13],
+  },
+  {
+    caseName: "Corwin v. KKR Financial Holdings",
+    rule: "A fully informed, uncoerced vote of disinterested stockholders invokes business judgment review.",
+    statutes: ["DGCL § 102(b)(7)", "DGCL § 251"],
+    chapters: [13],
+  },
+  {
+    caseName: "Lyondell Chemical v. Ryan",
+    rule: "Only knowing dereliction of duty constitutes bad faith under Revlon.",
+    statutes: ["DGCL § 102(b)(7)", "DGCL § 141(a)"],
+    chapters: [13],
+  },
+  {
+    caseName: "Air Products v. Airgas",
+    rule: "A board acting in good faith may maintain a poison pill to block an inadequate offer.",
+    statutes: ["DGCL § 141(a)"],
+    chapters: [13],
+  },
+  {
+    caseName: "Dell v. Magnetar",
+    rule: "Deal price from a fair process is strong evidence of fair value in appraisal.",
+    statutes: ["DGCL § 262"],
+    chapters: [13, 15],
+  },
+  {
+    caseName: "In re Match Group",
+    rule: "Both a special committee and a majority-of-the-minority vote are required for business judgment review under MFW.",
     statutes: ["DGCL § 141(a)"],
     chapters: [13],
   },

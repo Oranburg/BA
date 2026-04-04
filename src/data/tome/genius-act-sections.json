@@ -1,0 +1,315 @@
+[
+  {
+    "number": "1",
+    "title": "Short Title",
+    "article": "Title 1",
+    "text": "SECTION 1.  12 USC 5901 note . SHORT TITLE. \u2003\u2003This Act may be cited as the \u201c Guiding and Establishing National Innovation for U.S. Stablecoins Act \u201d or the \u201c GENIUS Act \u201d.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "2",
+    "title": "Definitions",
+    "article": "Title 1",
+    "text": "SEC. 2.  12 USC 5901 . DEFINITIONS. \u2003\u2003In this Act: (1)  Appropriate federal banking agency .\u2014 The term \u201c appropriate Federal banking agency \u201d has the meaning given that term in section 3 of the Federal Deposit Insurance Act ( 12 U.S.C. 1813 ). (2)  Bank secrecy act .\u2014 The term \u201c Bank Secrecy Act \u201d means\u2014 (A)  section 21 of the Federal Deposit Insurance Act ( 12 U.S.C. 1829b ); (B)  chapter 2 of  title I of Public Law 91\u2013508  ( 12 U.S.C. 1951 et seq. ); and (C)  subchapter II of chapter 53 of title 31, United States Code . (3)  Board .\u2014 The term \u201c Board \u201d means the Board of Governors of the Federal Reserve System. (4)  Comptroller .\u2014 The term \u201c Comptroller \u201d means the Office of the Comptroller of the Currency. (5)  Corporation .\u2014 The term \u201c Corporation \u201d means the Federal Deposit Insurance Corporation. (6)  Digital asset .\u2014 The term \u201c digital asset \u201d means any digital representation of value that is recorded on a cryptographically secured distributed ledger.",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "definitions",
+      "reserve requirements"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "3",
+    "title": "Issuance and Treatment of Payment Stablecoins",
+    "article": "Title 1",
+    "text": "SEC. 3.  12 USC 5902 . ISSUANCE AND TREATMENT OF PAYMENT STABLECOINS. (a)  Limitation on Issuers .\u2014 It shall be unlawful for any person other than a permitted payment stablecoin issuer to issue a payment stablecoin in the United States. (b)  Prohibition on Offers or Sales .\u2014 (1)  Effective date. In general .\u2014 Except as provided in subsection (c) and section 18, beginning on the date that is 3 years after the date of enactment of this Act, it shall be unlawful for a digital asset service provider to offer or sell a payment stablecoin to a person in the United States, unless the payment stablecoin is issued by a permitted payment stablecoin issuer. (2)  Compliance. Foreign payment stablecoin issuers .\u2014 It shall be unlawful for any digital asset service provider to offer, sell, or otherwise make available in the United States a payment  139 STAT.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "4",
+    "title": "Requirements for Payment Stablecoin Issuers",
+    "article": "Title 1",
+    "text": "SEC. 4.  12 USC 5903 . REQUIREMENTS FOR ISSUING PAYMENT STABLECOINS. (a)  Standards for the Issuance of Payment Stablecoins .\u2014 (1)  In general .\u2014 A permitted payment stablecoin issuer shall\u2014 (A)  maintain identifiable reserves backing the outstanding payment stablecoins of the permitted payment stablecoin issuer on an at least 1 to 1 basis, with reserves comprising\u2014 (i)  United States coins and currency (including Federal Reserve notes) or money standing to the credit of an account with a Federal Reserve Bank; (ii)  funds held as demand deposits (or other deposits that may be withdrawn upon request at any time) or insured shares at an insured depository institution (including any foreign branches or agents, including correspondent banks, of an insured depository institution), subject to limitations established by the Corporation and the National Credit Union Administration, as applicable, to address safety and soundness risks of such insured depository institution; (iii)  Time period.",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "reserve requirements"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "5",
+    "title": "Permissible Payment Stablecoin Issuers",
+    "article": "Title 1",
+    "text": "SEC. 5.  12 USC 5904 . APPROVAL OF SUBSIDIARIES OF INSURED DEPOSITORY INSTITUTIONS AND FEDERAL QUALIFIED PAYMENT STABLECOIN ISSUERS. (a)  Application .\u2014 (1)  In general .\u2014 Each primary Federal payment stablecoin regulator shall\u2014 (A)  Review. receive, review, and consider for approval applications from any insured depository institution that seeks to issue payment stablecoins through a subsidiary and any nonbank entity, Federal branch, or uninsured national bank that is chartered by the Comptroller pursuant to title LXII of the Revised Statutes, and that seeks to issue payment stablecoins as a Federal qualified payment stablecoin issuer; and (B)  Process. establish a process and framework for the licensing, regulation, examination, and supervision of such entities that prioritizes the safety and soundness of such entities. (2)  Authority to issue regulations and process applications . Deadline.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "6",
+    "title": "Federal Reserve Board Supervision",
+    "article": "Title 1",
+    "text": "SEC. 6.  12 USC 5905 . SUPERVISION AND ENFORCEMENT WITH RESPECT TO FEDERAL QUALIFIED PAYMENT STABLECOIN ISSUERS AND SUBSIDIARIES OF INSURED DEPOSITORY INSTITUTIONS. (a)  Supervision .\u2014 (1)  In general .\u2014 Each permitted payment stablecoin issuer that is not a State qualified payment stablecoin issuer with a payment stablecoin with a consolidated total outstanding issuance of less than $10,000,000,000 shall be subject to supervision by the appropriate primary Federal payment stablecoin regulator. (2)  Submission of reports .",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "enforcement"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "7",
+    "title": "Custodial and Operational Requirements",
+    "article": "Title 1",
+    "text": "SEC. 7.  12 USC 5906 . STATE QUALIFIED PAYMENT STABLECOIN ISSUERS. (a)  In General .\u2014 A State payment stablecoin regulator shall have supervisory, examination, and enforcement authority over all State qualified payment stablecoin issuers of such State. (b)  Authority To Enter Into Agreements With the Board . Memorandum. \u2014 A State payment stablecoin regulator may enter into a memorandum of understanding with the Board, by mutual agreement, under which the Board may participate in the supervision, examination, and enforcement of this Act with respect to the State qualified payment stablecoin issuers of such State. (c)  Records. Sharing of Information .\u2014 A State payment stablecoin regulator and the Board shall share information on an ongoing basis with respect to a State qualified payment stablecoin issuer of such State, including a copy of the initial application and any accompanying documents. (d)  Rulemaking .",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "enforcement"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "8",
+    "title": "Reciprocity for Foreign Issuers",
+    "article": "Title 1",
+    "text": "SEC. 8.  12 USC 5907 . ANTI-MONEY LAUNDERING PROTECTIONS. (a)  Payment Stablecoins Issued by a Foreign Payment Stablecoin Issuer .\u2014 (1)  Compliance. In general .\u2014 A payment stablecoin that is issued by a foreign payment stablecoin issuer may not be publicly offered, sold, or otherwise made available for trading in the United States by a digital asset service provider unless the foreign payment stablecoin issuer has the technological capability to comply and complies with the terms of any lawful order. (2)  Enforcement .\u2014 (A)  Authority .\u2014 The Secretary of the Treasury shall have the authority to designate any foreign issuer that publicly offers, sells, or otherwise makes available a payment stablecoin in violation of paragraph (1) as noncompliant. (B)  Deadline. Notification. Designation as noncompliant .\u2014 Not later than 30 days after the Department of the Treasury has identified a foreign payment stablecoin issuer of any payment  139 STAT.",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "enforcement"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "9",
+    "title": "Enforcement Powers",
+    "article": "Title 1",
+    "text": "SEC. 9.  12 USC 5908 . ANTI-MONEY LAUNDERING INNOVATION. (a)  Effective date. Time period. Public Comment .\u2014 Beginning on the date that is 30 days after the date of enactment of this Act, and for a period of 60 days thereafter, the Secretary of the Treasury shall seek public comment to identify innovative or novel methods, techniques, or strategies that regulated financial institutions use, or have the potential to use, to detect illicit activity, such as money laundering, involving digital assets, including comments with respect to\u2014 (1)  application program interfaces; (2)  artificial intelligence; (3)  digital identify verification; and (4)  use of blockchain technology and monitoring. (b)  Treasury Research .\u2014 (1)  In general .",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "10",
+    "title": "Receivership and Orderly Liquidation",
+    "article": "Title 1",
+    "text": "SEC. 10.  12 USC 5909 . CUSTODY OF PAYMENT STABLECOIN RESERVE AND COLLATERAL. (a)  In General .\u2014 A person may only engage in the business of providing custodial or safekeeping services for the payment stablecoin reserve, the payment stablecoins used as collateral, or the private keys used to issue permitted payment stablecoins if the person\u2014 (1)  is subject to\u2014 (A)  supervision or regulation by a primary Federal payment stablecoin regulator or a primary financial regulatory agency described under subparagraph (B) or (C) of section 2(12) of the Dodd-Frank Wall Street Reform and Consumer Protection Act ( 12 U.S.C. 5301(12) ); or (B)  supervision by a State bank supervisor, as defined under section 3 of the Federal Deposit Insurance Act ( 12 U.S.C. 1813 ), or a State credit union supervisor, as defined under section 6003 of the Anti-Money Laundering Act of 2020 ( 31 U.S.C.",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "reserve requirements",
+      "consumer protection"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "11",
+    "title": "Interoperability Standards",
+    "article": "Title 1",
+    "text": "SEC. 11.  TREATMENT OF PAYMENT STABLECOIN ISSUERS IN INSOLVENCY PROCEEDINGS. (a)  Claims. 12 USC 5910 . In General .\u2014 Subject to  section 507(e) of title 11, United States Code , as added by subsection (d), in any insolvency proceeding of a permitted payment stablecoin issuer under Federal or State law, including any proceeding under that title and any insolvency proceeding administered by a State payment stablecoin regulator with respect to a permitted payment stablecoin issuer\u2014 (1)  the claim of a person holding payment stablecoins issued by the permitted payment stablecoin issuer shall have priority, on a ratable basis with the claims of other persons holding such payment stablecoins, over the claims of the permitted payment stablecoin issuer and any other holder of claims against the permitted payment stablecoin issuer, with respect to required payment stablecoin reserves; (2)  notwithstanding any other provision of law, including the definition of \u201cclaim\u201d under  section 101(5) of ...",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "definitions",
+      "reserve requirements"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "12",
+    "title": "Consumer Protection",
+    "article": "Title 1",
+    "text": "SEC. 12.  12 USC 5912 . INTEROPERABILITY STANDARDS. \u2003\u2003The Assessment.  primary Federal payment stablecoin regulators, in consultation with the National Institute of Standards and Technology, other relevant standard-setting organizations, and State bank and credit union regulators, shall assess and, if necessary, may, pursuant to  section 553 of title 5, United States Code , and in a manner consistent with the National Technology Transfer and Advancement Act of 1995 ( Public Law 104\u2013113 ), prescribe standards for permitted payment stablecoin issuers to promote compatibility and interoperability with\u2014 (1)  other permitted payment stablecoin issuers; and (2)  the broader digital finance ecosystem, including accepted communications protocols and blockchains, permissioned or public.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "13",
+    "title": "Exemption from Securities Laws",
+    "article": "Title 1",
+    "text": "SEC. 13.  12 USC 5913 . RULEMAKING. (a)  Deadline. Notice. In General .\u2014 Not later than 1 year after the date of enactment of this Act, each primary Federal payment stablecoin regulator, the Secretary of the Treasury, and each State payment stablecoin regulator shall promulgate regulations to carry out this Act through appropriate notice and comment rulemaking. (b)  Coordination .\u2014 Federal payment stablecoin regulators, the Secretary of the Treasury, and State payment stablecoin regulators should coordinate, as appropriate, on the issuance of any regulations to implement this Act. (c)  Report Required .\u2014 Not later than 180 days after the effective date of this Act, each Federal banking agency shall submit to the Committee on Banking, Housing, and Urban Affairs of the Senate and the Committee on Financial Services of the House  139 STAT. 460 \nof Representatives a report that confirms and describes the regulations promulgated to carry out this Act.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "14",
+    "title": "Rulemaking Authority",
+    "article": "Title 1",
+    "text": "SEC. 14.  STUDY ON NON-PAYMENT STABLECOINS. (a)  Study by Treasury .\u2014 (1)  Study .\u2014 The Secretary of the Treasury, in consultation with the Board, the Comptroller, the Corporation, the Securities and Exchange Commission, and the Commodity Futures Trading Commission shall carry out a study of non-payment stablecoins, including endogenously collateralized payment stablecoins. (2)  Report .",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "securities"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "15",
+    "title": "Studies and Reports",
+    "article": "Title 1",
+    "text": "SEC. 15.  12 USC 5914 . REPORTS. (a)  Annual Reporting Requirement .\u2014 Beginning on the date that is 1 year after the date of enactment of this Act, and annually thereafter, the primary Federal payment stablecoin regulators, in consultation with State payment stablecoin regulators, as necessary, shall submit to the Committee on Banking, Housing, and Urban Affairs of the Senate, the Committee on Financial Services of the House of Representatives, and the Director of the Office of Financial Research a report, which may include a classified annex, if applicable, on the status of the payment stablecoin industry, including\u2014 (1)  a summary of trends in payment stablecoin activities; 139 STAT.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "16",
+    "title": "Relation to State Money Transmission Laws",
+    "article": "Title 1",
+    "text": "SEC. 16.  12 USC 5915 . AUTHORITY OF BANKING INSTITUTIONS. (a)  Rule of Construction .\u2014 Nothing in this Act may be construed to limit the authority of a depository institution, Federal credit union, State credit union, national bank, or trust company to engage in activities permissible pursuant to applicable State and Federal law, including\u2014 (1)  accepting or receiving deposits or shares (in the case of a credit union), and issuing digital assets that represent those deposits or shares; (2)  utilizing a distributed ledger for the books and records of the entity and to effect intrabank transfers; and (3)  providing custodial services for payment stablecoins, private keys of payment stablecoins, or reserves backing payment stablecoins. (b)  Regulatory Review .",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "reserve requirements"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "17",
+    "title": "Treatment of Payment Stablecoins Under Securities Laws",
+    "article": "Title 1",
+    "text": "SEC. 17.  AMENDMENTS TO CLARIFY THAT PAYMENT STABLECOINS ARE NOT SECURITIES OR COMMODITIES AND PERMITTED PAYMENT STABLECOIN ISSUERS ARE NOT INVESTMENT COMPANIES. (a)  Investment Advisers Act of 1940 .\u2014 Section 202(a)(18) of the Investment Advisers Act of 1940 ( 15 U.S.C. 80b\u20132(a)(18) )  is amended  by  adding  at the end the following: \u201c The term \u2018 security \u2019 does not include a payment stablecoin issued by a permitted payment stablecoin issuer, as such terms are defined in section 2 of the GENIUS Act. \u201d. (b)  Investment Company Act of 1940 .\u2014 The Investment Company Act of 1940 ( 15 U.S.C. 80a\u20131 et seq. )  is amended (1)  in section 2(a)(36) of the Act ( 15 U.S.C. 80a\u20132(a)(36) ), by  adding  at the end the following: \u201c The term \u2018 security \u2019 does not include a payment stablecoin issued by a permitted payment stablecoin issuer, as such terms are defined in section 2 of the GENIUS Act. \u201d; and (2)  in section 3(c)(3) of the Act ( 15 U.S.C.",
+    "concepts": [
+      "stablecoin",
+      "federal statute",
+      "securities"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "18",
+    "title": "Sanctions Compliance",
+    "article": "Title 1",
+    "text": "SEC. 18.  Determinations. 12 USC 5916 . EXCEPTION FOR FOREIGN PAYMENT STABLECOIN ISSUERS AND RECIPROCITY FOR PAYMENT STABLECOINS ISSUED IN OVERSEAS JURISDICTIONS. (a)  In General .\u2014 The prohibitions under section 3 shall not apply to a foreign payment stablecoin issuer if all of the following apply: (1)  The foreign payment stablecoin issuer is subject to regulation and supervision by a foreign payment stablecoin regulator of a foreign country, a territory of the United States, Puerto Rico, Guam, American Samoa, or the Virgin Islands that has a regulatory and supervisory regime with respect to payment stablecoins that the Secretary of the Treasury determines, pursuant to subsection (b), is comparable to the regulatory and supervisory regime established under this Act, including, in particular, the requirements under section 4(a). (2)  The foreign payment stablecoin issuer is registered with the Comptroller pursuant to subsection (c).",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "19",
+    "title": "Severability",
+    "article": "Title 1",
+    "text": "SEC. 19.  DISCLOSURE RELATING TO PAYMENT STABLECOINS. \u2003\u2003 Section 13104(a)(3) of title 5, United States Code ,  is amended , in the first sentence, by  striking  \u201c , or any deposits \u201d and  inserting  \u201c , any payment stablecoins issued by a permitted payment stablecoin issuer aggregating $5,000 or less held, or any deposits \u201d.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  },
+  {
+    "number": "20",
+    "title": "Effective Date",
+    "article": "Title 1",
+    "text": "SEC. 20.  12 USC 5901 note . EFFECTIVE DATE. \u2003\u2003This Act, and the amendments made by this Act, shall take effect on the earlier of (1)  the date that is 18 months after the date of enactment of this Act; or (2)  the date that is 120 days after the date on which the primary Federal payment stablecoin regulators issue any final regulations implementing this Act.",
+    "concepts": [
+      "stablecoin",
+      "federal statute"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      7,
+      10
+    ]
+  }
+]

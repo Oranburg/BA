@@ -1,0 +1,99 @@
+[
+  {
+    "number": "501(c)(3)",
+    "title": "Charitable and Related Exemption",
+    "article": "Title 26",
+    "text": "Corporations, and any community chest, fund, or foundation, organized and operated exclusively for religious, charitable, scientific, testing for public safety, literary, or educational purposes, or to foster national or international amateur sports competition, or for the prevention of cruelty to children or animals, no part of the net earnings of which inures to the benefit of any private shareholder or individual, no substantial part of the activities of which is carrying on propaganda, or otherwise attempting to influence legislation, and which does not participate in or intervene in any political campaign on behalf of or in opposition to any candidate for public office.",
+    "concepts": [
+      "nonprofit",
+      "tax exemption",
+      "charitable purpose"
+    ],
+    "crossRefs": [
+      {
+        "target": "MNCA \u00a7 13.01"
+      }
+    ],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "501(c)(4)",
+    "title": "Social Welfare Organizations",
+    "article": "Title 26",
+    "text": "Civic leagues or organizations not organized for profit but operated exclusively for the promotion of social welfare, or local associations of employees, the membership of which is limited to the employees of a designated person or persons in a particular municipality, and the net earnings of which are devoted exclusively to charitable, educational, or recreational purposes.",
+    "concepts": [
+      "social welfare",
+      "tax exemption"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "501(c)(6)",
+    "title": "Business Leagues",
+    "article": "Title 26",
+    "text": "Business leagues, chambers of commerce, real-estate boards, boards of trade, or professional football leagues, not organized for profit and no part of the net earnings of which inures to the benefit of any private shareholder or individual.",
+    "concepts": [
+      "business leagues",
+      "tax exemption"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "170",
+    "title": "Charitable Contributions Deduction",
+    "article": "Title 26",
+    "text": "There shall be allowed as a deduction any charitable contribution made within the taxable year. A charitable contribution means a contribution or gift to or for the use of a corporation, trust, or community chest, fund, or foundation organized and operated exclusively for religious, charitable, scientific, literary, or educational purposes.",
+    "concepts": [
+      "tax deduction",
+      "charitable contributions"
+    ],
+    "crossRefs": [
+      {
+        "target": "IRC \u00a7 501(c)(3)"
+      }
+    ],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "401",
+    "title": "Qualified Pension, Profit-Sharing, and Stock Bonus Plans",
+    "article": "Title 26",
+    "text": "A trust created or organized in the United States and forming part of a stock bonus, pension, or profit-sharing plan of an employer for the exclusive benefit of his employees or their beneficiaries shall constitute a qualified trust if the requirements of this section are met.",
+    "concepts": [
+      "retirement",
+      "tax",
+      "ERISA"
+    ],
+    "crossRefs": [],
+    "chapterUse": []
+  },
+  {
+    "number": "4958",
+    "title": "Taxes on Excess Benefit Transactions",
+    "article": "Title 26",
+    "text": "If an excess benefit transaction occurs between a disqualified person and an applicable tax-exempt organization, a tax equal to 25 percent of the excess benefit shall be imposed on each excess benefit transaction. An additional tax of 200 percent may be imposed if the transaction is not corrected within the taxable period.",
+    "concepts": [
+      "excess benefit",
+      "nonprofit",
+      "intermediate sanctions"
+    ],
+    "crossRefs": [
+      {
+        "target": "IRC \u00a7 501(c)(3)"
+      }
+    ],
+    "chapterUse": [
+      6
+    ]
+  }
+]

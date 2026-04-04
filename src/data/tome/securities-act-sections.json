@@ -1,0 +1,114 @@
+[
+  {
+    "number": "2",
+    "title": "Definitions",
+    "article": "15 U.S.C. \u00a7 77b",
+    "text": "When used in this title, unless the context otherwise requires: (1) The term 'security' means any note, stock, treasury stock, security future, security-based swap, bond, debenture, evidence of indebtedness, certificate of interest or participation in any profit-sharing agreement, collateral-trust certificate, preorganization certificate or subscription, transferable share, investment contract, voting-trust certificate, certificate of deposit for a security, fractional undivided interest in oil, gas, or other mineral rights, any put, call, straddle, option, or privilege on any security, or, in general, any interest or instrument commonly known as a 'security'.",
+    "concepts": [
+      "definition of security",
+      "investment contract"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      10,
+      11
+    ]
+  },
+  {
+    "number": "3",
+    "title": "Exempted Securities",
+    "article": "15 U.S.C. \u00a7 77c",
+    "text": "Except as hereinafter expressly provided, the provisions of this title shall not apply to any of the following classes of securities: (a)(2) Any security issued or guaranteed by the United States or any political subdivision; (a)(4) Any security issued by a person organized and operated exclusively for religious, educational, benevolent, fraternal, charitable, or reformatory purposes; (a)(11) Any security which is a part of an issue offered and sold only to persons resident within a single State.",
+    "concepts": [
+      "exemptions",
+      "intrastate offering"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      10,
+      11
+    ]
+  },
+  {
+    "number": "4",
+    "title": "Exempted Transactions",
+    "article": "15 U.S.C. \u00a7 77d",
+    "text": "The provisions of section 5 shall not apply to: (a)(1) transactions by any person other than an issuer, underwriter, or dealer; (a)(2) transactions by an issuer not involving any public offering (private placement exemption); (a)(5) transactions involving offers or sales by an issuer solely to accredited investors, where the aggregate offering price does not exceed the specified amount.",
+    "concepts": [
+      "exemptions",
+      "private placement",
+      "accredited investors"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      10,
+      11
+    ]
+  },
+  {
+    "number": "5",
+    "title": "Prohibitions Relating to Interstate Commerce and the Mails",
+    "article": "15 U.S.C. \u00a7 77e",
+    "text": "Unless a registration statement is in effect as to a security, it shall be unlawful for any person, directly or indirectly, to make use of any means or instruments of transportation or communication in interstate commerce or of the mails to sell such security through the use of any prospectus or otherwise; or to carry through the mails or in interstate commerce any such security for the purpose of sale or delivery after sale.",
+    "concepts": [
+      "registration requirement",
+      "section 5",
+      "prohibition"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      10,
+      11
+    ]
+  },
+  {
+    "number": "11",
+    "title": "Civil Liabilities on Account of False Registration Statement",
+    "article": "15 U.S.C. \u00a7 77k",
+    "text": "In case any part of the registration statement, when such part became effective, contained an untrue statement of a material fact or omitted to state a material fact required to be stated therein or necessary to make the statements therein not misleading, any person acquiring such security may sue every person who signed the registration statement, every director or partner, every accountant or appraiser who prepared or certified the statement, and every underwriter.",
+    "concepts": [
+      "registration liability",
+      "material misstatement",
+      "section 11",
+      "ipo"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "12",
+    "title": "Civil Liabilities Arising in Connection with Prospectuses and Communications",
+    "article": "15 U.S.C. \u00a7 77l",
+    "text": "Any person who offers or sells a security in violation of section 5, or offers or sells a security by means of a prospectus or oral communication which includes an untrue statement of a material fact or omits to state a material fact, shall be liable to the person purchasing such security from the person.",
+    "concepts": [
+      "prospectus liability",
+      "section 12"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "17",
+    "title": "Fraudulent Interstate Transactions",
+    "article": "15 U.S.C. \u00a7 77q",
+    "text": "It shall be unlawful for any person in the offer or sale of any securities by the use of any means or instruments of transportation or communication in interstate commerce or by use of the mails, directly or indirectly: (1) to employ any device, scheme, or artifice to defraud, or (2) to obtain money or property by means of any untrue statement of a material fact or any omission to state a material fact, or (3) to engage in any transaction, practice, or course of business which operates as a fraud or deceit upon the purchaser.",
+    "concepts": [
+      "fraud",
+      "antifraud",
+      "section 17"
+    ],
+    "crossRefs": [
+      {
+        "target": "Exchange Act \u00a7 10(b)"
+      }
+    ],
+    "chapterUse": [
+      10,
+      11
+    ]
+  }
+]

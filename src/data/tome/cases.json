@@ -1,0 +1,270 @@
+[
+  {
+    "caseName": "Weinberger v. UOP, Inc.",
+    "citation": "457 A.2d 701 (Del. 1983)",
+    "court": "Supreme Court of Delaware",
+    "year": 1983,
+    "rule": "Entire fairness requires both fair dealing and fair price in conflicted transactions.",
+    "holding": "When a controlling stockholder stands on both sides of a merger, the transaction must satisfy entire fairness review, which has two components: fair dealing (process, timing, structure, disclosure) and fair price. The court liberalized the appraisal remedy under 8 Del. C. \u00a7 262 and eliminated the business purpose requirement for freeze-out mergers.",
+    "keyFacts": [
+      "Signal Companies owned 50.5% of UOP and proposed a cash-out merger at $21 per share",
+      "Signal's internal study showed a price up to $24 per share would be a good investment, but this was never disclosed to UOP's minority shareholders",
+      "Lehman Brothers' fairness opinion was prepared in less than three business days",
+      "UOP's board included Signal directors who had conflicting loyalties"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141(a)",
+      "DGCL \u00a7 262"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc.",
+    "citation": "506 A.2d 173 (Del. 1986)",
+    "court": "Supreme Court of Delaware",
+    "year": 1986,
+    "rule": "When a sale or breakup of the company becomes inevitable, the board's duty shifts to maximizing shareholder value.",
+    "holding": "Once it became clear that Revlon would be sold or broken up, the directors' role changed from defenders of the corporate bastion to auctioneers charged with getting the best price for stockholders. Lock-up agreements, no-shop provisions, and cancellation fees that end an active auction process breach the board's Revlon duties.",
+    "keyFacts": [
+      "Pantry Pride made escalating hostile bids for Revlon, from $47.50 to $58 per share",
+      "Revlon's board favored Forstmann Little and granted it a lock-up option on key assets at below-market value",
+      "Board agreed to no-shop provision and $25 million cancellation fee favoring Forstmann",
+      "Board's motivation shifted from shareholder value maximization to protecting noteholders"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141",
+      "DGCL \u00a7 102(b)(7)"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Unocal Corp. v. Mesa Petroleum Co.",
+    "citation": "493 A.2d 946 (Del. 1985)",
+    "court": "Supreme Court of Delaware",
+    "year": 1985,
+    "rule": "Defensive measures must be reasonable in relation to the threat posed by a hostile takeover bid.",
+    "holding": "A board facing a hostile takeover may adopt defensive measures if it demonstrates: (1) reasonable grounds for believing a danger to corporate policy and effectiveness existed (satisfied by good faith and reasonable investigation), and (2) the defensive response was reasonable in relation to the threat posed. This 'enhanced scrutiny' standard is intermediate between the business judgment rule and entire fairness.",
+    "keyFacts": [
+      "Mesa Petroleum launched a coercive two-tier tender offer at $54 per share front-end with junk bonds at the back-end",
+      "Unocal's board authorized a selective self-tender at $72 per share excluding Mesa",
+      "Board consisted of majority independent directors who met for 9.5 hours",
+      "Goldman Sachs and Dillon Read opined the Mesa offer was grossly inadequate"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141(a)",
+      "DGCL \u00a7 160"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Corwin v. KKR Financial Holdings LLC",
+    "citation": "125 A.3d 304 (Del. 2015)",
+    "court": "Supreme Court of Delaware",
+    "year": 2015,
+    "rule": "A fully informed, uncoerced vote of disinterested stockholders invokes business judgment review.",
+    "holding": "When a merger that is not subject to entire fairness review is approved by a fully informed, uncoerced majority of the disinterested stockholders, the business judgment rule is the appropriate standard of review. This applies even if the transaction would otherwise be subject to enhanced scrutiny under Revlon or Unocal. The doctrine respects the voluntary judgment of disinterested stockholders to determine a transaction's merits for themselves.",
+    "keyFacts": [
+      "KKR acquired KKR Financial Holdings in a stock-for-stock merger at a 35% premium",
+      "KKR owned less than 1% of Financial Holdings' stock and was not a controlling stockholder",
+      "The merger was approved by a fully informed, uncoerced vote of disinterested stockholders",
+      "Financial Holdings had an exculpatory charter provision under DGCL \u00a7 102(b)(7)"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 102(b)(7)",
+      "DGCL \u00a7 251"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Lyondell Chemical Co. v. Ryan",
+    "citation": "970 A.2d 235 (Del. 2009)",
+    "court": "Supreme Court of Delaware",
+    "year": 2009,
+    "rule": "Directors are not required to engage in a specific sale process to satisfy Revlon; only a knowing dereliction of duty constitutes bad faith.",
+    "holding": "There are no specific steps that directors must follow to satisfy their Revlon duties. A board is not required to conduct an auction or solicit competing bids. Bad faith requires a showing that directors knowingly and completely failed to undertake their responsibilities \u2014 not merely that the process was imperfect. Where directors are protected by an exculpation clause, only a breach of the duty of loyalty (including bad faith) can support liability.",
+    "keyFacts": [
+      "Basell offered $48 per share for Lyondell in an all-cash deal with no financing contingency",
+      "The merger was negotiated over approximately one week with limited market check",
+      "Deutsche Bank described the merger price as 'an absolute home run'",
+      "Over 99% of voted shares approved the merger"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 102(b)(7)",
+      "DGCL \u00a7 141(a)"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Air Products & Chemicals, Inc. v. Airgas, Inc.",
+    "citation": "16 A.3d 48 (Del. Ch. 2011)",
+    "court": "Court of Chancery of Delaware",
+    "year": 2011,
+    "rule": "A board acting in good faith may maintain a poison pill to block a premium, all-cash tender offer it reasonably believes is inadequate.",
+    "holding": "Under Unocal, a board may maintain a poison pill indefinitely if it demonstrates reasonable grounds for believing the offer threatens corporate policy and the defensive measure is proportionate. The threat that stockholders may tender into an inadequate offer is a legally cognizable threat. A pill is not preclusive if the bidder can run another proxy contest. The power to manage the corporation resides with the board, not the stockholders, and the stockholder remedy is to replace the board.",
+    "keyFacts": [
+      "Air Products offered $70 per share for Airgas, which the board believed was worth at least $78",
+      "Air Products successfully elected three nominees to the Airgas board via proxy contest",
+      "Even the newly elected Air Products nominees concluded the offer was inadequate after reviewing Airgas's financials",
+      "Airgas had a classified board and a poison pill with a 15% trigger"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141(a)"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Dell, Inc. v. Magnetar Global Event Driven Master Fund Ltd",
+    "citation": "177 A.3d 1 (Del. 2017)",
+    "court": "Supreme Court of Delaware",
+    "year": 2017,
+    "rule": "In a statutory appraisal, the deal price resulting from a fair process is strong evidence of fair value.",
+    "holding": "When the market for a company's stock is efficient and the sale process is thorough, the deal price deserves significant weight in determining fair value under 8 Del. C. \u00a7 262. The Court of Chancery erred by exclusively relying on its own DCF analysis while giving no weight to market data and deal price. Where a management buyout was subjected to rigorous oversight by an independent special committee with authority to say no, the deal price is a reliable indicator of fair value.",
+    "keyFacts": [
+      "Michael Dell and Silver Lake proposed taking Dell private at $13.75 per share",
+      "The deal represented a 37% premium to the 90-day average unaffected stock price",
+      "An independent special committee with full authority oversaw a robust pre- and post-signing market check",
+      "The Court of Chancery had valued shares at $17.62 using a DCF analysis"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 262"
+    ],
+    "chaptersUsed": [
+      13,
+      15
+    ]
+  },
+  {
+    "caseName": "In re Match Group, Inc. Derivative Litigation",
+    "citation": "315 A.3d 446 (Del. 2024)",
+    "court": "Supreme Court of Delaware",
+    "year": 2024,
+    "rule": "In a controlling stockholder transaction, both a special committee and a majority-of-the-minority vote are required to obtain business judgment review under MFW.",
+    "holding": "In a suit claiming a controlling stockholder stood on both sides of a transaction and received a non-ratable benefit, entire fairness is the presumptive standard of review. Use of just one procedural device (special committee or unaffiliated stockholder vote) shifts the burden of proof but does not change the standard of review. To obtain business judgment review, the controlling stockholder must satisfy all MFW requirements, and all special committee members must be independent of the controlling stockholder.",
+    "keyFacts": [
+      "IAC/InterActiveCorp controlled Old Match with 98.2% voting power through dual-class stock",
+      "A reverse spinoff separated IAC from Match Group",
+      "The Separation Committee member McInerney was alleged to lack independence from IAC",
+      "Transaction was conditioned on both committee recommendation and majority-of-minority vote"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141(a)"
+    ],
+    "chaptersUsed": [
+      13
+    ]
+  },
+  {
+    "caseName": "Meinhard v. Salmon",
+    "citation": "164 N.E. 545 (N.Y. 1928)",
+    "court": "New York Court of Appeals",
+    "year": 1928,
+    "rule": "Joint venturers owe punctilio-level loyalty in opportunity allocation.",
+    "holding": "A joint venturer managing partnership property owes the highest duty of loyalty to co-venturers when a new business opportunity arises from the venture. The duty of loyalty requires disclosure and sharing of opportunities connected to the partnership's subject matter. Cardozo described fiduciary duty as demanding 'the punctilio of an honor the most sensitive.'",
+    "keyFacts": [
+      "Salmon was managing co-venturer of a lease on a hotel property",
+      "The property owner offered Salmon a new, expanded lease without Meinhard's knowledge",
+      "Salmon accepted the new lease for himself through a new entity",
+      "Meinhard was not informed and lost the opportunity"
+    ],
+    "statutesApplied": [
+      "RUPA \u00a7 404"
+    ],
+    "chaptersUsed": [
+      9
+    ]
+  },
+  {
+    "caseName": "Smith v. Van Gorkom",
+    "citation": "488 A.2d 858 (Del. 1985)",
+    "court": "Supreme Court of Delaware",
+    "year": 1985,
+    "rule": "Board process failures in approving a merger can rebut the business judgment presumption and trigger liability for breach of duty of care.",
+    "holding": "Directors who approve a merger without adequate information and deliberation may be found grossly negligent. The business judgment rule does not protect uninformed decisions. Directors cannot rely solely on the CEO's oral presentation and must inform themselves of all material information reasonably available before making a business decision.",
+    "keyFacts": [
+      "Trans Union's CEO Van Gorkom arranged a leveraged buyout at $55 per share with no prior board discussion",
+      "The board approved the merger in a two-hour meeting without seeing the merger agreement",
+      "No investment banker was retained to opine on fairness of the price",
+      "The decision led to widespread adoption of DGCL \u00a7 102(b)(7) exculpation provisions"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141(a)",
+      "MBCA \u00a7 8.30"
+    ],
+    "chaptersUsed": [
+      9,
+      13
+    ]
+  },
+  {
+    "caseName": "North American Catholic Educational Programming Foundation v. Gheewalla",
+    "citation": "930 A.2d 92 (Del. 2007)",
+    "court": "Supreme Court of Delaware",
+    "year": 2007,
+    "rule": "In insolvency, creditors may sue derivatively but cannot assert direct fiduciary-duty claims against directors.",
+    "holding": "When a corporation is insolvent, creditors gain standing to pursue derivative fiduciary-duty claims on behalf of the corporation, but creditors do not have direct fiduciary-duty claims against directors. Directors' fiduciary duties remain owed to the corporation and its stockholders, not to creditors directly.",
+    "keyFacts": [
+      "Creditors of an insolvent company sought to bring direct fiduciary duty claims against directors",
+      "The Delaware Supreme Court held that fiduciary duties run to the corporation, not to creditors directly",
+      "Creditors may bring derivative claims when the corporation is insolvent",
+      "The decision clarified the zone of insolvency doctrine"
+    ],
+    "statutesApplied": [
+      "DGCL \u00a7 141(a)"
+    ],
+    "chaptersUsed": [
+      15
+    ]
+  },
+  {
+    "caseName": "National Biscuit Co. v. Stroud",
+    "citation": "106 S.E.2d 692 (N.C. 1959)",
+    "court": "Supreme Court of North Carolina",
+    "year": 1959,
+    "rule": "Individual partners generally may bind the partnership in ordinary course despite internal disagreement.",
+    "holding": "Under the Uniform Partnership Act, every partner is an agent of the partnership for partnership business. When a partner acts within the scope of partnership business, the partnership is bound even if another partner has internally objected to such actions. A majority of partners cannot restrict the statutory agency authority of individual partners as to third parties without notice.",
+    "keyFacts": [
+      "Freeman and Stroud were equal partners in a grocery business",
+      "Stroud informed National Biscuit that he would not be responsible for bread orders",
+      "Freeman continued ordering bread in the ordinary course of business",
+      "The court held the partnership liable for Freeman's orders"
+    ],
+    "statutesApplied": [
+      "RUPA \u00a7 301"
+    ],
+    "chaptersUsed": [
+      3
+    ]
+  },
+  {
+    "caseName": "Summers v. Dooley",
+    "citation": "481 P.2d 318 (Idaho 1971)",
+    "court": "Supreme Court of Idaho",
+    "year": 1971,
+    "rule": "Majority rule in ordinary partnership decisions can constrain unilateral partner actions.",
+    "holding": "In a two-person partnership, one partner's objection to hiring an additional employee constitutes a majority vote against the action. A partner who unilaterally hires an employee over the objection of the other partner cannot compel the partnership to bear the cost.",
+    "keyFacts": [
+      "Summers and Dooley operated a trash collection business as equal partners",
+      "Summers hired an additional employee over Dooley's express objection",
+      "Summers sought reimbursement from the partnership for the employee's wages",
+      "The court held that Dooley's objection constituted a majority against the hiring"
+    ],
+    "statutesApplied": [
+      "RUPA \u00a7 401"
+    ],
+    "chaptersUsed": [
+      3
+    ]
+  }
+]

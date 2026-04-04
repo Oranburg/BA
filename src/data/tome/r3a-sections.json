@@ -1,0 +1,225 @@
+[
+  {
+    "number": "1.01",
+    "title": "Agency Defined",
+    "article": "Chapter 1",
+    "text": "Agency is the fiduciary relationship that arises when one person (a 'principal') manifests assent to another person (an 'agent') that the agent shall act on the principal's behalf and subject to the principal's control, and the agent manifests assent or otherwise consents so to act.",
+    "concepts": [
+      "agency",
+      "control",
+      "fiduciary relationship"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "1.02",
+    "title": "Parties' Labeling and Popular Usage Not Controlling",
+    "article": "Chapter 1",
+    "text": "An agency relationship arises only when the elements stated in \u00a7 1.01 are present. Whether a relationship is characterized as agency in an agreement between parties or in the context of industry or popular usage is not controlling.",
+    "concepts": [
+      "agency"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "1.03",
+    "title": "Manifestation",
+    "article": "Chapter 1",
+    "text": "A person manifests assent or intention through written or spoken words or other conduct.",
+    "concepts": [
+      "manifestation"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "1.04",
+    "title": "Terminology",
+    "article": "Chapter 1",
+    "text": "Terminology definitions for co-agents, dual agents, employees, employers, gratuitous agents, disclosed/undisclosed/unidentified principals, notice, person, power given as security, subagent, superior and subordinate co-agents, and trustee.",
+    "concepts": [
+      "definitions",
+      "agency"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "2.01",
+    "title": "Actual Authority",
+    "article": "Chapter 2",
+    "text": "An agent acts with actual authority when, at the time of taking action that has legal consequences for the principal, the agent reasonably believes, in accordance with the principal's manifestations to the agent, that the principal wishes the agent so to act.",
+    "concepts": [
+      "actual authority"
+    ],
+    "crossRefs": [
+      {
+        "target": "RUPA \u00a7 301"
+      }
+    ],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "2.02",
+    "title": "Scope of Actual Authority",
+    "article": "Chapter 2",
+    "text": "An agent has actual authority to take action designated or implied in the principal's manifestations to the agent and acts necessary or incidental to achieving the principal's objectives, as the agent reasonably understands the principal's manifestations and objectives when the agent determines how to act.",
+    "concepts": [
+      "actual authority",
+      "scope"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "2.03",
+    "title": "Apparent Authority",
+    "article": "Chapter 2",
+    "text": "Apparent authority is the power held by an agent or other actor to affect a principal's legal relations with third parties when a third party reasonably believes the actor has authority to act on behalf of the principal and that belief is traceable to the principal's manifestations.",
+    "concepts": [
+      "apparent authority"
+    ],
+    "crossRefs": [
+      {
+        "target": "RUPA \u00a7 301"
+      },
+      {
+        "target": "ULLCA \u00a7 301"
+      }
+    ],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "2.04",
+    "title": "Respondeat Superior",
+    "article": "Chapter 2",
+    "text": "An employer is subject to liability for torts committed by employees while acting within the scope of their employment.",
+    "concepts": [
+      "vicarious liability",
+      "respondeat superior"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "3.01",
+    "title": "Creation of Actual Authority",
+    "article": "Chapter 3",
+    "text": "Actual authority is created by a principal's manifestation to an agent that, as reasonably understood by the agent, expresses the principal's assent that the agent take action on the principal's behalf.",
+    "concepts": [
+      "actual authority",
+      "creation"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "3.03",
+    "title": "Creation of Apparent Authority",
+    "article": "Chapter 3",
+    "text": "Apparent authority is created by a person's manifestation that such person consents to have another act on the person's behalf, as reasonably perceived by a third party.",
+    "concepts": [
+      "apparent authority",
+      "creation"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "4.01",
+    "title": "Ratification Defined",
+    "article": "Chapter 4",
+    "text": "Ratification is the affirmance of a prior act done by another, whereby the act is given effect as if done by an agent acting with actual authority.",
+    "concepts": [
+      "ratification"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "6.01",
+    "title": "Agent's Duty to Principal",
+    "article": "Chapter 6",
+    "text": "An agent has a fiduciary duty to act loyally for the principal's benefit in all matters connected with the agency relationship.",
+    "concepts": [
+      "fiduciary duty",
+      "loyalty"
+    ],
+    "crossRefs": [
+      {
+        "target": "RUPA \u00a7 409"
+      }
+    ],
+    "chapterUse": [
+      2,
+      9
+    ]
+  },
+  {
+    "number": "7.03",
+    "title": "Principal's Liability \u2014 Unidentified and Undisclosed Principals",
+    "article": "Chapter 7",
+    "text": "A disclosed or unidentified principal is subject to liability for an agent's act if the agent acted with actual or apparent authority. An undisclosed principal is subject to liability if the agent acted with actual authority.",
+    "concepts": [
+      "principal liability",
+      "undisclosed principal"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "7.07",
+    "title": "Employee Acting Within Scope of Employment",
+    "article": "Chapter 7",
+    "text": "An employer is subject to vicarious liability for a tort committed by its employee acting within the scope of employment. An employee acts within the scope of employment when performing work assigned by the employer or engaging in a course of conduct subject to the employer's control. An employee's act is not within the scope of employment when it occurs within an independent course of conduct not intended by the employee to serve any purpose of the employer.",
+    "concepts": [
+      "vicarious liability",
+      "respondeat superior",
+      "scope of employment"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2,
+      7
+    ]
+  },
+  {
+    "number": "8.01",
+    "title": "General Duty of Agent",
+    "article": "Chapter 8",
+    "text": "An agent is subject to a duty to the principal to act within the scope of the agent's actual authority and in compliance with the agent's duties.",
+    "concepts": [
+      "agent duties"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      2
+    ]
+  }
+]

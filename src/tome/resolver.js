@@ -1,4 +1,4 @@
-import { CHAPTER_ROUTES, DOCUMENTS, DOCUMENT_BY_SLUG, getTomePath } from "./corpus";
+import { CHAPTER_ROUTES, DOCUMENTS, DOCUMENT_BY_SLUG, getTomePath, loadSections, loadAllSections } from "./corpus";
 import { APP_ROUTES, HASH_TARGETS } from "../routing/routes";
 import { resolveCitation } from "./citationRegistry";
 
@@ -24,7 +24,11 @@ export const ALIAS_INDEX = (() => {
   return index;
 })();
 
-export const SECTION_INDEX = (() => {
+/**
+ * Build SECTION_INDEX from currently loaded sections.
+ * Called each time sections are loaded for a document.
+ */
+function buildSectionIndex() {
   const rows = [];
   DOCUMENTS.forEach((doc) => {
     (doc.sections || []).forEach((section, idx) => {
@@ -39,7 +43,32 @@ export const SECTION_INDEX = (() => {
     });
   });
   return rows;
-})();
+}
+
+/** Mutable section index -- rebuilds when sections are loaded. */
+let SECTION_INDEX = buildSectionIndex();
+
+/** Rebuild the section index after new sections are loaded. */
+export function rebuildIndex() {
+  SECTION_INDEX = buildSectionIndex();
+}
+
+/** Load all sections and rebuild index (for full-text search). */
+export async function loadAllAndRebuild() {
+  await loadAllSections();
+  rebuildIndex();
+}
+
+/** Load sections for a specific document and rebuild the index. */
+export async function loadDocSections(doc) {
+  await loadSections(doc);
+  rebuildIndex();
+  return doc;
+}
+
+export function getSectionIndex() {
+  return SECTION_INDEX;
+}
 
 export function getDocBySlug(slug) {
   return DOCUMENT_BY_SLUG[slug] || null;

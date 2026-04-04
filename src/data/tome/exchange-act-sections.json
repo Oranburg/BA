@@ -1,0 +1,110 @@
+[
+  {
+    "number": "10(b)",
+    "title": "Manipulative and Deceptive Devices",
+    "article": "15 U.S.C. \u00a7 78j(b)",
+    "text": "It shall be unlawful for any person, directly or indirectly, by the use of any means or instrumentality of interstate commerce or of the mails, or of any facility of any national securities exchange, to use or employ, in connection with the purchase or sale of any security registered on a national securities exchange or any security not so registered, any manipulative or deceptive device or contrivance in contravention of such rules and regulations as the Commission may prescribe.",
+    "concepts": [
+      "securities fraud",
+      "10b-5",
+      "disclosure",
+      "antifraud"
+    ],
+    "crossRefs": [
+      {
+        "target": "Securities Act \u00a7 17"
+      }
+    ],
+    "chapterUse": [
+      11,
+      12
+    ]
+  },
+  {
+    "number": "12",
+    "title": "Registration Requirements for Securities",
+    "article": "15 U.S.C. \u00a7 78l",
+    "text": "It shall be unlawful for any member, broker, or dealer to effect any transaction in any security on a national securities exchange unless a registration is effective as to such security. An issuer must register a class of equity securities if assets exceed a specified amount and the class is held by a specified number of persons.",
+    "concepts": [
+      "registration",
+      "reporting requirements"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "13",
+    "title": "Periodical and Other Reports",
+    "article": "15 U.S.C. \u00a7 78m",
+    "text": "Every issuer of a security registered under section 12 shall file with the Commission such annual, quarterly, and current reports and other documents as the Commission may require. Reports must be certified by independent public accountants.",
+    "concepts": [
+      "reporting",
+      "10-K",
+      "10-Q",
+      "disclosure"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "14",
+    "title": "Proxies",
+    "article": "15 U.S.C. \u00a7 78n",
+    "text": "It shall be unlawful for any person to solicit any proxy, consent, or authorization in respect of any security registered under section 12 in contravention of rules and regulations prescribed by the Commission. No proxy shall be solicited unless each person solicited is furnished with a written proxy statement.",
+    "concepts": [
+      "proxy",
+      "shareholder franchise",
+      "disclosure"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      12
+    ]
+  },
+  {
+    "number": "14(a)",
+    "title": "Proxy Solicitation",
+    "article": "15 U.S.C. \u00a7 78n(a)",
+    "text": "It shall be unlawful for any person, by the use of the mails or by any means or instrumentality of interstate commerce or of any facility of a national securities exchange or otherwise, in contravention of such rules and regulations as the Commission may prescribe, to solicit or to permit the use of his name to solicit any proxy or consent or authorization in respect of any security.",
+    "concepts": [
+      "proxy solicitation",
+      "shareholder franchise"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      12
+    ]
+  },
+  {
+    "number": "16(b)",
+    "title": "Short-Swing Profits",
+    "article": "15 U.S.C. \u00a7 78p(b)",
+    "text": "For the purpose of preventing the unfair use of information obtained by reason of insider status, any profit realized by a beneficial owner, director, or officer from any purchase and sale, or any sale and purchase, of any equity security within any period of less than six months shall inure to and be recoverable by the issuer.",
+    "concepts": [
+      "insider trading",
+      "short-swing profits"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "21",
+    "title": "Investigations and Actions",
+    "article": "15 U.S.C. \u00a7 78u",
+    "text": "The Commission may investigate violations of this title and the rules thereunder. The Commission may bring an action in federal district court to enjoin violations and seek civil penalties.",
+    "concepts": [
+      "enforcement",
+      "SEC"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  }
+]

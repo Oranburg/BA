@@ -1,0 +1,106 @@
+[
+  {
+    "number": "2.01",
+    "title": "Incorporation",
+    "article": "Chapter 2",
+    "text": "One or more persons may act as the incorporator or incorporators of a corporation by delivering articles of incorporation to the secretary of state for filing.",
+    "concepts": [
+      "incorporation",
+      "nonprofit"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "3.01",
+    "title": "Purposes and Applicability",
+    "article": "Chapter 3",
+    "text": "Every corporation incorporated under this Act has the purpose of engaging in any lawful activity unless a more limited purpose is set forth in the articles of incorporation.",
+    "concepts": [
+      "purposes",
+      "nonprofit"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "8.30",
+    "title": "Standards of Conduct for Directors",
+    "article": "Chapter 8",
+    "text": "Each member of the board of directors, when discharging the duties of a director, shall act in good faith, and in a manner the director reasonably believes to be in the best interests of the nonprofit corporation.",
+    "concepts": [
+      "fiduciary duty",
+      "nonprofit",
+      "directors"
+    ],
+    "crossRefs": [
+      {
+        "target": "MBCA \u00a7 8.30"
+      }
+    ],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "13.01",
+    "title": "Distributions Prohibited",
+    "article": "Chapter 13",
+    "text": "Except as authorized by section 13.02, a nonprofit corporation shall not make distributions. A nonprofit corporation may pay reasonable compensation or other reasonable payments to members, directors, or officers for services rendered.",
+    "concepts": [
+      "nondistribution",
+      "nonprofit"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "13.02",
+    "title": "Authorized Distributions",
+    "article": "Chapter 13",
+    "text": "A nonprofit corporation that does not hold assets for a charitable purpose may make distributions to its members upon dissolution, provided the articles of incorporation authorize such distributions.",
+    "concepts": [
+      "distributions",
+      "nonprofit"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "14.02",
+    "title": "Dissolution by Directors and Members",
+    "article": "Chapter 14",
+    "text": "The board of directors may propose dissolution for submission to the members. The corporation is dissolved when dissolution is approved by the members as required.",
+    "concepts": [
+      "dissolution",
+      "nonprofit"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  },
+  {
+    "number": "14.09",
+    "title": "Disposition of Assets",
+    "article": "Chapter 14",
+    "text": "On dissolution of a nonprofit corporation that holds assets for a charitable purpose, the assets must be transferred or conveyed to one or more domestic or foreign nonprofit corporations, societies, or organizations engaged in activities substantially similar to those of the dissolving corporation.",
+    "concepts": [
+      "dissolution",
+      "nonprofit",
+      "charitable purpose"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      6
+    ]
+  }
+]

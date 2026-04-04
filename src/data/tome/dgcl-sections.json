@@ -1,0 +1,227 @@
+[
+  {
+    "number": "101",
+    "title": "Incorporators; How Corporation Formed; Purposes",
+    "article": "Subchapter 1",
+    "text": "Any person, partnership, association or corporation, singly or jointly with others, and without regard to such person's or entity's residence, domicile or state of incorporation, may incorporate or organize a corporation under this chapter by filing with the Division of Corporations in the Department of State a certificate of incorporation. A corporation may be incorporated or organized under this chapter to conduct or promote any lawful business or purposes.",
+    "concepts": [
+      "incorporation",
+      "formation"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      4
+    ]
+  },
+  {
+    "number": "102",
+    "title": "Contents of Certificate of Incorporation",
+    "article": "Subchapter 1",
+    "text": "The certificate of incorporation shall set forth: (1) The name of the corporation; (2) The address of the corporation's registered office and registered agent; (3) The nature of the business or purposes to be conducted; (4) The total number and classes of stock authorized; (5) The name and mailing address of the incorporator(s); (6) The names of persons to serve as initial directors.",
+    "concepts": [
+      "certificate of incorporation",
+      "formation"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      4,
+      11
+    ]
+  },
+  {
+    "number": "102(b)(7)",
+    "title": "Exculpation Provision",
+    "article": "Subchapter 1",
+    "text": "A provision eliminating or limiting the personal liability of a director or officer to the corporation or its stockholders for monetary damages for breach of fiduciary duty as a director or officer, provided that such provision shall not eliminate or limit the liability of: (i) A director or officer for any breach of the director's or officer's duty of loyalty to the corporation or its stockholders; (ii) A director or officer for acts or omissions not in good faith or which involve intentional misconduct or a knowing violation of law; (iii) A director under \u00a7 174 of this title; (iv) A director or officer for any transaction from which the director or officer derived an improper personal benefit; or (v) An officer in any action by or in the right of the corporation.",
+    "concepts": [
+      "exculpation",
+      "fiduciary duty",
+      "liability"
+    ],
+    "crossRefs": [
+      {
+        "target": "MBCA \u00a7 8.30"
+      },
+      {
+        "target": "RUPA \u00a7 409"
+      }
+    ],
+    "chapterUse": [
+      9,
+      11,
+      13
+    ]
+  },
+  {
+    "number": "141",
+    "title": "Board of Directors; Powers; Number, Qualifications, Terms",
+    "article": "Subchapter 4",
+    "text": "The business and affairs of every corporation organized under this chapter shall be managed by or under the direction of a board of directors, except as may be otherwise provided in this chapter or in its certificate of incorporation.",
+    "concepts": [
+      "board powers",
+      "governance",
+      "directors"
+    ],
+    "crossRefs": [
+      {
+        "target": "MBCA \u00a7 8.01"
+      }
+    ],
+    "chapterUse": [
+      9,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "number": "141(a)",
+    "title": "Board Management Power",
+    "article": "Subchapter 4",
+    "text": "The business and affairs of every corporation organized under this chapter shall be managed by or under the direction of a board of directors, except as may be otherwise provided in this chapter or in its certificate of incorporation. If any such provision is made in the certificate of incorporation, the powers and duties conferred or imposed upon the board of directors by this chapter shall be exercised or performed to such extent and by such person or persons as shall be provided in the certificate of incorporation.",
+    "concepts": [
+      "board powers",
+      "governance"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11,
+      13
+    ]
+  },
+  {
+    "number": "144",
+    "title": "Interested Directors; Quorum",
+    "article": "Subchapter 4",
+    "text": "No contract or transaction between a corporation and 1 or more of its directors or officers, or between a corporation and any other corporation, partnership, association, or other organization in which 1 or more of its directors or officers, are directors or officers, or have a financial interest, shall be void or voidable solely for this reason, or solely because the director or officer is present at or participates in the meeting of the board or committee which authorizes the contract or transaction, or solely because any such director's or officer's votes are counted for such purpose, if: (1) The material facts are disclosed or known to the board and the board in good faith authorizes the contract or transaction by the affirmative votes of a majority of the disinterested directors; (2) The material facts are disclosed or known to the stockholders and the contract or transaction is specifically approved in good faith by vote of the stockholders; or (3) The contract or transaction is fair as to the corporation at the time it is authorized.",
+    "concepts": [
+      "conflicts",
+      "fiduciary duty",
+      "safe harbor",
+      "interested directors"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      9,
+      13
+    ]
+  },
+  {
+    "number": "151",
+    "title": "Classes and Series of Stock",
+    "article": "Subchapter 5",
+    "text": "Every corporation may issue 1 or more classes of stock or 1 or more series of stock within any class thereof, any or all of which classes may be of stock with par value or stock without par value and which classes or series may have such voting powers, full or limited, or no voting powers, and such designations, preferences and relative, participating, optional or other special rights, and qualifications, limitations or restrictions thereof, as shall be stated in the certificate of incorporation or of any amendment thereto.",
+    "concepts": [
+      "capital structure",
+      "stock classes",
+      "shares"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      10,
+      15
+    ]
+  },
+  {
+    "number": "211",
+    "title": "Meetings of Stockholders",
+    "article": "Subchapter 7",
+    "text": "An annual meeting of stockholders shall be held for the election of directors on a date and at a time designated by or in the manner provided in the bylaws. Stockholders may, unless the certificate of incorporation otherwise provides, act by written consent to elect directors.",
+    "concepts": [
+      "shareholder franchise",
+      "meetings",
+      "elections"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      12
+    ]
+  },
+  {
+    "number": "220",
+    "title": "Inspection of Books and Records",
+    "article": "Subchapter 7",
+    "text": "Any stockholder, in person or by attorney or other agent, shall, upon written demand under oath stating the purpose thereof, have the right during the usual hours for business to inspect for any proper purpose, and to make copies and extracts from the corporation's stock ledger, a list of its stockholders, and its other books and records.",
+    "concepts": [
+      "inspection rights",
+      "stockholder rights",
+      "books and records"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      12
+    ]
+  },
+  {
+    "number": "242",
+    "title": "Amendment of Certificate of Incorporation",
+    "article": "Subchapter 8",
+    "text": "After a corporation has received payment for any of its capital stock, it may amend its certificate of incorporation from time to time, upon compliance with the requirements of this section. The board of directors shall adopt a resolution setting forth the amendment proposed and declaring its advisability, and either call a special meeting of stockholders or direct that the amendment be considered at the next annual meeting.",
+    "concepts": [
+      "charter amendment",
+      "governance"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "251",
+    "title": "Merger or Consolidation of Domestic Corporations",
+    "article": "Subchapter 9",
+    "text": "Any 2 or more corporations existing under the laws of this State may merge into a single surviving corporation or consolidate into a new resulting corporation pursuant to an agreement of merger or consolidation. The board of directors of each corporation shall adopt a resolution approving the agreement, and the agreement shall be submitted to stockholders for approval.",
+    "concepts": [
+      "mergers",
+      "consolidation",
+      "M&A"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "262",
+    "title": "Appraisal Rights",
+    "article": "Subchapter 9",
+    "text": "Any stockholder who holds shares of stock on the date of the making of a demand and who continuously holds such shares through the effective date of the merger or consolidation, who has neither voted in favor of the merger or consolidation nor consented thereto, and who has complied with the requirements of this section shall be entitled to an appraisal by the Court of Chancery of the fair value of the stockholder's shares of stock.",
+    "concepts": [
+      "appraisal rights",
+      "fair value",
+      "mergers"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      13,
+      15
+    ]
+  },
+  {
+    "number": "271",
+    "title": "Sale, Lease or Exchange of Assets",
+    "article": "Subchapter 10",
+    "text": "Every corporation may at any meeting of its board of directors or governing body sell, lease or exchange all or substantially all of its property and assets, including its goodwill and its corporate franchises, upon such terms and conditions as its board deems expedient, when and as authorized by a resolution adopted by the holders of a majority of the outstanding stock.",
+    "concepts": [
+      "asset sales",
+      "fundamental changes"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "275",
+    "title": "Dissolution Generally; Procedure",
+    "article": "Subchapter 10",
+    "text": "If it should be deemed advisable in the judgment of the board of directors that the corporation should be dissolved, the board shall adopt a resolution to that effect, and direct that a meeting of stockholders be convened, or that the question of dissolution be submitted to a consent solicitation.",
+    "concepts": [
+      "dissolution"
+    ],
+    "crossRefs": [],
+    "chapterUse": [
+      15
+    ]
+  }
+]
