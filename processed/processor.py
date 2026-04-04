@@ -20,6 +20,7 @@ import re
 import sys
 import traceback
 import xml.etree.ElementTree as ET
+from html import unescape
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -42,6 +43,13 @@ FAILURE_LEDGER_PATH = LEARNING_DIR / "failure_ledger.json"
 IMPROVEMENT_LOG_PATH = LEARNING_DIR / "improvement_log.json"
 
 SCHEMA_PATH = PROCESSED / "schema.md"
+SCHEMA_JSON_PATH = PROCESSED / "schema.json"
+AUDIT_REPORT_JSON_PATH = PROCESSED / "audit_report.json"
+AUDIT_REPORT_MD_PATH = PROCESSED / "audit_report.md"
+QA_REPORT_PATH = PROCESSED / "qa_report.json"
+ERRORS_PATH = PROCESSED / "errors.json"
+FINAL_REPORT_PATH = PROCESSED / "final_report.md"
+CANONICAL_DIR = PROCESSED / "canonical"
 
 # ---------------------------------------------------------------------------
 # Segment type taxonomy
@@ -621,6 +629,67 @@ def extract_xml(path: Path, file_id: str, source_family: str) -> tuple[list[dict
 
 
 # ---------------------------------------------------------------------------
+# TXT / HTML extractors
+# ---------------------------------------------------------------------------
+
+def extract_txt(path: Path, file_id: str, source_family: str) -> tuple[list[dict], list[str]]:
+    diagnostics: list[str] = []
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except Exception as e:
+        return [], [f"Read error: {e}"]
+    text = raw.strip()
+    if not text:
+        return [], ["Text file was empty"]
+    seg = {
+        "id": stable_id(file_id, 0, path.stem),
+        "parent_file_id": file_id,
+        "segment_type": SEG_SECTION if source_family != "unknown" else SEG_CHUNK,
+        "title": path.stem,
+        "text": text,
+        "source_locator": "full-document",
+        "extraction_confidence": "high",
+        "segmentation_confidence": "medium",
+        "content_hash": content_hash(text),
+    }
+    citations = extract_citations(text)
+    if citations:
+        seg["citations"] = citations
+    return [seg], diagnostics
+
+
+def extract_html(path: Path, file_id: str, source_family: str) -> tuple[list[dict], list[str]]:
+    diagnostics: list[str] = []
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except Exception as e:
+        return [], [f"Read error: {e}"]
+    title_match = re.search(r"<title[^>]*>(.*?)</title>", raw, flags=re.IGNORECASE | re.DOTALL)
+    title = unescape(title_match.group(1).strip()) if title_match else path.stem
+    text = re.sub(r"(?is)<script[^>]*>.*?</script>", " ", raw)
+    text = re.sub(r"(?is)<style[^>]*>.*?</style>", " ", text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    text = unescape(re.sub(r"\s+", " ", text)).strip()
+    if not text:
+        return [], ["No extractable text in HTML"]
+    seg = {
+        "id": stable_id(file_id, 0, title),
+        "parent_file_id": file_id,
+        "segment_type": SEG_SECTION if source_family != "unknown" else SEG_CHUNK,
+        "title": title,
+        "text": text,
+        "source_locator": "full-document",
+        "extraction_confidence": "medium",
+        "segmentation_confidence": "low",
+        "content_hash": content_hash(text),
+    }
+    citations = extract_citations(text)
+    if citations:
+        seg["citations"] = citations
+    return [seg], diagnostics
+
+
+# ---------------------------------------------------------------------------
 # Source family classifier
 # ---------------------------------------------------------------------------
 
@@ -655,7 +724,14 @@ EXTRACTOR_MAP = {
     ".pdf": extract_pdf,
     ".docx": extract_docx,
     ".xml": extract_xml,
+    ".txt": extract_txt,
+    ".html": extract_html,
+    ".htm": extract_html,
 }
+
+AUDIT_SUPPORTED_EXTENSIONS = {".md", ".pdf", ".docx", ".xml", ".txt", ".html", ".htm"}
+IGNORE_SOURCE_NAMES = {"read.me"}
+SKIP_DIR_MARKERS = {"__pycache__"}
 
 
 def process_file(
@@ -821,6 +897,457 @@ def load_or_default_improvement_log() -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Audit / validation helpers
+# ---------------------------------------------------------------------------
+
+def iso_from_ts(ts: float) -> str:
+    return datetime.fromtimestamp(ts, tz=timezone.utc).isoformat()
+
+
+def source_type_from_path(path: Path) -> str:
+    ext = path.suffix.lower()
+    if ext:
+        return ext.lstrip(".")
+    return "no-extension"
+
+
+def is_ignored_source(path: Path) -> bool:
+    lower_parts = {p.lower() for p in path.parts}
+    if any(marker in lower_parts for marker in SKIP_DIR_MARKERS):
+        return True
+    return path.name.lower() in IGNORE_SOURCE_NAMES
+
+
+def validate_record_fields(record: dict) -> list[str]:
+    required = [
+        "file_id",
+        "original_path",
+        "original_name",
+        "extension",
+        "content_hash",
+        "source_family",
+        "status",
+        "segment_count",
+    ]
+    return [f"missing_record_field:{k}" for k in required if k not in record]
+
+
+def validate_segment_fields(seg: dict) -> list[str]:
+    required = [
+        "id",
+        "parent_file_id",
+        "segment_type",
+        "title",
+        "text",
+        "source_locator",
+        "content_hash",
+    ]
+    return [f"missing_segment_field:{k}" for k in required if k not in seg]
+
+
+def load_segments_jsonl(path: Path) -> tuple[list[dict], list[str]]:
+    diagnostics: list[str] = []
+    segments: list[dict] = []
+    if not path.exists():
+        return segments, ["segments_file_missing"]
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except Exception as e:
+        return [], [f"segments_read_error:{e}"]
+    if not raw.strip():
+        return [], ["segments_file_empty"]
+    for idx, line in enumerate(raw.splitlines(), start=1):
+        if not line.strip():
+            continue
+        try:
+            seg = json.loads(line)
+        except Exception as e:
+            diagnostics.append(f"segments_parse_error:line:{idx}:{e}")
+            continue
+        diagnostics.extend(validate_segment_fields(seg))
+        if isinstance(seg.get("text"), str) and not seg["text"].strip():
+            diagnostics.append(f"segment_empty_text:line:{idx}")
+        segments.append(seg)
+    return segments, diagnostics
+
+
+def resolve_file_id(path: Path, prior_by_path: dict[str, dict], used_file_ids: set[str]) -> str:
+    rel = str(path.relative_to(REPO_ROOT).as_posix())
+    prior = prior_by_path.get(rel, {})
+    prior_fid = prior.get("file_id")
+    if prior_fid:
+        used_file_ids.add(prior_fid)
+        return prior_fid
+    base = file_id_from_path(path)
+    fid = base
+    if fid in used_file_ids:
+        suffix = hashlib.sha256(rel.encode("utf-8")).hexdigest()[:8]
+        fid = f"{base}-{suffix}"
+    used_file_ids.add(fid)
+    return fid
+
+
+def build_canonical_document(record: dict, segments: list[dict]) -> dict:
+    source_path = record.get("original_path", "")
+    checksum = record.get("content_hash", "")
+    canonical_id = hashlib.sha256(f"{source_path}|{checksum}".encode("utf-8")).hexdigest()[:32]
+    blocks = []
+    for seg in segments:
+        block = {
+            "id": seg.get("id"),
+            "type": seg.get("segment_type"),
+            "title": seg.get("title"),
+            "text": seg.get("text", ""),
+            "source_locator": seg.get("source_locator"),
+            "page_number": seg.get("page_number"),
+            "content_hash": seg.get("content_hash"),
+        }
+        blocks.append(block)
+    raw_text = "\n\n".join([b["text"] for b in blocks if isinstance(b.get("text"), str)])
+    confidence_values = [s.get("extraction_confidence", "medium") for s in segments]
+    fidelity_level = "high" if confidence_values and all(c == "high" for c in confidence_values) else (
+        "medium" if segments else "low"
+    )
+    return {
+        "id": canonical_id,
+        "source": {
+            "path": source_path,
+            "type": record.get("extension", "").lstrip("."),
+            "checksum": checksum,
+            "file_id": record.get("file_id"),
+        },
+        "metadata": {
+            "title": Path(record.get("original_name", "")).stem or record.get("file_id"),
+            "created_at": None,
+            "participants_authors": [],
+            "language": "unknown",
+            "source_family": record.get("source_family"),
+            "size_bytes": record.get("size_bytes"),
+        },
+        "content": {
+            "raw_text": raw_text,
+            "blocks": blocks,
+            "segment_count": len(blocks),
+        },
+        "relations": {
+            "thread_parent_id": None,
+            "references": [],
+        },
+        "provenance": {
+            "parser_name": record.get("extraction_method", "unknown"),
+            "parser_version": "processor.py-schema-2.0",
+            "parsed_at": record.get("last_processed"),
+            "warnings": record.get("diagnostics", []),
+        },
+        "fidelity": {
+            "level": fidelity_level,
+            "extraction_confidence": confidence_values or ["low"],
+        },
+    }
+
+
+def build_schema_json() -> dict:
+    return {
+        "schema_version": "2.0",
+        "record_type": "canonical-source-document",
+        "required_top_level_fields": [
+            "id",
+            "source",
+            "metadata",
+            "content",
+            "relations",
+            "provenance",
+            "fidelity",
+        ],
+        "source_required_fields": ["path", "type", "checksum", "file_id"],
+        "metadata_required_fields": ["title", "source_family"],
+        "content_required_fields": ["raw_text", "blocks", "segment_count"],
+        "block_required_fields": ["id", "type", "text", "source_locator", "content_hash"],
+        "provenance_required_fields": ["parser_name", "parser_version", "parsed_at", "warnings"],
+        "fidelity_required_fields": ["level", "extraction_confidence"],
+        "notes": [
+            "IDs must be deterministic from source path + checksum.",
+            "Timestamps should be ISO-8601 where available.",
+            "All extracted fields should preserve source locators for traceability.",
+        ],
+    }
+
+
+def validate_canonical_document(doc: dict, schema: dict) -> list[str]:
+    diagnostics: list[str] = []
+    for field in schema.get("required_top_level_fields", []):
+        if field not in doc:
+            diagnostics.append(f"missing_canonical_field:{field}")
+    for field in schema.get("source_required_fields", []):
+        if field not in doc.get("source", {}):
+            diagnostics.append(f"missing_canonical_source_field:{field}")
+    for field in schema.get("metadata_required_fields", []):
+        if field not in doc.get("metadata", {}):
+            diagnostics.append(f"missing_canonical_metadata_field:{field}")
+    for field in schema.get("content_required_fields", []):
+        if field not in doc.get("content", {}):
+            diagnostics.append(f"missing_canonical_content_field:{field}")
+    blocks = doc.get("content", {}).get("blocks", [])
+    for idx, block in enumerate(blocks):
+        for field in schema.get("block_required_fields", []):
+            if field not in block:
+                diagnostics.append(f"missing_canonical_block_field:{idx}:{field}")
+    for field in schema.get("provenance_required_fields", []):
+        if field not in doc.get("provenance", {}):
+            diagnostics.append(f"missing_canonical_provenance_field:{field}")
+    for field in schema.get("fidelity_required_fields", []):
+        if field not in doc.get("fidelity", {}):
+            diagnostics.append(f"missing_canonical_fidelity_field:{field}")
+    if not isinstance(doc.get("content", {}).get("raw_text", ""), str):
+        diagnostics.append("canonical_raw_text_not_string")
+    return diagnostics
+
+
+def load_existing_records() -> tuple[dict[str, dict], dict[str, dict], list[dict]]:
+    by_id: dict[str, dict] = {}
+    by_path: dict[str, dict] = {}
+    parse_errors: list[dict] = []
+    for rpath in sorted(RECORDS_DIR.glob("*.json")):
+        try:
+            rec = load_json(rpath, {})
+        except Exception as e:
+            parse_errors.append({"record_file": str(rpath.relative_to(REPO_ROOT)), "error": str(e)})
+            continue
+        fid = rec.get("file_id")
+        rel = rec.get("original_path")
+        if fid:
+            by_id[fid] = rec
+        if rel:
+            by_path[rel] = rec
+    return by_id, by_path, parse_errors
+
+
+def build_audit_report(source_files: list[Path], prior_by_path: dict[str, dict], planned_file_ids: dict[str, str]) -> dict:
+    schema = load_json(SCHEMA_JSON_PATH, build_schema_json())
+    rows: list[dict] = []
+    by_checksum: dict[str, list[str]] = {}
+    duplicate_planned_ids: dict[str, list[str]] = {}
+    segment_id_to_files: dict[str, list[str]] = {}
+    validations = {
+        "record_parse_errors": [],
+        "segment_parse_errors": [],
+        "canonical_validation_errors": [],
+        "truncation_or_corruption_signals": [],
+    }
+    counters = {
+        "completed": 0,
+        "partial": 0,
+        "missing": 0,
+        "failed": 0,
+        "unknown": 0,
+    }
+    process_next: list[str] = []
+    skipped_not_eligible: list[dict] = []
+
+    for path in sorted(source_files):
+        rel = str(path.relative_to(REPO_ROOT).as_posix())
+        ext = path.suffix.lower()
+        source_type = source_type_from_path(path)
+        file_hash = sha256(path)
+        mtime = iso_from_ts(path.stat().st_mtime)
+        by_checksum.setdefault(file_hash, []).append(rel)
+        fid = planned_file_ids[rel]
+        duplicate_planned_ids.setdefault(fid, []).append(rel)
+
+        rec_path = RECORDS_DIR / f"{fid}.json"
+        seg_path = SEGMENTS_DIR / f"{fid}.jsonl"
+        canonical_path = CANONICAL_DIR / f"{fid}.json"
+        prior = prior_by_path.get(rel, {})
+        record_issues: list[str] = []
+        segment_issues: list[str] = []
+        canonical_issues: list[str] = []
+        truncation_flags: list[str] = []
+
+        rec = {}
+        if rec_path.exists():
+            try:
+                rec = load_json(rec_path, {})
+            except Exception as e:
+                record_issues.append(f"record_parse_error:{e}")
+                validations["record_parse_errors"].append({
+                    "source": rel,
+                    "record_file": str(rec_path.relative_to(REPO_ROOT)),
+                    "error": str(e),
+                })
+            else:
+                record_issues.extend(validate_record_fields(rec))
+        else:
+            record_issues.append("record_missing")
+
+        segments: list[dict] = []
+        if seg_path.exists():
+            segments, seg_diags = load_segments_jsonl(seg_path)
+            segment_issues.extend(seg_diags)
+            for diag in seg_diags:
+                if "parse_error" in diag:
+                    validations["segment_parse_errors"].append({
+                        "source": rel,
+                        "segments_file": str(seg_path.relative_to(REPO_ROOT)),
+                        "error": diag,
+                    })
+            if rec and isinstance(rec.get("segment_count"), int) and rec.get("segment_count") != len(segments):
+                truncation_flags.append(
+                    f"segment_count_mismatch:record={rec.get('segment_count')} actual={len(segments)}"
+                )
+        else:
+            segment_issues.append("segments_file_missing")
+
+        if canonical_path.exists():
+            try:
+                canonical_doc = load_json(canonical_path, {})
+            except Exception as e:
+                canonical_issues.append(f"canonical_parse_error:{e}")
+            else:
+                canonical_issues.extend(validate_canonical_document(canonical_doc, schema))
+        else:
+            canonical_issues.append("canonical_missing")
+
+        for seg in segments:
+            sid = seg.get("id")
+            if sid:
+                segment_id_to_files.setdefault(sid, []).append(rel)
+
+        prior_status = prior.get("status")
+        source_hash_matches = bool(prior.get("content_hash") == file_hash) if prior else False
+        quality_issues = record_issues + segment_issues + canonical_issues + truncation_flags
+
+        if not prior_status:
+            conversion_status = "missing"
+        elif prior_status == "success":
+            if source_hash_matches and not quality_issues:
+                conversion_status = "completed"
+            else:
+                conversion_status = "partial"
+        elif prior_status == "partial":
+            conversion_status = "partial"
+        elif prior_status in {"error", "unsupported"}:
+            conversion_status = "failed"
+        else:
+            conversion_status = "unknown"
+
+        counters[conversion_status] += 1
+        eligible = ext in AUDIT_SUPPORTED_EXTENSIONS
+        process_flag = conversion_status in {"partial", "missing", "failed", "unknown"}
+        if process_flag and eligible:
+            process_next.append(rel)
+        elif process_flag and not eligible:
+            skipped_not_eligible.append({"source": rel, "reason": f"unsupported_source_type:{source_type}"})
+
+        if truncation_flags:
+            validations["truncation_or_corruption_signals"].append({
+                "source": rel,
+                "signals": truncation_flags,
+            })
+
+        rows.append({
+            "source_path": rel,
+            "source_type": source_type,
+            "expected_json_output_path": str(canonical_path.relative_to(REPO_ROOT)),
+            "record_output_path": str(rec_path.relative_to(REPO_ROOT)),
+            "segments_output_path": str(seg_path.relative_to(REPO_ROOT)),
+            "conversion_status": conversion_status,
+            "last_modified": mtime,
+            "checksum": file_hash,
+            "prior_status": prior_status or "none",
+            "source_hash_matches_prior": source_hash_matches,
+            "quality_issues": quality_issues,
+            "eligible_for_conversion": eligible,
+            "will_process_next": process_flag and eligible,
+        })
+
+    duplicate_source_hashes = [
+        {"checksum": ch, "paths": paths}
+        for ch, paths in by_checksum.items()
+        if len(paths) > 1
+    ]
+    duplicate_output_ids = [
+        {"file_id": fid, "paths": paths}
+        for fid, paths in duplicate_planned_ids.items()
+        if len(paths) > 1
+    ]
+    duplicate_segment_ids = [
+        {"segment_id": sid, "sources": paths}
+        for sid, paths in segment_id_to_files.items()
+        if len(paths) > 1
+    ]
+
+    return {
+        "generated_at": now_iso(),
+        "source_root": str(INBOX.relative_to(REPO_ROOT)),
+        "source_file_count": len(source_files),
+        "mapping_table": rows,
+        "summary": {
+            **counters,
+            "to_process_next_count": len(process_next),
+            "skipped_not_eligible_count": len(skipped_not_eligible),
+            "duplicates_by_source_checksum": len(duplicate_source_hashes),
+            "duplicate_output_ids": len(duplicate_output_ids),
+            "duplicate_segment_ids": len(duplicate_segment_ids),
+        },
+        "duplicates": {
+            "source_content_hash_duplicates": duplicate_source_hashes,
+            "output_id_duplicates": duplicate_output_ids,
+            "segment_id_duplicates": duplicate_segment_ids,
+        },
+        "validation": validations,
+        "process_next": sorted(process_next),
+        "skipped_not_eligible": skipped_not_eligible,
+    }
+
+
+def write_audit_markdown(audit: dict) -> str:
+    summary = audit.get("summary", {})
+    process_next = audit.get("process_next", [])
+    skipped_not_eligible = audit.get("skipped_not_eligible", [])
+    lines = [
+        "# Audit Report",
+        "",
+        f"- Generated at: `{audit.get('generated_at')}`",
+        f"- Source root: `{audit.get('source_root')}`",
+        f"- Source files inventoried: **{audit.get('source_file_count', 0)}**",
+        "",
+        "## Completion / Quality Summary",
+        "",
+        f"- Completed and trustworthy: **{summary.get('completed', 0)}**",
+        f"- Partial / invalid: **{summary.get('partial', 0)}**",
+        f"- Missing conversions: **{summary.get('missing', 0)}**",
+        f"- Failed conversions: **{summary.get('failed', 0)}**",
+        f"- Unknown status: **{summary.get('unknown', 0)}**",
+        "",
+        "## Duplicate Detection",
+        "",
+        f"- Duplicate source-content hashes: **{summary.get('duplicates_by_source_checksum', 0)}**",
+        f"- Duplicate output IDs: **{summary.get('duplicate_output_ids', 0)}**",
+        f"- Duplicate segment IDs: **{summary.get('duplicate_segment_ids', 0)}**",
+        "",
+        "## What Will Be Processed Next (No Duplicates)",
+        "",
+    ]
+    if process_next:
+        lines.extend([f"- `{p}`" for p in process_next])
+    else:
+        lines.append("- None")
+    lines.extend(["", "## Skipped (Not Eligible)"])
+    if skipped_not_eligible:
+        lines.extend([f"- `{x['source']}` — {x['reason']}" for x in skipped_not_eligible])
+    else:
+        lines.append("- None")
+    lines.extend(["", "## Artifact Paths", ""])
+    lines.extend([
+        "- `processed/audit_report.json`",
+        "- `processed/manifest.json`",
+        "- `processed/qa_report.json`",
+        "- `processed/errors.json`",
+        "- `processed/final_report.md`",
+    ])
+    return "\n".join(lines) + "\n"
+
+# ---------------------------------------------------------------------------
 # Main run
 # ---------------------------------------------------------------------------
 
@@ -831,16 +1358,11 @@ def run() -> None:
     print(f"[inbox-processor] Output: {PROCESSED}")
 
     # Ensure directories exist
-    for d in [RECORDS_DIR, SEGMENTS_DIR, LEARNING_DIR]:
+    for d in [RECORDS_DIR, SEGMENTS_DIR, LEARNING_DIR, CANONICAL_DIR]:
         d.mkdir(parents=True, exist_ok=True)
 
-    # Load prior manifest and records
-    prior_manifest = load_json(MANIFEST_PATH, {})
-    prior_records: dict[str, dict] = {}
-    for f in RECORDS_DIR.glob("*.json"):
-        rec = load_json(f, {})
-        if rec.get("file_id"):
-            prior_records[rec["file_id"]] = rec
+    # Load prior records
+    prior_records_by_id, prior_records_by_path, prior_record_parse_errors = load_existing_records()
 
     # Load learning artifacts
     heuristics = load_or_default_heuristics()
@@ -848,62 +1370,107 @@ def run() -> None:
     failure_ledger = load_or_default_failure_ledger()
     improvement_log = load_or_default_improvement_log()
 
-    # Enumerate inbox files
-    inbox_files = sorted(INBOX.iterdir()) if INBOX.exists() else []
-    inbox_files = [f for f in inbox_files if f.is_file()]
-    print(f"[inbox-processor] Found {len(inbox_files)} files in inbox/")
+    # Enumerate source files recursively
+    source_files = sorted([p for p in INBOX.rglob("*") if p.is_file() and not is_ignored_source(p)]) if INBOX.exists() else []
+    print(f"[inbox-processor] Found {len(source_files)} source files recursively in inbox/")
 
-    # Track run statistics
+    # Deterministic file-id planning from existing records + source paths
+    planned_file_ids: dict[str, str] = {}
+    used_file_ids = set(prior_records_by_id.keys())
+    for path in source_files:
+        rel = str(path.relative_to(REPO_ROOT).as_posix())
+        planned_file_ids[rel] = resolve_file_id(path, prior_records_by_path, used_file_ids)
+
+    # Phase 1: pre-conversion audit
+    audit_report = build_audit_report(source_files, prior_records_by_path, planned_file_ids)
+    save_json(AUDIT_REPORT_JSON_PATH, audit_report)
+    AUDIT_REPORT_MD_PATH.write_text(write_audit_markdown(audit_report), encoding="utf-8")
+    print(f"[inbox-processor] Audit report written to {AUDIT_REPORT_JSON_PATH.relative_to(REPO_ROOT)}")
+
+    # Phase 2: canonical schema
+    schema_json = build_schema_json()
+    save_json(SCHEMA_JSON_PATH, schema_json)
+
+    # Convert only remaining/defective items identified by audit
+    process_targets = set(audit_report.get("process_next", []))
     run_stats = {
         "run_start": run_start,
-        "inbox_file_count": len(inbox_files),
+        "source_file_count": len(source_files),
         "processed": [],
-        "skipped_unchanged": [],
+        "skipped_existing_valid": [],
         "failed": [],
-        "unsupported": [],
+        "skipped_not_eligible": [],
         "total_segments": 0,
+        "previously_completed_valid": 0,
+        "converted_now": 0,
+        "repaired_now": 0,
     }
 
-    all_file_ids: list[str] = []
     new_failures: list[dict] = []
-    new_unsupported: list[str] = []
+    errors: list[dict] = []
 
-    for path in inbox_files:
-        print(f"  Processing: {path.name} ...", end=" ", flush=True)
-        try:
-            record, segments, diagnostics = process_file(path, prior_records)
-        except Exception as e:
-            print(f"FATAL ERROR: {e}")
-            run_stats["failed"].append({"file": path.name, "error": str(e)})
+    for path in source_files:
+        rel = str(path.relative_to(REPO_ROOT).as_posix())
+        ext = path.suffix.lower()
+        fid = planned_file_ids[rel]
+        prior = prior_records_by_path.get(rel, {})
+        prior_status = prior.get("status")
+
+        if rel not in process_targets:
+            if ext not in AUDIT_SUPPORTED_EXTENSIONS:
+                reason = f"unsupported_source_type:{source_type_from_path(path)}"
+                run_stats["skipped_not_eligible"].append({"source": rel, "reason": reason})
+                errors.append({"source": rel, "stage": "eligibility", "error": reason})
+            else:
+                run_stats["skipped_existing_valid"].append(rel)
+                run_stats["previously_completed_valid"] += 1
+                run_stats["total_segments"] += int(prior.get("segment_count", 0) or 0)
             continue
 
-        file_id = record["file_id"]
-        all_file_ids.append(file_id)
+        print(f"  Processing: {rel} ...", end=" ", flush=True)
+        try:
+            record, segments, diagnostics = process_file(path, prior_records_by_id)
+        except Exception as e:
+            print(f"FATAL ERROR: {e}")
+            run_stats["failed"].append({"file": rel, "error": str(e)})
+            new_failures.append({"file": rel, "diagnostics": [str(e)], "timestamp": now_iso()})
+            errors.append({"source": rel, "stage": "processing", "error": str(e)})
+            continue
+
+        # Respect planned deterministic ID if needed
+        if record.get("file_id") != fid:
+            record["file_id"] = fid
+            record["segment_ids"] = [re.sub(rf"^{re.escape(file_id_from_path(path))}:", f"{fid}:", s.get("id", "")) for s in segments]
+            for idx, seg in enumerate(segments):
+                seg["parent_file_id"] = fid
+                heading = seg.get("title", "")
+                seg["id"] = stable_id(fid, idx, heading)
+
         status = record.get("status", "error")
-
-        if record.get("unchanged_since_prior_run") and status == "success":
-            print("skipped (unchanged)")
-            run_stats["skipped_unchanged"].append(path.name)
-            # Still track the segment count for manifest
-            run_stats["total_segments"] += record.get("segment_count", 0)
+        if status in ("success", "partial"):
+            print(f"{status} ({len(segments)} segments)")
+            run_stats["processed"].append(rel)
+            run_stats["converted_now"] += 1
+            if prior_status in {"partial", "error", "unsupported"}:
+                run_stats["repaired_now"] += 1
+            run_stats["total_segments"] += len(segments)
+            canonical_doc = build_canonical_document(record, segments)
+            save_json(CANONICAL_DIR / f"{fid}.json", canonical_doc)
+            canonical_diags = validate_canonical_document(canonical_doc, schema_json)
+            if canonical_diags:
+                for d in canonical_diags:
+                    errors.append({"source": rel, "stage": "canonical-validation", "error": d})
         else:
-            print(f"{status} ({record.get('segment_count', 0)} segments)")
-            if status in ("success", "partial"):
-                run_stats["processed"].append(path.name)
-                run_stats["total_segments"] += len(segments)
-            elif status == "error":
-                run_stats["failed"].append({"file": path.name, "diagnostics": diagnostics})
-                new_failures.append({"file": path.name, "diagnostics": diagnostics, "timestamp": now_iso()})
-            elif status == "unsupported":
-                run_stats["unsupported"].append(path.name)
-                if path.name not in [x.get("file") for x in failure_ledger.get("unsupported_formats", [])]:
-                    new_unsupported.append(path.name)
+            print(status)
+            run_stats["failed"].append({"file": rel, "diagnostics": diagnostics})
+            new_failures.append({"file": rel, "diagnostics": diagnostics, "timestamp": now_iso()})
+            errors.append({"source": rel, "stage": "processing", "error": f"status:{status}", "diagnostics": diagnostics})
 
-        # Save record
-        save_json(RECORDS_DIR / f"{file_id}.json", record)
+        # Save updated record
+        save_json(RECORDS_DIR / f"{fid}.json", record)
 
-        # Save segments (overwrite if changed)
-        seg_path = SEGMENTS_DIR / f"{file_id}.jsonl"
+        # Save segments
+        seg_path = SEGMENTS_DIR / f"{fid}.jsonl"
         if segments:
             with open(seg_path, "w", encoding="utf-8") as f:
                 for seg in segments:
@@ -912,12 +1479,6 @@ def run() -> None:
     # Update failure ledger
     if new_failures:
         failure_ledger.setdefault("unresolved_failures", []).extend(new_failures)
-    if new_unsupported:
-        for fname in new_unsupported:
-            failure_ledger.setdefault("unsupported_formats", []).append({
-                "file": fname, "timestamp": now_iso(),
-                "recommendation": "Add extractor or convert to supported format"
-            })
     failure_ledger["last_updated"] = now_iso()
     save_json(FAILURE_LEDGER_PATH, failure_ledger)
 
@@ -926,16 +1487,16 @@ def run() -> None:
         "run_start": run_start,
         "run_end": now_iso(),
         "files_processed": len(run_stats["processed"]),
-        "files_skipped": len(run_stats["skipped_unchanged"]),
+        "files_skipped": len(run_stats["skipped_existing_valid"]),
         "files_failed": len(run_stats["failed"]),
-        "files_unsupported": len(run_stats["unsupported"]),
+        "files_not_eligible": len(run_stats["skipped_not_eligible"]),
         "total_segments": run_stats["total_segments"],
         "lessons": [],
     }
     if new_failures:
         run_entry["lessons"].append(f"{len(new_failures)} new failures recorded in failure_ledger")
-    if not new_failures and not new_unsupported:
-        run_entry["lessons"].append("Clean run: all files processed or skipped as unchanged")
+    if not new_failures:
+        run_entry["lessons"].append("Clean conversion pass for eligible files targeted by audit")
     improvement_log.setdefault("entries", []).append(run_entry)
     improvement_log["last_updated"] = now_iso()
     save_json(IMPROVEMENT_LOG_PATH, improvement_log)
@@ -948,9 +1509,15 @@ def run() -> None:
     patterns["last_updated"] = now_iso()
     save_json(PATTERNS_PATH, patterns)
 
+    # Re-audit after conversion for QA/final verification
+    post_prior_by_id, post_prior_by_path, post_parse_errors = load_existing_records()
+    post_audit = build_audit_report(source_files, post_prior_by_path, planned_file_ids)
+    save_json(AUDIT_REPORT_JSON_PATH, post_audit)
+    AUDIT_REPORT_MD_PATH.write_text(write_audit_markdown(post_audit), encoding="utf-8")
+
     # Build canonical manifest
     manifest = {
-        "schema_version": "1.0",
+        "schema_version": "2.0",
         "corpus_name": "Business Associations: Law of the Firm — Source Corpus",
         "description": (
             "Retrieval-optimized legal corpus built from inbox/ files. "
@@ -959,14 +1526,21 @@ def run() -> None:
         "entrypoint": "processed/manifest.json",
         "last_run": run_start,
         "run_end": now_iso(),
-        "inbox_file_count": len(inbox_files),
+        "inbox_file_count": len(source_files),
         "total_segments": run_stats["total_segments"],
+        "source_root": "inbox/",
+        "canonical_root": "processed/canonical/",
+        "qa_report": "processed/qa_report.json",
+        "audit_report": "processed/audit_report.json",
+        "errors_report": "processed/errors.json",
         "files": {},
         "retrieval_guide": {
             "find_segment": "Read processed/segments/{file_id}.jsonl — each line is a JSON segment",
             "find_record": "Read processed/records/{file_id}.json for file metadata",
+            "find_canonical": "Read processed/canonical/{file_id}.json for fidelity-preserving canonical JSON",
             "list_all_files": "Read processed/manifest.json — 'files' key maps file_id to summary",
             "schema": "Read processed/schema.md for field definitions",
+            "schema_json": "Read processed/schema.json for machine-validated canonical schema",
             "learning": "Read processed/learning/ for heuristics, patterns, and run history",
         },
         "source_families": {
@@ -977,19 +1551,56 @@ def run() -> None:
         },
     }
 
-    for f in RECORDS_DIR.glob("*.json"):
-        rec = load_json(f, {})
-        fid = rec.get("file_id", "")
-        if fid:
-            manifest["files"][fid] = {
-                "name": rec.get("original_name"),
-                "family": rec.get("source_family"),
-                "status": rec.get("status"),
-                "segment_count": rec.get("segment_count", 0),
-                "segments_file": f"processed/segments/{fid}.jsonl",
-            }
+    source_type_counts: dict[str, int] = {}
+    for path in source_files:
+        rel = str(path.relative_to(REPO_ROOT).as_posix())
+        fid = planned_file_ids[rel]
+        rec = load_json(RECORDS_DIR / f"{fid}.json", {})
+        source_type = source_type_from_path(path)
+        source_type_counts[source_type] = source_type_counts.get(source_type, 0) + 1
+        manifest["files"][fid] = {
+            "name": rec.get("original_name", path.name),
+            "family": rec.get("source_family", classify_family(path)),
+            "status": rec.get("status", "missing"),
+            "segment_count": rec.get("segment_count", 0),
+            "source_path": rel,
+            "checksum": sha256(path),
+            "last_modified": iso_from_ts(path.stat().st_mtime),
+            "record_file": f"processed/records/{fid}.json",
+            "segments_file": f"processed/segments/{fid}.jsonl",
+            "canonical_file": f"processed/canonical/{fid}.json",
+        }
+    manifest["counts_by_source_type"] = source_type_counts
 
     save_json(MANIFEST_PATH, manifest)
+
+    # QA report
+    qa_report = {
+        "generated_at": now_iso(),
+        "schema_version": "2.0",
+        "source_file_count": len(source_files),
+        "eligible_source_count": len([p for p in source_files if p.suffix.lower() in AUDIT_SUPPORTED_EXTENSIONS]),
+        "processed_now_count": run_stats["converted_now"],
+        "previously_completed_valid_count": run_stats["previously_completed_valid"],
+        "repaired_now_count": run_stats["repaired_now"],
+        "remaining_unconverted_eligible": post_audit.get("process_next", []),
+        "remaining_unconverted_eligible_count": len(post_audit.get("process_next", [])),
+        "duplicates": post_audit.get("duplicates", {}),
+        "validation": post_audit.get("validation", {}),
+        "is_complete_for_eligible_sources": len(post_audit.get("process_next", [])) == 0,
+    }
+    if prior_record_parse_errors or post_parse_errors:
+        qa_report["record_parse_errors"] = prior_record_parse_errors + post_parse_errors
+    save_json(QA_REPORT_PATH, qa_report)
+
+    # Errors report
+    errors_payload = {
+        "generated_at": now_iso(),
+        "errors": errors,
+        "failed_files": run_stats["failed"],
+        "skipped_not_eligible": run_stats["skipped_not_eligible"],
+    }
+    save_json(ERRORS_PATH, errors_payload)
 
     # Append to run history
     append_jsonl(RUN_HISTORY_PATH, {
@@ -998,19 +1609,76 @@ def run() -> None:
         "stats": run_stats,
     })
 
-    # Write / update schema doc
+    # Write / update schema docs
     _write_schema()
+
+    final_lines = [
+        "# Final Conversion Report",
+        "",
+        f"- Run start: `{run_start}`",
+        f"- Run end: `{now_iso()}`",
+        f"- Source files discovered recursively: **{len(source_files)}**",
+        f"- Processed in this run: **{run_stats['converted_now']}**",
+        f"- Previously completed and validated: **{run_stats['previously_completed_valid']}**",
+        f"- Repaired items this run: **{run_stats['repaired_now']}**",
+        f"- Failed items: **{len(run_stats['failed'])}**",
+        f"- Skipped (not eligible): **{len(run_stats['skipped_not_eligible'])}**",
+        "",
+        "## Counts by Source Type",
+        "",
+    ]
+    for stype, count in sorted(source_type_counts.items()):
+        final_lines.append(f"- `{stype}`: {count}")
+    final_lines.extend([
+        "",
+        "## Remaining Unconverted Eligible Files",
+        "",
+    ])
+    remaining = post_audit.get("process_next", [])
+    if remaining:
+        final_lines.extend([f"- `{p}`" for p in remaining])
+    else:
+        final_lines.append("- None")
+    final_lines.extend([
+        "",
+        "## Failed / Skipped with Reasons",
+        "",
+    ])
+    if run_stats["failed"]:
+        for item in run_stats["failed"]:
+            final_lines.append(f"- FAILED `{item.get('file')}`")
+    if run_stats["skipped_not_eligible"]:
+        for item in run_stats["skipped_not_eligible"]:
+            final_lines.append(f"- SKIPPED `{item.get('source')}` — {item.get('reason')}")
+    if not run_stats["failed"] and not run_stats["skipped_not_eligible"]:
+        final_lines.append("- None")
+    final_lines.extend([
+        "",
+        "## Output Artifact Paths",
+        "",
+        "- `processed/manifest.json`",
+        "- `processed/qa_report.json`",
+        "- `processed/errors.json`",
+        "- `processed/audit_report.json`",
+        "- `processed/audit_report.md`",
+        "- `processed/final_report.md`",
+        "- `processed/schema.json`",
+        "- `processed/schema.md`",
+        "- `processed/canonical/`",
+    ])
+    FINAL_REPORT_PATH.write_text("\n".join(final_lines) + "\n", encoding="utf-8")
 
     # Print run summary
     print()
     print("=" * 60)
     print("RUN SUMMARY")
     print("=" * 60)
-    print(f"  Files in inbox:     {len(inbox_files)}")
-    print(f"  Processed (new):    {len(run_stats['processed'])}")
-    print(f"  Skipped (unchanged):{len(run_stats['skipped_unchanged'])}")
+    print(f"  Files in inbox:      {len(source_files)}")
+    print(f"  Processed (this run):{run_stats['converted_now']}")
+    print(f"  Previously complete: {run_stats['previously_completed_valid']}")
+    print(f"  Repaired:            {run_stats['repaired_now']}")
     print(f"  Failed:             {len(run_stats['failed'])}")
-    print(f"  Unsupported:        {len(run_stats['unsupported'])}")
+    print(f"  Not eligible:       {len(run_stats['skipped_not_eligible'])}")
     print(f"  Total segments:     {run_stats['total_segments']}")
     print(f"  Output root:        {MANIFEST_PATH.relative_to(REPO_ROOT)}")
     print("=" * 60)
@@ -1020,10 +1688,10 @@ def run() -> None:
         for f in run_stats["failed"]:
             print(f"  - {f}")
 
-    if run_stats["unsupported"]:
-        print("\nUNSUPPORTED:")
-        for f in run_stats["unsupported"]:
-            print(f"  - {f}")
+    if run_stats["skipped_not_eligible"]:
+        print("\nNOT ELIGIBLE:")
+        for item in run_stats["skipped_not_eligible"]:
+            print(f"  - {item.get('source')} ({item.get('reason')})")
 
     print("\nDone.")
 
