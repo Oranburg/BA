@@ -162,7 +162,7 @@ export default function Ch15CapitalStructure() {
         ConstructEdge has covenant pressure, shrinking runway, and investor conflict. Diagnose how
         solvency posture changes legal leverage and board obligations.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         What changed since M&A: transaction choices now compress into balance-sheet reality, so residual-claimant shifts and creditor leverage drive governance choices.
       </p>
 
@@ -253,7 +253,7 @@ export default function Ch15CapitalStructure() {
               }`}
             >
               <p className="font-headline text-sm uppercase text-gray-900 dark:text-white">{s.title}</p>
-              <p className="font-ui text-xs text-gray-500 mt-1">Residual claimant: {s.residualClaimant}</p>
+              <p className="font-ui text-sm text-gray-500 mt-1">Residual claimant: {s.residualClaimant}</p>
               <p className="font-body text-sm text-gray-700 dark:text-gray-300 mt-2">{s.boardFocus}</p>
             </button>
           ))}
@@ -262,7 +262,7 @@ export default function Ch15CapitalStructure() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Board action analyzer</h2>
-        <p className="font-ui text-xs text-gray-500 mb-3">Select actions under current solvency assumptions.</p>
+        <p className="font-ui text-sm text-gray-500 mb-3">Select actions under current solvency assumptions.</p>
         <div className="space-y-2">
           {BOARD_OPTIONS.map((option) => {
             const checked = !!state.selectedActions?.[option.id];
@@ -279,9 +279,9 @@ export default function Ch15CapitalStructure() {
                 />
                 <span>
                   <span className="font-body text-sm text-gray-700 dark:text-gray-300">{option.text}</span>
-                  <span className="block font-ui text-xs mt-1 text-sprawl-bright-red">Current-state risk: {risk}</span>
+                  <span className="block font-ui text-sm mt-1 text-sprawl-bright-red">Current-state risk: {risk}</span>
                   {(risk === "critical" || risk === "high") && RISK_EXPLANATIONS[option.id]?.[risk] && (
-                    <span className="block font-body text-xs mt-1 text-sprawl-bright-red/80 italic">
+                    <span className="block font-body text-sm mt-1 text-sprawl-bright-red/80 italic">
                       {RISK_EXPLANATIONS[option.id][risk]}
                     </span>
                   )}
@@ -329,7 +329,7 @@ export default function Ch15CapitalStructure() {
           className="w-full min-h-32 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-3 font-body text-sm"
         />
         {(state.boardRecommendation || "").length < 20 && (
-          <p className="mt-2 font-ui text-xs text-sprawl-bright-red">
+          <p className="mt-2 font-ui text-sm text-sprawl-bright-red">
             Board recommendation must be at least 20 characters before completing this module.
           </p>
         )}

@@ -262,7 +262,7 @@ export default function Ch01WhyLaw() {
         diagnose which of the <strong>Four Problems</strong> are most acute. This module teaches you
         to classify real-world business disputes into the framework that organizes the entire course.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         This is the first module. The Four Problems framework will recur in every chapter that follows.
       </p>
 
@@ -392,7 +392,7 @@ export default function Ch01WhyLaw() {
             For each scenario below, identify which of the Four Problems is <strong>most directly</strong> at
             issue. After choosing, reveal the analysis to see if your diagnosis was correct and why.
           </p>
-          <p className="font-ui text-xs text-sprawl-teal mb-4">
+          <p className="font-ui text-sm text-sprawl-teal mb-4">
             Score: {correctCount} / {SCENARIOS.length} correct
           </p>
 
@@ -451,7 +451,7 @@ export default function Ch01WhyLaw() {
                   {answer && !revealed && (
                     <button
                       onClick={() => revealScenario(scenario.id)}
-                      className="font-ui text-xs text-sprawl-teal underline hover:text-sprawl-teal/80"
+                      className="font-ui text-sm text-sprawl-teal underline hover:text-sprawl-teal/80"
                     >
                       Check my answer
                     </button>
@@ -472,7 +472,7 @@ export default function Ch01WhyLaw() {
                       <p className="font-body text-gray-700 dark:text-gray-300">
                         {scenario.explanation}
                       </p>
-                      <p className="font-ui text-xs text-gray-500 mt-1">
+                      <p className="font-ui text-sm text-gray-500 mt-1">
                         Legal hook: {scenario.legalHook}
                       </p>
                     </div>

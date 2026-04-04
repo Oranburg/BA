@@ -347,7 +347,7 @@ export default function Ch04CorporationsTech() {
         entity&apos;s assets and the owners&apos; personal assets — but that wall is not absolute.
         Courts can pierce the corporate veil when the boundary dissolves through abuse.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: partnership from Chapter 03 demonstrated unlimited liability.
         The corporation solves that problem through two directions of partitioning — but introduces
         the risk of veil-piercing when founders ignore corporate separateness.
@@ -437,7 +437,7 @@ export default function Ch04CorporationsTech() {
                   <p className="font-ui text-xs uppercase tracking-widest text-sprawl-light-blue mb-1">
                     Defensive Partitioning (Limited Liability)
                   </p>
-                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                  <p className="font-body text-sm text-gray-400 leading-relaxed">
                     Protects <strong className="text-gray-200">owners&apos; personal assets</strong> from
                     the entity&apos;s creditors. If ConstructEdge Corp is sued, Zeeva&apos;s personal
                     savings and Sammy&apos;s apartment are shielded.
@@ -447,7 +447,7 @@ export default function Ch04CorporationsTech() {
                   <p className="font-ui text-xs uppercase tracking-widest text-sprawl-yellow mb-1">
                     Affirmative Partitioning (Entity Shielding)
                   </p>
-                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                  <p className="font-body text-sm text-gray-400 leading-relaxed">
                     Protects <strong className="text-gray-200">entity assets</strong> from the
                     owners&apos; personal creditors. If Sammy owes alimony, that creditor cannot seize
                     ConstructEdge&apos;s corporate bank account or intellectual property.
@@ -457,7 +457,7 @@ export default function Ch04CorporationsTech() {
             </div>
 
             <div className="border border-white/10 rounded p-4 bg-black/30">
-              <p className="font-body text-xs italic text-sprawl-light-blue leading-relaxed">
+              <p className="font-body text-sm italic text-sprawl-light-blue leading-relaxed">
                 &quot;The corporate owner/employee, a natural person, is distinct from the corporation
                 itself, a legally different entity with different rights and responsibilities due to its
                 different legal status.&quot;
@@ -514,7 +514,7 @@ export default function Ch04CorporationsTech() {
                 {CREDITORS.filter((c) => creditorAnswers[c.id] === "personal").map((c) => (
                   <span
                     key={c.id}
-                    className="px-2 py-1 rounded bg-sprawl-light-blue/20 border border-sprawl-light-blue/40 font-ui text-xs text-sprawl-light-blue"
+                    className="px-2 py-1 rounded bg-sprawl-light-blue/20 border border-sprawl-light-blue/40 font-ui text-sm text-sprawl-light-blue"
                   >
                     {c.label.split("(")[0].trim()}
                   </span>
@@ -587,7 +587,7 @@ export default function Ch04CorporationsTech() {
                     </div>
                   </div>
                   {state.creditorSubmitted && (
-                    <p className={`font-body text-xs mt-2 ${isCorrect ? "text-green-600 dark:text-green-400" : "text-sprawl-bright-red"}`}>
+                    <p className={`font-body text-sm mt-2 ${isCorrect ? "text-green-600 dark:text-green-400" : "text-sprawl-bright-red"}`}>
                       {c.explanation}
                     </p>
                   )}
@@ -665,7 +665,7 @@ export default function Ch04CorporationsTech() {
               or promote injustice beyond mere inability to collect a judgment
             </li>
           </ol>
-          <p className="font-ui text-xs text-gray-500 mb-4">
+          <p className="font-ui text-sm text-gray-500 mb-4">
             Source: <em>Sea-Land Services v. Pepper Source</em>, 941 F.2d 519 (7th Cir. 1991) — applying
             the Van Dorn test to Marchese&apos;s interchangeable corporate shells.
           </p>
@@ -695,7 +695,7 @@ export default function Ch04CorporationsTech() {
                   <p className="font-headline text-sm uppercase text-gray-800 dark:text-gray-200 mb-1">
                     {f.label}
                   </p>
-                  <p className="font-body text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
+                  <p className="font-body text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
                     {f.description}
                   </p>
                   <div className="flex gap-2">
@@ -723,7 +723,7 @@ export default function Ch04CorporationsTech() {
                     </button>
                   </div>
                   {state.veilSubmitted && isWrong && (
-                    <p className="font-body text-xs mt-2 text-sprawl-bright-red">
+                    <p className="font-body text-sm mt-2 text-sprawl-bright-red">
                       Incorrect. This factor is {f.present ? "present" : "absent"} on these facts.
                     </p>
                   )}
@@ -944,7 +944,7 @@ export default function Ch04CorporationsTech() {
           />
 
           {!counselValid && (state.counselNote || "").length > 0 && (
-            <p className="font-ui text-xs text-sprawl-bright-red mt-1">
+            <p className="font-ui text-sm text-sprawl-bright-red mt-1">
               Counsel note must be at least 20 characters.
             </p>
           )}

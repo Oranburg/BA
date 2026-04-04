@@ -161,7 +161,7 @@ export default function Ch09FiduciaryDuties() {
         ConstructEdge faces a conflicted recap proposal while runway tightens. Build a board process
         record that can survive judicial review.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Facts changed since last chapter: entity form is now set, so fiduciary process quality and conflict handling—not formation choices—drive litigation posture.
       </p>
 
@@ -196,7 +196,7 @@ export default function Ch09FiduciaryDuties() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">What information must the board have?</h2>
-        <p className="font-ui text-xs text-gray-500 mb-3">Choose packet items before selecting a path.</p>
+        <p className="font-ui text-sm text-gray-500 mb-3">Choose packet items before selecting a path.</p>
         <div className="space-y-3">
           {BOARD_PACKET_ITEMS.map((item) => (
             <label key={item.id} className="flex items-start gap-2 border border-gray-200 dark:border-gray-700 rounded p-3">
@@ -210,17 +210,17 @@ export default function Ch09FiduciaryDuties() {
               />
               <span>
                 <span className="font-body text-sm text-gray-700 dark:text-gray-300">{item.label}</span>
-                <span className="block font-ui text-xs text-gray-500 mt-1">{item.why}</span>
+                <span className="block font-ui text-sm text-gray-500 mt-1">{item.why}</span>
               </span>
             </label>
           ))}
         </div>
-        <p className="mt-3 font-ui text-xs text-sprawl-teal">Packet readiness: {packetScore}/{BOARD_PACKET_ITEMS.length}</p>
+        <p className="mt-3 font-ui text-sm text-sprawl-teal">Packet readiness: {packetScore}/{BOARD_PACKET_ITEMS.length}</p>
       </section>
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Conflict analysis</h2>
-        <p className="font-ui text-xs text-gray-500 mb-3">Classify each fact as conflicted or not conflicted.</p>
+        <p className="font-ui text-sm text-gray-500 mb-3">Classify each fact as conflicted or not conflicted.</p>
         <div className="space-y-3">
           {CONFLICT_FACTS.map((fact) => (
             <div key={fact.id} className="border border-gray-200 dark:border-gray-700 rounded p-3">
@@ -247,7 +247,7 @@ export default function Ch09FiduciaryDuties() {
             </div>
           ))}
         </div>
-        <p className="mt-3 font-ui text-xs text-sprawl-teal">Conflict accuracy: {conflictScore}/{CONFLICT_FACTS.length}</p>
+        <p className="mt-3 font-ui text-sm text-sprawl-teal">Conflict accuracy: {conflictScore}/{CONFLICT_FACTS.length}</p>
       </section>
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
@@ -265,7 +265,7 @@ export default function Ch09FiduciaryDuties() {
             >
               <p className="font-headline text-sm uppercase text-gray-900 dark:text-white">{option.title}</p>
               <p className="font-body text-sm text-gray-600 dark:text-gray-300 mt-1">{option.summary}</p>
-              <p className="font-ui text-xs mt-2 text-sprawl-bright-red">Review risk: {option.reviewRisk}</p>
+              <p className="font-ui text-sm mt-2 text-sprawl-bright-red">Review risk: {option.reviewRisk}</p>
             </button>
           ))}
         </div>
@@ -285,7 +285,7 @@ export default function Ch09FiduciaryDuties() {
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
             <p className="font-ui text-xs uppercase tracking-wider text-gray-500 mb-2">Best plaintiff argument / best defense argument</p>
-            <p className="font-ui text-xs text-gray-600 dark:text-gray-300">Plaintiff: process engineered to protect insiders. Defense: independent process, informed deliberation, and documented alternatives.</p>
+            <p className="font-ui text-sm text-gray-600 dark:text-gray-300">Plaintiff: process engineered to protect insiders. Defense: independent process, informed deliberation, and documented alternatives.</p>
           </div>
         </div>
 

@@ -179,7 +179,7 @@ export default function Ch08EntitySelection() {
         Counsel Zeeva and Sammy on selecting an entity that survives founder conflict, investor pressure,
         and downside risk while preserving mission.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: authority and contracting exposure from agency become durable only once legal form allocates control and downside.
       </p>
 
@@ -223,25 +223,25 @@ export default function Ch08EntitySelection() {
         <div className="grid sm:grid-cols-2 gap-3">
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
             <p className="font-headline text-sm text-sprawl-yellow uppercase">Attribution</p>
-            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+            <p className="font-body text-sm text-gray-600 dark:text-gray-400 mt-1">
               Who has authority to act on behalf of the enterprise, and when do those acts bind the entity and its owners?
             </p>
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
             <p className="font-headline text-sm text-sprawl-yellow uppercase">Governance</p>
-            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+            <p className="font-body text-sm text-gray-600 dark:text-gray-400 mt-1">
               How are decisions made, who holds voting or veto power, and what happens when decision-makers disagree?
             </p>
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
             <p className="font-headline text-sm text-sprawl-yellow uppercase">Risk Allocation</p>
-            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+            <p className="font-body text-sm text-gray-600 dark:text-gray-400 mt-1">
               Who bears the financial downside when things go wrong -- the entity, its owners personally, or both?
             </p>
           </div>
           <div className="border border-gray-200 dark:border-gray-700 rounded p-3">
             <p className="font-headline text-sm text-sprawl-yellow uppercase">Asset Partitioning</p>
-            <p className="font-body text-xs text-gray-600 dark:text-gray-400 mt-1">
+            <p className="font-body text-sm text-gray-600 dark:text-gray-400 mt-1">
               Are business assets legally separated from personal assets, and will courts respect that boundary?
             </p>
           </div>
@@ -290,7 +290,7 @@ export default function Ch08EntitySelection() {
             >
               <p className="font-headline uppercase text-sm text-gray-900 dark:text-white">{entity.label}</p>
               <p className="font-body text-sm text-gray-600 dark:text-gray-300 mt-1">{entity.strengths}</p>
-              <p className="font-ui text-xs text-sprawl-bright-red mt-2">Watchout: {entity.warning}</p>
+              <p className="font-ui text-sm text-sprawl-bright-red mt-2">Watchout: {entity.warning}</p>
             </button>
           ))}
         </div>
@@ -317,7 +317,7 @@ export default function Ch08EntitySelection() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Change-One-Fact Branches</h2>
-        <p className="font-ui text-xs text-gray-500 mb-3">Select all facts that are true now; watch recommendation drift.</p>
+        <p className="font-ui text-sm text-gray-500 mb-3">Select all facts that are true now; watch recommendation drift.</p>
         <div className="space-y-3">
           {FACT_BRANCHES.map((branch) => (
             <label key={branch.id} className="flex items-start gap-2 border border-gray-200 dark:border-gray-700 rounded p-3">
@@ -332,7 +332,7 @@ export default function Ch08EntitySelection() {
               <span>
                 <span className="font-body text-sm text-gray-700 dark:text-gray-300">{branch.label}</span>
                 {!!state.branchChoices?.[branch.id] && (
-                  <span className="block mt-1 font-ui text-xs text-sprawl-teal">{branch.explanation}</span>
+                  <span className="block mt-1 font-ui text-sm text-sprawl-teal">{branch.explanation}</span>
                 )}
               </span>
             </label>
@@ -356,7 +356,7 @@ export default function Ch08EntitySelection() {
             <p className="font-headline text-lg text-sprawl-yellow uppercase">
               {ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Select facts to generate"}
             </p>
-            <p className="font-ui text-xs text-gray-500 mt-2">
+            <p className="font-ui text-sm text-gray-500 mt-2">
               Why this is hard: governance flexibility and investor-readiness often conflict with mission and liability priorities.
             </p>
           </div>
@@ -371,7 +371,7 @@ export default function Ch08EntitySelection() {
 
         <div className="mt-4 flex flex-wrap gap-3">
           {state.selectedEntity && (state.counselRecommendation || "").trim().length < 20 && (
-            <p className="font-ui text-xs text-sprawl-bright-red mb-2">
+            <p className="font-ui text-sm text-sprawl-bright-red mb-2">
               Please draft a counsel recommendation of at least 20 characters before completing the module.
             </p>
           )}

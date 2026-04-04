@@ -206,7 +206,7 @@ function WaterfallBar({ label, investor, founder, maxVal }) {
   const fdrPct = maxVal > 0 ? (founder / maxVal) * 100 : 0;
   return (
     <div className="space-y-1">
-      <p className="font-ui text-xs text-gray-400 uppercase">{label}</p>
+      <p className="font-ui text-sm text-gray-400 uppercase">{label}</p>
       <div className="flex h-8 rounded overflow-hidden bg-gray-800 border border-gray-700">
         <div
           className="bg-sprawl-bright-red flex items-center justify-center text-[10px] font-ui text-white transition-all duration-500"
@@ -307,7 +307,7 @@ export default function Ch10StayingPrivate() {
         the preference stack buried inside could leave Zeeva with nothing in a mediocre exit.
         Analyze both offers, visualize the exit waterfall, and learn why valuation alone is a trap.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: after selecting an entity form and establishing board process,
         the next risk frontier is the capital stack itself — preferred stock rights determine who
         actually gets paid when the company exits.
@@ -446,7 +446,7 @@ export default function Ch10StayingPrivate() {
                 <h5 className={`font-headline text-sm uppercase mb-3 ${isSelected ? `text-${term.color}` : "text-gray-300"}`}>
                   {term.label}
                 </h5>
-                <ul className="font-ui text-xs space-y-2 text-gray-400">
+                <ul className="font-ui text-sm space-y-2 text-gray-400">
                   <li className="flex justify-between">
                     <span>Investment:</span>
                     <span className="text-white">{(term.investment / 1_000_000).toFixed(0)}M CR</span>
@@ -484,7 +484,7 @@ export default function Ch10StayingPrivate() {
               <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                 Liquidation Preference
               </p>
-              <p className="font-body text-xs text-gray-400 leading-relaxed">
+              <p className="font-body text-sm text-gray-400 leading-relaxed">
                 The right of preferred shareholders to be paid a fixed amount (usually 1x original
                 investment) before any payment is made to common shareholders.
               </p>
@@ -493,7 +493,7 @@ export default function Ch10StayingPrivate() {
               <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-yellow mb-1">
                 Participation Rights ("Double Dipping")
               </p>
-              <p className="font-body text-xs text-gray-400 leading-relaxed">
+              <p className="font-body text-sm text-gray-400 leading-relaxed">
                 The right to receive the liquidation preference AND then share pro-rata in the
                 remaining proceeds with common stock. Dramatically increases investor take at the
                 expense of founders.
@@ -556,11 +556,11 @@ export default function Ch10StayingPrivate() {
           <div className="flex gap-4 mb-4">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded bg-sprawl-bright-red" />
-              <span className="font-ui text-xs text-gray-400">Investor Payout</span>
+              <span className="font-ui text-sm text-gray-400">Investor Payout</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded bg-sprawl-teal" />
-              <span className="font-ui text-xs text-gray-400">Founder Payout (Common)</span>
+              <span className="font-ui text-sm text-gray-400">Founder Payout (Common)</span>
             </div>
           </div>
 
@@ -588,7 +588,7 @@ export default function Ch10StayingPrivate() {
                   Why These Numbers?
                 </p>
                 {selectedTerm === "alpha" ? (
-                  <div className="font-body text-xs text-gray-400 space-y-2">
+                  <div className="font-body text-sm text-gray-400 space-y-2">
                     <p>
                       <strong className="text-gray-300">Step 1 — Preference or convert?</strong>{" "}
                       Alpha has 1x non-participating preferred. The investor chooses the greater of
@@ -611,7 +611,7 @@ export default function Ch10StayingPrivate() {
                     )}
                   </div>
                 ) : (
-                  <div className="font-body text-xs text-gray-400 space-y-2">
+                  <div className="font-body text-sm text-gray-400 space-y-2">
                     <p>
                       <strong className="text-gray-300">Step 1 — 2x preference off the top.</strong>{" "}
                       {"Beta's"} 2x participating preferred means investors take $10M (2 x $5M investment)
@@ -766,7 +766,7 @@ export default function Ch10StayingPrivate() {
                         {isCorrect ? "Correct" : `Incorrect — answer: ${blank.options.find((o) => o.value === blank.correct)?.label}`}
                       </span>
                     </p>
-                    <p className="font-body text-xs text-gray-400">{blank.explanation}</p>
+                    <p className="font-body text-sm text-gray-400">{blank.explanation}</p>
                   </div>
                 );
               })}

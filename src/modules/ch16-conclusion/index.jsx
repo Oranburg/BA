@@ -208,7 +208,7 @@ function FirmIntegrityDisplay({ selections }) {
     <div className="border border-gray-700 rounded-lg p-6 bg-black/30">
       <div className="flex justify-between items-center mb-4">
         <p className="font-headline text-sm uppercase text-sprawl-yellow">Firm Integrity HUD</p>
-        <p className="font-ui text-xs text-gray-400">
+        <p className="font-ui text-sm text-gray-400">
           Synthesis Score: <span className="text-white font-bold">{avgScore}%</span>
         </p>
       </div>
@@ -218,7 +218,7 @@ function FirmIntegrityDisplay({ selections }) {
           <div key={s.label}>
             <div className="flex justify-between mb-1">
               <p className={`font-ui text-xs uppercase text-${s.color}`}>{s.label}</p>
-              <p className="font-ui text-xs text-gray-400">{s.score}%</p>
+              <p className="font-ui text-sm text-gray-400">{s.score}%</p>
             </div>
             <div className="h-4 rounded bg-gray-800 overflow-hidden border border-gray-700">
               <div
@@ -312,7 +312,7 @@ export default function Ch16Conclusion() {
         architectural blueprint. Now synthesize the legal technologies you have deployed across
         the Four Problems and declare your final understanding of the firm as a legal technology.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         This is the final module. Every chapter has built toward this synthesis: the firm is an
         artificial person constructed from statutes and contracts to solve the four recurring
         problems of human coordination for profit.

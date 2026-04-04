@@ -131,7 +131,7 @@ export default function Ch12ShareholderFranchise() {
         ConstructEdge enters public-company governance. Activist pressure, disclosure friction, and
         process design now determine franchise legitimacy.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: once fiduciary process is contested, control shifts to vote mechanics, disclosure quality, and stockholder discipline tools.
       </p>
 
@@ -196,7 +196,7 @@ export default function Ch12ShareholderFranchise() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Risk ranking exercise</h2>
-        <p className="font-ui text-xs text-gray-500 mb-3">Rank from strongest litigation risk to weakest.</p>
+        <p className="font-ui text-sm text-gray-500 mb-3">Rank from strongest litigation risk to weakest.</p>
         <div className="space-y-2">
           {PROXY_FACTS.map((fact) => {
             const position = ranking.indexOf(fact.id);
@@ -204,7 +204,7 @@ export default function Ch12ShareholderFranchise() {
               <div key={fact.id} className="border border-gray-200 dark:border-gray-700 rounded p-3">
                 <p className="font-body text-sm text-gray-700 dark:text-gray-300">{fact.text}</p>
                 <div className="mt-2 flex flex-wrap gap-2 items-center">
-                  <span className="font-ui text-xs text-gray-500">Position:</span>
+                  <span className="font-ui text-sm text-gray-500">Position:</span>
                   {[1, 2, 3, 4].map((n) => (
                     <button
                       key={n}
@@ -222,13 +222,13 @@ export default function Ch12ShareholderFranchise() {
                       {n}
                     </button>
                   ))}
-                  <span className="font-ui text-xs text-sprawl-light-blue">Weight: {fact.legalWeight}</span>
+                  <span className="font-ui text-sm text-sprawl-light-blue">Weight: {fact.legalWeight}</span>
                 </div>
               </div>
             );
           })}
         </div>
-        <p className="mt-3 font-ui text-xs text-sprawl-teal">Ranking precision: {rankingQuality}/4</p>
+        <p className="mt-3 font-ui text-sm text-sprawl-teal">Ranking precision: {rankingQuality}/4</p>
         {ranking.length === 4 && (
           <div className="mt-4 border-t border-gray-200 dark:border-gray-700 pt-3">
             <p className="font-headline text-sm uppercase text-gray-900 dark:text-white mb-2">Model Ranking &amp; Rationale</p>
@@ -260,7 +260,7 @@ export default function Ch12ShareholderFranchise() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Choose-the-process</h2>
-        <p className="font-ui text-xs text-gray-500 mb-3">Pick the process most defensible under franchise-sensitive scrutiny.</p>
+        <p className="font-ui text-sm text-gray-500 mb-3">Pick the process most defensible under franchise-sensitive scrutiny.</p>
         <div className="space-y-2">
           {PROCESS_CHOICES.map((choice) => (
             <button
@@ -273,7 +273,7 @@ export default function Ch12ShareholderFranchise() {
               }`}
             >
               <p className="font-body text-sm text-gray-700 dark:text-gray-300">{choice.label}</p>
-              <p className="font-ui text-xs text-gray-500 mt-1">Process quality: {choice.quality}</p>
+              <p className="font-ui text-sm text-gray-500 mt-1">Process quality: {choice.quality}</p>
             </button>
           ))}
         </div>
@@ -281,7 +281,7 @@ export default function Ch12ShareholderFranchise() {
 
       <section className="border border-sprawl-yellow/30 rounded-lg p-4 bg-white dark:bg-sprawl-deep-blue/40">
         <h2 className="font-headline text-xl uppercase text-gray-900 dark:text-white mb-2">Missing fact finder</h2>
-        <p className="font-ui text-xs text-gray-500 mb-2">Identify one missing fact that could flip your recommendation.</p>
+        <p className="font-ui text-sm text-gray-500 mb-2">Identify one missing fact that could flip your recommendation.</p>
         <label htmlFor="missing-fact" className="sr-only">Missing fact</label>
         <input
           id="missing-fact"
@@ -303,7 +303,7 @@ export default function Ch12ShareholderFranchise() {
           className="w-full min-h-32 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-3 font-body text-sm"
         />
         {(state.notes || "").length < 20 && (
-          <p className="mt-2 font-ui text-xs text-sprawl-bright-red">
+          <p className="mt-2 font-ui text-sm text-sprawl-bright-red">
             Counsel notes must be at least 20 characters before completing this module.
           </p>
         )}

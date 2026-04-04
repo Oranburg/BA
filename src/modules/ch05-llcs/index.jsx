@@ -286,7 +286,7 @@ export default function Ch05LLCs() {
         configure their Operating Agreement and understand how the LLC&apos;s governance flexibility
         creates both opportunity and risk.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: the partnership from Chapter 03 demonstrated the danger of
         default rules. The LLC lets founders write their own rules — but contractual freedom means
         every gap in the OA becomes a litigation risk.
@@ -382,7 +382,7 @@ export default function Ch05LLCs() {
 
           <div className="space-y-4">
             <div>
-              <div className="flex justify-between font-ui text-xs mb-1">
+              <div className="flex justify-between font-ui text-sm mb-1">
                 <span className="text-gray-600 dark:text-gray-300">Zeeva (Member Control)</span>
                 <span className="text-sprawl-yellow font-bold">{stats.zeevaControl}%</span>
               </div>
@@ -394,7 +394,7 @@ export default function Ch05LLCs() {
               </div>
             </div>
             <div>
-              <div className="flex justify-between font-ui text-xs mb-1">
+              <div className="flex justify-between font-ui text-sm mb-1">
                 <span className="text-gray-600 dark:text-gray-300">
                   Sammy (Agency Authority)
                 </span>
@@ -408,7 +408,7 @@ export default function Ch05LLCs() {
               </div>
             </div>
             <div>
-              <div className="flex justify-between font-ui text-xs mb-1">
+              <div className="flex justify-between font-ui text-sm mb-1">
                 <span className="text-gray-600 dark:text-gray-300">Contractual Flexibility</span>
                 <span className="text-sprawl-teal font-bold">{stats.flexibility}%</span>
               </div>
@@ -427,7 +427,7 @@ export default function Ch05LLCs() {
               <p className="font-ui text-[10px] uppercase tracking-wider text-sprawl-yellow mb-1">
                 Control
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 {oaConfig.mgmt === "manager"
                   ? "Sammy as designated manager holds day-to-day authority. Zeeva retains oversight through the OA."
                   : "Both members share equal management authority. Every decision requires consensus or majority."}
@@ -437,7 +437,7 @@ export default function Ch05LLCs() {
               <p className="font-ui text-[10px] uppercase tracking-wider text-sprawl-yellow mb-1">
                 Authority
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 {oaConfig.duty === "modified"
                   ? "Modified duties give Sammy more operating room but weaken Zeeva's ability to challenge self-interested transactions."
                   : "Strict fiduciary duties apply. Self-dealing requires entire fairness analysis (cf. Gatz v. Auriga)."}
@@ -447,7 +447,7 @@ export default function Ch05LLCs() {
               <p className="font-ui text-[10px] uppercase tracking-wider text-sprawl-yellow mb-1">
                 Flexibility
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 {oaConfig.econ === "pro-rata"
                   ? "Pro-rata allocation ties economic rights to capital contribution, giving Zeeva more economic leverage."
                   : "Equal allocation mirrors partnership default. Simple but may not reflect actual contributions."}
@@ -506,7 +506,7 @@ export default function Ch05LLCs() {
                 <p className="font-headline text-sm uppercase text-gray-800 dark:text-gray-200 mb-2">
                   Your OA Configuration Summary
                 </p>
-                <div className="grid grid-cols-3 gap-3 font-ui text-xs">
+                <div className="grid grid-cols-3 gap-3 font-ui text-sm">
                   <div>
                     <p className="text-gray-500 uppercase">Management</p>
                     <p className="text-gray-800 dark:text-gray-200 font-bold">
@@ -539,7 +539,7 @@ export default function Ch05LLCs() {
                   <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                     ULLCA ss 407 (Management)
                   </p>
-                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                  <p className="font-body text-sm text-gray-400 leading-relaxed">
                     LLCs are{" "}
                     <strong className="text-gray-200">member-managed</strong> by default unless
                     the operating agreement specifically provides for a manager-managed structure.
@@ -549,7 +549,7 @@ export default function Ch05LLCs() {
                   <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                     ULLCA ss 110 (Operating Agreement)
                   </p>
-                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                  <p className="font-body text-sm text-gray-400 leading-relaxed">
                     The{" "}
                     <strong className="text-gray-200">Operating Agreement</strong> governs
                     relations among members and the company. It is the core of the LLC&apos;s
@@ -560,7 +560,7 @@ export default function Ch05LLCs() {
                   <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                     ULLCA ss 409 (Fiduciary Duties)
                   </p>
-                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                  <p className="font-body text-sm text-gray-400 leading-relaxed">
                     Members and managers owe duties of{" "}
                     <strong className="text-gray-200">loyalty and care</strong>. The OA may
                     restrict or eliminate these duties, but may not eliminate the implied covenant
@@ -568,7 +568,7 @@ export default function Ch05LLCs() {
                   </p>
                 </div>
                 <div className="border border-white/10 rounded p-3 bg-black/30">
-                  <p className="font-body text-xs italic text-sprawl-light-blue">
+                  <p className="font-body text-sm italic text-sprawl-light-blue">
                     &quot;The LLC is the dominant vehicle for closely held ventures because it
                     combines corporate-type limited liability with partnership-type flexibility
                     and the contractual freedom to define governance by private ordering.&quot;

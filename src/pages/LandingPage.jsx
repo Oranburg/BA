@@ -163,14 +163,14 @@ export default function LandingPage() {
               <div className="w-8 h-8 rounded-full bg-sprawl-yellow/20 border border-sprawl-yellow flex items-center justify-center text-sprawl-yellow font-headline font-bold text-sm">Z</div>
               <div className="text-left">
                 <p className="font-headline text-sprawl-yellow uppercase tracking-wider text-xs">Zeeva</p>
-                <p className="font-ui text-gray-400 text-xs">Structural Architect · Principal</p>
+                <p className="font-ui text-gray-400 text-sm">Structural Architect · Principal</p>
               </div>
             </div>
             <div className="flex items-center gap-3 bg-sprawl-teal/10 border border-sprawl-teal/40 rounded-full px-5 py-2">
               <div className="w-8 h-8 rounded-full bg-sprawl-teal/20 border border-sprawl-teal flex items-center justify-center text-sprawl-teal font-headline font-bold text-sm">S</div>
               <div className="text-left">
                 <p className="font-headline text-sprawl-teal uppercase tracking-wider text-xs">Sammy</p>
-                <p className="font-ui text-gray-400 text-xs">Strategic Fixer · Agent</p>
+                <p className="font-ui text-gray-400 text-sm">Strategic Fixer · Agent</p>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function LandingPage() {
                 <p className="font-body text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                   {p.desc}
                 </p>
-                <p className="font-ui text-xs text-gray-400">
+                <p className="font-ui text-sm text-gray-400">
                   Ch. {p.chapters.map((c) => c.replace("ch0", "").replace("ch", "")).join(", ")}
                 </p>
               </div>
@@ -315,7 +315,7 @@ export default function LandingPage() {
               16 modules mapping the evolution of business association law.
             </p>
             {recommendedNext && (
-              <p className="font-ui text-xs text-sprawl-teal mt-4">
+              <p className="font-ui text-sm text-sprawl-teal mt-4">
                 Suggested next: {recommendedNext.title}
               </p>
             )}
@@ -360,11 +360,11 @@ export default function LandingPage() {
                       <h4 className="font-headline uppercase tracking-wider text-sm text-gray-800 dark:text-gray-200">
                         {ch.title}
                       </h4>
-                      <span className={`font-ui text-xs ${PROBLEM_COLORS[ch.problem] || "text-gray-400"}`}>
+                      <span className={`font-ui text-sm ${PROBLEM_COLORS[ch.problem] || "text-gray-400"}`}>
                         [{ch.problem}]
                       </span>
                     </div>
-                    <p className="font-ui text-xs text-gray-500 dark:text-gray-500 truncate">{ch.focus}</p>
+                    <p className="font-ui text-sm text-gray-500 dark:text-gray-500 truncate">{ch.focus}</p>
                   </div>
                 </Link>
               );
@@ -385,7 +385,7 @@ export default function LandingPage() {
               managed by or under the direction of a board of directors, except as may be otherwise
               provided in this chapter or in its certificate of incorporation."
             </p>
-            <cite className="block mt-3 font-ui text-sprawl-yellow/70 text-xs not-italic">
+            <cite className="block mt-3 font-ui text-sprawl-yellow/70 text-sm not-italic">
               <CitationChip citation="DGCL § 141(a)" /> — source:{" "}
               <span className="text-sprawl-yellow/50">processed/segments/dgcl.jsonl</span>
             </cite>

@@ -266,11 +266,11 @@ export default function Ch02Agency() {
         The Neural-Link Handshake
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Who Controls the Fixer?</p>
-      <p className="font-ui text-xs text-gray-500 mb-2">
+      <p className="font-ui text-sm text-gray-500 mb-2">
         Lifecycle fit: this is the first legal gate—before structure or board design, counsel must determine who can bind ConstructEdge.
       </p>
       <div className="mb-8 flex flex-wrap items-center gap-2">
-        <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
+        <p className="font-ui text-sm text-gray-500 dark:text-gray-400">
           RSA § 1.01, § 2.01, § 7.07 · A. Gay Jenson Farms v. Cargill, 309 N.W.2d 285 (Minn. 1981)
         </p>
         <CitationChip citation="RSA § 2.01" />
@@ -335,7 +335,7 @@ export default function Ch02Agency() {
               torts — but not an independent contractor's. The key question:{" "}
               <em>did Zeeva control the manner and means of Sammy's work?</em>
             </p>
-            <p className="font-ui text-xs text-gray-500 dark:text-gray-400 italic mb-4">
+            <p className="font-ui text-sm text-gray-500 dark:text-gray-400 italic mb-4">
               Classify each factor as pointing toward EMPLOYEE status or INDEPENDENT CONTRACTOR status.
             </p>
 
@@ -343,7 +343,7 @@ export default function Ch02Agency() {
             {controlChecked && (
               <div className="mb-4 grid grid-cols-2 gap-4">
                 <div className="bg-sprawl-teal/10 border border-sprawl-teal/40 rounded p-3 text-center">
-                  <p className="font-ui text-xs text-sprawl-teal uppercase mb-1">Employee Weight</p>
+                  <p className="font-ui text-sm text-sprawl-teal uppercase mb-1">Employee Weight</p>
                   <p className="font-headline text-3xl text-sprawl-teal">{empScore}</p>
                 </div>
                 <div className="bg-sprawl-yellow/10 border border-sprawl-yellow/40 rounded p-3 text-center">
@@ -388,7 +388,7 @@ export default function Ch02Agency() {
                       })}
                     </div>
                     {controlChecked && (
-                      <p className="mt-2 font-ui text-xs text-gray-500 dark:text-gray-400 italic">
+                      <p className="mt-2 font-ui text-sm text-gray-500 dark:text-gray-400 italic">
                         {factor.explanation}
                       </p>
                     )}
@@ -440,7 +440,7 @@ export default function Ch02Agency() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
               {Object.entries(AUTHORITY_LABELS).map(([key, label]) => (
                 <div key={key} className="text-center p-2 bg-sprawl-deep-blue/20 dark:bg-sprawl-deep-blue/40 border border-sprawl-yellow/10 rounded">
-                  <p className="font-ui text-xs text-sprawl-yellow">{label}</p>
+                  <p className="font-ui text-sm text-sprawl-yellow">{label}</p>
                 </div>
               ))}
             </div>
@@ -474,7 +474,7 @@ export default function Ch02Agency() {
                     })}
                   </div>
                   {authChecked && (
-                    <p className="mt-2 font-ui text-xs text-gray-500 dark:text-gray-400 italic">
+                    <p className="mt-2 font-ui text-sm text-gray-500 dark:text-gray-400 italic">
                       <span className={authAnswers[q.id] === q.correct ? "text-sprawl-teal" : "text-sprawl-bright-red"}>
                         {authAnswers[q.id] === q.correct ? "✓ Correct" : "✗ Incorrect"}
                       </span>{" "}
@@ -543,10 +543,10 @@ export default function Ch02Agency() {
                     onClick={() => !respChecked && setRespAnswer(choice.id)}
                     className={cls}
                   >
-                    <span className="font-ui font-bold text-xs mr-2 text-gray-500">{choice.id.toUpperCase()}.</span>
+                    <span className="font-ui font-bold text-sm mr-2 text-gray-500">{choice.id.toUpperCase()}.</span>
                     <span className="text-gray-700 dark:text-gray-200">{choice.text}</span>
                     {respChecked && isSelected && (
-                      <p className="mt-2 font-ui text-xs italic text-gray-500 dark:text-gray-400">
+                      <p className="mt-2 font-ui text-sm italic text-gray-500 dark:text-gray-400">
                         {choice.explanation}
                       </p>
                     )}
@@ -602,7 +602,7 @@ export default function Ch02Agency() {
                 { label: "Respondeat", score: RESPONDEAT_SCENARIO.choices.find((c) => c.id === respAnswer)?.correct ? "✓" : "✗" },
               ].map((s) => (
                 <div key={s.label} className="bg-sprawl-deep-blue/50 border border-sprawl-yellow/20 rounded p-3">
-                  <p className="font-ui text-xs text-gray-400 uppercase">{s.label}</p>
+                  <p className="font-ui text-sm text-gray-400 uppercase">{s.label}</p>
                   <p className="font-headline text-2xl text-sprawl-teal">{s.score}</p>
                 </div>
               ))}
@@ -614,12 +614,12 @@ export default function Ch02Agency() {
               conduct — no formal agreement required.
             </p>
             <div className="mt-4 max-w-xl mx-auto text-left border border-sprawl-yellow/30 rounded p-3 bg-sprawl-yellow/5">
-              <p className="font-ui text-xs text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation notes</p>
+              <p className="font-ui text-sm text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation notes</p>
               <textarea
                 value={counselNotes}
                 onChange={(e) => setCounselNotes(e.target.value)}
                 placeholder="Capture final agency counseling takeaways and facts to verify in diligence."
-                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-xs text-gray-800 dark:text-gray-200"
+                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-sm text-gray-800 dark:text-gray-200"
               />
             </div>
             <div className="mt-4 flex justify-center">
@@ -660,7 +660,7 @@ Key unresolved facts:
                 Complete Module + Export Agency Analysis Sheet
               </button>
             </div>
-            <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-xs text-gray-400 max-w-xl mx-auto">
+            <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-sm text-gray-400 max-w-xl mx-auto">
               <p className="text-sprawl-teal font-bold mb-1">CASEBOOK REFERENCE</p>
               <p><em>A. Gay Jenson Farms Co. v. Cargill, Inc.</em>, 309 N.W.2d 285 (Minn. 1981) — Control test, course of dealing</p>
               <p className="mt-1">RSA § 1.01 — Definition of Agency</p>
@@ -683,7 +683,7 @@ Key unresolved facts:
               Restart Investigation
             </button>
             <div className="mt-4 text-center">
-              <p className="font-ui text-xs text-gray-500 mb-2">{flow.bridge}</p>
+              <p className="font-ui text-sm text-gray-500 mb-2">{flow.bridge}</p>
               <Link
                 to={APP_ROUTES.ch08EntitySelection}
                 className="inline-flex items-center gap-2 px-3 py-2 rounded border border-sprawl-light-blue text-sprawl-light-blue font-ui text-xs uppercase tracking-wider hover:bg-sprawl-light-blue/10"

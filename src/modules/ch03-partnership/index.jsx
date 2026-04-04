@@ -295,7 +295,7 @@ export default function Ch03Partnership() {
         Identify the legal triggers that form an accidental partnership under RUPA ss 202, then
         trace the consequences.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: agency authority from Chapter 02 becomes far more dangerous once
         a partnership exists — every partner can bind the firm, and all partners share unlimited
         personal liability.
@@ -360,7 +360,7 @@ export default function Ch03Partnership() {
             is the single strongest evidentiary trigger. Once profit-sharing is established, the
             burden shifts to the party denying partnership status.
           </p>
-          <p className="font-ui text-xs text-gray-500 italic">
+          <p className="font-ui text-sm text-gray-500 italic">
             Keep these two rules in mind as you read the napkin below. Your task is to identify
             which phrases in the conversation satisfy these statutory elements.
           </p>
@@ -436,10 +436,10 @@ export default function Ch03Partnership() {
             </div>
 
             <div className="mt-3 flex justify-between items-center">
-              <p className="font-ui text-xs text-sprawl-light-blue uppercase">
+              <p className="font-ui text-sm text-sprawl-light-blue uppercase">
                 Task: Click the phrases that establish a Partnership under RUPA ss 202
               </p>
-              <p className="font-ui text-xs text-white">
+              <p className="font-ui text-sm text-white">
                 Triggers found:{" "}
                 <span className="text-sprawl-yellow font-bold">{triggersFound.length}</span> /{" "}
                 {TRIGGER_COUNT}
@@ -493,7 +493,7 @@ export default function Ch03Partnership() {
                   Source Authority: RUPA
                 </p>
                 <p className="font-headline text-sm text-white">ss 202. Formation of Partnership.</p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed mt-1">
+                <p className="font-body text-sm text-gray-400 leading-relaxed mt-1">
                   (a) ...the association of two or more persons to carry on as{" "}
                   <strong className="text-gray-200">co-owners</strong> a business for profit forms a
                   partnership,{" "}
@@ -510,7 +510,7 @@ export default function Ch03Partnership() {
                 <p className="font-headline text-sm text-white">
                   ss 202(c)(3) The Profit Trigger
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed mt-1">
+                <p className="font-body text-sm text-gray-400 leading-relaxed mt-1">
                   A person who receives a{" "}
                   <strong className="text-gray-200">share of the profits</strong> of a business is
                   presumed to be a partner in the business...
@@ -518,7 +518,7 @@ export default function Ch03Partnership() {
               </div>
 
               <div className="border border-white/10 rounded p-3 bg-black/30">
-                <p className="font-body text-xs italic text-sprawl-light-blue">
+                <p className="font-body text-sm italic text-sprawl-light-blue">
                   "The law treats partnerships as the 'default' setting for human cooperation for
                   profit. If you act like owners and share the wins, you are partners — with all the
                   joint and several liability that entails."
@@ -668,7 +668,7 @@ export default function Ch03Partnership() {
                           {blank.prompt}
                         </p>
                         {!isCorrect && blank.hint && (
-                          <p className="font-body text-xs text-sprawl-yellow mt-1 italic">
+                          <p className="font-body text-sm text-sprawl-yellow mt-1 italic">
                             Hint: {blank.hint}
                           </p>
                         )}
@@ -721,7 +721,7 @@ export default function Ch03Partnership() {
             (RUPA ss 301) and all partners share <strong>joint and several liability</strong> (RUPA ss 306).
             Explore what this means in practice by examining each scenario.
           </p>
-          <p className="font-ui text-xs text-gray-500 mb-4">
+          <p className="font-ui text-sm text-gray-500 mb-4">
             Check each scenario after reading the analysis to confirm understanding.
           </p>
 

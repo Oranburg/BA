@@ -186,7 +186,7 @@ function ConfidenceTracker({ score, liabilityStatus }) {
             style={{ width: `${barWidth}%` }}
           />
         </div>
-        <p className="font-ui text-xs text-sprawl-teal text-right">{score}%</p>
+        <p className="font-ui text-sm text-sprawl-teal text-right">{score}%</p>
       </div>
       <div className="border border-gray-700 rounded p-3 bg-black/30">
         <p className="font-ui text-[10px] uppercase tracking-widest text-gray-500 mb-2">
@@ -307,7 +307,7 @@ export default function Ch11GoingPublic() {
         prospectus for material omissions and misstatements before the SEC filing. If Zeeva hides
         the Sky-Tower structural glitch, the IPO becomes a liability trap.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: going public scales the asset partition beyond private investors
         to public markets — but only if disclosure is complete and accurate. Securities Act ss 11
         imposes strict liability on issuers for material defects in registration statements.
@@ -508,7 +508,7 @@ export default function Ch11GoingPublic() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   Section 11 Liability
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   Strict liability for issuers if a registration statement contains an untrue
                   statement of <strong className="text-gray-200">material fact</strong> or omits a
                   material fact necessary to make the statements not misleading.
@@ -518,14 +518,14 @@ export default function Ch11GoingPublic() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-yellow mb-1">
                   Materiality Standard
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   Information is material if there is a{" "}
                   <strong className="text-gray-200">substantial likelihood</strong> that a reasonable
                   investor would consider it important in making an investment decision.
                 </p>
               </div>
               <div className="border border-white/10 rounded p-3 bg-black/30">
-                <p className="font-body text-xs italic text-sprawl-light-blue">
+                <p className="font-body text-sm italic text-sprawl-light-blue">
                   "The Securities Act creates a mandatory disclosure regime: you may sell securities
                   to the public, but only if you tell the truth. Section 11 enforces this with
                   near-absolute liability for the issuer."
@@ -667,7 +667,7 @@ export default function Ch11GoingPublic() {
                         {isCorrect ? "Correct" : `Incorrect — answer: ${blank.options.find((o) => o.value === blank.correct)?.label}`}
                       </span>
                     </p>
-                    <p className="font-body text-xs text-gray-400">{blank.explanation}</p>
+                    <p className="font-body text-sm text-gray-400">{blank.explanation}</p>
                   </div>
                 );
               })}

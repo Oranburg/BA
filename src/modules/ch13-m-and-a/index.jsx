@@ -275,11 +275,11 @@ export default function Ch13MA() {
         The Deal Room
       </h1>
       <p className="font-body text-lg text-sprawl-yellow mb-1">Enhanced Scrutiny in The Sprawl</p>
-      <p className="font-ui text-xs text-gray-500 mb-2">
+      <p className="font-ui text-sm text-gray-500 mb-2">
         Why this chapter matters now: shareholder-control conflict matures into sale-process pressure, where process quality and control transfer define outcomes.
       </p>
       <div className="mb-8 flex flex-wrap items-center gap-2">
-        <p className="font-ui text-xs text-gray-500 dark:text-gray-400">
+        <p className="font-ui text-sm text-gray-500 dark:text-gray-400">
           Unocal Corp. v. Mesa Petroleum Co., 493 A.2d 946 (Del. 1985) · Revlon, Inc. v. MacAndrews &amp; Forbes, 506 A.2d 173 (Del. 1986) · DGCL § 141(a)
         </p>
         <CitationChip citation="DGCL § 141(a)" />
@@ -345,10 +345,10 @@ export default function Ch13MA() {
             <p className="font-body text-sm text-gray-700 dark:text-gray-300 mb-4">
               {UNOCAL_PRONG1.question}
             </p>
-            <p className="font-ui text-xs text-gray-500 dark:text-gray-400 italic mb-4">
+            <p className="font-ui text-sm text-gray-500 dark:text-gray-400 italic mb-4">
               {UNOCAL_PRONG1.hint}
             </p>
-            <p className="font-ui text-xs text-sprawl-teal mb-4">
+            <p className="font-ui text-sm text-sprawl-teal mb-4">
               Mark each piece of evidence as SUPPORTS prong 1 ✓ or UNDERMINES prong 1 ✗
             </p>
             <div className="space-y-3">
@@ -415,7 +415,7 @@ export default function Ch13MA() {
                   {UNOCAL_PRONG1.evidence.map((ev) => {
                     const userCorrect = p1Answers[ev.id] === UNOCAL_PRONG1.correctAnswers[ev.id];
                     return (
-                      <div key={ev.id} className={`p-2 rounded text-xs font-ui border ${userCorrect ? "border-sprawl-teal/30 text-gray-500 dark:text-gray-400" : "border-sprawl-bright-red/40 bg-sprawl-bright-red/5"}`}>
+                      <div key={ev.id} className={`p-2 rounded text-sm font-ui border ${userCorrect ? "border-sprawl-teal/30 text-gray-500 dark:text-gray-400" : "border-sprawl-bright-red/40 bg-sprawl-bright-red/5"}`}>
                         <span className={userCorrect ? "text-sprawl-teal" : "text-sprawl-bright-red"}>
                           {userCorrect ? "✓" : "✗"}
                         </span>{" "}
@@ -466,10 +466,10 @@ export default function Ch13MA() {
                 }
                 return (
                   <button key={choice.id} onClick={() => !p2Checked && setP2Answer(choice.id)} className={cls}>
-                    <span className="font-ui font-bold text-xs mr-2">{choice.id.toUpperCase()}.</span>
+                    <span className="font-ui font-bold text-sm mr-2">{choice.id.toUpperCase()}.</span>
                     {choice.text}
                     {isChecked && isSelected && (
-                      <p className="mt-2 font-ui text-xs italic text-gray-500 dark:text-gray-400">
+                      <p className="mt-2 font-ui text-sm italic text-gray-500 dark:text-gray-400">
                         {choice.explanation}
                       </p>
                     )}
@@ -524,7 +524,7 @@ export default function Ch13MA() {
             <div className="space-y-4">
               {REVLON_TRIGGERS.map((trigger, idx) => (
                 <div key={trigger.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                  <p className="font-ui text-xs text-sprawl-light-blue mb-1">Scenario {idx + 1}</p>
+                  <p className="font-ui text-sm text-sprawl-light-blue mb-1">Scenario {idx + 1}</p>
                   <p className="font-body text-sm text-gray-800 dark:text-gray-200 mb-3">{trigger.scenario}</p>
                   <div className="flex gap-3">
                     {["yes", "no"].map((val) => {
@@ -552,7 +552,7 @@ export default function Ch13MA() {
                     })}
                   </div>
                   {revlonChecked && revlonAnswers[trigger.id] && (
-                    <div className={`mt-2 p-2 rounded font-ui text-xs ${revlonAnswers[trigger.id] === trigger.answer ? "text-sprawl-teal" : "text-sprawl-bright-red"}`}>
+                    <div className={`mt-2 p-2 rounded font-ui text-sm ${revlonAnswers[trigger.id] === trigger.answer ? "text-sprawl-teal" : "text-sprawl-bright-red"}`}>
                       {trigger.explanation}
                     </div>
                   )}
@@ -669,7 +669,7 @@ export default function Ch13MA() {
                 { label: "Holding", score: `${holdingScore}/${holdingParts.length}` },
               ].map((s) => (
                 <div key={s.label} className="bg-sprawl-deep-blue/50 border border-sprawl-yellow/20 rounded p-3">
-                  <p className="font-ui text-xs text-gray-400 uppercase">{s.label}</p>
+                  <p className="font-ui text-sm text-gray-400 uppercase">{s.label}</p>
                   <p className="font-headline text-2xl text-sprawl-teal">{s.score}</p>
                 </div>
               ))}
@@ -681,12 +681,12 @@ export default function Ch13MA() {
               faith — its defense was upheld, and the company remained independent.
             </p>
             <div className="mt-4 max-w-xl mx-auto text-left border border-sprawl-yellow/30 rounded p-3 bg-sprawl-yellow/5">
-              <p className="font-ui text-xs text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation</p>
+              <p className="font-ui text-sm text-gray-500 mb-2 uppercase tracking-wider">Counsel recommendation</p>
               <textarea
                 value={counselRecommendation}
                 onChange={(e) => setCounselRecommendation(e.target.value)}
                 placeholder="Draft board recommendation: process, alternatives, and litigation posture."
-                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-xs text-gray-800 dark:text-gray-200"
+                className="w-full min-h-24 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-sprawl-deep-blue/70 p-2 font-body text-sm text-gray-800 dark:text-gray-200"
               />
             </div>
             <div className="mt-4 flex justify-center">
@@ -728,7 +728,7 @@ Process checklist:
                 Complete Module + Export M&A Board Recommendation
               </button>
             </div>
-            <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-xs text-gray-400 max-w-xl mx-auto">
+            <div className="text-left bg-black/20 border border-sprawl-teal/20 rounded p-4 font-ui text-sm text-gray-400 max-w-xl mx-auto">
               <p className="text-sprawl-teal font-bold mb-1">CASEBOOK REFERENCE</p>
               <p><em>Unocal Corp. v. Mesa Petroleum Co.</em>, 493 A.2d 946 (Del. 1985) — Enhanced scrutiny, two-prong test</p>
               <p className="mt-1"><em>Revlon, Inc. v. MacAndrews &amp; Forbes Holdings, Inc.</em>, 506 A.2d 173 (Del. 1986) — Auctioneer duty</p>

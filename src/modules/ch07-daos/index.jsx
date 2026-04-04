@@ -280,7 +280,7 @@ export default function Ch07DAOs() {
         charter, no board, and no legal entity, courts must decide: is this a new kind of
         organization, or just an old partnership dressed in code?
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: the LLC from Chapter 05 demonstrated contractual freedom within
         a legal entity. DAOs test what happens when there is no entity at all — and the attribution
         problem from Chapter 02 returns with full force.
@@ -494,7 +494,7 @@ export default function Ch07DAOs() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   The Attribution Problem
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   Can a decentralized protocol be a &quot;legal person&quot;? Without formal
                   registration, law treats DAOs as{" "}
                   <strong className="text-gray-200">unincorporated associations</strong>.
@@ -504,7 +504,7 @@ export default function Ch07DAOs() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-yellow mb-1">
                   RUPA ss 202 Default
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   If two or more persons associate for profit without a formal charter, they are a{" "}
                   <strong className="text-gray-200">General Partnership</strong>, regardless of
                   the technology used.
@@ -600,7 +600,7 @@ export default function Ch07DAOs() {
                       >
                         {isCorrect ? "Correct" : "Incorrect"}
                       </p>
-                      <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+                      <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                         {action.explanation}
                       </p>
                     </div>

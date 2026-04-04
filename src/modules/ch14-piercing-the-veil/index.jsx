@@ -324,7 +324,7 @@ export default function Ch14PiercingTheVeil() {
         the evidence, classify it under the two-prong test, and determine whether the veil
         should be pierced.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: the asset partition that has protected ConstructEdge&apos;s
         founders since formation is under direct attack. If the veil is pierced, every dollar
         of personal wealth is exposed. This is the Partitioning problem at its breaking point.
@@ -385,7 +385,7 @@ export default function Ch14PiercingTheVeil() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   Prong 1 — Unity of Interest &amp; Ownership
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   The corporation is the <strong className="text-gray-200">alter ego</strong> of
                   its owner — no separate identity exists. Factors: (1) failure to maintain
                   corporate records or formalities; (2) commingling of funds; (3)
@@ -396,7 +396,7 @@ export default function Ch14PiercingTheVeil() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   Prong 2 — Injustice
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   Adherence to the corporate fiction would <strong className="text-gray-200">sanction
                   a fraud or promote injustice</strong>. An unsatisfied judgment alone is not
                   enough — there must be a &quot;wrong beyond a creditor&apos;s inability to
@@ -411,7 +411,7 @@ export default function Ch14PiercingTheVeil() {
               <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-yellow mb-1">
                 Walkovszky v. Carlton (N.Y. 1966)
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 Strict NY standard: deliberate undercapitalization of ten two-cab corporations
                 with minimum insurance was insufficient to pierce. The court required allegations
                 that the owner was conducting business &quot;in his individual capacity,&quot; not
@@ -422,7 +422,7 @@ export default function Ch14PiercingTheVeil() {
               <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-yellow mb-1">
                 Sea-Land v. Pepper Source (7th Cir. 1991/1993)
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 Applied the Van Dorn two-prong test. Marchese ran five corporations from one
                 office, no separate books, personal expenses paid from corporate accounts. Unity
                 of interest was &quot;beyond doubt.&quot; On remand: unjust enrichment through
@@ -433,7 +433,7 @@ export default function Ch14PiercingTheVeil() {
               <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-yellow mb-1">
                 Radaszewski v. Telecom (8th Cir. 1992)
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 $11M insurance coverage on an undercapitalized subsidiary defeated the
                 veil-piercing claim. Insurance can substitute for equity capitalization when
                 assessing financial responsibility.
@@ -446,7 +446,7 @@ export default function Ch14PiercingTheVeil() {
           <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
             MBCA § 6.22(b) — Limited Liability Baseline
           </p>
-          <p className="font-body text-xs text-gray-600 dark:text-gray-400 italic">
+          <p className="font-body text-sm text-gray-600 dark:text-gray-400 italic">
             &quot;Unless otherwise provided in the articles of incorporation, a shareholder of a
             corporation is not personally liable for the acts or debts of the corporation except
             that the shareholder may become personally liable by reason of the shareholder&apos;s
@@ -499,7 +499,7 @@ export default function Ch14PiercingTheVeil() {
                 style={{ width: `${status.percent}%` }}
               />
             </div>
-            <p className="font-ui text-xs text-gray-500 mt-1">
+            <p className="font-ui text-sm text-gray-500 mt-1">
               {appliedEvidence.length} / {EVIDENCE_FRAGMENTS.length} fragments applied
             </p>
           </div>
@@ -528,7 +528,7 @@ export default function Ch14PiercingTheVeil() {
                 <p className="font-headline text-sm uppercase text-gray-800 dark:text-gray-200 mb-1">
                   {frag.title}
                 </p>
-                <p className="font-body text-xs text-gray-600 dark:text-gray-400 mb-3">
+                <p className="font-body text-sm text-gray-600 dark:text-gray-400 mb-3">
                   {frag.description}
                 </p>
 
@@ -565,7 +565,7 @@ export default function Ch14PiercingTheVeil() {
                     <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                       {frag.prongLabel}
                     </p>
-                    <p className="font-body text-xs text-gray-600 dark:text-gray-400 italic">
+                    <p className="font-body text-sm text-gray-600 dark:text-gray-400 italic">
                       {frag.explanation}
                     </p>
                   </div>
@@ -627,7 +627,7 @@ export default function Ch14PiercingTheVeil() {
                       <p className="font-headline text-sm uppercase text-gray-800 dark:text-gray-200">
                         {frag.title}
                       </p>
-                      <p className="font-body text-xs text-gray-500">{frag.description}</p>
+                      <p className="font-body text-sm text-gray-500">{frag.description}</p>
                     </div>
                     <select
                       value={classification}
@@ -643,7 +643,7 @@ export default function Ch14PiercingTheVeil() {
                     </select>
                   </div>
                   {state.prongSubmitted && isWrong && (
-                    <p className="font-ui text-xs text-sprawl-bright-red mt-2">
+                    <p className="font-ui text-sm text-sprawl-bright-red mt-2">
                       Expected: {frag.prongLabel}. {frag.explanation.split(".")[0]}.
                     </p>
                   )}
@@ -860,7 +860,7 @@ export default function Ch14PiercingTheVeil() {
           />
 
           {!counselValid && (state.counselNote || "").length > 0 && (
-            <p className="font-ui text-xs text-sprawl-bright-red mt-1">
+            <p className="font-ui text-sm text-sprawl-bright-red mt-1">
               Minimum 20 characters required for the counsel recommendation.
             </p>
           )}

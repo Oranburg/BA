@@ -326,7 +326,7 @@ export default function Ch06Nonprofits() {
         surplus, but it may never distribute that surplus to those who control the
         organization.
       </p>
-      <p className="font-ui text-xs text-gray-500">
+      <p className="font-ui text-sm text-gray-500">
         Why this chapter matters now: the LLC from Chapter 05 gave founders
         contractual freedom to distribute profits however they chose. The
         nonprofit inverts that premise &mdash; the law prohibits distributions
@@ -416,7 +416,7 @@ export default function Ch06Nonprofits() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   IRC &sect; 501(c)(3)
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   Tax exemption requires organization{" "}
                   <strong className="text-gray-200">
                     exclusively for charitable purposes
@@ -429,7 +429,7 @@ export default function Ch06Nonprofits() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   MNCA &sect; 13.01
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   Distributions to members, directors, or officers are{" "}
                   <strong className="text-gray-200">prohibited</strong> except as
                   authorized upon dissolution.
@@ -439,7 +439,7 @@ export default function Ch06Nonprofits() {
                 <p className="font-ui text-[10px] uppercase tracking-widest text-sprawl-light-blue mb-1">
                   Treas. Reg. &sect; 1.501(c)(3)-1
                 </p>
-                <p className="font-body text-xs text-gray-400 leading-relaxed">
+                <p className="font-body text-sm text-gray-400 leading-relaxed">
                   The <strong className="text-gray-200">organizational test</strong>{" "}
                   (charter must limit purposes) and{" "}
                   <strong className="text-gray-200">operational test</strong>{" "}
@@ -535,7 +535,7 @@ export default function Ch06Nonprofits() {
           <div className="space-y-5">
             {/* Programs pipe */}
             <div>
-              <div className="flex justify-between font-ui text-xs mb-1">
+              <div className="flex justify-between font-ui text-sm mb-1">
                 <span className="text-gray-600 dark:text-gray-300 uppercase">
                   Mission Programs (Slum-Shield Blueprints)
                 </span>
@@ -553,7 +553,7 @@ export default function Ch06Nonprofits() {
 
             {/* Founders pipe */}
             <div>
-              <div className="flex justify-between font-ui text-xs mb-1">
+              <div className="flex justify-between font-ui text-sm mb-1">
                 <span className="text-gray-600 dark:text-gray-300 uppercase">
                   Founder Distributions (Profit)
                 </span>
@@ -603,7 +603,7 @@ export default function Ch06Nonprofits() {
               <p className="font-ui text-[10px] uppercase tracking-wider text-sprawl-yellow mb-1">
                 For-Profit Mode
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 Shareholders expect returns. Up to 50% of surplus can be
                 distributed as dividends. Donors have no assurance their funds
                 will reach the mission.
@@ -613,7 +613,7 @@ export default function Ch06Nonprofits() {
               <p className="font-ui text-[10px] uppercase tracking-wider text-sprawl-yellow mb-1">
                 Nonprofit Mode
               </p>
-              <p className="font-body text-xs text-gray-600 dark:text-gray-400">
+              <p className="font-body text-sm text-gray-600 dark:text-gray-400">
                 The nondistribution constraint blocks all founder distributions.
                 100% of surplus must be reinvested in the mission. This is
                 Hansmann&apos;s trust technology.
@@ -632,7 +632,7 @@ export default function Ch06Nonprofits() {
                 Lock Constraint &mdash; Proceed to Capital Allocation
               </button>
             ) : (
-              <p className="font-ui text-xs text-sprawl-bright-red">
+              <p className="font-ui text-sm text-sprawl-bright-red">
                 Select &quot;Nonprofit Corp&quot; and activate the
                 nondistribution constraint to proceed.
               </p>
@@ -712,7 +712,7 @@ export default function Ch06Nonprofits() {
                   </div>
                   {isLocked && (
                     <p
-                      className={`mt-2 font-body text-xs leading-relaxed ${
+                      className={`mt-2 font-body text-sm leading-relaxed ${
                         isCorrect
                           ? "text-green-600 dark:text-green-400"
                           : "text-sprawl-bright-red"
@@ -956,7 +956,7 @@ export default function Ch06Nonprofits() {
 
           {(state.counselNote || "").length > 0 &&
             (state.counselNote || "").length < 20 && (
-              <p className="mt-1 font-ui text-xs text-sprawl-bright-red">
+              <p className="mt-1 font-ui text-sm text-sprawl-bright-red">
                 Minimum 20 characters required (
                 {(state.counselNote || "").length}/20)
               </p>
