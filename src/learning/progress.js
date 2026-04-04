@@ -124,6 +124,11 @@ export function getModuleCompletion(moduleId) {
   return !!store.modules?.[moduleId]?.completed;
 }
 
+export function getModuleStarted(moduleId) {
+  const store = readLearningStore();
+  return !!store.modules?.[moduleId];
+}
+
 export function getLastVisitedModule() {
   return readLearningStore().lastVisitedModule;
 }

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import AppImage from "../components/ui/AppImage";
 import { APP_ROUTES, HASH_TARGETS } from "../routing/routes";
@@ -6,8 +6,8 @@ import FiduciarySlider from "../components/toolkit/FiduciarySlider";
 import CitationChip from "../tome/CitationChip";
 import VeilPiercingWall from "../components/toolkit/VeilPiercingWall";
 import newBoston2077 from "../assets/images/new-boston-2077.png";
-import { getCourseProgress, getLastVisitedModule, getModuleCompletion } from "../learning/progress";
-import { BUILT_MODULES, getRecommendedNextModule } from "../course/lifecycle";
+import { getLastVisitedModule, getModuleCompletion, getModuleStarted } from "../learning/progress";
+import { getRecommendedNextModule } from "../course/lifecycle";
 
 const CHAPTERS = [
   { id: "ch01", moduleId: "ch01-why-law", num: "01", title: "Why Law", problem: "Introduction", focus: "The Four Problems of the Firm", route: APP_ROUTES.ch01WhyLaw },
@@ -94,14 +94,27 @@ const VISUAL_SLOTS = {
 };
 
 export default function LandingPage() {
-  const [activeChapter, setActiveChapter] = useState(null);
-  const builtIds = useMemo(() => CHAPTERS.filter((c) => !!c.route).map((c) => c.moduleId || c.id), []);
-  const progress = getCourseProgress(builtIds);
   const lastVisited = getLastVisitedModule();
-  const completionMap = BUILT_MODULES.reduce((acc, id) => {
-    acc[id] = getModuleCompletion(id);
-    return acc;
-  }, {});
+
+  const chapterStatus = useMemo(() => {
+    const map = {};
+    CHAPTERS.forEach((ch) => {
+      const id = ch.moduleId || ch.id;
+      if (getModuleCompletion(id)) map[ch.id] = "completed";
+      else if (getModuleStarted(id)) map[ch.id] = "started";
+      else map[ch.id] = "not-started";
+    });
+    return map;
+  }, []);
+
+  const completionMap = useMemo(() => {
+    const map = {};
+    CHAPTERS.forEach((ch) => {
+      map[ch.moduleId || ch.id] = chapterStatus[ch.id] === "completed";
+    });
+    return map;
+  }, [chapterStatus]);
+
   const recommendedNext = getRecommendedNextModule(lastVisited, completionMap);
 
   return (
@@ -301,43 +314,46 @@ export default function LandingPage() {
             <p className="font-body text-gray-500 dark:text-gray-400 max-w-xl mx-auto mt-4">
               16 modules mapping the evolution of business association law.
             </p>
-            <div className="mt-4 max-w-md mx-auto">
-              <div className="flex justify-between font-ui text-xs text-gray-500 mb-1">
-                <span>Built module completion</span>
-                <span>{progress.completedCount}/{progress.totalCount} ({progress.percent}%)</span>
-              </div>
-              <div className="h-2 rounded bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                <div className="h-full bg-sprawl-teal" style={{ width: `${progress.percent}%` }} />
-              </div>
-              {lastVisited && (
-                <p className="font-ui text-xs text-gray-500 mt-2">
-                  Resume recommended: {CHAPTERS.find((c) => (c.moduleId || c.id) === lastVisited)?.title || "Unknown module"}
-                </p>
-              )}
-              {recommendedNext && (
-                <p className="font-ui text-xs text-sprawl-teal mt-1">
-                  Suggested next step: {recommendedNext.title}
-                </p>
-              )}
-            </div>
+            {recommendedNext && (
+              <p className="font-ui text-xs text-sprawl-teal mt-4">
+                Suggested next: {recommendedNext.title}
+              </p>
+            )}
           </div>
 
           <div className="space-y-2">
             {CHAPTERS.map((ch) => {
-              const hasActivity = !!ch.route;
-               const completion = getModuleCompletion(ch.moduleId || ch.id);
-              const statusLabel = hasActivity ? (completion ? "Completed" : "Built") : (ch.status === "partial" ? "Partial" : "Planned");
-              const cardContent = (
-                <>
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-headline font-bold text-sm flex-shrink-0 transition-all ${
-                    activeChapter === ch.id
-                      ? "bg-sprawl-yellow text-sprawl-deep-blue"
-                      : "bg-gray-100 dark:bg-sprawl-bright-blue/20 text-gray-500 dark:text-gray-400 group-hover:bg-sprawl-yellow/20 group-hover:text-sprawl-yellow"
-                  }`}>
+              const status = chapterStatus[ch.id] || "not-started";
+
+              const numBoxClass = status === "completed"
+                ? "bg-sprawl-yellow text-sprawl-deep-blue shadow-[0_0_8px_rgba(255,214,92,0.4)]"
+                : status === "started"
+                ? "bg-sprawl-teal/30 text-sprawl-teal border border-sprawl-teal/50"
+                : "bg-gray-100 dark:bg-sprawl-bright-blue/20 text-gray-500 dark:text-gray-400 group-hover:bg-sprawl-yellow/20 group-hover:text-sprawl-yellow";
+
+              const borderClass = status === "completed"
+                ? "border-sprawl-yellow/40 bg-sprawl-yellow/5"
+                : status === "started"
+                ? "border-sprawl-teal/40 bg-sprawl-teal/5"
+                : "border-gray-200 dark:border-gray-700/40 hover:border-sprawl-yellow/40 dark:hover:bg-sprawl-bright-blue/10";
+
+              const connectorClass = status === "completed"
+                ? "bg-sprawl-yellow/50"
+                : status === "started"
+                ? "bg-sprawl-teal/40"
+                : "bg-gray-200 dark:bg-gray-700 group-hover:bg-sprawl-yellow/30";
+
+              return (
+                <Link
+                  key={ch.id}
+                  to={ch.route}
+                  className={`group flex items-center gap-4 p-3 rounded-lg border transition-all cursor-pointer ${borderClass}`}
+                >
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-headline font-bold text-sm flex-shrink-0 transition-all ${numBoxClass}`}>
                     {ch.num}
                   </div>
 
-                  <div className="hidden sm:block w-8 h-0.5 bg-gray-200 dark:bg-gray-700 flex-shrink-0 group-hover:bg-sprawl-yellow/30 transition-colors" />
+                  <div className={`hidden sm:block w-8 h-0.5 flex-shrink-0 transition-colors ${connectorClass}`} />
 
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
@@ -350,42 +366,7 @@ export default function LandingPage() {
                     </div>
                     <p className="font-ui text-xs text-gray-500 dark:text-gray-500 truncate">{ch.focus}</p>
                   </div>
-
-                  <div className="flex-shrink-0 flex items-center gap-2">
-                    <div className={`w-2 h-2 rounded-full ${completion ? "bg-sprawl-yellow" : hasActivity ? "bg-sprawl-teal" : ch.status === "partial" ? "bg-sprawl-light-blue" : "bg-gray-300 dark:bg-gray-600"}`} />
-                    <span className="font-ui text-xs text-gray-400 hidden sm:block">
-                      {statusLabel}
-                    </span>
-                  </div>
-                </>
-              );
-
-              const cardClass = `group flex items-center gap-4 p-3 rounded-lg border transition-all ${
-                activeChapter === ch.id
-                  ? "border-sprawl-yellow/60 bg-sprawl-yellow/5"
-                  : hasActivity
-                  ? "border-sprawl-teal/30 hover:border-sprawl-yellow/60 hover:bg-gray-100/50 dark:hover:bg-sprawl-bright-blue/10 cursor-pointer"
-                  : ch.status === "partial"
-                  ? "border-sprawl-light-blue/30 hover:border-sprawl-light-blue/60"
-                  : "border-gray-200 dark:border-gray-700/50 opacity-70"
-              }`;
-
-              return hasActivity ? (
-                <Link
-                  key={ch.id}
-                  to={ch.route}
-                  className={cardClass}
-                >
-                  {cardContent}
                 </Link>
-              ) : (
-                <div
-                  key={ch.id}
-                  onClick={() => setActiveChapter(activeChapter === ch.id ? null : ch.id)}
-                  className={cardClass}
-                >
-                  {cardContent}
-                </div>
               );
             })}
           </div>
