@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "generated_at": "2026-04-03T21:33:00Z",
   "description": "Legal work manifest for BA Tome of Law",
-  "total_works": 17,
+  "total_works": 19,
   "works": [
     {
       "canonical_work_id": "rupa",
@@ -10,7 +10,10 @@
       "official_title": "Revised Uniform Partnership Act (1997, Last Amended 2013)",
       "short_title": "RUPA",
       "common_name": "Revised Uniform Partnership Act",
-      "abbreviations": ["RUPA", "Rev. UPA"],
+      "abbreviations": [
+        "RUPA",
+        "Rev. UPA"
+      ],
       "aliases": [
         "Revised Uniform Partnership Act",
         "RUPA",
@@ -20,9 +23,9 @@
         "Revised UPA"
       ],
       "citation_forms": [
-        "RUPA § 202",
-        "Rev. Unif. Partnership Act § 202",
-        "Unif. Partnership Act (1997) § 202"
+        "RUPA \u00a7 202",
+        "Rev. Unif. Partnership Act \u00a7 202",
+        "Unif. Partnership Act (1997) \u00a7 202"
       ],
       "publisher_or_promulgator": "Uniform Law Commission (ULC)",
       "jurisdiction": "uniform",
@@ -32,21 +35,42 @@
       "effective_date": "1997-08-06",
       "current_status": "operative",
       "completeness_status": "key-sections",
-      "excerpt_status": "Key sections including §§ 202 (Formation), 301 (Partner as Agent), 306 (Liability), 401 (Rights and Duties), 404 (Standards of Conduct), 801 (Dissolution Events). Full text of final ULC draft available in processed segments.",
+      "excerpt_status": "Key sections including \u00a7\u00a7 202 (Formation), 301 (Partner as Agent), 306 (Liability), 401 (Rights and Duties), 404 (Standards of Conduct), 801 (Dissolution Events). Full text of final ULC draft available in processed segments.",
       "source_files": [
         "inbox/UPA_Final_NC_2014_2015aug19.docx",
         "processed/segments/upa-final-nc-2014-2015aug19.jsonl",
         "processed/records/upa-final-nc-2014-2015aug19.json"
       ],
       "provenance_notes": "ULC final text with National Conference amendments through August 2015. The file contains the Revised Uniform Partnership Act (1997) as updated. 117 heading-based segments extracted.",
-      "related_chapters": [1, 2, 3, 8, 9, 15, 16],
+      "related_chapters": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        15,
+        16
+      ],
       "route_slug": "rupa",
       "search_tokens": [
-        "rupa", "partnership", "revised uniform partnership act", "upa 1997",
-        "partner liability", "partnership formation", "partnership dissolution",
-        "partner agent", "fiduciary duty partner", "joint and several liability"
+        "rupa",
+        "partnership",
+        "revised uniform partnership act",
+        "upa 1997",
+        "partner liability",
+        "partnership formation",
+        "partnership dissolution",
+        "partner agent",
+        "fiduciary duty partner",
+        "joint and several liability"
       ],
-      "cross_references": ["upa", "ullca", "mbca", "dgcl", "r3a"],
+      "cross_references": [
+        "upa",
+        "ullca",
+        "mbca",
+        "dgcl",
+        "r3a"
+      ],
       "hierarchy_type": "article-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -57,7 +81,10 @@
       "official_title": "Uniform Partnership Act (1914)",
       "short_title": "UPA",
       "common_name": "Uniform Partnership Act",
-      "abbreviations": ["UPA", "UPA 1914"],
+      "abbreviations": [
+        "UPA",
+        "UPA 1914"
+      ],
       "aliases": [
         "Uniform Partnership Act",
         "UPA",
@@ -66,8 +93,8 @@
         "Unif. Partnership Act (1914)"
       ],
       "citation_forms": [
-        "UPA § 6",
-        "Unif. Partnership Act (1914) § 6"
+        "UPA \u00a7 6",
+        "Unif. Partnership Act (1914) \u00a7 6"
       ],
       "publisher_or_promulgator": "Uniform Law Commission (ULC)",
       "jurisdiction": "uniform",
@@ -80,13 +107,21 @@
       "excerpt_status": "Summary-level coverage only. The UPA (1914) is included for historical context; RUPA (1997) is the primary partnership authority in the Tome. Key provisions referenced include the aggregate theory of partnership.",
       "source_files": [],
       "provenance_notes": "No dedicated source file in inbox. Referenced in corpus.js for historical comparison with RUPA. The 1914 Act treated partnerships as aggregates rather than entities.",
-      "related_chapters": [3],
+      "related_chapters": [
+        3
+      ],
       "route_slug": "upa",
       "search_tokens": [
-        "upa", "uniform partnership act 1914", "aggregate theory",
-        "original partnership act", "partnership 1914", "upa 1914"
+        "upa",
+        "uniform partnership act 1914",
+        "aggregate theory",
+        "original partnership act",
+        "partnership 1914",
+        "upa 1914"
       ],
-      "cross_references": ["rupa"],
+      "cross_references": [
+        "rupa"
+      ],
       "hierarchy_type": "part-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -97,7 +132,11 @@
       "official_title": "Revised Uniform Limited Liability Company Act (2006, Last Amended 2013)",
       "short_title": "RULLCA",
       "common_name": "Revised Uniform LLC Act",
-      "abbreviations": ["ULLCA", "RULLCA", "Rev. ULLCA"],
+      "abbreviations": [
+        "ULLCA",
+        "RULLCA",
+        "Rev. ULLCA"
+      ],
       "aliases": [
         "Revised Uniform Limited Liability Company Act",
         "RULLCA",
@@ -108,9 +147,9 @@
         "Uniform LLC Act"
       ],
       "citation_forms": [
-        "ULLCA § 301",
-        "RULLCA § 301",
-        "Rev. Unif. Ltd. Liab. Co. Act § 301"
+        "ULLCA \u00a7 301",
+        "RULLCA \u00a7 301",
+        "Rev. Unif. Ltd. Liab. Co. Act \u00a7 301"
       ],
       "publisher_or_promulgator": "Uniform Law Commission (ULC)",
       "jurisdiction": "uniform",
@@ -120,21 +159,41 @@
       "effective_date": "2006-07-07",
       "current_status": "operative",
       "completeness_status": "key-sections",
-      "excerpt_status": "Key sections including §§ 110 (Operating Agreement), 301 (No Agency Power), 304 (Liability of Members), 401 (Becoming Member), 409 (Standards of Conduct), 701 (Dissolution Events). Full ULC final text available in processed segments.",
+      "excerpt_status": "Key sections including \u00a7\u00a7 110 (Operating Agreement), 301 (No Agency Power), 304 (Liability of Members), 401 (Becoming Member), 409 (Standards of Conduct), 701 (Dissolution Events). Full ULC final text available in processed segments.",
       "source_files": [
         "inbox/ULLCA_Final_NC_2014_2015aug19.docx",
         "processed/segments/ullca-final-nc-2014-2015aug19.jsonl",
         "processed/records/ullca-final-nc-2014-2015aug19.json"
       ],
-      "provenance_notes": "ULC final text with National Conference amendments through August 2015. 107 heading-based segments extracted. Note: unlike RUPA, ULLCA § 301 expressly denies members agency power by default.",
-      "related_chapters": [1, 5, 8, 9, 15, 16],
+      "provenance_notes": "ULC final text with National Conference amendments through August 2015. 107 heading-based segments extracted. Note: unlike RUPA, ULLCA \u00a7 301 expressly denies members agency power by default.",
+      "related_chapters": [
+        1,
+        5,
+        8,
+        9,
+        15,
+        16
+      ],
       "route_slug": "ullca",
       "search_tokens": [
-        "ullca", "rullca", "llc", "limited liability company", "operating agreement",
-        "member managed", "manager managed", "charging order", "llc formation",
-        "llc dissolution", "member liability"
+        "ullca",
+        "rullca",
+        "llc",
+        "limited liability company",
+        "operating agreement",
+        "member managed",
+        "manager managed",
+        "charging order",
+        "llc formation",
+        "llc dissolution",
+        "member liability"
       ],
-      "cross_references": ["rupa", "dllca", "mbca", "dgcl"],
+      "cross_references": [
+        "rupa",
+        "dllca",
+        "mbca",
+        "dgcl"
+      ],
       "hierarchy_type": "article-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -145,7 +204,10 @@
       "official_title": "Model Business Corporation Act (2025 Black-Letter Edition)",
       "short_title": "MBCA",
       "common_name": "Model Business Corporation Act",
-      "abbreviations": ["MBCA", "Model Act"],
+      "abbreviations": [
+        "MBCA",
+        "Model Act"
+      ],
       "aliases": [
         "Model Business Corporation Act",
         "MBCA",
@@ -155,8 +217,8 @@
         "RMBCA"
       ],
       "citation_forms": [
-        "MBCA § 8.30",
-        "Model Bus. Corp. Act § 8.30"
+        "MBCA \u00a7 8.30",
+        "Model Bus. Corp. Act \u00a7 8.30"
       ],
       "publisher_or_promulgator": "American Bar Association (ABA)",
       "jurisdiction": "uniform",
@@ -166,21 +228,44 @@
       "effective_date": "2025-04-01",
       "current_status": "operative",
       "completeness_status": "key-sections",
-      "excerpt_status": "Key sections including §§ 2.01 (Purposes), 4.01 (Corporate Name), 6.22 (Liability of Shareholders), 8.30 (Standards of Conduct for Directors), 8.40/8.42 (Standards of Conduct for Officers). Black-letter text processed.",
+      "excerpt_status": "Key sections including \u00a7\u00a7 2.01 (Purposes), 4.01 (Corporate Name), 6.22 (Liability of Shareholders), 8.30 (Standards of Conduct for Directors), 8.40/8.42 (Standards of Conduct for Officers). Black-letter text processed.",
       "source_files": [
         "inbox/MBCA-202504-black-letter.docx",
         "processed/segments/mbca-202504-black-letter.jsonl",
         "processed/records/mbca-202504-black-letter.json"
       ],
       "provenance_notes": "ABA 2025 Black-Letter Edition. 1 consolidated segment extracted from .docx. The MBCA serves as the model for most state corporation statutes outside Delaware.",
-      "related_chapters": [1, 4, 6, 8, 9, 11, 13, 14, 15, 16],
+      "related_chapters": [
+        1,
+        4,
+        6,
+        8,
+        9,
+        11,
+        13,
+        14,
+        15,
+        16
+      ],
       "route_slug": "mbca",
       "search_tokens": [
-        "mbca", "model business corporation act", "model act", "corporate law",
-        "director standards", "officer standards", "shareholder liability",
-        "corporate formation", "aba model act", "board of directors"
+        "mbca",
+        "model business corporation act",
+        "model act",
+        "corporate law",
+        "director standards",
+        "officer standards",
+        "shareholder liability",
+        "corporate formation",
+        "aba model act",
+        "board of directors"
       ],
-      "cross_references": ["dgcl", "rupa", "ullca", "mnca"],
+      "cross_references": [
+        "dgcl",
+        "rupa",
+        "ullca",
+        "mnca"
+      ],
       "hierarchy_type": "article-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -191,7 +276,11 @@
       "official_title": "Delaware General Corporation Law (Title 8, Delaware Code)",
       "short_title": "DGCL",
       "common_name": "Delaware General Corporation Law",
-      "abbreviations": ["DGCL", "Del. GCL", "8 Del. C."],
+      "abbreviations": [
+        "DGCL",
+        "Del. GCL",
+        "8 Del. C."
+      ],
       "aliases": [
         "Delaware General Corporation Law",
         "DGCL",
@@ -202,9 +291,9 @@
         "Del. Gen. Corp. Law"
       ],
       "citation_forms": [
-        "DGCL § 141(a)",
-        "8 Del. C. § 141(a)",
-        "Del. Code Ann. tit. 8, § 141(a)"
+        "DGCL \u00a7 141(a)",
+        "8 Del. C. \u00a7 141(a)",
+        "Del. Code Ann. tit. 8, \u00a7 141(a)"
       ],
       "publisher_or_promulgator": "Delaware General Assembly",
       "jurisdiction": "delaware",
@@ -214,21 +303,51 @@
       "effective_date": "1967-07-03",
       "current_status": "operative",
       "completeness_status": "key-sections",
-      "excerpt_status": "Full Title 8 text processed from PDF (127 page-based segments). Key provisions include § 102(b)(7) (Exculpation), § 141(a) (Board Powers), § 144 (Interested Directors), § 220 (Inspection Rights), § 251 (Mergers), § 262 (Appraisal Rights).",
+      "excerpt_status": "Full Title 8 text processed from PDF (127 page-based segments). Key provisions include \u00a7 102(b)(7) (Exculpation), \u00a7 141(a) (Board Powers), \u00a7 144 (Interested Directors), \u00a7 220 (Inspection Rights), \u00a7 251 (Mergers), \u00a7 262 (Appraisal Rights).",
       "source_files": [
         "inbox/DGCL.pdf",
         "processed/segments/dgcl.jsonl",
         "processed/records/dgcl.json"
       ],
-      "provenance_notes": "PDF extraction of complete Title 8 text. 127 page-based segments with medium extraction confidence. Delaware is the dominant state for corporate law—over 60% of Fortune 500 companies are incorporated there.",
-      "related_chapters": [1, 4, 8, 9, 11, 12, 13, 14, 15, 16],
+      "provenance_notes": "PDF extraction of complete Title 8 text. 127 page-based segments with medium extraction confidence. Delaware is the dominant state for corporate law\u2014over 60% of Fortune 500 companies are incorporated there.",
+      "related_chapters": [
+        1,
+        4,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
       "route_slug": "dgcl",
       "search_tokens": [
-        "dgcl", "delaware", "general corporation law", "title 8",
-        "board of directors", "exculpation", "appraisal rights", "merger statute",
-        "102(b)(7)", "141", "251", "262", "delaware corporate law"
+        "dgcl",
+        "delaware",
+        "general corporation law",
+        "title 8",
+        "board of directors",
+        "exculpation",
+        "appraisal rights",
+        "merger statute",
+        "102(b)(7)",
+        "141",
+        "251",
+        "262",
+        "delaware corporate law"
       ],
-      "cross_references": ["mbca", "dllca", "unocal", "revlon", "corwin", "lyondell", "weinberger", "air-products"],
+      "cross_references": [
+        "mbca",
+        "dllca",
+        "unocal",
+        "revlon",
+        "corwin",
+        "lyondell",
+        "weinberger",
+        "air-products"
+      ],
       "hierarchy_type": "title-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -239,7 +358,10 @@
       "official_title": "Uniform Voidable Transactions Act (2014)",
       "short_title": "UVTA",
       "common_name": "Uniform Voidable Transactions Act",
-      "abbreviations": ["UVTA", "UFTA"],
+      "abbreviations": [
+        "UVTA",
+        "UFTA"
+      ],
       "aliases": [
         "Uniform Voidable Transactions Act",
         "UVTA",
@@ -250,9 +372,9 @@
         "Fraudulent Conveyance Act"
       ],
       "citation_forms": [
-        "UVTA § 4",
-        "Unif. Voidable Transactions Act § 4",
-        "UFTA § 4"
+        "UVTA \u00a7 4",
+        "Unif. Voidable Transactions Act \u00a7 4",
+        "UFTA \u00a7 4"
       ],
       "publisher_or_promulgator": "Uniform Law Commission (ULC)",
       "jurisdiction": "uniform",
@@ -264,15 +386,29 @@
       "completeness_status": "key-sections",
       "excerpt_status": "Section 4 (Transfer or Obligation Voidable as to Present or Future Creditor) defined in statute index. Additional sections referenced in capital structure and creditor rights discussions.",
       "source_files": [],
-      "provenance_notes": "Defined in src/data/statutes/index.js with § 4 text. No dedicated inbox source file. The UVTA was formerly known as the Uniform Fraudulent Transfer Act (UFTA); renamed in 2014 to avoid the stigma of the word 'fraudulent' when transfers may be innocent.",
-      "related_chapters": [1, 15, 16],
+      "provenance_notes": "Defined in src/data/statutes/index.js with \u00a7 4 text. No dedicated inbox source file. The UVTA was formerly known as the Uniform Fraudulent Transfer Act (UFTA); renamed in 2014 to avoid the stigma of the word 'fraudulent' when transfers may be innocent.",
+      "related_chapters": [
+        1,
+        15,
+        16
+      ],
       "route_slug": "uvta",
       "search_tokens": [
-        "uvta", "ufta", "voidable transaction", "fraudulent transfer",
-        "fraudulent conveyance", "solvency", "creditor rights",
-        "constructive fraud", "actual fraud", "badge of fraud"
+        "uvta",
+        "ufta",
+        "voidable transaction",
+        "fraudulent transfer",
+        "fraudulent conveyance",
+        "solvency",
+        "creditor rights",
+        "constructive fraud",
+        "actual fraud",
+        "badge of fraud"
       ],
-      "cross_references": ["dgcl", "mbca"],
+      "cross_references": [
+        "dgcl",
+        "mbca"
+      ],
       "hierarchy_type": "part-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -283,7 +419,11 @@
       "official_title": "Restatement (Third) of Agency (2006)",
       "short_title": "R3A",
       "common_name": "Restatement Third of Agency",
-      "abbreviations": ["R3A", "RSA", "Rest. 3d Agency"],
+      "abbreviations": [
+        "R3A",
+        "RSA",
+        "Rest. 3d Agency"
+      ],
       "aliases": [
         "Restatement (Third) of Agency",
         "Restatement Third of Agency",
@@ -295,34 +435,50 @@
         "Third Restatement of Agency"
       ],
       "citation_forms": [
-        "Restatement (Third) of Agency § 1.01",
-        "Rest. (3d) Agency § 1.01",
-        "R3A § 1.01"
+        "Restatement (Third) of Agency \u00a7 1.01",
+        "Rest. (3d) Agency \u00a7 1.01",
+        "R3A \u00a7 1.01"
       ],
       "publisher_or_promulgator": "American Law Institute (ALI)",
-      "jurisdiction": "uniform",
+      "jurisdiction": "restatement",
       "governing_body": "American Law Institute",
       "version_label": "Third (2006)",
       "enactment_date": "2006-05-22",
       "effective_date": "2006-05-22",
       "current_status": "operative",
       "completeness_status": "key-sections",
-      "excerpt_status": "Key sections including §§ 1.01 (Agency Defined), 2.01 (Actual Authority), 2.03 (Apparent Authority), 7.07 (Employee Acting Within Scope of Employment). Source markdown with selected sections.",
+      "excerpt_status": "Key sections including \u00a7\u00a7 1.01 (Agency Defined), 2.01 (Actual Authority), 2.03 (Apparent Authority), 7.07 (Employee Acting Within Scope of Employment). Source markdown with selected sections.",
       "source_files": [
         "inbox/Restat 3d of Agency.md",
         "processed/segments/restat-3d-of-agency.jsonl",
         "processed/records/restat-3d-of-agency.json"
       ],
       "provenance_notes": "Markdown source with key sections. 1 consolidated segment extracted. The Restatement (Third) of Agency is the ALI's authoritative treatment of agency law, superseding the Second Restatement.",
-      "related_chapters": [1, 2, 7, 16],
+      "related_chapters": [
+        1,
+        2,
+        7,
+        16
+      ],
       "route_slug": "r3a",
       "search_tokens": [
-        "r3a", "rsa", "restatement agency", "agency law", "actual authority",
-        "apparent authority", "respondeat superior", "scope of employment",
-        "principal agent", "agency defined", "ali restatement"
+        "r3a",
+        "rsa",
+        "restatement agency",
+        "agency law",
+        "actual authority",
+        "apparent authority",
+        "respondeat superior",
+        "scope of employment",
+        "principal agent",
+        "agency defined",
+        "ali restatement"
       ],
-      "cross_references": ["rupa", "ullca"],
-      "hierarchy_type": "part-section",
+      "cross_references": [
+        "rupa",
+        "ullca"
+      ],
+      "hierarchy_type": "restatement-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
     },
@@ -332,7 +488,9 @@
       "official_title": "Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025",
       "short_title": "GENIUS Act",
       "common_name": "GENIUS Act",
-      "abbreviations": ["GENIUS Act"],
+      "abbreviations": [
+        "GENIUS Act"
+      ],
       "aliases": [
         "GENIUS Act",
         "Stablecoin Act",
@@ -343,9 +501,9 @@
         "U.S. Stablecoins Act"
       ],
       "citation_forms": [
-        "GENIUS Act § 2",
+        "GENIUS Act \u00a7 2",
         "Pub. L. No. 119-27",
-        "Pub. L. 119-27, § 2"
+        "Pub. L. 119-27, \u00a7 2"
       ],
       "publisher_or_promulgator": "United States Congress",
       "jurisdiction": "federal",
@@ -362,14 +520,28 @@
         "processed/records/plaw-119publ27-uslm.json"
       ],
       "provenance_notes": "Official USLM XML from Congress.gov. 20 segments extracted. The GENIUS Act establishes a federal regulatory framework for payment stablecoins, creating licensing requirements for stablecoin issuers.",
-      "related_chapters": [7, 10],
+      "related_chapters": [
+        7,
+        10
+      ],
       "route_slug": "genius-act",
       "search_tokens": [
-        "genius act", "stablecoin", "stablecoin regulation", "payment stablecoin",
-        "digital asset", "crypto regulation", "pub l 119-27",
-        "stablecoin issuer", "reserve requirements", "federal stablecoin"
+        "genius act",
+        "stablecoin",
+        "stablecoin regulation",
+        "payment stablecoin",
+        "digital asset",
+        "crypto regulation",
+        "pub l 119-27",
+        "stablecoin issuer",
+        "reserve requirements",
+        "federal stablecoin"
       ],
-      "cross_references": ["securities-act-1933", "exchange-act-1934", "cea"],
+      "cross_references": [
+        "securities-act-1933",
+        "exchange-act-1934",
+        "cea"
+      ],
       "hierarchy_type": "title-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -377,10 +549,14 @@
     {
       "canonical_work_id": "securities-act-1933",
       "work_type": "federal-statute",
-      "official_title": "Securities Act of 1933 (15 U.S.C. §§ 77a–77aa)",
+      "official_title": "Securities Act of 1933 (15 U.S.C. \u00a7\u00a7 77a\u201377aa)",
       "short_title": "Securities Act",
       "common_name": "Securities Act of 1933",
-      "abbreviations": ["SA", "'33 Act", "Securities Act"],
+      "abbreviations": [
+        "SA",
+        "'33 Act",
+        "Securities Act"
+      ],
       "aliases": [
         "Securities Act of 1933",
         "Securities Act",
@@ -388,14 +564,14 @@
         "'33 Act",
         "Truth in Securities Act",
         "SA 1933",
-        "15 U.S.C. § 77",
+        "15 U.S.C. \u00a7 77",
         "Federal Securities Act"
       ],
       "citation_forms": [
-        "Securities Act § 5",
-        "15 U.S.C. § 77e",
-        "Securities Act of 1933 § 5",
-        "SA § 5"
+        "Securities Act \u00a7 5",
+        "15 U.S.C. \u00a7 77e",
+        "Securities Act of 1933 \u00a7 5",
+        "SA \u00a7 5"
       ],
       "publisher_or_promulgator": "United States Congress",
       "jurisdiction": "federal",
@@ -405,21 +581,38 @@
       "effective_date": "1933-07-07",
       "current_status": "operative",
       "completeness_status": "full-text",
-      "excerpt_status": "Full text processed from PDF source. 73 page-based segments covering registration requirements (§ 5), exemptions (§§ 3, 4), antifraud (§ 17), civil liabilities (§§ 11, 12), and definitions (§ 2).",
+      "excerpt_status": "Full text processed from PDF source. 73 page-based segments covering registration requirements (\u00a7 5), exemptions (\u00a7\u00a7 3, 4), antifraud (\u00a7 17), civil liabilities (\u00a7\u00a7 11, 12), and definitions (\u00a7 2).",
       "source_files": [
         "inbox/SecuritiesAct1933.pdf",
         "processed/segments/securitiesact1933.jsonl",
         "processed/records/securitiesact1933.json"
       ],
       "provenance_notes": "PDF extraction of complete statutory text. 73 page-based segments. The Securities Act governs the initial issuance of securities and requires registration unless an exemption applies.",
-      "related_chapters": [10, 11, 16],
+      "related_chapters": [
+        10,
+        11,
+        16
+      ],
       "route_slug": "securities-act-1933",
       "search_tokens": [
-        "securities act", "1933 act", "registration statement", "prospectus",
-        "section 5", "securities offering", "ipo", "reg d", "regulation d",
-        "accredited investor", "private placement", "rule 506", "sec registration"
+        "securities act",
+        "1933 act",
+        "registration statement",
+        "prospectus",
+        "section 5",
+        "securities offering",
+        "ipo",
+        "reg d",
+        "regulation d",
+        "accredited investor",
+        "private placement",
+        "rule 506",
+        "sec registration"
       ],
-      "cross_references": ["exchange-act-1934", "genius-act"],
+      "cross_references": [
+        "exchange-act-1934",
+        "genius-act"
+      ],
       "hierarchy_type": "title-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -427,24 +620,28 @@
     {
       "canonical_work_id": "exchange-act-1934",
       "work_type": "federal-statute",
-      "official_title": "Securities Exchange Act of 1934 (15 U.S.C. §§ 78a–78qq)",
+      "official_title": "Securities Exchange Act of 1934 (15 U.S.C. \u00a7\u00a7 78a\u201378qq)",
       "short_title": "Exchange Act",
       "common_name": "Securities Exchange Act of 1934",
-      "abbreviations": ["SEA", "'34 Act", "Exchange Act"],
+      "abbreviations": [
+        "SEA",
+        "'34 Act",
+        "Exchange Act"
+      ],
       "aliases": [
         "Securities Exchange Act of 1934",
         "Exchange Act",
         "1934 Act",
         "'34 Act",
         "SEA 1934",
-        "15 U.S.C. § 78",
+        "15 U.S.C. \u00a7 78",
         "Securities Exchange Act"
       ],
       "citation_forms": [
-        "Exchange Act § 10(b)",
-        "15 U.S.C. § 78j(b)",
-        "Securities Exchange Act of 1934 § 10(b)",
-        "SEA § 14(a)"
+        "Exchange Act \u00a7 10(b)",
+        "15 U.S.C. \u00a7 78j(b)",
+        "Securities Exchange Act of 1934 \u00a7 10(b)",
+        "SEA \u00a7 14(a)"
       ],
       "publisher_or_promulgator": "United States Congress",
       "jurisdiction": "federal",
@@ -454,21 +651,39 @@
       "effective_date": "1934-10-01",
       "current_status": "operative",
       "completeness_status": "full-text",
-      "excerpt_status": "Full text processed from PDF source. 368 page-based segments covering antifraud (§ 10(b)), proxy solicitation (§ 14(a)), tender offers (§ 14(d)-(e)), insider trading (§ 16), reporting requirements (§ 13), and SEC authority.",
+      "excerpt_status": "Full text processed from PDF source. 368 page-based segments covering antifraud (\u00a7 10(b)), proxy solicitation (\u00a7 14(a)), tender offers (\u00a7 14(d)-(e)), insider trading (\u00a7 16), reporting requirements (\u00a7 13), and SEC authority.",
       "source_files": [
         "inbox/ExchangeAct1934.pdf",
         "processed/segments/exchangeact1934.jsonl",
         "processed/records/exchangeact1934.json"
       ],
-      "provenance_notes": "PDF extraction of complete statutory text. 368 page-based segments — the largest single processed source in the corpus. The Exchange Act governs secondary trading of securities, establishes the SEC, and mandates ongoing disclosure for public companies.",
-      "related_chapters": [10, 11, 12, 16],
+      "provenance_notes": "PDF extraction of complete statutory text. 368 page-based segments \u2014 the largest single processed source in the corpus. The Exchange Act governs secondary trading of securities, establishes the SEC, and mandates ongoing disclosure for public companies.",
+      "related_chapters": [
+        10,
+        11,
+        12,
+        16
+      ],
       "route_slug": "exchange-act-1934",
       "search_tokens": [
-        "exchange act", "1934 act", "10b-5", "rule 10b-5", "proxy",
-        "proxy solicitation", "tender offer", "insider trading", "section 16",
-        "reporting company", "sec enforcement", "securities fraud", "14a"
+        "exchange act",
+        "1934 act",
+        "10b-5",
+        "rule 10b-5",
+        "proxy",
+        "proxy solicitation",
+        "tender offer",
+        "insider trading",
+        "section 16",
+        "reporting company",
+        "sec enforcement",
+        "securities fraud",
+        "14a"
       ],
-      "cross_references": ["securities-act-1933", "genius-act"],
+      "cross_references": [
+        "securities-act-1933",
+        "genius-act"
+      ],
       "hierarchy_type": "title-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -476,26 +691,28 @@
     {
       "canonical_work_id": "cea",
       "work_type": "federal-statute",
-      "official_title": "Commodity Exchange Act (7 U.S.C. §§ 1–27f)",
+      "official_title": "Commodity Exchange Act (7 U.S.C. \u00a7\u00a7 1\u201327f)",
       "short_title": "CEA",
       "common_name": "Commodity Exchange Act",
-      "abbreviations": ["CEA"],
+      "abbreviations": [
+        "CEA"
+      ],
       "aliases": [
         "Commodity Exchange Act",
         "CEA",
-        "7 U.S.C. § 1",
+        "7 U.S.C. \u00a7 1",
         "Commodities Act",
         "Futures Trading Act"
       ],
       "citation_forms": [
-        "CEA § 2(a)",
-        "7 U.S.C. § 2(a)",
-        "Commodity Exchange Act § 2(a)"
+        "CEA \u00a7 2(a)",
+        "7 U.S.C. \u00a7 2(a)",
+        "Commodity Exchange Act \u00a7 2(a)"
       ],
       "publisher_or_promulgator": "United States Congress",
       "jurisdiction": "federal",
       "governing_body": "Commodity Futures Trading Commission (CFTC)",
-      "version_label": "As amended through current (7 U.S.C. § 1 et seq.)",
+      "version_label": "As amended through current (7 U.S.C. \u00a7 1 et seq.)",
       "enactment_date": "1936-06-15",
       "effective_date": "1936-06-15",
       "current_status": "operative",
@@ -505,14 +722,28 @@
         "inbox/CEA 7 USC 1.txt"
       ],
       "provenance_notes": "Raw text file (639 KB) in inbox. Not yet processed by the segmentation pipeline. Relevant to DAO and digital asset regulation chapters because of the CFTC's jurisdiction over commodity derivatives and the Howey test's boundary with securities law.",
-      "related_chapters": [7, 10],
+      "related_chapters": [
+        7,
+        10
+      ],
       "route_slug": "cea",
       "search_tokens": [
-        "cea", "commodity exchange act", "cftc", "commodity futures",
-        "derivatives", "futures trading", "swap", "digital commodity",
-        "commodity regulation", "7 usc"
+        "cea",
+        "commodity exchange act",
+        "cftc",
+        "commodity futures",
+        "derivatives",
+        "futures trading",
+        "swap",
+        "digital commodity",
+        "commodity regulation",
+        "7 usc"
       ],
-      "cross_references": ["securities-act-1933", "exchange-act-1934", "genius-act"],
+      "cross_references": [
+        "securities-act-1933",
+        "exchange-act-1934",
+        "genius-act"
+      ],
       "hierarchy_type": "title-section",
       "review_status": "draft",
       "last_verified_at": "2026-04-03"
@@ -523,7 +754,9 @@
       "official_title": "Unocal Corp. v. Mesa Petroleum Co., 493 A.2d 946 (Del. 1985)",
       "short_title": "Unocal v. Mesa Petroleum",
       "common_name": "Unocal",
-      "abbreviations": ["Unocal"],
+      "abbreviations": [
+        "Unocal"
+      ],
       "aliases": [
         "Unocal",
         "Unocal Corp. v. Mesa Petroleum",
@@ -552,14 +785,29 @@
         "processed/records/unocal.json"
       ],
       "provenance_notes": "Markdown source with excerpted opinion. 7 segments. Unocal established the enhanced scrutiny standard for board defensive actions against hostile takeover bids.",
-      "related_chapters": [9, 13],
+      "related_chapters": [
+        9,
+        13
+      ],
       "route_slug": "unocal",
       "search_tokens": [
-        "unocal", "mesa petroleum", "enhanced scrutiny", "takeover defense",
-        "hostile takeover", "poison pill", "proportionality", "defensive measure",
-        "threat to corporate policy", "board discretion"
+        "unocal",
+        "mesa petroleum",
+        "enhanced scrutiny",
+        "takeover defense",
+        "hostile takeover",
+        "poison pill",
+        "proportionality",
+        "defensive measure",
+        "threat to corporate policy",
+        "board discretion"
       ],
-      "cross_references": ["revlon", "air-products", "lyondell", "dgcl"],
+      "cross_references": [
+        "revlon",
+        "air-products",
+        "lyondell",
+        "dgcl"
+      ],
       "hierarchy_type": "flat",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -570,7 +818,9 @@
       "official_title": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc., 506 A.2d 173 (Del. 1986)",
       "short_title": "Revlon v. MacAndrews & Forbes",
       "common_name": "Revlon",
-      "abbreviations": ["Revlon"],
+      "abbreviations": [
+        "Revlon"
+      ],
       "aliases": [
         "Revlon",
         "Revlon Inc. v. MacAndrews & Forbes",
@@ -599,14 +849,28 @@
         "processed/records/revlon.json"
       ],
       "provenance_notes": "Markdown source with excerpted opinion. 6 segments. Revlon held that when a board decides to sell the company, it must seek the best price reasonably available for shareholders.",
-      "related_chapters": [9, 13],
+      "related_chapters": [
+        9,
+        13
+      ],
       "route_slug": "revlon",
       "search_tokens": [
-        "revlon", "macandews forbes", "revlon duties", "revlon mode",
-        "sale of company", "auction duty", "maximize shareholder value",
-        "best price", "change of control", "break-up"
+        "revlon",
+        "macandews forbes",
+        "revlon duties",
+        "revlon mode",
+        "sale of company",
+        "auction duty",
+        "maximize shareholder value",
+        "best price",
+        "change of control",
+        "break-up"
       ],
-      "cross_references": ["unocal", "lyondell", "dgcl"],
+      "cross_references": [
+        "unocal",
+        "lyondell",
+        "dgcl"
+      ],
       "hierarchy_type": "flat",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -617,7 +881,10 @@
       "official_title": "Air Products & Chemicals, Inc. v. Airgas, Inc., 16 A.3d 48 (Del. Ch. 2011)",
       "short_title": "Air Products v. Airgas",
       "common_name": "Air Products v. Airgas",
-      "abbreviations": ["Air Products", "Airgas"],
+      "abbreviations": [
+        "Air Products",
+        "Airgas"
+      ],
       "aliases": [
         "Air Products v. Airgas",
         "Air Products & Chemicals v. Airgas",
@@ -638,21 +905,34 @@
       "effective_date": "2011-02-15",
       "current_status": "operative",
       "completeness_status": "excerpted",
-      "excerpt_status": "Excerpted opinion text. 20 heading-based segments — the most detailed case extract in the corpus. Covers the application of Unocal enhanced scrutiny to a poison pill maintained against an all-cash, fully-financed tender offer.",
+      "excerpt_status": "Excerpted opinion text. 20 heading-based segments \u2014 the most detailed case extract in the corpus. Covers the application of Unocal enhanced scrutiny to a poison pill maintained against an all-cash, fully-financed tender offer.",
       "source_files": [
         "inbox/Air Products.md",
         "processed/segments/air-products.jsonl",
         "processed/records/air-products.json"
       ],
       "provenance_notes": "Markdown source with extensive excerpts. 20 segments. The court upheld Airgas's poison pill under Unocal despite the 'price inadequacy' rationale being the board's primary justification, reinforcing broad board discretion in defending against hostile bids.",
-      "related_chapters": [13],
+      "related_chapters": [
+        13
+      ],
       "route_slug": "air-products",
       "search_tokens": [
-        "air products", "airgas", "poison pill", "hostile takeover",
-        "tender offer defense", "unocal enhanced scrutiny", "pill defense",
-        "price inadequacy", "just say no", "shareholder rights plan"
+        "air products",
+        "airgas",
+        "poison pill",
+        "hostile takeover",
+        "tender offer defense",
+        "unocal enhanced scrutiny",
+        "pill defense",
+        "price inadequacy",
+        "just say no",
+        "shareholder rights plan"
       ],
-      "cross_references": ["unocal", "revlon", "dgcl"],
+      "cross_references": [
+        "unocal",
+        "revlon",
+        "dgcl"
+      ],
       "hierarchy_type": "flat",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -663,7 +943,9 @@
       "official_title": "Corwin v. KKR Financial Holdings LLC, 125 A.3d 304 (Del. 2015)",
       "short_title": "Corwin v. KKR Financial Holdings",
       "common_name": "Corwin",
-      "abbreviations": ["Corwin"],
+      "abbreviations": [
+        "Corwin"
+      ],
       "aliases": [
         "Corwin",
         "Corwin v. KKR",
@@ -691,14 +973,27 @@
         "processed/records/corwin.json"
       ],
       "provenance_notes": "Markdown source with key excerpts. 3 segments. Corwin established that a fully informed, uncoerced vote of disinterested stockholders can 'cleanse' a transaction, shifting the standard of review to business judgment.",
-      "related_chapters": [13],
+      "related_chapters": [
+        13
+      ],
       "route_slug": "corwin",
       "search_tokens": [
-        "corwin", "kkr financial", "corwin cleansing", "stockholder approval",
-        "informed vote", "uncoerced vote", "business judgment",
-        "cleansing vote", "ratification", "disinterested stockholders"
+        "corwin",
+        "kkr financial",
+        "corwin cleansing",
+        "stockholder approval",
+        "informed vote",
+        "uncoerced vote",
+        "business judgment",
+        "cleansing vote",
+        "ratification",
+        "disinterested stockholders"
       ],
-      "cross_references": ["weinberger", "revlon", "dgcl"],
+      "cross_references": [
+        "weinberger",
+        "revlon",
+        "dgcl"
+      ],
       "hierarchy_type": "flat",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -709,7 +1004,9 @@
       "official_title": "Lyondell Chemical Co. v. Ryan, 970 A.2d 235 (Del. 2009)",
       "short_title": "Lyondell Chemical v. Ryan",
       "common_name": "Lyondell",
-      "abbreviations": ["Lyondell"],
+      "abbreviations": [
+        "Lyondell"
+      ],
       "aliases": [
         "Lyondell",
         "Lyondell Chemical v. Ryan",
@@ -729,21 +1026,33 @@
       "effective_date": "2009-03-25",
       "current_status": "operative",
       "completeness_status": "excerpted",
-      "excerpt_status": "Excerpted opinion text. 4 heading-based segments covering the threshold for Revlon duty claims — directors cannot be liable for failing to maximize value unless they utterly failed to attempt to obtain the best sale price.",
+      "excerpt_status": "Excerpted opinion text. 4 heading-based segments covering the threshold for Revlon duty claims \u2014 directors cannot be liable for failing to maximize value unless they utterly failed to attempt to obtain the best sale price.",
       "source_files": [
         "inbox/Lyondell.md",
         "processed/segments/lyondell.jsonl",
         "processed/records/lyondell.json"
       ],
       "provenance_notes": "Markdown source with excerpted opinion. 4 segments. Lyondell clarified that Revlon does not impose a specific set of requirements on directors; the only way to fail is to 'utterly fail' to attempt to get the best price.",
-      "related_chapters": [13],
+      "related_chapters": [
+        13
+      ],
       "route_slug": "lyondell",
       "search_tokens": [
-        "lyondell", "ryan", "revlon duties", "sale of company",
-        "good faith", "utterly failed", "best price",
-        "change of control", "bad faith"
+        "lyondell",
+        "ryan",
+        "revlon duties",
+        "sale of company",
+        "good faith",
+        "utterly failed",
+        "best price",
+        "change of control",
+        "bad faith"
       ],
-      "cross_references": ["revlon", "unocal", "dgcl"],
+      "cross_references": [
+        "revlon",
+        "unocal",
+        "dgcl"
+      ],
       "hierarchy_type": "flat",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
@@ -754,7 +1063,9 @@
       "official_title": "Weinberger v. UOP, Inc., 457 A.2d 701 (Del. 1983)",
       "short_title": "Weinberger v. UOP",
       "common_name": "Weinberger",
-      "abbreviations": ["Weinberger"],
+      "abbreviations": [
+        "Weinberger"
+      ],
       "aliases": [
         "Weinberger",
         "Weinberger v. UOP",
@@ -782,15 +1093,118 @@
         "processed/records/weinberger.json"
       ],
       "provenance_notes": "Markdown source with excerpted opinion. 4 segments. Weinberger established the entire fairness standard for self-dealing transactions, requiring both fair dealing and fair price. It also modernized appraisal remedy valuation methodology.",
-      "related_chapters": [13],
+      "related_chapters": [
+        13
+      ],
       "route_slug": "weinberger",
       "search_tokens": [
-        "weinberger", "uop", "entire fairness", "fair dealing", "fair price",
-        "self dealing", "conflicted transaction", "controlling shareholder",
-        "freeze-out merger", "cash-out merger", "appraisal"
+        "weinberger",
+        "uop",
+        "entire fairness",
+        "fair dealing",
+        "fair price",
+        "self dealing",
+        "conflicted transaction",
+        "controlling shareholder",
+        "freeze-out merger",
+        "cash-out merger",
+        "appraisal"
       ],
-      "cross_references": ["corwin", "revlon", "dgcl"],
+      "cross_references": [
+        "corwin",
+        "revlon",
+        "dgcl"
+      ],
       "hierarchy_type": "flat",
+      "review_status": "verified",
+      "last_verified_at": "2026-04-03"
+    },
+    {
+      "canonical_work_id": "r2t",
+      "work_type": "restatement",
+      "official_title": "Restatement (Second) of Trusts",
+      "short_title": "R2T",
+      "common_name": "Restatement Second of Trusts",
+      "abbreviations": [
+        "R2T",
+        "Rest. 2d Trusts"
+      ],
+      "aliases": [
+        "Restatement (Second) of Trusts",
+        "Restatement Second Trusts",
+        "R2T",
+        "RST 2d Trusts"
+      ],
+      "citation_forms": [
+        "Restatement (Second) of Trusts \u00a7 1",
+        "Rest. (2d) Trusts \u00a7 1",
+        "R2T \u00a7 1"
+      ],
+      "publisher_or_promulgator": "American Law Institute (ALI)",
+      "jurisdiction": "restatement",
+      "governing_body": "American Law Institute",
+      "version_label": "Second",
+      "enactment_date": "1959-01-01",
+      "effective_date": "1959-01-01",
+      "current_status": "operative",
+      "completeness_status": "not-available",
+      "excerpt_status": "Listed in Tome corpus with reference-level coverage only. Section text is not currently loaded.",
+      "source_files": [],
+      "provenance_notes": "Referenced in src/tome/corpus.js as a restatement entry. No dedicated processed segment is currently attached.",
+      "related_chapters": [],
+      "route_slug": "r2t",
+      "search_tokens": [
+        "r2t",
+        "restatement trusts",
+        "restatement second trusts",
+        "trusts restatement"
+      ],
+      "cross_references": [],
+      "hierarchy_type": "restatement-section",
+      "review_status": "verified",
+      "last_verified_at": "2026-04-03"
+    },
+    {
+      "canonical_work_id": "r2d-contracts",
+      "work_type": "restatement",
+      "official_title": "Restatement (Second) of Contracts",
+      "short_title": "R2d Contracts",
+      "common_name": "Restatement Second of Contracts",
+      "abbreviations": [
+        "R2d Contracts",
+        "Rest. 2d Contracts"
+      ],
+      "aliases": [
+        "Restatement (Second) of Contracts",
+        "Restatement Second Contracts",
+        "R2d Contracts"
+      ],
+      "citation_forms": [
+        "Restatement (Second) of Contracts \u00a7 1",
+        "Rest. (2d) Contracts \u00a7 1",
+        "R2d Contracts \u00a7 1"
+      ],
+      "publisher_or_promulgator": "American Law Institute (ALI)",
+      "jurisdiction": "restatement",
+      "governing_body": "American Law Institute",
+      "version_label": "Second",
+      "enactment_date": "1981-01-01",
+      "effective_date": "1981-01-01",
+      "current_status": "operative",
+      "completeness_status": "not-available",
+      "excerpt_status": "Listed in Tome corpus with reference-level coverage only. Section text is not currently loaded.",
+      "source_files": [],
+      "provenance_notes": "Referenced in src/tome/corpus.js as a restatement entry. No dedicated processed segment is currently attached.",
+      "related_chapters": [],
+      "route_slug": "r2d-contracts",
+      "search_tokens": [
+        "r2d contracts",
+        "restatement contracts",
+        "restatement second contracts",
+        "contracts restatement"
+      ],
+      "cross_references": [],
+      "hierarchy_type": "restatement-section",
       "review_status": "verified",
       "last_verified_at": "2026-04-03"
     }
