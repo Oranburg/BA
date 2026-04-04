@@ -14,18 +14,18 @@ const CHAPTERS = [
   { id: "ch02", moduleId: "ch02-agency", num: "02", title: "Agency", problem: "Attribution", focus: "The Control Test", route: APP_ROUTES.ch02Agency },
   { id: "ch03", moduleId: "ch03-partnership", num: "03", title: "Partnership", problem: "Risk", focus: "Unlimited Liability", route: APP_ROUTES.ch03Partnership },
   { id: "ch04", num: "04", title: "Corporations & Tech", problem: "Partitioning", focus: "Entity Shielding", route: null, status: "planned" },
-  { id: "ch05", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: null, status: "planned" },
+  { id: "ch05", moduleId: "ch05-llcs", num: "05", title: "LLCs", problem: "Governance", focus: "Contractual Freedom", route: APP_ROUTES.ch05LLCs },
   { id: "ch06", num: "06", title: "Nonprofits", problem: "Governance", focus: "Nondistribution Constraint", route: null, status: "planned" },
-  { id: "ch07", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law", route: null, status: "planned" },
+  { id: "ch07", moduleId: "ch07-daos", num: "07", title: "DAOs", problem: "Attribution", focus: "Code-as-Law", route: APP_ROUTES.ch07DAOs },
   { id: "ch08", moduleId: "ch08-entity-selection", num: "08", title: "Entity Selection", problem: "Synthesis", focus: "All Four Problems", route: APP_ROUTES.ch08EntitySelection },
   { id: "ch09", moduleId: "ch09-fiduciary-duties", num: "09", title: "Fiduciary Duties", problem: "Governance", focus: "Loyalty / Care", route: APP_ROUTES.ch09FiduciaryDuties },
-  { id: "ch10", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences", route: null, status: "partial" },
-  { id: "ch11", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure", route: null, status: "partial" },
+  { id: "ch10", moduleId: "ch10-staying-private", num: "10", title: "Staying Private", problem: "Risk", focus: "Venture Capital / Preferences", route: APP_ROUTES.ch10StayingPrivate },
+  { id: "ch11", moduleId: "ch11-going-public", num: "11", title: "Going Public", problem: "Partitioning", focus: "IPO Disclosure", route: APP_ROUTES.ch11GoingPublic },
   { id: "ch12", moduleId: "ch12-shareholder-franchise", num: "12", title: "Shareholder Franchise", problem: "Governance", focus: "Voting", route: APP_ROUTES.ch12ShareholderFranchise },
   { id: "ch13", moduleId: "ch13-m-and-a", num: "13", title: "M&A", problem: "Governance", focus: "Takeovers / Enhanced Scrutiny", route: APP_ROUTES.ch13MA },
   { id: "ch14", num: "14", title: "Piercing the Veil", problem: "Partitioning", focus: "Alter Ego", route: null, status: "partial" },
   { id: "ch15", moduleId: "ch15-capital-structure", num: "15", title: "Capital Structure", problem: "Risk", focus: "Solvency / Creditors", route: APP_ROUTES.ch15CapitalStructure },
-  { id: "ch16", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis", route: null, status: "planned" },
+  { id: "ch16", moduleId: "ch16-conclusion", num: "16", title: "Conclusion", problem: "Synthesis", focus: "Final Synthesis", route: APP_ROUTES.ch16Conclusion },
 ];
 
 const FOUR_PROBLEMS = [

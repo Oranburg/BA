@@ -27,6 +27,16 @@ function mergeSummary(summary = {}, moduleId, patch = {}) {
     next.controlPosture = patch.controlPosture || summary.controlPosture || "Equal partner authority under RUPA";
   }
 
+  if (moduleId === "ch05-llcs") {
+    next.entityForm = patch.entityForm || summary.entityForm || "LLC (governance hybrid)";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "OA-defined authority allocation";
+  }
+
+  if (moduleId === "ch07-daos") {
+    next.entityForm = patch.entityForm || summary.entityForm || "DAO (unincorporated — partnership default)";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Token-weighted governance — attribution risk";
+  }
+
   if (moduleId === "ch02-agency") {
     next.controlPosture = patch.controlPosture || summary.controlPosture || "Agency authority actively tested";
   }
@@ -47,10 +57,24 @@ function mergeSummary(summary = {}, moduleId, patch = {}) {
     next.transactionContext = patch.transactionContext || summary.transactionContext || "Active strategic transaction pressure";
   }
 
+  if (moduleId === "ch10-staying-private") {
+    next.financingPosture = patch.financingPosture || summary.financingPosture || "Series A negotiated; preference stack active";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Investor board seats negotiated";
+  }
+
+  if (moduleId === "ch11-going-public") {
+    next.financingPosture = patch.financingPosture || summary.financingPosture || "Post-IPO public company";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Public shareholders added; disclosure regime active";
+  }
+
   if (moduleId === "ch15-capital-structure") {
     next.financingPosture = patch.financingPosture || summary.financingPosture || "Distress-phase financing posture";
     next.residualClaimantPosture =
       patch.residualClaimantPosture || summary.residualClaimantPosture || "Residual claimant contested";
+  }
+
+  if (moduleId === "ch16-conclusion") {
+    next.transactionContext = patch.transactionContext || summary.transactionContext || "Lifecycle synthesis complete";
   }
 
   return next;

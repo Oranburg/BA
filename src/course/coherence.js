@@ -20,6 +20,22 @@ export function summarizeModuleHeadline(moduleId, state = {}) {
     };
   }
 
+  if (moduleId === "ch05-llcs") {
+    const cfg = state.oaConfig || {};
+    const mgmt = cfg.mgmt === "manager" ? "Manager-managed" : "Member-managed";
+    return {
+      headline: `LLC governance: ${mgmt}, verdict ${state.verdictCorrect ? "confirmed" : "pending"}`,
+      note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
+  if (moduleId === "ch07-daos") {
+    return {
+      headline: `DAO attribution: ${state.classificationScore ?? "-"} / ${state.totalActions ?? "-"} classified, verdict ${state.verdictCorrect ? "confirmed" : "pending"}`,
+      note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
   if (moduleId === "ch08-entity-selection") {
     return {
       headline: `Entity recommendation: ${state.recommendedEntityLabel || state.entityForm || "Not selected"}`,
@@ -48,10 +64,31 @@ export function summarizeModuleHeadline(moduleId, state = {}) {
     };
   }
 
+  if (moduleId === "ch10-staying-private") {
+    return {
+      headline: `Preference stack: ${state.selectedTerm || "Not selected"}, synthesis ${state.synthesisCorrect ? "confirmed" : "pending"}`,
+      note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
+  if (moduleId === "ch11-going-public") {
+    return {
+      headline: `Disclosure scrubber: ${state.flaggedCount ?? 0} material issues flagged, synthesis ${state.synthesisCorrect ? "confirmed" : "pending"}`,
+      note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
   if (moduleId === "ch15-capital-structure") {
     return {
       headline: `Distress posture: ${state.solvencyStateLabel || "Not selected"}`,
       note: state.boardRecommendation || "No distress recommendation drafted.",
+    };
+  }
+
+  if (moduleId === "ch16-conclusion") {
+    return {
+      headline: `Lifecycle synthesis: ${state.selectionsComplete ? "all problems addressed" : "in progress"}, declaration ${state.declarationCorrect ? "confirmed" : "pending"}`,
+      note: state.reflectionNote || "No final reflection drafted.",
     };
   }
 
