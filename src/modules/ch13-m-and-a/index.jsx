@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -693,6 +693,7 @@ export default function Ch13MA() {
               <button
                 onClick={() => {
                   markCompleted();
+                  syncModuleCompletion({ moduleId: "ch13-m-and-a", chapterNum: 13, chapterTitle: "M&A", scores: { p1Score: state.p1Score, p2Correct: state.p2Answer, revlonScore: state.revlonScore, holdingScore: state.holdingScore }, counselNotes: state.counselRecommendation });
                   updateMatterFile(
                     "ch13-m-and-a",
                     summarizeModuleHeadline("ch13-m-and-a", {

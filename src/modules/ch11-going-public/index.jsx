@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -752,6 +752,7 @@ export default function Ch11GoingPublic() {
               disabled={!state.synthesisCorrect}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch11-going-public", chapterNum: 11, chapterTitle: "Going Public", scores: { flagScore: state.flagScore, synthesisCorrect: state.synthesisChecked }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch11-going-public",
                   summarizeModuleHeadline("ch11-going-public", {

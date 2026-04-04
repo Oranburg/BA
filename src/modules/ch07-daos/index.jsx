@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -831,6 +831,7 @@ export default function Ch07DAOs() {
               disabled={!state.verdictCorrect}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch07-daos", chapterNum: 7, chapterTitle: "DAOs", scores: { governanceScore: state.governanceScore, wrapperChoice: state.wrapperChoice }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch07-daos",
                   summarizeModuleHeadline("ch07-daos", {

@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -967,6 +967,7 @@ export default function Ch06Nonprofits() {
               disabled={!counselReady}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch06-nonprofits", chapterNum: 6, chapterTitle: "Nonprofits", scores: { classificationScore: state.classificationScore, entityType: state.entityType }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch06-nonprofits",
                   summarizeModuleHeadline("ch06-nonprofits", {

@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -772,6 +772,7 @@ export default function Ch05LLCs() {
               disabled={!state.verdictCorrect}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch05-llcs", chapterNum: 5, chapterTitle: "LLCs", scores: { management: state.management, duties: state.duties, allocation: state.allocation }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch05-llcs",
                   summarizeModuleHeadline("ch05-llcs", {

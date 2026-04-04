@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -851,6 +851,7 @@ export default function Ch10StayingPrivate() {
               disabled={!state.synthesisCorrect}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch10-staying-private", chapterNum: 10, chapterTitle: "Staying Private", scores: { selectedTerm: state.selectedTerm, synthesisCorrect: state.synthesisChecked }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch10-staying-private",
                   summarizeModuleHeadline("ch10-staying-private", {

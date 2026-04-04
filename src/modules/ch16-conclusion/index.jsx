@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -573,6 +573,7 @@ export default function Ch16Conclusion() {
               disabled={!state.declarationCorrect}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch16-conclusion", chapterNum: 16, chapterTitle: "Conclusion", scores: { selections: state.selections, synthesisCorrect: state.synthesisChecked }, counselNotes: state.reflectionNote });
                 updateMatterFile(
                   "ch16-conclusion",
                   summarizeModuleHeadline("ch16-conclusion", {

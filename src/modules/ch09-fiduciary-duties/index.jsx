@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -300,6 +300,7 @@ export default function Ch09FiduciaryDuties() {
           <button
             onClick={() => {
               markCompleted();
+              syncModuleCompletion({ moduleId: "ch09-fiduciary-duties", chapterNum: 9, chapterTitle: "Fiduciary Duties", scores: { packetScore: state.packetChecks, conflictScore: state.conflictClassifications, processChoice: state.processChoice }, counselNotes: state.counselMemo });
               const selectedProcessLabel =
                 PROCESS_OPTIONS.find((option) => option.id === state.processChoice)?.title || "No process selected";
               updateMatterFile(

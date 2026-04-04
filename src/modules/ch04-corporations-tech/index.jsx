@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -954,6 +954,7 @@ export default function Ch04CorporationsTech() {
               disabled={!state.verdictCorrect || !counselValid}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch04-corporations-tech", chapterNum: 4, chapterTitle: "Corporations", scores: { creditorScore: state.creditorScore, piercingFactors: state.piercingFactors }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch04-corporations-tech",
                   summarizeModuleHeadline("ch04-corporations-tech", {

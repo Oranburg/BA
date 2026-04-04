@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -837,6 +837,7 @@ export default function Ch03Partnership() {
               disabled={!state.verdictCorrect}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch03-partnership", chapterNum: 3, chapterTitle: "Partnership", scores: { triggersFound: (state.triggersFound || []).length, verdictCorrect: state.verdictConfirmed }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch03-partnership",
                   summarizeModuleHeadline("ch03-partnership", {

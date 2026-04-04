@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -338,6 +338,7 @@ export default function Ch15CapitalStructure() {
             disabled={!state.solvencyState || (state.boardRecommendation || "").length < 20}
             onClick={() => {
               markCompleted();
+              syncModuleCompletion({ moduleId: "ch15-capital-structure", chapterNum: 15, chapterTitle: "Capital Structure", scores: { solvencyState: state.solvencyState, selectedActions: state.selectedActions }, counselNotes: state.boardRecommendation });
               updateMatterFile(
                 "ch15-capital-structure",
                 summarizeModuleHeadline("ch15-capital-structure", {

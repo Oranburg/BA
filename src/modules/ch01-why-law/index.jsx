@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -548,6 +548,7 @@ export default function Ch01WhyLaw() {
               disabled={!allAnswered}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch01-why-law", chapterNum: 1, chapterTitle: "Why Law", scores: { scenarioScore: state.scenarioAnswers ? Object.keys(state.scenarioAnswers).length : 0 }, counselNotes: state.synthesisNote });
                 updateMatterFile(
                   "ch01-why-law",
                   summarizeModuleHeadline("ch01-why-law", {

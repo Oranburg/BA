@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -380,6 +380,7 @@ export default function Ch08EntitySelection() {
             disabled={!state.selectedEntity || (state.counselRecommendation || "").trim().length < 20}
             onClick={() => {
               markCompleted();
+              syncModuleCompletion({ moduleId: "ch08-entity-selection", chapterNum: 8, chapterTitle: "Entity Selection", scores: { selectedEntity: state.selectedEntity }, counselNotes: state.counselRecommendation });
               const entityLabel = ENTITY_OPTIONS.find((e) => e.id === recommendedEntity)?.label || "Undetermined";
               updateMatterFile(
                 "ch08-entity-selection",

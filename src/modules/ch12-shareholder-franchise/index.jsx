@@ -1,6 +1,6 @@
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -312,6 +312,7 @@ export default function Ch12ShareholderFranchise() {
             disabled={(state.notes || "").length < 20}
             onClick={() => {
               markCompleted();
+              syncModuleCompletion({ moduleId: "ch12-shareholder-franchise", chapterNum: 12, chapterTitle: "Shareholder Franchise", scores: { rankingScore: state.rankedRisks, processChoice: state.processChoice }, counselNotes: state.notes });
               const selectedProcessLabel =
                 PROCESS_CHOICES.find((choice) => choice.id === state.processChoice)?.label || "No process selected";
               updateMatterFile(

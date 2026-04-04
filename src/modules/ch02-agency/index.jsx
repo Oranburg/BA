@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { APP_ROUTES } from "../../routing/routes";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -626,6 +626,7 @@ export default function Ch02Agency() {
               <button
                 onClick={() => {
                   markCompleted();
+                  syncModuleCompletion({ moduleId: "ch02-agency", chapterNum: 2, chapterTitle: "Agency Law", scores: { controlScore: state.controlScore, authScore: state.authScore }, counselNotes: state.counselNotes });
                   updateMatterFile(
                     "ch02-agency",
                     summarizeModuleHeadline("ch02-agency", {

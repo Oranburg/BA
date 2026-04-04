@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from "react";
 import CitationChip from "../../tome/CitationChip";
 import { useTome } from "../../tome/useTome";
-import { downloadTextFile, useModuleProgress } from "../../learning/progress";
+import { downloadTextFile, useModuleProgress, syncModuleCompletion } from "../../learning/progress";
 import { MODULE_FLOW } from "../../course/lifecycle";
 import { updateMatterFile } from "../../course/matterFile";
 import { summarizeModuleHeadline } from "../../course/coherence";
@@ -870,6 +870,7 @@ export default function Ch14PiercingTheVeil() {
               disabled={!state.verdictCorrect || !counselValid}
               onClick={() => {
                 markCompleted();
+                syncModuleCompletion({ moduleId: "ch14-piercing-the-veil", chapterNum: 14, chapterTitle: "Piercing the Veil", scores: { evidenceApplied: (state.appliedEvidence || []).length, prongScore: state.prongScore }, counselNotes: state.counselNote });
                 updateMatterFile(
                   "ch14-piercing-the-veil",
                   summarizeModuleHeadline("ch14-piercing-the-veil", {
