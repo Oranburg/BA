@@ -168,7 +168,7 @@ function ComparisonView({ leftDoc, leftSection, onOpenSection }) {
         </p>
       )}
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         {/* Left pane */}
         <div className="rounded border border-sprawl-yellow/20 p-3">
           <p className="font-headline text-xs uppercase tracking-wider text-sprawl-yellow">
@@ -303,18 +303,21 @@ export default function TomeDocReader() {
   }, [doc, section]);
 
   return (
-    <div className="flex h-[calc(100vh-4rem)] bg-sprawl-deep-blue text-gray-100">
+    <div className="flex min-h-[calc(100vh-4rem)] bg-sprawl-deep-blue text-gray-100 md:h-[calc(100vh-4rem)]">
       {/* Mobile sidebar toggle */}
-      <button
-        onClick={() => setSidebarOpen((v) => !v)}
-        className="fixed bottom-4 left-4 z-30 rounded-full border border-sprawl-yellow/40 bg-sprawl-deep-blue px-3 py-2 font-ui text-xs text-sprawl-yellow shadow-lg md:hidden"
-        aria-label="Toggle sidebar"
-      >
-        {sidebarOpen ? "Close" : "TOC"}
-      </button>
+      {!sidebarOpen && (
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="fixed bottom-4 left-4 z-30 flex items-center gap-2 rounded-full border border-sprawl-yellow/40 bg-sprawl-deep-blue/95 px-4 py-2.5 font-ui text-sm text-sprawl-yellow shadow-lg backdrop-blur md:hidden"
+          aria-label="Open table of contents"
+        >
+          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" /></svg>
+          TOC
+        </button>
+      )}
 
       {/* Sidebar */}
-      <div className={`${sidebarOpen ? "fixed inset-0 z-20 w-72" : "hidden"} md:relative md:block md:w-72 md:shrink-0`}>
+      <div className={`${sidebarOpen ? "fixed inset-y-0 left-0 z-20 w-[85vw] max-w-xs" : "hidden"} md:relative md:block md:w-72 md:shrink-0`}>
         <TocSidebar
           doc={doc}
           section={section}
@@ -335,7 +338,7 @@ export default function TomeDocReader() {
 
       {/* Main content */}
       <main className="flex-1 overflow-auto">
-        <div className="mx-auto max-w-3xl px-6 py-6">
+        <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
           {/* Breadcrumb + compare toggle */}
           {section && (
             <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
@@ -388,8 +391,8 @@ export default function TomeDocReader() {
               </header>
 
               {/* Statutory text */}
-              <div className="rounded-lg border border-sprawl-yellow/20 bg-black/20 px-6 py-5">
-                <p className="font-body text-lg leading-8 text-gray-100">{section.text}</p>
+              <div className="rounded-lg border border-sprawl-yellow/20 bg-black/20 px-4 py-5 sm:px-6">
+                <p className="break-words font-body text-base leading-8 text-gray-100 sm:text-lg">{section.text}</p>
               </div>
 
               {/* Comparison */}

@@ -107,8 +107,8 @@ export default function TomeQuickRef({ docSlug, sectionNumber, onClose }) {
       </div>
 
       {/* Section text */}
-      <div className="flex-1 overflow-auto px-5 py-6">
-        <p className="font-body text-lg leading-8 text-gray-100">{section.text}</p>
+      <div className="flex-1 overflow-auto px-4 py-6 sm:px-5">
+        <p className="break-words font-body text-base leading-8 text-gray-100 sm:text-lg">{section.text}</p>
 
         {/* Used in chapters */}
         {chapters.length > 0 && (

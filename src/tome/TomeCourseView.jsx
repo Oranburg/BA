@@ -309,7 +309,7 @@ export default function TomeCourseView() {
         </div>
 
         {/* Browse by Document link */}
-        <div className="mb-6 flex items-center gap-4">
+        <div className="mb-6 flex flex-wrap items-center gap-3">
           <Link
             to={`${APP_ROUTES.tomeHome}/${DOCUMENTS.find((d) => d.sectionsFile)?.slug || "rupa"}`}
             className="rounded border border-sprawl-yellow/40 px-4 py-2 font-ui text-sm text-sprawl-yellow hover:bg-sprawl-yellow/10"
