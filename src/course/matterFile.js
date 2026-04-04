@@ -27,9 +27,19 @@ function mergeSummary(summary = {}, moduleId, patch = {}) {
     next.controlPosture = patch.controlPosture || summary.controlPosture || "Equal partner authority under RUPA";
   }
 
+  if (moduleId === "ch04-corporations-tech") {
+    next.entityForm = patch.entityForm || summary.entityForm || "Corporation (entity shield active)";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Founder-controlled corporation — partitioning established";
+  }
+
   if (moduleId === "ch05-llcs") {
     next.entityForm = patch.entityForm || summary.entityForm || "LLC (governance hybrid)";
     next.controlPosture = patch.controlPosture || summary.controlPosture || "OA-defined authority allocation";
+  }
+
+  if (moduleId === "ch06-nonprofits") {
+    next.entityForm = patch.entityForm || summary.entityForm || "Nonprofit Corp (nondistribution constraint active)";
+    next.controlPosture = patch.controlPosture || summary.controlPosture || "Mission-locked governance — no founder distributions permitted";
   }
 
   if (moduleId === "ch07-daos") {
@@ -65,6 +75,11 @@ function mergeSummary(summary = {}, moduleId, patch = {}) {
   if (moduleId === "ch11-going-public") {
     next.financingPosture = patch.financingPosture || summary.financingPosture || "Post-IPO public company";
     next.controlPosture = patch.controlPosture || summary.controlPosture || "Public shareholders added; disclosure regime active";
+  }
+
+  if (moduleId === "ch14-piercing-the-veil") {
+    next.entityForm = patch.entityForm || summary.entityForm || "Corporation — subsidiary veil pierced";
+    next.strategicPressure = patch.strategicPressure || summary.strategicPressure || "Veil-piercing exposure — personal liability risk";
   }
 
   if (moduleId === "ch15-capital-structure") {

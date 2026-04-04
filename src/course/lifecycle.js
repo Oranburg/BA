@@ -2,7 +2,9 @@ export const BUILT_MODULES = [
   "ch01-why-law",
   "ch02-agency",
   "ch03-partnership",
+  "ch04-corporations-tech",
   "ch05-llcs",
+  "ch06-nonprofits",
   "ch07-daos",
   "ch08-entity-selection",
   "ch09-fiduciary-duties",
@@ -10,6 +12,7 @@ export const BUILT_MODULES = [
   "ch11-going-public",
   "ch12-shareholder-franchise",
   "ch13-m-and-a",
+  "ch14-piercing-the-veil",
   "ch15-capital-structure",
   "ch16-conclusion",
 ];
@@ -38,22 +41,42 @@ export const MODULE_FLOW = {
   "ch03-partnership": {
     title: "Partnership",
     route: "/ch03-partnership",
-    next: "ch05-llcs",
+    next: "ch04-corporations-tech",
     bridge:
-      "Partnership exposes unlimited personal liability. The LLC offers a hybrid solution — corporate liability protection with partnership-type contractual freedom.",
+      "Partnership exposes unlimited personal liability. The corporation solves that problem through asset partitioning — the most powerful legal technology for scaling the firm.",
     dominantProblems: ["Risk allocation"],
     secondaryProblems: ["Attribution", "Governance"],
     shiftFromPrior: "Shift from attribution to risk: co-ownership triggers joint and several liability, making risk allocation the dominant concern.",
   },
+  "ch04-corporations-tech": {
+    title: "Corporations & Tech",
+    route: "/ch04-corporations-tech",
+    next: "ch05-llcs",
+    bridge:
+      "The corporation established the entity shield through asset partitioning. The LLC offers the same liability protection with partnership-type contractual freedom — governance becomes the dominant concern.",
+    dominantProblems: ["Asset partitioning"],
+    secondaryProblems: ["Risk allocation", "Governance"],
+    shiftFromPrior: "Shift from risk to partitioning: incorporation creates a legal wall between entity and owner assets, making asset partitioning the dominant concern.",
+  },
   "ch05-llcs": {
     title: "LLCs",
     route: "/ch05-llcs",
-    next: "ch07-daos",
+    next: "ch06-nonprofits",
     bridge:
-      "The LLC demonstrated contractual freedom within a legal entity. DAOs test what happens when there is no entity at all — and the attribution problem returns with full force.",
+      "The LLC gave founders contractual freedom to distribute profits however they chose. The nonprofit inverts that premise — the law prohibits distributions entirely, and that prohibition is the governance technology that enables donor trust.",
     dominantProblems: ["Governance"],
     secondaryProblems: ["Risk allocation", "Asset partitioning"],
-    shiftFromPrior: "Shift from risk to governance: the LLC's contractual freedom makes governance design — not liability exposure — the dominant concern.",
+    shiftFromPrior: "Shift from partitioning to governance: the LLC's contractual freedom makes governance design — not liability exposure — the dominant concern.",
+  },
+  "ch06-nonprofits": {
+    title: "Nonprofits",
+    route: "/ch06-nonprofits",
+    next: "ch07-daos",
+    bridge:
+      "The nonprofit demonstrated mission-locked governance through the nondistribution constraint. DAOs test what happens when there is no entity at all — and the attribution problem returns with full force.",
+    dominantProblems: ["Governance"],
+    secondaryProblems: ["Risk allocation", "Asset partitioning"],
+    shiftFromPrior: "Shift from contractual freedom to constraint-based trust: where the LLC lets founders write their own rules, the nonprofit bars distributions entirely to solve contract failure.",
   },
   "ch07-daos": {
     title: "DAOs",
@@ -123,13 +146,24 @@ export const MODULE_FLOW = {
   "ch13-m-and-a": {
     title: "M&A",
     route: "/ch13-m-and-a",
-    next: "ch15-capital-structure",
+    next: "ch14-piercing-the-veil",
     bridge:
-      "Deal outcomes and defensive tactics reshape leverage, runway, and downside allocation—bringing creditors to the center.",
+      "Deal outcomes and defensive tactics reshape leverage, runway, and downside allocation — but when owners abuse the corporate form, the asset partition itself is at risk.",
     dominantProblems: ["Governance", "Risk allocation"],
     secondaryProblems: ["Asset partitioning"],
     shiftFromPrior:
       "Shift from franchise conflict to transaction scrutiny: sale process quality and control transfers define doctrine.",
+  },
+  "ch14-piercing-the-veil": {
+    title: "Piercing the Veil",
+    route: "/ch14-piercing-the-veil",
+    next: "ch15-capital-structure",
+    bridge:
+      "With the corporate veil tested to its limits, the next question is what happens when the capital structure itself collapses — bringing creditors to the center of governance.",
+    dominantProblems: ["Asset partitioning"],
+    secondaryProblems: ["Risk allocation", "Governance"],
+    shiftFromPrior:
+      "Shift from transaction scrutiny to partition integrity: the corporate form's most fundamental protection — limited liability — is directly challenged through alter ego doctrine.",
   },
   "ch15-capital-structure": {
     title: "Capital Structure",

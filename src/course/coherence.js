@@ -20,12 +20,26 @@ export function summarizeModuleHeadline(moduleId, state = {}) {
     };
   }
 
+  if (moduleId === "ch04-corporations-tech") {
+    return {
+      headline: `Corporate partitioning: ${state.creditorScore ?? "-"} / ${state.totalCreditors ?? "-"} creditors classified, ${state.veilScore ?? "-"} / ${state.totalFactors ?? "-"} veil factors identified`,
+      note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
   if (moduleId === "ch05-llcs") {
     const cfg = state.oaConfig || {};
     const mgmt = cfg.mgmt === "manager" ? "Manager-managed" : "Member-managed";
     return {
       headline: `LLC governance: ${mgmt}, verdict ${state.verdictCorrect ? "confirmed" : "pending"}`,
       note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
+  if (moduleId === "ch06-nonprofits") {
+    return {
+      headline: `Nonprofit governance: constraint ${state.constraintActive ? "active" : "inactive"}, ${state.classificationScore ?? "-"} / ${state.totalExpenditures ?? "-"} classified, verdict ${state.verdictCorrect ? "confirmed" : "pending"}`,
+      note: state.counselNote || "No counsel recommendation drafted.",
     };
   }
 
@@ -75,6 +89,13 @@ export function summarizeModuleHeadline(moduleId, state = {}) {
     return {
       headline: `Disclosure scrubber: ${state.flaggedCount ?? 0} material issues flagged, synthesis ${state.synthesisCorrect ? "confirmed" : "pending"}`,
       note: state.counselNote || "No counsel note drafted.",
+    };
+  }
+
+  if (moduleId === "ch14-piercing-the-veil") {
+    return {
+      headline: `Veil-piercing: ${state.appliedCount ?? "-"} / 6 evidence applied, prong classification ${state.prongScore ?? "-"} / ${state.prongTotal ?? "-"}, verdict ${state.verdictCorrect ? "confirmed" : "pending"}`,
+      note: state.counselNote || "No counsel recommendation drafted.",
     };
   }
 
