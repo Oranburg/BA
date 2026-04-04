@@ -3,6 +3,7 @@ import { useTheme } from "./useTheme";
 import { Link, useLocation } from "react-router-dom";
 import { useTome } from "../../tome/useTome";
 import { APP_ROUTES, HASH_TARGETS, getHomeHashLink } from "../../routing/routes";
+import StudentIdentity from "../ui/StudentIdentity";
 
 export default function Navbar() {
   const { isDark, setIsDark } = useTheme();
@@ -62,6 +63,9 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <div className="hidden md:block">
+            <StudentIdentity />
+          </div>
           <button
             onClick={() => setIsDark(!isDark)}
             className="flex items-center gap-2 px-3 py-1.5 rounded border border-sprawl-yellow/40 hover:border-sprawl-yellow text-sprawl-yellow hover:bg-sprawl-yellow/10 transition-all font-ui text-sm"

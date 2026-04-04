@@ -143,6 +143,24 @@ export function getCourseProgress(moduleIds = []) {
   };
 }
 
+/**
+ * Sync module completion to Quaere for teacher tracking.
+ * Call this alongside markCompleted() in each module's export handler.
+ * Fails silently if no email is set or network is unavailable.
+ */
+export function syncModuleCompletion({ moduleId, chapterNum, chapterTitle, scores, counselNotes }) {
+  import("./progressSync").then(({ syncProgress }) => {
+    syncProgress({
+      moduleId,
+      chapterNum,
+      chapterTitle,
+      completed: true,
+      scores,
+      counselNotes,
+    });
+  }).catch(() => {});
+}
+
 export function downloadTextFile(filename, content) {
   if (typeof document === "undefined") return;
   const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
