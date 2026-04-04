@@ -32,8 +32,11 @@ export default function Navbar() {
         Toolkit
       </Link>
       <button onClick={() => { openTome(); close(); }} className={`${linkClass(false)} text-left`}>
-        Reference Lookup
+        Quick Lookup
       </button>
+      <Link to={APP_ROUTES.tomeHome} onClick={close} className={linkClass(location.pathname.startsWith("/tome"))}>
+        Corpus
+      </Link>
     </>
   );
 
