@@ -57,3 +57,19 @@ Every module has:
 | Scholarship | 31 | Doctrinal extracts from textbook |
 
 Search uses relevance-ranked scoring across section numbers, titles, concept tags, and full text.
+
+## Recent Improvements (2026-04-04)
+
+- **Font legibility**: All text-xs bumped to text-sm; global CSS base forces body text to text-base (16px)
+- **PDF certificate export**: Branded landscape PDFs via jsPDF CDN, integrated into LifecycleHandoff
+- **Landing page rebuilt**: Removed character emphasis, clean hero with course title/author, image-backed chapter grid
+- **Tome data integrity**: 23 Delaware cases registered in corpus.js, 4 ghost entries removed
+- **Media integration**: src/data/media-map.json maps chapters to podcast seasons + best videos, shown in LifecycleHandoff
+- **Hex favicon deployed**: inbox/BA-LotF-hex-favicon → public/favicon-32.png + apple-touch-icon.png
+- **Inbox fully cleared**: All 70+ source files processed or confirmed redundant
+
+## Cross-Repo Architecture
+
+Media metadata (videos, podcasts) lives in oranburg.github.io/_data/. BA references by YouTube ID only.
+LO definitions will live in Quaere. BA needs learning-objectives.json (like K has) as next priority.
+See ecosystem.md in .claude/projects/ memory for full cross-repo map.
