@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getMatterFile } from "../../course/matterFile";
 import { getNextBuiltModule, MODULE_FLOW } from "../../course/lifecycle";
@@ -92,6 +93,16 @@ export function LifecycleHandoff({ moduleId, bridge }) {
   const flow = MODULE_FLOW[moduleId];
   const chapterNum = flow ? parseInt(moduleId.replace(/^ch0?/, "").split("-")[0], 10) : 0;
   const chapterTitle = flow ? flow.title : moduleId;
+  const [media, setMedia] = useState(null);
+
+  useEffect(() => {
+    import("../../data/media-map.json").then((mod) => {
+      const data = mod.default || mod;
+      if (data.chapters && data.chapters[String(chapterNum)]) {
+        setMedia(data.chapters[String(chapterNum)]);
+      }
+    }).catch(() => {});
+  }, [chapterNum]);
 
   return (
     <section className="border border-sprawl-light-blue/30 rounded-lg p-4 bg-sprawl-light-blue/5">
@@ -116,6 +127,33 @@ export function LifecycleHandoff({ moduleId, bridge }) {
           />
         )}
       </div>
+      {media && (media.best_video || media.podcast_season) && (
+        <div className="mt-3 pt-3 border-t border-sprawl-light-blue/20">
+          <p className="font-ui text-sm text-gray-500 mb-2">Review this chapter:</p>
+          <div className="flex flex-wrap gap-2">
+            {media.best_video && (
+              <a
+                href={`https://www.youtube.com/watch?v=${media.best_video.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded border border-gray-600 text-gray-300 font-ui text-sm hover:border-sprawl-yellow hover:text-sprawl-yellow transition-colors"
+              >
+                &#9654; {media.best_video.title}
+              </a>
+            )}
+            {media.podcast_season && (
+              <a
+                href="https://bizlawbreakdown.podbean.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded border border-gray-600 text-gray-300 font-ui text-sm hover:border-sprawl-teal hover:text-sprawl-teal transition-colors"
+              >
+                &#127911; {media.podcast_season.name} ({media.podcast_season.episodes} episodes)
+              </a>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
