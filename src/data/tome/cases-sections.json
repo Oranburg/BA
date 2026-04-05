@@ -1,0 +1,516 @@
+[
+  {
+    "number": "457 A.2d 701 (Del. 1983)",
+    "title": "Weinberger v. UOP, Inc.",
+    "article": "Delaware Cases",
+    "text": "When a controlling stockholder stands on both sides of a merger, the transaction must satisfy the entire fairness standard, which has two interdependent components: fair dealing and fair price. Fair dealing embraces questions of timing, initiation, structure, negotiation, disclosure to directors, and how approvals were obtained. Fair price relates to economic and financial considerations including assets, market value, earnings, and future prospects. All aspects must be examined as a whole. The court found the merger unfair because Signal's directors on the UOP board prepared a feasibility study showing a price of up to $24 per share would be a good investment for Signal, but this material information was never disclosed to UOP's minority shareholders or outside directors, who approved a $21 price. The court also liberalized the appraisal remedy under 8 Del. C. § 262, eliminated the business purpose requirement for freeze-out mergers from Singer v. Magnavox, and adopted a more flexible approach to valuation. Where corporate action has been approved by an informed vote of a majority of the minority shareholders, the burden entirely shifts to the plaintiff to show the transaction was unfair, but the burden remains on those relying on the vote to show complete disclosure of all material facts.",
+    "rule": "Entire fairness requires both fair dealing and fair price in conflicted transactions.",
+    "keyFacts": [
+      "Signal Companies owned 50.5% of UOP and proposed a cash-out merger at $21 per share",
+      "Signal's internal Arledge-Chitiea study showed a price up to $24 per share would be a good investment, but this was never disclosed to UOP's minority shareholders or outside directors",
+      "Lehman Brothers' fairness opinion was prepared in less than three business days with a $150,000 fee",
+      "UOP's board included Signal directors who had conflicting loyalties and participated in the merger decision",
+      "The entire transaction was presented to and approved by UOP's board within four business days"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "DGCL § 262",
+      "Weinberger",
+      "DGCL § 262",
+      "DGCL § 251"
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "506 A.2d 173 (Del. 1986)",
+    "title": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc.",
+    "article": "Delaware Cases",
+    "text": "Once it becomes apparent that a company will be sold or broken up, the directors' role changes from defenders of the corporate bastion to auctioneers charged with getting the best price for stockholders. The board may initially adopt reasonable defensive measures under Unocal when facing a hostile bid it believes is inadequate, but when the break-up becomes inevitable and the board authorizes management to negotiate a sale, the duty shifts to maximizing the sale price. Lock-up agreements, no-shop provisions, and cancellation fees are not per se illegal under Delaware law and can entice bidders into a contest, but when they end an active auction and foreclose further bidding, they operate to the shareholders' detriment and are impermissible. A board may consider the interests of other constituencies (creditors, employees, community) when addressing a takeover threat, but only if there are rationally related benefits accruing to the stockholders. Such concern for non-stockholder interests is inappropriate when an auction among active bidders is in progress and the object is to sell to the highest bidder. The Revlon board breached its duties by favoring Forstmann Little's bid to protect noteholders rather than maximizing shareholder value.",
+    "rule": "When a sale or breakup of the company becomes inevitable, the board's duty shifts to maximizing shareholder value.",
+    "keyFacts": [
+      "Pantry Pride made escalating hostile bids for Revlon, from $47.50 to $58 per share",
+      "Revlon's board favored Forstmann Little and granted it a lock-up option on Vision Care and National Health Laboratories divisions at $100-175 million below their appraised value",
+      "Board agreed to a no-shop provision and $25 million cancellation fee favoring Forstmann",
+      "Board's motivation shifted from shareholder value maximization to protecting noteholders whose Notes had dropped in value after covenant waivers were announced",
+      "Forstmann was given preferential access to Revlon's financial data while Pantry Pride was excluded"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "DGCL § 122(13)",
+      "Revlon, Inc.",
+      "Unocal Corp. v. Mesa Petroleum Co."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "493 A.2d 946 (Del. 1985)",
+    "title": "Unocal Corp. v. Mesa Petroleum Co.",
+    "article": "Delaware Cases",
+    "text": "When a board of directors faces a hostile takeover, it has both the power and duty to oppose a bid it perceives to be harmful to the corporate enterprise. The board's authority derives from DGCL § 141(a) and its fundamental duty to protect the corporation and its stockholders from perceived harm. However, because of the omnipresent specter that a board may be acting primarily in its own interests, there is an enhanced duty calling for judicial examination at the threshold. The board must demonstrate: (1) reasonable grounds for believing a danger to corporate policy and effectiveness existed, satisfied by showing good faith and reasonable investigation (here aided by the majority of independent directors' nine-and-a-half-hour deliberation and Goldman Sachs/Dillon Read opinions); and (2) the defensive response was reasonable in relation to the threat posed. Relevant threat considerations include inadequacy of price, nature and timing of offer, questions of illegality, impact on other constituencies, risk of nonconsummation, and quality of securities offered. This 'enhanced scrutiny' or 'proportionality' standard is intermediate between the business judgment rule and entire fairness. A board may consider the interests of short-term speculators versus long-term investors. The selective exchange offer excluding Mesa was upheld as reasonable in relation to Mesa's coercive two-tier front-loaded tender offer.",
+    "rule": "Defensive measures must be reasonable in relation to the threat posed by a hostile takeover bid.",
+    "keyFacts": [
+      "Mesa Petroleum launched a coercive two-tier tender offer at $54 per share front-end with junk bonds at the back-end",
+      "Unocal's board authorized a selective self-tender at $72 per share excluding Mesa",
+      "Board consisted of majority independent directors who met for 9.5 hours",
+      "Goldman Sachs and Dillon Read opined the Mesa offer was grossly inadequate, with minimum liquidation value exceeding $60 per share",
+      "Mesa had a national reputation as a 'greenmailer'"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "DGCL § 160(a)",
+      "Unocal Corp.",
+      "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "125 A.3d 304 (Del. 2015)",
+    "title": "Corwin v. KKR Financial Holdings LLC",
+    "article": "Delaware Cases",
+    "text": "When a merger that is not subject to the entire fairness standard of review is approved by a fully informed, uncoerced majority of the disinterested stockholders, the business judgment rule is the appropriate standard of review for a post-closing damages action. This applies even if the transaction would otherwise be subject to enhanced scrutiny under Revlon or Unocal. The doctrine rests on a deep tradition of giving deference to the voluntary judgment of disinterested stockholders to determine a transaction's merits for themselves. Delaware law has long been reluctant to second-guess the judgment of a disinterested stockholder majority that determines that a transaction with a party other than a controlling stockholder is in their best interests. Unocal and Revlon are primarily designed to give stockholders and the Court of Chancery the tool of injunctive relief in real time before closing; they were not tools designed with post-closing money damages claims in mind. When the real parties in interest can easily protect themselves at the ballot box by voting no, litigation-intrusive standards of review promise more costs than benefits. The court clarified that Gantler v. Stephens was a narrow decision focused on defining 'ratification' and did not unsettle the long-standing body of case law giving standard-of-review effect to informed stockholder votes.",
+    "rule": "A fully informed, uncoerced vote of disinterested stockholders invokes business judgment review.",
+    "keyFacts": [
+      "KKR acquired KKR Financial Holdings in a stock-for-stock merger at a 35% premium to unaffected market price",
+      "KKR owned less than 1% of Financial Holdings' stock and was not a controlling stockholder",
+      "The merger was approved by a fully informed, uncoerced vote of disinterested stockholders",
+      "Financial Holdings had an exculpatory charter provision under DGCL § 102(b)(7)",
+      "Financial Holdings was an LLC managed by a KKR affiliate under a contractual management agreement"
+    ],
+    "concepts": [
+      "DGCL § 102(b)(7)",
+      "DGCL § 251",
+      "Corwin",
+      "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc.",
+      "Unocal Corp. v. Mesa Petroleum Co."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "970 A.2d 235 (Del. 2009)",
+    "title": "Lyondell Chemical Co. v. Ryan",
+    "article": "Delaware Cases",
+    "text": "There is only one Revlon duty: to get the best price for stockholders at a sale of the company. No court can tell directors exactly how to accomplish that goal because they will face unique circumstances. There are no legally prescribed steps that a board must follow, and there is no single blueprint. A board is not required to conduct an auction, solicit competing bids, or conduct a market check. Bad faith requires a showing that directors knowingly and completely failed to undertake their responsibilities -- a conscious disregard of duty -- not merely that the process was imperfect. Where directors are protected by an exculpation clause under § 102(b)(7), only a breach of the duty of loyalty (including bad faith) can support liability; due care claims are exculpated. The Court of Chancery erred by imposing Revlon duties before the sale became inevitable (the filing of a Schedule 13D merely put the company 'in play' but did not trigger Revlon) and by equating an arguably imperfect sale process with bad faith. There is a vast difference between an inadequate or flawed effort to carry out fiduciary duties and a conscious disregard for those duties. Directors who met several times, solicited financial and legal advice, negotiated the price up from $40 to $48, and approved a deal that their banker called 'an absolute home run' did not consciously disregard their responsibilities.",
+    "rule": "Directors are not required to engage in a specific sale process to satisfy Revlon; only a knowing dereliction of duty constitutes bad faith.",
+    "keyFacts": [
+      "Basell offered $48 per share for Lyondell in an all-cash deal with no financing contingency",
+      "The merger was negotiated and finalized in approximately one week",
+      "Deutsche Bank described the merger price as 'an absolute home run'",
+      "Over 99% of voted shares approved the merger",
+      "The board took a 'wait and see' approach for two months after a Schedule 13D was filed, which the trial court criticized as 'slothful indifference'"
+    ],
+    "concepts": [
+      "DGCL § 102(b)(7)",
+      "DGCL § 141(a)",
+      "Lyondell Chemical Co.",
+      "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc.",
+      "In re Walt Disney Co. Deriv. Litig."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "16 A.3d 48 (Del. Ch. 2011)",
+    "title": "Air Products & Chemicals, Inc. v. Airgas, Inc.",
+    "article": "Delaware Cases",
+    "text": "Under Unocal's enhanced scrutiny standard, a board may maintain a poison pill indefinitely to block a hostile bid it reasonably concludes is inadequate. The threat that stockholders may tender into an inadequate offer because they have 'wearied of the battle' or because short-term arbitrageurs will take a quick profit at the expense of long-term value is a legally cognizable threat recognized in Unitrin and Paramount v. Time -- this is known as 'substantive coercion.' A pill is not 'preclusive' if the bidder retains a viable path to acquisition: here, Air Products could run another proxy contest at the next annual meeting. A pill is not 'coercive' because it does not force stockholders to accept a management-sponsored alternative. The 'just say no' defense is valid under Delaware law provided the board acts in good faith and reasonably. The power to manage the business and affairs of a corporation resides with the board, not the stockholders; the stockholder remedy for disagreement with board decisions is to replace the board. Most powerfully, the three directors nominated and elected by Air Products itself, after conducting their own independent due diligence with separate advisors, joined the rest of the board in unanimously concluding the $70 offer was inadequate.",
+    "rule": "A board acting in good faith may maintain a poison pill to block a premium, all-cash tender offer it reasonably believes is inadequate.",
+    "keyFacts": [
+      "Air Products offered $70 per share for Airgas, which the board believed was worth at least $78",
+      "Air Products successfully elected three nominees to the Airgas board via proxy contest",
+      "Even the newly elected Air Products nominees concluded the offer was inadequate after reviewing Airgas's financials",
+      "Airgas had a classified board and a poison pill with a 15% trigger",
+      "Three separate financial advisors (BofA, Goldman Sachs, Credit Suisse) all opined $70 was inadequate"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "Air Products & Chemicals, Inc.",
+      "Unocal Corp. v. Mesa Petroleum Co.",
+      "Paramount Communications, Inc. v. Time Inc."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "177 A.3d 1 (Del. 2017)",
+    "title": "Dell, Inc. v. Magnetar Global Event Driven Master Fund Ltd",
+    "article": "Delaware Cases",
+    "text": "When the market for a company's stock is semi-strong efficient and the sale process is thorough, the deal price deserves significant weight in determining fair value under 8 Del. C. § 262. The Court of Chancery erred by exclusively relying on its own DCF analysis (yielding $17.62 per share) while giving no weight to market data and deal price ($13.75). Where a management buyout was subjected to rigorous oversight by an independent special committee with full authority to say no, and where the committee conducted both pre- and post-signing market checks, the deal price is a reliable indicator of fair value. The record showed Dell's stock traded on NASDAQ with a market cap exceeding $20 billion, was in the top third of the S&P 500, had over 5% weekly trading volume, a tight bid-ask spread of 0.08%, and extensive analyst coverage -- all indicia of a semi-strong efficient market. Even though this was an MBO, the special committee's independence and robust process mitigated the typical concerns about MBO deal prices. The trial court's reasons for discounting the deal price did not follow from its own key factual findings about the integrity of the sale process.",
+    "rule": "In a statutory appraisal, the deal price resulting from a fair process is strong evidence of fair value.",
+    "keyFacts": [
+      "Michael Dell and Silver Lake proposed taking Dell private at $13.75 per share",
+      "The deal represented a 37% premium to the 90-day average unaffected stock price",
+      "An independent special committee with full authority oversaw a robust pre- and post-signing market check",
+      "The Court of Chancery had valued shares at $17.62 using a DCF analysis",
+      "Dell's stock was actively traded on NASDAQ with market cap exceeding $20 billion and semi-strong efficient market characteristics"
+    ],
+    "concepts": [
+      "DGCL § 262",
+      "Dell, Inc.",
+      "DGCL § 262"
+    ],
+    "chapterUse": [
+      13,
+      15
+    ]
+  },
+  {
+    "number": "315 A.3d 446 (Del. 2024)",
+    "title": "In re Match Group, Inc. Derivative Litigation",
+    "article": "Delaware Cases",
+    "text": "In a suit claiming a controlling stockholder stood on both sides of a transaction and received a non-ratable benefit, entire fairness is the presumptive standard of review. The controlling stockholder can shift the burden of proof (but not the standard) by properly employing either a special committee or an unaffiliated stockholder vote. But the use of just one procedural device does not change the standard of review from entire fairness to business judgment. To obtain business judgment review, the controlling stockholder must satisfy all requirements of Kahn v. M&F Worldwide Corp. (MFW): both an independent special committee and a majority-of-the-minority vote must be properly implemented. Critically, in the MFW setting, to replicate arm's-length bargaining, all members of the special committee must be independent of the controlling stockholder. The court reversed the Court of Chancery's dismissal because plaintiffs adequately alleged that separation committee member Thomas McInerney, as former CFO of IAC, lacked independence from the controlling stockholder IAC/InterActiveCorp, which held 98.2% of Old Match's voting power through dual-class stock. The transaction involved a reverse spinoff separating IAC from Match Group, with various asset allocations, an $850 million dividend (of which IAC received ~$680 million), and retention of $1.7 billion in exchangeable notes by New Match.",
+    "rule": "In a controlling stockholder transaction, both a special committee and a majority-of-the-minority vote are required to obtain business judgment review under MFW.",
+    "keyFacts": [
+      "IAC/InterActiveCorp controlled Old Match with 98.2% voting power through dual-class stock",
+      "A reverse spinoff separated IAC from Match Group",
+      "The Separation Committee member McInerney was alleged to lack independence from IAC as its former CFO",
+      "Transaction was conditioned on both committee recommendation and majority-of-minority vote",
+      "Old Match issued an $850 million dividend of which IAC received approximately $680 million"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "In re Match Group, Inc. Derivative Litigation",
+      "Kahn v. M & F Worldwide Corp.",
+      "Weinberger v. UOP, Inc."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "164 N.E. 545 (N.Y. 1928)",
+    "title": "Meinhard v. Salmon",
+    "article": "Delaware Cases",
+    "text": "A joint venturer managing partnership property owes the highest duty of loyalty to co-venturers when a new business opportunity arises from the venture. The duty of loyalty requires disclosure and sharing of opportunities connected to the partnership's subject matter. Cardozo described fiduciary duty as demanding 'the punctilio of an honor the most sensitive.' A managing co-venturer who secretly obtains a renewed or expanded lease on the venture property without disclosing the opportunity to the other venturer breaches this fiduciary obligation.",
+    "rule": "Joint venturers owe punctilio-level loyalty in opportunity allocation.",
+    "keyFacts": [
+      "Salmon was managing co-venturer of a lease on a hotel property",
+      "The property owner offered Salmon a new, expanded lease without Meinhard's knowledge",
+      "Salmon accepted the new lease for himself through a new entity",
+      "Meinhard was not informed and lost the opportunity"
+    ],
+    "concepts": [
+      "RUPA § 404",
+      "Meinhard",
+      "RUPA § 404"
+    ],
+    "chapterUse": [
+      9
+    ]
+  },
+  {
+    "number": "488 A.2d 858 (Del. 1985)",
+    "title": "Smith v. Van Gorkom",
+    "article": "Delaware Cases",
+    "text": "Directors who approve a merger without adequate information and deliberation may be found grossly negligent. The business judgment rule does not protect uninformed decisions. Directors cannot rely solely on the CEO's oral presentation and must inform themselves of all material information reasonably available before making a business decision. The Trans Union board's approval of a leveraged buyout in a two-hour meeting, without seeing the merger agreement, without retaining an investment banker to opine on fairness, and based solely on the CEO's oral presentation, constituted gross negligence. This landmark decision led directly to the widespread adoption of DGCL § 102(b)(7) exculpation provisions allowing corporations to eliminate director personal liability for duty of care breaches.",
+    "rule": "Board process failures in approving a merger can rebut the business judgment presumption and trigger liability for breach of duty of care.",
+    "keyFacts": [
+      "Trans Union's CEO Van Gorkom arranged a leveraged buyout at $55 per share with no prior board discussion",
+      "The board approved the merger in a two-hour meeting without seeing the merger agreement",
+      "No investment banker was retained to opine on fairness of the price",
+      "The decision led to widespread adoption of DGCL § 102(b)(7) exculpation provisions"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "MBCA § 8.30",
+      "Smith",
+      "DGCL § 102(b)(7)"
+    ],
+    "chapterUse": [
+      9,
+      13
+    ]
+  },
+  {
+    "number": "930 A.2d 92 (Del. 2007)",
+    "title": "North American Catholic Educational Programming Foundation v. Gheewalla",
+    "article": "Delaware Cases",
+    "text": "When a corporation is insolvent, creditors gain standing to pursue derivative fiduciary-duty claims on behalf of the corporation, but creditors do not have direct fiduciary-duty claims against directors. Directors' fiduciary duties remain owed to the corporation and its stockholders, not to creditors directly. The court clarified the 'zone of insolvency' doctrine: directors do not owe fiduciary duties to creditors when the corporation approaches insolvency; rather, insolvency simply expands the community of interests the corporation must consider and gives creditors derivative standing.",
+    "rule": "In insolvency, creditors may sue derivatively but cannot assert direct fiduciary-duty claims against directors.",
+    "keyFacts": [
+      "Creditors of an insolvent company sought to bring direct fiduciary duty claims against directors",
+      "The Delaware Supreme Court held that fiduciary duties run to the corporation, not to creditors directly",
+      "Creditors may bring derivative claims when the corporation is insolvent",
+      "The decision clarified the zone of insolvency doctrine"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "North American Catholic Educational Programming Foundation",
+      "DGCL § 141(a)"
+    ],
+    "chapterUse": [
+      15
+    ]
+  },
+  {
+    "number": "106 S.E.2d 692 (N.C. 1959)",
+    "title": "National Biscuit Co. v. Stroud",
+    "article": "Delaware Cases",
+    "text": "Under the Uniform Partnership Act, every partner is an agent of the partnership for partnership business. When a partner acts within the scope of partnership business, the partnership is bound even if another partner has internally objected to such actions. A majority of partners cannot restrict the statutory agency authority of individual partners as to third parties without notice. In a two-person partnership, neither partner has a 'majority' to restrict the other's ordinary-course authority.",
+    "rule": "Individual partners generally may bind the partnership in ordinary course despite internal disagreement.",
+    "keyFacts": [
+      "Freeman and Stroud were equal partners in a grocery business",
+      "Stroud informed National Biscuit that he would not be responsible for bread orders",
+      "Freeman continued ordering bread in the ordinary course of business",
+      "The court held the partnership liable for Freeman's orders"
+    ],
+    "concepts": [
+      "RUPA § 301",
+      "National Biscuit Co.",
+      "RUPA § 301"
+    ],
+    "chapterUse": [
+      3
+    ]
+  },
+  {
+    "number": "481 P.2d 318 (Idaho 1971)",
+    "title": "Summers v. Dooley",
+    "article": "Delaware Cases",
+    "text": "In a two-person partnership, one partner's objection to hiring an additional employee constitutes a majority vote against the action. A partner who unilaterally hires an employee over the objection of the other partner cannot compel the partnership to bear the cost. The decision creates tension with National Biscuit, illustrating the distinction between binding the partnership to third parties (external authority) and seeking reimbursement from the partnership for unilateral decisions (internal allocation).",
+    "rule": "Majority rule in ordinary partnership decisions can constrain unilateral partner actions.",
+    "keyFacts": [
+      "Summers and Dooley operated a trash collection business as equal partners",
+      "Summers hired an additional employee over Dooley's express objection",
+      "Summers sought reimbursement from the partnership for the employee's wages",
+      "The court held that Dooley's objection constituted a majority against the hiring"
+    ],
+    "concepts": [
+      "RUPA § 401",
+      "Summers",
+      "RUPA § 401"
+    ],
+    "chapterUse": [
+      3
+    ]
+  },
+  {
+    "number": "5 A.2d 503 (Del. 1939)",
+    "title": "Guth v. Loft, Inc.",
+    "article": "Delaware Cases",
+    "text": "The corporate opportunity doctrine requires that a corporate officer or director who is presented with a business opportunity that (1) the corporation is financially able to undertake, (2) is in the line of the corporation's business and is of practical advantage to it, (3) is one in which the corporation has an interest or a reasonable expectancy, and (4) by taking the opportunity for himself the officer or director would create a conflict between his self-interest and his duty to the corporation, must first present the opportunity to the corporation before taking it personally. Guth, as president of Loft, acquired the Pepsi-Cola formula and trademark for himself while using Loft's resources, personnel, and credit to develop the Pepsi business. The court imposed a constructive trust on Guth's Pepsi-Cola stock for Loft's benefit. The rule demands an undivided and unselfish loyalty to the corporation and that there be no conflict between duty and self-interest.",
+    "rule": "A corporate officer or director may not take a business opportunity for personal benefit if the corporation has an interest or expectancy in the opportunity.",
+    "keyFacts": [
+      "Guth was president of Loft, Inc., a candy and beverage company",
+      "Guth acquired the Pepsi-Cola trademark and formula personally",
+      "Guth used Loft's capital, employees, and facilities to develop the Pepsi-Cola business",
+      "The court imposed a constructive trust on Guth's Pepsi stock for Loft's benefit"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "Guth",
+      "R3A § 8.04",
+      "DGCL § 122(17)"
+    ],
+    "chapterUse": [
+      9
+    ]
+  },
+  {
+    "number": "309 N.W.2d 285 (Minn. 1981)",
+    "title": "A. Gay Jenson Farms Co. v. Cargill, Inc.",
+    "article": "Delaware Cases",
+    "text": "A lender that exercises sufficient control over a borrower's business operations may be found to have created an agency relationship, making the lender liable as a principal for the borrower's obligations to third parties. Cargill provided financing to Warren Grain & Seed, a local grain elevator, and progressively assumed control by: requiring its consent for major transactions, directing Warren's operations, dictating the terms of grain purchases, placing its own employee on site, and receiving Warren's profits as repayment. The court found that Cargill's degree of control went beyond that of a mere creditor protecting its security interest and established an agency relationship under R2A § 14 O (now R3A § 1.01). The key factors were Cargill's right to entry and inspection, right of first refusal on grain, requirement that Warren deal exclusively with Cargill, and Cargill's interference with Warren's internal affairs.",
+    "rule": "A creditor who exercises sufficient control over a debtor's operations may become liable as a principal for the debtor's obligations.",
+    "keyFacts": [
+      "Cargill financed Warren Grain & Seed's operations through a revolving line of credit",
+      "Cargill progressively assumed operational control including right of first refusal on grain and consent requirements for capital expenditures",
+      "Warren purchased grain from local farmers but could not pay them when it became insolvent",
+      "The court found Cargill liable as a principal for Warren's $2 million in unpaid grain purchases"
+    ],
+    "concepts": [
+      "R3A § 1.01",
+      "A. Gay Jenson Farms Co.",
+      "R3A § 1.01",
+      "R3A § 2.01"
+    ],
+    "chapterUse": [
+      2
+    ]
+  },
+  {
+    "number": "941 F.2d 519 (7th Cir. 1991)",
+    "title": "Sea-Land Services, Inc. v. Pepper Source",
+    "article": "Delaware Cases",
+    "text": "Under Illinois law, a corporate veil may be pierced when two requirements are met: (1) there is such a unity of interest and ownership that the separate personalities of the corporation and individual no longer exist (examining factors such as inadequate capitalization, failure to observe corporate formalities, commingling of funds, diversion of assets for personal use, and absence of corporate records); and (2) adherence to the fiction of a separate corporate existence would sanction a fraud or promote injustice. The court also recognized 'reverse veil piercing' (piercing from a shareholder to reach other entities sharing common ownership) as well as 'horizontal' piercing between commonly controlled entities. Marchese operated multiple corporations as alter egos, commingling funds, disregarding formalities, and treating corporate assets as his own. The court held that the failure to pay a legitimate debt constituted sufficient 'injustice' for veil piercing purposes.",
+    "rule": "A corporate veil may be pierced under a two-part test: unity of interest and inequitable result.",
+    "keyFacts": [
+      "Pepper Source owed Sea-Land $87,000 for shipping services and had no assets",
+      "Gerald Marchese was the sole shareholder of Pepper Source and several other corporations",
+      "Marchese commingled funds, used corporate assets for personal expenses, and failed to observe corporate formalities",
+      "The court allowed both traditional and reverse veil piercing to reach Marchese's other entities"
+    ],
+    "concepts": [
+      "Sea-Land Services, Inc.",
+      "DGCL § 102"
+    ],
+    "chapterUse": [
+      5,
+      7
+    ]
+  },
+  {
+    "number": "223 N.E.2d 6 (N.Y. 1966)",
+    "title": "Walkovszky v. Carlton",
+    "article": "Delaware Cases",
+    "text": "A plaintiff injured by a taxicab owned by one of defendant's minimally capitalized corporations cannot pierce the corporate veil merely by showing that the corporation carried only the minimum required insurance and was one of many thinly capitalized cab corporations owned by the same individual. To pierce the veil, the plaintiff must show that the corporation was a 'dummy' for the individual shareholder who was actually conducting business in his personal capacity -- that is, that the shareholder was doing business through the corporation for personal ends. The court distinguished between the situation where an individual uses the corporate form to conduct business in his personal capacity (pierceable) and where the corporation is a 'fragment of a larger corporate combine' created to limit liability (not pierceable absent fraud). The legislature permits incorporation for the very purpose of limiting liability, and the courts should not lightly disregard this legislative policy.",
+    "rule": "Thin capitalization alone is insufficient for veil piercing absent a showing the corporation was used as the shareholder's agent or dummy.",
+    "keyFacts": [
+      "Carlton owned interests in ten corporations, each operating one or two taxicabs",
+      "Each corporation carried only the minimum $10,000 liability insurance required by statute",
+      "Walkovszky was injured by a cab operated by one of Carlton's corporations",
+      "The court refused to pierce the veil because thin capitalization alone was insufficient"
+    ],
+    "concepts": [
+      "Walkovszky",
+      "Sea-Land Services, Inc. v. Pepper Source"
+    ],
+    "chapterUse": [
+      5,
+      7
+    ]
+  },
+  {
+    "number": "564 A.2d 651 (Del. Ch. 1988)",
+    "title": "Blasius Industries, Inc. v. Atlas Corp.",
+    "article": "Delaware Cases",
+    "text": "When a board of directors acts for the primary purpose of preventing stockholders from effectively exercising their voting franchise, the board bears the heavy burden of demonstrating a compelling justification for such action. This standard is more demanding than Unocal's proportionality test because the shareholder franchise is the ideological underpinning upon which the legitimacy of directorial power rests. Atlas's board expanded its size from seven to nine members and filled the two new seats specifically to prevent Blasius's consent solicitation from gaining majority board control. Even though the board acted in good faith and believed it was protecting stockholders from an inadequate recapitalization proposal, the compelling justification standard was not met. The court emphasized that a board's unilateral decision to deny shareholders their right to elect a majority of the board strikes at the very heart of corporate governance.",
+    "rule": "Board action taken for the primary purpose of impeding the exercise of stockholder voting power must be justified by a compelling justification.",
+    "keyFacts": [
+      "Blasius launched a consent solicitation to expand the board and elect a majority of new directors",
+      "Atlas's board expanded the board from seven to nine seats and filled both new seats to dilute Blasius's nominees",
+      "The board acted in good faith but with the primary purpose of impeding the shareholder vote",
+      "The court held that good faith alone could not justify action that interfered with the shareholder franchise"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "DGCL § 211",
+      "Blasius Industries, Inc.",
+      "Schnell v. Chris-Craft Industries, Inc."
+    ],
+    "chapterUse": [
+      11,
+      13
+    ]
+  },
+  {
+    "number": "285 A.2d 437 (Del. 1971)",
+    "title": "Schnell v. Chris-Craft Industries, Inc.",
+    "article": "Delaware Cases",
+    "text": "Management may not manipulate the corporate machinery to perpetuate itself in office, even if its actions are technically authorized by statute. The Chris-Craft board advanced the date of the annual meeting to impede a dissident stockholder group's proxy solicitation. Although the board had the technical power to set the meeting date under the bylaws, the court held that the action was inequitable because it was taken for the primary purpose of obstructing the shareholders' franchise. The principle that 'inequitable action does not become permissible simply because it is legally possible' is a foundational concept in Delaware fiduciary law, establishing that technical compliance with corporate statutes does not insulate directors from equitable review.",
+    "rule": "Inequitable action does not become permissible simply because it is legally possible.",
+    "keyFacts": [
+      "Chris-Craft's management advanced the annual meeting date to frustrate a proxy contest",
+      "The bylaw amendment was technically valid under the corporate charter",
+      "The court found the primary purpose was to perpetuate management in office",
+      "The Delaware Supreme Court reversed the Court of Chancery and enjoined the early meeting date"
+    ],
+    "concepts": [
+      "DGCL § 211",
+      "DGCL § 213",
+      "Schnell",
+      "Blasius Industries, Inc. v. Atlas Corp."
+    ],
+    "chapterUse": [
+      11
+    ]
+  },
+  {
+    "number": "571 A.2d 1140 (Del. 1989)",
+    "title": "Paramount Communications, Inc. v. Time Inc.",
+    "article": "Delaware Cases",
+    "text": "A board of directors may 'just say no' to a hostile bid and is not required to negotiate with or accept a premium offer that the board concludes is not in the corporation's long-term interests. Revlon duties are not triggered merely because a company enters into a strategic combination that does not involve a change of control. Time's board pursued a strategic merger with Warner that would leave Time shareholders in control of the combined entity. When Paramount made an uninvited all-cash tender offer at a substantial premium, Time's board restructured its Warner deal as an acquisition rather than a merger (eliminating the need for a Time shareholder vote) to proceed with its long-term strategic plan. The court upheld the board's action under Unocal, finding that 'substantive coercion' -- the risk that shareholders would tender into an inadequate offer due to ignorance or mistaken belief about the company's long-term value -- constituted a valid threat. A board may properly consider long-term corporate strategy and is not required to maximize short-term value outside the Revlon context.",
+    "rule": "A board is not obliged to abandon a deliberately conceived corporate plan for a short-term shareholder profit unless there is clearly no basis to sustain the corporate strategy.",
+    "keyFacts": [
+      "Time pursued a strategic merger with Warner Bros. to create a global media company",
+      "Paramount made an uninvited all-cash offer of $175 per share (later raised to $200) for Time",
+      "Time restructured its Warner deal from a stock merger to a cash acquisition to avoid a shareholder vote",
+      "The court held Revlon duties were not triggered because the Time-Warner combination preserved Time shareholder control"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "Paramount Communications, Inc.",
+      "Unocal Corp. v. Mesa Petroleum Co.",
+      "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "637 A.2d 34 (Del. 1994)",
+    "title": "Paramount Communications Inc. v. QVC Network Inc.",
+    "article": "Delaware Cases",
+    "text": "Revlon duties to seek the best value reasonably available to stockholders are triggered when a corporation undertakes a transaction that will cause a change of control, including a stock-for-stock merger that transfers control to a single person or a cohesive group of stockholders. When Paramount agreed to merge with Viacom (controlled by Sumner Redstone), the transaction would shift control from dispersed public shareholders to a single controlling stockholder, triggering Revlon. The board could not rely on Paramount v. Time to avoid Revlon because unlike the Time-Warner combination (where control remained dispersed), the Viacom deal would vest control in Redstone. The court held that Paramount's defensive measures (including a no-shop provision, termination fee, and stock option lockup favoring Viacom) were unreasonable in the Revlon context because they discouraged competing bids from QVC. Defensive measures in a change-of-control context that foreclose further bidding are not reasonable in relation to any threat because there is no threat -- the company is already being sold.",
+    "rule": "Revlon duties are triggered when a transaction results in a change of control, regardless of the form of consideration.",
+    "keyFacts": [
+      "Paramount agreed to merge with Viacom, controlled by Sumner Redstone with 85% voting power",
+      "QVC made a competing bid that was financially superior to Viacom's offer",
+      "Paramount's board granted Viacom defensive measures including a no-shop, termination fee, and stock option lockup",
+      "The court held that Revlon duties applied because control would shift from dispersed shareholders to a single controller"
+    ],
+    "concepts": [
+      "DGCL § 141(a)",
+      "DGCL § 251",
+      "Paramount Communications Inc.",
+      "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc.",
+      "Paramount Communications, Inc. v. Time Inc."
+    ],
+    "chapterUse": [
+      13
+    ]
+  },
+  {
+    "number": "680 F.3d 1298 (11th Cir. 2012)",
+    "title": "In re TOUSA, Inc.",
+    "article": "Delaware Cases",
+    "text": "The directors of TOUSA's subsidiaries (the 'Conveying Subsidiaries') breached their fiduciary duties by causing the subsidiaries to guarantee $500 million in new debt and pledge their assets to settle litigation involving the parent's failed joint venture, when the subsidiaries received no benefit from the transaction and were rendered insolvent. The transaction constituted a constructive fraudulent transfer because the subsidiaries did not receive reasonably equivalent value in exchange for their obligations. The Eleventh Circuit upheld the bankruptcy court's findings that the subsidiaries' directors acted on behalf of the parent's interests rather than the subsidiaries' own interests, and that outside counsel and financial advisors did not adequately protect the subsidiaries' separate interests. The case illustrates the duty of subsidiary directors to consider the subsidiary's creditors when the subsidiary is in the zone of insolvency.",
+    "rule": "Directors who cause subsidiaries to guarantee and pledge assets for a parent's debt may breach fiduciary duties and create fraudulent transfer liability.",
+    "keyFacts": [
+      "TOUSA's subsidiaries guaranteed $500 million in new debt to settle the parent company's Transeastern litigation",
+      "The subsidiaries received no direct benefit from the transaction and were rendered insolvent",
+      "Directors relied on advice from outside counsel and a solvency opinion that the court found inadequate",
+      "The bankruptcy court avoided the liens and required return of approximately $403 million"
+    ],
+    "concepts": [
+      "11 U.S.C. § 548",
+      "In re TOUSA, Inc.",
+      "N. Am. Catholic Educ. Programming Found. v. Gheewalla"
+    ],
+    "chapterUse": [
+      15
+    ]
+  },
+  {
+    "number": "2000 WL 1400272 (Del. Ch. 2000)",
+    "title": "VGS, Inc. v. Castiel",
+    "article": "Delaware Cases",
+    "text": "Two of three managers of a Delaware LLC acted by written consent, without notice to the third manager (who was also the majority member), to merge the LLC into a new entity that effectively stripped the majority member of his controlling interest. The court held that the two managers breached their fiduciary duties even though the LLC operating agreement technically permitted action by written consent of a majority of managers. Fiduciary duties require that managers not use the written consent mechanism as a surreptitious vehicle to strip a fellow manager and majority member of his controlling interest without prior notice. Although the Delaware LLC Act provides broad contractual freedom, it does not eliminate implied fiduciary duties absent a clear contractual provision doing so. The act of 'secretly combining' to take action by written consent to restructure the entity was inequitable, analogous to the Schnell principle that inequitable action does not become permissible simply because it is legally possible.",
+    "rule": "An LLC manager who takes action by written consent without notice to a fellow manager to strip the fellow manager of control violates fiduciary duties.",
+    "keyFacts": [
+      "Virtual Geosatellite LLC had three managers: Castiel (majority member), Sahagen, and Quinn",
+      "Sahagen and Quinn acted by written consent to merge VGS into a new entity controlled by Sahagen",
+      "Castiel received no notice and was stripped of his controlling interest",
+      "The court voided the merger despite technical compliance with the written consent provision"
+    ],
+    "concepts": [
+      "DLLCA § 18-404",
+      "VGS, Inc.",
+      "Schnell v. Chris-Craft Industries, Inc.",
+      "DLLCA § 18-404"
+    ],
+    "chapterUse": [
+      4,
+      11
+    ]
+  }
+]
