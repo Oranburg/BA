@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk, Uncertainty, and Profit | Frank H. Knight (1921)</title>
+  <meta name="description" content="A crowdsourced restoration of Frank H. Knight's Risk, Uncertainty, and Profit (1921) — a public-domain foundational work in economic theory, now accessible online.">
+  <link rel="icon" type="image/png" href="/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    /* ---------- Design Tokens ---------- */
+    :root, [data-theme="dark"] {
+      --blue-deep:    #0A3255;
+      --blue-bright:  #2459A9;
+      --blue-light:   #6DACDE;
+      --red-deep:     #B21F2C;
+      --red-bright:   #E82F35;
+      --red-light:    #E96955;
+      --yellow:       #FFD65C;
+      --teal:         #B5E1E1;
+
+      --bg:           #000000;
+      --bg-secondary: #0A3255;
+      --bg-soft:      #0D3D68;
+      --text:         #FFFFFF;
+      --muted:        #9CA3AF;
+      --border:       #1E5080;
+      --accent:       #6DACDE;
+      --accent-2:     #B5E1E1;
+      --accent-red:   #B21F2C;
+
+      --font-headline: 'Oswald', sans-serif;
+      --font-body:     'Roboto', sans-serif;
+      --font-accent:   'Crimson Text', serif;
+      --font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+
+      --max-width:     1100px;
+      --radius-sm:     4px;
+      --radius-md:     8px;
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+    }
+
+    [data-theme="light"] {
+      --bg:           #FFFFFF;
+      --bg-secondary: #F8F9FA;
+      --bg-soft:      #E9ECEF;
+      --text:         #000000;
+      --muted:        #555555;
+      --border:       #D0D8E4;
+      --accent:       #2459A9;
+      --accent-2:     #B5E1E1;
+      --accent-red:   #B21F2C;
+    }
+
+    /* ---------- Reset & Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-2); }
+
+    /* ---------- Progress Bar ---------- */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ---------- Top Nav ---------- */
+    .top-nav {
+      background-color: var(--red-deep);
+      padding: 0.6rem var(--space-md);
+      position: sticky; top: 0; z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .top-nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    }
+    .top-nav a {
+      color: #FFFFFF; font-family: var(--font-body); font-size: 0.95rem;
+      font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .top-nav a:hover { color: var(--yellow); }
+    .nav-title {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      color: #FFFFFF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .theme-toggle {
+      background: none; border: none; cursor: pointer; color: #FFFFFF;
+      padding: 0.25rem; display: flex; align-items: center; transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--yellow); }
+    [data-theme="dark"] .icon-sun  { display: inline; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: inline; }
+
+    /* ---------- Project Banner ---------- */
+    .project-banner {
+      background: var(--bg-secondary); border-bottom: 1px solid var(--border);
+      padding: var(--space-lg) var(--space-md);
+    }
+    .project-banner-inner {
+      max-width: 740px; margin: 0 auto;
+      display: flex; align-items: flex-start; gap: var(--space-lg);
+    }
+    .banner-icon {
+      font-size: 2rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .banner-text { flex: 1; }
+    .banner-text h2 {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--yellow); margin: 0 0 var(--space-xs);
+    }
+    .banner-text p {
+      font-size: 0.95rem; line-height: 1.6; color: var(--muted); margin: 0 0 var(--space-sm);
+    }
+    .banner-text p:last-child { margin-bottom: 0; }
+    .banner-actions {
+      display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md);
+    }
+    .banner-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.45rem 0.9rem; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.03em;
+      cursor: pointer; border: 1px solid var(--border); transition: all 0.2s;
+      background: transparent; color: var(--accent); text-decoration: none;
+    }
+    .banner-btn:hover { background: var(--bg-soft); color: var(--text); }
+    .banner-btn-primary { background: var(--accent); color: #000; border-color: var(--accent); }
+    .banner-btn-primary:hover { background: var(--accent-2); color: #000; }
+    .banner-dismiss {
+      background: none; border: none; color: var(--muted); font-size: 1.4rem;
+      cursor: pointer; padding: 0; line-height: 1; flex-shrink: 0;
+    }
+    .banner-dismiss:hover { color: var(--text); }
+    .project-banner.hidden { display: none; }
+
+    /* ---------- Layout ---------- */
+    .page-layout {
+      display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 52px);
+    }
+
+    /* ---------- Sidebar / TOC ---------- */
+    .toc-sidebar {
+      width: 280px; min-width: 280px; position: sticky; top: 52px;
+      height: calc(100vh - 52px); overflow-y: auto;
+      padding: var(--space-lg) var(--space-md);
+      border-right: 1px solid var(--border); background: var(--bg);
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .toc-heading {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-sm); padding: 0;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.35rem 0.5rem; font-size: 0.88rem; line-height: 1.35;
+      color: var(--muted); border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: all 0.2s;
+    }
+    .toc-list a:hover { color: var(--text); background: var(--bg-soft); }
+    .toc-list a.active {
+      color: var(--accent); border-left-color: var(--accent);
+      background: var(--bg-soft); font-weight: 600;
+    }
+    .toc-part {
+      font-family: var(--font-headline); font-weight: 600; font-size: 0.82rem;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--text); padding: var(--space-md) 0.5rem var(--space-xs);
+    }
+    .toc-chapter { padding-left: 1rem; }
+
+    /* Sidebar about/download links */
+    .toc-tools {
+      margin-top: var(--space-xl); padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+    .toc-tools a, .toc-tools button {
+      display: block; width: 100%; text-align: left;
+      padding: 0.4rem 0.5rem; font-size: 0.82rem; color: var(--muted);
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font-body); transition: color 0.2s;
+    }
+    .toc-tools a:hover, .toc-tools button:hover { color: var(--accent); }
+
+    /* ---------- Mobile TOC Toggle ---------- */
+    .toc-mobile-toggle {
+      display: none; position: fixed; bottom: var(--space-lg); right: var(--space-lg);
+      z-index: 300; background: var(--red-deep); color: #FFFFFF; border: none;
+      border-radius: 50%; width: 52px; height: 52px; font-size: 1.3rem;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s;
+    }
+    .toc-mobile-toggle:hover { transform: scale(1.1); }
+    .toc-mobile-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 250;
+    }
+
+    /* ---------- Content Area ---------- */
+    .content-area { flex: 1; min-width: 0; padding: var(--space-2xl) var(--space-xl); }
+    .book-content {
+      max-width: 740px; margin: 0 auto;
+      font-family: var(--font-accent); font-size: 1.125rem; line-height: 1.85;
+    }
+    .book-content h1 {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      line-height: 1.15; margin: var(--space-3xl) 0 var(--space-lg);
+      color: var(--text); border-bottom: 2px solid var(--accent); padding-bottom: var(--space-sm);
+    }
+    .book-content h1:first-child {
+      margin-top: 0; font-size: 2.8rem; text-align: center; border-bottom: none; padding-bottom: 0;
+    }
+    .book-content h2 {
+      font-family: var(--font-headline); font-size: 1.6rem; font-weight: 600;
+      line-height: 1.2; margin: var(--space-3xl) 0 var(--space-md); color: var(--text);
+    }
+    .book-content h3 {
+      font-family: var(--font-headline); font-size: 1.25rem; font-weight: 500;
+      margin: var(--space-2xl) 0 var(--space-sm); color: var(--text);
+    }
+    .book-content p { margin: 0 0 var(--space-md); text-align: justify; hyphens: auto; }
+    .book-content strong { font-weight: 700; color: var(--text); }
+    .book-content em { font-style: italic; }
+    .book-content hr {
+      border: none; border-top: 1px solid var(--border);
+      margin: var(--space-2xl) auto; max-width: 200px;
+    }
+    .book-content blockquote {
+      border-left: 3px solid var(--accent); margin: var(--space-lg) 0;
+      padding: var(--space-sm) var(--space-lg); color: var(--muted); font-style: italic;
+    }
+    .book-content ul, .book-content ol { margin: 0 0 var(--space-md); padding-left: var(--space-xl); }
+    .book-content li { margin-bottom: var(--space-xs); }
+    .book-content h1:first-child + p {
+      text-align: center; font-size: 1.2rem; color: var(--muted); margin-bottom: var(--space-2xl);
+    }
+
+    /* ---------- Inline Error Report Tooltip ---------- */
+    .report-tooltip {
+      display: none; position: absolute; z-index: 500;
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      padding: 0; overflow: hidden; width: 320px;
+    }
+    .report-tooltip.visible { display: block; }
+    .report-tooltip-header {
+      background: var(--red-deep); color: #fff; padding: 0.5rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .report-tooltip-close {
+      background: none; border: none; color: #fff; font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .report-tooltip-body { padding: 0.75rem; }
+    .report-selected {
+      font-family: var(--font-accent); font-size: 0.9rem; font-style: italic;
+      color: var(--muted); margin: 0 0 0.5rem;
+      max-height: 3.5em; overflow: hidden; text-overflow: ellipsis;
+      border-left: 2px solid var(--accent); padding-left: 0.5rem;
+    }
+    .report-field {
+      width: 100%; padding: 0.5rem; font-family: var(--font-body); font-size: 0.9rem;
+      background: var(--bg); color: var(--text); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); resize: vertical; min-height: 60px;
+      margin-bottom: 0.5rem;
+    }
+    .report-field::placeholder { color: var(--muted); }
+    .report-send {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: var(--accent); color: #000; border: none; border-radius: var(--radius-sm);
+      padding: 0.45rem 0.9rem; font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 600; cursor: pointer; transition: background 0.2s;
+    }
+    .report-send:hover { background: var(--accent-2); }
+    .report-hint {
+      font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem;
+    }
+
+    /* Subtle floating button on text selection */
+    .select-report-btn {
+      display: none; position: absolute; z-index: 400;
+      background: var(--yellow); color: #000; border: none; border-radius: 20px;
+      padding: 0.3rem 0.7rem; font-family: var(--font-body); font-size: 0.78rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      white-space: nowrap; transition: transform 0.15s;
+    }
+    .select-report-btn:hover { transform: scale(1.05); }
+    .select-report-btn.visible { display: block; }
+
+    /* ---------- About Modal ---------- */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+      z-index: 600; justify-content: center; align-items: center; padding: var(--space-md);
+    }
+    .modal-overlay.visible { display: flex; }
+    .modal-box {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); max-width: 640px; width: 100%;
+      max-height: 85vh; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .modal-header {
+      background: var(--red-deep); color: #fff; padding: 1rem 1.25rem;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0;
+    }
+    .modal-header h2 {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; margin: 0;
+    }
+    .modal-close {
+      background: none; border: none; color: #fff; font-size: 1.5rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .modal-body {
+      padding: 1.25rem; font-family: var(--font-accent); font-size: 1.05rem;
+      line-height: 1.75; color: var(--text);
+    }
+    .modal-body h3 {
+      font-family: var(--font-headline); font-size: 1.15rem; font-weight: 600;
+      margin: 1.5rem 0 0.5rem; color: var(--yellow);
+    }
+    .modal-body h3:first-child { margin-top: 0; }
+    .modal-body p { margin: 0 0 0.75rem; }
+    .modal-body ul { padding-left: 1.25rem; margin: 0 0 0.75rem; }
+    .modal-body li { margin-bottom: 0.3rem; }
+    .modal-body .version-badge {
+      display: inline-block; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.2rem 0.6rem;
+      font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);
+    }
+
+    /* ---------- Toast notification ---------- */
+    .toast {
+      position: fixed; bottom: var(--space-xl); left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--bg-secondary); border: 1px solid var(--accent);
+      border-radius: var(--radius-md); padding: 0.65rem 1.25rem;
+      font-family: var(--font-body); font-size: 0.9rem; color: var(--accent);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 700;
+      opacity: 0; transition: all 0.3s ease; pointer-events: none;
+    }
+    .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--bg-secondary); padding: var(--space-xl) var(--space-md);
+      text-align: center; color: var(--muted); font-size: 0.85rem;
+    }
+    .site-footer a { color: var(--accent); margin: 0 0.5rem; }
+
+    /* ---------- Loading State ---------- */
+    .loading {
+      text-align: center; padding: var(--space-3xl); color: var(--muted);
+      font-family: var(--font-body); font-size: 1.1rem;
+    }
+    .loading-spinner {
+      display: inline-block; width: 28px; height: 28px;
+      border: 3px solid var(--border); border-top-color: var(--accent);
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: var(--space-md);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .toc-sidebar {
+        position: fixed; left: -320px; top: 0; height: 100vh; z-index: 300;
+        width: 300px; min-width: 300px; transition: left 0.3s ease;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.3); padding-top: calc(52px + var(--space-lg));
+      }
+      .toc-sidebar.open { left: 0; }
+      .toc-mobile-toggle { display: flex; align-items: center; justify-content: center; }
+      .toc-mobile-overlay.visible { display: block; }
+      .content-area { padding: var(--space-xl) var(--space-md); }
+      .book-content h1:first-child { font-size: 2rem; }
+      .project-banner-inner { flex-direction: column; }
+      .banner-icon { display: none; }
+      .report-tooltip { width: 280px; }
+    }
+    @media (max-width: 600px) {
+      .content-area { padding: var(--space-md) var(--space-sm); }
+      .book-content { font-size: 1.05rem; }
+      .book-content h1 { font-size: 1.8rem; }
+      .book-content h2 { font-size: 1.35rem; }
+      .nav-title { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Top navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="https://oranburg.law">oranburg.law</a>
+      <span class="nav-title">Risk, Uncertainty, and Profit</span>
+      <div style="display:flex; align-items:center; gap:var(--space-md);">
+        <a href="https://oranburg.law/BA/">BA Course</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project banner -->
+  <div class="project-banner" id="projectBanner">
+    <div class="project-banner-inner">
+      <div class="banner-icon">&#128214;</div>
+      <div class="banner-text">
+        <h2>Open Restoration Project</h2>
+        <p>This is a crowdsourced effort to restore Frank Knight's <em>Risk, Uncertainty, and Profit</em> (1921) to full digital readability. The original text is in the public domain. This version was reconstructed from OCR scans and likely still contains errors.</p>
+        <p><strong>You can help.</strong> Select any text that looks wrong and click the flag that appears to report it. No account needed.</p>
+        <div class="banner-actions">
+          <button class="banner-btn banner-btn-primary" onclick="openAbout()">About This Project</button>
+          <a class="banner-btn" href="knight.md" download="knight-risk-uncertainty-profit.md">&#11015; Download Markdown</a>
+        </div>
+      </div>
+      <button class="banner-dismiss" onclick="dismissBanner()" title="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <!-- Mobile TOC toggle -->
+  <button class="toc-mobile-toggle" id="tocToggle" aria-label="Table of contents">&#9776;</button>
+  <div class="toc-mobile-overlay" id="tocOverlay"></div>
+
+  <!-- Page layout -->
+  <div class="page-layout">
+    <aside class="toc-sidebar" id="tocSidebar">
+      <p class="toc-heading">Table of Contents</p>
+      <ul class="toc-list" id="tocList"></ul>
+      <div class="toc-tools">
+        <button onclick="openAbout()">&#9432; About this project</button>
+        <a href="knight.md" download="knight-risk-uncertainty-profit.md">&#11015; Download current text</a>
+        <button onclick="openReportForm()">&#9873; Report an error</button>
+      </div>
+    </aside>
+
+    <div class="content-area">
+      <article class="book-content" id="bookContent">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          <p>Loading text...</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Inline selection report button (floats near selection) -->
+  <button class="select-report-btn" id="selectReportBtn">&#9873; Flag error</button>
+
+  <!-- Report tooltip (appears near selection) -->
+  <div class="report-tooltip" id="reportTooltip">
+    <div class="report-tooltip-header">
+      <span>Report an Error</span>
+      <button class="report-tooltip-close" onclick="closeReport()">&times;</button>
+    </div>
+    <div class="report-tooltip-body">
+      <div class="report-selected" id="reportSelected"></div>
+      <textarea class="report-field" id="reportSuggestion" placeholder="What should it say? (optional — even just flagging helps)"></textarea>
+      <button class="report-send" onclick="sendReport()">&#9993; Send Fix</button>
+      <div class="report-hint">Opens your email app. Your email address is not stored by this site.</div>
+    </div>
+  </div>
+
+  <!-- About modal -->
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>About This Project</h2>
+        <button class="modal-close" onclick="closeAbout()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>What is this?</h3>
+        <p>Frank Knight's <em>Risk, Uncertainty, and Profit</em> (1921) is one of the most important works in economic theory. It introduced the foundational distinction between measurable risk and true uncertainty, shaped modern thinking about entrepreneurship and profit, and remains essential reading for students of economics, business, and law.</p>
+        <p>The original 1921 text is in the <strong>public domain</strong>. But until now, no clean, readable digital edition existed. The available scans are low quality, and existing OCR transcriptions are riddled with errors.</p>
+
+        <h3>A small-scale Gutenberg Project</h3>
+        <p>This project is inspired by <a href="https://www.gutenberg.org/" target="_blank" rel="noopener">Project Gutenberg</a>, but on a much smaller scale: one book, restored through a combination of AI-assisted OCR cleanup and human review. The text you see was reconstructed from multiple OCR scans of the original 1921 edition, cross-referenced and corrected using both automated tools and manual editing.</p>
+        <p>It is a work in progress. OCR artifacts remain. Some paragraphs may be mis-broken, some words garbled, some footnotes misplaced. <strong>Please have patience with the current state</strong> and confidence that it will improve — each fix makes the text better for everyone who reads it after you.</p>
+
+        <h3>How you can help</h3>
+        <ul>
+          <li><strong>Select any text</strong> that looks wrong — a garbled word, a broken sentence, a missing paragraph break — and click the yellow flag that appears.</li>
+          <li>In the popup, you can optionally suggest what the text <em>should</em> say.</li>
+          <li>Click <strong>Send Fix</strong> to open a pre-filled email in your mail app. The email goes to the project editor. Your email address is never collected or stored by this website.</li>
+          <li>Even a bare flag with no suggestion helps — it tells us where to look.</li>
+        </ul>
+
+        <h3>Single source of truth</h3>
+        <p>The text is stored as a single Markdown file. When corrections are incorporated, a new version is published and this page updates automatically. You can always download the latest version using the link in the sidebar.</p>
+
+        <p style="margin-top:1.5rem;">
+          <span class="version-badge">v0.3.0 — April 2026</span>
+        </p>
+        <p style="font-size:0.9rem; color:var(--muted);">Maintained by <a href="https://oranburg.law">Seth C. Oranburg</a>, Catholic University of America, Columbus School of Law.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>
+      <a href="https://oranburg.law">Home</a>
+      <a href="https://oranburg.law/BA/">Business Associations</a>
+      <a href="https://oranburg.law/lectures/">Courses</a>
+    </div>
+    <p style="margin-top:0.5rem;">Text: public domain (1921). Site design &copy; 2026 Seth C. Oranburg.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script>
+    // ========== Theme ==========
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    // ========== Banner ==========
+    function dismissBanner() {
+      document.getElementById('projectBanner').classList.add('hidden');
+      sessionStorage.setItem('rup-banner-dismissed', '1');
+    }
+    (function() {
+      if (sessionStorage.getItem('rup-banner-dismissed') === '1') {
+        document.getElementById('projectBanner').classList.add('hidden');
+      }
+    })();
+
+    // ========== About Modal ==========
+    function openAbout() {
+      document.getElementById('aboutModal').classList.add('visible');
+    }
+    function closeAbout() {
+      document.getElementById('aboutModal').classList.remove('visible');
+    }
+    document.getElementById('aboutModal').addEventListener('click', function(e) {
+      if (e.target === this) closeAbout();
+    });
+
+    // ========== Mobile TOC ==========
+    var tocToggle = document.getElementById('tocToggle');
+    var tocSidebar = document.getElementById('tocSidebar');
+    var tocOverlay = document.getElementById('tocOverlay');
+    tocToggle.addEventListener('click', function() {
+      tocSidebar.classList.toggle('open');
+      tocOverlay.classList.toggle('visible');
+    });
+    tocOverlay.addEventListener('click', function() {
+      tocSidebar.classList.remove('open');
+      tocOverlay.classList.remove('visible');
+    });
+
+    // ========== Email Helper (obfuscated) ==========
+    function getAddr() {
+      // Assembled at runtime so it never appears as a string in source
+      var parts = ['s','e','t','h','@','o','r','a','n','b','u','r','g','.','l','a','w'];
+      return parts.join('');
+    }
+
+    // ========== Text Selection → Flag Error ==========
+    var selectBtn = document.getElementById('selectReportBtn');
+    var reportTooltip = document.getElementById('reportTooltip');
+    var selectedText = '';
+    var selectionContext = '';
+
+    document.addEventListener('mouseup', function(e) {
+      // Don't trigger inside the report tooltip or banner
+      if (reportTooltip.contains(e.target) || !document.getElementById('bookContent').contains(e.target)) {
+        return;
+      }
+      var sel = window.getSelection();
+      var text = sel.toString().trim();
+      if (text.length > 2 && text.length < 2000) {
+        selectedText = text;
+        // Get surrounding context
+        if (sel.rangeCount > 0) {
+          var range = sel.getRangeAt(0);
+          var container = range.startContainer.parentElement;
+          if (container) {
+            var full = container.textContent || '';
+            var idx = full.indexOf(text.substring(0, 30));
+            var start = Math.max(0, idx - 40);
+            var end = Math.min(full.length, idx + text.length + 40);
+            selectionContext = full.substring(start, end);
+          }
+        }
+        // Position the flag button near the selection
+        var rect = sel.getRangeAt(0).getBoundingClientRect();
+        selectBtn.style.top = (window.scrollY + rect.top - 35) + 'px';
+        selectBtn.style.left = (rect.left + rect.width / 2 - 40) + 'px';
+        selectBtn.classList.add('visible');
+      } else {
+        selectBtn.classList.remove('visible');
+      }
+    });
+
+    // Hide flag button on scroll or click elsewhere
+    document.addEventListener('mousedown', function(e) {
+      if (e.target !== selectBtn) {
+        selectBtn.classList.remove('visible');
+      }
+    });
+
+    selectBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      selectBtn.classList.remove('visible');
+      openReportTooltip();
+    });
+
+    function openReportTooltip() {
+      document.getElementById('reportSelected').textContent =
+        selectedText.length > 120 ? selectedText.substring(0, 120) + '...' : selectedText;
+      document.getElementById('reportSuggestion').value = '';
+      // Position near the selection
+      var rect = selectBtn.getBoundingClientRect
+        ? { top: parseInt(selectBtn.style.top), left: parseInt(selectBtn.style.left) }
+        : { top: 200, left: 100 };
+      reportTooltip.style.top = (parseInt(selectBtn.style.top) + 40) + 'px';
+      // Keep within viewport
+      var leftPos = parseInt(selectBtn.style.left);
+      if (leftPos + 320 > window.innerWidth) leftPos = window.innerWidth - 340;
+      if (leftPos < 10) leftPos = 10;
+      reportTooltip.style.left = leftPos + 'px';
+      reportTooltip.classList.add('visible');
+    }
+
+    function openReportForm() {
+      // Open the tooltip in a generic position for manual reports
+      selectedText = '';
+      selectionContext = '';
+      document.getElementById('reportSelected').textContent = '(No text selected — describe the issue below)';
+      document.getElementById('reportSuggestion').value = '';
+      reportTooltip.style.top = '200px';
+      reportTooltip.style.left = '50%';
+      reportTooltip.style.transform = 'translateX(-50%)';
+      reportTooltip.classList.add('visible');
+    }
+
+    function closeReport() {
+      reportTooltip.classList.remove('visible');
+      reportTooltip.style.transform = '';
+    }
+
+    function sendReport() {
+      var suggestion = document.getElementById('reportSuggestion').value.trim();
+      var subject = 'RUP-fix: ' + (selectedText ? selectedText.substring(0, 50).replace(/\s+/g, ' ') : 'General report');
+      var body = '';
+      if (selectedText) {
+        body += 'SELECTED TEXT:\n' + selectedText + '\n\n';
+      }
+      if (selectionContext && selectionContext !== selectedText) {
+        body += 'CONTEXT:\n...' + selectionContext + '...\n\n';
+      }
+      if (suggestion) {
+        body += 'SUGGESTED FIX:\n' + suggestion + '\n\n';
+      }
+      body += '---\nSent from RUP online reader';
+
+      var mailto = 'mailto:' + getAddr() +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+      window.open(mailto, '_blank');
+      closeReport();
+      showToast('Opening your email app...');
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('visible');
+      setTimeout(function() { toast.classList.remove('visible'); }, 3000);
+    }
+
+    // ========== Fetch and Render Markdown ==========
+    fetch('knight.md')
+      .then(function(res) {
+        if (!res.ok) throw new Error('Failed to load');
+        return res.text();
+      })
+      .then(function(md) {
+        marked.setOptions({ breaks: false, gfm: true });
+        var html = marked.parse(md);
+        document.getElementById('bookContent').innerHTML = html;
+        buildTOC();
+        setupScrollSpy();
+        setupProgressBar();
+      })
+      .catch(function(err) {
+        document.getElementById('bookContent').innerHTML =
+          '<p style="color:var(--accent-red);text-align:center;padding:2rem;">Error loading text. Please try refreshing.</p>';
+      });
+
+    // ========== Build TOC ==========
+    function buildTOC() {
+      var content = document.getElementById('bookContent');
+      var headings = content.querySelectorAll('h1, h2');
+      var tocList = document.getElementById('tocList');
+      tocList.innerHTML = '';
+      headings.forEach(function(heading, index) {
+        var id = 'section-' + index;
+        heading.setAttribute('id', id);
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = heading.textContent;
+        a.setAttribute('data-target', id);
+        a.classList.add(heading.tagName === 'H1' ? 'toc-part' : 'toc-chapter');
+        a.addEventListener('click', function() {
+          tocSidebar.classList.remove('open');
+          tocOverlay.classList.remove('visible');
+        });
+        li.appendChild(a);
+        tocList.appendChild(li);
+      });
+    }
+
+    // ========== Scroll Spy ==========
+    function setupScrollSpy() {
+      var tocLinks = document.querySelectorAll('.toc-list a');
+      var headings = [];
+      tocLinks.forEach(function(link) {
+        var el = document.getElementById(link.getAttribute('data-target'));
+        if (el) headings.push({ el: el, link: link });
+      });
+      var currentActive = null;
+      function onScroll() {
+        var scrollY = window.scrollY + 100;
+        var active = null;
+        for (var i = headings.length - 1; i >= 0; i--) {
+          if (headings[i].el.offsetTop <= scrollY) { active = headings[i]; break; }
+        }
+        if (active && active !== currentActive) {
+          if (currentActive) currentActive.link.classList.remove('active');
+          active.link.classList.add('active');
+          currentActive = active;
+          var sidebar = document.getElementById('tocSidebar');
+          var linkTop = active.link.offsetTop;
+          if (linkTop < sidebar.scrollTop || linkTop > sidebar.scrollTop + sidebar.clientHeight - 40) {
+            sidebar.scrollTop = linkTop - sidebar.clientHeight / 3;
+          }
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // ========== Progress Bar ==========
+    function setupProgressBar() {
+      var bar = document.getElementById('progressBar');
+      function update() {
+        var pct = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (pct > 0 ? Math.min(window.scrollY / pct * 100, 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    }
+
+    // Close report tooltip on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeReport();
+        closeAbout();
+      }
+    });
+  </script>
+</body>
+</html>
