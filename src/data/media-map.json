@@ -1,0 +1,174 @@
+{
+  "_comment": "Maps BA chapters to best video and podcast resources. IDs reference oranburg.github.io/_data/videos.yml and podcasts.yml.",
+  "_source": "oranburg.github.io/_data/videos.yml + podcasts.yml",
+  "_updated": "2026-04-04",
+  "chapters": {
+    "1": {
+      "title": "Why Law",
+      "podcast_season": null,
+      "best_video": null,
+      "topics": ["four problems of the firm", "agency costs", "transaction costs"],
+      "gap": "No dedicated podcast season for Ch 1 introduction"
+    },
+    "2": {
+      "title": "Agency",
+      "podcast_season": { "name": "Agency Law", "episodes": 7, "start_ep": 1 },
+      "podcast_advanced": { "name": "Economic Analysis of Agency Law", "episodes": 10 },
+      "best_video": { "id": "9jIrBgm8YDY", "title": "Agency Law - Episode 1: Introduction to Agency Law" },
+      "all_videos": [
+        { "id": "9jIrBgm8YDY", "title": "Introduction to Agency Law" },
+        { "id": "cBcpVN6ONB8", "title": "Authority of Agency" },
+        { "id": "5Da9tLsWeGk", "title": "Fiduciary Duties in Agency Law" },
+        { "id": "qMT0GL9u3Xw", "title": "Termination of Authority" },
+        { "id": "-qhkF6OiUeQ", "title": "Notice of Termination of Agency" },
+        { "id": "pVesrxIPYck", "title": "Agency Estoppel and Ratification" },
+        { "id": "qPQnaJ5Vrtc", "title": "Review of Agency" }
+      ],
+      "topics": ["control test", "actual authority", "apparent authority", "respondeat superior"]
+    },
+    "3": {
+      "title": "Partnership",
+      "podcast_season": { "name": "Partnerships", "episodes": 7, "start_ep": 1 },
+      "best_video": { "id": "gkt20SU76gs", "title": "Partnerships - Episode 1: What Are Partnerships?" },
+      "all_videos": [
+        { "id": "gkt20SU76gs", "title": "What Are Partnerships?" },
+        { "id": "qRJpd1AtXuU", "title": "Default Governance (Flat and Equal)" },
+        { "id": "BLnZxydEE6o", "title": "Partners' Agency and Authority" },
+        { "id": "njadf46dOSg", "title": "Entity or Aggregate?" },
+        { "id": "KwK2dcR4IJU", "title": "Fiduciary Duties" },
+        { "id": "ETVTzDs6mRY", "title": "Disassociation and Dissolution" },
+        { "id": "dky_aN-ff9o", "title": "Partnership Taxation" }
+      ],
+      "topics": ["RUPA", "unlimited liability", "co-ownership", "profit sharing"]
+    },
+    "4": {
+      "title": "Corporations",
+      "podcast_season": { "name": "Corporations", "episodes": 8, "start_ep": 1 },
+      "best_video": { "id": "6Gec96coWjs", "title": "Corporations - Episode 1: Why Corporations Exist" },
+      "all_videos": [
+        { "id": "6Gec96coWjs", "title": "Why Corporations Exist" },
+        { "id": "9mh-pZTNNwI", "title": "Corporate Charter and Bylaws" },
+        { "id": "TqZHiatOMdw", "title": "Corporate Finance" },
+        { "id": "_QsnuJO8VZ4", "title": "Corporate Governance Basics" },
+        { "id": "3twi861cA-E", "title": "Shareholder Limited Liability and Piercing the Corporate Veil" },
+        { "id": "NTzFFTOgd1A", "title": "Corporate Separation of Ownership and Control" },
+        { "id": "o88uAtHFz2g", "title": "The Future of Corporations" }
+      ],
+      "topics": ["DGCL", "entity shielding", "limited liability", "board authority"]
+    },
+    "5": {
+      "title": "LLCs",
+      "podcast_season": { "name": "Mastering LLCs", "episodes": 10, "start_ep": 1 },
+      "best_video": { "id": "3TTGqb5oEhk", "title": "Mastering LLCs - Episode 1: What Are Limited Liability Companies?" },
+      "all_videos": [
+        { "id": "3TTGqb5oEhk", "title": "What Are LLCs?" },
+        { "id": "Wn7FVaKALj0", "title": "LLC Formation and Operating Agreement" },
+        { "id": "2xog5SKSI68", "title": "Member- versus Manager-Managed LLCs" },
+        { "id": "OJ7cOguu2ls", "title": "Operating Agreement Design" },
+        { "id": "9S5UCCDNkQU", "title": "Fiduciary Duties in LLCs" },
+        { "id": "k75EPpY-5Io", "title": "Veil Piercing in LLCs" },
+        { "id": "3M1vhw07JHA", "title": "Disassociation, Dissolution, and Deadlock" },
+        { "id": "840BCpImNjk", "title": "LLC Mergers and Conversions" },
+        { "id": "dYESLuWFKyo", "title": "The Future of LLCs" },
+        { "id": "3fdXoU5YKng", "title": "Business Entity Flexibility and Choice" }
+      ],
+      "topics": ["ULLCA", "operating agreement", "contractual freedom", "member management"]
+    },
+    "6": {
+      "title": "Nonprofits",
+      "podcast_season": null,
+      "best_video": null,
+      "topics": ["nondistribution constraint", "IRC 501(c)(3)", "MNCA"],
+      "gap": "No dedicated podcast or video series for nonprofits"
+    },
+    "7": {
+      "title": "DAOs",
+      "podcast_season": null,
+      "best_video": { "id": "xjBm7UInsC8", "title": "What Is Crypto, Anyway? A Functional Framework for Digital Asset Regulation" },
+      "topics": ["code-as-law", "smart contracts", "GENIUS Act", "Wyoming DAO statute"],
+      "gap": "No dedicated podcast season — consider recording"
+    },
+    "8": {
+      "title": "Entity Selection",
+      "podcast_season": { "name": "Organizational Choices", "episodes": 6, "start_ep": 1 },
+      "best_video": { "id": "OMI4-bzeHrM", "title": "Organizational Choices - Episode 1: A Framework for Analyzing Entity Selection" },
+      "all_videos": [
+        { "id": "OMI4-bzeHrM", "title": "A Framework for Analyzing Entity Selection" },
+        { "id": "8RaZkBAcO_I", "title": "Using a General Partnership" },
+        { "id": "BzPhkh07lrc", "title": "Utilizing Limited Partnerships" },
+        { "id": "OckMa0Qll-Q", "title": "Selecting the Corporate Form" },
+        { "id": "ic8bMn5x-XI", "title": "Leveraging LLC Flexibility" },
+        { "id": "MO4qGtFQpPQ", "title": "Special Form" }
+      ],
+      "topics": ["entity comparison", "tax treatment", "governance tradeoffs"]
+    },
+    "9": {
+      "title": "Fiduciary Duties",
+      "podcast_season": { "name": "Corporate Governance", "episodes": 9, "note": "Episodes 1-3 cover fiduciary duties specifically" },
+      "best_video": { "id": "ZMEZtkqoT7k", "title": "Corporate Governance - Episode 3: Fiduciary Duties" },
+      "topics": ["duty of care", "duty of loyalty", "business judgment rule", "Smith v. Van Gorkom"]
+    },
+    "10": {
+      "title": "Staying Private",
+      "podcast_season": null,
+      "best_video": null,
+      "topics": ["venture capital", "preferred stock", "liquidation preferences", "anti-dilution"],
+      "gap": "No dedicated podcast or video series for private financing — Financial Literacy season covers some"
+    },
+    "11": {
+      "title": "Going Public",
+      "podcast_season": null,
+      "best_video": null,
+      "topics": ["IPO", "Securities Act 1933", "registration", "disclosure"],
+      "gap": "No dedicated podcast or video series for IPO/securities"
+    },
+    "12": {
+      "title": "Shareholder Franchise",
+      "podcast_season": { "name": "Shareholder Litigation", "episodes": 9 },
+      "best_video": { "id": "cbT1SpIxvMc", "title": "Corporate Governance - Episode 4: Shareholder Activism" },
+      "topics": ["voting rights", "proxy", "Blasius", "shareholder activism"]
+    },
+    "13": {
+      "title": "M&A",
+      "podcast_season": { "name": "Corporate Governance", "episodes": 9, "note": "Episodes 5-6 cover takeovers; Shareholder Litigation covers deal litigation" },
+      "best_video": { "id": "0_Sl3aveXJ4", "title": "Corporate Governance - Episode 5: Hostile Takeovers" },
+      "specials": [
+        { "id": "TFpuAQJY9oY", "title": "Tornetta v. Musk - Boardroom Battles and Corporate Governance" },
+        { "id": "3vTCxFqnTAs", "title": "Tornetta v. Musk and the Future of Corporate Law (feat. Profs Bainbridge & Alon-Beck)" }
+      ],
+      "topics": ["Unocal", "Revlon", "enhanced scrutiny", "Corwin cleansing"]
+    },
+    "14": {
+      "title": "Piercing the Veil",
+      "podcast_season": { "name": "Piercing the Corporate Veil", "episodes": 8, "start_ep": 1 },
+      "best_video": { "id": "3twi861cA-E", "title": "Corporations - Episode 5: Shareholder Limited Liability and Piercing the Corporate Veil" },
+      "topics": ["alter ego", "commingling", "undercapitalization", "reverse piercing"]
+    },
+    "15": {
+      "title": "Capital Structure",
+      "podcast_season": { "name": "Financial Literacy for Lawyers", "episodes": 11 },
+      "best_video": null,
+      "topics": ["solvency", "creditor rights", "Gheewalla", "zone of insolvency"]
+    },
+    "16": {
+      "title": "Conclusion",
+      "podcast_season": null,
+      "best_video": null,
+      "topics": ["firm lifecycle synthesis", "four problems review"]
+    }
+  },
+  "gaps": [
+    "Ch 1 (Why Law) — no dedicated video or podcast season",
+    "Ch 6 (Nonprofits) — no dedicated video or podcast season",
+    "Ch 7 (DAOs) — no dedicated podcast season (one crypto video exists)",
+    "Ch 10 (Staying Private) — no dedicated video or podcast on VC/private financing",
+    "Ch 11 (Going Public) — no dedicated video or podcast on IPO/securities",
+    "Ch 16 (Conclusion) — no dedicated synthesis content"
+  ],
+  "recording_priorities": [
+    "Ch 6: Nonprofits (no coverage at all — nondistribution constraint is core doctrine)",
+    "Ch 10: Staying Private (VC/preferred stock — high student interest, no dedicated content)",
+    "Ch 11: Going Public (IPO/Securities Act — critical for practice, no coverage)",
+    "Ch 7: DAOs (timely topic, GENIUS Act just passed, only one tangential video)"
+  ]
+}
