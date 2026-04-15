@@ -5,7 +5,7 @@
     "court": "Supreme Court of Delaware",
     "year": 1983,
     "rule": "Entire fairness requires both fair dealing and fair price in conflicted transactions.",
-    "holding": "When a controlling stockholder stands on both sides of a merger, the transaction must satisfy the entire fairness standard, which has two interdependent components: fair dealing and fair price. Fair dealing embraces questions of timing, initiation, structure, negotiation, disclosure to directors, and how approvals were obtained. Fair price relates to economic and financial considerations including assets, market value, earnings, and future prospects. All aspects must be examined as a whole. The court found the merger unfair because Signal's directors on the UOP board prepared a feasibility study showing a price of up to $24 per share would be a good investment for Signal, but this material information was never disclosed to UOP's minority shareholders or outside directors, who approved a $21 price. The court also liberalized the appraisal remedy under 8 Del. C. \u00a7 262, eliminated the business purpose requirement for freeze-out mergers from Singer v. Magnavox, and adopted a more flexible approach to valuation. Where corporate action has been approved by an informed vote of a majority of the minority shareholders, the burden entirely shifts to the plaintiff to show the transaction was unfair, but the burden remains on those relying on the vote to show complete disclosure of all material facts.",
+    "holding": "When a controlling stockholder stands on both sides of a merger, the transaction must satisfy the entire fairness standard, which has two interdependent components: fair dealing and fair price. Fair dealing embraces questions of timing, initiation, structure, negotiation, disclosure to directors, and how approvals were obtained. Fair price relates to economic and financial considerations including assets, market value, earnings, and future prospects. All aspects must be examined as a whole. The court found the merger unfair because Signal's directors on the UOP board prepared a feasibility study showing a price of up to $24 per share would be a good investment for Signal, but this material information was never disclosed to UOP's minority shareholders or outside directors, who approved a $21 price. The court also liberalized the appraisal remedy under 8 Del. C. § 262, eliminated the business purpose requirement for freeze-out mergers from Singer v. Magnavox, and adopted a more flexible approach to valuation. Where corporate action has been approved by an informed vote of a majority of the minority shareholders, the burden entirely shifts to the plaintiff to show the transaction was unfair, but the burden remains on those relying on the vote to show complete disclosure of all material facts.",
     "keyFacts": [
       "Signal Companies owned 50.5% of UOP and proposed a cash-out merger at $21 per share",
       "Signal's internal Arledge-Chitiea study showed a price up to $24 per share would be a good investment, but this was never disclosed to UOP's minority shareholders or outside directors",
@@ -14,11 +14,21 @@
       "The entire transaction was presented to and approved by UOP's board within four business days"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)",
-      "DGCL \u00a7 262"
+      "DGCL § 141(a)",
+      "DGCL § 262"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "DGCL \u00a7 262"}, {"target": "DGCL \u00a7 251"}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "DGCL § 262"
+      },
+      {
+        "target": "DGCL § 251"
+      }
+    ],
+    "abstract": "457 A.2d 701\nSupreme Court of Delaware.\nWilliam B. WEINBERGER, Plaintiff Below, Appellant,\nv.\nUOP, INC., et al., Defendants Below, Appellees.\nSubmitted: July 16, 1982.\n|\nDecided: Feb. 1, 1983.\nSynopsis\nCorporation which was majority shareholder of subsidiary sought, and acquired, remaining shares of subsidiary by merger transaction including payment of cash to minority shareholders of subsidiary for their minority shares. Minority shareholder, on behalf of class of all subsidiary shareholders wh"
   },
   {
     "caseName": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc.",
@@ -35,11 +45,29 @@
       "Forstmann was given preferential access to Revlon's financial data while Pantry Pride was excluded"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)",
-      "DGCL \u00a7 122(13)"
+      "DGCL § 141(a)",
+      "DGCL § 122(13)"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Unocal Corp. v. Mesa Petroleum Co."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Unocal Corp. v. Mesa Petroleum Co."
+      }
+    ],
+    "statutes_cited": [
+      "15 U.S.C. § 78n(e)",
+      "§ 12.)",
+      "§ 122(13)",
+      "§ 141(a)",
+      "§ 141(a).8",
+      "§ 160(a)",
+      "§ 251(b)",
+      "§§ 141",
+      "§§ 141(a)"
+    ],
+    "abstract": "Bidder for corporations stock brought action to enjoin certain defensive actions taken by the target corporation and others. The Court of Chancery, New Castle County, 501 A.2d 1239, granted preliminary injunction and defendants appealed. The Supreme Court, 505 A.2d 454 affirmed, with an opinion to issue. The Supreme Court, Moore, J., held that: (1) lockups and related agreements are permitted under Delaware law where their adoption is untainted by director interest or other breaches of fiduciary"
   },
   {
     "caseName": "Unocal Corp. v. Mesa Petroleum Co.",
@@ -47,7 +75,7 @@
     "court": "Supreme Court of Delaware",
     "year": 1985,
     "rule": "Defensive measures must be reasonable in relation to the threat posed by a hostile takeover bid.",
-    "holding": "When a board of directors faces a hostile takeover, it has both the power and duty to oppose a bid it perceives to be harmful to the corporate enterprise. The board's authority derives from DGCL \u00a7 141(a) and its fundamental duty to protect the corporation and its stockholders from perceived harm. However, because of the omnipresent specter that a board may be acting primarily in its own interests, there is an enhanced duty calling for judicial examination at the threshold. The board must demonstrate: (1) reasonable grounds for believing a danger to corporate policy and effectiveness existed, satisfied by showing good faith and reasonable investigation (here aided by the majority of independent directors' nine-and-a-half-hour deliberation and Goldman Sachs/Dillon Read opinions); and (2) the defensive response was reasonable in relation to the threat posed. Relevant threat considerations include inadequacy of price, nature and timing of offer, questions of illegality, impact on other constituencies, risk of nonconsummation, and quality of securities offered. This 'enhanced scrutiny' or 'proportionality' standard is intermediate between the business judgment rule and entire fairness. A board may consider the interests of short-term speculators versus long-term investors. The selective exchange offer excluding Mesa was upheld as reasonable in relation to Mesa's coercive two-tier front-loaded tender offer.",
+    "holding": "When a board of directors faces a hostile takeover, it has both the power and duty to oppose a bid it perceives to be harmful to the corporate enterprise. The board's authority derives from DGCL § 141(a) and its fundamental duty to protect the corporation and its stockholders from perceived harm. However, because of the omnipresent specter that a board may be acting primarily in its own interests, there is an enhanced duty calling for judicial examination at the threshold. The board must demonstrate: (1) reasonable grounds for believing a danger to corporate policy and effectiveness existed, satisfied by showing good faith and reasonable investigation (here aided by the majority of independent directors' nine-and-a-half-hour deliberation and Goldman Sachs/Dillon Read opinions); and (2) the defensive response was reasonable in relation to the threat posed. Relevant threat considerations include inadequacy of price, nature and timing of offer, questions of illegality, impact on other constituencies, risk of nonconsummation, and quality of securities offered. This 'enhanced scrutiny' or 'proportionality' standard is intermediate between the business judgment rule and entire fairness. A board may consider the interests of short-term speculators versus long-term investors. The selective exchange offer excluding Mesa was upheld as reasonable in relation to Mesa's coercive two-tier front-loaded tender offer.",
     "keyFacts": [
       "Mesa Petroleum launched a coercive two-tier tender offer at $54 per share front-end with junk bonds at the back-end",
       "Unocal's board authorized a selective self-tender at $72 per share excluding Mesa",
@@ -56,11 +84,31 @@
       "Mesa had a national reputation as a 'greenmailer'"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)",
-      "DGCL \u00a7 160(a)"
+      "DGCL § 141(a)",
+      "DGCL § 160(a)"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+      }
+    ],
+    "statutes_cited": [
+      "§ 12.)",
+      "§ 141(a)",
+      "§ 141(i)",
+      "§ 160",
+      "§ 160(a)",
+      "§ 242(b)",
+      "§ 271(a)",
+      "§ 275(a)",
+      "§§ 141(a)",
+      "§§ 141(k)",
+      "§§ 251(b)"
+    ],
+    "abstract": "A minority shareholder making a hostile tender offer for company’s stock filed a complaint to challenge decision of board of directors to effect a self-tender offer by corporation for its own shares. The Court of Chancery entered a preliminary injunction requested by minority shareholder, and corporation appealed. The Supreme Court, Moore, J., held that board of directors, having acted in good faith and, after reasonable investigation, found that minority shareholder’s two-tier “front loaded” ca"
   },
   {
     "caseName": "Corwin v. KKR Financial Holdings LLC",
@@ -73,15 +121,25 @@
       "KKR acquired KKR Financial Holdings in a stock-for-stock merger at a 35% premium to unaffected market price",
       "KKR owned less than 1% of Financial Holdings' stock and was not a controlling stockholder",
       "The merger was approved by a fully informed, uncoerced vote of disinterested stockholders",
-      "Financial Holdings had an exculpatory charter provision under DGCL \u00a7 102(b)(7)",
+      "Financial Holdings had an exculpatory charter provision under DGCL § 102(b)(7)",
       "Financial Holdings was an LLC managed by a KKR affiliate under a contractual management agreement"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 102(b)(7)",
-      "DGCL \u00a7 251"
+      "DGCL § 102(b)(7)",
+      "DGCL § 251"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."}, {"target": "Unocal Corp. v. Mesa Petroleum Co."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+      },
+      {
+        "target": "Unocal Corp. v. Mesa Petroleum Co."
+      }
+    ],
+    "abstract": "125 A.3d 304\nSupreme Court of Delaware.\nRobert A. CORWIN, Margaret Demauro, Eric Greene, Pipefitters Local Union No. 120 Pension Fund, and Pompano Beach Police & Firefighters’ Retirement System, Plaintiffs Below–Appellants,\nv.\nKKR FINANCIAL HOLDINGS LLC, Tracy Collins, Robert L. Edwards, Craig J. Farr, Vincent Paul Finigan, Jr., Paul M. Hazen, R. Glenn Hubbard, Ross J. Kari, Ely L. Licht, Deborah H. McAneny, Scott C. Nuttall, Scott Ryles, Willy Strothotte, KKR & Co. L.P., KKR Fund Holdings L.P.,"
   },
   {
     "caseName": "Lyondell Chemical Co. v. Ryan",
@@ -89,7 +147,7 @@
     "court": "Supreme Court of Delaware",
     "year": 2009,
     "rule": "Directors are not required to engage in a specific sale process to satisfy Revlon; only a knowing dereliction of duty constitutes bad faith.",
-    "holding": "There is only one Revlon duty: to get the best price for stockholders at a sale of the company. No court can tell directors exactly how to accomplish that goal because they will face unique circumstances. There are no legally prescribed steps that a board must follow, and there is no single blueprint. A board is not required to conduct an auction, solicit competing bids, or conduct a market check. Bad faith requires a showing that directors knowingly and completely failed to undertake their responsibilities -- a conscious disregard of duty -- not merely that the process was imperfect. Where directors are protected by an exculpation clause under \u00a7 102(b)(7), only a breach of the duty of loyalty (including bad faith) can support liability; due care claims are exculpated. The Court of Chancery erred by imposing Revlon duties before the sale became inevitable (the filing of a Schedule 13D merely put the company 'in play' but did not trigger Revlon) and by equating an arguably imperfect sale process with bad faith. There is a vast difference between an inadequate or flawed effort to carry out fiduciary duties and a conscious disregard for those duties. Directors who met several times, solicited financial and legal advice, negotiated the price up from $40 to $48, and approved a deal that their banker called 'an absolute home run' did not consciously disregard their responsibilities.",
+    "holding": "There is only one Revlon duty: to get the best price for stockholders at a sale of the company. No court can tell directors exactly how to accomplish that goal because they will face unique circumstances. There are no legally prescribed steps that a board must follow, and there is no single blueprint. A board is not required to conduct an auction, solicit competing bids, or conduct a market check. Bad faith requires a showing that directors knowingly and completely failed to undertake their responsibilities -- a conscious disregard of duty -- not merely that the process was imperfect. Where directors are protected by an exculpation clause under § 102(b)(7), only a breach of the duty of loyalty (including bad faith) can support liability; due care claims are exculpated. The Court of Chancery erred by imposing Revlon duties before the sale became inevitable (the filing of a Schedule 13D merely put the company 'in play' but did not trigger Revlon) and by equating an arguably imperfect sale process with bad faith. There is a vast difference between an inadequate or flawed effort to carry out fiduciary duties and a conscious disregard for those duties. Directors who met several times, solicited financial and legal advice, negotiated the price up from $40 to $48, and approved a deal that their banker called 'an absolute home run' did not consciously disregard their responsibilities.",
     "keyFacts": [
       "Basell offered $48 per share for Lyondell in an all-cash deal with no financing contingency",
       "The merger was negotiated and finalized in approximately one week",
@@ -98,11 +156,21 @@
       "The board took a 'wait and see' approach for two months after a Schedule 13D was filed, which the trial court criticized as 'slothful indifference'"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 102(b)(7)",
-      "DGCL \u00a7 141(a)"
+      "DGCL § 102(b)(7)",
+      "DGCL § 141(a)"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."}, {"target": "In re Walt Disney Co. Deriv. Litig."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+      },
+      {
+        "target": "In re Walt Disney Co. Deriv. Litig."
+      }
+    ],
+    "abstract": "970 A.2d 235\nSupreme Court of Delaware.\nLYONDELL CHEMICAL COMPANY, Dan F. Smith, Carol A. Anderson, Susan K. Carter, Stephen I. Chazen, Travis Engen, Paul S. Halata, Danny W. Huff, David J. Lesar, David J.P. Meachin, Daniel J. Murphy And William R. Spivey, Defendants Below, Appellants,\nv.\nWalter E. RYAN, Jr., individually and on behalf of all others similarly situated, Plaintiff Below, Appellee.\nNo. 401, 2008\n|\nSubmitted: Jan. 14, 2009.\n|\nDecided: March 25, 2009.\n|\nRevised: April 16, 2009.\nSynop"
   },
   {
     "caseName": "Air Products & Chemicals, Inc. v. Airgas, Inc.",
@@ -119,10 +187,20 @@
       "Three separate financial advisors (BofA, Goldman Sachs, Credit Suisse) all opined $70 was inadequate"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)"
+      "DGCL § 141(a)"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Unocal Corp. v. Mesa Petroleum Co."}, {"target": "Paramount Communications, Inc. v. Time Inc."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Unocal Corp. v. Mesa Petroleum Co."
+      },
+      {
+        "target": "Paramount Communications, Inc. v. Time Inc."
+      }
+    ],
+    "abstract": "16 A.3d 48\nCourt of Chancery of Delaware.\nAIR PRODUCTS AND CHEMICALS, INC., Plaintiff,\nv.\nAIRGAS, INC., Peter McCausland, James W. Hovey, Paula A. Sneed, David M. Stout, Ellen C. Wolf, Lee M. Thomas and John C. van Roden, Jr., Defendants.\nIn re Airgas Inc. Shareholder Litigation.\nCivil Action Nos. 5249–CC, 5256–CC\n|\nSubmitted: Feb. 8, 2011.\n|\nDecided: Feb. 15, 2011.\nSynopsis\nBackground: Offeror that was attempting hostile takeover and shareholders of target corporation brought action against tar"
   },
   {
     "caseName": "Dell, Inc. v. Magnetar Global Event Driven Master Fund Ltd",
@@ -130,7 +208,7 @@
     "court": "Supreme Court of Delaware",
     "year": 2017,
     "rule": "In a statutory appraisal, the deal price resulting from a fair process is strong evidence of fair value.",
-    "holding": "When the market for a company's stock is semi-strong efficient and the sale process is thorough, the deal price deserves significant weight in determining fair value under 8 Del. C. \u00a7 262. The Court of Chancery erred by exclusively relying on its own DCF analysis (yielding $17.62 per share) while giving no weight to market data and deal price ($13.75). Where a management buyout was subjected to rigorous oversight by an independent special committee with full authority to say no, and where the committee conducted both pre- and post-signing market checks, the deal price is a reliable indicator of fair value. The record showed Dell's stock traded on NASDAQ with a market cap exceeding $20 billion, was in the top third of the S&P 500, had over 5% weekly trading volume, a tight bid-ask spread of 0.08%, and extensive analyst coverage -- all indicia of a semi-strong efficient market. Even though this was an MBO, the special committee's independence and robust process mitigated the typical concerns about MBO deal prices. The trial court's reasons for discounting the deal price did not follow from its own key factual findings about the integrity of the sale process.",
+    "holding": "When the market for a company's stock is semi-strong efficient and the sale process is thorough, the deal price deserves significant weight in determining fair value under 8 Del. C. § 262. The Court of Chancery erred by exclusively relying on its own DCF analysis (yielding $17.62 per share) while giving no weight to market data and deal price ($13.75). Where a management buyout was subjected to rigorous oversight by an independent special committee with full authority to say no, and where the committee conducted both pre- and post-signing market checks, the deal price is a reliable indicator of fair value. The record showed Dell's stock traded on NASDAQ with a market cap exceeding $20 billion, was in the top third of the S&P 500, had over 5% weekly trading volume, a tight bid-ask spread of 0.08%, and extensive analyst coverage -- all indicia of a semi-strong efficient market. Even though this was an MBO, the special committee's independence and robust process mitigated the typical concerns about MBO deal prices. The trial court's reasons for discounting the deal price did not follow from its own key factual findings about the integrity of the sale process.",
     "keyFacts": [
       "Michael Dell and Silver Lake proposed taking Dell private at $13.75 per share",
       "The deal represented a 37% premium to the 90-day average unaffected stock price",
@@ -139,10 +217,18 @@
       "Dell's stock was actively traded on NASDAQ with market cap exceeding $20 billion and semi-strong efficient market characteristics"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 262"
+      "DGCL § 262"
     ],
-    "chaptersUsed": [13, 15],
-    "crossRefs": [{"target": "DGCL \u00a7 262"}]
+    "chaptersUsed": [
+      13,
+      15
+    ],
+    "crossRefs": [
+      {
+        "target": "DGCL § 262"
+      }
+    ],
+    "abstract": "177 A.3d 1\nSupreme Court of Delaware.\nDELL, INC., Respondent–Below, Appellant/Cross–Appellee,\nv.\nMAGNETAR GLOBAL EVENT DRIVEN MASTER FUND LTD; Magnetar Capital Master Fund Ltd; Global Continuum Fund, Ltd; Spectrum Opportunities Master Fund Ltd.; Morgan Stanley Defined Contribution Master Trust; Blackwell Partners LLC; Aamaf, LP; Wakefield Partners, LP; CSS, LLC; Merlin Partners, LP; William L. Martin; Terence Lally; Arthur H. Burnet; Darshanand Khusial; Donna H. Lindsey; Douglas J. Joseph Roth C"
   },
   {
     "caseName": "In re Match Group, Inc. Derivative Litigation",
@@ -159,10 +245,19 @@
       "Old Match issued an $850 million dividend of which IAC received approximately $680 million"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)"
+      "DGCL § 141(a)"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Kahn v. M & F Worldwide Corp."}, {"target": "Weinberger v. UOP, Inc."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Kahn v. M & F Worldwide Corp."
+      },
+      {
+        "target": "Weinberger v. UOP, Inc."
+      }
+    ]
   },
   {
     "caseName": "Meinhard v. Salmon",
@@ -178,10 +273,21 @@
       "Meinhard was not informed and lost the opportunity"
     ],
     "statutesApplied": [
-      "RUPA \u00a7 404"
+      "RUPA § 404"
     ],
-    "chaptersUsed": [9],
-    "crossRefs": [{"target": "RUPA \u00a7 404"}]
+    "chaptersUsed": [
+      9
+    ],
+    "crossRefs": [
+      {
+        "target": "RUPA § 404"
+      }
+    ],
+    "statutes_cited": [
+      "§ 31",
+      "§ 53"
+    ],
+    "abstract": "Action by Morton H. Meinhard against Walter J. Salmon and another. Judgment for plaintiff was modified by the Appellate Division (223 App. Div. 663, 229 N. Y. S. 345), and defendants appeal.\n\nModified, and as modified affirmed.\n\nAndrews, Kellogg, and O’Brien, JJ., dissenting."
   },
   {
     "caseName": "Smith v. Van Gorkom",
@@ -189,19 +295,37 @@
     "court": "Supreme Court of Delaware",
     "year": 1985,
     "rule": "Board process failures in approving a merger can rebut the business judgment presumption and trigger liability for breach of duty of care.",
-    "holding": "Directors who approve a merger without adequate information and deliberation may be found grossly negligent. The business judgment rule does not protect uninformed decisions. Directors cannot rely solely on the CEO's oral presentation and must inform themselves of all material information reasonably available before making a business decision. The Trans Union board's approval of a leveraged buyout in a two-hour meeting, without seeing the merger agreement, without retaining an investment banker to opine on fairness, and based solely on the CEO's oral presentation, constituted gross negligence. This landmark decision led directly to the widespread adoption of DGCL \u00a7 102(b)(7) exculpation provisions allowing corporations to eliminate director personal liability for duty of care breaches.",
+    "holding": "Directors who approve a merger without adequate information and deliberation may be found grossly negligent. The business judgment rule does not protect uninformed decisions. Directors cannot rely solely on the CEO's oral presentation and must inform themselves of all material information reasonably available before making a business decision. The Trans Union board's approval of a leveraged buyout in a two-hour meeting, without seeing the merger agreement, without retaining an investment banker to opine on fairness, and based solely on the CEO's oral presentation, constituted gross negligence. This landmark decision led directly to the widespread adoption of DGCL § 102(b)(7) exculpation provisions allowing corporations to eliminate director personal liability for duty of care breaches.",
     "keyFacts": [
       "Trans Union's CEO Van Gorkom arranged a leveraged buyout at $55 per share with no prior board discussion",
       "The board approved the merger in a two-hour meeting without seeing the merger agreement",
       "No investment banker was retained to opine on fairness of the price",
-      "The decision led to widespread adoption of DGCL \u00a7 102(b)(7) exculpation provisions"
+      "The decision led to widespread adoption of DGCL § 102(b)(7) exculpation provisions"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)",
-      "MBCA \u00a7 8.30"
+      "DGCL § 141(a)",
+      "MBCA § 8.30"
     ],
-    "chaptersUsed": [9, 13],
-    "crossRefs": [{"target": "DGCL \u00a7 102(b)(7)"}]
+    "chaptersUsed": [
+      9,
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "DGCL § 102(b)(7)"
+      }
+    ],
+    "statutes_cited": [
+      "§ 141",
+      "§ 141(a)",
+      "§ 141(c)",
+      "§ 141(e)",
+      "§ 251(b",
+      "§ 251(b)",
+      "§ 251(c)",
+      "§ 291"
+    ],
+    "abstract": "Class action was brought by shareholders of corporation, originally seeking rescission of cash-out merger of corporation into new corporation. Alternate relief in form of damages was sought against members of board of directors, new corporation, and owners of parent of new corporation. Following trial, the Court of Chancery, granted judgment for directors by unreported letter opinion, and shareholders appealed. The Supreme Court, Horsey, J., held that: (1) board’s decision to approve proposed ca"
   },
   {
     "caseName": "North American Catholic Educational Programming Foundation v. Gheewalla",
@@ -217,10 +341,16 @@
       "The decision clarified the zone of insolvency doctrine"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)"
+      "DGCL § 141(a)"
     ],
-    "chaptersUsed": [15],
-    "crossRefs": [{"target": "DGCL \u00a7 141(a)"}]
+    "chaptersUsed": [
+      15
+    ],
+    "crossRefs": [
+      {
+        "target": "DGCL § 141(a)"
+      }
+    ]
   },
   {
     "caseName": "National Biscuit Co. v. Stroud",
@@ -236,10 +366,17 @@
       "The court held the partnership liable for Freeman's orders"
     ],
     "statutesApplied": [
-      "RUPA \u00a7 301"
+      "RUPA § 301"
     ],
-    "chaptersUsed": [3],
-    "crossRefs": [{"target": "RUPA \u00a7 301"}]
+    "chaptersUsed": [
+      3
+    ],
+    "crossRefs": [
+      {
+        "target": "RUPA § 301"
+      }
+    ],
+    "abstract": "249 N.C. 467\nSupreme Court of North Carolina.\nNATIONAL BISCUIT COMPANY, Inc.\nv.\nC. N. STROUD and Earl Freeman, trading as Stroud’s Food Center.\nNo. 100\n|\nJan. 28, 1959\nSynopsis\nProceeding by seller of bread against former partners who had operated food store for value of goods sold and delivered. The Superior Court, Carteret County, Joseph W. Parker, J., rendered judgment for seller, and partner appealed. The Supreme Court, Parker, J., held that purchase of bread by food store operated as going "
   },
   {
     "caseName": "Summers v. Dooley",
@@ -255,10 +392,17 @@
       "The court held that Dooley's objection constituted a majority against the hiring"
     ],
     "statutesApplied": [
-      "RUPA \u00a7 401"
+      "RUPA § 401"
     ],
-    "chaptersUsed": [3],
-    "crossRefs": [{"target": "RUPA \u00a7 401"}]
+    "chaptersUsed": [
+      3
+    ],
+    "crossRefs": [
+      {
+        "target": "RUPA § 401"
+      }
+    ],
+    "abstract": "94 Idaho 87\nSupreme Court of Idaho.\nJohn SUMMERS, Plaintiff-Appellant,\nv.\nE. A. DOOLEY, Defendant-Respondent.\nNo. 10325.\n|\nFeb. 24, 1971.\nSynopsis\nAction by one partner against other partner for expenses incurred in hiring additional employee. The District Court, Fourth Judicial District, Ada County, J. Ray Durtschi, J., entered judgment from which plaintiff appealed. The Supreme Court, Donaldson, J., held that where one partner of two-man partnership approached other partner regarding hiring of"
   },
   {
     "caseName": "Guth v. Loft, Inc.",
@@ -274,10 +418,23 @@
       "The court imposed a constructive trust on Guth's Pepsi stock for Loft's benefit"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)"
+      "DGCL § 141(a)"
     ],
-    "chaptersUsed": [9],
-    "crossRefs": [{"target": "R3A \u00a7 8.04"}, {"target": "DGCL \u00a7 122(17)"}]
+    "chaptersUsed": [
+      9
+    ],
+    "crossRefs": [
+      {
+        "target": "R3A § 8.04"
+      },
+      {
+        "target": "DGCL § 122(17)"
+      }
+    ],
+    "statutes_cited": [
+      "§ 862"
+    ],
+    "abstract": "Suit by Loft, Inc., against Charles G. Guth and others to impress a trust in favor of the complainant on all shares of stock of the Pepsi-Cola Company, registered in the name of the defendant Charles G. Guth, and in the name of the defendant the Grace Company, Inc., of Delaware, to secure a transfer of those shares to the complainant, and for an accounting. From a decree in favor of the complainant, 2 A. 2d 225, the defendants appeal.\n\nDecree sustained."
   },
   {
     "caseName": "A. Gay Jenson Farms Co. v. Cargill, Inc.",
@@ -285,7 +442,7 @@
     "court": "Supreme Court of Minnesota",
     "year": 1981,
     "rule": "A creditor who exercises sufficient control over a debtor's operations may become liable as a principal for the debtor's obligations.",
-    "holding": "A lender that exercises sufficient control over a borrower's business operations may be found to have created an agency relationship, making the lender liable as a principal for the borrower's obligations to third parties. Cargill provided financing to Warren Grain & Seed, a local grain elevator, and progressively assumed control by: requiring its consent for major transactions, directing Warren's operations, dictating the terms of grain purchases, placing its own employee on site, and receiving Warren's profits as repayment. The court found that Cargill's degree of control went beyond that of a mere creditor protecting its security interest and established an agency relationship under R2A \u00a7 14 O (now R3A \u00a7 1.01). The key factors were Cargill's right to entry and inspection, right of first refusal on grain, requirement that Warren deal exclusively with Cargill, and Cargill's interference with Warren's internal affairs.",
+    "holding": "A lender that exercises sufficient control over a borrower's business operations may be found to have created an agency relationship, making the lender liable as a principal for the borrower's obligations to third parties. Cargill provided financing to Warren Grain & Seed, a local grain elevator, and progressively assumed control by: requiring its consent for major transactions, directing Warren's operations, dictating the terms of grain purchases, placing its own employee on site, and receiving Warren's profits as repayment. The court found that Cargill's degree of control went beyond that of a mere creditor protecting its security interest and established an agency relationship under R2A § 14 O (now R3A § 1.01). The key factors were Cargill's right to entry and inspection, right of first refusal on grain, requirement that Warren deal exclusively with Cargill, and Cargill's interference with Warren's internal affairs.",
     "keyFacts": [
       "Cargill financed Warren Grain & Seed's operations through a revolving line of credit",
       "Cargill progressively assumed operational control including right of first refusal on grain and consent requirements for capital expenditures",
@@ -293,10 +450,19 @@
       "The court found Cargill liable as a principal for Warren's $2 million in unpaid grain purchases"
     ],
     "statutesApplied": [
-      "R3A \u00a7 1.01"
+      "R3A § 1.01"
     ],
-    "chaptersUsed": [2],
-    "crossRefs": [{"target": "R3A \u00a7 1.01"}, {"target": "R3A \u00a7 2.01"}]
+    "chaptersUsed": [
+      2
+    ],
+    "crossRefs": [
+      {
+        "target": "R3A § 1.01"
+      },
+      {
+        "target": "R3A § 2.01"
+      }
+    ]
   },
   {
     "caseName": "Sea-Land Services, Inc. v. Pepper Source",
@@ -312,8 +478,16 @@
       "The court allowed both traditional and reverse veil piercing to reach Marchese's other entities"
     ],
     "statutesApplied": [],
-    "chaptersUsed": [5, 7],
-    "crossRefs": [{"target": "DGCL \u00a7 102"}]
+    "chaptersUsed": [
+      5,
+      7
+    ],
+    "crossRefs": [
+      {
+        "target": "DGCL § 102"
+      }
+    ],
+    "abstract": "941 F.2d 519\nUnited States Court of Appeals, Seventh Circuit.\nSEA–LAND SERVICES, INC., Plaintiff–Appellee,\nv.\nThe PEPPER SOURCE, Caribe Crown, Inc., Gerald Marchese doing business as Jamar Corporation, et al., Defendants–Appellants.\nNo. 90–2589\n|\nArgued April 17, 1991.\n|\nDecided Aug. 20, 1991.\nSynopsis\nOcean carrier filed federal diversity action against owner of dissolved business and other corporations he owned, seeking money owed on shipment of goods. The United States District Court for the "
   },
   {
     "caseName": "Walkovszky v. Carlton",
@@ -329,8 +503,15 @@
       "The court refused to pierce the veil because thin capitalization alone was insufficient"
     ],
     "statutesApplied": [],
-    "chaptersUsed": [5, 7],
-    "crossRefs": [{"target": "Sea-Land Services, Inc. v. Pepper Source"}]
+    "chaptersUsed": [
+      5,
+      7
+    ],
+    "crossRefs": [
+      {
+        "target": "Sea-Land Services, Inc. v. Pepper Source"
+      }
+    ]
   },
   {
     "caseName": "Blasius Industries, Inc. v. Atlas Corp.",
@@ -346,11 +527,28 @@
       "The court held that good faith alone could not justify action that interfered with the shareholder franchise"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)",
-      "DGCL \u00a7 211"
+      "DGCL § 141(a)",
+      "DGCL § 211"
     ],
-    "chaptersUsed": [11, 13],
-    "crossRefs": [{"target": "Schnell v. Chris-Craft Industries, Inc."}]
+    "chaptersUsed": [
+      11,
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Schnell v. Chris-Craft Industries, Inc."
+      }
+    ],
+    "statutes_cited": [
+      "§ 1021",
+      "§ 2062",
+      "§ 211)",
+      "§ 225",
+      "§ 228",
+      "§ 228)",
+      "§§ 19"
+    ],
+    "abstract": "Shareholders brought actions challenging the validity of directors’ decision to add two new members to the board of directors and challenging the counting of votes on a consent solicitation to increase the board from 7 to 15 members and to name a new majority of the board. After the cases were consolidated, the Chancery Court, New Castle County, Allen, Chancellor, held that: (1) the evidence demonstrated that the incumbent directors were not acting out of a self-interested motive when they respo"
   },
   {
     "caseName": "Schnell v. Chris-Craft Industries, Inc.",
@@ -366,11 +564,18 @@
       "The Delaware Supreme Court reversed the Court of Chancery and enjoined the early meeting date"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 211",
-      "DGCL \u00a7 213"
+      "DGCL § 211",
+      "DGCL § 213"
     ],
-    "chaptersUsed": [11],
-    "crossRefs": [{"target": "Blasius Industries, Inc. v. Atlas Corp."}]
+    "chaptersUsed": [
+      11
+    ],
+    "crossRefs": [
+      {
+        "target": "Blasius Industries, Inc. v. Atlas Corp."
+      }
+    ],
+    "abstract": "Proceeding on petition for a preliminary injunction against carrying out by corporation of a change in date of its annual meeting of stockholders. The Court of Chancery, Marvel, Vice Chancellor, 285 A.2d 430, denied relief and an appeal was taken. The Supreme Court, Herrmann, J., held that management’s attempt to utilize corporate machinery and delaware law for purpose of perpetrating itself in office and obstructing legitimate efforts of dissident stockholders in exercise of their rights to und"
   },
   {
     "caseName": "Paramount Communications, Inc. v. Time Inc.",
@@ -386,10 +591,25 @@
       "The court held Revlon duties were not triggered because the Time-Warner combination preserved Time shareholder control"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)"
+      "DGCL § 141(a)"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Unocal Corp. v. Mesa Petroleum Co."}, {"target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Unocal Corp. v. Mesa Petroleum Co."
+      },
+      {
+        "target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+      }
+    ],
+    "statutes_cited": [
+      "§ 141(a)",
+      "§ 251(b)",
+      "§ 251(c)"
+    ],
+    "abstract": "Suits were filed for preliminary injunction to halt corporation’s tender offer and merger with second corporation. The Court of Chancery, New Castle County, consolidated suits and denied plaintiffs’ motion for preliminary injunction, and plaintiffs appealed. The Supreme Court, 565 A.2d 280, 281 orally affirmed. In a subsequent written decision, the Supreme Court, Horsey, J., held that: (1) corporation’s board of directors, by entering into its initial merger agreement, did not come under a Revlo"
   },
   {
     "caseName": "Paramount Communications Inc. v. QVC Network Inc.",
@@ -405,11 +625,21 @@
       "The court held that Revlon duties applied because control would shift from dispersed shareholders to a single controller"
     ],
     "statutesApplied": [
-      "DGCL \u00a7 141(a)",
-      "DGCL \u00a7 251"
+      "DGCL § 141(a)",
+      "DGCL § 251"
     ],
-    "chaptersUsed": [13],
-    "crossRefs": [{"target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."}, {"target": "Paramount Communications, Inc. v. Time Inc."}]
+    "chaptersUsed": [
+      13
+    ],
+    "crossRefs": [
+      {
+        "target": "Revlon, Inc. v. MacAndrews & Forbes Holdings, Inc."
+      },
+      {
+        "target": "Paramount Communications, Inc. v. Time Inc."
+      }
+    ],
+    "abstract": "637 A.2d 34\nSupreme Court of Delaware.\nPARAMOUNT COMMUNICATIONS INC., Viacom Inc., Martin S. Davis, Grace J. Fippinger, Irving R. Fischer, Benjamin L. Hooks, Franz J. Lutolf, James A. Pattison, Irwin Schloss, Samuel J. Silberman, Lawrence M. Small, and George Weissman, Defendants Below, Appellants,\nv.\nQVC NETWORK INC., Plaintiff Below, Appellee.\nIn re PARAMOUNT COMMUNICATIONS INC. SHAREHOLDERS’ LITIGATION.\nSubmitted: Dec. 9, 1993.\n|\nDecided by Order: Dec. 9, 1993.\n|\nOpinion: Feb. 4, 1994.\nSynops"
   },
   {
     "caseName": "In re TOUSA, Inc.",
@@ -425,10 +655,17 @@
       "The bankruptcy court avoided the liens and required return of approximately $403 million"
     ],
     "statutesApplied": [
-      "11 U.S.C. \u00a7 548"
+      "11 U.S.C. § 548"
     ],
-    "chaptersUsed": [15],
-    "crossRefs": [{"target": "N. Am. Catholic Educ. Programming Found. v. Gheewalla"}]
+    "chaptersUsed": [
+      15
+    ],
+    "crossRefs": [
+      {
+        "target": "N. Am. Catholic Educ. Programming Found. v. Gheewalla"
+      }
+    ],
+    "abstract": "|\nIn re TOUSA, Inc.\nUnited States Court of Appeals, Eleventh Circuit. | May 15, 2012 | 680 F.3d 1298 | 2012 WL 1673910\n|\n|Document Details\n|Outline\nSynopsis\nWest Headnotes\nAttorneys and Law Firms\nOpinion\nAll Citations\n|\n|standard Citation:\n|In re TOUSA, Inc., 680 F.3d 1298 (11th Cir. 2012)\n||\n|All Citations:\n|680 F.3d 1298, 67 Collier Bankr.Cas.2d 1035, 56 Bankr.Ct.Dec. 135, Bankr. L. Rep. P 82,276, 23 Fla. L. Weekly Fed. C 1042\n||\n|Search Details\n||\n|Jurisdiction:\n|Florida\n||\n|Delivery Details\n"
   },
   {
     "caseName": "VGS, Inc. v. Castiel",
@@ -444,9 +681,20 @@
       "The court voided the merger despite technical compliance with the written consent provision"
     ],
     "statutesApplied": [
-      "DLLCA \u00a7 18-404"
+      "DLLCA § 18-404"
     ],
-    "chaptersUsed": [4, 11],
-    "crossRefs": [{"target": "Schnell v. Chris-Craft Industries, Inc."}, {"target": "DLLCA \u00a7 18-404"}]
+    "chaptersUsed": [
+      4,
+      11
+    ],
+    "crossRefs": [
+      {
+        "target": "Schnell v. Chris-Craft Industries, Inc."
+      },
+      {
+        "target": "DLLCA § 18-404"
+      }
+    ],
+    "abstract": "2000 WL 1277372\nUNPUBLISHED OPINION. CHECK COURT RULES BEFORE CITING.\nCourt of Chancery of Delaware.\nVGS, INC., Plaintiff,\nv.\nDavid CASTIEL, Virtual Geosatellite Holdings, Inc., and Ellipso, Inc., Defendants,\nVIRTUAL GEOSATELLITE HOLDINGS, INC., and Ellipso, Inc., Counterclaim Plaintiffs,\nand\nVIRTUAL GEOSATELLITE LLC, Counterclaim Plaintiff–Intervenor,\nv.\nVGS, INC., Peter D. Sahagen, Thomas Quinn, Neel Howard and Sahagen Satellite Technology Group, LLC, Counterclaim Defendants.\nNo. C.A. 17995.\n|"
   }
 ]
