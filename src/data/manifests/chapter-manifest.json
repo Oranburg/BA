@@ -3,8 +3,8 @@
   "generated_at": "2026-04-03T21:33:00Z",
   "description": "Chapter manifest for BA: Law of the Firm / The Neon Edge",
   "total_chapters": 16,
-  "built_chapters": 6,
-  "stub_chapters": 10,
+  "built_chapters": 16,
+  "stub_chapters": 0,
   "chapters": [
     {
       "chapter_number": 1,
@@ -23,11 +23,27 @@
         "principal-agent-theory",
         "entity-theory"
       ],
-      "four_problems_tags": ["attribution", "governance", "risk", "partitioning", "synthesis"],
+      "four_problems_tags": [
+        "attribution",
+        "governance",
+        "risk",
+        "partitioning",
+        "synthesis"
+      ],
       "lifecycle_stage": "formation",
       "hero_image_id": "img-ch01-hero",
-      "primary_authority_ids": ["rupa", "rsa", "ullca", "mbca", "dgcl"],
-      "secondary_authority_ids": ["uvta", "securities-act-1933", "exchange-act-1934"],
+      "primary_authority_ids": [
+        "rupa",
+        "rsa",
+        "ullca",
+        "mbca",
+        "dgcl"
+      ],
+      "secondary_authority_ids": [
+        "uvta",
+        "securities-act-1933",
+        "exchange-act-1934"
+      ],
       "key_section_links": [],
       "related_concept_ids": [
         "firm",
@@ -37,9 +53,13 @@
         "governance",
         "entity"
       ],
-      "related_chapter_ids": ["ch02-agency", "ch08-entity-selection", "ch16-conclusion"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch02-agency",
+        "ch08-entity-selection",
+        "ch16-conclusion"
+      ],
+      "route": "/ch01-why-law",
+      "module_status": "built",
       "narrative_hook": "Zeeva arrives in New Boston and discovers the Four Problems that shape every business entity.",
       "sort_order": 1,
       "updated_at": "2026-04-03"
@@ -61,17 +81,43 @@
         "vicarious-liability",
         "agent-principal-relationship"
       ],
-      "four_problems_tags": ["attribution"],
+      "four_problems_tags": [
+        "attribution"
+      ],
       "lifecycle_stage": "agency",
       "hero_image_id": "img-ch02-hero",
-      "primary_authority_ids": ["rsa"],
-      "secondary_authority_ids": ["rupa"],
+      "primary_authority_ids": [
+        "rsa"
+      ],
+      "secondary_authority_ids": [
+        "rupa"
+      ],
       "key_section_links": [
-        { "authority": "RSA", "section": "1.01", "relevance": "Agency relationship defined" },
-        { "authority": "RSA", "section": "2.01", "relevance": "Actual authority" },
-        { "authority": "RSA", "section": "2.03", "relevance": "Apparent authority" },
-        { "authority": "RSA", "section": "7.07", "relevance": "Respondeat superior" },
-        { "authority": "RUPA", "section": "301", "relevance": "Partner as agent" }
+        {
+          "authority": "RSA",
+          "section": "1.01",
+          "relevance": "Agency relationship defined"
+        },
+        {
+          "authority": "RSA",
+          "section": "2.01",
+          "relevance": "Actual authority"
+        },
+        {
+          "authority": "RSA",
+          "section": "2.03",
+          "relevance": "Apparent authority"
+        },
+        {
+          "authority": "RSA",
+          "section": "7.07",
+          "relevance": "Respondeat superior"
+        },
+        {
+          "authority": "RUPA",
+          "section": "301",
+          "relevance": "Partner as agent"
+        }
       ],
       "related_concept_ids": [
         "control-test",
@@ -81,7 +127,11 @@
         "independent-contractor",
         "employee"
       ],
-      "related_chapter_ids": ["ch01-why-law", "ch03-partnership", "ch07-daos"],
+      "related_chapter_ids": [
+        "ch01-why-law",
+        "ch03-partnership",
+        "ch07-daos"
+      ],
       "route": "/ch02-agency",
       "module_status": "built",
       "narrative_hook": "Zeeva hires Sammy as a street fixer and learns who controls the bot — and who pays when it goes wrong.",
@@ -105,18 +155,46 @@
         "partner-fiduciary-duties",
         "dissolution-mechanics"
       ],
-      "four_problems_tags": ["risk"],
+      "four_problems_tags": [
+        "risk"
+      ],
       "lifecycle_stage": "partnership",
       "hero_image_id": "img-ch03-hero",
-      "primary_authority_ids": ["rupa"],
+      "primary_authority_ids": [
+        "rupa"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [
-        { "authority": "RUPA", "section": "202", "relevance": "Formation of partnership" },
-        { "authority": "RUPA", "section": "301", "relevance": "Partner as agent of partnership" },
-        { "authority": "RUPA", "section": "306", "relevance": "Joint and several liability" },
-        { "authority": "RUPA", "section": "401", "relevance": "Partner rights and duties" },
-        { "authority": "RUPA", "section": "404", "relevance": "Fiduciary duties of partners" },
-        { "authority": "RUPA", "section": "801", "relevance": "Events causing dissolution" }
+        {
+          "authority": "RUPA",
+          "section": "202",
+          "relevance": "Formation of partnership"
+        },
+        {
+          "authority": "RUPA",
+          "section": "301",
+          "relevance": "Partner as agent of partnership"
+        },
+        {
+          "authority": "RUPA",
+          "section": "306",
+          "relevance": "Joint and several liability"
+        },
+        {
+          "authority": "RUPA",
+          "section": "401",
+          "relevance": "Partner rights and duties"
+        },
+        {
+          "authority": "RUPA",
+          "section": "404",
+          "relevance": "Fiduciary duties of partners"
+        },
+        {
+          "authority": "RUPA",
+          "section": "801",
+          "relevance": "Events causing dissolution"
+        }
       ],
       "related_concept_ids": [
         "partnership-formation",
@@ -125,9 +203,13 @@
         "dissolution",
         "partner-as-agent"
       ],
-      "related_chapter_ids": ["ch02-agency", "ch05-llcs", "ch08-entity-selection"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch02-agency",
+        "ch05-llcs",
+        "ch08-entity-selection"
+      ],
+      "route": "/ch03-partnership",
+      "module_status": "built",
       "narrative_hook": "Zeeva's first handshake deal becomes a partnership by operation of law, bringing unlimited liability.",
       "sort_order": 3,
       "updated_at": "2026-04-03"
@@ -149,15 +231,33 @@
         "board-centrism",
         "capital-aggregation"
       ],
-      "four_problems_tags": ["partitioning"],
+      "four_problems_tags": [
+        "partitioning"
+      ],
       "lifecycle_stage": "incorporation",
       "hero_image_id": "img-ch04-hero",
-      "primary_authority_ids": ["dgcl"],
-      "secondary_authority_ids": ["mbca"],
+      "primary_authority_ids": [
+        "dgcl"
+      ],
+      "secondary_authority_ids": [
+        "mbca"
+      ],
       "key_section_links": [
-        { "authority": "DGCL", "section": "102", "relevance": "Contents of certificate of incorporation" },
-        { "authority": "DGCL", "section": "141", "relevance": "Board of directors; powers" },
-        { "authority": "DGCL", "section": "151", "relevance": "Classes and series of stock" }
+        {
+          "authority": "DGCL",
+          "section": "102",
+          "relevance": "Contents of certificate of incorporation"
+        },
+        {
+          "authority": "DGCL",
+          "section": "141",
+          "relevance": "Board of directors; powers"
+        },
+        {
+          "authority": "DGCL",
+          "section": "151",
+          "relevance": "Classes and series of stock"
+        }
       ],
       "related_concept_ids": [
         "entity-shielding",
@@ -166,9 +266,14 @@
         "articles-of-incorporation",
         "board-authority"
       ],
-      "related_chapter_ids": ["ch03-partnership", "ch05-llcs", "ch09-fiduciary-duties", "ch14-piercing-the-veil"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch03-partnership",
+        "ch05-llcs",
+        "ch09-fiduciary-duties",
+        "ch14-piercing-the-veil"
+      ],
+      "route": "/ch04-corporations-tech",
+      "module_status": "built",
       "narrative_hook": "Zeeva incorporates to create an entity shield separating firm assets from personal creditors.",
       "sort_order": 4,
       "updated_at": "2026-04-03"
@@ -190,16 +295,36 @@
         "operating-agreement-primacy",
         "governance-flexibility"
       ],
-      "four_problems_tags": ["governance"],
+      "four_problems_tags": [
+        "governance"
+      ],
       "lifecycle_stage": "llc-flexibility",
       "hero_image_id": "img-ch05-hero",
-      "primary_authority_ids": ["ullca"],
+      "primary_authority_ids": [
+        "ullca"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [
-        { "authority": "ULLCA", "section": "102", "relevance": "Definitions" },
-        { "authority": "ULLCA", "section": "110", "relevance": "Operating agreement scope and limits" },
-        { "authority": "ULLCA", "section": "301", "relevance": "Agency authority of members/managers" },
-        { "authority": "ULLCA", "section": "409", "relevance": "Fiduciary duties" }
+        {
+          "authority": "ULLCA",
+          "section": "102",
+          "relevance": "Definitions"
+        },
+        {
+          "authority": "ULLCA",
+          "section": "110",
+          "relevance": "Operating agreement scope and limits"
+        },
+        {
+          "authority": "ULLCA",
+          "section": "301",
+          "relevance": "Agency authority of members/managers"
+        },
+        {
+          "authority": "ULLCA",
+          "section": "409",
+          "relevance": "Fiduciary duties"
+        }
       ],
       "related_concept_ids": [
         "operating-agreement",
@@ -208,9 +333,13 @@
         "contractual-freedom",
         "charging-order"
       ],
-      "related_chapter_ids": ["ch03-partnership", "ch04-corporations-tech", "ch08-entity-selection"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch03-partnership",
+        "ch04-corporations-tech",
+        "ch08-entity-selection"
+      ],
+      "route": "/ch05-llcs",
+      "module_status": "built",
       "narrative_hook": "Zeeva discovers the LLC's radical contractual freedom — and its governance trade-offs.",
       "sort_order": 5,
       "updated_at": "2026-04-03"
@@ -232,10 +361,14 @@
         "charitable-purpose",
         "board-accountability"
       ],
-      "four_problems_tags": ["governance"],
+      "four_problems_tags": [
+        "governance"
+      ],
       "lifecycle_stage": "nonprofit-alternative",
       "hero_image_id": "img-ch06-hero",
-      "primary_authority_ids": ["mbca"],
+      "primary_authority_ids": [
+        "mbca"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [],
       "related_concept_ids": [
@@ -244,9 +377,13 @@
         "board-governance",
         "tax-exemption"
       ],
-      "related_chapter_ids": ["ch04-corporations-tech", "ch07-daos", "ch08-entity-selection"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch04-corporations-tech",
+        "ch07-daos",
+        "ch08-entity-selection"
+      ],
+      "route": "/ch06-nonprofits",
+      "module_status": "built",
       "narrative_hook": "Zeeva encounters organizations that cannot distribute profits, forcing governance to serve mission.",
       "sort_order": 6,
       "updated_at": "2026-04-03"
@@ -268,7 +405,9 @@
         "token-voting",
         "legal-wrapper-problem"
       ],
-      "four_problems_tags": ["attribution"],
+      "four_problems_tags": [
+        "attribution"
+      ],
       "lifecycle_stage": "dao-decentralized",
       "hero_image_id": "img-ch07-hero",
       "primary_authority_ids": [],
@@ -281,9 +420,13 @@
         "decentralized-governance",
         "wrapper-entity"
       ],
-      "related_chapter_ids": ["ch02-agency", "ch05-llcs", "ch06-nonprofits"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch02-agency",
+        "ch05-llcs",
+        "ch06-nonprofits"
+      ],
+      "route": "/ch07-daos",
+      "module_status": "built",
       "narrative_hook": "Zeeva confronts code-as-law: when a DAO acts, who is the principal and who is the agent?",
       "sort_order": 7,
       "updated_at": "2026-04-03"
@@ -305,16 +448,43 @@
         "tax-entity-classification",
         "governance-spectrum"
       ],
-      "four_problems_tags": ["attribution", "governance", "risk", "partitioning", "synthesis"],
+      "four_problems_tags": [
+        "attribution",
+        "governance",
+        "risk",
+        "partitioning",
+        "synthesis"
+      ],
       "lifecycle_stage": "entity-selection",
       "hero_image_id": "img-ch08-hero",
-      "primary_authority_ids": ["rupa", "ullca", "dgcl", "mbca"],
+      "primary_authority_ids": [
+        "rupa",
+        "ullca",
+        "dgcl",
+        "mbca"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [
-        { "authority": "RUPA", "section": "202", "relevance": "Partnership formation baseline" },
-        { "authority": "ULLCA", "section": "110", "relevance": "LLC operating agreement flexibility" },
-        { "authority": "DGCL", "section": "102", "relevance": "Corporate formation requirements" },
-        { "authority": "MBCA", "section": "2.01", "relevance": "Incorporation under MBCA" }
+        {
+          "authority": "RUPA",
+          "section": "202",
+          "relevance": "Partnership formation baseline"
+        },
+        {
+          "authority": "ULLCA",
+          "section": "110",
+          "relevance": "LLC operating agreement flexibility"
+        },
+        {
+          "authority": "DGCL",
+          "section": "102",
+          "relevance": "Corporate formation requirements"
+        },
+        {
+          "authority": "MBCA",
+          "section": "2.01",
+          "relevance": "Incorporation under MBCA"
+        }
       ],
       "related_concept_ids": [
         "entity-comparison",
@@ -323,7 +493,14 @@
         "governance-structure",
         "formation-costs"
       ],
-      "related_chapter_ids": ["ch01-why-law", "ch03-partnership", "ch04-corporations-tech", "ch05-llcs", "ch06-nonprofits", "ch07-daos"],
+      "related_chapter_ids": [
+        "ch01-why-law",
+        "ch03-partnership",
+        "ch04-corporations-tech",
+        "ch05-llcs",
+        "ch06-nonprofits",
+        "ch07-daos"
+      ],
       "route": "/ch08-entity-selection",
       "module_status": "built",
       "narrative_hook": "Zeeva must choose the right entity form, balancing all Four Problems at once.",
@@ -347,16 +524,40 @@
         "entire-fairness",
         "good-faith-doctrine"
       ],
-      "four_problems_tags": ["governance"],
+      "four_problems_tags": [
+        "governance"
+      ],
       "lifecycle_stage": "fiduciary-conflict",
       "hero_image_id": "img-ch09-hero",
-      "primary_authority_ids": ["dgcl", "mbca"],
-      "secondary_authority_ids": ["rupa", "ullca"],
+      "primary_authority_ids": [
+        "dgcl",
+        "mbca"
+      ],
+      "secondary_authority_ids": [
+        "rupa",
+        "ullca"
+      ],
       "key_section_links": [
-        { "authority": "DGCL", "section": "141", "relevance": "Board powers and duties" },
-        { "authority": "DGCL", "section": "144", "relevance": "Interested director transactions" },
-        { "authority": "RUPA", "section": "404", "relevance": "Partner fiduciary duties" },
-        { "authority": "ULLCA", "section": "409", "relevance": "LLC member/manager fiduciary duties" }
+        {
+          "authority": "DGCL",
+          "section": "141",
+          "relevance": "Board powers and duties"
+        },
+        {
+          "authority": "DGCL",
+          "section": "144",
+          "relevance": "Interested director transactions"
+        },
+        {
+          "authority": "RUPA",
+          "section": "404",
+          "relevance": "Partner fiduciary duties"
+        },
+        {
+          "authority": "ULLCA",
+          "section": "409",
+          "relevance": "LLC member/manager fiduciary duties"
+        }
       ],
       "related_concept_ids": [
         "fiduciary-duty",
@@ -366,7 +567,11 @@
         "entire-fairness",
         "good-faith"
       ],
-      "related_chapter_ids": ["ch04-corporations-tech", "ch12-shareholder-franchise", "ch13-m-and-a"],
+      "related_chapter_ids": [
+        "ch04-corporations-tech",
+        "ch12-shareholder-franchise",
+        "ch13-m-and-a"
+      ],
       "route": "/ch09-fiduciary-duties",
       "module_status": "built",
       "narrative_hook": "Zeeva faces the loyalty/care matrix when board decisions create conflicts of interest.",
@@ -390,14 +595,29 @@
         "venture-capital-terms",
         "private-market-structure"
       ],
-      "four_problems_tags": ["risk"],
+      "four_problems_tags": [
+        "risk"
+      ],
       "lifecycle_stage": "staying-private",
       "hero_image_id": "img-ch10-hero",
-      "primary_authority_ids": ["securities-act-1933", "exchange-act-1934"],
-      "secondary_authority_ids": ["dgcl"],
+      "primary_authority_ids": [
+        "securities-act-1933",
+        "exchange-act-1934"
+      ],
+      "secondary_authority_ids": [
+        "dgcl"
+      ],
       "key_section_links": [
-        { "authority": "Securities Act 1933", "section": "Reg D", "relevance": "Private placement exemptions" },
-        { "authority": "Securities Act 1933", "section": "Reg A", "relevance": "Mini-registration exemption" }
+        {
+          "authority": "Securities Act 1933",
+          "section": "Reg D",
+          "relevance": "Private placement exemptions"
+        },
+        {
+          "authority": "Securities Act 1933",
+          "section": "Reg A",
+          "relevance": "Mini-registration exemption"
+        }
       ],
       "related_concept_ids": [
         "private-placement",
@@ -407,9 +627,13 @@
         "anti-dilution",
         "liquidation-preference"
       ],
-      "related_chapter_ids": ["ch04-corporations-tech", "ch11-going-public", "ch15-capital-structure"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch04-corporations-tech",
+        "ch11-going-public",
+        "ch15-capital-structure"
+      ],
+      "route": "/ch10-staying-private",
+      "module_status": "built",
       "narrative_hook": "Zeeva raises capital while staying private, navigating venture terms and investor protections.",
       "sort_order": 10,
       "updated_at": "2026-04-03"
@@ -431,15 +655,34 @@
         "public-company-governance",
         "ownership-control-separation"
       ],
-      "four_problems_tags": ["partitioning"],
+      "four_problems_tags": [
+        "partitioning"
+      ],
       "lifecycle_stage": "going-public",
       "hero_image_id": "img-ch11-hero",
-      "primary_authority_ids": ["securities-act-1933", "exchange-act-1934"],
-      "secondary_authority_ids": ["dgcl"],
+      "primary_authority_ids": [
+        "securities-act-1933",
+        "exchange-act-1934"
+      ],
+      "secondary_authority_ids": [
+        "dgcl"
+      ],
       "key_section_links": [
-        { "authority": "Securities Act 1933", "section": "5", "relevance": "Registration requirement" },
-        { "authority": "Exchange Act 1934", "section": "12", "relevance": "Registration of securities" },
-        { "authority": "Exchange Act 1934", "section": "13", "relevance": "Periodic reporting requirements" }
+        {
+          "authority": "Securities Act 1933",
+          "section": "5",
+          "relevance": "Registration requirement"
+        },
+        {
+          "authority": "Exchange Act 1934",
+          "section": "12",
+          "relevance": "Registration of securities"
+        },
+        {
+          "authority": "Exchange Act 1934",
+          "section": "13",
+          "relevance": "Periodic reporting requirements"
+        }
       ],
       "related_concept_ids": [
         "ipo",
@@ -450,9 +693,13 @@
         "market-maker",
         "public-company"
       ],
-      "related_chapter_ids": ["ch10-staying-private", "ch12-shareholder-franchise", "ch15-capital-structure"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch10-staying-private",
+        "ch12-shareholder-franchise",
+        "ch15-capital-structure"
+      ],
+      "route": "/ch11-going-public",
+      "module_status": "built",
       "narrative_hook": "Zeeva takes the firm public, crossing the threshold from private flexibility to public accountability.",
       "sort_order": 11,
       "updated_at": "2026-04-03"
@@ -474,16 +721,38 @@
         "voting-power-allocation",
         "minority-shareholder-protection"
       ],
-      "four_problems_tags": ["governance"],
+      "four_problems_tags": [
+        "governance"
+      ],
       "lifecycle_stage": "shareholder-conflict",
       "hero_image_id": "img-ch12-hero",
-      "primary_authority_ids": ["dgcl"],
-      "secondary_authority_ids": ["mbca"],
+      "primary_authority_ids": [
+        "dgcl"
+      ],
+      "secondary_authority_ids": [
+        "mbca"
+      ],
       "key_section_links": [
-        { "authority": "DGCL", "section": "211", "relevance": "Meetings of stockholders" },
-        { "authority": "DGCL", "section": "212", "relevance": "Voting rights of stockholders" },
-        { "authority": "DGCL", "section": "216", "relevance": "Quorum and required vote" },
-        { "authority": "DGCL", "section": "228", "relevance": "Consent of stockholders in lieu of meeting" }
+        {
+          "authority": "DGCL",
+          "section": "211",
+          "relevance": "Meetings of stockholders"
+        },
+        {
+          "authority": "DGCL",
+          "section": "212",
+          "relevance": "Voting rights of stockholders"
+        },
+        {
+          "authority": "DGCL",
+          "section": "216",
+          "relevance": "Quorum and required vote"
+        },
+        {
+          "authority": "DGCL",
+          "section": "228",
+          "relevance": "Consent of stockholders in lieu of meeting"
+        }
       ],
       "related_concept_ids": [
         "voting-rights",
@@ -493,7 +762,11 @@
         "board-election",
         "say-on-pay"
       ],
-      "related_chapter_ids": ["ch09-fiduciary-duties", "ch11-going-public", "ch13-m-and-a"],
+      "related_chapter_ids": [
+        "ch09-fiduciary-duties",
+        "ch11-going-public",
+        "ch13-m-and-a"
+      ],
       "route": "/ch12-shareholder-franchise",
       "module_status": "built",
       "narrative_hook": "Zeeva navigates the shareholder vote — the fundamental governance mechanism of the public corporation.",
@@ -517,14 +790,26 @@
         "change-of-control",
         "shareholder-remedies"
       ],
-      "four_problems_tags": ["governance"],
+      "four_problems_tags": [
+        "governance"
+      ],
       "lifecycle_stage": "mergers-acquisitions",
       "hero_image_id": "img-ch13-hero",
-      "primary_authority_ids": ["dgcl"],
+      "primary_authority_ids": [
+        "dgcl"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [
-        { "authority": "DGCL", "section": "251", "relevance": "Merger or consolidation" },
-        { "authority": "DGCL", "section": "271", "relevance": "Sale of substantially all assets" }
+        {
+          "authority": "DGCL",
+          "section": "251",
+          "relevance": "Merger or consolidation"
+        },
+        {
+          "authority": "DGCL",
+          "section": "271",
+          "relevance": "Sale of substantially all assets"
+        }
       ],
       "related_concept_ids": [
         "merger",
@@ -536,7 +821,11 @@
         "appraisal-rights",
         "corwin-cleansing"
       ],
-      "related_chapter_ids": ["ch09-fiduciary-duties", "ch12-shareholder-franchise", "ch14-piercing-the-veil"],
+      "related_chapter_ids": [
+        "ch09-fiduciary-duties",
+        "ch12-shareholder-franchise",
+        "ch14-piercing-the-veil"
+      ],
       "route": "/ch13-m-and-a",
       "module_status": "built",
       "narrative_hook": "Zeeva faces a hostile takeover bid — triggering enhanced judicial scrutiny of board loyalty.",
@@ -560,10 +849,15 @@
         "creditor-protection",
         "liability-boundaries"
       ],
-      "four_problems_tags": ["partitioning"],
+      "four_problems_tags": [
+        "partitioning"
+      ],
       "lifecycle_stage": "veil-piercing",
       "hero_image_id": "img-ch14-hero",
-      "primary_authority_ids": ["dgcl", "mbca"],
+      "primary_authority_ids": [
+        "dgcl",
+        "mbca"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [],
       "related_concept_ids": [
@@ -575,9 +869,13 @@
         "instrumentality",
         "enterprise-liability"
       ],
-      "related_chapter_ids": ["ch04-corporations-tech", "ch13-m-and-a", "ch15-capital-structure"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch04-corporations-tech",
+        "ch13-m-and-a",
+        "ch15-capital-structure"
+      ],
+      "route": "/ch14-piercing-the-veil",
+      "module_status": "built",
       "narrative_hook": "Zeeva watches the corporate veil dissolve when entity boundaries are abused.",
       "sort_order": 14,
       "updated_at": "2026-04-03"
@@ -599,16 +897,37 @@
         "fraudulent-transfer",
         "creditor-equity-tension"
       ],
-      "four_problems_tags": ["risk"],
+      "four_problems_tags": [
+        "risk"
+      ],
       "lifecycle_stage": "capital-structure",
       "hero_image_id": "img-ch15-hero",
-      "primary_authority_ids": ["dgcl", "uvta"],
+      "primary_authority_ids": [
+        "dgcl",
+        "uvta"
+      ],
       "secondary_authority_ids": [],
       "key_section_links": [
-        { "authority": "DGCL", "section": "151", "relevance": "Classes and series of stock" },
-        { "authority": "DGCL", "section": "160", "relevance": "Corporation's power to purchase shares" },
-        { "authority": "DGCL", "section": "170", "relevance": "Dividends; payment; wasting asset corporations" },
-        { "authority": "UVTA", "section": "4", "relevance": "Transfers fraudulent as to present and future creditors" }
+        {
+          "authority": "DGCL",
+          "section": "151",
+          "relevance": "Classes and series of stock"
+        },
+        {
+          "authority": "DGCL",
+          "section": "160",
+          "relevance": "Corporation's power to purchase shares"
+        },
+        {
+          "authority": "DGCL",
+          "section": "170",
+          "relevance": "Dividends; payment; wasting asset corporations"
+        },
+        {
+          "authority": "UVTA",
+          "section": "4",
+          "relevance": "Transfers fraudulent as to present and future creditors"
+        }
       ],
       "related_concept_ids": [
         "debt-vs-equity",
@@ -618,7 +937,11 @@
         "creditor-rights",
         "subordination"
       ],
-      "related_chapter_ids": ["ch10-staying-private", "ch11-going-public", "ch14-piercing-the-veil"],
+      "related_chapter_ids": [
+        "ch10-staying-private",
+        "ch11-going-public",
+        "ch14-piercing-the-veil"
+      ],
       "route": "/ch15-capital-structure",
       "module_status": "built",
       "narrative_hook": "Zeeva confronts the creditor's dilemma: when the firm's capital structure threatens solvency.",
@@ -642,11 +965,28 @@
         "unified-firm-theory",
         "professional-responsibility"
       ],
-      "four_problems_tags": ["attribution", "governance", "risk", "partitioning", "synthesis"],
+      "four_problems_tags": [
+        "attribution",
+        "governance",
+        "risk",
+        "partitioning",
+        "synthesis"
+      ],
       "lifecycle_stage": "capstone",
       "hero_image_id": "img-ch16-hero",
-      "primary_authority_ids": ["rupa", "rsa", "ullca", "mbca", "dgcl", "uvta", "securities-act-1933", "exchange-act-1934"],
-      "secondary_authority_ids": ["genius-act"],
+      "primary_authority_ids": [
+        "rupa",
+        "rsa",
+        "ullca",
+        "mbca",
+        "dgcl",
+        "uvta",
+        "securities-act-1933",
+        "exchange-act-1934"
+      ],
+      "secondary_authority_ids": [
+        "genius-act"
+      ],
       "key_section_links": [],
       "related_concept_ids": [
         "lifecycle-synthesis",
@@ -654,9 +994,13 @@
         "entity-lifecycle",
         "professional-responsibility"
       ],
-      "related_chapter_ids": ["ch01-why-law", "ch08-entity-selection", "ch09-fiduciary-duties"],
-      "route": null,
-      "module_status": "stub",
+      "related_chapter_ids": [
+        "ch01-why-law",
+        "ch08-entity-selection",
+        "ch09-fiduciary-duties"
+      ],
+      "route": "/ch16-conclusion",
+      "module_status": "built",
       "narrative_hook": "Zeeva completes the lifecycle, synthesizing all Four Problems into a unified theory of the firm.",
       "sort_order": 16,
       "updated_at": "2026-04-03"
