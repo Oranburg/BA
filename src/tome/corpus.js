@@ -36,7 +36,7 @@ export const DOCUMENTS = [
     versionInUse: "RUPA 1997/2013",
     lastVerified: "2026-04-03",
     coverage: COVERAGE_BADGES.FULL_TEXT,
-    chapters: [2, 3, 8, 9, 15],
+    chapters: [1, 2, 3, 8, 9, 15, 16],
     hierarchyType: "uniform",
     category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
     sectionsFile: "rupa-sections.json",
@@ -68,7 +68,7 @@ export const DOCUMENTS = [
     versionInUse: "ULLCA 2006/2013",
     lastVerified: "2026-04-03",
     coverage: COVERAGE_BADGES.FULL_TEXT,
-    chapters: [5, 8, 9, 15],
+    chapters: [5, 8, 9, 15, 16],
     hierarchyType: "uniform",
     category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
     sectionsFile: "ullca-sections.json",
@@ -84,7 +84,7 @@ export const DOCUMENTS = [
     versionInUse: "MBCA current model text",
     lastVerified: "2026-04-03",
     coverage: COVERAGE_BADGES.FULL_TEXT,
-    chapters: [4, 9, 11, 13, 15],
+    chapters: [4, 8, 9, 14, 15, 16],
     hierarchyType: "uniform",
     category: DOCUMENT_CATEGORIES.UNIFORM_ACTS,
     sectionsFile: "mbca-sections.json",
@@ -116,7 +116,7 @@ export const DOCUMENTS = [
     versionInUse: "Current DGCL snapshot",
     lastVerified: "2026-04-03",
     coverage: COVERAGE_BADGES.KEY_SECTIONS,
-    chapters: [4, 11, 12, 13],
+    chapters: [4, 9, 11, 12, 13, 14, 15, 16],
     hierarchyType: "state-code",
     category: DOCUMENT_CATEGORIES.STATE_CODES,
     sectionsFile: "dgcl-sections.json",
@@ -505,12 +505,22 @@ export const CASE_LAW_INDEX = [
 ];
 
 export const CHAPTER_ROUTES = {
+  1: APP_ROUTES.ch01WhyLaw,
   2: APP_ROUTES.ch02Agency,
+  3: APP_ROUTES.ch03Partnership,
+  4: APP_ROUTES.ch04CorporationsTech,
+  5: APP_ROUTES.ch05LLCs,
+  6: APP_ROUTES.ch06Nonprofits,
+  7: APP_ROUTES.ch07DAOs,
   8: APP_ROUTES.ch08EntitySelection,
   9: APP_ROUTES.ch09FiduciaryDuties,
+  10: APP_ROUTES.ch10StayingPrivate,
+  11: APP_ROUTES.ch11GoingPublic,
   12: APP_ROUTES.ch12ShareholderFranchise,
   13: APP_ROUTES.ch13MA,
+  14: APP_ROUTES.ch14PiercingTheVeil,
   15: APP_ROUTES.ch15CapitalStructure,
+  16: APP_ROUTES.ch16Conclusion,
 };
 
 export const DOCUMENT_BY_ID = Object.fromEntries(DOCUMENTS.map((d) => [d.id, d]));

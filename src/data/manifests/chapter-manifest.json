@@ -367,15 +367,36 @@
       "lifecycle_stage": "nonprofit-alternative",
       "hero_image_id": "img-ch06-hero",
       "primary_authority_ids": [
+        "mnca",
         "mbca"
       ],
-      "secondary_authority_ids": [],
-      "key_section_links": [],
+      "secondary_authority_ids": [
+        "irc-501c3"
+      ],
+      "key_section_links": [
+        {
+          "authority": "MNCA",
+          "section": "13.01",
+          "relevance": "Purposes and powers of nonprofit corporations"
+        },
+        {
+          "authority": "MNCA",
+          "section": "14.09",
+          "relevance": "Assets held for charitable purposes"
+        },
+        {
+          "authority": "IRC",
+          "section": "501(c)(3)",
+          "relevance": "Tax-exempt status requirements"
+        }
+      ],
       "related_concept_ids": [
         "nondistribution-constraint",
         "charitable-purpose",
         "board-governance",
-        "tax-exemption"
+        "tax-exemption",
+        "organizational-test",
+        "operational-test"
       ],
       "related_chapter_ids": [
         "ch04-corporations-tech",
